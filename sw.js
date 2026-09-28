@@ -17,7 +17,7 @@ self.addEventListener('activate', (event) => {
 // (데이터가 계속 갱신되는 대시보드 특성상, 최신 버전이 항상 우선되어야 함)
 self.addEventListener('fetch', (event) => {
   event.respondWith(
-    fetch(event.request)
+    fetch(event.request, { cache: 'no-store' })
       .then((res) => {
         const copy = res.clone();
         caches.open(SHELL_CACHE).then((cache) => cache.put(event.request, copy));

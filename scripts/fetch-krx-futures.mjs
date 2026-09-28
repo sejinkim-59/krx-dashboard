@@ -10,6 +10,12 @@ function num(v) {
   return Number.isNaN(n) ? null : n;
 }
 
+// ISU_NM에 " SP "가 있으면 두 결제월 간 가격차를 매매하는 스프레드 상품으로,
+// 선물가/현물가 개념 자체가 다르므로 일반 선물(OI·베이시스) 집계에서 제외한다.
+function isOutrightFuture(isuNm) {
+  return !!isuNm && !/\sSP\s/.test(isuNm);
+}
+
 async function main() {
   console.log('[krx-futures] 최근 데이터 반영일 탐색 중...');
   const kospiDates = await findRecentAvailableDates(KOSPI_PATH, 2);
@@ -25,6 +31,7 @@ async function main() {
 
   // ---- 미결제약정(OI) 랭킹 ----
   const oiRanking = latestRows
+    .filter((r) => isOutrightFuture(r.ISU_NM))
     .map((r) => {
       const oi = num(r.ACC_OPNINT_QTY);
       if (!oi) return null;
@@ -45,6 +52,7 @@ async function main() {
 
   // ---- 베이시스(콘탱고/백워데이션) ----
   const basisAll = latestRows
+    .filter((r) => isOutrightFuture(r.ISU_NM))
     .map((r) => {
       const close = num(r.TDD_CLSPRC);
       const spot = num(r.SPOT_PRC);
