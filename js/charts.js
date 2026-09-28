@@ -34,9 +34,10 @@ function destroyIfExists(canvas) {
 /**
  * 값의 부호(+/-)에 따라 빨강/파랑으로 칠하는 가로 막대 (베이시스, 신고가 등락 등 polarity 데이터).
  */
-function makeDivergingHBar(canvas, items, { labelKey, valueKey, unit = '%', maxItems = 15, presorted = false } = {}) {
+function makeDivergingHBar(canvas, items, { labelKey, valueKey, unit = '%', maxItems = 15, presorted = false, fmt } = {}) {
   destroyIfExists(canvas);
   const sorted = presorted ? items.slice(0, maxItems) : [...items].sort((a, b) => b[valueKey] - a[valueKey]).slice(0, maxItems);
+  const format = fmt || ((v) => `${v > 0 ? '+' : ''}${v}${unit}`);
   return new Chart(canvas, {
     type: 'bar',
     data: {
@@ -54,10 +55,10 @@ function makeDivergingHBar(canvas, items, { labelKey, valueKey, unit = '%', maxI
       maintainAspectRatio: false,
       plugins: {
         legend: { display: false },
-        tooltip: { callbacks: { label: (ctx) => `${ctx.parsed.x > 0 ? '+' : ''}${ctx.parsed.x}${unit}` } },
+        tooltip: { callbacks: { label: (ctx) => format(ctx.parsed.x) } },
       },
       scales: {
-        x: { grid: { color: VIZ.gridline }, ticks: { callback: (v) => `${v}${unit}` }, border: { color: VIZ.baseline } },
+        x: { grid: { color: VIZ.gridline }, ticks: { callback: format }, border: { color: VIZ.baseline } },
         y: { grid: { display: false }, border: { color: VIZ.baseline } },
       },
     },

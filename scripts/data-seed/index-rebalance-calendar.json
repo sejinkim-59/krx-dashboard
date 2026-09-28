@@ -1,0 +1,11 @@
+{
+  "_comment": "한국 주요 지수의 정기변경(리밸런싱) 시행 '월' 기준 정보입니다. 정확한 시행일(보통 6/12월 둘째~셋째 주 금요일 장 종료 후 산출, 다음 매매일부터 효력)은 매번 KRX·거래소 공지로 확정되므로, 월 단위 일정만 안내하고 정확한 날짜는 공식 공지를 참고하도록 안내합니다.",
+  "indices": [
+    { "name": "KOSPI200", "manager": "한국거래소(KRX)", "frequency": "연 2회(정기), 분기 보완", "months": [6, 12], "note": "6월·12월 정기변경 + 3월·9월 수시 보완변경" },
+    { "name": "KOSDAQ150", "manager": "한국거래소(KRX)", "frequency": "연 2회", "months": [6, 12], "note": "KOSPI200과 동일 주기" },
+    { "name": "KRX300", "manager": "한국거래소(KRX)", "frequency": "연 2회", "months": [6, 12], "note": "" },
+    { "name": "코스피 200 섹터/그룹지수", "manager": "한국거래소(KRX)", "frequency": "연 2회", "months": [6, 12], "note": "KOSPI200 정기변경과 연동" },
+    { "name": "MSCI Korea", "manager": "MSCI", "frequency": "연 4회", "months": [2, 5, 8, 11], "note": "분기 리뷰(2·5·8·11월), 반기 대규모 리뷰는 5·11월" },
+    { "name": "FTSE Korea", "manager": "FTSE Russell", "frequency": "연 4회", "months": [3, 6, 9, 12], "note": "" }
+  ]
+}

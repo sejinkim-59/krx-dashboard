@@ -10,11 +10,16 @@
     "fetch:all": "node scripts/run-all.mjs",
     "fetch:dart": "node scripts/fetch-dart-corporate-actions.mjs",
     "fetch:krx-futures": "node scripts/fetch-krx-futures.mjs",
+    "fetch:investor-flow": "node scripts/fetch-investor-flow.mjs",
+    "fetch:short-selling": "node scripts/fetch-short-selling.mjs",
+    "fetch:market-alerts": "node scripts/fetch-market-alerts.mjs",
     "fetch:nvda": "node scripts/fetch-nvda-earnings.mjs",
     "fetch:us-highs": "node scripts/fetch-us-new-highs.mjs",
     "fetch:market-brief": "node scripts/fetch-us-market-brief.mjs",
     "fetch:us-earnings": "node scripts/fetch-us-earnings.mjs",
     "fetch:kr-earnings": "node scripts/fetch-kr-earnings.mjs",
+    "fetch:etf-rebalance": "node scripts/fetch-etf-rebalance.mjs",
+    "fetch:index-calendar": "node scripts/fetch-index-rebalance-calendar.mjs",
     "serve": "node scripts/dev-server.mjs"
   }
 }

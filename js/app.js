@@ -172,6 +172,34 @@ async function buildPreview(card) {
       const d = await fetchJson(card.dataFile);
       return `<span class="cp-main">${d.count}개</span><span class="cp-sub">잠정실적 공시</span>`;
     }
+    case 'etf-rebalance-schedule': {
+      const d = await fetchJson(card.dataFile);
+      const next = d.indices[0];
+      return `<span class="cp-main">${next.next_occurrence}</span><span class="cp-sub">${next.name} 다음 변경</span>`;
+    }
+    case 'sector-etf-rebalance': {
+      const d = await fetchJson(card.dataFile);
+      if (!d.has_baseline) return '<span class="cp-sub">첫 스냅샷 수집됨</span>';
+      return `<span class="cp-main">${d.changed_etf_count}개</span><span class="cp-sub">ETF 변화 감지</span>`;
+    }
+    case 'short-selling': {
+      const d = await fetchJson(card.dataFile);
+      const top = d.items[0];
+      if (!top) return '<span class="cp-sub">데이터 없음</span>';
+      return `<span class="cp-main">${top.name}</span><span class="cp-sub">공매도 비중 ${top.short_ratio_pct}%</span>`;
+    }
+    case 'alert-screener': {
+      const d = await fetchJson(card.dataFile);
+      const total = Object.values(d.categories).reduce((s, c) => s + c.count, 0);
+      return `<span class="cp-main">${total}건</span><span class="cp-sub">최근 2주 지정</span>`;
+    }
+    case 'investor-flow': {
+      const d = await fetchJson(card.dataFile);
+      const foreign = d.investors['9000'];
+      const top = foreign?.top_net_buy?.[0];
+      if (!top) return '<span class="cp-sub">데이터 없음</span>';
+      return `<span class="cp-main">${top.name}</span><span class="cp-sub">외국인 순매수 1위</span>`;
+    }
     case 'us-market-brief': {
       const d = await fetchJson(card.dataFile);
       const sp = d.instruments.find((i) => i.symbol === '^GSPC');
@@ -280,6 +308,125 @@ async function renderFuturesBasis(card, el) {
   html += '<h3>백워데이션 상위 (선물 &lt; 현물)</h3>' + table(data.backwardation);
   el.innerHTML = html;
   makeDivergingHBar(document.getElementById('basis-chart'), combined, { labelKey: 'name', valueKey: 'basis_pct', maxItems: 20, presorted: true });
+}
+
+async function renderIndexCalendar(card, el) {
+  const data = await fetchJson(card.dataFile);
+  let html = metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
+  html += '<table><thead><tr><th>지수</th><th>산출기관</th><th>주기</th><th>다음 예정</th><th>비고</th></tr></thead><tbody>';
+  for (const idx of data.indices) {
+    html += `<tr><td>${idx.name}</td><td>${idx.manager}</td><td>${idx.frequency}</td><td>${idx.next_occurrence}</td><td>${idx.note || '-'}</td></tr>`;
+  }
+  html += '</tbody></table>';
+  el.innerHTML = html;
+}
+
+async function renderEtfRebalance(card, el) {
+  const data = await fetchJson(card.dataFile);
+  let html = metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
+  if (!data.has_baseline) {
+    html += '<div class="pending-box"><div class="pending-label">📸 첫 스냅샷 수집 완료</div><p>다음 실행부터 전일 대비 변화가 감지됩니다.</p></div>';
+    el.innerHTML = html;
+    return;
+  }
+  if (!data.items.length) {
+    html += `<p class="note">유니버스 ${data.universe_size}개 ETF 중 변화가 감지된 종목이 없습니다.</p>`;
+    el.innerHTML = html;
+    return;
+  }
+  for (const etf of data.items) {
+    html += `<h3>${etf.name} (${etf.trd_dt})</h3>`;
+    if (etf.added.length) html += `<p class="note">🟢 신규 편입: ${etf.added.map((a) => a.name).join(', ')}</p>`;
+    if (etf.removed.length) html += `<p class="note">🔴 편출: ${etf.removed.map((r) => r.name).join(', ')}</p>`;
+    if (etf.changed.length) {
+      html += '<table><thead><tr><th>종목</th><th>이전 비중</th><th>현재 비중</th><th>변화</th></tr></thead><tbody>';
+      for (const c of etf.changed) {
+        html += `<tr><td>${c.name}</td><td>${c.prev_weight}%</td><td>${c.curr_weight}%</td><td>${pctSpan(c.delta)}</td></tr>`;
+      }
+      html += '</tbody></table>';
+    }
+  }
+  el.innerHTML = html;
+}
+
+async function renderShortSelling(card, el) {
+  const data = await fetchJson(card.dataFile);
+  let html = metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
+  html += `<p class="note">기준일: ${data.trade_date} · 유니버스 ${data.universe_size}종목</p>`;
+  if (!data.items.length) {
+    html += '<p class="note">데이터가 없습니다.</p>';
+    el.innerHTML = html;
+    return;
+  }
+  html += '<div class="chart-box h-lg"><canvas id="short-chart"></canvas></div>';
+  html += '<p class="chart-legend-note">당일 공매도 거래대금 비중 상위 15종목.</p>';
+  html += '<table><thead><tr><th>종목</th><th>시장</th><th>공매도 비중</th><th>공매도대금</th><th>총거래대금</th></tr></thead><tbody>';
+  for (const it of data.items) {
+    html += `<tr><td>${it.name}</td><td>${it.market}</td><td>${pctSpan(it.short_ratio_pct)}</td><td>${it.short_sell_value.toLocaleString()}</td><td>${it.total_trade_value.toLocaleString()}</td></tr>`;
+  }
+  html += '</tbody></table>';
+  el.innerHTML = html;
+  makeMagnitudeHBar(document.getElementById('short-chart'), data.items, { labelKey: 'name', valueKey: 'short_ratio_pct', maxItems: 15, fmt: (v) => `${v}%` });
+}
+
+async function renderMarketAlerts(card, el) {
+  const data = await fetchJson(card.dataFile);
+  let html = metaLine(data.updated_at) + `<p class="note">${data.note} (${data.range.from} ~ ${data.range.to})</p>`;
+  html += '<div class="highlight-row">';
+  for (const cat of Object.values(data.categories)) {
+    html += highlightTile(cat.label, `${cat.count}건`);
+  }
+  html += '</div>';
+  for (const cat of Object.values(data.categories)) {
+    html += `<h3>${cat.label} (${cat.count}건)</h3>`;
+    if (!cat.items.length) {
+      html += '<p class="note">해당 기간 지정 내역이 없습니다.</p>';
+      continue;
+    }
+    html += '<table><thead><tr><th>기업</th><th>유형</th><th>공시일</th><th>지정일</th></tr></thead><tbody>';
+    for (const r of cat.items) {
+      html += `<tr><td>${r.corp_name}</td><td>${r.type}</td><td>${r.disclosed_date}</td><td>${r.designated_date}</td></tr>`;
+    }
+    html += '</tbody></table>';
+  }
+  el.innerHTML = html;
+}
+
+async function renderInvestorFlow(card, el) {
+  const data = await fetchJson(card.dataFile);
+  let html = metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
+  html += `<p class="note">최근 3거래일: ${data.recent_window.strtDd}~${data.recent_window.endDd} · 직전 5거래일: ${data.prior_window.strtDd}~${data.prior_window.endDd}</p>`;
+  const investorEntries = Object.entries(data.investors);
+  html += '<div class="small-multiples">';
+  investorEntries.forEach(([code, info], i) => {
+    html += `<div class="sm-cell"><h4>${info.label} — 매수/매도 전환 상위</h4>`;
+    if (!info.flips.length) {
+      html += '<p class="note">전환 종목 없음</p></div>';
+      return;
+    }
+    html += `<div class="chart-box h-220"><canvas id="flow-chart-${i}"></canvas></div></div>`;
+  });
+  html += '</div>';
+  for (const [, info] of investorEntries) {
+    html += `<h3>${info.label} — 순매수 상위</h3>`;
+    html += '<table><thead><tr><th>종목</th><th>순매수대금(최근3일)</th></tr></thead><tbody>';
+    for (const r of info.top_net_buy.slice(0, 8)) {
+      html += `<tr><td>${r.name}</td><td>${pctSpanValue(r.net)}</td></tr>`;
+    }
+    html += '</tbody></table>';
+  }
+  el.innerHTML = html;
+  investorEntries.forEach(([code, info], i) => {
+    if (!info.flips.length) return;
+    const canvas = document.getElementById(`flow-chart-${i}`);
+    makeDivergingHBar(canvas, info.flips, { labelKey: 'name', valueKey: 'swing', maxItems: 10, fmt: (v) => `${v > 0 ? '+' : ''}${v.toLocaleString()}` });
+  });
+}
+
+function pctSpanValue(n) {
+  const cls = n > 0 ? 'up' : n < 0 ? 'down' : 'flat';
+  const sign = n > 0 ? '+' : '';
+  return `<span class="pct ${cls}">${sign}${n.toLocaleString()}</span>`;
 }
 
 async function renderUsEarnings(card, el) {

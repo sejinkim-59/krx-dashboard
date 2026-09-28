@@ -8,11 +8,16 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const SCRIPTS = [
   'fetch-dart-corporate-actions.mjs',
   'fetch-krx-futures.mjs',
+  'fetch-investor-flow.mjs',
+  'fetch-short-selling.mjs',
+  'fetch-market-alerts.mjs',
   'fetch-nvda-earnings.mjs',
   'fetch-us-new-highs.mjs',
   'fetch-us-market-brief.mjs',
   'fetch-us-earnings.mjs',
   'fetch-kr-earnings.mjs',
+  'fetch-etf-rebalance.mjs',
+  'fetch-index-rebalance-calendar.mjs',
 ];
 
 const results = [];
