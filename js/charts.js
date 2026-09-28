@@ -46,7 +46,7 @@ function makeDivergingHBar(canvas, items, { labelKey, valueKey, unit = '%', maxI
         data: sorted.map((it) => it[valueKey]),
         backgroundColor: sorted.map((it) => (it[valueKey] >= 0 ? VIZ.up : VIZ.down)),
         borderRadius: 4,
-        barThickness: 14,
+        maxBarThickness: 18,
       }],
     },
     options: {
@@ -79,7 +79,7 @@ function makeMagnitudeHBar(canvas, items, { labelKey, valueKey, maxItems = 15, f
         data: sorted.map((it) => it[valueKey]),
         backgroundColor: '#3987e5',
         borderRadius: 4,
-        barThickness: 14,
+        maxBarThickness: 18,
       }],
     },
     options: {
