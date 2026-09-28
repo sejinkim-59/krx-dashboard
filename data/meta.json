@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T08:59:55.075Z",
+  "updated_at": "2026-09-28T09:27:12.974Z",
   "scripts": [
     {
       "script": "fetch-dart-corporate-actions.mjs",
@@ -19,6 +19,14 @@
     },
     {
       "script": "fetch-us-market-brief.mjs",
+      "ok": true
+    },
+    {
+      "script": "fetch-us-earnings.mjs",
+      "ok": true
+    },
+    {
+      "script": "fetch-kr-earnings.mjs",
       "ok": true
     }
   ]

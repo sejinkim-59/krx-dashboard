@@ -146,6 +146,35 @@ async function renderFuturesBasis(card, el) {
   el.innerHTML = html;
 }
 
+async function renderUsEarnings(card, el) {
+  const data = await fetchJson(card.dataFile);
+  let html = metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
+  html += '<table><thead><tr><th>티커</th><th>발표일</th><th>시간</th><th>서프라이즈</th><th>D-1</th><th>D0</th><th>D+1</th><th>D+2</th><th>D+3</th></tr></thead><tbody>';
+  for (const it of data.items) {
+    const r = it.reaction || {};
+    html += `<tr><td>${it.symbol}</td><td>${it.report_date}</td><td>${it.report_time}</td><td>${it.surprise_pct != null ? pctSpan(it.surprise_pct) : '-'}</td><td>${pctSpan(r['D-1'])}</td><td>${pctSpan(r.D0)}</td><td>${pctSpan(r['D+1'])}</td><td>${pctSpan(r['D+2'])}</td><td>${pctSpan(r['D+3'])}</td></tr>`;
+  }
+  html += '</tbody></table>';
+  el.innerHTML = html;
+}
+
+async function renderKrEarnings(card, el) {
+  const data = await fetchJson(card.dataFile);
+  let html = metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
+  if (!data.items.length) {
+    html += '<p class="note">해당 기간 실적 공시가 없습니다.</p>';
+  } else {
+    html += '<table><thead><tr><th>기업</th><th>공시일</th><th>D-1</th><th>D0</th><th>D+1</th><th>D+2</th><th>D+3</th><th>D+4</th><th>링크</th></tr></thead><tbody>';
+    for (const it of data.items) {
+      const r = it.reaction || {};
+      const link = it.dart_url ? `<a href="${it.dart_url}" target="_blank" rel="noopener">원문</a>` : '-';
+      html += `<tr><td>${it.corp_name}</td><td>${fmtDateStr(it.rcept_dt)}</td><td>${pctSpan(r['D-1'])}</td><td>${pctSpan(r.D0)}</td><td>${pctSpan(r['D+1'])}</td><td>${pctSpan(r['D+2'])}</td><td>${pctSpan(r['D+3'])}</td><td>${pctSpan(r['D+4'])}</td><td>${link}</td></tr>`;
+    }
+    html += '</tbody></table>';
+  }
+  el.innerHTML = html;
+}
+
 async function renderMarketBrief(card, el) {
   const data = await fetchJson(card.dataFile);
   let html = metaLine(data.updated_at) + `<div class="summary-box">${data.summary}</div>`;

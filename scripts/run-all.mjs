@@ -11,6 +11,8 @@ const SCRIPTS = [
   'fetch-nvda-earnings.mjs',
   'fetch-us-new-highs.mjs',
   'fetch-us-market-brief.mjs',
+  'fetch-us-earnings.mjs',
+  'fetch-kr-earnings.mjs',
 ];
 
 const results = [];

@@ -13,6 +13,8 @@
     "fetch:nvda": "node scripts/fetch-nvda-earnings.mjs",
     "fetch:us-highs": "node scripts/fetch-us-new-highs.mjs",
     "fetch:market-brief": "node scripts/fetch-us-market-brief.mjs",
+    "fetch:us-earnings": "node scripts/fetch-us-earnings.mjs",
+    "fetch:kr-earnings": "node scripts/fetch-kr-earnings.mjs",
     "serve": "node scripts/dev-server.mjs"
   }
 }

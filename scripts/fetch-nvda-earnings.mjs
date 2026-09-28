@@ -1,7 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { fetchDailyHistory, tsToDateStr } from './lib/yahoo.mjs';
+import { fetchDailyHistory, computeReactionSeries } from './lib/yahoo.mjs';
 import { writeJson, sleep } from './lib/util.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -14,39 +14,6 @@ const PEERS = [
   { symbol: '^KS11', label: '코스피' },
 ];
 
-function buildDateIndex(hist) {
-  const map = new Map();
-  hist.timestamps.forEach((ts, i) => {
-    map.set(tsToDateStr(ts), i);
-  });
-  return map;
-}
-
-function findAnchorIndex(dateIndex, earningsDate) {
-  const sortedDates = Array.from(dateIndex.keys()).sort();
-  // 실적 발표일 이후 첫 거래일(또는 당일)의 인덱스를 D0로 사용
-  for (const d of sortedDates) {
-    if (d >= earningsDate) return dateIndex.get(d);
-  }
-  return null;
-}
-
-function reactionFor(hist, earningsDate) {
-  const dateIndex = buildDateIndex(hist);
-  const d0Idx = findAnchorIndex(dateIndex, earningsDate);
-  if (d0Idx == null || d0Idx < 1) return null;
-  const base = hist.close[d0Idx - 1];
-  if (!base) return null;
-  const offsets = { 'D-1': -1, D0: 0, 'D+1': 1, 'D+2': 2, 'D+3': 3, 'D+4': 4 };
-  const out = {};
-  for (const [label, off] of Object.entries(offsets)) {
-    const idx = d0Idx + off;
-    const price = hist.close[idx];
-    out[label] = price != null ? +(((price - base) / base) * 100).toFixed(2) : null;
-  }
-  return out;
-}
-
 async function main() {
   const seedPath = path.join(__dirname, 'data-seed', 'nvda-earnings-dates.json');
   const seed = JSON.parse(await readFile(seedPath, 'utf-8'));
@@ -56,7 +23,9 @@ async function main() {
   for (const { symbol, label } of PEERS) {
     try {
       const hist = await fetchDailyHistory(symbol, '5y');
-      const reactions = earningsDates.map((d) => ({ earnings_date: d, reaction: reactionFor(hist, d) })).filter((r) => r.reaction);
+      const reactions = earningsDates
+        .map((d) => ({ earnings_date: d, reaction: computeReactionSeries(hist, d, 4) }))
+        .filter((r) => r.reaction);
       perSymbol[symbol] = { label, reactions };
     } catch (e) {
       console.warn(`[nvda-earnings] ${symbol} 실패:`, e.message);

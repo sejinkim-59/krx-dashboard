@@ -1,0 +1,229 @@
+{
+  "updated_at": "2026-09-28T09:26:09.403Z",
+  "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
+  "min_market_cap": 2000000000,
+  "count": 13,
+  "items": [
+    {
+      "symbol": "COST",
+      "name": "Costco Wholesale Corporation",
+      "report_date": "2026-09-24",
+      "report_time": "미상",
+      "market_cap": 397569884000,
+      "eps": "$6.60",
+      "eps_forecast": "$6.48",
+      "surprise_pct": 1.85,
+      "reaction": {
+        "D-1": 0,
+        "D0": -0.91,
+        "D+1": 2,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "CTAS",
+      "name": "Cintas Corporation",
+      "report_date": "2026-09-23",
+      "report_time": "미상",
+      "market_cap": 78976475000,
+      "eps": "$1.39",
+      "eps_forecast": "$1.35",
+      "surprise_pct": 2.96,
+      "reaction": {
+        "D-1": 0,
+        "D0": -3.44,
+        "D+1": -0.56,
+        "D+2": 0.56,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "AZO",
+      "name": "AutoZone, Inc.",
+      "report_date": "2026-09-22",
+      "report_time": "미상",
+      "market_cap": 46719087000,
+      "eps": "$56.05",
+      "eps_forecast": "$54.54",
+      "surprise_pct": 2.77,
+      "reaction": {
+        "D-1": 0,
+        "D0": 3.26,
+        "D+1": 1.43,
+        "D+2": 2.09,
+        "D+3": 2.46
+      }
+    },
+    {
+      "symbol": "PAYX",
+      "name": "Paychex, Inc.",
+      "report_date": "2026-09-23",
+      "report_time": "미상",
+      "market_cap": 36164055000,
+      "eps": "$1.34",
+      "eps_forecast": "$1.33",
+      "surprise_pct": 0.75,
+      "reaction": {
+        "D-1": 0,
+        "D0": -8.77,
+        "D+1": -11.3,
+        "D+2": -11.49,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "DRI",
+      "name": "Darden Restaurants, Inc.",
+      "report_date": "2026-09-24",
+      "report_time": "미상",
+      "market_cap": 23641518100,
+      "eps": "$2.05",
+      "eps_forecast": "$2.06",
+      "surprise_pct": -0.49,
+      "reaction": {
+        "D-1": 0,
+        "D0": -3.02,
+        "D+1": -6.52,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "SNX",
+      "name": "TD SYNNEX Corporation",
+      "report_date": "2026-09-24",
+      "report_time": "미상",
+      "market_cap": 20746897400,
+      "eps": "$5.53",
+      "eps_forecast": "$4.46",
+      "surprise_pct": 23.99,
+      "reaction": {
+        "D-1": 0,
+        "D0": -9.87,
+        "D+1": -8.64,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "GIS",
+      "name": "General Mills, Inc.",
+      "report_date": "2026-09-23",
+      "report_time": "미상",
+      "market_cap": 18623154200,
+      "eps": "$0.75",
+      "eps_forecast": "$0.72",
+      "surprise_pct": 4.17,
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.04,
+        "D+1": -1.75,
+        "D+2": -5.11,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "BB",
+      "name": "BlackBerry Limited",
+      "report_date": "2026-09-24",
+      "report_time": "미상",
+      "market_cap": 5098137100,
+      "eps": "$0.05",
+      "eps_forecast": "$0.03",
+      "surprise_pct": 66.67,
+      "reaction": {
+        "D-1": 0,
+        "D0": 4.18,
+        "D+1": -2.03,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "THO",
+      "name": "Thor Industries, Inc.",
+      "report_date": "2026-09-22",
+      "report_time": "미상",
+      "market_cap": 3661006590,
+      "eps": "$0.78",
+      "eps_forecast": "$0.93",
+      "surprise_pct": -16.13,
+      "reaction": {
+        "D-1": 0,
+        "D0": 5.52,
+        "D+1": 3.39,
+        "D+2": 1.42,
+        "D+3": 3.16
+      }
+    },
+    {
+      "symbol": "MANU",
+      "name": "Manchester United Ltd.",
+      "report_date": "2026-09-23",
+      "report_time": "미상",
+      "market_cap": 3610660350,
+      "eps": "($0.22)",
+      "eps_forecast": "",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -0.1,
+        "D+1": 2.1,
+        "D+2": -0.54,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "WOR",
+      "name": "Worthington Enterprises, Inc.",
+      "report_date": "2026-09-22",
+      "report_time": "미상",
+      "market_cap": 2951752960,
+      "eps": "$0.82",
+      "eps_forecast": "$0.74",
+      "surprise_pct": 10.81,
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.36,
+        "D+1": 2.67,
+        "D+2": 3.75,
+        "D+3": 7.03
+      }
+    },
+    {
+      "symbol": "KBH",
+      "name": "KB Home",
+      "report_date": "2026-09-22",
+      "report_time": "미상",
+      "market_cap": 2921408510,
+      "eps": "$1.05",
+      "eps_forecast": "$0.88",
+      "surprise_pct": 19.32,
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.53,
+        "D+1": -1.48,
+        "D+2": -0.44,
+        "D+3": 0.31
+      }
+    },
+    {
+      "symbol": "FUL",
+      "name": "H. B. Fuller Company",
+      "report_date": "2026-09-23",
+      "report_time": "미상",
+      "market_cap": 2689370620,
+      "eps": "$1.52",
+      "eps_forecast": "$1.45",
+      "surprise_pct": 4.83,
+      "reaction": {
+        "D-1": 0,
+        "D0": -1.68,
+        "D+1": -2.1,
+        "D+2": -1.98,
+        "D+3": null
+      }
+    }
+  ]
+}

@@ -66,3 +66,30 @@ export function tsToDateStr(ts) {
   // ts: unix seconds (UTC) -> 미국 동부시간 기준 날짜 (거래일 매칭용, 단순화를 위해 UTC 날짜 사용)
   return new Date(ts * 1000).toISOString().slice(0, 10);
 }
+
+/**
+ * 특정 기준일(anchorDateStr) 이후 첫 거래일을 D0로 놓고, D-1~D+offsetMax의
+ * D-1 종가 대비 누적 수익률(%)을 계산한다. (실적 발표 전후 반응 분석용)
+ */
+export function computeReactionSeries(hist, anchorDateStr, offsetMax = 2) {
+  const dateIndex = new Map();
+  hist.timestamps.forEach((ts, i) => dateIndex.set(tsToDateStr(ts), i));
+  const sortedDates = Array.from(dateIndex.keys()).sort();
+  let d0Idx = null;
+  for (const d of sortedDates) {
+    if (d >= anchorDateStr) {
+      d0Idx = dateIndex.get(d);
+      break;
+    }
+  }
+  if (d0Idx == null || d0Idx < 1) return null;
+  const base = hist.close[d0Idx - 1];
+  if (!base) return null;
+  const out = {};
+  for (let off = -1; off <= offsetMax; off++) {
+    const label = off === 0 ? 'D0' : off < 0 ? `D${off}` : `D+${off}`;
+    const price = hist.close[d0Idx + off];
+    out[label] = price != null ? +(((price - base) / base) * 100).toFixed(2) : null;
+  }
+  return out;
+}
