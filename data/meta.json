@@ -1,0 +1,21 @@
+{
+  "updated_at": "2026-09-28T07:43:54.298Z",
+  "scripts": [
+    {
+      "script": "fetch-dart-corporate-actions.mjs",
+      "ok": true
+    },
+    {
+      "script": "fetch-nvda-earnings.mjs",
+      "ok": true
+    },
+    {
+      "script": "fetch-us-new-highs.mjs",
+      "ok": true
+    },
+    {
+      "script": "fetch-us-market-brief.mjs",
+      "ok": true
+    }
+  ]
+}

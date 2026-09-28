@@ -1,0 +1,54 @@
+{
+  "updated_at": "2026-09-28T07:43:54.272Z",
+  "summary": "전일 미국 증시는 S&P500 0.51% 상승, 나스닥 0.48% 상승, 다우 0.93% 상승으로 마감했습니다. VIX가 큰 폭으로 올라 시장 변동성이 확대됐습니다.",
+  "instruments": [
+    {
+      "symbol": "^GSPC",
+      "label": "S&P 500",
+      "last": 7743.41015625,
+      "change_pct": 0.51
+    },
+    {
+      "symbol": "^IXIC",
+      "label": "나스닥종합",
+      "last": 27068.720703125,
+      "change_pct": 0.48
+    },
+    {
+      "symbol": "^DJI",
+      "label": "다우존스",
+      "last": 51828.62109375,
+      "change_pct": 0.93
+    },
+    {
+      "symbol": "^VIX",
+      "label": "VIX(변동성지수)",
+      "last": 16.18000030517578,
+      "change_pct": 8.81
+    },
+    {
+      "symbol": "^TNX",
+      "label": "美 10년물 국채금리",
+      "last": 5.184000015258789,
+      "change_pct": 0.43
+    },
+    {
+      "symbol": "KRW=X",
+      "label": "원/달러 환율",
+      "last": 1360.97998046875,
+      "change_pct": -0.47
+    },
+    {
+      "symbol": "CL=F",
+      "label": "WTI 원유",
+      "last": 94.18000030517578,
+      "change_pct": 1.92
+    },
+    {
+      "symbol": "GC=F",
+      "label": "금 선물",
+      "last": 4190.7001953125,
+      "change_pct": -3.02
+    }
+  ]
+}

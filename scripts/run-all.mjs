@@ -1,0 +1,34 @@
+import { spawnSync } from 'node:child_process';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { writeJson } from './lib/util.mjs';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+const SCRIPTS = [
+  'fetch-dart-corporate-actions.mjs',
+  'fetch-nvda-earnings.mjs',
+  'fetch-us-new-highs.mjs',
+  'fetch-us-market-brief.mjs',
+];
+
+const results = [];
+for (const script of SCRIPTS) {
+  console.log(`\n=== ${script} 실행 ===`);
+  const res = spawnSync(process.execPath, [path.join(__dirname, script)], { stdio: 'inherit', env: process.env });
+  results.push({ script, ok: res.status === 0 });
+}
+
+console.log('\n=== 실행 결과 요약 ===');
+for (const r of results) console.log(`${r.ok ? '✅' : '❌'} ${r.script}`);
+
+await writeJson('meta.json', {
+  updated_at: new Date().toISOString(),
+  scripts: results,
+});
+
+const failed = results.filter((r) => !r.ok);
+if (failed.length) {
+  console.error(`\n${failed.length}개 스크립트 실패`);
+  process.exit(1);
+}
