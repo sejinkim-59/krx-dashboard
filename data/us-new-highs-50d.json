@@ -1,57 +1,33 @@
 {
-  "updated_at": "2026-09-28T10:32:05.049Z",
+  "updated_at": "2026-09-28T17:01:40.032Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
-  "count": 8,
+  "count": 4,
   "items": [
     {
-      "symbol": "QCOM",
-      "close": 201.97,
-      "day_change_pct": 3.97,
-      "pct_above_prior_window": 1.87
-    },
-    {
-      "symbol": "ADI",
-      "close": 393.6,
-      "day_change_pct": 2.87,
-      "pct_above_prior_window": 0.83
-    },
-    {
       "symbol": "ISRG",
-      "close": 405.18,
-      "day_change_pct": 1.42,
-      "pct_above_prior_window": 0.77
-    },
-    {
-      "symbol": "MSFT",
-      "close": 516.17,
-      "day_change_pct": 3.66,
-      "pct_above_prior_window": 0.51
-    },
-    {
-      "symbol": "AAPL",
-      "close": 341.07,
-      "day_change_pct": 1.53,
-      "pct_above_prior_window": 0.29
-    },
-    {
-      "symbol": "AMD",
-      "close": 630.63,
-      "day_change_pct": 0.22,
-      "pct_above_prior_window": 0.22
-    },
-    {
-      "symbol": "WBD",
-      "close": 30.86,
-      "day_change_pct": 0.06,
-      "pct_above_prior_window": 0.06
+      "close": 414.945,
+      "day_change_pct": 2.41,
+      "pct_above_prior_window": 2.41
     },
     {
       "symbol": "BIIB",
-      "close": 227.6,
-      "day_change_pct": 0.55,
-      "pct_above_prior_window": 0.03
+      "close": 230.12,
+      "day_change_pct": 1.11,
+      "pct_above_prior_window": 1.11
+    },
+    {
+      "symbol": "NVDA",
+      "close": 230.7,
+      "day_change_pct": 2.5,
+      "pct_above_prior_window": 0.15
+    },
+    {
+      "symbol": "WBD",
+      "close": 30.865,
+      "day_change_pct": 0.02,
+      "pct_above_prior_window": 0.02
     }
   ]
 }
