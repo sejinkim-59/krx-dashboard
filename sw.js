@@ -1,4 +1,4 @@
-const SHELL_CACHE = 'krx-dashboard-shell-v1';
+const SHELL_CACHE = 'krx-dashboard-shell-v2';
 const SHELL_FILES = ['./', './index.html', './css/style.css', './js/app.js', './js/cards.js', './manifest.webmanifest'];
 
 self.addEventListener('install', (event) => {
@@ -13,19 +13,16 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
+// 앱 셸/데이터 모두 네트워크 우선 — 오프라인일 때만 캐시로 대체.
+// (데이터가 계속 갱신되는 대시보드 특성상, 최신 버전이 항상 우선되어야 함)
 self.addEventListener('fetch', (event) => {
-  const url = new URL(event.request.url);
-
-  // data/*.json 은 항상 최신 데이터를 우선 시도 (네트워크 우선)
-  if (url.pathname.includes('/data/')) {
-    event.respondWith(
-      fetch(event.request).catch(() => caches.match(event.request))
-    );
-    return;
-  }
-
-  // 앱 셸은 캐시 우선
   event.respondWith(
-    caches.match(event.request).then((cached) => cached || fetch(event.request))
+    fetch(event.request)
+      .then((res) => {
+        const copy = res.clone();
+        caches.open(SHELL_CACHE).then((cache) => cache.put(event.request, copy));
+        return res;
+      })
+      .catch(() => caches.match(event.request))
   );
 });
