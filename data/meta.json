@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T09:35:19.373Z",
+  "updated_at": "2026-09-28T10:33:44.950Z",
   "scripts": [
     {
       "script": "fetch-dart-corporate-actions.mjs",
@@ -7,6 +7,18 @@
     },
     {
       "script": "fetch-krx-futures.mjs",
+      "ok": true
+    },
+    {
+      "script": "fetch-investor-flow.mjs",
+      "ok": true
+    },
+    {
+      "script": "fetch-short-selling.mjs",
+      "ok": true
+    },
+    {
+      "script": "fetch-market-alerts.mjs",
       "ok": true
     },
     {
@@ -27,6 +39,14 @@
     },
     {
       "script": "fetch-kr-earnings.mjs",
+      "ok": true
+    },
+    {
+      "script": "fetch-etf-rebalance.mjs",
+      "ok": true
+    },
+    {
+      "script": "fetch-index-rebalance-calendar.mjs",
       "ok": true
     }
   ]
