@@ -88,7 +88,7 @@ const CARDS = [
     desc: '관세청(TRASS) 잠정 수출 33개 품목을 영업일 평균 기준으로 추적.',
     tag: 'LIVE',
     status: 'pending',
-    reason: '공공데이터포털(관세청 수출입무역통계) API 신청이 필요합니다. data.go.kr에서 무료 신청 가능 — 신청해주시면 바로 연동합니다.',
+    reason: 'TRASS(무역통계) 웹사이트는 봇 방지 토큰이 걸려 있어 자동 수집이 불가합니다. 공공데이터포털(data.go.kr)에서 "관세청 수출입무역통계" API를 무료 신청해 키를 알려주시면 바로 연동합니다.',
   },
   {
     id: 'capital-increase',

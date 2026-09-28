@@ -1,5 +1,15 @@
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36';
 
+async function fetchWithTimeout(url, options = {}, timeoutMs = 12000) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    return await fetch(url, { ...options, signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 function chunk(arr, size) {
   const out = [];
   for (let i = 0; i < arr.length; i += size) out.push(arr.slice(i, i + size));
@@ -15,11 +25,17 @@ export async function fetchSparkBatch(symbols, range = '3mo') {
   // 심볼 20개 초과 배치는 Yahoo가 400을 반환하는 경우가 있어 20개 단위로 제한
   for (const group of chunk(symbols, 20)) {
     const url = `https://query1.finance.yahoo.com/v7/finance/spark?symbols=${group.join(',')}&range=${range}&interval=1d`;
-    let res = await fetch(url, { headers: { 'User-Agent': UA } });
-    if (!res.ok) {
-      // 일시적 오류일 수 있으므로 한 번 재시도
-      await new Promise((r) => setTimeout(r, 800));
-      res = await fetch(url, { headers: { 'User-Agent': UA } });
+    let res;
+    try {
+      res = await fetchWithTimeout(url, { headers: { 'User-Agent': UA } });
+      if (!res.ok) {
+        // 일시적 오류일 수 있으므로 한 번 재시도
+        await new Promise((r) => setTimeout(r, 800));
+        res = await fetchWithTimeout(url, { headers: { 'User-Agent': UA } });
+      }
+    } catch (e) {
+      console.warn(`[yahoo] spark 요청 실패 (${e.message}): ${group.join(',')}`);
+      continue;
     }
     if (!res.ok) {
       console.warn(`[yahoo] spark 요청 실패 (${res.status}): ${group.join(',')}`);
@@ -44,7 +60,12 @@ export async function fetchSparkBatch(symbols, range = '3mo') {
  */
 export async function fetchDailyHistory(symbol, range = '1y') {
   const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?range=${range}&interval=1d`;
-  const res = await fetch(url, { headers: { 'User-Agent': UA } });
+  let res;
+  try {
+    res = await fetchWithTimeout(url, { headers: { 'User-Agent': UA } });
+  } catch (e) {
+    throw new Error(`Yahoo chart 요청 실패 (${e.message}): ${symbol}`);
+  }
   if (!res.ok) throw new Error(`Yahoo chart 요청 실패 (${res.status}): ${symbol}`);
   const data = await res.json();
   const result = data?.chart?.result?.[0];

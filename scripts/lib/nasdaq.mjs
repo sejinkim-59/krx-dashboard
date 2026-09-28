@@ -7,7 +7,16 @@ function fmtDate(d) {
 /** 특정 날짜(YYYY-MM-DD)에 실적을 발표한 미국 상장사 목록을 가져온다. 인증 불필요. */
 export async function fetchEarningsForDate(dateStr) {
   const url = `https://api.nasdaq.com/api/calendar/earnings?date=${dateStr}`;
-  const res = await fetch(url, { headers: { 'User-Agent': UA, Accept: 'application/json' } });
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 12000);
+  let res;
+  try {
+    res = await fetch(url, { headers: { 'User-Agent': UA, Accept: 'application/json' }, signal: controller.signal });
+  } catch (e) {
+    throw new Error(e.name === 'AbortError' ? '요청 시간초과(12s)' : e.message);
+  } finally {
+    clearTimeout(timer);
+  }
   if (!res.ok) throw new Error(`Nasdaq earnings API HTTP ${res.status}`);
   const data = await res.json();
   return data?.data?.rows || [];

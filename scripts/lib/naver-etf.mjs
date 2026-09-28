@@ -1,8 +1,24 @@
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36';
 
+async function fetchWithTimeout(url, options = {}, timeoutMs = 10000, retries = 2) {
+  for (let attempt = 1; attempt <= retries + 1; attempt++) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    try {
+      const res = await fetch(url, { ...options, signal: controller.signal });
+      clearTimeout(timer);
+      return res;
+    } catch (e) {
+      clearTimeout(timer);
+      if (attempt > retries) throw new Error(`${e.name === 'AbortError' ? `요청 시간초과(${timeoutMs / 1000}s)` : e.message}: ${url}`);
+      await new Promise((r) => setTimeout(r, 1000 * attempt));
+    }
+  }
+}
+
 /** 국내 상장 ETF 전체 목록 (시세 포함). 응답이 EUC-KR이라 별도 디코딩이 필요하다. */
 export async function fetchAllEtfList() {
-  const res = await fetch('https://finance.naver.com/api/sise/etfItemList.nhn', { headers: { 'User-Agent': UA } });
+  const res = await fetchWithTimeout('https://finance.naver.com/api/sise/etfItemList.nhn', { headers: { 'User-Agent': UA } });
   if (!res.ok) throw new Error(`Naver ETF 목록 요청 실패: ${res.status}`);
   const buf = await res.arrayBuffer();
   const text = new TextDecoder('euc-kr').decode(buf);
@@ -21,7 +37,7 @@ export function pickDomesticThemeEtfs(items, { keywords, exclude, topN }) {
 
 /** ETF 1종목의 CU(구성종목) 보유 현황. UTF-8, 로그인 불필요. */
 export async function fetchEtfHoldings(code) {
-  const res = await fetch(`https://navercomp.wisereport.co.kr/v2/ETF/index.aspx?cmp_cd=${code}`, {
+  const res = await fetchWithTimeout(`https://navercomp.wisereport.co.kr/v2/ETF/index.aspx?cmp_cd=${code}`, {
     headers: { 'User-Agent': UA },
   });
   if (!res.ok) throw new Error(`ETF 보유내역 요청 실패 (${code}): ${res.status}`);

@@ -8,10 +8,15 @@ function apiKey() {
 
 async function fetchWithRetry(url, retries = 3) {
   for (let attempt = 1; attempt <= retries; attempt++) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 15000);
     try {
-      return await fetch(url);
+      const res = await fetch(url, { signal: controller.signal });
+      clearTimeout(timer);
+      return res;
     } catch (e) {
-      if (attempt === retries) throw e;
+      clearTimeout(timer);
+      if (attempt === retries) throw new Error(e.name === 'AbortError' ? '요청 시간초과(15s)' : e.message);
       console.warn(`[dart] 연결 실패, 재시도 ${attempt}/${retries}: ${e.message}`);
       await new Promise((r) => setTimeout(r, 2000 * attempt));
     }
