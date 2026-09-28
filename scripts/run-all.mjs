@@ -7,6 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const SCRIPTS = [
   'fetch-dart-corporate-actions.mjs',
+  'fetch-krx-futures.mjs',
   'fetch-nvda-earnings.mjs',
   'fetch-us-new-highs.mjs',
   'fetch-us-market-brief.mjs',

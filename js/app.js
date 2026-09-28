@@ -119,6 +119,33 @@ async function renderNewHighs(card, el) {
   el.innerHTML = html;
 }
 
+async function renderFuturesOi(card, el) {
+  const data = await fetchJson(card.dataFile);
+  let html = metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
+  html += `<p class="note">기준일: ${fmtDateStr(data.data_date)} (전일: ${fmtDateStr(data.prev_data_date)}) · 미결제약정 상위 ${data.count}종목</p>`;
+  html += '<table><thead><tr><th>종목</th><th>상품</th><th>미결제약정</th><th>전일대비</th><th>종가</th></tr></thead><tbody>';
+  for (const it of data.items) {
+    html += `<tr><td>${it.name}</td><td>${it.product}</td><td>${it.oi.toLocaleString()}</td><td>${it.oi_change == null ? '-' : (it.oi_change > 0 ? '+' : '') + it.oi_change.toLocaleString()}</td><td>${it.close ?? '-'}</td></tr>`;
+  }
+  html += '</tbody></table>';
+  el.innerHTML = html;
+}
+
+async function renderFuturesBasis(card, el) {
+  const data = await fetchJson(card.dataFile);
+  let html = metaLine(data.updated_at) + `<p class="note">${data.note} · 기준일: ${fmtDateStr(data.data_date)}</p>`;
+  const table = (items) => {
+    let t = '<table><thead><tr><th>종목</th><th>선물가</th><th>현물가</th><th>베이시스</th><th>베이시스%</th></tr></thead><tbody>';
+    for (const it of items) {
+      t += `<tr><td>${it.name}</td><td>${it.futures_price.toLocaleString()}</td><td>${it.spot_price.toLocaleString()}</td><td>${it.basis.toLocaleString()}</td><td>${pctSpan(it.basis_pct)}</td></tr>`;
+    }
+    return t + '</tbody></table>';
+  };
+  html += '<h3>콘탱고 상위 (선물 &gt; 현물)</h3>' + table(data.contango);
+  html += '<h3>백워데이션 상위 (선물 &lt; 현물)</h3>' + table(data.backwardation);
+  el.innerHTML = html;
+}
+
 async function renderMarketBrief(card, el) {
   const data = await fetchJson(card.dataFile);
   let html = metaLine(data.updated_at) + `<div class="summary-box">${data.summary}</div>`;

@@ -26,6 +26,7 @@ jobs:
       - name: Fetch all data sources
         env:
           DART_API_KEY: ${{ secrets.DART_API_KEY }}
+          KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
         run: npm run fetch:all
 
       - name: Commit updated data

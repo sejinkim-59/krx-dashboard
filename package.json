@@ -9,6 +9,7 @@
   "scripts": {
     "fetch:all": "node scripts/run-all.mjs",
     "fetch:dart": "node scripts/fetch-dart-corporate-actions.mjs",
+    "fetch:krx-futures": "node scripts/fetch-krx-futures.mjs",
     "fetch:nvda": "node scripts/fetch-nvda-earnings.mjs",
     "fetch:us-highs": "node scripts/fetch-us-new-highs.mjs",
     "fetch:market-brief": "node scripts/fetch-us-market-brief.mjs",

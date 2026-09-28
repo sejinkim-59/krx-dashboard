@@ -1,8 +1,12 @@
 {
-  "updated_at": "2026-09-28T08:14:40.703Z",
+  "updated_at": "2026-09-28T08:56:40.680Z",
   "scripts": [
     {
       "script": "fetch-dart-corporate-actions.mjs",
+      "ok": true
+    },
+    {
+      "script": "fetch-krx-futures.mjs",
       "ok": true
     },
     {
