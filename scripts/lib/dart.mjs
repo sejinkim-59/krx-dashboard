@@ -6,11 +6,23 @@ function apiKey() {
   return key;
 }
 
+async function fetchWithRetry(url, retries = 3) {
+  for (let attempt = 1; attempt <= retries; attempt++) {
+    try {
+      return await fetch(url);
+    } catch (e) {
+      if (attempt === retries) throw e;
+      console.warn(`[dart] 연결 실패, 재시도 ${attempt}/${retries}: ${e.message}`);
+      await new Promise((r) => setTimeout(r, 2000 * attempt));
+    }
+  }
+}
+
 async function callJson(path, params) {
   const url = new URL(`${BASE}/${path}`);
   url.searchParams.set('crtfc_key', apiKey());
   for (const [k, v] of Object.entries(params)) url.searchParams.set(k, v);
-  const res = await fetch(url);
+  const res = await fetchWithRetry(url);
   if (!res.ok) throw new Error(`DART API HTTP ${res.status}: ${path}`);
   const data = await res.json();
   if (data.status !== '000' && data.status !== '013') {
