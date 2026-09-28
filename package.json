@@ -4,14 +4,14 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=20.6"
+    "node": ">=18"
   },
   "scripts": {
-    "fetch:all": "node --env-file=.env.local scripts/run-all.mjs",
-    "fetch:dart": "node --env-file=.env.local scripts/fetch-dart-corporate-actions.mjs",
-    "fetch:nvda": "node --env-file=.env.local scripts/fetch-nvda-earnings.mjs",
-    "fetch:us-highs": "node --env-file=.env.local scripts/fetch-us-new-highs.mjs",
-    "fetch:market-brief": "node --env-file=.env.local scripts/fetch-us-market-brief.mjs",
+    "fetch:all": "node scripts/run-all.mjs",
+    "fetch:dart": "node scripts/fetch-dart-corporate-actions.mjs",
+    "fetch:nvda": "node scripts/fetch-nvda-earnings.mjs",
+    "fetch:us-highs": "node scripts/fetch-us-new-highs.mjs",
+    "fetch:market-brief": "node scripts/fetch-us-market-brief.mjs",
     "serve": "node scripts/dev-server.mjs"
   }
 }
