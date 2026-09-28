@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#0d1117" />
+  <meta name="theme-color" content="#0d0d0d" />
   <title>KRX 분석 대시보드</title>
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
@@ -19,6 +19,11 @@
     <div class="topbar-sub">국내·미국 증시 정보를 한눈에 — <span id="lastUpdated">불러오는 중...</span></div>
   </header>
 
+  <section id="hero" class="hero">
+    <div class="hero-head"><span class="hero-title">🌙 전일 미국장 요약</span><span class="note" id="heroTime"></span></div>
+    <div id="heroBody"><p class="hero-empty">불러오는 중...</p></div>
+  </section>
+
   <main id="grid" class="grid"></main>
 
   <div id="overlay" class="overlay" hidden>
@@ -28,7 +33,9 @@
     </div>
   </div>
 
+  <script src="js/vendor/chart.umd.js"></script>
   <script src="js/cards.js"></script>
+  <script src="js/charts.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

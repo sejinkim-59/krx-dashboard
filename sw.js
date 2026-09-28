@@ -1,5 +1,9 @@
-const SHELL_CACHE = 'krx-dashboard-shell-v2';
-const SHELL_FILES = ['./', './index.html', './css/style.css', './js/app.js', './js/cards.js', './manifest.webmanifest'];
+const SHELL_CACHE = 'krx-dashboard-shell-v3';
+const SHELL_FILES = [
+  './', './index.html', './css/style.css',
+  './js/app.js', './js/cards.js', './js/charts.js', './js/vendor/chart.umd.js',
+  './manifest.webmanifest',
+];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(SHELL_CACHE).then((cache) => cache.addAll(SHELL_FILES)));

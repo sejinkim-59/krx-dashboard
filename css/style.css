@@ -1,16 +1,23 @@
 :root {
   color-scheme: dark;
-  --bg: #0d1117;
-  --card-bg: #161b22;
-  --border: #2a3241;
-  --text: #e6edf3;
-  --muted: #8b949e;
-  --accent: #58a6ff;
-  --up: #ff5c5c;
-  --down: #4ea1ff;
-  --live: #2ea043;
-  --cloud: #388bfd;
-  --pending: #9a6700;
+  /* validated dark palette (dataviz skill reference instance) */
+  --bg: #0d0d0d;
+  --card-bg: #1a1a19;
+  --card-bg-raised: #201f1e;
+  --border: rgba(255, 255, 255, 0.10);
+  --text: #ffffff;
+  --text-secondary: #c3c2b7;
+  --muted: #898781;
+  --gridline: #2c2c2a;
+  --baseline: #383835;
+  --accent: #3987e5;
+  --up: #e66767;
+  --down: #3987e5;
+  --flat: #898781;
+  --good: #0ca30c;
+  --warning: #fab219;
+  --serious: #ec835a;
+  --critical: #d03b3b;
   padding-top: env(safe-area-inset-top, 0px);
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
@@ -23,10 +30,11 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Pretendard, Roboto, sans-serif;
+  font-variant-numeric: proportional-nums;
 }
 
 .topbar {
-  padding: 20px 20px 12px;
+  padding: 20px 20px 4px;
 }
 .topbar h1 {
   margin: 0 0 4px;
@@ -37,11 +45,48 @@ body {
   font-size: 0.85rem;
 }
 
+/* ---------- Hero: 시장 브리핑 스트립 (클릭 없이 바로 보임) ---------- */
+.hero {
+  margin: 12px 20px 4px;
+  padding: 14px 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+.hero-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.hero-title { font-size: 0.85rem; font-weight: 700; color: var(--text-secondary); }
+.hero-summary { font-size: 0.85rem; color: var(--text); margin: 0 0 12px; line-height: 1.5; }
+.hero-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+  gap: 10px;
+}
+.stat-tile {
+  background: var(--card-bg-raised);
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.stat-tile .label { font-size: 0.7rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.stat-tile .value { font-size: 1.05rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.stat-tile .delta { font-size: 0.75rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+.stat-tile .delta.up { color: var(--up); }
+.stat-tile .delta.down { color: var(--down); }
+.stat-tile .delta.flat { color: var(--flat); }
+.hero-empty { color: var(--muted); font-size: 0.82rem; }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 14px;
-  padding: 8px 20px 32px;
+  padding: 12px 20px 32px;
 }
 
 .card {
@@ -75,6 +120,18 @@ body {
   line-height: 1.4;
   flex: 1;
 }
+.card-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 6px;
+  border-top: 1px solid var(--gridline);
+  min-height: 30px;
+}
+.card-preview .cp-main { font-size: 0.92rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.card-preview .cp-sub { font-size: 0.72rem; color: var(--muted); }
+.card-preview svg { display: block; }
 .card-footer {
   display: flex;
   gap: 6px;
@@ -88,9 +145,9 @@ body {
   border-radius: 999px;
   letter-spacing: 0.02em;
 }
-.tag-live { background: rgba(46, 160, 67, 0.18); color: #3fb950; }
-.tag-cloud { background: rgba(56, 139, 253, 0.18); color: #58a6ff; }
-.tag-pending { background: rgba(154, 103, 0, 0.2); color: #d29922; }
+.tag-live { background: rgba(12, 163, 12, 0.18); color: #35c235; }
+.tag-cloud { background: rgba(57, 135, 229, 0.18); color: #6ba7ec; }
+.tag-pending { background: rgba(250, 178, 25, 0.16); color: var(--warning); }
 
 .overlay {
   position: fixed;
@@ -107,7 +164,7 @@ body {
   background: var(--card-bg);
   border: 1px solid var(--border);
   border-radius: 14px;
-  max-width: 800px;
+  max-width: 860px;
   width: 100%;
   padding: 24px;
   position: relative;
@@ -125,11 +182,11 @@ body {
 }
 .panel-body h2 { margin: 0 0 6px; font-size: 1.15rem; }
 .panel-desc { color: var(--muted); font-size: 0.85rem; margin: 0 0 16px; }
-.panel-content h3 { font-size: 0.95rem; margin: 18px 0 8px; color: var(--accent); }
+.panel-content h3 { font-size: 0.95rem; margin: 18px 0 8px; color: var(--text-secondary); font-weight: 700; }
 .note { color: var(--muted); font-size: 0.82rem; }
 .meta-line { color: var(--muted); font-size: 0.75rem; margin-bottom: 10px; }
 .summary-box {
-  background: rgba(88, 166, 255, 0.08);
+  background: var(--card-bg-raised);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 12px;
@@ -137,35 +194,58 @@ body {
   font-size: 0.9rem;
 }
 .pending-box, .error-box {
-  background: rgba(154, 103, 0, 0.1);
+  background: rgba(250, 178, 25, 0.08);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 14px;
   font-size: 0.88rem;
 }
-.pending-label { font-weight: 700; margin-bottom: 6px; }
+.pending-label { font-weight: 700; margin-bottom: 6px; color: var(--warning); }
 
 table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.82rem;
   margin-bottom: 10px;
+  font-variant-numeric: tabular-nums;
 }
 th, td {
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--gridline);
   padding: 6px 8px;
   text-align: left;
   white-space: nowrap;
 }
-th { color: var(--muted); font-weight: 600; }
+th { color: var(--muted); font-weight: 600; font-variant-numeric: normal; }
 td { overflow: hidden; text-overflow: ellipsis; max-width: 220px; }
 
 .pct.up { color: var(--up); font-weight: 600; }
 .pct.down { color: var(--down); font-weight: 600; }
-.pct.flat { color: var(--muted); }
+.pct.flat { color: var(--flat); }
+
+/* ---------- 차트 컨테이너 ---------- */
+.chart-box { position: relative; margin: 8px 0 16px; }
+.chart-box.h-160 { height: 160px; }
+.chart-box.h-220 { height: 220px; }
+.chart-box.h-lg { height: 280px; }
+.chart-legend-note { font-size: 0.72rem; color: var(--muted); margin: -8px 0 10px; }
+.small-multiples {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+.sm-cell h4 { margin: 0 0 6px; font-size: 0.82rem; color: var(--text-secondary); font-weight: 700; }
+
+.highlight-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
 
 @media (max-width: 480px) {
   .grid { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 8px 12px 24px; }
+  .hero { margin: 10px 12px 4px; }
   .panel { padding: 16px; }
   table { display: block; overflow-x: auto; }
+  .chart-box.h-lg { height: 220px; }
 }
