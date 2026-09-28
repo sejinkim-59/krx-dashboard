@@ -88,7 +88,7 @@ export async function fetchInvestAlertHtml(kind, menuIndex, strtDd, endDd) {
       startDate: strtDd,
       endDate: endDd,
       searchCorpName: '',
-      currentPageSize: '100',
+      currentPageSize: '500',
       pageIndex: '1',
     }
   );
