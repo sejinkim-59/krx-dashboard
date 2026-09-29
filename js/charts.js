@@ -117,12 +117,3 @@ function renderRankBars(items, { labelKey, valueKey, fmt = (v) => v.toLocaleStri
   }).join('');
   return `<div class="rankbar-list">${rows}</div>`;
 }
-
-/** hex 색을 factor(0~1)만큼 어둡게 섞은 rgb 문자열 반환 (패널 배너 그라데이션용). */
-function shade(hex, factor) {
-  const h = hex.replace('#', '');
-  const r = Math.round(parseInt(h.slice(0, 2), 16) * (1 - factor));
-  const g = Math.round(parseInt(h.slice(2, 4), 16) * (1 - factor));
-  const b = Math.round(parseInt(h.slice(4, 6), 16) * (1 - factor));
-  return `rgb(${r}, ${g}, ${b})`;
-}

@@ -3,8 +3,8 @@ const overlay = document.getElementById('overlay');
 const panelBody = document.getElementById('panelBody');
 const closeBtn = document.getElementById('closeBtn');
 const lastUpdatedEl = document.getElementById('lastUpdated');
-const heroBody = document.getElementById('heroBody');
-const heroTime = document.getElementById('heroTime');
+const ticker = document.getElementById('ticker');
+const marketSummary = document.getElementById('marketSummary');
 
 function fmtDateStr(s) {
   if (!s || s.length !== 8) return s || '-';
@@ -24,48 +24,37 @@ async function fetchJson(file) {
   return res.json();
 }
 
-function hexToRgba(hex, alpha) {
-  const h = hex.replace('#', '');
-  const r = parseInt(h.slice(0, 2), 16);
-  const g = parseInt(h.slice(2, 4), 16);
-  const b = parseInt(h.slice(4, 6), 16);
-  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
-}
-
 function renderGrid() {
   grid.innerHTML = '';
   const byCategory = new Map(CATEGORIES.map((c) => [c.id, []]));
   for (const card of CARDS) (byCategory.get(card.category) || []).push(card);
 
-  CATEGORIES.forEach((cat, catIndex) => {
+  CATEGORIES.forEach((cat) => {
     const cards = byCategory.get(cat.id);
     if (!cards.length) return;
     const section = document.createElement('section');
-    section.className = 'category-block';
-    section.style.setProperty('--cat-accent', cat.accent);
+    section.className = 'scan-section';
     const liveCount = cards.filter((c) => c.status === 'live').length;
     section.innerHTML = `
-      <div class="category-header">
-        <span class="category-dot"></span>
+      <div class="scan-section-head">
         <h2>${cat.label}</h2>
-        <span class="category-count">${liveCount}/${cards.length} 라이브</span>
+        <span class="scan-section-meta">LIVE ${liveCount}/${cards.length}</span>
       </div>
-      <div class="grid"></div>
+      <div class="scan-rows"></div>
     `;
-    const inner = section.querySelector('.grid');
-    cards.forEach((card, i) => {
+    const inner = section.querySelector('.scan-rows');
+    cards.forEach((card) => {
       const el = document.createElement('button');
-      el.className = `card status-${card.status}`;
-      el.style.setProperty('--card-delay', `${(catIndex * 2 + i) * 25}ms`);
+      el.className = `scan-row status-${card.status}`;
       el.innerHTML = `
-        <div class="card-icon" style="background:${hexToRgba(cat.accent, 0.16)};color:${cat.accent}">${iconSvg(card.icon, 22)}</div>
-        <div class="card-title">${card.title}</div>
-        <div class="card-desc">${card.desc}</div>
-        ${card.status === 'live' ? `<div class="card-preview" data-preview-for="${card.id}"><span class="cp-sub">불러오는 중…</span></div>` : ''}
-        <div class="card-footer">
-          <span class="tag tag-${card.tag.toLowerCase()}">${card.tag}</span>
-          ${card.status === 'pending' ? '<span class="tag tag-pending">준비중</span>' : ''}
-        </div>
+        <span class="scan-icon">${iconSvg(card.icon, 15)}</span>
+        <span class="scan-main">
+          <span class="scan-title">${card.title}</span>
+          <span class="scan-desc">${card.desc}</span>
+        </span>
+        <span class="scan-metric" data-preview-for="${card.id}">
+          ${card.status === 'live' ? '<span class="cp-sub">불러오는 중…</span>' : '<span class="cp-sub">데이터 연결 대기</span>'}
+        </span>
       `;
       el.addEventListener('click', () => openCard(card));
       inner.appendChild(el);
@@ -76,16 +65,16 @@ function renderGrid() {
 
 async function openCard(card) {
   overlay.hidden = false;
-  const cat = CATEGORIES.find((c) => c.id === card.category) || { accent: '#1baf7a', label: '' };
+  const cat = CATEGORIES.find((c) => c.id === card.category) || { label: '' };
   const dateStr = new Date().toLocaleDateString('ko-KR', { month: 'long', day: 'numeric', weekday: 'short' });
   panelBody.innerHTML = `
-    <div class="panel-banner" style="background:linear-gradient(135deg, ${cat.accent}, ${shade(cat.accent, 0.32)})">
-      <div class="panel-banner-badge">${iconSvg(card.icon, 26, 1.6)}</div>
-      <div>
-        <div class="panel-banner-title">${card.title}</div>
-        <div class="panel-banner-sub">${cat.label} · ${card.tag}</div>
+    <div class="panel-head">
+      <span class="panel-head-icon">${iconSvg(card.icon, 17)}</span>
+      <div class="panel-head-text">
+        <div class="panel-head-title">${card.title}</div>
+        <div class="panel-head-sub">${cat.label} · ${card.tag}${card.status === 'pending' ? ' · 대기' : ''}</div>
       </div>
-      <div class="panel-banner-date">${dateStr}</div>
+      <div class="panel-head-date">${dateStr}</div>
     </div>
     <div class="panel-body-inner"><div class="panel-content">불러오는 중...</div></div>
   `;
@@ -127,35 +116,27 @@ document.addEventListener('keydown', (e) => {
 async function loadHero() {
   try {
     const data = await fetchJson('us-market-brief.json');
-    heroTime.textContent = new Date(data.updated_at).toLocaleString('ko-KR');
-    const up = data.instruments.filter((r) => r.change_pct > 0).length;
-    const down = data.instruments.filter((r) => r.change_pct < 0).length;
-    const flat = data.instruments.length - up - down;
-    const pct = (n) => (n / data.instruments.length) * 100;
-    let html = `<p class="hero-summary">${data.summary}</p>`;
-    html += `
-      <div class="sentiment-bar" title="상승 ${up} · 보합 ${flat} · 하락 ${down}">
-        <div class="sentiment-seg up" style="width:${pct(up)}%"></div>
-        <div class="sentiment-seg flat" style="width:${pct(flat)}%"></div>
-        <div class="sentiment-seg down" style="width:${pct(down)}%"></div>
-      </div>
-      <div class="sentiment-label">시장 심리 · 상승 ${up} · 보합 ${flat} · 하락 ${down} (총 ${data.instruments.length}개 지표)</div>
-    `;
-    html += '<div class="hero-tiles">';
+    const updatedStr = new Date(data.updated_at).toLocaleString('ko-KR');
+    let tHtml = '';
     for (const r of data.instruments) {
       const cls = r.change_pct > 0 ? 'up' : r.change_pct < 0 ? 'down' : 'flat';
       const sign = r.change_pct > 0 ? '+' : '';
-      html += `
-        <div class="stat-tile">
-          <span class="label">${r.label}</span>
-          <span class="value">${r.last != null ? Number(r.last).toLocaleString(undefined, { maximumFractionDigits: 2 }) : '-'}</span>
-          <span class="delta ${cls}">${r.change_pct != null ? `${sign}${r.change_pct}%` : '-'}</span>
+      tHtml += `
+        <div class="ticker-item">
+          <span class="t-label">${r.label}</span>
+          <span class="t-value">${r.last != null ? Number(r.last).toLocaleString(undefined, { maximumFractionDigits: 2 }) : '-'}</span>
+          <span class="t-delta ${cls}">${r.change_pct != null ? `${sign}${r.change_pct}%` : '-'}</span>
         </div>`;
     }
-    html += '</div>';
-    heroBody.innerHTML = html;
+    ticker.innerHTML = tHtml;
+    marketSummary.innerHTML = `
+      <span class="ms-label">전일 미국장</span>
+      <span class="ms-text">${data.summary}</span>
+      <span class="ms-time">업데이트 ${updatedStr}</span>
+    `;
   } catch (e) {
-    heroBody.innerHTML = `<p class="hero-empty">시장 요약을 아직 불러올 수 없습니다.</p>`;
+    ticker.innerHTML = '<div class="ticker-item"><span class="t-label hero-empty">시장 데이터를 불러올 수 없습니다.</span></div>';
+    marketSummary.innerHTML = '';
   }
 }
 
