@@ -58,9 +58,10 @@ async function main() {
 
     byInvestor[code] = {
       label,
-      top_net_buy: topBuy.slice(0, 15),
-      top_net_sell: topSell.slice(0, 15),
-      flips: flips.slice(0, 15),
+      top_net_buy: topBuy.slice(0, 300),
+      top_net_sell: topSell.slice(0, 300),
+      flips: flips.slice(0, 300),
+      scanned_count: recent.size,
     };
   }
 

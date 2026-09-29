@@ -1,17 +1,16 @@
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { writeJson, todayKst, DATA_DIR } from './lib/util.mjs';
-import { buildMorningMeeting } from './lib/ai-desk.mjs';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+import { classifyMarketRegime } from './lib/ai-desk.mjs';
+import { runSelectionEngine } from './lib/selection-engine.mjs';
+import { STRATEGY_CONFIG } from './lib/selection-config.mjs';
 
 async function readJsonSafe(filename) {
   try {
     const text = await readFile(path.join(DATA_DIR, filename), 'utf-8');
     return JSON.parse(text);
   } catch {
-    return null; // 아직 수집되지 않았거나 이번 실행에서 실패한 소스 — 해당 Signal만 건너뛴다
+    return null; // 아직 수집되지 않았거나 이번 실행에서 실패한 소스 — 해당 Factor만 MISSING_DATA 처리
   }
 }
 
@@ -19,7 +18,7 @@ function dashDate(yyyymmdd) {
   return `${yyyymmdd.slice(0, 4)}-${yyyymmdd.slice(4, 6)}-${yyyymmdd.slice(6, 8)}`;
 }
 
-/** Learning Desk 로그: 오늘 선정 종목을 기록하고, 이미 지난 선정 건의 D+1/D+5/D+20 성과를 KIS OHLCV로 채운다. */
+/** Backtest Log(Learning Desk): 오늘 Final Pick을 기록하고, 지난 선정 건의 D+1/D+5/D+20 성과를 KIS OHLCV로 채운다. */
 async function updateLearningLog(meeting, kisQuotes, kisOhlcv) {
   const log = (await readJsonSafe('learning-log.json')) || { entries: [] };
 
@@ -32,6 +31,8 @@ async function updateLearningLog(meeting, kisQuotes, kisOhlcv) {
       symbol: sel.symbol,
       name: sel.company,
       setup: sel.setup,
+      score: sel.score,
+      dataCoverage: sel.dataCoverage,
       marketRegime: meeting.marketRegime.state,
       priceAtSelection: quote ? quote.price : null,
       hasPriceData: !!(quote && kisOhlcv?.symbols?.[sel.symbol]),
@@ -46,7 +47,7 @@ async function updateLearningLog(meeting, kisQuotes, kisOhlcv) {
     const bars = kisOhlcv?.symbols?.[entry.symbol];
     if (!bars) continue;
     const startIdx = bars.findIndex((b) => b.time === dashDate(entry.date));
-    if (startIdx === -1) continue; // 아직 100일 창에 없거나 선정일 데이터가 없음
+    if (startIdx === -1) continue;
     const setOutcome = (key, offset) => {
       if (entry[key] != null) return;
       const bar = bars[startIdx + offset];
@@ -94,16 +95,40 @@ async function main() {
   };
 
   const missing = Object.entries(d).filter(([, v]) => !v).map(([k]) => k);
-  if (missing.length) console.warn(`[morning-meeting] 일부 소스 누락(해당 Signal 생략): ${missing.join(', ')}`);
+  if (missing.length) console.warn(`[morning-meeting] 일부 소스 누락(해당 Factor MISSING_DATA 처리): ${missing.join(', ')}`);
 
-  const meeting = buildMorningMeeting(d, todayKst());
+  const dateStr = todayKst();
+  const regime = classifyMarketRegime(d.usMarketBrief);
+  // ai-desk.mjs의 Market Regime 판정(state/evidence)은 그대로 쓰되, Strategy Preference는
+  // 이번 Selection Engine의 STRATEGY_CONFIG(EVENT_DRIVEN/BUYBACK/MOMENTUM/CONFLUENCE 등)로 맞춘다.
+  regime.strategyPreference = STRATEGY_CONFIG[regime.state]?.preferred || [];
+  regime.avoid = STRATEGY_CONFIG[regime.state]?.avoid || [];
+  const engineResult = runSelectionEngine(d, dateStr, regime.state);
+
+  const meeting = {
+    date: dateStr,
+    generated_at: engineResult.generated_at,
+    methodologyNote: engineResult.methodologyNote,
+    marketRegime: regime,
+    screening: {
+      universeCount: engineResult.universe.totalCount,
+      technicalCoverageCount: engineResult.universe.technicalCoverageCount,
+      signalCount: engineResult.universe.signalDetectedCount,
+      passedRiskCount: engineResult.universe.eligibleCount,
+      rejectedCount: engineResult.rejectedCandidates.length,
+    },
+    selections: engineResult.finalPicks,
+    rejectedCandidates: engineResult.rejectedCandidates,
+    candidateQueue: engineResult.topCandidates,
+  };
+
   await writeJson('morning-meeting.json', meeting);
 
   const log = await updateLearningLog(meeting, d.kisQuotes, d.kisOhlcv);
   const learningSummary = summarizeLearning(log);
   await writeJson('learning-summary.json', { updated_at: new Date().toISOString(), ...learningSummary });
 
-  console.log(`[morning-meeting] 완료: 유니버스 ${meeting.screening.universeCount} / 시그널 ${meeting.screening.signalCount} / 선정 ${meeting.selections.length} / 제외 ${meeting.rejectedCandidates.length}`);
+  console.log(`[morning-meeting] 완료: Universe ${meeting.screening.universeCount} (Technical 확보 ${meeting.screening.technicalCoverageCount}) / Signal ${meeting.screening.signalCount} / Risk 통과 ${meeting.screening.passedRiskCount} / Final Pick ${meeting.selections.length} / 제외 ${meeting.rejectedCandidates.length}`);
 }
 
 main().catch((e) => {

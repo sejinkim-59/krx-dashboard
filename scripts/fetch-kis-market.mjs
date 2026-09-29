@@ -9,6 +9,7 @@ function normalizeQuote(inst, o) {
     symbol: inst.symbol,
     name: inst.name,
     market: inst.market,
+    sector: inst.sector || null,
     currency: 'KRW',
     price: num(o.stck_prpr),
     change: num(o.prdy_vrss),
@@ -24,6 +25,7 @@ function normalizeQuote(inst, o) {
     week52Low: num(o.w52_lwpr),
     per: num(o.per),
     pbr: num(o.pbr),
+    sharesOutstanding: num(o.lstn_stcn), // 상장주식수 — 희석비율(신주/기존주식수) 계산용
     isRealtime: false,
     source: 'KIS REST',
   };
