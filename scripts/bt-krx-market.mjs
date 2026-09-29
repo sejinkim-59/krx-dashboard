@@ -8,7 +8,20 @@ import { callApi } from './lib/krx.mjs';
 import { CACHE, ymd } from './lib/backtest-core.mjs';
 
 await mkdir(CACHE, { recursive: true });
-const cal = JSON.parse(await readFile(path.join(CACHE, 'bars-069500.json'), 'utf-8')).map((b) => ymd(b.time));
+// 인자 없으면 KODEX200 일봉 달력, 인자(from to)가 있으면 그 기간의 평일 전부(휴장일은 빈 응답 → 저장 안 함)
+let cal;
+if (process.argv[2]) {
+  cal = [];
+  const [from, to] = [process.argv[2], process.argv[3]];
+  const d = new Date(Number(from.slice(0, 4)), Number(from.slice(4, 6)) - 1, Number(from.slice(6, 8)));
+  const end = new Date(Number(to.slice(0, 4)), Number(to.slice(4, 6)) - 1, Number(to.slice(6, 8)));
+  for (; d <= end; d.setDate(d.getDate() + 1)) {
+    if (d.getDay() === 0 || d.getDay() === 6) continue;
+    cal.push(`${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`);
+  }
+} else {
+  cal = JSON.parse(await readFile(path.join(CACHE, 'bars-069500.json'), 'utf-8')).map((b) => ymd(b.time));
+}
 const n = (v) => Number(String(v ?? '').replace(/,/g, '')) || 0;
 let fetched = 0, skipped = 0;
 for (const d of cal) {
@@ -30,6 +43,7 @@ for (const d of cal) {
     }
     await new Promise((r) => setTimeout(r, 200));
   }
+  if (!Object.keys(out).length) { skipped++; continue; } // 휴장일
   await writeFile(file, JSON.stringify(out));
   fetched++;
   if (fetched % 20 === 0) console.log(`[mkt] ${d} (${fetched} fetched)`);

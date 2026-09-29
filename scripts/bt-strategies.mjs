@@ -26,6 +26,7 @@ const STRATS_ONLY = process.env.BT_ONLY ? new Set(process.env.BT_ONLY.split(',')
 for (const r of panel.rows) {
   if (r.fwd[h] == null) continue;
   if (excludeLarge && r.isLargeCap) continue;
+  if (process.env.BT_ONLY_LARGE === '1' && !r.isLargeCap) continue;
   if (regime !== 'all' && upDay.get(r.date) !== (regime === 'up')) continue;
   if (!byDate.has(r.date)) byDate.set(r.date, []);
   byDate.get(r.date).push(r);
@@ -95,6 +96,76 @@ const STRATS = {
       return (r) => -s(r) - v(r) + 0.5 * l(r);
     },
   },
+  // 4차: 수급 패널 전용 (flow 필드 없는 패널에서는 선정 0건)
+  'FL 수급 확인만 (외국인/기관 매수전환+가격/거래량 확인, 강도순)': {
+    filter: (r) => r.flowBullish === 1,
+    score: () => (r) => r.capIntPct ?? 0,
+  },
+  'S7F S7 + 수급 매수 확인': {
+    filter: (r) => r.flowBullish === 1 && r.pricedIn !== 'likely_priced_in' && r.pricedIn !== 'partially_priced_in',
+    score: (arr) => STRATS['S7 미반영+저변동+유동성 복합'].score(arr),
+  },
+  'S7C S7 + WHAT CHANGED 존재 (수급확인 또는 신선한 변화)': {
+    filter: (r) => (r.flowBullish === 1 || fresh(r.evPriceCross) || fresh(r.evMaCross) || fresh(r.evVolSpike)) && r.pricedIn !== 'likely_priced_in' && r.pricedIn !== 'partially_priced_in' && r.flowBullish !== undefined,
+    score: (arr) => STRATS['S7 미반영+저변동+유동성 복합'].score(arr),
+  },
+  'S7X S7 - 수급 매도확인 제외': {
+    filter: (r) => r.flowBullish !== undefined && r.flowBullish !== -1 && r.pricedIn !== 'likely_priced_in' && r.pricedIn !== 'partially_priced_in',
+    score: (arr) => STRATS['S7 미반영+저변동+유동성 복합'].score(arr),
+  },
+  'S7FI S7 + 외국인 순매수 강도': {
+    filter: (r) => r.fNet3Int !== undefined && r.pricedIn !== 'likely_priced_in' && r.pricedIn !== 'partially_priced_in',
+    score: (arr) => { const base = STRATS['S7 미반영+저변동+유동성 복합'].score(arr), fi = zmap(arr, (r) => r.fNet3Int); return (r) => base(r) + 0.5 * fi(r); },
+  },
+  'S7CF S7C + 외국인 순매수 강도': {
+    filter: (r) => STRATS['S7C S7 + WHAT CHANGED 존재 (수급확인 또는 신선한 변화)'].filter(r),
+    score: (arr) => STRATS['S7FI S7 + 외국인 순매수 강도'].score(arr),
+  },
+  // 5차: 하루 5종목 전체 출력 구조 비교 (전체 유니버스 패널에서 실행, BT_EXCLUDE_LARGE 없이)
+  'A 구조 1/2/1/1 (Leader1+Discovery2+Inflection1+보충1, S7C 순위)': {
+    pick: (arr) => {
+      const S7C = STRATS['S7C S7 + WHAT CHANGED 존재 (수급확인 또는 신선한 변화)'];
+      const sc = S7C.score(arr.filter((r) => !r.isLargeCap));
+      const scL = S7C.score(arr.filter((r) => r.isLargeCap));
+      const chosen = new Set(), out = [];
+      const take = (list, n, key) => { for (const r of list.sort((a, b) => key(b) - key(a))) { if (out.length >= 5 || n <= 0) break; if (chosen.has(r.symbol)) continue; chosen.add(r.symbol); out.push(r); n--; } };
+      take(arr.filter((r) => r.isLargeCap && S7C.filter(r)), 1, scL);
+      take(arr.filter((r) => !r.isLargeCap && S7C.filter(r)), 2, sc);
+      take(arr.filter((r) => !r.isLargeCap && S7C.filter(r) && r.dHigh52 != null && r.dHigh52 <= -20 && (fresh(r.evPriceCross) || fresh(r.evMaCross))), 1, sc);
+      take(arr.filter((r) => !r.isLargeCap && S7C.filter(r)), 5 - out.length, sc);
+      return out;
+    },
+  },
+  'B 구조 Discovery 5 (S7, 변화 요건 없음)': {
+    pick: (arr) => { const S7 = STRATS['S7 미반영+저변동+유동성 복합']; const d = arr.filter((r) => !r.isLargeCap); const sc = S7.score(d); return d.filter(S7.filter).sort((a, b) => sc(b) - sc(a)).slice(0, 5); },
+  },
+  'C 구조 Discovery 5 (S7C, WHAT CHANGED 필수)': {
+    pick: (arr) => { const S = STRATS['S7C S7 + WHAT CHANGED 존재 (수급확인 또는 신선한 변화)']; const d = arr.filter((r) => !r.isLargeCap); const sc = S.score(d); return d.filter(S.filter).sort((a, b) => sc(b) - sc(a)).slice(0, 5); },
+  },
+  // 7차: 제품 목적(새 종목 발견)과의 절충 — 더 작은 종목으로 강제 / 반복 선정 금지
+  ...Object.fromEntries([60, 100, 200].map((cut) => [`BX${cut} B 구조, 시총 상위 ${cut} 제외`, {
+    pick: (arr) => {
+      const S7 = STRATS['S7 미반영+저변동+유동성 복합'];
+      const d = arr.filter((r) => r.capRank > cut);
+      const sc = S7.score(d);
+      return d.filter(S7.filter).sort((a, b) => sc(b) - sc(a)).slice(0, 5);
+    },
+  }])),
+  'N v0.2식 Novelty 점수 상위 (Discovery)': {
+    pick: (arr) => arr.filter((r) => !r.isLargeCap && r.novelty != null).sort((a, b) => b.novelty - a.novelty).slice(0, 5),
+  },
+  // 6차: B 구조 민감도 — 가중치 [미반영, 변화후수익, 변동성, 유동성]
+  ...Object.fromEntries([[1, 1, 1, 0.5], [1, 1, 1, 0], [1, 1, 0.5, 0.5], [1, 0.5, 1, 0.5], [0.5, 1, 1, 0.5], [1, 1, 1.5, 0.5], [1, 1, 1, 1]].map((w) => [
+    `W ${w.join('/')}`,
+    {
+      pick: (arr) => {
+        const d = arr.filter((r) => !r.isLargeCap && r.pricedIn !== 'likely_priced_in' && r.pricedIn !== 'partially_priced_in');
+        const a = zmap(d, (r) => PRICED[r.pricedIn] ?? 0), s = zmap(d, (r) => r.signalReturn ?? r.r20), v = zmap(d, (r) => r.atrPct), l = zmap(d, (r) => (r.tradVal20 ? Math.log(r.tradVal20) : null));
+        const sc = (r) => w[0] * a(r) - w[1] * s(r) - w[2] * v(r) + w[3] * l(r);
+        return d.sort((x, y) => sc(y) - sc(x)).slice(0, K);
+      },
+    },
+  ])),
   'F3 미반영 판정 + 추세 유지 (MA60 위)': {
     filter: (r) => r.pricedIn === 'not_yet_priced' && r.ma60Gap != null && r.ma60Gap > 0,
     score: (arr) => { const b = zmap(arr, (r) => r.atrPct), n = zmap(arr, (r) => r.novelty); return (r) => n(r) - b(r); },
@@ -115,6 +186,8 @@ function run(name, strat, from, to, noRepeat) {
       const set = enginePicks.get(date);
       if (!set) continue;
       picks = arr.filter((r) => set.has(r.symbol));
+    } else if (strat.pick) {
+      picks = strat.pick(noRepeat ? arr.filter((r) => !(last.has(r.symbol) && dayN - last.get(r.symbol) < 5)) : arr);
     } else {
       const cand = arr.filter(strat.filter).filter((r) => !noRepeat || !(last.has(r.symbol) && dayN - last.get(r.symbol) < 5));
       const sc = strat.score(arr);

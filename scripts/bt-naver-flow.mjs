@@ -14,7 +14,8 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 async function page(symbol, bizdate) {
   for (let a = 1; a <= 6; a++) {
     try {
-      const r = await fetch(`https://m.stock.naver.com/api/stock/${symbol}/trend?pageSize=60&bizdate=${bizdate}`, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+      // 응답이 멈추면 프로세스 전체가 멈추므로 반드시 timeout
+      const r = await fetch(`https://m.stock.naver.com/api/stock/${symbol}/trend?pageSize=60&bizdate=${bizdate}`, { headers: { 'User-Agent': 'Mozilla/5.0' }, signal: AbortSignal.timeout(15000) });
       if (r.status === 404) return [];
       const t = await r.text();
       if (!t) return [];

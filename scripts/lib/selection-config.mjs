@@ -221,7 +221,8 @@ export function applyProfile(name) {
   const vs = NOVELTY_RULES.find((r) => r.id === 'volumeSpike');
   vs.points = p.volumeSpikePoints;
 }
-applyProfile(process.env.ENGINE_PROFILE || 'v0.2');
+// v0.5는 별도 엔진(selection-v05)이라 여기 Profile이 아니다 → v0.2 기본값 유지
+applyProfile(PROFILES[process.env.ENGINE_PROFILE] ? process.env.ENGINE_PROFILE : 'v0.2');
 
 // ---- 시장 국면별 선호 (Market Desk 표시용) ----
 export const STRATEGY_CONFIG = {
