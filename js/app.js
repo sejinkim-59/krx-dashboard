@@ -478,8 +478,7 @@ async function renderInvestorFlow(card, el) {
 
 function pctSpanValue(n) {
   const cls = n > 0 ? 'up' : n < 0 ? 'down' : 'flat';
-  const sign = n > 0 ? '+' : '';
-  return `<span class="pct ${cls}">${sign}${formatWonCompact(n)}</span>`;
+  return `<span class="pct ${cls}">${formatWonCompact(n)}</span>`;
 }
 
 /** 큰 원화 금액을 억/조 단위로 축약 (랭크바·표에서 자릿수 폭주 방지). */
