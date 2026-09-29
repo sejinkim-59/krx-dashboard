@@ -99,8 +99,9 @@ const INSIGHT_BUILDERS = {
     const out = [];
     const items = [...data.items].filter((i) => i.conversion_start).sort((a, b) => a.conversion_start.localeCompare(b.conversion_start));
     const soon = items[0];
+    const priceStr = soon?.conversion_price != null ? `${soon.conversion_price}원` : '원문 확인 필요';
     if (soon) out.push(insight('watch',
-      `${soon.corp_name} 전환청구기간 ${soon.conversion_start}부터 시작 (전환가 ${Number(soon.conversion_price).toLocaleString()}원)`,
+      `${soon.corp_name} 전환청구기간 ${soon.conversion_start}부터 시작 (전환가 ${priceStr})`,
       '현재가가 전환가액보다 높으면 전환 후 매물 출회(오버행) 가능성이 있습니다.',
       '현재 주가를 전환가액과 비교해보세요. 이 데이터에는 실시간 주가가 포함되어 있지 않습니다.'));
     else out.push(insight('info', '최근 2주간 신규 CB 발행결정 공시 없음'));
