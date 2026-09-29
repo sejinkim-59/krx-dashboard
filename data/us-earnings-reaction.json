@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-09-29T08:58:06.900Z",
+  "updated_at": "2026-09-29T15:31:48.559Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
-  "count": 13,
+  "count": 12,
   "items": [
     {
       "symbol": "COST",
       "name": "Costco Wholesale Corporation",
       "report_date": "2026-09-24",
       "report_time": "미상",
-      "market_cap": 409226707000,
+      "market_cap": 409295454000,
       "eps": "$6.60",
       "eps_forecast": "$6.48",
       "surprise_pct": 1.85,
@@ -18,7 +18,7 @@
         "D0": -0.91,
         "D+1": 2,
         "D+2": 2.01,
-        "D+3": null
+        "D+3": 1.5
       }
     },
     {
@@ -26,7 +26,7 @@
       "name": "Cintas Corporation",
       "report_date": "2026-09-23",
       "report_time": "미상",
-      "market_cap": 79867396000,
+      "market_cap": 80135070000,
       "eps": "$1.39",
       "eps_forecast": "$1.35",
       "surprise_pct": 2.96,
@@ -43,7 +43,7 @@
       "name": "Paychex, Inc.",
       "report_date": "2026-09-23",
       "report_time": "미상",
-      "market_cap": 36085740000,
+      "market_cap": 35348861000,
       "eps": "$1.34",
       "eps_forecast": "$1.33",
       "surprise_pct": 0.75,
@@ -60,7 +60,7 @@
       "name": "Darden Restaurants, Inc.",
       "report_date": "2026-09-24",
       "report_time": "미상",
-      "market_cap": 22787074000,
+      "market_cap": 22475640800,
       "eps": "$2.05",
       "eps_forecast": "$2.06",
       "surprise_pct": -0.49,
@@ -69,7 +69,7 @@
         "D0": -3.02,
         "D+1": -6.52,
         "D+2": -7.8,
-        "D+3": null
+        "D+3": -7.96
       }
     },
     {
@@ -77,7 +77,7 @@
       "name": "TD SYNNEX Corporation",
       "report_date": "2026-09-24",
       "report_time": "미상",
-      "market_cap": 21031551000,
+      "market_cap": 20529410000,
       "eps": "$5.53",
       "eps_forecast": "$4.46",
       "surprise_pct": 23.99,
@@ -86,7 +86,7 @@
         "D0": -9.87,
         "D+1": -8.64,
         "D+2": -10.82,
-        "D+3": null
+        "D+3": -11.3
       }
     },
     {
@@ -94,7 +94,7 @@
       "name": "General Mills, Inc.",
       "report_date": "2026-09-23",
       "report_time": "미상",
-      "market_cap": 17986875400,
+      "market_cap": 17965488100,
       "eps": "$0.75",
       "eps_forecast": "$0.72",
       "surprise_pct": 4.17,
@@ -110,49 +110,15 @@
       "symbol": "JEF",
       "name": "Jefferies Financial Group Inc.",
       "report_date": "2026-09-28",
-      "report_time": "장후",
-      "market_cap": 9237651500,
-      "eps": "$1.05",
+      "report_time": "미상",
+      "market_cap": 9131093000,
+      "eps": "$1.09",
       "eps_forecast": "$1.04",
-      "surprise_pct": null,
+      "surprise_pct": 4.81,
       "reaction": {
         "D-1": 0,
         "D0": -1.15,
-        "D+1": null,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "GRFS",
-      "name": "Grifols, S.A.",
-      "report_date": "2026-09-28",
-      "report_time": "미상",
-      "market_cap": 5053528600,
-      "eps": "$0.19",
-      "eps_forecast": "$0.27",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": 0.82,
-        "D+1": null,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "MTN",
-      "name": "Vail Resorts, Inc.",
-      "report_date": "2026-09-28",
-      "report_time": "장후",
-      "market_cap": 4850079200,
-      "eps": "($5.08)",
-      "eps_forecast": "($5.40)",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": 1.45,
-        "D+1": null,
+        "D+1": -2.63,
         "D+2": null,
         "D+3": null
       }
@@ -162,7 +128,7 @@
       "name": "BlackBerry Limited",
       "report_date": "2026-09-24",
       "report_time": "미상",
-      "market_cap": 4800652800,
+      "market_cap": 5188155900,
       "eps": "$0.05",
       "eps_forecast": "$0.03",
       "surprise_pct": 66.67,
@@ -171,6 +137,40 @@
         "D0": 4.18,
         "D+1": -2.03,
         "D+2": 5.01,
+        "D+3": 2.39
+      }
+    },
+    {
+      "symbol": "MTN",
+      "name": "Vail Resorts, Inc.",
+      "report_date": "2026-09-28",
+      "report_time": "미상",
+      "market_cap": 4920633900,
+      "eps": "($5.34)",
+      "eps_forecast": "($5.40)",
+      "surprise_pct": 1.11,
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.45,
+        "D+1": 0.54,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "AIR",
+      "name": "AAR Corp.",
+      "report_date": "2026-09-28",
+      "report_time": "미상",
+      "market_cap": 4633390100,
+      "eps": "$1.49",
+      "eps_forecast": "",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -0.88,
+        "D+1": -7.25,
+        "D+2": null,
         "D+3": null
       }
     },
@@ -179,7 +179,7 @@
       "name": "Manchester United Ltd.",
       "report_date": "2026-09-23",
       "report_time": "미상",
-      "market_cap": 3518824450,
+      "market_cap": 3529174020,
       "eps": "($0.22)",
       "eps_forecast": "",
       "surprise_pct": null,
@@ -192,28 +192,11 @@
       }
     },
     {
-      "symbol": "CHRN",
-      "name": "ChronoScale Holdings Corporation",
-      "report_date": "2026-09-28",
-      "report_time": "미상",
-      "market_cap": 2890903300,
-      "eps": "($1.24)",
-      "eps_forecast": "($0.06)",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": -0.18,
-        "D+1": null,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
       "symbol": "FUL",
       "name": "H. B. Fuller Company",
       "report_date": "2026-09-23",
       "report_time": "미상",
-      "market_cap": 2694685700,
+      "market_cap": 2657543680,
       "eps": "$1.52",
       "eps_forecast": "$1.45",
       "surprise_pct": 4.83,
