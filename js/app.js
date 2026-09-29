@@ -456,7 +456,7 @@ async function renderInvestorFlow(card, el) {
   html += `<p class="note">최근 3거래일: ${data.recent_window.strtDd}~${data.recent_window.endDd} · 직전 5거래일: ${data.prior_window.strtDd}~${data.prior_window.endDd}</p>`;
   const investorEntries = Object.entries(data.investors);
   html += '<div class="small-multiples">';
-  const swingFmt = (v) => `${v > 0 ? '+' : ''}${v.toLocaleString()}`;
+  const swingFmt = (v) => formatWonCompact(v);
   for (const [, info] of investorEntries) {
     html += `<div class="sm-cell"><h4>${info.label} — 매수/매도 전환 상위</h4>`;
     html += info.flips.length
@@ -479,7 +479,17 @@ async function renderInvestorFlow(card, el) {
 function pctSpanValue(n) {
   const cls = n > 0 ? 'up' : n < 0 ? 'down' : 'flat';
   const sign = n > 0 ? '+' : '';
-  return `<span class="pct ${cls}">${sign}${n.toLocaleString()}</span>`;
+  return `<span class="pct ${cls}">${sign}${formatWonCompact(n)}</span>`;
+}
+
+/** 큰 원화 금액을 억/조 단위로 축약 (랭크바·표에서 자릿수 폭주 방지). */
+function formatWonCompact(n) {
+  const sign = n > 0 ? '+' : n < 0 ? '-' : '';
+  const abs = Math.abs(n);
+  if (abs >= 1e12) return `${sign}${(abs / 1e12).toFixed(2)}조`;
+  if (abs >= 1e8) return `${sign}${Math.round(abs / 1e8).toLocaleString()}억`;
+  if (abs >= 1e4) return `${sign}${Math.round(abs / 1e4).toLocaleString()}만`;
+  return `${sign}${abs.toLocaleString()}`;
 }
 
 async function renderUsEarnings(card, el) {
