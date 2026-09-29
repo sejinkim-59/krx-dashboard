@@ -19,6 +19,8 @@ const SCRIPTS = [
   'fetch-etf-rebalance.mjs',
   'fetch-index-rebalance-calendar.mjs',
   'fetch-kis-market.mjs',
+  // v0.5 엔진은 KRX 전종목 일별 시세가 필요하다 (v0.2에서는 실행하지 않아 기존 파이프라인 동작이 그대로 유지됨)
+  ...(process.env.ENGINE_PROFILE === 'v0.5' ? ['fetch-market-daily.mjs'] : []),
   'fetch-morning-meeting.mjs',
 ];
 

@@ -23,12 +23,27 @@ jobs:
         with:
           node-version: '22'
 
+      # v0.5 전환 스위치: 저장소 Settings → Variables → ENGINE_PROFILE = v0.5 (없으면 v0.2 그대로)
+      - name: Cache key (KST date)
+        id: day
+        run: echo "d=$(TZ=Asia/Seoul date +%Y%m%d)" >> "$GITHUB_OUTPUT"
+
+      # KRX 전종목 일별 시세는 하루 단위로만 바뀌므로 날짜별로 한 번 저장하고, 이후 실행은 복원만 한다.
+      - name: Restore market daily cache (v0.5)
+        if: ${{ vars.ENGINE_PROFILE == 'v0.5' }}
+        uses: actions/cache@v4
+        with:
+          path: .cache/market
+          key: market-daily-${{ steps.day.outputs.d }}
+          restore-keys: market-daily-
+
       - name: Fetch all data sources
         env:
           DART_API_KEY: ${{ secrets.DART_API_KEY }}
           KRX_API_KEY: ${{ secrets.KRX_API_KEY }}
           KIS_APP_KEY: ${{ secrets.KIS_APP_KEY }}
           KIS_APP_SECRET: ${{ secrets.KIS_APP_SECRET }}
+          ENGINE_PROFILE: ${{ vars.ENGINE_PROFILE || 'v0.2' }}
         run: npm run fetch:all
 
       - name: Commit updated data

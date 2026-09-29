@@ -8,7 +8,7 @@ import path from 'node:path';
 import { callApi } from './lib/krx.mjs';
 
 export const MARKET_CACHE_DIR = process.env.MARKET_CACHE_DIR || path.join(process.cwd(), '.cache', 'market');
-const KEEP_TRADING_DAYS = 260;
+const KEEP_TRADING_DAYS = Number(process.env.MARKET_KEEP_DAYS || 260); // 52주 고점·MA60·ATR 계산에 충분한 약 1년
 const n = (v) => Number(String(v ?? '').replace(/,/g, '')) || 0;
 
 async function fetchDay(date) {
