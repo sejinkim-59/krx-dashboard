@@ -58,7 +58,7 @@ function renderGrid() {
       el.className = `card status-${card.status}`;
       el.style.setProperty('--card-delay', `${(catIndex * 2 + i) * 25}ms`);
       el.innerHTML = `
-        <div class="card-icon" style="background:${hexToRgba(cat.accent, 0.16)};color:${cat.accent}">${card.icon}</div>
+        <div class="card-icon" style="background:${hexToRgba(cat.accent, 0.16)};color:${cat.accent}">${iconSvg(card.icon, 22)}</div>
         <div class="card-title">${card.title}</div>
         <div class="card-desc">${card.desc}</div>
         ${card.status === 'live' ? `<div class="card-preview" data-preview-for="${card.id}"><span class="cp-sub">불러오는 중…</span></div>` : ''}
@@ -80,7 +80,7 @@ async function openCard(card) {
   const dateStr = new Date().toLocaleDateString('ko-KR', { month: 'long', day: 'numeric', weekday: 'short' });
   panelBody.innerHTML = `
     <div class="panel-banner" style="background:linear-gradient(135deg, ${cat.accent}, ${shade(cat.accent, 0.32)})">
-      <div class="panel-banner-badge">${card.icon}</div>
+      <div class="panel-banner-badge">${iconSvg(card.icon, 26, 1.6)}</div>
       <div>
         <div class="panel-banner-title">${card.title}</div>
         <div class="panel-banner-sub">${cat.label} · ${card.tag}</div>
@@ -95,7 +95,7 @@ async function openCard(card) {
     contentEl.innerHTML = `
       ${usageBox(card.usage)}
       <div class="pending-box">
-        <div class="pending-label">⏳ 아직 연결되지 않은 데이터입니다</div>
+        <div class="pending-label">아직 연결되지 않은 데이터입니다</div>
         <p>${card.reason}</p>
       </div>
     `;
@@ -139,7 +139,7 @@ async function loadHero() {
         <div class="sentiment-seg flat" style="width:${pct(flat)}%"></div>
         <div class="sentiment-seg down" style="width:${pct(down)}%"></div>
       </div>
-      <div class="sentiment-label">📊 시장 심리: 상승 ${up} · 보합 ${flat} · 하락 ${down} (총 ${data.instruments.length}개 지표)</div>
+      <div class="sentiment-label">시장 심리 · 상승 ${up} · 보합 ${flat} · 하락 ${down} (총 ${data.instruments.length}개 지표)</div>
     `;
     html += '<div class="hero-tiles">';
     for (const r of data.instruments) {
@@ -381,7 +381,7 @@ async function renderEtfRebalance(card, el) {
   const insights = INSIGHT_BUILDERS[card.id]?.(data) || [];
   let html = renderHeadlineCallout(card, insights) + renderBulletSection(insights.slice(1)) + metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
   if (!data.has_baseline) {
-    html += '<div class="pending-box"><div class="pending-label">📸 첫 스냅샷 수집 완료</div><p>다음 실행부터 전일 대비 변화가 감지됩니다.</p></div>';
+    html += '<div class="pending-box"><div class="pending-label">첫 스냅샷 수집 완료</div><p>다음 실행부터 전일 대비 변화가 감지됩니다.</p></div>';
     el.innerHTML = html;
     return;
   }
@@ -392,8 +392,8 @@ async function renderEtfRebalance(card, el) {
   }
   for (const etf of data.items) {
     html += `<h3>${etf.name} (${etf.trd_dt})</h3>`;
-    if (etf.added.length) html += `<p class="note">🟢 신규 편입: ${etf.added.map((a) => a.name).join(', ')}</p>`;
-    if (etf.removed.length) html += `<p class="note">🔴 편출: ${etf.removed.map((r) => r.name).join(', ')}</p>`;
+    if (etf.added.length) html += `<p class="note"><span class="pct up">▲</span> 신규 편입: ${etf.added.map((a) => a.name).join(', ')}</p>`;
+    if (etf.removed.length) html += `<p class="note"><span class="pct down">▼</span> 편출: ${etf.removed.map((r) => r.name).join(', ')}</p>`;
     if (etf.changed.length) {
       html += '<table><thead><tr><th>종목</th><th>이전 비중</th><th>현재 비중</th><th>변화</th></tr></thead><tbody>';
       for (const c of etf.changed) {

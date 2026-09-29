@@ -13,7 +13,7 @@ const VIZ = {
 
 if (window.Chart) {
   Chart.defaults.color = VIZ.textSecondary;
-  Chart.defaults.font.family = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Pretendard, Roboto, sans-serif";
+  Chart.defaults.font.family = "'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
   Chart.defaults.font.size = 11;
   Chart.defaults.borderColor = VIZ.gridline;
   Chart.defaults.plugins.legend.labels.boxWidth = 10;

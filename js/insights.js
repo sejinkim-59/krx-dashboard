@@ -198,7 +198,7 @@ function toneMeta(tone) {
 
 function usageBox(text) {
   if (!text) return '';
-  return `<div class="usage-box"><div class="usage-title">📌 이 지표, 투자에 이렇게 활용하세요</div><p>${text}</p></div>`;
+  return `<div class="usage-box"><div class="usage-title">이 지표, 투자에 이렇게 활용하세요</div><p>${text}</p></div>`;
 }
 
 /** 가장 중요한 시사점 1개를 헤드라인 콜아웃으로, 고정 활용법을 그 설명으로 함께 보여준다. */
@@ -218,7 +218,7 @@ function renderHeadlineCallout(card, insightsList) {
 }
 
 /** 헤드라인으로 뽑히지 않은 나머지 시사점들을 보조 불릿으로. */
-function renderBulletSection(insightsList, titleText = '📊 함께 보면 좋은 포인트') {
+function renderBulletSection(insightsList, titleText = '함께 보면 좋은 포인트') {
   if (!insightsList || !insightsList.length) return '';
   const rows = insightsList.map((it) => {
     const { cls } = toneMeta(it.tone);

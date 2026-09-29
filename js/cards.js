@@ -15,7 +15,7 @@ const CATEGORIES = [
 const CARDS = [
   {
     id: 'short-selling',
-    icon: '📉',
+    icon: 'trendingDown',
     category: 'flow',
     title: '한국 공매도',
     desc: '거래대금 상위 종목의 당일 공매도 비중 랭킹 (코스피+코스닥).',
@@ -27,7 +27,7 @@ const CARDS = [
   },
   {
     id: 'alert-screener',
-    icon: '⚡',
+    icon: 'alertTriangle',
     category: 'flow',
     title: '투자주의/경고 스크리너',
     desc: 'KRX KIND 공시 기반 투자주의/경고/위험 종목 지정 내역 (최근 2주).',
@@ -39,7 +39,7 @@ const CARDS = [
   },
   {
     id: 'investor-flow',
-    icon: '🔄',
+    icon: 'refreshCw',
     category: 'flow',
     title: '수급 주체 전환 스크리너',
     desc: '외국인·기관·연기금·개인 순매수대금. 최근 3거래일 vs 직전 5거래일 매수/매도 전환 종목.',
@@ -51,7 +51,7 @@ const CARDS = [
   },
   {
     id: 'futures-oi',
-    icon: '📐',
+    icon: 'layers',
     category: 'derivatives',
     title: '주식선물 미결제약정 현황',
     desc: 'KRX 주식선물 종목의 미결제약정 잔량 랭킹과 전일대비 증감.',
@@ -63,7 +63,7 @@ const CARDS = [
   },
   {
     id: 'futures-basis',
-    icon: '📏',
+    icon: 'scale',
     category: 'derivatives',
     title: '주식선물 베이시스 (콘탱고/백워데이션)',
     desc: '선물 상장 종목의 선물가 vs 현물가 괴리율. 콘탱고·백워데이션 상위 종목.',
@@ -75,7 +75,7 @@ const CARDS = [
   },
   {
     id: 'capital-increase',
-    icon: '🏢',
+    icon: 'buildingTwo',
     category: 'corporate',
     title: '유무상증자 기준일',
     desc: 'DART 전자공시 수집으로 유상증자·무상증자·주주배정 기준일을 정리.',
@@ -87,7 +87,7 @@ const CARDS = [
   },
   {
     id: 'convertible-bond',
-    icon: '🔁',
+    icon: 'repeat',
     category: 'corporate',
     title: '전환청구권 신주상장 캘린더',
     desc: 'CB(전환사채) 발행 결정 공시를 수집해 전환가액·전환청구기간을 캘린더로 정리.',
@@ -99,7 +99,7 @@ const CARDS = [
   },
   {
     id: 'treasury-stock',
-    icon: '💰',
+    icon: 'wallet',
     category: 'corporate',
     title: '자사주 매입 캘린더',
     desc: 'DART 자사주 신고·체결내역과 주요사항 보고서를 걸어, 지금 자사주를 사고 있거나 앞으로 살 계획인 회사를 취득기간 캘린더로 정리.',
@@ -111,7 +111,7 @@ const CARDS = [
   },
   {
     id: 'insider-plan',
-    icon: '👤',
+    icon: 'userCheck',
     category: 'corporate',
     title: '내부자 사전공시',
     desc: '임원·주요주주 거래계획보고서(자본시장법 §173의3)를 수집해 거래 예정기간을 캘린더로 정리.',
@@ -123,7 +123,7 @@ const CARDS = [
   },
   {
     id: 'kr-earnings',
-    icon: '🇰🇷',
+    icon: 'activity',
     category: 'corporate',
     title: 'KR 기업 실발 전후',
     desc: '영업(잠정)실적 공정공시 기업의 발표 전후 주가 반응 (DART + KRX).',
@@ -135,7 +135,7 @@ const CARDS = [
   },
   {
     id: 'etf-rebalance-schedule',
-    icon: '🗓️',
+    icon: 'calendarDays',
     category: 'etf',
     title: '패시브 ETF 정기변경 일정',
     desc: 'KOSPI200·KOSDAQ150·MSCI Korea 등 주요 지수 정기변경 주기 캘린더.',
@@ -147,7 +147,7 @@ const CARDS = [
   },
   {
     id: 'sector-etf-rebalance',
-    icon: '🏛️',
+    icon: 'layoutGrid',
     category: 'etf',
     title: '섹터/테마 ETF 리밸런싱 감지',
     desc: '국내 섹터·테마 ETF 상위 25종의 전일 대비 구성종목 변화(신규 편입/편출·비중 변동) 감지.',
@@ -159,7 +159,7 @@ const CARDS = [
   },
   {
     id: 'us-market-brief',
-    icon: '🌙',
+    icon: 'moon',
     category: 'us',
     title: '전일 미국장 시황 브리핑',
     desc: '간밤 미국 증시 시황 요약 브리핑. 주요 지수·금리·환율·원자재 자동 수집.',
@@ -171,7 +171,7 @@ const CARDS = [
   },
   {
     id: 'us-new-highs-20d',
-    icon: '📈',
+    icon: 'trendingUp',
     category: 'us',
     title: 'US 미국장 20일 신고가',
     desc: 'S&P500 전종목 중 20일 신고가 경신 종목 스크리너.',
@@ -183,7 +183,7 @@ const CARDS = [
   },
   {
     id: 'us-new-highs-50d',
-    icon: '🏦',
+    icon: 'landmark',
     category: 'us',
     title: '미국장 50일 신고가 (대형주)',
     desc: '다우30 + 나스닥100 대형주 중 50일 신고가 경신 종목 스크리너.',
@@ -195,7 +195,7 @@ const CARDS = [
   },
   {
     id: 'nvda-earnings',
-    icon: '🎯',
+    icon: 'cpu',
     category: 'us',
     title: '엔비디아 실적 전후 등락률',
     desc: 'NVDA 실적 발표를 D+0으로 놓고 D-1~D+4 동안 NVDA·SOXX·SK하이닉스·삼성전자·코스피가 어떻게 움직였는지 최근 분기를 비교.',
@@ -207,7 +207,7 @@ const CARDS = [
   },
   {
     id: 'us-earnings',
-    icon: '🇺🇸',
+    icon: 'activity',
     category: 'us',
     title: 'US 기업 실발 전후',
     desc: '시총 20억달러 이상 미국 기업의 최근 실적 발표 전후 주가 반응.',
@@ -219,7 +219,7 @@ const CARDS = [
   },
   {
     id: 'export-data',
-    icon: '📦',
+    icon: 'package',
     category: 'macro',
     title: '수출데이터 일평균',
     desc: '관세청(TRASS) 잠정 수출 33개 품목을 영업일 평균 기준으로 추적.',

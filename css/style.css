@@ -29,8 +29,9 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Pretendard, Roboto, sans-serif;
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Segoe UI', Roboto, sans-serif;
   font-variant-numeric: proportional-nums;
+  letter-spacing: -0.01em;
 }
 
 .topbar { padding: 22px 20px 6px; }
