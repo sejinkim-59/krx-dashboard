@@ -16,14 +16,18 @@
 </head>
 <body>
   <header class="topbar">
-    <div class="topbar-brand">
-      <span class="brand-mark">◆</span>
-      <h1>KRX 분석 대시보드</h1>
+    <div class="topbar-inner">
+      <div class="topbar-brand">
+        <span class="brand-mark">◆</span>
+        <h1>KRX 분석 대시보드</h1>
+      </div>
+      <div class="topbar-meta"><span class="live-dot"></span>실시간 연동 · 업데이트 <span id="lastUpdated">불러오는 중...</span></div>
     </div>
-    <div class="topbar-meta"><span class="live-dot"></span>실시간 연동 · 업데이트 <span id="lastUpdated">불러오는 중...</span></div>
   </header>
 
-  <div id="ticker" class="ticker"><div class="ticker-item"><span class="t-label hero-empty">시장 데이터 불러오는 중...</span></div></div>
+  <div class="ticker-bar">
+    <div id="ticker" class="ticker"><div class="ticker-item"><span class="t-label hero-empty">시장 데이터 불러오는 중...</span></div></div>
+  </div>
 
   <section id="signals" class="signals-section" hidden></section>
 

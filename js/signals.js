@@ -67,7 +67,7 @@ const SIGNAL_DETECTORS = [
     return signal({
       category: '공매도',
       cardId: 'short-selling',
-      headline: `${top.name} 공매도 비중 ${top.short_ratio_pct}% — 유니버스 내 최고`,
+      headline: `${top.name} 공매도 비중 유니버스 내 최고 수준`,
       keyMetric: `${top.short_ratio_pct}%`,
       keyMetricCls: 'down',
       why: '공매도 비중이 높은 종목은 하락 베팅이 몰려있다는 뜻으로, 반등 시 숏커버링에 의한 단기 급등 가능성이 있습니다.',
@@ -84,7 +84,7 @@ const SIGNAL_DETECTORS = [
     return signal({
       category: '투자경보',
       cardId: 'alert-screener',
-      headline: `투자위험 종목 ${risk.count}건 지정 (최근 2주)`,
+      headline: '투자위험 종목 신규 지정 (최근 2주)',
       keyMetric: `${risk.count}건`,
       keyMetricCls: 'down',
       why: '투자위험은 가장 높은 경고 단계로, 추가 상승 시 매매거래 정지로 이어질 수 있습니다.',
@@ -105,7 +105,7 @@ const SIGNAL_DETECTORS = [
     return signal({
       category: '기업 이벤트',
       cardId: 'capital-increase',
-      headline: `${top.corp_name} 무상증자 — 1주당 ${top.ratio}주 배정`,
+      headline: `${top.corp_name} 무상증자 — 배정비율 이례적으로 큼`,
       keyMetric: `1:${top.ratio}`,
       keyMetricCls: 'up',
       why: '유통주식수가 크게 늘어나는 무상증자로, 유동성 개선 기대에 기준일 전후 단기 수급이 몰리는 경우가 많습니다.',
@@ -129,7 +129,7 @@ const SIGNAL_DETECTORS = [
     return signal({
       category: '파생상품',
       cardId: 'futures-basis',
-      headline: `${top.item.name} ${isContango ? '콘탱고' : '백워데이션'} ${top.item.basis_pct}% — 이례적 괴리`,
+      headline: `${top.item.name} ${isContango ? '콘탱고' : '백워데이션'} 이례적 확대`,
       keyMetric: `${top.item.basis_pct > 0 ? '+' : ''}${top.item.basis_pct}%`,
       keyMetricCls: isContango ? 'up' : 'down',
       why: isContango
@@ -148,7 +148,7 @@ const SIGNAL_DETECTORS = [
     return signal({
       category: '매크로',
       cardId: 'us-market-brief',
-      headline: `VIX ${vix.change_pct}% 급등 — 변동성 확대`,
+      headline: 'VIX 급등 — 변동성 확대',
       keyMetric: `+${vix.change_pct}%`,
       keyMetricCls: 'down',
       why: '위험자산 전반의 변동성이 확대된 구간으로, 국내 증시도 개장 초반 영향을 받을 수 있습니다.',
@@ -169,14 +169,19 @@ async function loadSignals() {
     .sort((a, b) => b.severity - a.severity)
     .slice(0, 5);
 
+  section.hidden = false;
+  const fulfilledCount = results.filter((r) => r.status === 'fulfilled').length;
   if (!list.length) {
-    section.hidden = true;
+    const allFailed = fulfilledCount === 0;
+    section.innerHTML = `
+      <div class="signals-head">
+        <h2>오늘의 시그널</h2>
+        <p class="panel-context">${allFailed ? '시그널 데이터를 불러오지 못했습니다 — 잠시 후 새로고침해보세요.' : '오늘은 임계값을 넘는 이례적 시그널이 감지되지 않았습니다 (정상 범위).'}</p>
+      </div>`;
     return;
   }
-  section.hidden = false;
   const rows = list.map((s) => {
     const priority = s.severity >= 50 ? 'SIGNAL' : 'WATCH';
-    const card = CARDS.find((c) => c.id === s.cardId);
     return `
       <button class="signal-card" data-card-id="${s.cardId}" data-tone="${s.tone}">
         <div class="signal-top">

@@ -38,15 +38,16 @@ body {
 a { color: var(--brand); }
 
 /* ---------- 상단 헤더 ---------- */
-.topbar {
+.topbar { background: var(--surface); border-bottom: 1px solid var(--border); }
+.topbar-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 6px 16px;
   padding: 16px 24px;
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
+  max-width: 1680px;
+  margin: 0 auto;
 }
 .topbar-brand { display: flex; align-items: center; gap: 8px; }
 .brand-mark { font-size: 0.8rem; line-height: 1; color: var(--brand); }
@@ -74,16 +75,17 @@ a { color: var(--brand); }
 }
 
 /* ---------- 시장 티커 ---------- */
+.ticker-bar { background: var(--surface); border-bottom: 1px solid var(--border); }
 .ticker {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
   align-items: center;
   gap: 30px;
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
   padding: 13px 24px;
   scrollbar-width: none;
+  max-width: 1680px;
+  margin: 0 auto;
 }
 .ticker::-webkit-scrollbar { display: none; }
 .ticker-item { display: flex; flex-direction: column; gap: 3px; white-space: nowrap; flex-shrink: 0; }
@@ -103,6 +105,8 @@ a { color: var(--brand); }
   gap: 20px;
   padding: 22px 24px 40px;
   align-items: start;
+  max-width: 1680px;
+  margin: 0 auto;
 }
 @media (min-width: 1080px) {
   .terminal-layout { grid-template-columns: 1.35fr 1.1fr 1fr; }
@@ -144,6 +148,16 @@ a { color: var(--brand); }
 }
 .scan-row:hover { background: var(--surface-alt); }
 .scan-row.status-pending { color: var(--muted); }
+.scan-row::after {
+  content: '\2192';
+  flex-shrink: 0;
+  color: var(--muted);
+  opacity: 0.3;
+  font-size: 0.8rem;
+  transform: translateX(-2px);
+  transition: opacity 0.12s, transform 0.12s;
+}
+.scan-row:hover::after { opacity: 0.75; transform: translateX(0); }
 
 .scan-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 3px; }
 .scan-title { font-size: 0.875rem; font-weight: 600; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -151,10 +165,10 @@ a { color: var(--brand); }
 .scan-desc { font-size: 0.78rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 .scan-metric { flex-shrink: 0; max-width: 46%; text-align: right; display: flex; flex-direction: column; gap: 3px; }
-.scan-metric .cp-main { font-size: 1.02rem; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.scan-metric .cp-main { font-size: 1.08rem; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; letter-spacing: -0.01em; }
 .scan-metric .cp-sub { font-size: 0.74rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .scan-metric .cp-sub .cp-emph { font-weight: 700; color: var(--text-secondary); }
-.scan-metric .pct { font-size: 1.02rem; font-weight: 700; }
+.scan-metric .pct { font-size: 1.08rem; font-weight: 700; }
 
 @media (max-width: 480px) {
   .topbar { padding: 12px 16px; }
@@ -279,6 +293,19 @@ th, td {
 th { color: var(--muted); font-weight: 600; font-variant-numeric: normal; font-size: 0.72rem; }
 td { overflow: hidden; text-overflow: ellipsis; max-width: 220px; }
 tbody tr:hover { background: var(--surface-alt); }
+tr.row-flag { background: rgba(168, 113, 10, 0.06); }
+tr.row-flag:hover { background: rgba(168, 113, 10, 0.11); }
+.row-flag-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--warning);
+  background: rgba(168, 113, 10, 0.12);
+  padding: 1px 5px;
+  border-radius: 4px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
 
 .pct.up { color: var(--up); font-weight: 600; }
 .pct.down { color: var(--down); font-weight: 600; }
@@ -380,7 +407,7 @@ tbody tr:hover { background: var(--surface-alt); }
 }
 .km-cell { display: flex; flex-direction: column; gap: 3px; }
 .km-label { font-size: 0.68rem; color: var(--muted); }
-.km-value { font-size: 1.2rem; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--text); line-height: 1.25; }
+.km-value { font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--text); line-height: 1.2; letter-spacing: -0.02em; }
 .km-value.up { color: var(--up); }
 .km-value.down { color: var(--down); }
 .km-value.watch-text { color: var(--warning); }
@@ -471,7 +498,7 @@ tbody tr:hover { background: var(--surface-alt); }
 }
 
 /* ---------- 오늘의 시그널: 규칙 기반 briefing area ---------- */
-.signals-section { padding: 20px 24px 0; }
+.signals-section { padding: 20px 24px 0; max-width: 1680px; margin: 0 auto; }
 .signals-head { margin-bottom: 12px; }
 .signals-head h2 { margin: 0 0 3px; font-size: 0.95rem; font-weight: 700; color: var(--text); letter-spacing: -0.01em; }
 .signals-rows {
@@ -500,7 +527,7 @@ tbody tr:hover { background: var(--surface-alt); }
 .signal-priority.priority-signal { background: rgba(194, 58, 52, 0.1); color: var(--up); }
 .signal-priority.priority-watch { background: rgba(168, 113, 10, 0.12); color: var(--warning); }
 .signal-headline { font-size: 0.86rem; font-weight: 600; color: var(--text); line-height: 1.4; }
-.signal-metric { font-size: 1.15rem; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--text); }
+.signal-metric { font-size: 1.4rem; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--text); letter-spacing: -0.02em; }
 .signal-metric.up { color: var(--up); }
 .signal-metric.down { color: var(--down); }
 .signal-why { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5; }
