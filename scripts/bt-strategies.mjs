@@ -33,7 +33,15 @@ for (const r of panel.rows) {
 }
 for (const arr of byDate.values()) {
   const m = arr.reduce((s, r) => s + r.fwd[h], 0) / arr.length;
-  for (const r of arr) { r.poolMean = m; r.ex = r.fwd[h] - m; }
+  const lg = arr.filter((r) => r.isLargeCap);
+  const lm = lg.length ? lg.reduce((s, r) => s + r.fwd[h], 0) / lg.length : null;
+  for (const r of arr) { r.poolMean = m; r.ex = r.fwd[h] - m; r.exLarge = lm == null ? null : r.fwd[h] - lm; }
+}
+// 겹치지 않는 보유기간 검정: BT_STEP=h 이면 h거래일마다 하루만 사용 (독립 표본)
+const STEP = Number(process.env.BT_STEP || 1);
+if (STEP > 1) {
+  const keep = new Set([...byDate.keys()].sort().filter((_, i) => i % STEP === 0));
+  for (const d of [...byDate.keys()]) if (!keep.has(d)) byDate.delete(d);
 }
 
 const fresh = (d, n = 5) => d != null && d <= n;
@@ -175,7 +183,7 @@ const STRATS = {
 const enginePicks = new Map((panel.days || []).map((d) => [d.date, new Set(d.picks.map((p) => p.symbol))]));
 
 function run(name, strat, from, to, noRepeat) {
-  const perDay = [], exPerDay = [];
+  const perDay = [], exPerDay = [], exLargeDay = [];
   const last = new Map();
   let dayN = 0;
   for (const [date, arr] of [...byDate.entries()].sort()) {
@@ -194,8 +202,10 @@ function run(name, strat, from, to, noRepeat) {
       picks = cand.sort((a, b) => sc(b) - sc(a)).slice(0, K);
     }
     for (const p of picks) last.set(p.symbol, dayN);
-    if (picks.length) { perDay.push(picks.map((p) => p.fwd[h])); exPerDay.push(picks.map((p) => p.ex)); }
+    if (picks.length) { perDay.push(picks.map((p) => p.fwd[h])); exPerDay.push(picks.map((p) => p.ex)); exLargeDay.push(picks.map((p) => p.exLarge).filter((x) => x != null)); }
   }
+  const exL = basicStats(exLargeDay.flat());
+  if (process.env.BT_SHOW_LARGE === '1') console.log(`    [${name}${noRepeat ? ' +반복금지' : ''}] 시총 상위30 동일가중 대비: 평균 ${exL.mean?.toFixed(2)}%p, 초과 비율 ${exL.winRate?.toFixed(1)}%`);
   const raw = basicStats(perDay.flat()), ex = basicStats(exPerDay.flat());
   const port = perDay.map((d) => d.reduce((a, b) => a + b, 0) / d.length);
   const portEx = exPerDay.map((d) => d.reduce((a, b) => a + b, 0) / d.length);
