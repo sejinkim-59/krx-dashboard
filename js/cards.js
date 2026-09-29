@@ -4,12 +4,12 @@
 // 실제 수치에 따라 달라지는 해석은 js/insights.js가 실시간으로 계산한다.
 
 const CATEGORIES = [
-  { id: 'flow', label: '국내 수급 · 경보', accent: '#199e70' },
-  { id: 'derivatives', label: '파생상품', accent: '#c98500' },
-  { id: 'corporate', label: '기업 이벤트 · 공시', accent: '#d55181' },
+  { id: 'flow', label: '국내 수급 · 경보', accent: '#1baf7a' },
+  { id: 'derivatives', label: '파생상품', accent: '#eda100' },
+  { id: 'corporate', label: '기업 이벤트 · 공시', accent: '#e87ba4' },
   { id: 'etf', label: 'ETF · 지수', accent: '#008300' },
-  { id: 'us', label: '미국 시장', accent: '#9085e9' },
-  { id: 'macro', label: '매크로', accent: '#d95926' },
+  { id: 'us', label: '미국 시장', accent: '#4a3aa7' },
+  { id: 'macro', label: '매크로', accent: '#eb6834' },
 ];
 
 const CARDS = [

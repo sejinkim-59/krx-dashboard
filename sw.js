@@ -1,7 +1,7 @@
-const SHELL_CACHE = 'krx-dashboard-shell-v3';
+const SHELL_CACHE = 'krx-dashboard-shell-v4';
 const SHELL_FILES = [
   './', './index.html', './css/style.css',
-  './js/app.js', './js/cards.js', './js/charts.js', './js/vendor/chart.umd.js',
+  './js/app.js', './js/cards.js', './js/charts.js', './js/insights.js', './js/vendor/chart.umd.js',
   './manifest.webmanifest',
 ];
 

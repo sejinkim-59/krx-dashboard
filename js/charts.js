@@ -1,14 +1,14 @@
-// Chart.js 전역 기본값 — dataviz 스킬의 검증된 다크 팔레트를 그대로 사용.
+// Chart.js 전역 기본값 — dataviz 스킬의 검증된 라이트 팔레트를 그대로 사용.
 const VIZ = {
-  up: '#e66767', // 상승(빨강, 한국 관행)
-  down: '#3987e5', // 하락(파랑)
+  up: '#e34948', // 상승(빨강, 한국 관행)
+  down: '#2a78d6', // 하락(파랑)
   flat: '#898781',
-  gridline: '#2c2c2a',
-  baseline: '#383835',
-  textSecondary: '#c3c2b7',
+  gridline: '#e1e0d9',
+  baseline: '#c3c2b7',
+  textSecondary: '#52514e',
   muted: '#898781',
-  surface: '#1a1a19',
-  seqBlue: ['#cde2fb', '#9ec5f4', '#6da7ec', '#3987e5', '#256abf', '#184f95'], // 100/200/300/400/550/600 근사
+  surface: '#fcfcfb',
+  seqBlue: ['#86b6ef', '#6da7ec', '#5598e7', '#3987e5', '#256abf', '#184f95'], // ordinal 램프: 라이트 표면에서 2:1 이상 유지되는 250~600 구간
 };
 
 if (window.Chart) {
@@ -18,10 +18,10 @@ if (window.Chart) {
   Chart.defaults.borderColor = VIZ.gridline;
   Chart.defaults.plugins.legend.labels.boxWidth = 10;
   Chart.defaults.plugins.legend.labels.boxHeight = 10;
-  Chart.defaults.plugins.tooltip.backgroundColor = '#0d0d0d';
+  Chart.defaults.plugins.tooltip.backgroundColor = '#1a1a19';
   Chart.defaults.plugins.tooltip.titleColor = '#ffffff';
-  Chart.defaults.plugins.tooltip.bodyColor = '#c3c2b7';
-  Chart.defaults.plugins.tooltip.borderColor = 'rgba(255,255,255,0.10)';
+  Chart.defaults.plugins.tooltip.bodyColor = '#e6e5e0';
+  Chart.defaults.plugins.tooltip.borderColor = 'rgba(255,255,255,0.08)';
   Chart.defaults.plugins.tooltip.borderWidth = 1;
   Chart.defaults.plugins.tooltip.padding = 8;
 }
@@ -77,7 +77,7 @@ function makeMagnitudeHBar(canvas, items, { labelKey, valueKey, maxItems = 15, f
       labels: sorted.map((it) => it[labelKey]),
       datasets: [{
         data: sorted.map((it) => it[valueKey]),
-        backgroundColor: '#3987e5',
+        backgroundColor: VIZ.down,
         borderRadius: 4,
         maxBarThickness: 18,
       }],
