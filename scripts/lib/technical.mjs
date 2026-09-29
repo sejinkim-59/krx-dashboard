@@ -119,11 +119,19 @@ export function detectChangeEvents(bars, volumeSpikeRatio = 2.0) {
   const closes = bars.map((b) => b.close);
   const ma20 = smaSeries(closes, 20);
   const ma60 = bars.length >= 62 ? smaSeries(closes, 60) : null;
+  const last = bars.length - 1;
+  // 변화 발생 전날 종가 대비 현재까지 수익률 — "이미 반영됐나"를 이벤트 단위로 판단하기 위함
+  const withReturn = (ev) => {
+    if (!ev) return null;
+    const i = last - ev.daysSinceChange;
+    const base = i > 0 ? closes[i - 1] : null;
+    return { ...ev, returnSinceChange: base ? ((closes[last] - base) / base) * 100 : null };
+  };
   return {
-    ma20CrossAboveMa60: ma60 ? mostRecentCrossUp(ma20, ma60, bars) : null,
+    ma20CrossAboveMa60: withReturn(ma60 ? mostRecentCrossUp(ma20, ma60, bars) : null),
     ma20CrossAboveMa60Evaluable: !!ma60,
-    priceCrossAboveMa20: mostRecentCrossUp(closes, ma20, bars),
-    volumeSpike: mostRecentVolumeSpike(bars, volumeSpikeRatio),
+    priceCrossAboveMa20: withReturn(mostRecentCrossUp(closes, ma20, bars)),
+    volumeSpike: withReturn(mostRecentVolumeSpike(bars, volumeSpikeRatio)),
   };
 }
 

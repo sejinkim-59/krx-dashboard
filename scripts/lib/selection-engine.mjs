@@ -12,7 +12,7 @@ import { scoreRules, unavailable, sgn } from './scoring-utils.mjs';
 import {
   FACTOR_WEIGHTS, TECHNICAL_RULES, RS_RULES, VOLUME_SPIKE_RATIO, UNIVERSE_FILTER, COVERAGE_RULES,
   RISK_THRESHOLDS, DISCOVERY_CONFIG, DAILY_SLOTS, SELECTION_RULES, CONFIRMATION_RULES, FACTOR_SOURCE,
-  CATALYST_NOT_CONNECTED,
+  CATALYST_NOT_CONNECTED, VARIANT,
 } from './selection-config.mjs';
 
 const r1 = (n) => (n == null ? null : Math.round(n * 10) / 10);
@@ -274,7 +274,9 @@ function buildCandidate(symbol, name, d, entry, ctx) {
     whatChanged, whyNow, whyNotPriced, counter,
   };
   c.strategy = classifyStrategy(c);
-  c.discoveryScore = r1(c.normalizedScore - (isLargeCap ? 0 : crowding.total));
+  const atrPct = f?.atr14 && f.close ? (f.atr14 / f.close) * 100 : null;
+  const volPenalty = VARIANT.atrPenaltyPerPct && atrPct != null ? Math.max(0, atrPct - 3) * VARIANT.atrPenaltyPerPct : 0;
+  c.discoveryScore = r1(c.normalizedScore - (isLargeCap ? 0 : crowding.total + volPenalty));
   c.gate = gateOf(c);
   return c;
 }
@@ -303,17 +305,19 @@ const BUCKET_RULES = {
     sort: (a, b) => b.normalizedScore - a.normalizedScore || b.groups.length - a.groups.length,
   },
   DISCOVERY: {
-    // 목표 조건 "시장이 아직 충분히 반영하지 않았을 가능성" — 상당 부분 반영(likely)은 Discovery 자격 없음, 일부 반영은 Penalty.
+    // 목표 조건 "시장이 아직 충분히 반영하지 않았을 가능성" — 허용 판정은 Profile로 관리 (v0.2: likely만 제외)
     ok: (c) => c.gate.base && c.gate.answerable && !c.isLargeCap && c.capRank != null && c.dataCoverage >= COVERAGE_RULES.minForDiscovery
-      && c.pricedIn.verdict !== 'likely_priced_in',
+      && VARIANT.allowedPricedIn.includes(c.pricedIn.verdict)
+      && (!VARIANT.discoveryRequireAboveMa60 || (c.features?.ma60 != null && c.features.close > c.features.ma60)),
     sort: (a, b) => tierOf(a) - tierOf(b) || b.discoveryScore - a.discoveryScore,
   },
   EVENT_DRIVEN: {
-    ok: (c) => c.gate.base && c.gate.answerable && c.hasCatalyst,
+    ok: (c) => c.gate.base && c.gate.answerable && c.hasCatalyst && (VARIANT.name === 'v0.2' || VARIANT.allowedPricedIn.includes(c.pricedIn.verdict)),
     sort: (a, b) => (b.factors.catalyst.score + b.factors.corporate.score) - (a.factors.catalyst.score + a.factors.corporate.score) || b.discoveryScore - a.discoveryScore,
   },
   INFLECTION: {
     ok: (c) => c.gate.base && c.gate.answerable && c.features?.dist52WHigh != null && c.features.dist52WHigh <= SELECTION_RULES.inflectionMaxDist52WHigh
+      && (VARIANT.name === 'v0.2' || VARIANT.allowedPricedIn.includes(c.pricedIn.verdict))
       && (c.factors.novelty.activeEvents || []).some((e) => ['ma20CrossAboveMa60', 'priceCrossAboveMa20'].includes(e.id) && CONFIRMATION_RULES.noveltyBands.includes(e.band)),
     // Inflection은 "초기" 반전이 정의이므로, 이미 반영된 반등은 뒤로 보낸다.
     sort: (a, b) => PRICED_RANK[a.pricedIn.verdict] - PRICED_RANK[b.pricedIn.verdict] || b.factors.novelty.score - a.factors.novelty.score || b.discoveryScore - a.discoveryScore,
@@ -323,8 +327,9 @@ const PRICED_RANK = { not_yet_priced: 0, unclear: 1, unknown: 2, partially_price
 
 // 한 종목이 여러 Bucket 자격을 가지면, 후보가 가장 적은(대체 불가능한) Bucket부터 배정한다.
 // 그래야 중복 제거 후에도 서로 다른 종목으로 슬롯을 최대한 채울 수 있다. 출력 순서는 DAILY_SLOTS 그대로.
-function selectDaily(candidates) {
-  const pools = new Map(DAILY_SLOTS.map(({ bucket }) => [bucket, candidates.filter(BUCKET_RULES[bucket].ok).sort(BUCKET_RULES[bucket].sort)]));
+function selectDaily(candidates, blocked = new Set()) {
+  // 섹션 14 Repeated Same Signal: 최근 N거래일 안에 이미 선정된 종목은 다시 뽑지 않는다 (Profile로 관리)
+  const pools = new Map(DAILY_SLOTS.map(({ bucket }) => [bucket, candidates.filter((c) => !blocked.has(c.symbol) && BUCKET_RULES[bucket].ok(c)).sort(BUCKET_RULES[bucket].sort)]));
   const order = [...DAILY_SLOTS].sort((a, b) => pools.get(a.bucket).length / a.count - pools.get(b.bucket).length / b.count);
   const chosen = new Set();
   const picksBy = new Map();
@@ -454,10 +459,11 @@ export function evaluateCandidates(d, today = new Date()) {
 }
 
 /** 전체 파이프라인 */
-export function runSelectionEngine(d, dateStr, marketRegimeState, today = new Date()) {
+export function runSelectionEngine(d, dateStr, marketRegimeState, today = new Date(), { recentPicks = new Map() } = {}) {
   const { universe, store, candidates } = evaluateCandidates(d, today);
 
-  const slots = selectDaily(candidates);
+  const blocked = new Set(VARIANT.repeatBlockDays ? [...recentPicks].filter(([, daysAgo]) => daysAgo < VARIANT.repeatBlockDays).map(([s]) => s) : []);
+  const slots = selectDaily(candidates, blocked);
   const selectedBucket = new Map(slots.flatMap((s) => s.picks.map((p) => [p.symbol, s.bucket])));
 
   const signalDetected = candidates.filter((c) => c.groups.length >= 1 || c.newSignalCount > 0);
@@ -467,7 +473,7 @@ export function runSelectionEngine(d, dateStr, marketRegimeState, today = new Da
   return {
     date: dateStr,
     generated_at: new Date().toISOString(),
-    engineVersion: 'v0.2',
+    engineVersion: VARIANT.name,
     objective: 'NEW INFORMATION + CHANGE + CATALYST + CONFIRMATION — 오늘 새롭게 연구할 가치가 생긴 종목을 조기 발견',
     methodologyNote: [
       '시장/섹터 상대강도는 공식 지수가 아니라 가격 데이터 보유 종목의 동일가중 평균(proxy)입니다.',

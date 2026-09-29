@@ -1,7 +1,7 @@
 // Novelty / Change Factor — "최근 처음" 발생한 변화만 점수화하고, 시간이 지나면 decay 시킨다.
 // 오래 지속된 상태(예: 몇 달째 MA20 > MA60)는 변화가 아니므로 0점이다.
 
-import { NOVELTY_RULES, NOVELTY_DECAY, FACTOR_WEIGHTS } from './selection-config.mjs';
+import { NOVELTY_RULES, NOVELTY_DECAY, FACTOR_WEIGHTS, VARIANT } from './selection-config.mjs';
 
 export function decayOf(days) {
   if (days == null) return { factor: 0, band: 'none' };
@@ -31,9 +31,12 @@ export function evalNovelty(changeEvents, flow) {
       evaluable = rule.id === 'ma20CrossAboveMa60' ? changeEvents.ma20CrossAboveMa60Evaluable : true;
       ev = changeEvents[rule.id];
     }
-    if (!evaluable) continue;
+    if (!evaluable || rule.points <= 0) continue;
     applicableMax += rule.points;
     if (!ev) continue;
+    // v0.3: 변화 후 이미 크게 오른 이벤트는 "새롭고 아직 반영 안 된 변화"가 아니므로 점수 없음
+    const cap = VARIANT.noveltyMaxReturnSinceChange;
+    if (cap != null && ev.returnSinceChange != null && ev.returnSinceChange > cap) continue;
     const { factor, band } = decayOf(ev.daysSinceChange);
     const pts = rule.points * factor;
     events.push({ id: rule.id, label: rule.label, ...ev, band, points: Math.round(pts * 10) / 10 });

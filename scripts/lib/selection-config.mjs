@@ -176,6 +176,40 @@ export const SELECTION_RULES = {
   inflectionMaxDist52WHigh: -20, // 52주 고점 대비 -20% 이하에서 새 반전 신호
 };
 
+// ---- 엔진 Profile (백테스트 비교용). 기본값 = v0.2 (운영 중인 동작). ----
+// v0.3 근거: 2025-10~2026-06 개발 구간 가격 패널 분석
+//  - 거래량 급증 신규 발생: 5일 초과수익 IC 음(-) (4분기 중 3분기)
+//  - "아직 미반영" 판정: 4분기 모두 IC 양(+) / 변화 후 수익률: 4분기 모두 IC 음(-)
+//  - 미반영 + MA60 위 규칙만 개발·확인 구간 모두 풀 대비 초과 (단, 통계적 유의성 없음)
+export const VARIANT = {};
+export const PROFILES = {
+  'v0.2': {
+    volumeSpikePoints: 5,
+    noveltyMaxReturnSinceChange: null,
+    allowedPricedIn: ['not_yet_priced', 'unclear', 'unknown', 'partially_priced_in'],
+    discoveryRequireAboveMa60: false,
+    atrPenaltyPerPct: 0,
+    repeatBlockDays: 0,
+  },
+  'v0.3': {
+    volumeSpikePoints: 0,
+    noveltyMaxReturnSinceChange: 5,
+    allowedPricedIn: ['not_yet_priced', 'unclear'],
+    discoveryRequireAboveMa60: true,
+    atrPenaltyPerPct: 2, // ATR/종가 3% 초과분 1%p당 2점 감점 (Discovery 계열 순위에만)
+    repeatBlockDays: 5,
+  },
+};
+export function applyProfile(name) {
+  const p = PROFILES[name];
+  if (!p) throw new Error(`unknown profile ${name}`);
+  for (const k of Object.keys(VARIANT)) delete VARIANT[k];
+  Object.assign(VARIANT, { name }, p);
+  const vs = NOVELTY_RULES.find((r) => r.id === 'volumeSpike');
+  vs.points = p.volumeSpikePoints;
+}
+applyProfile(process.env.ENGINE_PROFILE || 'v0.2');
+
 // ---- 시장 국면별 선호 (Market Desk 표시용) ----
 export const STRATEGY_CONFIG = {
   'Risk-off': { preferred: ['EVENT_DRIVEN', 'INFLECTION'], avoid: ['MOMENTUM'] },
