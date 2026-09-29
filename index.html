@@ -15,23 +15,92 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <div class="topbar-brand">
-        <span class="brand-mark">◆</span>
-        <h1>KRX 분석 대시보드</h1>
+  <div class="app-shell">
+    <nav class="sidebar">
+      <div class="sidebar-brand"><span class="brand-mark">◆</span>KRX Intelligence</div>
+
+      <button class="sidebar-item active" data-view="home">홈</button>
+
+      <div class="sidebar-label">Markets</div>
+      <button class="sidebar-item" data-view="stock">주식 차트</button>
+      <button class="sidebar-item" data-view="signals-full">시그널</button>
+      <button class="sidebar-item" data-view="screener">스크리너</button>
+
+      <div class="sidebar-label">Corporate</div>
+      <button class="sidebar-item" data-view="events">공시 · 이벤트</button>
+
+      <div class="sidebar-label">Personal</div>
+      <button class="sidebar-item" data-view="watchlist">워치리스트</button>
+
+      <div class="sidebar-label">System</div>
+      <button class="sidebar-item" data-view="datahub">데이터 허브</button>
+
+      <div class="sidebar-spacer"></div>
+      <button class="sidebar-item sidebar-footer-item" data-view="ai-analyst">AI Analyst</button>
+    </nav>
+
+    <div class="workspace">
+      <div id="view-home" class="view">
+        <header class="topbar">
+          <div class="topbar-inner">
+            <div class="topbar-brand">
+              <h1>홈</h1>
+            </div>
+            <div class="topbar-meta"><span class="live-dot"></span>실시간 연동 · 업데이트 <span id="lastUpdated">불러오는 중...</span></div>
+          </div>
+        </header>
+
+        <div class="ticker-bar">
+          <div id="ticker" class="ticker"><div class="ticker-item"><span class="t-label hero-empty">시장 데이터 불러오는 중...</span></div></div>
+        </div>
+
+        <section id="signals" class="signals-section" hidden></section>
+
+        <main id="grid" class="terminal-layout"></main>
       </div>
-      <div class="topbar-meta"><span class="live-dot"></span>실시간 연동 · 업데이트 <span id="lastUpdated">불러오는 중...</span></div>
+
+      <div id="view-stock" class="view stock-view" hidden>
+        <header class="workspace-head">
+          <h1>주식 차트</h1>
+          <div class="stock-search-bar">
+            <input id="stockSearchInput" type="text" placeholder="종목명 또는 종목코드 검색 (예: 삼성전자, 005930)" autocomplete="off" />
+            <div id="stockSearchResults" class="stock-search-results" hidden></div>
+          </div>
+        </header>
+        <div id="stockContent" class="workspace-body"><p class="hero-empty">불러오는 중...</p></div>
+      </div>
+
+      <div id="view-signals-full" class="view" hidden>
+        <header class="workspace-head"><h1>시그널</h1><p class="workspace-sub">전체 데이터에서 규칙 기반으로 탐지된 시그널 전체 feed</p></header>
+        <div id="signalsFullBody" class="workspace-body"></div>
+      </div>
+
+      <div id="view-screener" class="view" hidden>
+        <header class="workspace-head"><h1>스크리너</h1><p class="workspace-sub">국내 수급·경보, 파생상품, ETF·지수, 매크로 스크리너를 한 화면에서</p></header>
+        <div id="screenerBody" class="workspace-body"></div>
+      </div>
+
+      <div id="view-events" class="view" hidden>
+        <header class="workspace-head"><h1>공시 · 이벤트</h1><p class="workspace-sub">증자·전환사채·자사주·내부자 공시와 실적 반응 캘린더</p></header>
+        <div id="eventsBody" class="workspace-body"></div>
+      </div>
+
+      <div id="view-watchlist" class="view" hidden>
+        <header class="workspace-head"><h1>워치리스트</h1></header>
+        <div class="workspace-body"><p class="hero-empty">준비 중입니다. 주식 차트에서 종목을 조회하는 기능부터 먼저 연결했습니다 — 관심종목 저장은 다음 단계에서 추가됩니다.</p></div>
+      </div>
+
+      <div id="view-datahub" class="view" hidden>
+        <header class="workspace-head"><h1>데이터 허브</h1><p class="workspace-sub">각 데이터 소스의 연결 상태와 최종 갱신 시각</p></header>
+        <div id="datahubBody" class="workspace-body"></div>
+      </div>
+
+      <div id="view-ai-analyst" class="view" hidden>
+        <header class="workspace-head"><h1>AI Analyst</h1></header>
+        <div class="workspace-body"><p class="hero-empty">준비 중입니다. Market Data·Signal·DART·Watchlist를 호출할 서비스 레이어 구조는 마련해 두었고, 실제 AI 응답 기능은 다음 단계에서 연결됩니다.</p></div>
+      </div>
     </div>
-  </header>
-
-  <div class="ticker-bar">
-    <div id="ticker" class="ticker"><div class="ticker-item"><span class="t-label hero-empty">시장 데이터 불러오는 중...</span></div></div>
   </div>
-
-  <section id="signals" class="signals-section" hidden></section>
-
-  <main id="grid" class="terminal-layout"></main>
 
   <div id="overlay" class="overlay" hidden>
     <div class="panel">
@@ -46,6 +115,9 @@
   <script src="js/charts.js"></script>
   <script src="js/insights.js"></script>
   <script src="js/signals.js"></script>
+  <script src="js/kis-chart.js"></script>
+  <script src="js/stock-workspace.js"></script>
+  <script src="js/shell.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

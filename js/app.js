@@ -28,10 +28,45 @@ const GROUPS = [
   { id: 'secondary', label: 'Secondary Area' },
 ];
 
-function renderGrid() {
-  grid.innerHTML = '';
+/** 카테고리 1개 분량의 (제목+목록) DOM 섹션을 만든다. Home과 다른 Workspace(이벤트/스크리너)가 공유한다. */
+function buildCategorySection(cat, cards) {
+  const section = document.createElement('section');
+  section.className = 'intel-section';
+  section.innerHTML = `
+    <div class="intel-section-head">
+      <h3>${cat.label}</h3>
+      <p class="intel-subtitle">${cat.blurb}</p>
+    </div>
+    <div class="intel-list"></div>
+  `;
+  const inner = section.querySelector('.intel-list');
+  cards.forEach((card) => {
+    const el = document.createElement('button');
+    el.className = `scan-row status-${card.status}`;
+    el.innerHTML = `
+      <span class="scan-main">
+        <span class="scan-title">${card.title}</span>
+        <span class="scan-desc">${card.desc}</span>
+      </span>
+      <span class="scan-metric" data-preview-for="${card.id}">
+        ${card.status === 'live' ? '<span class="cp-sub">불러오는 중…</span>' : '<span class="cp-sub">데이터 연결 대기</span>'}
+      </span>
+    `;
+    el.addEventListener('click', () => openCard(card));
+    inner.appendChild(el);
+  });
+  return section;
+}
+
+function categoriesByCard() {
   const byCategory = new Map(CATEGORIES.map((c) => [c.id, []]));
   for (const card of CARDS) (byCategory.get(card.category) || []).push(card);
+  return byCategory;
+}
+
+function renderGrid() {
+  grid.innerHTML = '';
+  const byCategory = categoriesByCard();
 
   GROUPS.forEach((group) => {
     const cats = CATEGORIES.filter((c) => c.group === group.id);
@@ -43,35 +78,26 @@ function renderGrid() {
     cats.forEach((cat) => {
       const cards = byCategory.get(cat.id);
       if (!cards || !cards.length) return;
-      const section = document.createElement('section');
-      section.className = 'intel-section';
-      section.innerHTML = `
-        <div class="intel-section-head">
-          <h3>${cat.label}</h3>
-          <p class="intel-subtitle">${cat.blurb}</p>
-        </div>
-        <div class="intel-list"></div>
-      `;
-      const inner = section.querySelector('.intel-list');
-      cards.forEach((card) => {
-        const el = document.createElement('button');
-        el.className = `scan-row status-${card.status}`;
-        el.innerHTML = `
-          <span class="scan-main">
-            <span class="scan-title">${card.title}</span>
-            <span class="scan-desc">${card.desc}</span>
-          </span>
-          <span class="scan-metric" data-preview-for="${card.id}">
-            ${card.status === 'live' ? '<span class="cp-sub">불러오는 중…</span>' : '<span class="cp-sub">데이터 연결 대기</span>'}
-          </span>
-        `;
-        el.addEventListener('click', () => openCard(card));
-        inner.appendChild(el);
-      });
-      row.appendChild(section);
+      row.appendChild(buildCategorySection(cat, cards));
     });
     grid.appendChild(wrap);
   });
+}
+
+/** 특정 카테고리들만 골라 컨테이너에 렌더링한다 (이벤트/스크리너 Workspace용). */
+function renderCategoriesInto(container, categoryIds) {
+  container.innerHTML = '';
+  const byCategory = categoriesByCard();
+  const wrap = document.createElement('div');
+  wrap.className = 'intel-row';
+  categoryIds.forEach((id) => {
+    const cat = CATEGORIES.find((c) => c.id === id);
+    const cards = byCategory.get(id);
+    if (!cat || !cards || !cards.length) return;
+    wrap.appendChild(buildCategorySection(cat, cards));
+  });
+  container.appendChild(wrap);
+  loadCardPreviews(container);
 }
 
 async function openCard(card) {
@@ -166,10 +192,10 @@ async function loadHero() {
 
 // ---------------- 그리드 타일 미리보기 (클릭 전에 한눈에) ----------------
 
-async function loadCardPreviews() {
+async function loadCardPreviews(container = grid) {
   const liveCards = CARDS.filter((c) => c.status === 'live');
   await Promise.all(liveCards.map(async (card) => {
-    const slot = grid.querySelector(`[data-preview-for="${card.id}"]`);
+    const slot = container.querySelector(`[data-preview-for="${card.id}"]`);
     if (!slot) return;
     try {
       const html = await buildPreview(card);
@@ -768,6 +794,7 @@ updateHeaderMeta();
 loadHero();
 loadCardPreviews();
 loadSignals();
+initShell();
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {

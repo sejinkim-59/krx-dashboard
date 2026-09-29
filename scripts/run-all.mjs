@@ -18,6 +18,7 @@ const SCRIPTS = [
   'fetch-kr-earnings.mjs',
   'fetch-etf-rebalance.mjs',
   'fetch-index-rebalance-calendar.mjs',
+  'fetch-kis-market.mjs',
 ];
 
 const results = [];
