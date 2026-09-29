@@ -794,6 +794,7 @@ updateHeaderMeta();
 loadHero();
 loadCardPreviews();
 loadSignals();
+loadMorningBrief();
 initShell();
 
 if ('serviceWorker' in navigator) {

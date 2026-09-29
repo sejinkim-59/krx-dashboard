@@ -1,0 +1,1769 @@
+{
+  "date": "20260929",
+  "generated_at": "2026-09-29T05:43:11.587Z",
+  "marketRegime": {
+    "state": "Risk-off",
+    "evidence": [
+      "VIX +8.07%",
+      "S&P500 -0.77%",
+      "NASDAQ -0.92%",
+      "USD/KRW +0.3%"
+    ],
+    "strategyPreference": [
+      "FLOW_REVERSAL",
+      "MARKET_ALERT",
+      "LARGE_FINANCING"
+    ],
+    "avoid": [
+      "MOMENTUM"
+    ]
+  },
+  "screening": {
+    "universeCount": 143,
+    "signalCount": 95,
+    "passedRiskCount": 95,
+    "rejectedCount": 0
+  },
+  "selections": [
+    {
+      "symbol": "005930",
+      "company": "삼성전자",
+      "priority": 8,
+      "setup": "Flow Reversal",
+      "reason": "외국인 수급 매도 → 매수 전환 (변화폭 +7,213억)",
+      "evidence": [
+        "외국인 수급 매도 → 매수 전환 (변화폭 +7,213억)",
+        "외국인 순매수 1위 (+1,041억)",
+        "최근 5거래일 수익률 +3.6%"
+      ],
+      "counterEvidence": [
+        "연기금 등 수급 매수 → 매도 전환 (변화폭 -1,673억)",
+        "기관합계 수급 매수 → 매도 전환 (변화폭 -1.95조)"
+      ],
+      "confirmation": "추가 매수 지속 여부",
+      "watch": "추가 매수 지속 여부",
+      "invalidation": "외국인 재차 순매도 전환",
+      "risks": "특이 리스크 없음",
+      "riskDecision": "PASS",
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+2 Flow Accumulation",
+        "+2 Momentum",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "marketRegimeAtSelection": "Risk-off",
+      "sources": [
+        "investor-flow",
+        "stock"
+      ]
+    },
+    {
+      "symbol": "000660",
+      "company": "SK하이닉스",
+      "priority": 7,
+      "setup": "Flow Reversal",
+      "reason": "기관합계 수급 매수 → 매도 전환 (변화폭 -1.14조)",
+      "evidence": [
+        "연기금 등 수급 매수 → 매도 전환 (변화폭 -1,326억)",
+        "기관합계 수급 매수 → 매도 전환 (변화폭 -1.14조)",
+        "최근 5거래일 수익률 -5.7%"
+      ],
+      "counterEvidence": [
+        "개인 수급 매도 → 매수 전환 (변화폭 +4.80조)",
+        "개인 순매수 1위 (+5,897억)"
+      ],
+      "confirmation": "추가 매도 지속 여부",
+      "watch": "추가 매도 지속 여부",
+      "invalidation": "기관합계 재차 순매수 전환",
+      "risks": "특이 리스크 없음",
+      "riskDecision": "PASS",
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+2 Flow Accumulation",
+        "+1 Momentum",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "marketRegimeAtSelection": "Risk-off",
+      "sources": [
+        "investor-flow",
+        "stock"
+      ]
+    },
+    {
+      "symbol": "373220",
+      "company": "LG에너지솔루션",
+      "priority": 6,
+      "setup": "Flow Reversal",
+      "reason": "연기금 등 수급 매수 → 매도 전환 (변화폭 -444억)",
+      "evidence": [
+        "연기금 등 수급 매수 → 매도 전환 (변화폭 -444억)",
+        "최근 5거래일 수익률 -3.3%"
+      ],
+      "counterEvidence": [],
+      "confirmation": "추가 매도 지속 여부",
+      "watch": "추가 매도 지속 여부",
+      "invalidation": "연기금 등 재차 순매수 전환",
+      "risks": "특이 리스크 없음",
+      "riskDecision": "PASS",
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Short Selling Spike",
+        "+1 Momentum",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "marketRegimeAtSelection": "Risk-off",
+      "sources": [
+        "investor-flow",
+        "short-selling",
+        "stock"
+      ]
+    }
+  ],
+  "rejectedCandidates": [],
+  "candidateQueue": [
+    {
+      "symbol": "005930",
+      "name": "삼성전자",
+      "score": 8,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+2 Flow Accumulation",
+        "+2 Momentum",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal",
+        "Flow Accumulation",
+        "Momentum"
+      ],
+      "topEvidence": "연기금 등 수급 매수 → 매도 전환 (변화폭 -1,673억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "000660",
+      "name": "SK하이닉스",
+      "score": 7,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+2 Flow Accumulation",
+        "+1 Momentum",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal",
+        "Flow Accumulation",
+        "Momentum"
+      ],
+      "topEvidence": "연기금 등 수급 매수 → 매도 전환 (변화폭 -1,326억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "373220",
+      "name": "LG에너지솔루션",
+      "score": 6,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Short Selling Spike",
+        "+1 Momentum",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal",
+        "Short Selling Spike",
+        "Momentum"
+      ],
+      "topEvidence": "연기금 등 수급 매수 → 매도 전환 (변화폭 -444억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "353200",
+      "name": "대덕전자",
+      "score": 6,
+      "scoreBreakdown": [
+        "+2 Flow Accumulation",
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Accumulation",
+        "Flow Reversal"
+      ],
+      "topEvidence": "기관합계 수급 매도 → 매수 전환 (변화폭 +698억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "006400",
+      "name": "삼성SDI",
+      "score": 5,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Momentum",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal",
+        "Momentum"
+      ],
+      "topEvidence": "연기금 등 수급 매수 → 매도 전환 (변화폭 -676억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "051910",
+      "name": "LG화학",
+      "score": 5,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Momentum",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal",
+        "Momentum"
+      ],
+      "topEvidence": "연기금 등 수급 매수 → 매도 전환 (변화폭 -325억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "010170",
+      "name": "대한광통신",
+      "score": 5,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Market Alert",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal",
+        "Market Alert"
+      ],
+      "topEvidence": "개인 수급 매도 → 매수 전환 (변화폭 +1,613억)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "투자주의 지정 (2026-09-21)"
+      }
+    },
+    {
+      "symbol": "240810",
+      "name": "원익IPS",
+      "score": 5,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal",
+        "Financing Event"
+      ],
+      "topEvidence": "개인 수급 매도 → 매수 전환 (변화폭 +1,093억)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "자사주 처분 공시"
+      }
+    },
+    {
+      "symbol": "402340",
+      "name": "SK스퀘어",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "연기금 등 수급 매도 → 매수 전환 (변화폭 +767억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "047050",
+      "name": "포스코인터내셔널",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "연기금 등 수급 매수 → 매도 전환 (변화폭 -385억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "079550",
+      "name": "LIG디펜스앤에어로스페이스",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "연기금 등 수급 매수 → 매도 전환 (변화폭 -345억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "011070",
+      "name": "LG이노텍",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "연기금 등 수급 매도 → 매수 전환 (변화폭 +260억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "068270",
+      "name": "셀트리온",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "연기금 등 수급 매수 → 매도 전환 (변화폭 -252억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "316140",
+      "name": "우리금융지주",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "연기금 등 수급 매수 → 매도 전환 (변화폭 -242억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "005490",
+      "name": "POSCO홀딩스",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "연기금 등 수급 매수 → 매도 전환 (변화폭 -215억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "105560",
+      "name": "KB금융",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "연기금 등 수급 매수 → 매도 전환 (변화폭 -205억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "086280",
+      "name": "현대글로비스",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "연기금 등 수급 매수 → 매도 전환 (변화폭 -198억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "377300",
+      "name": "카카오페이",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "연기금 등 수급 매도 → 매수 전환 (변화폭 +183억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "005935",
+      "name": "삼성전자우",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "기관합계 수급 매수 → 매도 전환 (변화폭 -3,319억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "003230",
+      "name": "삼양식품",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "기관합계 수급 매수 → 매도 전환 (변화폭 -816억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "009830",
+      "name": "한화솔루션",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "기관합계 수급 매도 → 매수 전환 (변화폭 +634억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "066970",
+      "name": "엘앤에프",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "기관합계 수급 매도 → 매수 전환 (변화폭 +633억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "012450",
+      "name": "한화에어로스페이스",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "기관합계 수급 매수 → 매도 전환 (변화폭 -551억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "007660",
+      "name": "이수페타시스",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "기관합계 수급 매도 → 매수 전환 (변화폭 +534억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "006360",
+      "name": "GS건설",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "기관합계 수급 매수 → 매도 전환 (변화폭 -503억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "082740",
+      "name": "한화엔진",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "기관합계 수급 매수 → 매도 전환 (변화폭 -457억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "375500",
+      "name": "DL이앤씨",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "기관합계 수급 매수 → 매도 전환 (변화폭 -448억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "251270",
+      "name": "넷마블",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "개인 수급 매수 → 매도 전환 (변화폭 -3,780억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "000500",
+      "name": "가온전선",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "개인 수급 매도 → 매수 전환 (변화폭 +1,335억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "036930",
+      "name": "주성엔지니어링",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "개인 수급 매수 → 매도 전환 (변화폭 -1,097억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "028260",
+      "name": "삼성물산",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "개인 수급 매도 → 매수 전환 (변화폭 +705억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "028050",
+      "name": "삼성E&A",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "개인 수급 매도 → 매수 전환 (변화폭 +675억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "000990",
+      "name": "DB하이텍",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "개인 수급 매수 → 매도 전환 (변화폭 -617억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "035720",
+      "name": "카카오",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "개인 수급 매수 → 매도 전환 (변화폭 -545억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "024110",
+      "name": "기업은행",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "개인 수급 매수 → 매도 전환 (변화폭 -529억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "096770",
+      "name": "SK이노베이션",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "외국인 수급 매도 → 매수 전환 (변화폭 +1,052억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "128940",
+      "name": "한미약품",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "외국인 수급 매도 → 매수 전환 (변화폭 +749억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "003490",
+      "name": "대한항공",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "외국인 수급 매도 → 매수 전환 (변화폭 +738억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "319400",
+      "name": "현대무벡스",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "외국인 수급 매수 → 매도 전환 (변화폭 -683억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "067310",
+      "name": "하나마이크론",
+      "score": 4,
+      "scoreBreakdown": [
+        "+3 Flow Reversal",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Flow Reversal"
+      ],
+      "topEvidence": "외국인 수급 매수 → 매도 전환 (변화폭 -542억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "003670",
+      "name": "포스코퓨처엠",
+      "score": 3,
+      "scoreBreakdown": [
+        "+2 Short Selling Spike",
+        "+1 Momentum"
+      ],
+      "signalTypes": [
+        "Short Selling Spike",
+        "Momentum"
+      ],
+      "topEvidence": "공매도 비중 40.45% (거래대금 상위 유니버스 내)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "공매도 비중 40.45% (거래대금 상위 유니버스 내)"
+      }
+    },
+    {
+      "symbol": "005380",
+      "name": "현대차",
+      "score": 3,
+      "scoreBreakdown": [
+        "+2 Short Selling Spike",
+        "+1 Momentum"
+      ],
+      "signalTypes": [
+        "Short Selling Spike",
+        "Momentum"
+      ],
+      "topEvidence": "공매도 비중 31.75% (거래대금 상위 유니버스 내)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "공매도 비중 31.75% (거래대금 상위 유니버스 내)"
+      }
+    },
+    {
+      "symbol": "092600",
+      "name": "앤씨앤",
+      "score": 3,
+      "scoreBreakdown": [
+        "+1 Market Alert",
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Market Alert",
+        "Financing Event"
+      ],
+      "topEvidence": "투자주의 지정 (2026-09-15)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "투자주의 지정 (2026-09-15)"
+      }
+    },
+    {
+      "symbol": "431190",
+      "name": "케이쓰리아이",
+      "score": 3,
+      "scoreBreakdown": [
+        "+1 Market Alert",
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Market Alert",
+        "Financing Event"
+      ],
+      "topEvidence": "투자주의 지정 (2026-09-15)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "투자주의 지정 (2026-09-15)"
+      }
+    },
+    {
+      "symbol": "061250",
+      "name": "화일약품",
+      "score": 3,
+      "scoreBreakdown": [
+        "+1 Market Alert",
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Market Alert",
+        "Financing Event"
+      ],
+      "topEvidence": "투자주의 지정 (2026-09-18)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "투자주의 지정 (2026-09-18)"
+      }
+    },
+    {
+      "symbol": "201490",
+      "name": "미투온",
+      "score": 3,
+      "scoreBreakdown": [
+        "+1 Market Alert",
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Market Alert",
+        "Financing Event"
+      ],
+      "topEvidence": "투자주의 지정 (2026-09-18)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "투자주의 지정 (2026-09-18)"
+      }
+    },
+    {
+      "symbol": "026910",
+      "name": "광진실업",
+      "score": 3,
+      "scoreBreakdown": [
+        "+1 Market Alert",
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Market Alert",
+        "Financing Event"
+      ],
+      "topEvidence": "투자주의 지정 (2026-09-28)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "투자주의 지정 (2026-09-28)"
+      }
+    },
+    {
+      "symbol": "050090",
+      "name": "비케이홀딩스",
+      "score": 3,
+      "scoreBreakdown": [
+        "+1 Market Alert",
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Market Alert",
+        "Financing Event"
+      ],
+      "topEvidence": "투자주의 지정 (2026-09-29)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "투자주의 지정 (2026-09-29)"
+      }
+    },
+    {
+      "symbol": "060900",
+      "name": "에이전트AI",
+      "score": 3,
+      "scoreBreakdown": [
+        "+1 Market Alert",
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Market Alert",
+        "Financing Event"
+      ],
+      "topEvidence": "투자주의 지정 (2026-09-29)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "투자주의 지정 (2026-09-29)"
+      }
+    },
+    {
+      "symbol": "042660",
+      "name": "한화오션",
+      "score": 3,
+      "scoreBreakdown": [
+        "+2 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "자사주 취득 공시",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "045520",
+      "name": "크린앤사이언스",
+      "score": 3,
+      "scoreBreakdown": [
+        "+2 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "자사주 취득 공시",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "044450",
+      "name": "KSS해운",
+      "score": 3,
+      "scoreBreakdown": [
+        "+2 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "자사주 취득 공시",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "033780",
+      "name": "케이티앤지",
+      "score": 3,
+      "scoreBreakdown": [
+        "+2 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "자사주 취득 공시",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "067280",
+      "name": "멀티캠퍼스",
+      "score": 3,
+      "scoreBreakdown": [
+        "+2 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "자사주 취득 공시",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "205100",
+      "name": "엑셈",
+      "score": 3,
+      "scoreBreakdown": [
+        "+2 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "자사주 취득 공시",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "004080",
+      "name": "신흥",
+      "score": 3,
+      "scoreBreakdown": [
+        "+2 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "자사주 취득 공시",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "020000",
+      "name": "한섬",
+      "score": 3,
+      "scoreBreakdown": [
+        "+2 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "자사주 취득 공시",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "032850",
+      "name": "비트컴퓨터",
+      "score": 3,
+      "scoreBreakdown": [
+        "+2 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "자사주 취득 공시",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "006880",
+      "name": "신송홀딩스",
+      "score": 3,
+      "scoreBreakdown": [
+        "+2 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "자사주 취득 공시",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "009150",
+      "name": "삼성전기",
+      "score": 2,
+      "scoreBreakdown": [
+        "+2 Flow Accumulation"
+      ],
+      "signalTypes": [
+        "Flow Accumulation"
+      ],
+      "topEvidence": "기관합계 순매수 1위 (+2,069억)",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "036540",
+      "name": "SFA반도체",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Market Alert",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Market Alert"
+      ],
+      "topEvidence": "투자주의 지정 (2026-09-23)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "투자주의 지정 (2026-09-23)"
+      }
+    },
+    {
+      "symbol": "043260",
+      "name": "성호전자",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Market Alert",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Market Alert"
+      ],
+      "topEvidence": "투자주의 지정 (2026-09-23)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "투자주의 지정 (2026-09-23)"
+      }
+    },
+    {
+      "symbol": "440110",
+      "name": "파두",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Market Alert",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Market Alert"
+      ],
+      "topEvidence": "투자경고 지정 (2026-09-23)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "투자주의 지정 (2026-09-23)"
+      }
+    },
+    {
+      "symbol": "035620",
+      "name": "바른손이앤에이",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Market Alert",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Market Alert"
+      ],
+      "topEvidence": "투자주의 지정 (2026-09-29)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "투자주의 지정 (2026-09-29)"
+      }
+    },
+    {
+      "symbol": "142760",
+      "name": "모아라이프플러스",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "유상증자 공시 (제3자배정증자)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "유상증자 공시 (제3자배정증자)"
+      }
+    },
+    {
+      "symbol": "355390",
+      "name": "크라우드웍스",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "유상증자 공시 (제3자배정증자)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "유상증자 공시 (제3자배정증자)"
+      }
+    },
+    {
+      "symbol": "090710",
+      "name": "휴림로봇",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "유상증자 공시 (일반공모증자)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "유상증자 공시 (일반공모증자)"
+      }
+    },
+    {
+      "symbol": "299660",
+      "name": "셀리드",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "유상증자 공시 (제3자배정증자)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "유상증자 공시 (제3자배정증자)"
+      }
+    },
+    {
+      "symbol": "051160",
+      "name": "지어소프트",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "유상증자 공시 (방식 미상)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "유상증자 공시 (방식 미상)"
+      }
+    },
+    {
+      "symbol": "107640",
+      "name": "한중엔시에스",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "유상증자 공시 (방식 미상)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "유상증자 공시 (방식 미상)"
+      }
+    },
+    {
+      "symbol": "011810",
+      "name": "STX",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "유상증자 공시 (제3자배정증자)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "유상증자 공시 (제3자배정증자)"
+      }
+    },
+    {
+      "symbol": "019570",
+      "name": "GMI벤처",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "유상증자 공시 (제3자배정증자)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "유상증자 공시 (제3자배정증자)"
+      }
+    },
+    {
+      "symbol": "261780",
+      "name": "아리바이오LAB",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "유상증자 공시 (제3자배정증자)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "유상증자 공시 (제3자배정증자)"
+      }
+    },
+    {
+      "symbol": "163730",
+      "name": "핑거",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "CB 발행결정 (전환가 11,904)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "CB 발행결정 (전환가 11,904)"
+      }
+    },
+    {
+      "symbol": "373200",
+      "name": "엑스플러스",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "CB 발행결정 (전환가 1,855)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "CB 발행결정 (전환가 1,855)"
+      }
+    },
+    {
+      "symbol": "357120",
+      "name": "코람코라이프인프라리츠",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "CB 발행결정 (전환가 4,092)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "CB 발행결정 (전환가 4,092)"
+      }
+    },
+    {
+      "symbol": "340810",
+      "name": "시선AI",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "CB 발행결정 (전환가 4,192)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "CB 발행결정 (전환가 4,192)"
+      }
+    },
+    {
+      "symbol": "026150",
+      "name": "특수건설",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "CB 발행결정 (전환가 4,139)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "CB 발행결정 (전환가 4,139)"
+      }
+    },
+    {
+      "symbol": "297570",
+      "name": "아틀라스링크",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "CB 발행결정 (전환가 4,070)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "CB 발행결정 (전환가 4,070)"
+      }
+    },
+    {
+      "symbol": "049120",
+      "name": "파인디앤씨",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "CB 발행결정 (전환가 2,990)",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "CB 발행결정 (전환가 2,990)"
+      }
+    },
+    {
+      "symbol": "036810",
+      "name": "에프에스티",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "자사주 처분 공시",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "자사주 처분 공시"
+      }
+    },
+    {
+      "symbol": "016450",
+      "name": "한세예스24홀딩스",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "자사주 처분 공시",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "자사주 처분 공시"
+      }
+    },
+    {
+      "symbol": "069640",
+      "name": "한세엠케이",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "자사주 처분 공시",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "자사주 처분 공시"
+      }
+    },
+    {
+      "symbol": "005670",
+      "name": "푸드웰",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "자사주 처분 공시",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "자사주 처분 공시"
+      }
+    },
+    {
+      "symbol": "121600",
+      "name": "나노신소재",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "자사주 처분 공시",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "자사주 처분 공시"
+      }
+    },
+    {
+      "symbol": "148930",
+      "name": "에이치와이티씨",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "자사주 처분 공시",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "자사주 처분 공시"
+      }
+    },
+    {
+      "symbol": "030530",
+      "name": "원익홀딩스",
+      "score": 2,
+      "scoreBreakdown": [
+        "+1 Financing Event",
+        "+1 Regime fit (Risk-off)"
+      ],
+      "signalTypes": [
+        "Financing Event"
+      ],
+      "topEvidence": "자사주 처분 공시",
+      "risk": {
+        "decision": "WATCH",
+        "reason": "자사주 처분 공시"
+      }
+    },
+    {
+      "symbol": "329180",
+      "name": "HD현대중공업",
+      "score": 2,
+      "scoreBreakdown": [
+        "+2 Earnings Reaction"
+      ],
+      "signalTypes": [
+        "Earnings Reaction"
+      ],
+      "topEvidence": "실적 발표 후 D+1 -5.32%",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "009540",
+      "name": "HD한국조선해양",
+      "score": 2,
+      "scoreBreakdown": [
+        "+2 Earnings Reaction"
+      ],
+      "signalTypes": [
+        "Earnings Reaction"
+      ],
+      "topEvidence": "실적 발표 후 D+1 -7.25%",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "066570",
+      "name": "LG전자",
+      "score": 2,
+      "scoreBreakdown": [
+        "+2 Momentum"
+      ],
+      "signalTypes": [
+        "Momentum"
+      ],
+      "topEvidence": "최근 5거래일 수익률 +7.1%",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "042700",
+      "name": "한미반도체",
+      "score": 2,
+      "scoreBreakdown": [
+        "+2 Momentum"
+      ],
+      "signalTypes": [
+        "Momentum"
+      ],
+      "topEvidence": "최근 5거래일 수익률 +5.4%",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "000270",
+      "name": "기아",
+      "score": 1,
+      "scoreBreakdown": [
+        "+1 Momentum"
+      ],
+      "signalTypes": [
+        "Momentum"
+      ],
+      "topEvidence": "최근 5거래일 수익률 -5.9%",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "012330",
+      "name": "현대모비스",
+      "score": 1,
+      "scoreBreakdown": [
+        "+1 Momentum"
+      ],
+      "signalTypes": [
+        "Momentum"
+      ],
+      "topEvidence": "최근 5거래일 수익률 -3.4%",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "259960",
+      "name": "크래프톤",
+      "score": 1,
+      "scoreBreakdown": [
+        "+1 Momentum"
+      ],
+      "signalTypes": [
+        "Momentum"
+      ],
+      "topEvidence": "최근 5거래일 수익률 -3.7%",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    },
+    {
+      "symbol": "010130",
+      "name": "고려아연",
+      "score": 1,
+      "scoreBreakdown": [
+        "+1 Momentum"
+      ],
+      "signalTypes": [
+        "Momentum"
+      ],
+      "topEvidence": "최근 5거래일 수익률 -6.2%",
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      }
+    }
+  ]
+}

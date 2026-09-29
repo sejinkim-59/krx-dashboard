@@ -808,3 +808,96 @@ tr.row-flag:hover { background: rgba(168, 113, 10, 0.11); }
 .dh-status.status-connected { color: var(--good); }
 .dh-status.status-error { color: var(--critical); }
 .dh-time { flex-shrink: 0; width: 150px; text-align: right; font-size: 0.75rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+.link-btn { background: none; border: none; padding: 0; font: inherit; color: var(--text); font-weight: 600; cursor: pointer; }
+.link-btn:hover { color: var(--brand); }
+
+/* 범용 tone 유틸리티 (다른 곳의 .xxx.up/.down처럼 이미 scoped된 규칙과 겹쳐도 안전) */
+.up { color: var(--up); }
+.down { color: var(--down); }
+.watch { color: var(--warning); }
+
+/* ================= AI Desk: Morning Brief (Home 상단 압축판) ================= */
+.morning-brief { padding: 22px 24px 4px; max-width: 1680px; margin: 0 auto; }
+.mb-head { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.mb-eyebrow { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em; color: var(--muted); }
+.mb-regime { font-size: 0.74rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: var(--surface-alt); }
+.mb-regime.up { color: var(--up); }
+.mb-regime.down { color: var(--down); }
+.mb-regime.flat { color: var(--text-secondary); }
+.mb-funnel { margin: 0 0 14px; font-size: 0.78rem; color: var(--muted); }
+.mb-top-list { display: flex; flex-direction: column; }
+.mb-top-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  width: 100%;
+  padding: 11px 0;
+  border: none;
+  border-top: 1px solid var(--border);
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+.mb-top-list .mb-top-item:first-child { border-top: none; }
+.mb-top-item:hover .mb-top-name { color: var(--brand); }
+.mb-top-index { flex-shrink: 0; font-size: 0.75rem; font-weight: 700; color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 2px; }
+.mb-top-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.mb-top-name { font-size: 0.9rem; font-weight: 600; color: var(--text); transition: color 0.12s; }
+.mb-top-setup { font-size: 0.7rem; font-weight: 500; color: var(--muted); margin-left: 6px; }
+.mb-top-reason { font-size: 0.8rem; color: var(--text-secondary); }
+.mb-more { margin-top: 12px; background: none; border: none; padding: 0; font: inherit; font-size: 0.78rem; font-weight: 600; color: var(--brand); cursor: pointer; }
+
+/* ================= AI Desk: Selection Card (WHY/EVIDENCE/WATCH/INVALIDATION) ================= */
+.selection-list { display: flex; flex-direction: column; gap: 24px; margin: 16px 0; }
+.selection-card { border: 1px solid var(--border); border-radius: 8px; padding: 18px 20px; }
+.sc-head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
+.sc-index { font-size: 0.75rem; font-weight: 700; color: var(--muted); font-variant-numeric: tabular-nums; }
+.sc-name { background: none; border: none; padding: 0; font: inherit; font-size: 1.05rem; font-weight: 600; color: var(--text); cursor: pointer; }
+.sc-name:hover { color: var(--brand); }
+.sc-setup { font-size: 0.72rem; font-weight: 600; color: var(--muted); background: var(--surface-alt); padding: 2px 8px; border-radius: 4px; }
+.sc-risk-tag { font-size: 0.68rem; font-weight: 700; color: var(--warning); margin-left: auto; }
+.sc-label { display: block; font-size: 0.63rem; font-weight: 700; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 4px; }
+.sc-section { margin-bottom: 12px; }
+.sc-section p { margin: 0; font-size: 0.85rem; color: var(--text); line-height: 1.5; }
+.sc-section ul { margin: 0; padding-left: 16px; }
+.sc-section ul li { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.6; }
+.sc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; padding: 12px 0; border-top: 1px solid var(--border); margin-bottom: 10px; }
+.sc-grid p { margin: 0; font-size: 0.8rem; color: var(--text-secondary); }
+.sc-footer { display: flex; justify-content: space-between; gap: 12px; font-size: 0.74rem; color: var(--muted); }
+.sc-footer .sc-score { font-weight: 700; color: var(--text); cursor: help; }
+
+/* ================= AI Desk: 스크리닝부 Funnel ================= */
+.funnel-row { display: flex; gap: 0; margin-bottom: 20px; }
+.funnel-cell { flex: 1; padding: 14px 16px; border-left: 1px solid var(--border); display: flex; flex-direction: column; gap: 4px; }
+.funnel-cell:first-child { border-left: none; padding-left: 0; }
+.funnel-value { font-size: 1.8rem; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--text); }
+.funnel-label { font-size: 0.72rem; color: var(--muted); }
+
+/* ================= AI Desk: 분석부 master-detail ================= */
+.research-layout { display: grid; grid-template-columns: 1fr; gap: 20px; }
+@media (min-width: 960px) { .research-layout { grid-template-columns: 240px 1fr; } }
+.research-queue { display: flex; flex-direction: column; max-height: 640px; overflow-y: auto; }
+.rq-item { display: flex; justify-content: space-between; gap: 8px; width: 100%; padding: 9px 10px; border: none; border-radius: 6px; background: none; text-align: left; cursor: pointer; font: inherit; }
+.rq-item:hover { background: var(--surface-alt); }
+.rq-item.active { background: var(--surface-alt); font-weight: 600; }
+.rq-name { font-size: 0.82rem; color: var(--text); }
+.rq-score { font-size: 0.78rem; font-weight: 700; color: var(--muted); }
+
+/* ================= AI Desk: 마켓부 Regime ================= */
+.regime-strip { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; flex-wrap: wrap; }
+.regime-state { font-size: 0.85rem; font-weight: 700; padding: 3px 10px; border-radius: 5px; background: var(--surface-alt); }
+.regime-state.up { color: var(--up); }
+.regime-state.down { color: var(--down); }
+.regime-state.flat { color: var(--text-secondary); }
+.regime-evidence { font-size: 0.8rem; color: var(--text-secondary); }
+.regime-block { max-width: 480px; }
+.regime-state-lg { display: inline-block; font-size: 1.6rem; font-weight: 700; margin-bottom: 20px; }
+.regime-state-lg.up { color: var(--up); }
+.regime-state-lg.down { color: var(--down); }
+.regime-state-lg.flat { color: var(--text-secondary); }
+.regime-detail-row { margin-bottom: 18px; }
+.regime-detail-row ul, .regime-detail-row ol { margin: 0; padding-left: 18px; }
+.regime-detail-row li { font-size: 0.84rem; color: var(--text-secondary); line-height: 1.7; }

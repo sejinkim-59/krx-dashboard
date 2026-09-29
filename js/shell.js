@@ -1,6 +1,6 @@
 // Sidebar + Workspace 전환 셸. 각 view는 처음 열릴 때만 지연 로드한다.
 
-const SIDEBAR_VIEWS = ['home', 'stock', 'signals-full', 'screener', 'events', 'watchlist', 'datahub', 'ai-analyst'];
+const SIDEBAR_VIEWS = ['home', 'morning', 'screening', 'research', 'market-desk', 'risk-desk', 'stock', 'signals-full', 'screener', 'events', 'watchlist', 'learning', 'datahub', 'ai-analyst'];
 
 function switchView(view) {
   document.querySelectorAll('.sidebar-item[data-view]').forEach((b) => b.classList.toggle('active', b.dataset.view === view));
@@ -13,6 +13,12 @@ function switchView(view) {
   else if (view === 'screener') renderCategoriesInto(document.getElementById('screenerBody'), ['flow', 'derivatives', 'etf', 'macro']);
   else if (view === 'events') renderCategoriesInto(document.getElementById('eventsBody'), ['corporate']);
   else if (view === 'datahub') loadDataHub();
+  else if (view === 'morning') loadMorningView();
+  else if (view === 'screening') loadScreeningView();
+  else if (view === 'research') loadResearchView();
+  else if (view === 'market-desk') loadMarketDeskView();
+  else if (view === 'risk-desk') loadRiskDeskView();
+  else if (view === 'learning') loadLearningView();
 }
 
 function initShell() {

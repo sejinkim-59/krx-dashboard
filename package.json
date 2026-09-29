@@ -21,6 +21,7 @@
     "fetch:etf-rebalance": "node scripts/fetch-etf-rebalance.mjs",
     "fetch:index-calendar": "node scripts/fetch-index-rebalance-calendar.mjs",
     "fetch:kis-market": "node scripts/fetch-kis-market.mjs",
+    "fetch:morning-meeting": "node scripts/fetch-morning-meeting.mjs",
     "test:kis": "node scripts/test-kis-connection.mjs",
     "serve": "node scripts/dev-server.mjs"
   }

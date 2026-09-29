@@ -19,6 +19,7 @@ const SCRIPTS = [
   'fetch-etf-rebalance.mjs',
   'fetch-index-rebalance-calendar.mjs',
   'fetch-kis-market.mjs',
+  'fetch-morning-meeting.mjs',
 ];
 
 const results = [];
