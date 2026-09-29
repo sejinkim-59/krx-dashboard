@@ -35,6 +35,9 @@ const FEATURES = {
   evVolSpikeFresh: (r) => (r.evVolSpike != null && r.evVolSpike <= 5 ? 1 : 0),
   notPriced: (r) => ({ not_yet_priced: 2, unclear: 1, partially_priced_in: -1, likely_priced_in: -2 }[r.pricedIn] ?? 0),
   logTradVal: (r) => (r.tradVal20 ? Math.log(r.tradVal20) : null),
+  foreignFlip: (r) => r.fFlip, instFlip: (r) => r.oFlip, retailFlipN: (r) => r.pFlip,
+  capIntPct: (r) => r.capIntPct, foreign3Int: (r) => r.fNet3Int, inst3Int: (r) => r.oNet3Int, retail3Int: (r) => r.pNet3Int,
+  dirNet20Int: (r) => r.dirNet20Int,
   smallCap: (r) => (r.capRank != null ? r.capRank : null),
 };
 

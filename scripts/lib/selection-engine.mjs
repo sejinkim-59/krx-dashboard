@@ -299,28 +299,54 @@ function tierOf(c) {
   return 4;
 }
 
+// v0.4 alpha: 같은 날 가격 데이터가 있는 후보들 사이의 z-score 결합 (가중치는 Profile)
+const PRICED_SCORE = { not_yet_priced: 2, unclear: 1, unknown: 0, partially_priced_in: -1, likely_priced_in: -2 };
+function attachAlpha(candidates) {
+  const w = VARIANT.alphaWeights;
+  if (!w) return;
+  const priced = candidates.filter((c) => c.features);
+  const get = {
+    pricedIn: (c) => PRICED_SCORE[c.pricedIn.verdict] ?? 0,
+    moveSinceChange: (c) => c.pricedIn.signalReturn ?? c.features.return20D,
+    volatility: (c) => (c.features.atr14 && c.features.close ? c.features.atr14 / c.features.close : null),
+    liquidity: (c) => (c.features.avgTradingValue20D ? Math.log(c.features.avgTradingValue20D) : null),
+  };
+  const z = {};
+  for (const [k, fn] of Object.entries(get)) {
+    const v = priced.map(fn).filter((x) => x != null && Number.isFinite(x));
+    const m = v.reduce((a, b) => a + b, 0) / (v.length || 1);
+    const sd = Math.sqrt(v.reduce((a, b) => a + (b - m) ** 2, 0) / Math.max(1, v.length - 1)) || 1;
+    z[k] = (c) => { const x = fn(c); return x == null || !Number.isFinite(x) ? 0 : (x - m) / sd; };
+  }
+  for (const c of candidates) {
+    c.alpha = c.features ? r1(Object.entries(w).reduce((s, [k, wt]) => s + wt * z[k](c), 0) * 10) / 10 : null;
+  }
+}
+const alphaMode = () => VARIANT.rankMode === 'alpha';
+const byAlpha = (a, b) => (b.alpha ?? -99) - (a.alpha ?? -99);
+
 const BUCKET_RULES = {
   MARKET_LEADER: {
     ok: (c) => c.gate.base && c.isLargeCap && c.dataCoverage >= COVERAGE_RULES.minForLeader,
-    sort: (a, b) => b.normalizedScore - a.normalizedScore || b.groups.length - a.groups.length,
+    sort: (a, b) => (alphaMode() ? byAlpha(a, b) : b.normalizedScore - a.normalizedScore || b.groups.length - a.groups.length),
   },
   DISCOVERY: {
     // 목표 조건 "시장이 아직 충분히 반영하지 않았을 가능성" — 허용 판정은 Profile로 관리 (v0.2: likely만 제외)
     ok: (c) => c.gate.base && c.gate.answerable && !c.isLargeCap && c.capRank != null && c.dataCoverage >= COVERAGE_RULES.minForDiscovery
       && VARIANT.allowedPricedIn.includes(c.pricedIn.verdict)
       && (!VARIANT.discoveryRequireAboveMa60 || (c.features?.ma60 != null && c.features.close > c.features.ma60)),
-    sort: (a, b) => tierOf(a) - tierOf(b) || b.discoveryScore - a.discoveryScore,
+    sort: (a, b) => (alphaMode() ? byAlpha(a, b) : tierOf(a) - tierOf(b) || b.discoveryScore - a.discoveryScore),
   },
   EVENT_DRIVEN: {
     ok: (c) => c.gate.base && c.gate.answerable && c.hasCatalyst && (VARIANT.name === 'v0.2' || VARIANT.allowedPricedIn.includes(c.pricedIn.verdict)),
-    sort: (a, b) => (b.factors.catalyst.score + b.factors.corporate.score) - (a.factors.catalyst.score + a.factors.corporate.score) || b.discoveryScore - a.discoveryScore,
+    sort: (a, b) => (alphaMode() ? byAlpha(a, b) : (b.factors.catalyst.score + b.factors.corporate.score) - (a.factors.catalyst.score + a.factors.corporate.score) || b.discoveryScore - a.discoveryScore),
   },
   INFLECTION: {
     ok: (c) => c.gate.base && c.gate.answerable && c.features?.dist52WHigh != null && c.features.dist52WHigh <= SELECTION_RULES.inflectionMaxDist52WHigh
       && (VARIANT.name === 'v0.2' || VARIANT.allowedPricedIn.includes(c.pricedIn.verdict))
       && (c.factors.novelty.activeEvents || []).some((e) => ['ma20CrossAboveMa60', 'priceCrossAboveMa20'].includes(e.id) && CONFIRMATION_RULES.noveltyBands.includes(e.band)),
     // Inflection은 "초기" 반전이 정의이므로, 이미 반영된 반등은 뒤로 보낸다.
-    sort: (a, b) => PRICED_RANK[a.pricedIn.verdict] - PRICED_RANK[b.pricedIn.verdict] || b.factors.novelty.score - a.factors.novelty.score || b.discoveryScore - a.discoveryScore,
+    sort: (a, b) => (alphaMode() ? byAlpha(a, b) : PRICED_RANK[a.pricedIn.verdict] - PRICED_RANK[b.pricedIn.verdict] || b.factors.novelty.score - a.factors.novelty.score || b.discoveryScore - a.discoveryScore),
   },
 };
 const PRICED_RANK = { not_yet_priced: 0, unclear: 1, unknown: 2, partially_priced_in: 3, likely_priced_in: 4 };
@@ -445,6 +471,7 @@ function toFinal(c, bucket) {
 
 // Candidate Queue = Discovery 관점 정렬(게이트 통과 → Tier → Crowding 반영 점수). 대형주도 같은 기준으로 경쟁.
 function queueRank(a, b) {
+  if (alphaMode()) return (b.gate.base - a.gate.base) || byAlpha(a, b);
   return (b.gate.base - a.gate.base) || (tierOf(a) - tierOf(b)) || (b.discoveryScore - a.discoveryScore);
 }
 
@@ -454,6 +481,7 @@ export function evaluateCandidates(d, today = new Date()) {
   const store = buildFeatureStore(d);
   const ctx = { today, proxies: computeProxies(store), intensity: buildFlowIntensity(d), capRank: capRanks(d) };
   const candidates = [...universe].map(([symbol, name]) => buildCandidate(symbol, name, d, store.get(symbol), ctx));
+  attachAlpha(candidates);
   candidates.sort(queueRank);
   return { universe, store, candidates };
 }

@@ -14,9 +14,19 @@ const PERIODS = (process.env.BT_PERIODS || 'Dev:20251001-20260630,Confirm:202607
 
 const byDate = new Map();
 const excludeLarge = process.env.BT_EXCLUDE_LARGE === '1'; // Discovery 유니버스(시총 상위 30 제외)로 제한
+// 시장 국면 필터: KODEX 200 종가가 20일선 위(up)/아래(down)인 날만 (T 시점 정보만 사용)
+const regime = process.env.BT_REGIME || 'all';
+const kBars = JSON.parse(await readFile(new URL('../.cache/backtest/bars-069500.json', import.meta.url), 'utf-8'));
+const upDay = new Map();
+for (let i = 19; i < kBars.length; i++) {
+  const ma = kBars.slice(i - 19, i + 1).reduce((s, b) => s + b.close, 0) / 20;
+  upDay.set(kBars[i].time.replace(/-/g, ''), kBars[i].close > ma);
+}
+const STRATS_ONLY = process.env.BT_ONLY ? new Set(process.env.BT_ONLY.split(',')) : null;
 for (const r of panel.rows) {
   if (r.fwd[h] == null) continue;
   if (excludeLarge && r.isLargeCap) continue;
+  if (regime !== 'all' && upDay.get(r.date) !== (regime === 'up')) continue;
   if (!byDate.has(r.date)) byDate.set(r.date, []);
   byDate.get(r.date).push(r);
 }
@@ -70,6 +80,21 @@ const STRATS = {
     filter: (r) => (fresh(r.evPriceCross, 3) || fresh(r.evMaCross, 3)) && r.signalReturn != null && r.signalReturn >= 0 && r.signalReturn <= 5 && r.ma20Slope > 0,
     score: (arr) => { const b = zmap(arr, (r) => r.atrPct), s = zmap(arr, (r) => r.signalReturn); return (r) => -b(r) - 0.5 * s(r); },
   },
+  // 3차: 개발 구간(2025-10~2026-06) 전종목 패널에서 4개 분기 모두 부호가 일관된 요소만 결합
+  'S7 미반영+저변동+유동성 복합': {
+    filter: (r) => r.pricedIn !== 'likely_priced_in' && r.pricedIn !== 'partially_priced_in',
+    score: (arr) => {
+      const a = zmap(arr, (r) => PRICED[r.pricedIn] ?? 0), s = zmap(arr, (r) => r.signalReturn ?? r.r20), v = zmap(arr, (r) => r.atrPct), l = zmap(arr, (r) => (r.tradVal20 ? Math.log(r.tradVal20) : null));
+      return (r) => a(r) - s(r) - v(r) + 0.5 * l(r);
+    },
+  },
+  'S8 S7 + 신선한 가격회복(3일 내)': {
+    filter: (r) => r.pricedIn !== 'likely_priced_in' && r.pricedIn !== 'partially_priced_in' && fresh(r.evPriceCross, 3),
+    score: (arr) => {
+      const s = zmap(arr, (r) => r.signalReturn ?? r.r20), v = zmap(arr, (r) => r.atrPct), l = zmap(arr, (r) => (r.tradVal20 ? Math.log(r.tradVal20) : null));
+      return (r) => -s(r) - v(r) + 0.5 * l(r);
+    },
+  },
   'F3 미반영 판정 + 추세 유지 (MA60 위)': {
     filter: (r) => r.pricedIn === 'not_yet_priced' && r.ma60Gap != null && r.ma60Gap > 0,
     score: (arr) => { const b = zmap(arr, (r) => r.atrPct), n = zmap(arr, (r) => r.novelty); return (r) => n(r) - b(r); },
@@ -113,7 +138,8 @@ const f = (x, d = 1) => (x == null || !Number.isFinite(x) ? '  -' : `${x >= 0 ? 
 for (const P of PERIODS) {
   console.log(`\n=== ${P.name} ${P.from}~${P.to} | D+${h} | 일 ${K}종목 ===`);
   console.log('전략'.padEnd(34) + '일수 종목  승률% 비용후% 평균%  풀초과율% 평균초과%p [95%CI]        포트승률% 포트>풀%');
-  const list = [...(enginePicks.size ? [['ENGINE v0.2 실제 선정', 'ENGINE']] : []), ...Object.entries(STRATS)];
+  const list = [...(enginePicks.size ? [['ENGINE v0.2 실제 선정', 'ENGINE']] : []), ...Object.entries(STRATS)]
+    .filter(([name]) => !STRATS_ONLY || [...STRATS_ONLY].some((k) => name.startsWith(k)));
   for (const [name, s] of list) {
     for (const nr of s === 'ENGINE' ? [false] : [false, true]) {
       const r = run(name, s, P.from, P.to, nr);

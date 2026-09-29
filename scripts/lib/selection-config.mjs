@@ -199,6 +199,19 @@ export const PROFILES = {
     atrPenaltyPerPct: 2, // ATR/종가 3% 초과분 1%p당 2점 감점 (Discovery 계열 순위에만)
     repeatBlockDays: 5,
   },
+  // v0.4 근거: 전종목(선택편향 없음) 가격 패널, 개발 구간 2025-10~2026-06의 4개 분기 모두 부호 일관
+  //  미반영 판정 IC(+), 변화 후 수익률 IC(-), 변동성 IC(-), 거래대금 IC(+, 3/4분기). Novelty 점수는 4분기 모두 IC(-).
+  //  → WHAT CHANGED 답변은 자격 조건으로 유지하되, 순위는 "변화의 크기"가 아니라 아래 alpha 점수로 정한다.
+  'v0.4': {
+    volumeSpikePoints: 0,
+    noveltyMaxReturnSinceChange: 5,
+    allowedPricedIn: ['not_yet_priced', 'unclear'],
+    discoveryRequireAboveMa60: true,
+    atrPenaltyPerPct: 0,
+    repeatBlockDays: 5,
+    rankMode: 'alpha',
+    alphaWeights: { pricedIn: 1, moveSinceChange: -1, volatility: -1, liquidity: 0.5 },
+  },
 };
 export function applyProfile(name) {
   const p = PROFILES[name];
