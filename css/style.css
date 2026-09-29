@@ -318,6 +318,10 @@ tbody tr:hover { background: var(--surface-alt); }
 .stat-tile .delta.down { color: var(--down); }
 .stat-tile .delta.flat { color: var(--flat); }
 
+@media (max-width: 640px) {
+  .panel-head { flex-wrap: wrap; }
+  .panel-head-date { order: 1; margin-left: 48px; }
+}
 @media (max-width: 480px) {
   .panel-head { padding: 16px 42px 16px 16px; }
   .panel-body-inner { padding: 16px; }
@@ -325,29 +329,90 @@ tbody tr:hover { background: var(--surface-alt); }
   .chart-box.h-lg { height: 220px; }
 }
 
-/* ---------- 헤드라인 콜아웃 ---------- */
-.headline-callout {
+/* ---------- Executive Insight: FACT / WHY IT MATTERS / WATCH NEXT ---------- */
+.exec-insight {
   display: flex;
-  gap: 11px;
-  padding: 13px 15px;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 16px;
   border-radius: 10px;
   margin-bottom: 14px;
-  align-items: flex-start;
   background: var(--surface-alt);
   border: 1px solid var(--border);
   border-left: 3px solid var(--muted);
 }
-.headline-callout .hc-icon { font-size: 0.98rem; margin-top: 1px; flex-shrink: 0; color: var(--muted); }
-.headline-callout .hc-title { display: block; font-size: 0.9rem; font-weight: 700; margin-bottom: 4px; color: var(--text); }
-.headline-callout p { margin: 0; font-size: 0.81rem; line-height: 1.55; color: var(--text-secondary); }
-.headline-callout.tone-up { border-left-color: var(--up); }
-.headline-callout.tone-up .hc-icon { color: var(--up); }
-.headline-callout.tone-down { border-left-color: var(--down); }
-.headline-callout.tone-down .hc-icon { color: var(--down); }
-.headline-callout.tone-watch { border-left-color: var(--warning); }
-.headline-callout.tone-watch .hc-icon { color: var(--warning); }
-.headline-callout.tone-info { border-left-color: var(--brand); }
-.headline-callout.tone-info .hc-icon { color: var(--brand); }
+.exec-row { display: flex; gap: 10px; align-items: baseline; }
+.exec-row p { margin: 0; font-size: 0.85rem; line-height: 1.5; color: var(--text); }
+.exec-tag {
+  flex-shrink: 0;
+  width: 108px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  padding-top: 1px;
+}
+.exec-row:first-child p { font-weight: 600; }
+.exec-row:has(.exec-tag-why) p, .exec-row:has(.exec-tag-watch) p { color: var(--text-secondary); font-size: 0.81rem; }
+.exec-insight.tone-up { border-left-color: var(--up); }
+.exec-insight.tone-up .exec-tag-fact { color: var(--up); }
+.exec-insight.tone-down { border-left-color: var(--down); }
+.exec-insight.tone-down .exec-tag-fact { color: var(--down); }
+.exec-insight.tone-watch { border-left-color: var(--warning); }
+.exec-insight.tone-watch .exec-tag-fact { color: var(--warning); }
+.exec-insight.tone-info { border-left-color: var(--brand); }
+.exec-insight.tone-info .exec-tag-fact { color: var(--brand); }
+.exec-tag-watch { color: var(--warning) !important; }
+
+@media (max-width: 480px) {
+  .exec-row { flex-direction: column; gap: 2px; }
+  .exec-tag { width: auto; }
+}
+
+/* ---------- Key Metrics 스트립 ---------- */
+.key-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px 20px;
+  padding: 12px 0 16px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+}
+.km-cell { display: flex; flex-direction: column; gap: 3px; }
+.km-label { font-size: 0.68rem; color: var(--muted); }
+.km-value { font-size: 1.2rem; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--text); line-height: 1.25; }
+.km-value.up { color: var(--up); }
+.km-value.down { color: var(--down); }
+.km-value.watch-text { color: var(--warning); }
+
+/* ---------- 투자/업무 View Toggle ---------- */
+.view-toggle { display: flex; gap: 2px; background: var(--surface-alt); border-radius: 7px; padding: 2px; flex-shrink: 0; }
+.view-toggle-btn {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 5px 11px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.view-toggle-btn.active { background: var(--surface); color: var(--text); box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08); }
+.view-note {
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+}
+.view-note-list { margin: 0; padding-left: 18px; }
+.view-note-list li { font-size: 0.81rem; color: var(--text-secondary); line-height: 1.55; margin-bottom: 4px; }
+.view-note-list li:last-child { margin-bottom: 0; }
+
+/* ---------- 실적 Reaction 분류 태그 ---------- */
+.reaction-tag { font-size: 0.7rem; font-weight: 600; color: var(--muted); }
+.reaction-tag.divergent { color: var(--warning); font-weight: 700; }
 
 /* ---------- 보조 시사점 불릿 ---------- */
 .bullet-section { margin-bottom: 16px; }
@@ -403,4 +468,49 @@ tbody tr:hover { background: var(--surface-alt); }
 @media (max-width: 480px) {
   .rankbar-label { width: 78px; }
   .rankbar-value { width: 64px; font-size: 0.75rem; }
+}
+
+/* ---------- 오늘의 시그널: 규칙 기반 briefing area ---------- */
+.signals-section { padding: 20px 24px 0; }
+.signals-head { margin-bottom: 12px; }
+.signals-head h2 { margin: 0 0 3px; font-size: 0.95rem; font-weight: 700; color: var(--text); letter-spacing: -0.01em; }
+.signals-rows {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 12px;
+}
+.signal-card {
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--muted);
+  border-radius: 10px;
+  padding: 13px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.signal-card:hover { background: var(--surface-alt); }
+.signal-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.signal-category { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.03em; color: var(--muted); }
+.signal-priority { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.03em; padding: 2px 7px; border-radius: 4px; }
+.signal-priority.priority-signal { background: rgba(194, 58, 52, 0.1); color: var(--up); }
+.signal-priority.priority-watch { background: rgba(168, 113, 10, 0.12); color: var(--warning); }
+.signal-headline { font-size: 0.86rem; font-weight: 600; color: var(--text); line-height: 1.4; }
+.signal-metric { font-size: 1.15rem; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--text); }
+.signal-metric.up { color: var(--up); }
+.signal-metric.down { color: var(--down); }
+.signal-why { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.5; }
+.signal-why-tag { display: block; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.03em; color: var(--muted); margin-bottom: 2px; }
+.signal-reason { font-size: 0.68rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 7px; }
+
+.signal-card[data-tone="up"] { border-left-color: var(--up); }
+.signal-card[data-tone="down"] { border-left-color: var(--down); }
+.signal-card[data-tone="watch"] { border-left-color: var(--warning); }
+
+@media (max-width: 480px) {
+  .signals-section { padding: 16px 14px 0; }
 }
