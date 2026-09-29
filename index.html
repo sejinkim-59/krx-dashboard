@@ -15,8 +15,13 @@
 </head>
 <body>
   <header class="topbar">
-    <h1>📊 KRX 분석 대시보드</h1>
-    <div class="topbar-sub">국내·미국 증시 정보를 한눈에 — <span id="lastUpdated">불러오는 중...</span></div>
+    <div class="topbar-brand">
+      <span class="brand-mark">◆</span>
+      <div>
+        <h1>KRX 분석 대시보드</h1>
+        <div class="topbar-sub">국내·미국 증시 정보를 한눈에, 실시간 시사점까지 — <span id="lastUpdated">불러오는 중...</span></div>
+      </div>
+    </div>
   </header>
 
   <section id="hero" class="hero">
@@ -24,7 +29,7 @@
     <div id="heroBody"><p class="hero-empty">불러오는 중...</p></div>
   </section>
 
-  <main id="grid" class="grid"></main>
+  <main id="grid" class="grid-wrapper"></main>
 
   <div id="overlay" class="overlay" hidden>
     <div class="panel">
@@ -36,6 +41,7 @@
   <script src="js/vendor/chart.umd.js"></script>
   <script src="js/cards.js"></script>
   <script src="js/charts.js"></script>
+  <script src="js/insights.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

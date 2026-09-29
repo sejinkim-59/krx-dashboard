@@ -24,29 +24,59 @@ async function fetchJson(file) {
   return res.json();
 }
 
+function hexToRgba(hex, alpha) {
+  const h = hex.replace('#', '');
+  const r = parseInt(h.slice(0, 2), 16);
+  const g = parseInt(h.slice(2, 4), 16);
+  const b = parseInt(h.slice(4, 6), 16);
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+}
+
 function renderGrid() {
   grid.innerHTML = '';
-  for (const card of CARDS) {
-    const el = document.createElement('button');
-    el.className = `card status-${card.status}`;
-    el.innerHTML = `
-      <div class="card-icon">${card.icon}</div>
-      <div class="card-title">${card.title}</div>
-      <div class="card-desc">${card.desc}</div>
-      ${card.status === 'live' ? `<div class="card-preview" data-preview-for="${card.id}"><span class="cp-sub">불러오는 중…</span></div>` : ''}
-      <div class="card-footer">
-        <span class="tag tag-${card.tag.toLowerCase()}">${card.tag}</span>
-        ${card.status === 'pending' ? '<span class="tag tag-pending">준비중</span>' : ''}
+  const byCategory = new Map(CATEGORIES.map((c) => [c.id, []]));
+  for (const card of CARDS) (byCategory.get(card.category) || []).push(card);
+
+  CATEGORIES.forEach((cat, catIndex) => {
+    const cards = byCategory.get(cat.id);
+    if (!cards.length) return;
+    const section = document.createElement('section');
+    section.className = 'category-block';
+    section.style.setProperty('--cat-accent', cat.accent);
+    const liveCount = cards.filter((c) => c.status === 'live').length;
+    section.innerHTML = `
+      <div class="category-header">
+        <span class="category-dot"></span>
+        <h2>${cat.label}</h2>
+        <span class="category-count">${liveCount}/${cards.length} 라이브</span>
       </div>
+      <div class="grid"></div>
     `;
-    el.addEventListener('click', () => openCard(card));
-    grid.appendChild(el);
-  }
+    const inner = section.querySelector('.grid');
+    cards.forEach((card, i) => {
+      const el = document.createElement('button');
+      el.className = `card status-${card.status}`;
+      el.style.setProperty('--card-delay', `${(catIndex * 2 + i) * 25}ms`);
+      el.innerHTML = `
+        <div class="card-icon" style="background:${hexToRgba(cat.accent, 0.16)};color:${cat.accent}">${card.icon}</div>
+        <div class="card-title">${card.title}</div>
+        <div class="card-desc">${card.desc}</div>
+        ${card.status === 'live' ? `<div class="card-preview" data-preview-for="${card.id}"><span class="cp-sub">불러오는 중…</span></div>` : ''}
+        <div class="card-footer">
+          <span class="tag tag-${card.tag.toLowerCase()}">${card.tag}</span>
+          ${card.status === 'pending' ? '<span class="tag tag-pending">준비중</span>' : ''}
+        </div>
+      `;
+      el.addEventListener('click', () => openCard(card));
+      inner.appendChild(el);
+    });
+    grid.appendChild(section);
+  });
 }
 
 async function openCard(card) {
   overlay.hidden = false;
-  panelBody.innerHTML = `<h2>${card.icon} ${card.title}</h2><p class="panel-desc">${card.desc}</p><div class="panel-content">불러오는 중...</div>`;
+  panelBody.innerHTML = `<h2>${card.icon} ${card.title}</h2><p class="panel-desc">${card.desc}</p>${usageBox(card.usage)}<div class="panel-content">불러오는 중...</div>`;
   const contentEl = panelBody.querySelector('.panel-content');
 
   if (card.status === 'pending') {
@@ -85,7 +115,20 @@ async function loadHero() {
   try {
     const data = await fetchJson('us-market-brief.json');
     heroTime.textContent = new Date(data.updated_at).toLocaleString('ko-KR');
-    let html = `<p class="hero-summary">${data.summary}</p><div class="hero-tiles">`;
+    const up = data.instruments.filter((r) => r.change_pct > 0).length;
+    const down = data.instruments.filter((r) => r.change_pct < 0).length;
+    const flat = data.instruments.length - up - down;
+    const pct = (n) => (n / data.instruments.length) * 100;
+    let html = `<p class="hero-summary">${data.summary}</p>`;
+    html += `
+      <div class="sentiment-bar" title="상승 ${up} · 보합 ${flat} · 하락 ${down}">
+        <div class="sentiment-seg up" style="width:${pct(up)}%"></div>
+        <div class="sentiment-seg flat" style="width:${pct(flat)}%"></div>
+        <div class="sentiment-seg down" style="width:${pct(down)}%"></div>
+      </div>
+      <div class="sentiment-label">📊 시장 심리: 상승 ${up} · 보합 ${flat} · 하락 ${down} (총 ${data.instruments.length}개 지표)</div>
+    `;
+    html += '<div class="hero-tiles">';
     for (const r of data.instruments) {
       const cls = r.change_pct > 0 ? 'up' : r.change_pct < 0 ? 'down' : 'flat';
       const sign = r.change_pct > 0 ? '+' : '';
@@ -224,7 +267,7 @@ function highlightTile(label, value, cls) {
 
 async function renderNvdaEarnings(card, el) {
   const data = await fetchJson(card.dataFile);
-  let html = metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
+  let html = renderInsightBox(INSIGHT_BUILDERS[card.id]?.(data)) + metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
   html += '<div class="small-multiples">';
   const symbolEntries = Object.entries(data.symbols);
   symbolEntries.forEach(([symbol, info], i) => {
@@ -259,7 +302,7 @@ async function renderNvdaEarnings(card, el) {
 
 async function renderNewHighs(card, el) {
   const data = await fetchJson(card.dataFile);
-  let html = metaLine(data.updated_at) + `<p class="note">유니버스: ${data.universe} (${data.universe_size}종목) · ${data.window_days}일 신고가 · 총 ${data.count}개 종목</p>`;
+  let html = renderInsightBox(INSIGHT_BUILDERS[card.id]?.(data)) + metaLine(data.updated_at) + `<p class="note">유니버스: ${data.universe} (${data.universe_size}종목) · ${data.window_days}일 신고가 · 총 ${data.count}개 종목</p>`;
   if (!data.items.length) {
     html += '<p class="note">오늘 신고가 경신 종목이 없습니다.</p>';
     el.innerHTML = html;
@@ -278,7 +321,7 @@ async function renderNewHighs(card, el) {
 
 async function renderFuturesOi(card, el) {
   const data = await fetchJson(card.dataFile);
-  let html = metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
+  let html = renderInsightBox(INSIGHT_BUILDERS[card.id]?.(data)) + metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
   html += `<p class="note">기준일: ${fmtDateStr(data.data_date)} (전일: ${fmtDateStr(data.prev_data_date)}) · 미결제약정 상위 ${data.count}종목</p>`;
   html += '<div class="chart-box h-lg"><canvas id="oi-chart"></canvas></div>';
   html += '<p class="chart-legend-note">미결제약정 상위 15종목 (계약 수 기준).</p>';
@@ -293,7 +336,7 @@ async function renderFuturesOi(card, el) {
 
 async function renderFuturesBasis(card, el) {
   const data = await fetchJson(card.dataFile);
-  let html = metaLine(data.updated_at) + `<p class="note">${data.note} · 기준일: ${fmtDateStr(data.data_date)}</p>`;
+  let html = renderInsightBox(INSIGHT_BUILDERS[card.id]?.(data)) + metaLine(data.updated_at) + `<p class="note">${data.note} · 기준일: ${fmtDateStr(data.data_date)}</p>`;
   const combined = [...data.contango.slice(0, 10), ...data.backwardation.slice(0, 10).reverse()];
   html += '<div class="chart-box h-lg"><canvas id="basis-chart"></canvas></div>';
   html += '<p class="chart-legend-note">콘탱고(빨강, 선물&gt;현물)·백워데이션(파랑, 선물&lt;현물) 상위 10개씩.</p>';
@@ -312,7 +355,7 @@ async function renderFuturesBasis(card, el) {
 
 async function renderIndexCalendar(card, el) {
   const data = await fetchJson(card.dataFile);
-  let html = metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
+  let html = renderInsightBox(INSIGHT_BUILDERS[card.id]?.(data)) + metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
   html += '<table><thead><tr><th>지수</th><th>산출기관</th><th>주기</th><th>다음 예정</th><th>비고</th></tr></thead><tbody>';
   for (const idx of data.indices) {
     html += `<tr><td>${idx.name}</td><td>${idx.manager}</td><td>${idx.frequency}</td><td>${idx.next_occurrence}</td><td>${idx.note || '-'}</td></tr>`;
@@ -323,7 +366,7 @@ async function renderIndexCalendar(card, el) {
 
 async function renderEtfRebalance(card, el) {
   const data = await fetchJson(card.dataFile);
-  let html = metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
+  let html = renderInsightBox(INSIGHT_BUILDERS[card.id]?.(data)) + metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
   if (!data.has_baseline) {
     html += '<div class="pending-box"><div class="pending-label">📸 첫 스냅샷 수집 완료</div><p>다음 실행부터 전일 대비 변화가 감지됩니다.</p></div>';
     el.innerHTML = html;
@@ -351,7 +394,7 @@ async function renderEtfRebalance(card, el) {
 
 async function renderShortSelling(card, el) {
   const data = await fetchJson(card.dataFile);
-  let html = metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
+  let html = renderInsightBox(INSIGHT_BUILDERS[card.id]?.(data)) + metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
   html += `<p class="note">기준일: ${data.trade_date} · 유니버스 ${data.universe_size}종목</p>`;
   if (!data.items.length) {
     html += '<p class="note">데이터가 없습니다.</p>';
@@ -371,7 +414,7 @@ async function renderShortSelling(card, el) {
 
 async function renderMarketAlerts(card, el) {
   const data = await fetchJson(card.dataFile);
-  let html = metaLine(data.updated_at) + `<p class="note">${data.note} (${data.range.from} ~ ${data.range.to})</p>`;
+  let html = renderInsightBox(INSIGHT_BUILDERS[card.id]?.(data)) + metaLine(data.updated_at) + `<p class="note">${data.note} (${data.range.from} ~ ${data.range.to})</p>`;
   html += '<div class="highlight-row">';
   for (const cat of Object.values(data.categories)) {
     html += highlightTile(cat.label, `${cat.count}건`);
@@ -394,7 +437,7 @@ async function renderMarketAlerts(card, el) {
 
 async function renderInvestorFlow(card, el) {
   const data = await fetchJson(card.dataFile);
-  let html = metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
+  let html = renderInsightBox(INSIGHT_BUILDERS[card.id]?.(data)) + metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
   html += `<p class="note">최근 3거래일: ${data.recent_window.strtDd}~${data.recent_window.endDd} · 직전 5거래일: ${data.prior_window.strtDd}~${data.prior_window.endDd}</p>`;
   const investorEntries = Object.entries(data.investors);
   html += '<div class="small-multiples">';
@@ -431,7 +474,7 @@ function pctSpanValue(n) {
 
 async function renderUsEarnings(card, el) {
   const data = await fetchJson(card.dataFile);
-  let html = metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
+  let html = renderInsightBox(INSIGHT_BUILDERS[card.id]?.(data)) + metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
   const withReaction = data.items.filter((it) => it.reaction && it.reaction['D+1'] != null);
   if (withReaction.length) {
     html += '<div class="chart-box h-lg"><canvas id="usearn-chart"></canvas></div>';
@@ -455,7 +498,7 @@ async function renderUsEarnings(card, el) {
 
 async function renderKrEarnings(card, el) {
   const data = await fetchJson(card.dataFile);
-  let html = metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
+  let html = renderInsightBox(INSIGHT_BUILDERS[card.id]?.(data)) + metaLine(data.updated_at) + `<p class="note">${data.note}</p>`;
   if (!data.items.length) {
     html += '<p class="note">해당 기간 실적 공시가 없습니다.</p>';
     el.innerHTML = html;
@@ -485,7 +528,7 @@ async function renderKrEarnings(card, el) {
 
 async function renderMarketBrief(card, el) {
   const data = await fetchJson(card.dataFile);
-  let html = metaLine(data.updated_at) + `<div class="summary-box">${data.summary}</div>`;
+  let html = renderInsightBox(INSIGHT_BUILDERS[card.id]?.(data)) + metaLine(data.updated_at) + `<div class="summary-box">${data.summary}</div>`;
   html += '<div class="highlight-row">';
   for (const r of data.instruments) {
     const cls = r.change_pct > 0 ? 'up' : r.change_pct < 0 ? 'down' : 'flat';
@@ -502,7 +545,7 @@ async function renderMarketBrief(card, el) {
 
 async function renderCapitalIncrease(card, el) {
   const [paid, free] = await Promise.all(card.dataFile.map(fetchJson));
-  let html = metaLine(paid.updated_at);
+  let html = renderInsightBox(INSIGHT_BUILDERS[card.id]?.(paid, free)) + metaLine(paid.updated_at);
   html += `<h3>유상증자 (${paid.items.length}건, 최근 ${paid.range.from}~${paid.range.to})</h3>`;
   html += '<p class="note">※ DART API 특성상 배정기준일은 주주배정 방식일 때만 제공됩니다. 제3자배정·일반공모는 원문 링크를 참고하세요.</p>';
   html += renderTable(paid.items, [
@@ -519,7 +562,7 @@ async function renderCapitalIncrease(card, el) {
 
 async function renderConvertibleBond(card, el) {
   const data = await fetchJson(card.dataFile);
-  let html = metaLine(data.updated_at) + `<p class="note">최근 ${data.range.from}~${data.range.to} 전환사채 발행결정 공시 ${data.items.length}건</p>`;
+  let html = renderInsightBox(INSIGHT_BUILDERS[card.id]?.(data)) + metaLine(data.updated_at) + `<p class="note">최근 ${data.range.from}~${data.range.to} 전환사채 발행결정 공시 ${data.items.length}건</p>`;
   html += renderTable(data.items, [
     ['corp_name', '종목명'], ['stock_code', '코드'], ['rcept_dt', '접수일', fmtDateStr],
     ['conversion_price', '전환가액'], ['conversion_start', '전환청구 시작'], ['conversion_end', '전환청구 종료'], ['maturity_date', '만기일'],
@@ -529,7 +572,7 @@ async function renderConvertibleBond(card, el) {
 
 async function renderTreasuryStock(card, el) {
   const data = await fetchJson(card.dataFile);
-  let html = metaLine(data.updated_at) + `<p class="note">최근 ${data.range.from}~${data.range.to} 자사주 취득/처분 결정 공시 ${data.items.length}건</p>`;
+  let html = renderInsightBox(INSIGHT_BUILDERS[card.id]?.(data)) + metaLine(data.updated_at) + `<p class="note">최근 ${data.range.from}~${data.range.to} 자사주 취득/처분 결정 공시 ${data.items.length}건</p>`;
   html += renderTable(data.items, [
     ['corp_name', '종목명'], ['stock_code', '코드'], ['type', '구분'], ['rcept_dt', '접수일', fmtDateStr],
     ['period_start', '기간 시작'], ['period_end', '기간 종료'], ['purpose', '목적'],
@@ -539,7 +582,7 @@ async function renderTreasuryStock(card, el) {
 
 async function renderInsiderPlan(card, el) {
   const data = await fetchJson(card.dataFile);
-  let html = metaLine(data.updated_at) + `<p class="note">최근 ${data.range.from}~${data.range.to} 임원·주요주주 거래계획보고서 ${data.items.length}건</p>`;
+  let html = renderInsightBox(INSIGHT_BUILDERS[card.id]?.(data)) + metaLine(data.updated_at) + `<p class="note">최근 ${data.range.from}~${data.range.to} 임원·주요주주 거래계획보고서 ${data.items.length}건</p>`;
   html += renderTable(data.items, [
     ['corp_name', '종목명'], ['stock_code', '코드'], ['flr_nm', '제출인'], ['rcept_dt', '접수일', fmtDateStr],
   ], (row) => `<a href="${row.dart_url}" target="_blank" rel="noopener">DART 원문</a>`);
