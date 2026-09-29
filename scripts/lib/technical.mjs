@@ -64,6 +64,69 @@ function distanceFromHighPct(bars, period) {
   return ((close - highest) / highest) * 100;
 }
 
+function smaSeries(values, period) {
+  const out = new Array(values.length).fill(null);
+  let sum = 0;
+  for (let i = 0; i < values.length; i++) {
+    sum += values[i];
+    if (i >= period) sum -= values[i - period];
+    if (i >= period - 1) out[i] = sum / period;
+  }
+  return out;
+}
+
+/**
+ * a가 b를 아래→위로 넘은 가장 최근 시점. 현재도 a > b 상태가 유지될 때만 유효한 변화로 본다
+ * (돌파 후 다시 이탈했으면 그 변화는 무효).
+ */
+function mostRecentCrossUp(a, b, bars) {
+  const last = bars.length - 1;
+  if (a[last] == null || b[last] == null || !(a[last] > b[last])) return null;
+  for (let i = last; i >= 1; i--) {
+    if (a[i] == null || b[i] == null || a[i - 1] == null || b[i - 1] == null) return null;
+    if (a[i - 1] <= b[i - 1] && a[i] > b[i]) {
+      return { previousState: 'below', currentState: 'above', changeDate: bars[i].time, daysSinceChange: last - i };
+    }
+  }
+  return null;
+}
+
+/** 직전 20봉 평균 대비 ratio 이상 거래량이 "새로" 나타난 가장 최근 날 (전날은 기준 미달이어야 함). */
+function mostRecentVolumeSpike(bars, ratio) {
+  const last = bars.length - 1;
+  const ratioAt = (i) => {
+    if (i < 20) return null;
+    let s = 0;
+    for (let j = i - 20; j < i; j++) s += bars[j].volume;
+    const avg = s / 20;
+    return avg > 0 ? bars[i].volume / avg : null;
+  };
+  for (let i = last; i >= 21; i--) {
+    const r = ratioAt(i);
+    if (r != null && r >= ratio) {
+      const prev = ratioAt(i - 1);
+      if (prev != null && prev < ratio) {
+        return { previousState: 'normal', currentState: `${r.toFixed(1)}x`, changeDate: bars[i].time, daysSinceChange: last - i, ratio: r };
+      }
+    }
+  }
+  return null;
+}
+
+/** State가 아니라 Change를 찾는다. 각 이벤트: {previousState,currentState,changeDate,daysSinceChange} 또는 null. */
+export function detectChangeEvents(bars, volumeSpikeRatio = 2.0) {
+  if (!bars || bars.length < 25) return null;
+  const closes = bars.map((b) => b.close);
+  const ma20 = smaSeries(closes, 20);
+  const ma60 = bars.length >= 62 ? smaSeries(closes, 60) : null;
+  return {
+    ma20CrossAboveMa60: ma60 ? mostRecentCrossUp(ma20, ma60, bars) : null,
+    ma20CrossAboveMa60Evaluable: !!ma60,
+    priceCrossAboveMa20: mostRecentCrossUp(closes, ma20, bars),
+    volumeSpike: mostRecentVolumeSpike(bars, volumeSpikeRatio),
+  };
+}
+
 /** bars: [{time,open,high,low,close,volume}] 과거->최신 순. week52High: kis-quotes의 실제 52주 최고가(있으면 우선 사용). */
 export function computeFeatures(bars, week52High) {
   if (!bars || bars.length < 6) return null;

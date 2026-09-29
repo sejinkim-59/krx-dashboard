@@ -1,116 +1,193 @@
-// AI Stock Selection Engine v0.1 — 모든 가중치/임계값을 한 곳에서 관리한다 (하드코딩 금지).
-// 값을 바꾸고 싶으면 이 파일만 수정하면 된다. 엔진 코드는 이 설정을 참조만 한다.
+// AI Stock Selection Engine v0.2 — 모든 가중치/임계값을 한 곳에서 관리한다.
+// 목적: "현재 점수가 높은 좋은 종목"이 아니라
+//       NEW INFORMATION + CHANGE + CATALYST + CONFIRMATION 이 있는 종목을 조기에 발견한다.
 
 export const UNIVERSE_FILTER = {
-  minAvgTradingValue20D: 5_000_000_000, // 20일 평균 거래대금 최소 50억원
-  excludeStatusFlags: ['halt', 'warning_issue', 'management_issue'], // market-alerts 등에서 확인되는 경우만 적용
+  minAvgTradingValue20D: 5_000_000_000,
 };
 
-// Factor 가중치 (합계 100). 데이터가 없는 Factor는 0점 처리하지 않고
-// "Available Weight" 기준으로 재정규화한다 (섹션 10 참고).
+// ---- Factor 가중치 (합계 100). Global Read-through는 독립 Factor에서 제거 → Catalyst/Context로만 사용 ----
 export const FACTOR_WEIGHTS = {
-  technical: 25,
-  flow: 20,
-  earningsRevision: 20, // 현재 데이터 Provider 없음 — 항상 MISSING_DATA
-  corporateEvent: 15,
+  novelty: 25,
+  catalyst: 20, // = CATALYST_WEIGHTS.timing + CATALYST_WEIGHTS.corporate
+  technical: 15,
+  flow: 15,
+  earningsRevision: 15, // 컨센서스/Revision Provider 없음 — 항상 MISSING_DATA
   relativeStrength: 10,
-  globalReadThrough: 10,
 };
 
-// ---- Technical Score 세부 규칙 (raw point 합산 → 0~25 정규화) ----
+// Catalyst 20점을 "언제 확인 가능한가(timing)"와 "경제적 크기(corporate)"로 나눈다.
+// 둘은 서로 다른 정보이므로 Independent Confirmation에서도 별개 그룹(Catalyst / Corporate)으로 센다.
+export const CATALYST_WEIGHTS = { timing: 12, corporate: 8 };
+
+// ---- Novelty: 상태(State)가 아니라 최근 처음 발생한 변화(Change)를 평가 ----
+// 점수 = basePoints × decay(발생 후 경과 거래일)
+export const NOVELTY_RULES = [
+  { id: 'ma20CrossAboveMa60', points: 10, label: 'MA20이 MA60 상향돌파' },
+  { id: 'priceCrossAboveMa20', points: 6, label: '주가 MA20 회복' },
+  { id: 'volumeSpike', points: 5, label: '거래량 20일 평균 대비 급증' },
+  { id: 'flowReversal', points: 4, label: '외국인/기관 수급 매수 전환 (가격·거래량 확인)' },
+];
+export const NOVELTY_DECAY = [
+  { maxDays: 2, factor: 1.0, band: 'high' },
+  { maxDays: 5, factor: 0.6, band: 'medium' },
+  { maxDays: 10, factor: 0.3, band: 'low' },
+]; // 그 이후 = 0 (little/no novelty)
+export const VOLUME_SPIKE_RATIO = 2.0;
+
+// ---- Catalyst Timing: 향후 ~20거래일 안에 확인 가능한 이벤트 (실제 데이터로 확인 가능한 것만) ----
+// 점수는 "투자에 긍정적"인 timing만 준다. CB 전환 개시는 잠재 매도물량이라 Catalyst 목록/Risk에만 표시하고 점수 없음.
+export const CATALYST_TIMING_RULES = [
+  { id: 'freeIncreaseRecordNear', points: 4, label: '무상증자 배정기준일·신주상장 임박' },
+  { id: 'buybackInProgress', points: 3, label: '자사주 취득 기간 진행 중' },
+  { id: 'earningsReactionRecent', points: 3, label: '최근 실적발표 후 양(+)의 가격 반응' },
+  { id: 'etfInclusion', points: 3, label: '국내 섹터/테마 ETF 신규 편입·비중 확대' },
+  { id: 'globalPeerEarnings', points: 2, label: '직접 연결된 해외 Peer 실적 서프라이즈' },
+];
+export const CATALYST_WINDOW_BUSINESS_DAYS = 20;
+export const EARNINGS_RECENT_BUSINESS_DAYS = 10;
+export const EARNINGS_REACTION_MIN_PCT = 3;
+export const NEW_FILING_BUSINESS_DAYS = 5; // 이 기간 안에 접수된 공시 = "새 정보"
+export const PEER_EARNINGS_RECENT_BUSINESS_DAYS = 10;
+export const PEER_SURPRISE_MIN_PCT = 5;
+// 현재 종목 단위 Provider가 없어 탐지하지 않는 Catalyst 유형 — 지어내지 않고 명시만 한다.
+export const CATALYST_NOT_CONNECTED = [
+  'Investor Relations 일정',
+  'Large Contract(단일판매·공급계약)',
+  'Index Rebalancing (정기변경 월 주기만 수집, 종목별 편입·편출 예고 없음)',
+  'Major Customer Event',
+  'Policy Event',
+  'Share Cancellation(소각)',
+];
+
+// ---- Corporate: 공시 존재가 아니라 경제적 크기(비율)로만 점수화 ----
+export const CORPORATE_RULES = [
+  { id: 'largeFreeDistribution', points: 5, label: '무상증자 배정비율 큼' },
+  { id: 'dilutionSmall', points: 3, label: '유상증자 희석비율 제한적' },
+];
+export const EVENT_THRESHOLDS = {
+  largeFreeRatio: 0.3, // 1주당 배정주식수
+  dilutionNotable: 0.03, // 신주 / 기존 발행주식수 — 이 이상이면 Risk, 미만이면 제한적
+};
+
+// ---- Technical Confirmation (상태 확인용 — 주 점수원이 아니다) ----
 export const TECHNICAL_RULES = [
   { id: 'close_above_ma20', points: 2, label: 'Close > MA20' },
-  { id: 'ma20_above_ma60', points: 3, label: 'MA20 > MA60' },
-  { id: 'ma60_above_ma120', points: 3, label: 'MA60 > MA120' },
-  { id: 'ma20_slope_positive', points: 3, label: 'MA20 상승 기울기' },
-  { id: 'ma60_slope_positive', points: 2, label: 'MA60 상승 기울기' },
-  { id: 'near_20d_high', points: 2, label: '20일 신고가 근접(3% 이내)' },
-  { id: 'breakout_20d', points: 3, label: '20일 신고가 돌파' },
-  { id: 'near_52w_high', points: 2, label: '52주 신고가 근접(5% 이내)' },
-  { id: 'volume_ratio_1_5', points: 2, label: '거래량 20일 평균 대비 1.5배 이상' },
-  { id: 'volume_ratio_2_0', points: 1, label: '거래량 20일 평균 대비 2.0배 이상 추가' },
-  { id: 'market_rs_20d_positive', points: 2, label: '20일 시장 대비 상대강도 양(+)' },
-  { id: 'sector_rs_20d_positive', points: 2, label: '20일 섹터 대비 상대강도 양(+)' },
+  { id: 'ma20_above_ma60', points: 2, label: 'MA20 > MA60' },
+  { id: 'ma20_slope_positive', points: 2, label: 'MA20 상승 기울기' },
+  { id: 'near_20d_high', points: 2, label: '20일 고점 3% 이내' },
+  { id: 'volume_ratio_1_5', points: 2, label: '거래량 20일 평균 1.5배 이상' },
 ];
-export const TECHNICAL_MAX_RAW = TECHNICAL_RULES.reduce((s, r) => s + r.points, 0); // 25
 
-// ---- Relative Strength 세부 규칙 (raw point → 0~10 정규화) ----
-export const RS_RULES = [
-  { id: 'stock_20d_vs_market_positive', points: 2 },
-  { id: 'stock_60d_vs_market_positive', points: 2 },
-  { id: 'stock_20d_vs_sector_positive', points: 2 },
-  { id: 'sector_20d_vs_market_positive', points: 2 },
-  { id: 'sector_breadth_strong', points: 2 }, // 섹터 내 20일 상대강도 양(+) 종목 비율 >= 50%
-];
-export const RS_MAX_RAW = RS_RULES.reduce((s, r) => s + r.points, 0); // 10
-
-// ---- Flow Score 세부 규칙 (raw point → 0~20 정규화). ratio 계열은 tradingValue/marketCap을
-// 아는 종목(KIS 관심종목)에서만 applicable — 모르면 그 규칙만 분모에서 빠진다. ----
+// ---- Normalized Flow: 절대금액 금지, 시총/거래대금 대비 비율 + Universe 내 percentile ----
 export const FLOW_RULES = [
-  { id: 'flow_reversal_bullish', points: 8, label: '수급 매도→매수 전환' },
-  { id: 'flow_reversal_bearish', points: 4, label: '수급 매수→매도 전환 (주의)' },
-  { id: 'flow_accumulation', points: 4, label: '투자주체 순매수 상위 랭크' },
-  { id: 'net_buy_to_trading_value_significant', points: 4, label: '순매수/거래대금 비중 유의미' },
-  { id: 'net_buy_to_market_cap_significant', points: 4, label: '순매수/시가총액 비중 유의미' },
+  { id: 'reversalConfirmedBullish', points: 7, label: '외국인/기관 매수 전환 + 가격·거래량 확인' },
+  { id: 'intensityTopPercentile', points: 5, label: '시총 대비 순매수 강도 상위 percentile' },
+  { id: 'accumulationConfirmed', points: 3, label: '외국인/기관 순매수 상위 + 가격 하락 없음' },
 ];
-export const FLOW_MAX_RAW = 20; // bullish reversal + accumulation + 두 ratio 규칙 기준 상한
 export const FLOW_THRESHOLDS = {
-  netBuyToTradingValueSignificant: 0.05, // 순매수/거래대금 5% 이상이면 유의미
-  netBuyToMarketCapSignificant: 0.001, // 순매수/시가총액 0.1% 이상
-  reversalMinSwingWon: 1_000_000_000, // 전환 신호 최소 변화폭 10억원
-  accumulationRank: 10, // top_net_buy 상위 10위 이내면 accumulation 신호
+  topPercentile: 90, // percentile >= 90 → 상위 10%
+  accumulationRank: 20,
+  priceConfirmReturn5D: 0, // 매수 전환이면 5일 수익률 > 0 이어야 확인
+  volumeConfirmRatio: 1.3,
 };
+// 개인(8000) 수급은 단독으로 방향성을 부여하지 않는다 (섹션 5)
+export const DIRECTIONAL_INVESTORS = { 9000: '외국인', 7050: '기관합계', 6000: '연기금 등' };
+export const RETAIL_INVESTOR_CODE = '8000';
 
-// ---- Corporate/Event Score: 경제적 규모를 계산할 수 있는 사건만 점수화한다 (섹션 7).
-// 자사주 취득금액·CB 발행금액 등은 현재 DART 수집 필드에 금액이 없어 "정보성 표시"로만
-// 다루고 점수에는 반영하지 않는다 — 존재만으로 점수를 주지 않는다는 원칙을 지키기 위함. ----
-export const CORPORATE_RULES = [
-  { id: 'large_free_distribution', points: 8, label: '무상증자 배정비율 큼 (유동성 개선 Catalyst)' },
-  { id: 'dilution_ratio_significant', points: 7, label: '유상증자 희석비율 유의미 (Risk)' },
+// ---- Relative Strength ----
+export const RS_RULES = [
+  { id: 'stock_20d_vs_market_positive', points: 3, label: '20일 시장 대비 초과수익' },
+  { id: 'stock_20d_vs_sector_positive', points: 3, label: '20일 섹터 대비 초과수익' },
+  { id: 'rs_improving', points: 4, label: '상대강도 개선 (5일 > 20일 초과수익)' },
 ];
-export const CORPORATE_MAX_RAW = CORPORATE_RULES.reduce((s, r) => s + r.points, 0); // 15
-export const EVENT_THRESHOLDS = {
-  buybackToMarketCapNotable: 0.005, // 자사주 취득 / 시총 0.5% 이상이면 유의미 (금액 데이터 확보 시 사용)
-  dilutionToSharesOutstandingNotable: 0.03, // 신주 / 기존 발행주식수 3% 이상이면 유의미
-  largeFreeRatio: 0.3, // 무상증자 1주당 배정비율
+
+// ---- Priced-in Check (단독 판단 아님 — Context / Discovery Penalty) ----
+export const PRICED_IN = {
+  signalRunUp: 10, // 변화 발생일 이후 +10% 이상 = 이미 일부 반영
+  signalRunUpLarge: 25, // 변화 발생일 이후 +25% 이상 = 상당 부분 반영
+  runUp20D: 15,
+  runUp60D: 30,
+  nearHighPct: -5, // 52주 고점 5% 이내
+  limitedMove: 5, // 변화 이후(없으면 20일) 수익률 절대값이 이 이하 = "아직 제한적 반응"
 };
 
-// ---- Data Coverage 규칙 (섹션 11) ----
+// ---- Crowding / Obviousness Penalty — Discovery·Event·Inflection Ranking에만 적용 (Market Leader 제외) ----
+export const CROWDING_PENALTY = {
+  signalRunUp: 6, // 변화 발생 후 이미 +10% 이상
+  runUp20D: 8,
+  nearHigh: 5,
+  staleNoveltyOnly: 4, // novelty 이벤트가 모두 low band 이하
+};
+
+// ---- Independent Confirmation (섹션 12) ----
+// Factor Group(Novelty/Technical/Flow/Earnings/Corporate/RS/Catalyst)을 센다. 한 Factor 안의 규칙 여러 개는 1개.
+// 추가로 "데이터 원천"(가격 / 수급 / 이벤트)도 센다 — 가격 계열(Novelty·Technical·RS)만으로 3개를 채워
+// Confluence가 되는 것을 막기 위해, 모든 Pick은 서로 다른 원천 2개 이상을 요구한다.
+export const CONFIRMATION_RULES = {
+  technicalMinRatio: 0.6, // 해당 Factor 만점 대비 이 비율 이상일 때만 "확인"으로 인정
+  rsMinRatio: 0.6,
+  flowMinRatio: 0.3,
+  noveltyBands: ['high', 'medium'], // 5거래일 이내 변화만 Confirmation으로 인정
+  minSources: 2,
+};
+export const FACTOR_SOURCE = {
+  novelty: 'price', technical: 'price', relativeStrength: 'price',
+  flow: 'flow',
+  catalyst: 'event', corporate: 'event', earningsRevision: 'event',
+};
+
+// ---- Data Coverage ----
 export const COVERAGE_RULES = {
-  minToSelect: 60, // 이 미만이면 Top 5 선정 금지
-  lowConfidenceBelow: 80, // 60~80% Low/Medium Confidence, 80%+ Normal
+  minForLeader: 60,
+  minForDiscovery: 35, // Discovery는 데이터가 적은 중소형주가 대상이므로 기준을 낮추되 반드시 표시
+  lowConfidenceBelow: 70,
 };
 
 // ---- Risk Engine ----
 export const RISK_THRESHOLDS = {
-  shortRatioSpike: 30, // 공매도 비중 %
-  extremeReturn5D: 15, // % — 최근 5일 수익률 절대값이 이보다 크면 과열 경계
-  atrRatioExtreme: 0.08, // ATR14 / Close 가 이보다 크면 변동성 과다
+  shortRatioSpike: 30,
+  extremeReturn5D: 15,
+  atrRatioExtreme: 0.08,
 };
 
-// ---- 시장 국면별 전략 우선순위 (Market Desk가 생성, Screening 가중치에 반영) ----
-export const STRATEGY_CONFIG = {
-  'Risk-off': { preferred: ['FLOW_REVERSAL', 'EVENT_DRIVEN', 'BUYBACK'], avoid: ['MOMENTUM'] },
-  Neutral: { preferred: ['FLOW_REVERSAL', 'CONFLUENCE'], avoid: [] },
-  'Risk-on': { preferred: ['MOMENTUM', 'CONFLUENCE'], avoid: [] },
+// ---- Discovery / Daily Output 구조 ----
+export const DISCOVERY_CONFIG = {
+  topMarketCapExclusion: 30,
+  // 2단계 Discovery: ① 가격 데이터 없이 1,000+ 종목을 수급/공시 신호로 저비용 pre-screen
+  //                 ② 상위 N개만 KIS 시세·OHLCV를 추가 조회 (전체 Universe를 다 조회하지 않는다)
+  enrichLimit: 60,
+  // 수급 신호가 약해도 긍정적 이벤트(자사주 취득·무상증자·양(+) 실적반응)가 있는 종목은 가격을 확보해야
+  // Event-Driven 평가(WHY NOT PRICED)가 가능하다 → 조회 예산 일부를 이벤트 종목에 예약.
+  enrichReservedForEvents: 20,
+  enrichDelayMs: 400,
+  excludeNamePattern: /스팩|제\d+호|리츠|우$|우B$|우\(전환\)$|ETN|ETF/,
 };
-
-// ---- Candidate Selection 규칙 (섹션 14) ----
+export const DAILY_SLOTS = [
+  { bucket: 'MARKET_LEADER', count: 1 },
+  { bucket: 'DISCOVERY', count: 2 },
+  { bucket: 'EVENT_DRIVEN', count: 1 },
+  { bucket: 'INFLECTION', count: 1 },
+];
 export const SELECTION_RULES = {
   minIndependentConfirmation: 2,
+  confluenceConfirmation: 3,
   topCandidateCount: 20,
-  finalPickCount: 5,
-  maxSameStrategyInFinal: 2, // Strategy Diversity — 같은 Setup이 Top5에 3개 이상 몰리지 않게
+  inflectionMaxDist52WHigh: -20, // 52주 고점 대비 -20% 이하에서 새 반전 신호
 };
 
-// ---- Global Read-through: Mapping이 존재하는 경우만 Signal 생성 (섹션 9) ----
-// 임의로 "해외 종목 상승 -> 국내 아무 종목"으로 연결하지 않는다. 실제로 추적 중인 연결고리만 등록.
+// ---- 시장 국면별 선호 (Market Desk 표시용) ----
+export const STRATEGY_CONFIG = {
+  'Risk-off': { preferred: ['EVENT_DRIVEN', 'INFLECTION'], avoid: ['MOMENTUM'] },
+  Neutral: { preferred: ['DISCOVERY', 'EVENT_DRIVEN'], avoid: [] },
+  'Risk-on': { preferred: ['DISCOVERY', 'MARKET_LEADER'], avoid: [] },
+};
+
+// ---- Global Peer: 독립 Factor 아님. 매핑된 해외 Peer가 최근 실제로 실적을 발표했을 때만 Catalyst로 사용 ----
+// 일반론적 연결("AI 수요 → 반도체 전부")은 등록하지 않는다. 직접 공급/경쟁 관계만.
 export const GLOBAL_MAPPING = [
-  {
-    globalSymbol: 'NVDA',
-    globalKpi: 'Data Center Revenue / 실적 반응',
-    chain: 'AI 가속기 수요 → HBM 수요',
-    koreanSector: '반도체',
-    exposureSymbols: ['000660', '005930'], // SK하이닉스, 삼성전자
-  },
+  { globalSymbol: 'NVDA', relation: 'HBM 고객사', exposureSymbols: ['000660'] },
+  { globalSymbol: 'MU', relation: '메모리 직접 경쟁사', exposureSymbols: ['000660', '005930'] },
+  { globalSymbol: 'TSLA', relation: '배터리 고객사', exposureSymbols: ['373220'] },
+  { globalSymbol: 'AAPL', relation: '카메라모듈·기판 고객사', exposureSymbols: ['011070', '009150'] },
 ];

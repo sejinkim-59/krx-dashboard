@@ -1,30 +1,37 @@
-// AI Stock Selection Engine v0.1
-// Rule Engine -> Candidate Selection -> Risk Filter -> Ranking. LLM은 이 결과를 바꾸지 않는다.
-// 모든 점수는 "Available Weight" 기준으로 정규화한다: 데이터가 없는 Factor/규칙은 0점이 아니라
-// 분모(만점)에서 제외한다. 그래서 Data Coverage를 반드시 함께 보여준다 (섹션 10~11).
+// AI Stock Selection Engine v0.2
+// 목적: "좋은 회사"가 아니라 NEW INFORMATION + CHANGE + CATALYST + CONFIRMATION 이 있는 종목을 조기에 발견.
+// 판단은 전부 규칙 엔진. LLM은 이 결과를 바꾸지 않는다.
+// 점수는 Available Weight 정규화(데이터 없는 Factor는 0점이 아니라 분모 제외) + Data Coverage 별도 표시.
 
-import { computeFeatures } from './technical.mjs';
+import { computeFeatures, detectChangeEvents } from './technical.mjs';
+import { evalNovelty } from './novelty.mjs';
+import { evalFlow, buildFlowIntensity } from './flow.mjs';
+import { evalCatalystTiming, evalCorporate } from './catalyst.mjs';
+import { evalPricedIn, whyNotPricedText, crowdingPenalty } from './context.mjs';
+import { scoreRules, unavailable, sgn } from './scoring-utils.mjs';
 import {
-  FACTOR_WEIGHTS, TECHNICAL_RULES, TECHNICAL_MAX_RAW, RS_RULES, RS_MAX_RAW,
-  FLOW_RULES, FLOW_MAX_RAW, FLOW_THRESHOLDS, CORPORATE_RULES, CORPORATE_MAX_RAW,
-  EVENT_THRESHOLDS, COVERAGE_RULES, RISK_THRESHOLDS, STRATEGY_CONFIG, SELECTION_RULES,
-  GLOBAL_MAPPING,
+  FACTOR_WEIGHTS, TECHNICAL_RULES, RS_RULES, VOLUME_SPIKE_RATIO, UNIVERSE_FILTER, COVERAGE_RULES,
+  RISK_THRESHOLDS, DISCOVERY_CONFIG, DAILY_SLOTS, SELECTION_RULES, CONFIRMATION_RULES, FACTOR_SOURCE,
+  CATALYST_NOT_CONNECTED,
 } from './selection-config.mjs';
 
-const sgn = (n) => (n > 0 ? '+' : '');
-function fmtWon(n) {
-  if (n == null) return '-';
-  const sign = n > 0 ? '+' : n < 0 ? '-' : '';
-  const abs = Math.abs(n);
-  if (abs >= 1e12) return `${sign}${(abs / 1e12).toFixed(2)}조`;
-  if (abs >= 1e8) return `${sign}${Math.round(abs / 1e8).toLocaleString()}억`;
-  if (abs >= 1e4) return `${sign}${Math.round(abs / 1e4).toLocaleString()}만`;
-  return `${sign}${abs.toLocaleString()}`;
-}
+const r1 = (n) => (n == null ? null : Math.round(n * 10) / 10);
+const won = (n) => (n == null ? '-' : `${Math.round(n).toLocaleString()}원`);
 
-/* ---------------- 1. Universe ---------------- */
+export const BUCKET_LABEL = {
+  MARKET_LEADER: 'Market Leader',
+  DISCOVERY: 'Discovery',
+  EVENT_DRIVEN: 'Event-Driven',
+  INFLECTION: 'Inflection',
+};
+const GROUP_LABEL = {
+  novelty: 'Novelty', technical: 'Technical', flow: 'Flow', earningsRevision: 'Earnings',
+  corporate: 'Corporate', relativeStrength: 'Relative Strength', catalyst: 'Catalyst',
+};
+
+/* ---------------- Universe ---------------- */
 export function buildUniverse(d) {
-  const universe = new Map(); // code -> {name, hasQuote}
+  const universe = new Map();
   const add = (code, name) => { if (code && name && !universe.has(code)) universe.set(code, name); };
   for (const q of d.kisQuotes?.items || []) add(q.symbol, q.name);
   for (const it of d.shortSelling?.items || []) add(it.symbol, it.name);
@@ -33,429 +40,470 @@ export function buildUniverse(d) {
     for (const t of inv.top_net_buy || []) add(t.symbol, t.name);
     for (const t of inv.top_net_sell || []) add(t.symbol, t.name);
   }
-  for (const file of [d.capitalIncreasePaid, d.capitalIncreaseFree, d.convertibleBond, d.treasuryStock, d.insiderPlan]) {
+  for (const file of [d.capitalIncreasePaid, d.capitalIncreaseFree, d.convertibleBond, d.treasuryStock, d.insiderPlan, d.krEarnings]) {
     for (const it of file?.items || []) add(it.stock_code, it.corp_name);
   }
-  for (const it of d.krEarnings?.items || []) add(it.stock_code, it.corp_name);
   return universe;
 }
 
-/* ---------------- 2. Feature Store (Technical) ---------------- */
-export function buildFeatureStore(d) {
-  const features = new Map(); // symbol -> features
+/* ---------------- Feature Store (가격 데이터가 있는 종목만) ---------------- */
+function buildFeatureStore(d) {
+  const store = new Map();
   for (const q of d.kisQuotes?.items || []) {
     const bars = d.kisOhlcv?.symbols?.[q.symbol];
-    if (!bars) continue;
-    const f = computeFeatures(bars, q.week52High);
-    if (f) features.set(q.symbol, { ...f, sector: q.sector, name: q.name, quote: q });
+    if (!bars?.length) continue;
+    const features = computeFeatures(bars, q.week52High);
+    if (!features) continue;
+    const last20 = bars.slice(-20);
+    features.avgTradingValue20D = last20.length === 20 ? last20.reduce((s, b) => s + b.close * b.volume, 0) / 20 : null;
+    store.set(q.symbol, { quote: q, bars, features, changeEvents: detectChangeEvents(bars, VOLUME_SPIKE_RATIO) });
   }
-  return features;
+  return store;
 }
 
-/* ---------------- 3. Market / Sector Proxy (equal-weight — 공식 KOSPI/KOSDAQ 지수 아님, 방법론 명시) ---------------- */
-export function computeProxies(features) {
-  const all20 = [], all60 = [];
+/** 동일가중 시장/섹터 proxy — 공식 지수 아님(methodologyNote에 명시). 섹터는 3종목 이상일 때만. */
+function computeProxies(store) {
+  const avg = (a) => (a.length ? a.reduce((x, y) => x + y, 0) / a.length : null);
+  const pick = (k) => [...store.values()].map((e) => e.features[k]).filter((v) => v != null);
+  const market = { return5D: avg(pick('return5D')), return20D: avg(pick('return20D')), n: store.size };
   const bySector = new Map();
-  for (const f of features.values()) {
-    if (f.return20D != null) all20.push(f.return20D);
-    if (f.return60D != null) all60.push(f.return60D);
-    if (f.sector) {
-      if (!bySector.has(f.sector)) bySector.set(f.sector, { r20: [], r60: [] });
-      if (f.return20D != null) bySector.get(f.sector).r20.push(f.return20D);
-      if (f.return60D != null) bySector.get(f.sector).r60.push(f.return60D);
-    }
+  for (const e of store.values()) {
+    const s = e.quote.sector;
+    if (!s) continue;
+    if (!bySector.has(s)) bySector.set(s, []);
+    bySector.get(s).push(e.features);
   }
-  const avg = (arr) => (arr.length ? arr.reduce((a, b) => a + b, 0) / arr.length : null);
-  const market = { return20D: avg(all20), return60D: avg(all60), n: all20.length };
   const sectors = new Map();
-  for (const [sector, v] of bySector) {
-    sectors.set(sector, {
-      return20D: avg(v.r20),
-      return60D: avg(v.r60),
-      breadthPositive20D: v.r20.length ? v.r20.filter((x) => x > 0).length / v.r20.length : null,
-      n: v.r20.length,
-    });
+  for (const [s, fs] of bySector) {
+    if (fs.length < 3) continue;
+    sectors.set(s, { return20D: avg(fs.map((f) => f.return20D).filter((v) => v != null)), n: fs.length });
   }
   return { market, sectors };
 }
 
-/* ---------------- 4. Technical Score ---------------- */
-function evalTechnical(f, proxies) {
-  if (!f) return null;
-  const sectorProxy = f.sector ? proxies.sectors.get(f.sector) : null;
-  const checks = {
+function capRanks(d) {
+  const ranked = (d.kisQuotes?.items || []).filter((q) => q.marketCap).sort((a, b) => b.marketCap - a.marketCap);
+  return new Map(ranked.map((q, i) => [q.symbol, i + 1]));
+}
+
+/* ---------------- Technical Confirmation / Relative Strength ---------------- */
+function evalTechnical(f) {
+  return scoreRules(TECHNICAL_RULES, {
     close_above_ma20: f.ma20 != null ? f.close > f.ma20 : null,
     ma20_above_ma60: f.ma20 != null && f.ma60 != null ? f.ma20 > f.ma60 : null,
-    ma60_above_ma120: f.ma60 != null && f.ma120 != null ? f.ma60 > f.ma120 : null,
     ma20_slope_positive: f.ma20Slope != null ? f.ma20Slope > 0 : null,
-    ma60_slope_positive: f.ma60Slope != null ? f.ma60Slope > 0 : null,
     near_20d_high: f.dist20DHigh != null ? f.dist20DHigh >= -3 : null,
-    breakout_20d: f.dist20DHigh != null ? f.dist20DHigh >= 0 : null,
-    near_52w_high: f.dist52WHigh != null ? f.dist52WHigh >= -5 : null,
     volume_ratio_1_5: f.volumeRatio != null ? f.volumeRatio >= 1.5 : null,
-    volume_ratio_2_0: f.volumeRatio != null ? f.volumeRatio >= 2.0 : null,
-    market_rs_20d_positive: f.return20D != null && proxies.market.return20D != null ? f.return20D - proxies.market.return20D > 0 : null,
-    sector_rs_20d_positive: f.return20D != null && sectorProxy?.return20D != null ? f.return20D - sectorProxy.return20D > 0 : null,
-  };
-  return scoreRules(TECHNICAL_RULES, checks, TECHNICAL_MAX_RAW, FACTOR_WEIGHTS.technical);
+  }, FACTOR_WEIGHTS.technical);
 }
 
-function evalRelativeStrength(f, proxies) {
-  if (!f) return null;
-  const sectorProxy = f.sector ? proxies.sectors.get(f.sector) : null;
-  const checks = {
-    stock_20d_vs_market_positive: f.return20D != null && proxies.market.return20D != null ? f.return20D - proxies.market.return20D > 0 : null,
-    stock_60d_vs_market_positive: f.return60D != null && proxies.market.return60D != null ? f.return60D - proxies.market.return60D > 0 : null,
-    stock_20d_vs_sector_positive: f.return20D != null && sectorProxy?.return20D != null ? f.return20D - sectorProxy.return20D > 0 : null,
-    sector_20d_vs_market_positive: sectorProxy?.return20D != null && proxies.market.return20D != null ? sectorProxy.return20D - proxies.market.return20D > 0 : null,
-    sector_breadth_strong: sectorProxy?.breadthPositive20D != null ? sectorProxy.breadthPositive20D >= 0.5 : null,
-  };
-  return scoreRules(RS_RULES, checks, RS_MAX_RAW, FACTOR_WEIGHTS.relativeStrength);
+function evalRelativeStrength(f, proxies, sector) {
+  const m = proxies.market, s = sector ? proxies.sectors.get(sector) : null;
+  const ex20 = f.return20D != null && m.return20D != null ? f.return20D - m.return20D : null;
+  const ex5 = f.return5D != null && m.return5D != null ? f.return5D - m.return5D : null;
+  return scoreRules(RS_RULES, {
+    stock_20d_vs_market_positive: ex20 != null ? ex20 > 0 : null,
+    stock_20d_vs_sector_positive: f.return20D != null && s?.return20D != null ? f.return20D - s.return20D > 0 : null,
+    // 개선 = 최근 5일 초과수익의 일평균 속도가 20일 초과수익 일평균 속도보다 빠름
+    rs_improving: ex5 != null && ex20 != null ? ex5 > 0 && ex5 / 5 > ex20 / 20 : null,
+  }, FACTOR_WEIGHTS.relativeStrength);
 }
 
-/** rules: [{id,points,label}], checks: {id: true|false|null(=해당사항 평가불가)} */
-function scoreRules(rules, checks, maxRaw, weight) {
-  let earnedRaw = 0, applicableMax = 0;
-  const breakdown = [];
-  for (const r of rules) {
-    const v = checks[r.id];
-    if (v == null) continue; // 평가 불가 — 분모에서 제외
-    applicableMax += r.points;
-    if (v) { earnedRaw += r.points; breakdown.push(`+${r.points} ${r.label}`); }
-  }
-  if (applicableMax === 0) return { available: false, score: 0, availableWeight: 0, breakdown: [] };
-  const score = (earnedRaw / applicableMax) * weight;
-  return { available: true, score, availableWeight: weight, earnedRaw, applicableMax, breakdown };
-}
-
-/* ---------------- 5. Flow Score ---------------- */
-const INVESTOR_PRIORITY = { 9000: 4, 7050: 3, 6000: 2, 8000: 1 };
-
-function evalFlow(symbol, investorFlow, quote) {
-  const checks = { flow_reversal_bullish: null, flow_reversal_bearish: null, flow_accumulation: null, net_buy_to_trading_value_significant: null, net_buy_to_market_cap_significant: null };
-  const evidences = [];
-  let bestFlip = null, bestNetBuy = null;
-
-  for (const [code, inv] of Object.entries(investorFlow?.investors || {})) {
-    const priority = INVESTOR_PRIORITY[code] || 0;
-    const flip = (inv.flips || []).find((f) => f.symbol === symbol);
-    if (flip) {
-      const cand = { ...flip, investor: inv.label, priority };
-      if (!bestFlip || Math.abs(cand.swing) > Math.abs(bestFlip.swing) || (Math.abs(cand.swing) === Math.abs(bestFlip.swing) && priority > bestFlip.priority)) bestFlip = cand;
-    }
-    const rank = (inv.top_net_buy || []).findIndex((t) => t.symbol === symbol);
-    if (rank !== -1) {
-      const t = inv.top_net_buy[rank];
-      const cand = { ...t, investor: inv.label, rank: rank + 1, priority };
-      if (!bestNetBuy || rank < bestNetBuy.rank - 1) bestNetBuy = cand;
-    }
-  }
-
-  if (bestFlip) {
-    const toBuy = bestFlip.recent_net > 0;
-    checks[toBuy ? 'flow_reversal_bullish' : 'flow_reversal_bearish'] = true;
-    evidences.push(`${bestFlip.investor} 수급 ${toBuy ? '매도 → 매수' : '매수 → 매도'} 전환 (변화폭 ${fmtWon(bestFlip.swing)})`);
-  } else if (Object.keys(investorFlow?.investors || {}).length) {
-    checks.flow_reversal_bullish = false;
-  }
-
-  if (bestNetBuy && bestNetBuy.rank <= FLOW_THRESHOLDS.accumulationRank) {
-    checks.flow_accumulation = true;
-    evidences.push(`${bestNetBuy.investor} 순매수 ${bestNetBuy.rank}위 (${fmtWon(bestNetBuy.net)})`);
-  } else if (bestNetBuy) {
-    checks.flow_accumulation = false;
-  }
-
-  if (quote?.tradingValue && bestNetBuy) {
-    const ratio = Math.abs(bestNetBuy.net) / quote.tradingValue;
-    checks.net_buy_to_trading_value_significant = ratio >= FLOW_THRESHOLDS.netBuyToTradingValueSignificant;
-    if (checks.net_buy_to_trading_value_significant) evidences.push(`순매수/거래대금 ${(ratio * 100).toFixed(1)}%`);
-  }
-  if (quote?.marketCap && bestNetBuy) {
-    // marketCap은 억원 단위(KIS), net은 원 단위이므로 단위를 맞춘다.
-    const ratio = Math.abs(bestNetBuy.net) / (quote.marketCap * 1e8);
-    checks.net_buy_to_market_cap_significant = ratio >= FLOW_THRESHOLDS.netBuyToMarketCapSignificant;
-    if (checks.net_buy_to_market_cap_significant) evidences.push(`순매수/시가총액 ${(ratio * 100).toFixed(2)}%`);
-  }
-
-  const result = scoreRules(FLOW_RULES, checks, FLOW_MAX_RAW, FACTOR_WEIGHTS.flow);
-  return { ...result, evidences, bestFlip, bestNetBuy };
-}
-
-/* ---------------- 6. Corporate/Event Score (경제적 규모 계산 가능한 것만 점수화) ---------------- */
-function evalCorporate(symbol, d, quote) {
-  const checks = { large_free_distribution: null, dilution_ratio_significant: null };
-  const evidences = [];
-  const informational = [];
-
-  const free = (d.capitalIncreaseFree?.items || []).find((it) => it.stock_code === symbol);
-  if (free) {
-    const ratio = parseFloat(free.ratio_per_share);
-    if (Number.isFinite(ratio)) {
-      checks.large_free_distribution = ratio >= EVENT_THRESHOLDS.largeFreeRatio;
-      evidences.push(`무상증자 1주당 ${ratio}주 배정`);
-    }
-  }
-  const paid = (d.capitalIncreasePaid?.items || []).find((it) => it.stock_code === symbol);
-  if (paid) {
-    if (quote?.sharesOutstanding && paid.new_shares) {
-      const ratio = Number(paid.new_shares) / quote.sharesOutstanding;
-      checks.dilution_ratio_significant = ratio >= EVENT_THRESHOLDS.dilutionToSharesOutstandingNotable;
-      evidences.push(`유상증자 희석비율 ${(ratio * 100).toFixed(1)}% (신주/기존발행주식수)`);
-    } else {
-      informational.push(`유상증자 공시 (${paid.method || '방식 미상'}) — 희석비율 계산에 필요한 상장주식수 데이터 없음`);
-    }
-  }
-  const cb = (d.convertibleBond?.items || []).find((it) => it.stock_code === symbol);
-  if (cb) informational.push(`CB 발행결정 (전환가 ${cb.conversion_price ?? '-'}) — 발행금액 데이터 없어 점수 미반영, 정보로만 표시`);
-  const treasury = (d.treasuryStock?.items || []).find((it) => it.stock_code === symbol);
-  if (treasury) informational.push(`자사주 ${treasury.type} 공시 — 금액 데이터 없어 점수 미반영, 정보로만 표시`);
-  const insider = (d.insiderPlan?.items || []).find((it) => it.stock_code === symbol);
-  if (insider) informational.push('내부자 거래계획 제출 (방향·규모 데이터 없음)');
-
-  const result = scoreRules(CORPORATE_RULES, checks, CORPORATE_MAX_RAW, FACTOR_WEIGHTS.corporateEvent);
-  return { ...result, evidences, informational, hasBuyback: !!treasury && treasury.type === '취득', hasDisposal: !!treasury && treasury.type === '처분' };
-}
-
-/* ---------------- 7. Earnings/Revision — Provider 없음, 항상 MISSING_DATA (섹션 6) ---------------- */
-function evalEarningsRevision() {
-  return { available: false, score: 0, availableWeight: 0, breakdown: [], missingReason: 'Earnings Surprise/Revision 데이터 Provider 미연결 (Interface만 정의됨)' };
-}
-
-/* ---------------- 8. Global Read-through — Mapping이 있는 종목만 (섹션 9) ---------------- */
-function evalGlobalReadThrough(symbol) {
-  const mapping = GLOBAL_MAPPING.find((m) => m.exposureSymbols.includes(symbol));
-  if (!mapping) return { available: false, score: 0, availableWeight: 0, breakdown: [] };
-  return {
-    available: true,
-    score: FACTOR_WEIGHTS.globalReadThrough, // Mapping이 명시적으로 존재하는 경우 = 해당 체인 자체가 근거
-    availableWeight: FACTOR_WEIGHTS.globalReadThrough,
-    breakdown: [`${mapping.globalSymbol} ${mapping.globalKpi} → ${mapping.chain} → ${mapping.koreanSector}`],
-    mapping,
-  };
-}
-
-/* ---------------- Risk Engine ---------------- */
-function evaluateRisk(symbol, name, d, features) {
-  const alert = findMarketAlert(name, d.marketAlerts);
-  if (alert?.level === 'risk') return { decision: 'REJECT', reason: alert.evidence };
-  if (alert) return { decision: 'WATCH', reason: alert.evidence };
-
-  const short = (d.shortSelling?.items || []).find((it) => it.symbol === symbol);
-  if (short && short.short_ratio_pct >= RISK_THRESHOLDS.shortRatioSpike) {
-    return { decision: 'WATCH', reason: `공매도 비중 ${short.short_ratio_pct}% (과열 임계값 ${RISK_THRESHOLDS.shortRatioSpike}% 이상)` };
-  }
-  const disposal = (d.treasuryStock?.items || []).find((it) => it.stock_code === symbol && it.type === '처분');
-  if (disposal) return { decision: 'WATCH', reason: '자사주 처분 공시 — 잠재 매도물량' };
-  const paidOnly = (d.capitalIncreasePaid?.items || []).find((it) => it.stock_code === symbol);
-  if (paidOnly) return { decision: 'WATCH', reason: '유상증자 공시 — 배정기준일·신주상장일 확인 필요' };
-
-  if (features?.return5D != null && Math.abs(features.return5D) >= RISK_THRESHOLDS.extremeReturn5D) {
-    return { decision: 'WATCH', reason: `최근 5거래일 수익률 ${sgn(features.return5D)}${features.return5D.toFixed(1)}% — 단기 과열/과매도 구간` };
-  }
-  if (features?.atr14 != null && features.close) {
-    const atrRatio = features.atr14 / features.close;
-    if (atrRatio >= RISK_THRESHOLDS.atrRatioExtreme) {
-      return { decision: 'WATCH', reason: `ATR14/종가 ${(atrRatio * 100).toFixed(1)}% — 변동성 과다` };
-    }
-  }
-  return { decision: 'PASS', reason: '특이 리스크 없음' };
-}
-
+/* ---------------- Risk Engine (점수와 분리) ---------------- */
 function findMarketAlert(name, marketAlerts) {
-  const levelWeight = { invstriskisu_sub: 'risk', invstwarnisu_sub: 'warn', invstcautnisu_sub: 'caution' };
+  const lv = { invstriskisu_sub: 'risk', invstwarnisu_sub: 'warn', invstcautnisu_sub: 'caution' };
   for (const [key, cat] of Object.entries(marketAlerts?.categories || {})) {
     const hit = (cat.items || []).find((it) => it.corp_name === name);
-    if (hit) return { level: levelWeight[key] || 'caution', evidence: `${cat.label} 지정 (${hit.designated_date})` };
+    if (hit) return { level: lv[key] || 'caution', evidence: `${cat.label} 지정 (${hit.designated_date})` };
   }
   return null;
 }
 
-/* ---------------- Strategy 분류 ---------------- */
-function classifyStrategy(factorResults, independentConfirmations) {
-  if (independentConfirmations >= 3) return 'CONFLUENCE';
-  if (factorResults.global.available) return 'GLOBAL_READ_THROUGH';
-  if (factorResults.corporate.hasBuyback) return 'BUYBACK';
-  if (factorResults.corporate.available && factorResults.corporate.earnedRaw > 0) return 'EVENT_DRIVEN';
-  if (factorResults.flow.bestFlip) return 'FLOW_REVERSAL';
-  if (factorResults.technical.available && factorResults.technical.earnedRaw >= factorResults.technical.applicableMax * 0.6) return 'MOMENTUM';
-  return 'WATCH_ONLY';
+function evaluateRisk(symbol, name, d, f, flow, corporate) {
+  const reasons = [];
+  const alert = findMarketAlert(name, d.marketAlerts);
+  if (alert?.level === 'risk') return { decision: 'REJECT', reason: alert.evidence, reasons: [alert.evidence] };
+  if (alert) reasons.push(alert.evidence);
+  const short = (d.shortSelling?.items || []).find((it) => it.symbol === symbol);
+  if (short && short.short_ratio_pct >= RISK_THRESHOLDS.shortRatioSpike) reasons.push(`공매도 비중 ${short.short_ratio_pct}%`);
+  if (flow.interpretation === 'bearish') reasons.push(`${flow.directionalFlip.investor} 매도 전환 확인`);
+  reasons.push(...corporate.risks);
+  if (f?.return5D != null && Math.abs(f.return5D) >= RISK_THRESHOLDS.extremeReturn5D) reasons.push(`5거래일 ${sgn(f.return5D)}${f.return5D.toFixed(1)}% — 단기 과열/과매도`);
+  if (f?.atr14 != null && f.close && f.atr14 / f.close >= RISK_THRESHOLDS.atrRatioExtreme) reasons.push(`ATR14/종가 ${((f.atr14 / f.close) * 100).toFixed(1)}% — 변동성 과다`);
+  return reasons.length ? { decision: 'WATCH', reason: reasons.join(' · '), reasons } : { decision: 'PASS', reason: '특이 리스크 없음', reasons: [] };
 }
 
-const STRATEGY_LABEL = {
-  CONFLUENCE: 'Confluence',
-  GLOBAL_READ_THROUGH: 'Global Read-through',
-  BUYBACK: 'Buyback',
-  EVENT_DRIVEN: 'Event Driven',
-  FLOW_REVERSAL: 'Flow Reversal',
-  MOMENTUM: 'Momentum',
-  WATCH_ONLY: 'Watch Only',
-};
+/* ---------------- Independent Confirmation ---------------- */
+function confirmationGroups(factors, contradicted) {
+  const ratio = (x) => (x.available && x.availableWeight ? x.score / x.availableWeight : 0);
+  const groups = [];
+  const push = (key, detail) => groups.push({ key, group: GROUP_LABEL[key], source: FACTOR_SOURCE[key], detail });
+  const { novelty, technical, flow, relativeStrength, corporate, catalyst } = factors;
+
+  const priceChanges = (novelty.activeEvents || []).filter((e) => e.id !== 'flowReversal' && CONFIRMATION_RULES.noveltyBands.includes(e.band));
+  if (priceChanges.length && !contradicted.has('novelty')) push('novelty', priceChanges.map((e) => e.label).join(', '));
+  if (ratio(technical) >= CONFIRMATION_RULES.technicalMinRatio && !contradicted.has('technical')) push('technical', `${technical.earnedRaw}/${technical.applicableMax}`);
+  if (ratio(flow) >= CONFIRMATION_RULES.flowMinRatio) push('flow', flow.evidences[0] || 'Normalized Flow');
+  if (ratio(relativeStrength) >= CONFIRMATION_RULES.rsMinRatio && !contradicted.has('relativeStrength')) push('relativeStrength', `${relativeStrength.earnedRaw}/${relativeStrength.applicableMax}`);
+  if (corporate.available && corporate.score > 0) push('corporate', corporate.metrics[0]);
+  if (catalyst.available && catalyst.score > 0) push('catalyst', catalyst.breakdown.map((b) => b.replace(/^\+\d+ /, '')).join(', '));
+  return groups;
+}
+
+/* ---------------- 서술 필드 (WHAT CHANGED / WHY NOW / ...) — 실제 계산값 템플릿, LLM 없음 ---------------- */
+function changeLine(e) {
+  const when = `${e.changeDate}, ${e.daysSinceChange}거래일 전`;
+  if (e.id === 'ma20CrossAboveMa60') return `MA20이 MA60을 상향돌파 (${when})`;
+  if (e.id === 'priceCrossAboveMa20') return `종가가 MA20 위로 회복 (${when})`;
+  if (e.id === 'volumeSpike') return `거래량 20일 평균 대비 ${e.ratio.toFixed(1)}배로 급증 (${when})`;
+  return `${e.label}`;
+}
+
+function buildWhatChanged(novelty, flow, catalyst, contradicted) {
+  const lines = [];
+  if (!contradicted.has('novelty')) {
+    for (const e of novelty.activeEvents || []) if (e.id !== 'flowReversal') lines.push(changeLine(e));
+  }
+  if (flow.interpretation === 'bullish') lines.push(`${flow.directionalFlip.investor} 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, ${flow.interpretationLine.split('— ')[1]})`);
+  for (const c of catalyst.newFilings || []) if (c.direction !== 'supply') lines.push(`새 정보: ${c.label} (${c.filedDaysAgo}거래일 전)`);
+  return lines;
+}
+
+function buildWhyNow(novelty, catalyst) {
+  const parts = [];
+  const fresh = (novelty.activeEvents || []).reduce((a, e) => (a == null || e.daysSinceChange < a.daysSinceChange ? e : a), null);
+  if (fresh) parts.push(`가장 최근 변화가 ${fresh.approx ? '최근 3거래일 안' : `${fresh.daysSinceChange}거래일 전`} 발생 (Novelty ${fresh.band})`);
+  const up = (catalyst.upcoming || []).find((c) => c.direction === 'positive');
+  if (up) parts.push(`${up.daysUntil}거래일 안에 확인 이벤트: ${up.label}`);
+  return parts.length ? parts.join(' · ') : null;
+}
+
+function buildInvalidation(c) {
+  const f = c.features;
+  const out = [];
+  const active = new Set((c.factors.novelty.activeEvents || []).map((e) => e.id));
+  if (active.has('ma20CrossAboveMa60') && f) out.push(`MA20(${won(f.ma20)})이 MA60(${won(f.ma60)}) 아래로 재이탈`);
+  else if (active.has('priceCrossAboveMa20') && f) out.push(`종가가 MA20(${won(f.ma20)}) 하회`);
+  if (c.factors.flow.interpretation === 'bullish') out.push(`${c.factors.flow.directionalFlip.investor} 순매도 재전환`);
+  const up = (c.factors.catalyst.upcoming || []).find((x) => x.direction === 'positive');
+  if (up) out.push(`${up.type} 일정 정정·철회 공시`);
+  return out.length ? out.join(' / ') : '현재 Confirmation 근거 Factor 반전 시';
+}
+
+function buildWatch(c) {
+  const up = (c.factors.catalyst.upcoming || [])[0];
+  if (up) return `${up.label} (${up.daysUntil}거래일 후)`;
+  if (c.factors.flow.interpretation === 'bullish') return `${c.factors.flow.directionalFlip.investor} 순매수가 다음 3거래일 지속되는지`;
+  if ((c.factors.novelty.activeEvents || []).some((e) => e.id === 'volumeSpike')) return '급증한 거래량이 20일 평균 이상으로 유지되는지';
+  return '새 변화 신호 발생 여부';
+}
+
+function classifyStrategy(c) {
+  const ratio = (x) => (x.available && x.availableWeight ? x.score / x.availableWeight : 0);
+  const { novelty, catalyst, corporate, flow, technical } = c.factors;
+  const evW = (catalyst.availableWeight || 0) + (corporate.availableWeight || 0);
+  const drivers = [
+    ['New Change', ratio(novelty)],
+    ['Event Driven', evW ? (catalyst.score + corporate.score) / evW : 0],
+    ['Flow Confirmed', ratio(flow)],
+    ['Trend Confirmation', ratio(technical)],
+  ].sort((a, b) => b[1] - a[1]);
+  const primary = drivers[0][1] > 0 ? drivers[0][0] : 'Watch Only';
+  return c.groups.length >= SELECTION_RULES.confluenceConfirmation && c.sources.size >= CONFIRMATION_RULES.minSources ? `Confluence · ${primary}` : primary;
+}
 
 /* ---------------- Candidate 조립 ---------------- */
-function buildCandidate(symbol, name, d, features, proxies) {
-  const quote = d.kisQuotes?.items?.find((q) => q.symbol === symbol) || null;
-  const technical = evalTechnical(features, proxies) || { available: false, score: 0, availableWeight: 0, breakdown: [] };
-  const relativeStrength = evalRelativeStrength(features, proxies) || { available: false, score: 0, availableWeight: 0, breakdown: [] };
-  const flow = evalFlow(symbol, d.investorFlow, quote);
-  const corporate = evalCorporate(symbol, d, quote);
-  const earningsRevision = evalEarningsRevision();
-  const global = evalGlobalReadThrough(symbol);
+function buildCandidate(symbol, name, d, entry, ctx) {
+  const quote = entry?.quote || null;
+  const f = entry?.features || null;
 
-  const factors = { technical, flow, earningsRevision, corporate, relativeStrength, global };
-  let earnedTotal = 0, availableWeightTotal = 0;
-  for (const f of Object.values(factors)) {
-    if (f.available) { earnedTotal += f.score; availableWeightTotal += f.availableWeight; }
-  }
-  const normalizedScore = availableWeightTotal > 0 ? (earnedTotal / availableWeightTotal) * 100 : 0;
-  const dataCoverage = Math.round((availableWeightTotal / 100) * 100); // 100 = 전체 factor 가중치 합
-
-  const independentConfirmations = Object.values(factors).filter((f) => f.available && f.score > 0).length;
-
-  const strategy = classifyStrategy(factors, independentConfirmations);
-  const risk = evaluateRisk(symbol, name, d, features);
-
-  return {
-    symbol, name, sector: features?.sector || quote?.sector || null,
-    normalizedScore: Math.round(normalizedScore * 10) / 10,
-    dataCoverage,
-    confidence: dataCoverage >= COVERAGE_RULES.lowConfidenceBelow ? 'Normal' : dataCoverage >= COVERAGE_RULES.minToSelect ? 'Low/Medium' : 'Insufficient',
-    independentConfirmations,
-    strategy, strategyLabel: STRATEGY_LABEL[strategy],
-    factors, risk,
-    quote,
+  const flow = evalFlow(symbol, d, f, ctx.intensity);
+  const factors = {
+    novelty: evalNovelty(entry?.changeEvents || null, flow),
+    catalyst: evalCatalystTiming(symbol, name, d, ctx.today),
+    corporate: evalCorporate(symbol, d, quote),
+    technical: f ? evalTechnical(f) : unavailable('OHLCV 없음'),
+    flow,
+    earningsRevision: unavailable('컨센서스/Revision Provider 미연결'),
+    relativeStrength: f ? evalRelativeStrength(f, ctx.proxies, quote?.sector) : unavailable('OHLCV 없음'),
   };
+
+  // 섹션 5·19: 외국인/기관 매도 전환이 가격으로 확인되면, 가격 계열 긍정 신호를 무비판적으로 합산하지 않는다.
+  const contradicted = new Set(flow.interpretation === 'bearish' ? ['technical', 'relativeStrength', 'novelty'] : []);
+
+  let earned = 0, availW = 0;
+  for (const [k, x] of Object.entries(factors)) {
+    if (!x.available) continue;
+    availW += x.availableWeight;
+    if (!contradicted.has(k)) earned += x.score;
+  }
+  const normalizedScore = availW ? (earned / availW) * 100 : 0;
+  const dataCoverage = Math.round(availW); // 전체 가중치 합 = 100
+
+  const groups = confirmationGroups(factors, contradicted);
+  const sources = new Set(groups.map((g) => g.source));
+  const risk = evaluateRisk(symbol, name, d, f, flow, factors.corporate);
+  const pricedIn = evalPricedIn(f, entry?.bars, factors.novelty, factors.catalyst);
+  const crowding = crowdingPenalty(pricedIn, factors.novelty);
+  const capRank = ctx.capRank.get(symbol) ?? null;
+  const isLargeCap = capRank != null && capRank <= DISCOVERY_CONFIG.topMarketCapExclusion;
+  const liquidityOk = f?.avgTradingValue20D == null ? null : f.avgTradingValue20D >= UNIVERSE_FILTER.minAvgTradingValue20D;
+
+  const whatChanged = buildWhatChanged(factors.novelty, flow, factors.catalyst, contradicted);
+  const whyNow = buildWhyNow(factors.novelty, factors.catalyst);
+  const whyNotPriced = whyNotPricedText(pricedIn);
+  const newSignalCount = (contradicted.has('novelty') ? 0 : (factors.novelty.activeEvents || []).filter((e) => e.id !== 'flowReversal').length)
+    + (flow.interpretation === 'bullish' ? 1 : 0)
+    + (factors.catalyst.newFilings || []).filter((c) => c.direction !== 'supply').length;
+  const hasCatalyst = factors.catalyst.score > 0 || factors.corporate.score > 0;
+
+  const counter = [];
+  if (contradicted.size) counter.push(`${flow.directionalFlip.investor} 매도 전환(가격 확인됨) — 기술적/가격 신호와 모순되어 해당 점수 미합산`);
+  if (flow.interpretation === 'conflicting') counter.push('외국인/기관 수급 방향이 서로 반대 — Flow 점수 미반영');
+  if (pricedIn.verdict === 'partially_priced_in' || pricedIn.verdict === 'likely_priced_in') counter.push(`Priced-in: ${whyNotPriced}`);
+  for (const cz of factors.catalyst.catalysts || []) if (cz.direction === 'supply' || cz.direction === 'negative') counter.push(cz.label);
+  if (!hasCatalyst) counter.push('향후 20거래일 내 점수화 가능한 Catalyst 없음 — 최상위 Priority(Tier 1) 제한');
+  for (const gap of factors.corporate.informational || []) counter.push(`DATA GAP: ${gap}`);
+
+  const c = {
+    symbol, name, sector: quote?.sector || null, quote, features: f,
+    factors, contradicted, groups, sources, risk, pricedIn, crowding,
+    capRank, isLargeCap, liquidityOk, hasCatalyst, newSignalCount,
+    normalizedScore: r1(normalizedScore), dataCoverage,
+    confidence: dataCoverage >= COVERAGE_RULES.lowConfidenceBelow ? 'Normal' : dataCoverage >= COVERAGE_RULES.minForDiscovery ? 'Low/Medium' : 'Insufficient',
+    whatChanged, whyNow, whyNotPriced, counter,
+  };
+  c.strategy = classifyStrategy(c);
+  c.discoveryScore = r1(c.normalizedScore - (isLargeCap ? 0 : crowding.total));
+  c.gate = gateOf(c);
+  return c;
 }
 
-/* ---------------- Top 20 / Top 5 선정 (Diversity 고려) ---------------- */
-function selectFinalPicks(candidates) {
-  const eligible = candidates.filter((c) =>
-    c.risk.decision !== 'REJECT' &&
-    c.independentConfirmations >= SELECTION_RULES.minIndependentConfirmation &&
-    c.dataCoverage >= COVERAGE_RULES.minToSelect);
-  eligible.sort((a, b) => b.normalizedScore - a.normalizedScore);
+/* ---------------- Bucket 자격 (왜 탈락했는지도 남긴다) ---------------- */
+function gateOf(c) {
+  const fails = [];
+  if (c.risk.decision === 'REJECT') fails.push('Risk REJECT');
+  if (c.groups.length < SELECTION_RULES.minIndependentConfirmation) fails.push(`Independent Factor ${c.groups.length}개 (<${SELECTION_RULES.minIndependentConfirmation})`);
+  if (c.sources.size < CONFIRMATION_RULES.minSources) fails.push(`독립 데이터 원천 ${c.sources.size}개 (<${CONFIRMATION_RULES.minSources})`);
+  if (c.liquidityOk === false) fails.push('20일 평균 거래대금 50억 미만');
+  const answerable = c.whatChanged.length > 0 && c.whyNotPriced != null;
+  return { base: fails.length === 0, fails, answerable };
+}
 
-  const final = [];
-  const strategyCount = {};
-  for (const c of eligible) {
-    if (final.length >= SELECTION_RULES.finalPickCount) break;
-    const cnt = strategyCount[c.strategy] || 0;
-    if (cnt >= SELECTION_RULES.maxSameStrategyInFinal) continue;
-    final.push(c);
-    strategyCount[c.strategy] = cnt + 1;
-  }
-  // Diversity 제약으로 5개를 못 채웠으면 남은 자리는 점수 순으로 채운다(제약 완화).
-  if (final.length < SELECTION_RULES.finalPickCount) {
-    for (const c of eligible) {
-      if (final.length >= SELECTION_RULES.finalPickCount) break;
-      if (!final.includes(c)) final.push(c);
+function tierOf(c) {
+  if (c.hasCatalyst && c.newSignalCount >= 2) return 1;
+  if (c.newSignalCount >= 2) return 2; // Catalyst 없으면 최상위 Tier 불가 (섹션 9)
+  if (c.hasCatalyst) return 3;
+  return 4;
+}
+
+const BUCKET_RULES = {
+  MARKET_LEADER: {
+    ok: (c) => c.gate.base && c.isLargeCap && c.dataCoverage >= COVERAGE_RULES.minForLeader,
+    sort: (a, b) => b.normalizedScore - a.normalizedScore || b.groups.length - a.groups.length,
+  },
+  DISCOVERY: {
+    // 목표 조건 "시장이 아직 충분히 반영하지 않았을 가능성" — 상당 부분 반영(likely)은 Discovery 자격 없음, 일부 반영은 Penalty.
+    ok: (c) => c.gate.base && c.gate.answerable && !c.isLargeCap && c.capRank != null && c.dataCoverage >= COVERAGE_RULES.minForDiscovery
+      && c.pricedIn.verdict !== 'likely_priced_in',
+    sort: (a, b) => tierOf(a) - tierOf(b) || b.discoveryScore - a.discoveryScore,
+  },
+  EVENT_DRIVEN: {
+    ok: (c) => c.gate.base && c.gate.answerable && c.hasCatalyst,
+    sort: (a, b) => (b.factors.catalyst.score + b.factors.corporate.score) - (a.factors.catalyst.score + a.factors.corporate.score) || b.discoveryScore - a.discoveryScore,
+  },
+  INFLECTION: {
+    ok: (c) => c.gate.base && c.gate.answerable && c.features?.dist52WHigh != null && c.features.dist52WHigh <= SELECTION_RULES.inflectionMaxDist52WHigh
+      && (c.factors.novelty.activeEvents || []).some((e) => ['ma20CrossAboveMa60', 'priceCrossAboveMa20'].includes(e.id) && CONFIRMATION_RULES.noveltyBands.includes(e.band)),
+    // Inflection은 "초기" 반전이 정의이므로, 이미 반영된 반등은 뒤로 보낸다.
+    sort: (a, b) => PRICED_RANK[a.pricedIn.verdict] - PRICED_RANK[b.pricedIn.verdict] || b.factors.novelty.score - a.factors.novelty.score || b.discoveryScore - a.discoveryScore,
+  },
+};
+const PRICED_RANK = { not_yet_priced: 0, unclear: 1, unknown: 2, partially_priced_in: 3, likely_priced_in: 4 };
+
+// 한 종목이 여러 Bucket 자격을 가지면, 후보가 가장 적은(대체 불가능한) Bucket부터 배정한다.
+// 그래야 중복 제거 후에도 서로 다른 종목으로 슬롯을 최대한 채울 수 있다. 출력 순서는 DAILY_SLOTS 그대로.
+function selectDaily(candidates) {
+  const pools = new Map(DAILY_SLOTS.map(({ bucket }) => [bucket, candidates.filter(BUCKET_RULES[bucket].ok).sort(BUCKET_RULES[bucket].sort)]));
+  const order = [...DAILY_SLOTS].sort((a, b) => pools.get(a.bucket).length / a.count - pools.get(b.bucket).length / b.count);
+  const chosen = new Set();
+  const picksBy = new Map();
+  for (const { bucket, count } of order) {
+    const picks = [];
+    for (const c of pools.get(bucket)) {
+      if (picks.length >= count) break;
+      if (chosen.has(c.symbol)) continue; // 중복이면 다음 후보
+      chosen.add(c.symbol);
+      picks.push(c);
     }
+    picksBy.set(bucket, picks);
   }
-  return { eligible, final };
+  return DAILY_SLOTS.map(({ bucket, count }) => {
+    const pool = pools.get(bucket), picks = picksBy.get(bucket);
+    return { bucket, label: BUCKET_LABEL[bucket], requested: count, qualifiedCount: pool.length, picks, emptyReason: picks.length < count ? emptyReason(bucket, pool.length) : null };
+  });
 }
 
-function buildSelectionDetail(c, marketRegimeState) {
-  const factorEvidence = [];
-  if (c.factors.flow.evidences?.length) factorEvidence.push(...c.factors.flow.evidences);
-  if (c.factors.technical.breakdown?.length) factorEvidence.push(...c.factors.technical.breakdown.slice(0, 3).map((b) => `Technical: ${b}`));
-  if (c.factors.corporate.evidences?.length) factorEvidence.push(...c.factors.corporate.evidences);
-  if (c.factors.global.breakdown?.length) factorEvidence.push(...c.factors.global.breakdown);
-
-  const watchAndInvalidation = c.factors.flow.bestFlip
-    ? { watch: c.factors.flow.bestFlip.recent_net > 0 ? '추가 매수 지속 여부' : '추가 매도 지속 여부', invalidation: c.factors.flow.bestFlip.recent_net > 0 ? `${c.factors.flow.bestFlip.investor} 재차 순매도 전환` : `${c.factors.flow.bestFlip.investor} 재차 순매수 전환` }
-    : { watch: '핵심 Factor 지속 여부 (거래대금 동반 확인)', invalidation: '핵심 근거 지표 반전 시 신호 무효' };
-
-  return {
-    symbol: c.symbol,
-    company: c.name,
-    sector: c.sector,
-    setup: c.strategyLabel,
-    strategy: c.strategyLabel,
-    score: c.normalizedScore,
-    dataCoverage: c.dataCoverage,
-    confidence: c.confidence,
-    independentConfirmations: c.independentConfirmations,
-    reason: factorEvidence[0] || `${c.strategyLabel} Setup`,
-    evidence: factorEvidence,
-    counterEvidence: c.risk.decision === 'WATCH' ? [c.risk.reason] : [],
-    confirmation: watchAndInvalidation.watch,
-    watch: watchAndInvalidation.watch,
-    invalidation: watchAndInvalidation.invalidation,
-    riskDecision: c.risk.decision,
-    risks: c.risk.reason,
-    corporateInformational: c.factors.corporate.informational || [],
-    factorScores: Object.fromEntries(Object.entries(c.factors).map(([k, v]) => [k, v.available ? Math.round(v.score * 10) / 10 : null])),
-    scoreBreakdown: buildScoreBreakdown(c.factors),
-    signalTypes: activeFactorLabels(c.factors),
-    priority: c.normalizedScore,
-    marketRegimeAtSelection: marketRegimeState,
-    sources: buildSources(c),
-  };
+function emptyReason(bucket, qualified) {
+  const base = qualified ? `조건 충족 ${qualified}종목이 모두 다른 슬롯과 중복` : '오늘 조건을 충족한 종목 없음';
+  const rule = {
+    MARKET_LEADER: `시총 상위 ${DISCOVERY_CONFIG.topMarketCapExclusion} + Independent Factor ≥${SELECTION_RULES.minIndependentConfirmation} + 원천 ≥${CONFIRMATION_RULES.minSources} + Coverage ≥${COVERAGE_RULES.minForLeader}%`,
+    DISCOVERY: `시총 상위 ${DISCOVERY_CONFIG.topMarketCapExclusion} 제외 + WHAT CHANGED/WHY NOT PRICED 답변 가능 + Independent Factor ≥${SELECTION_RULES.minIndependentConfirmation} + 원천 ≥${CONFIRMATION_RULES.minSources}`,
+    EVENT_DRIVEN: '점수화 가능한 Catalyst(timing 또는 경제적 크기) + Independent Factor ≥2 + 원천 ≥2',
+    INFLECTION: `52주 고점 대비 ${SELECTION_RULES.inflectionMaxDist52WHigh}% 이하 + 5거래일 내 MA20 회복/MA60 돌파 + 원천 ≥2`,
+  }[bucket];
+  return `${base} (기준: ${rule}) — 빈 슬롯을 억지로 채우지 않음`;
 }
 
-const FACTOR_DISPLAY_LABEL = { technical: 'Technical', flow: 'Flow', earningsRevision: 'Earnings/Revision', corporate: 'Corporate/Event', relativeStrength: 'Relative Strength', global: 'Global Read-through' };
-
-function buildScoreBreakdown(factors) {
-  return Object.entries(factors)
-    .filter(([, v]) => v.available)
-    .map(([k, v]) => `${FACTOR_DISPLAY_LABEL[k]} ${Math.round(v.score * 10) / 10}/${v.availableWeight}`);
-}
-function activeFactorLabels(factors) {
-  return Object.entries(factors).filter(([, v]) => v.available && v.score > 0).map(([k]) => FACTOR_DISPLAY_LABEL[k]);
-}
-
-function buildSources(c) {
+/* ---------------- 출력 (섹션 18 스키마 + 기존 UI 호환 필드) ---------------- */
+function datasetSources(c) {
   const s = new Set();
-  if (c.factors.flow.bestFlip || c.factors.flow.bestNetBuy) s.add('investor-flow');
-  if (c.factors.corporate.evidences?.length) s.add('capital-increase');
-  if (c.quote) s.add('stock');
+  if (c.features) s.add('KIS OHLCV');
+  if (c.factors.flow.events?.length) s.add('KRX 투자자별 매매동향');
+  for (const x of c.factors.catalyst.catalysts || []) s.add(x.source);
+  if (c.factors.corporate.metrics?.length) s.add('DART');
   return [...s];
 }
 
-/** 전체 파이프라인 실행 */
-export function runSelectionEngine(d, dateStr, marketRegimeState) {
+function factorScores(c) {
+  const v = (x) => (x.available ? r1(x.score) : null);
+  const cat = c.factors.catalyst, cor = c.factors.corporate;
+  return {
+    noveltyScore: c.contradicted.has('novelty') ? 0 : v(c.factors.novelty),
+    catalystScore: cat.available || cor.available ? r1((cat.available ? cat.score : 0) + (cor.available ? cor.score : 0)) : null,
+    technicalScore: c.contradicted.has('technical') ? 0 : v(c.factors.technical),
+    flowScore: v(c.factors.flow),
+    revisionScore: null,
+    relativeStrengthScore: c.contradicted.has('relativeStrength') ? 0 : v(c.factors.relativeStrength),
+  };
+}
+
+function scoreBreakdown(c) {
+  return Object.entries(c.factors).filter(([, x]) => x.available)
+    .map(([k, x]) => `${GROUP_LABEL[k]} ${c.contradicted.has(k) ? '0(모순)' : r1(x.score)}/${x.availableWeight}`);
+}
+
+function toFinal(c, bucket) {
+  const confirmation = c.groups.length
+    ? c.groups.map((g) => `${g.group}[${g.source}]: ${g.detail}`).join(' + ')
+    : 'Independent Confirmation 없음';
+  const catalysts = (c.factors.catalyst.catalysts || []).map((x) => x.label);
+  const evidence = [
+    c.whyNow ? `WHY NOW: ${c.whyNow}` : null,
+    c.whyNotPriced ? `WHY NOT PRICED: ${c.whyNotPriced}` : null,
+    ...c.whatChanged.slice(1).map((l) => `CHANGED: ${l}`),
+    `CONFIRMS: ${confirmation}`,
+    ...c.factors.flow.events.slice(0, 2),
+    c.factors.flow.interpretationLine,
+    ...c.factors.corporate.metrics,
+    ...catalysts.filter((l) => !c.whatChanged.some((w) => w.includes(l))).map((l) => `CATALYST: ${l}`),
+  ].filter(Boolean);
+
+  return {
+    // --- 섹션 18 ---
+    symbol: c.symbol,
+    company: c.name,
+    bucket,
+    bucketLabel: BUCKET_LABEL[bucket],
+    strategy: c.strategy,
+    score: c.normalizedScore,
+    ...factorScores(c),
+    dataCoverage: c.dataCoverage,
+    confidence: c.confidence,
+    independentConfirmations: c.groups.length,
+    confirmationSources: [...c.sources],
+    whatChanged: c.whatChanged,
+    whyNow: c.whyNow,
+    whyNotPriced: c.whyNotPriced,
+    confirmation,
+    invalidation: buildInvalidation(c),
+    risks: c.risk.reason,
+    catalysts,
+    sources: datasetSources(c),
+    pricedIn: { verdict: c.pricedIn.verdict, facts: c.pricedIn.lines },
+    crowdingPenalty: c.isLargeCap ? null : c.crowding,
+    marketCapRank: c.capRank,
+    flowEvents: c.factors.flow.events,
+    flowInterpretation: c.factors.flow.interpretation,
+    noveltyEvents: c.factors.novelty.activeEvents,
+    // --- 기존 UI 호환 ---
+    setup: `${BUCKET_LABEL[bucket]} · ${c.strategy}`,
+    reason: c.whatChanged[0] || c.whyNow || '새 변화 신호 없음 (대표주 상태 기반)',
+    evidence,
+    counterEvidence: c.counter,
+    watch: buildWatch(c),
+    riskDecision: c.risk.decision,
+    scoreBreakdown: scoreBreakdown(c),
+    priority: c.normalizedScore,
+  };
+}
+
+// Candidate Queue = Discovery 관점 정렬(게이트 통과 → Tier → Crowding 반영 점수). 대형주도 같은 기준으로 경쟁.
+function queueRank(a, b) {
+  return (b.gate.base - a.gate.base) || (tierOf(a) - tierOf(b)) || (b.discoveryScore - a.discoveryScore);
+}
+
+/** Universe 전체를 평가해 정렬된 Candidate 목록을 돌려준다 (검증·테스트에서도 사용). */
+export function evaluateCandidates(d, today = new Date()) {
   const universe = buildUniverse(d);
-  const features = buildFeatureStore(d);
-  const proxies = computeProxies(features);
+  const store = buildFeatureStore(d);
+  const ctx = { today, proxies: computeProxies(store), intensity: buildFlowIntensity(d), capRank: capRanks(d) };
+  const candidates = [...universe].map(([symbol, name]) => buildCandidate(symbol, name, d, store.get(symbol), ctx));
+  candidates.sort(queueRank);
+  return { universe, store, candidates };
+}
 
-  const candidates = [];
-  for (const [symbol, name] of universe) {
-    const c = buildCandidate(symbol, name, d, features.get(symbol), proxies);
-    candidates.push(c);
-  }
-  // 섹션 15: Confluence(독립 Confirmation 다수)를 가장 중요하게 취급한다 — 단일 Factor만
-  // available인 종목이 그 Factor에서 만점을 받아 Coverage 20%짜리가 100점으로 표시되는
-  // 착시를 막기 위해, 정렬은 Confirmation 개수를 1순위로 하고 정규화 점수를 2순위로 한다.
-  // (정규화 점수 자체의 계산식은 그대로 유지 — Coverage를 점수에 섞지 않는다는 원칙은 지킨다.)
-  candidates.sort((a, b) => (b.independentConfirmations - a.independentConfirmations) || (b.normalizedScore - a.normalizedScore));
+/** 전체 파이프라인 */
+export function runSelectionEngine(d, dateStr, marketRegimeState, today = new Date()) {
+  const { universe, store, candidates } = evaluateCandidates(d, today);
 
-  const { eligible, final } = selectFinalPicks(candidates);
-  const signalDetected = candidates.filter((c) => c.independentConfirmations >= 1);
+  const slots = selectDaily(candidates);
+  const selectedBucket = new Map(slots.flatMap((s) => s.picks.map((p) => [p.symbol, s.bucket])));
+
+  const signalDetected = candidates.filter((c) => c.groups.length >= 1 || c.newSignalCount > 0);
+  const baseEligible = candidates.filter((c) => c.gate.base);
   const rejected = candidates.filter((c) => c.risk.decision === 'REJECT');
 
   return {
     date: dateStr,
     generated_at: new Date().toISOString(),
-    methodologyNote: '시장/섹터 상대강도는 공식 KOSPI/KOSDAQ 지수가 아니라 수집된 Liquid Universe의 동일가중 평균 수익률로 계산한 proxy입니다. Earnings/Revision Factor는 데이터 Provider 미연결로 항상 제외(MISSING_DATA)됩니다.',
+    engineVersion: 'v0.2',
+    objective: 'NEW INFORMATION + CHANGE + CATALYST + CONFIRMATION — 오늘 새롭게 연구할 가치가 생긴 종목을 조기 발견',
+    methodologyNote: [
+      '시장/섹터 상대강도는 공식 지수가 아니라 가격 데이터 보유 종목의 동일가중 평균(proxy)입니다.',
+      'Earnings/Revision Factor는 컨센서스 Provider 미연결로 항상 제외(MISSING_DATA)됩니다.',
+      `시총 순위는 KIS 시세를 조회한 종목(관심종목 + Discovery 추가조회) 안에서의 순위입니다.`,
+      '수급 전환의 발생 시점은 "최근 3거래일 vs 직전 5거래일" 창 비교라 일 단위 날짜가 아닌 창 단위입니다.',
+      `종목 단위로 연결되지 않은 Catalyst: ${CATALYST_NOT_CONNECTED.join(', ')}.`,
+    ].join(' '),
     universe: {
       totalCount: universe.size,
-      technicalCoverageCount: features.size,
+      technicalCoverageCount: store.size,
       signalDetectedCount: signalDetected.length,
-      eligibleCount: eligible.length,
-      finalPickCount: final.length,
+      eligibleCount: baseEligible.length,
+      finalPickCount: selectedBucket.size,
+      largeCapExcluded: DISCOVERY_CONFIG.topMarketCapExclusion,
     },
-    topCandidates: candidates.slice(0, SELECTION_RULES.topCandidateCount).map((c) => {
-      const detail = buildSelectionDetail(c, marketRegimeState);
-      return {
-        symbol: c.symbol, name: c.name, sector: c.sector, strategy: c.strategyLabel,
-        score: c.normalizedScore, dataCoverage: c.dataCoverage, confidence: c.confidence,
-        independentConfirmations: c.independentConfirmations, risk: c.risk,
-        topEvidence: detail.evidence[0] || null,
-        scoreBreakdown: detail.scoreBreakdown,
-        signalTypes: detail.signalTypes.length ? detail.signalTypes : [c.strategyLabel],
-      };
-    }),
-    finalPicks: final.map((c) => buildSelectionDetail(c, marketRegimeState)),
+    dailyOutput: slots.map((s) => ({
+      bucket: s.bucket, label: s.label, requested: s.requested, qualifiedCount: s.qualifiedCount,
+      picks: s.picks.map((p) => toFinal(p, s.bucket)), emptyReason: s.emptyReason,
+    })),
+    finalPicks: slots.flatMap((s) => s.picks.map((p) => toFinal(p, s.bucket))),
+    topCandidates: candidates.slice(0, SELECTION_RULES.topCandidateCount).map((c) => ({
+      symbol: c.symbol, name: c.name, sector: c.sector,
+      bucket: selectedBucket.get(c.symbol) || null,
+      strategy: c.strategy, score: c.normalizedScore, discoveryScore: c.discoveryScore,
+      dataCoverage: c.dataCoverage, confidence: c.confidence,
+      independentConfirmations: c.groups.length, confirmationSources: [...c.sources],
+      newSignalCount: c.newSignalCount, tier: tierOf(c),
+      marketCapRank: c.capRank, isLargeCap: c.isLargeCap,
+      whatChanged: c.whatChanged, pricedInVerdict: c.pricedIn.verdict,
+      gateFails: c.gate.fails,
+      risk: { decision: c.risk.decision, reason: c.risk.reason },
+      topEvidence: c.whatChanged[0] || c.factors.flow.events[0] || '새 변화 없음',
+      scoreBreakdown: scoreBreakdown(c),
+      signalTypes: [selectedBucket.get(c.symbol) ? BUCKET_LABEL[selectedBucket.get(c.symbol)] : c.isLargeCap ? 'Leader 후보' : 'Discovery 후보', ...c.groups.map((g) => g.group)],
+    })),
     rejectedCandidates: rejected.slice(0, 20).map((c) => ({ symbol: c.symbol, name: c.name, reason: c.risk.reason })),
   };
 }
