@@ -3,13 +3,15 @@
 // category: 그리드를 섹션으로 묶는 분류. usage: 이 데이터를 투자에 어떻게 쓰는지 설명(고정 텍스트).
 // 실제 수치에 따라 달라지는 해석은 js/insights.js가 실시간으로 계산한다.
 
+// group: 'primary' 3개(국내시장/기업이벤트/글로벌시장)가 Market Intelligence 행,
+// 'secondary' 3개(파생상품/ETF·지수/매크로)가 그 아래 Secondary Area 행을 이룬다.
 const CATEGORIES = [
-  { id: 'flow', label: '국내 수급 · 경보', blurb: '공매도·수급 전환·투자경보 실시간 스크리너', zone: 'primary', accent: '#1baf7a' },
-  { id: 'derivatives', label: '파생상품', blurb: '선물 미결제약정·베이시스 현황', zone: 'primary', accent: '#eda100' },
-  { id: 'corporate', label: '기업 이벤트 · 공시', blurb: '증자·전환사채·자사주·내부자 공시 캘린더', zone: 'secondary', accent: '#e87ba4' },
-  { id: 'etf', label: 'ETF · 지수', blurb: '패시브 자금 흐름과 리밸런싱 일정', zone: 'secondary', accent: '#008300' },
-  { id: 'us', label: '미국 시장', blurb: '간밤 시황과 실적 반응 브리핑', zone: 'tertiary', accent: '#4a3aa7' },
-  { id: 'macro', label: '매크로', blurb: '수출입 등 선행지표', zone: 'tertiary', accent: '#eb6834' },
+  { id: 'flow', label: '국내 수급 · 경보', blurb: '공매도·수급 전환·투자경보 실시간 스크리너', group: 'primary', accent: '#1baf7a' },
+  { id: 'corporate', label: '기업 이벤트 · 공시', blurb: '증자·전환사채·자사주·내부자 공시 캘린더', group: 'primary', accent: '#e87ba4' },
+  { id: 'us', label: '글로벌 시장', blurb: '간밤 시황과 실적 반응 브리핑', group: 'primary', accent: '#4a3aa7' },
+  { id: 'derivatives', label: '파생상품', blurb: '선물 미결제약정·베이시스 현황', group: 'secondary', accent: '#eda100' },
+  { id: 'etf', label: 'ETF · 지수', blurb: '패시브 자금 흐름과 리밸런싱 일정', group: 'secondary', accent: '#008300' },
+  { id: 'macro', label: '매크로', blurb: '수출입 등 선행지표', group: 'secondary', accent: '#eb6834' },
 ];
 
 const CARDS = [

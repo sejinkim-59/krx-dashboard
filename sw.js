@@ -1,4 +1,4 @@
-const SHELL_CACHE = 'krx-dashboard-shell-v9';
+const SHELL_CACHE = 'krx-dashboard-shell-v10';
 const SHELL_FILES = [
   './', './index.html', './css/style.css',
   './js/app.js', './js/cards.js', './js/charts.js', './js/insights.js', './js/signals.js', './js/icons.js', './js/vendor/chart.umd.js',

@@ -23,10 +23,9 @@ async function fetchJson(file) {
   return res.json();
 }
 
-const ZONES = [
-  { id: 'primary', className: 'zone-primary' },
-  { id: 'secondary', className: 'zone-secondary' },
-  { id: 'tertiary', className: 'zone-tertiary' },
+const GROUPS = [
+  { id: 'primary', label: 'Market Intelligence' },
+  { id: 'secondary', label: 'Secondary Area' },
 ];
 
 function renderGrid() {
@@ -34,24 +33,26 @@ function renderGrid() {
   const byCategory = new Map(CATEGORIES.map((c) => [c.id, []]));
   for (const card of CARDS) (byCategory.get(card.category) || []).push(card);
 
-  ZONES.forEach((zone) => {
-    const cats = CATEGORIES.filter((c) => c.zone === zone.id);
+  GROUPS.forEach((group) => {
+    const cats = CATEGORIES.filter((c) => c.group === group.id);
     if (!cats.length) return;
-    const col = document.createElement('div');
-    col.className = `terminal-zone ${zone.className}`;
+    const wrap = document.createElement('div');
+    wrap.className = `intel-group intel-group-${group.id}`;
+    wrap.innerHTML = `<div class="group-label">${group.label}</div><div class="intel-row"></div>`;
+    const row = wrap.querySelector('.intel-row');
     cats.forEach((cat) => {
       const cards = byCategory.get(cat.id);
       if (!cards || !cards.length) return;
       const section = document.createElement('section');
-      section.className = 'scan-section';
+      section.className = 'intel-section';
       section.innerHTML = `
-        <div class="scan-section-head">
-          <h2>${cat.label}</h2>
-          <p class="panel-context">${cat.blurb}</p>
+        <div class="intel-section-head">
+          <h3>${cat.label}</h3>
+          <p class="intel-subtitle">${cat.blurb}</p>
         </div>
-        <div class="scan-rows"></div>
+        <div class="intel-list"></div>
       `;
-      const inner = section.querySelector('.scan-rows');
+      const inner = section.querySelector('.intel-list');
       cards.forEach((card) => {
         const el = document.createElement('button');
         el.className = `scan-row status-${card.status}`;
@@ -67,9 +68,9 @@ function renderGrid() {
         el.addEventListener('click', () => openCard(card));
         inner.appendChild(el);
       });
-      col.appendChild(section);
+      row.appendChild(section);
     });
-    grid.appendChild(col);
+    grid.appendChild(wrap);
   });
 }
 
