@@ -4,7 +4,6 @@ const panelBody = document.getElementById('panelBody');
 const closeBtn = document.getElementById('closeBtn');
 const lastUpdatedEl = document.getElementById('lastUpdated');
 const ticker = document.getElementById('ticker');
-const marketSummary = document.getElementById('marketSummary');
 
 function fmtDateStr(s) {
   if (!s || s.length !== 8) return s || '-';
@@ -24,42 +23,53 @@ async function fetchJson(file) {
   return res.json();
 }
 
+const ZONES = [
+  { id: 'primary', className: 'zone-primary' },
+  { id: 'secondary', className: 'zone-secondary' },
+  { id: 'tertiary', className: 'zone-tertiary' },
+];
+
 function renderGrid() {
   grid.innerHTML = '';
   const byCategory = new Map(CATEGORIES.map((c) => [c.id, []]));
   for (const card of CARDS) (byCategory.get(card.category) || []).push(card);
 
-  CATEGORIES.forEach((cat) => {
-    const cards = byCategory.get(cat.id);
-    if (!cards.length) return;
-    const section = document.createElement('section');
-    section.className = 'scan-section';
-    const liveCount = cards.filter((c) => c.status === 'live').length;
-    section.innerHTML = `
-      <div class="scan-section-head">
-        <h2>${cat.label}</h2>
-        <span class="scan-section-meta">LIVE ${liveCount}/${cards.length}</span>
-      </div>
-      <div class="scan-rows"></div>
-    `;
-    const inner = section.querySelector('.scan-rows');
-    cards.forEach((card) => {
-      const el = document.createElement('button');
-      el.className = `scan-row status-${card.status}`;
-      el.innerHTML = `
-        <span class="scan-icon">${iconSvg(card.icon, 15)}</span>
-        <span class="scan-main">
-          <span class="scan-title">${card.title}</span>
-          <span class="scan-desc">${card.desc}</span>
-        </span>
-        <span class="scan-metric" data-preview-for="${card.id}">
-          ${card.status === 'live' ? '<span class="cp-sub">불러오는 중…</span>' : '<span class="cp-sub">데이터 연결 대기</span>'}
-        </span>
+  ZONES.forEach((zone) => {
+    const cats = CATEGORIES.filter((c) => c.zone === zone.id);
+    if (!cats.length) return;
+    const col = document.createElement('div');
+    col.className = `terminal-zone ${zone.className}`;
+    cats.forEach((cat) => {
+      const cards = byCategory.get(cat.id);
+      if (!cards || !cards.length) return;
+      const section = document.createElement('section');
+      section.className = 'scan-section';
+      section.innerHTML = `
+        <div class="scan-section-head">
+          <h2>${cat.label}</h2>
+          <p class="panel-context">${cat.blurb}</p>
+        </div>
+        <div class="scan-rows"></div>
       `;
-      el.addEventListener('click', () => openCard(card));
-      inner.appendChild(el);
+      const inner = section.querySelector('.scan-rows');
+      cards.forEach((card) => {
+        const el = document.createElement('button');
+        el.className = `scan-row status-${card.status}`;
+        el.innerHTML = `
+          <span class="scan-main">
+            <span class="scan-title">${card.title}</span>
+            <span class="scan-desc">${card.desc}</span>
+          </span>
+          <span class="scan-metric" data-preview-for="${card.id}">
+            ${card.status === 'live' ? '<span class="cp-sub">불러오는 중…</span>' : '<span class="cp-sub">데이터 연결 대기</span>'}
+          </span>
+        `;
+        el.addEventListener('click', () => openCard(card));
+        inner.appendChild(el);
+      });
+      col.appendChild(section);
     });
-    grid.appendChild(section);
+    grid.appendChild(col);
   });
 }
 
@@ -116,7 +126,6 @@ document.addEventListener('keydown', (e) => {
 async function loadHero() {
   try {
     const data = await fetchJson('us-market-brief.json');
-    const updatedStr = new Date(data.updated_at).toLocaleString('ko-KR');
     let tHtml = '';
     for (const r of data.instruments) {
       const cls = r.change_pct > 0 ? 'up' : r.change_pct < 0 ? 'down' : 'flat';
@@ -124,19 +133,15 @@ async function loadHero() {
       tHtml += `
         <div class="ticker-item">
           <span class="t-label">${r.label}</span>
-          <span class="t-value">${r.last != null ? Number(r.last).toLocaleString(undefined, { maximumFractionDigits: 2 }) : '-'}</span>
-          <span class="t-delta ${cls}">${r.change_pct != null ? `${sign}${r.change_pct}%` : '-'}</span>
+          <span class="t-row">
+            <span class="t-value">${r.last != null ? Number(r.last).toLocaleString(undefined, { maximumFractionDigits: 2 }) : '-'}</span>
+            <span class="t-delta ${cls}">${r.change_pct != null ? `${sign}${r.change_pct}%` : '-'}</span>
+          </span>
         </div>`;
     }
     ticker.innerHTML = tHtml;
-    marketSummary.innerHTML = `
-      <span class="ms-label">전일 미국장</span>
-      <span class="ms-text">${data.summary}</span>
-      <span class="ms-time">업데이트 ${updatedStr}</span>
-    `;
   } catch (e) {
     ticker.innerHTML = '<div class="ticker-item"><span class="t-label hero-empty">시장 데이터를 불러올 수 없습니다.</span></div>';
-    marketSummary.innerHTML = '';
   }
 }
 
@@ -170,7 +175,7 @@ async function buildPreview(card) {
     case 'treasury-stock': {
       const d = await fetchJson(card.dataFile);
       const buy = d.items.filter((i) => i.type === '취득').length;
-      return `<span class="cp-main">${d.items.length}건</span><span class="cp-sub">취득 ${buy}·처분 ${d.items.length - buy}</span>`;
+      return `<span class="cp-main">${d.items.length}건</span><span class="cp-sub">취득 <b class="cp-emph">${buy}</b> · 처분 <b class="cp-emph">${d.items.length - buy}</b></span>`;
     }
     case 'insider-plan': {
       const d = await fetchJson(card.dataFile);
@@ -193,7 +198,7 @@ async function buildPreview(card) {
       const d = await fetchJson(card.dataFile);
       const top = d.items[0];
       if (!top) return '<span class="cp-sub">데이터 없음</span>';
-      return `<span class="cp-main">${top.name}</span><span class="cp-sub">OI ${top.oi.toLocaleString()}</span>`;
+      return `<span class="cp-main">${top.name}</span><span class="cp-sub">OI <b class="cp-emph">${top.oi.toLocaleString()}</b></span>`;
     }
     case 'futures-basis': {
       const d = await fetchJson(card.dataFile);
@@ -223,7 +228,7 @@ async function buildPreview(card) {
       const d = await fetchJson(card.dataFile);
       const top = d.items[0];
       if (!top) return '<span class="cp-sub">데이터 없음</span>';
-      return `<span class="cp-main">${top.name}</span><span class="cp-sub">공매도 비중 ${top.short_ratio_pct}%</span>`;
+      return `<span class="cp-main">${top.name}</span><span class="cp-sub">공매도 비중 <b class="cp-emph">${top.short_ratio_pct}%</b></span>`;
     }
     case 'alert-screener': {
       const d = await fetchJson(card.dataFile);
@@ -235,7 +240,7 @@ async function buildPreview(card) {
       const foreign = d.investors['9000'];
       const top = foreign?.top_net_buy?.[0];
       if (!top) return '<span class="cp-sub">데이터 없음</span>';
-      return `<span class="cp-main">${top.name}</span><span class="cp-sub">외국인 순매수 1위</span>`;
+      return `<span class="cp-main">${top.name}</span><span class="cp-sub">외국인 순매수 1위 · <b class="cp-emph">${formatWonCompact(top.net)}</b></span>`;
     }
     case 'us-market-brief': {
       const d = await fetchJson(card.dataFile);

@@ -4,12 +4,12 @@
 // 실제 수치에 따라 달라지는 해석은 js/insights.js가 실시간으로 계산한다.
 
 const CATEGORIES = [
-  { id: 'flow', label: '국내 수급 · 경보', accent: '#1baf7a' },
-  { id: 'derivatives', label: '파생상품', accent: '#eda100' },
-  { id: 'corporate', label: '기업 이벤트 · 공시', accent: '#e87ba4' },
-  { id: 'etf', label: 'ETF · 지수', accent: '#008300' },
-  { id: 'us', label: '미국 시장', accent: '#4a3aa7' },
-  { id: 'macro', label: '매크로', accent: '#eb6834' },
+  { id: 'flow', label: '국내 수급 · 경보', blurb: '공매도·수급 전환·투자경보 실시간 스크리너', zone: 'primary', accent: '#1baf7a' },
+  { id: 'derivatives', label: '파생상품', blurb: '선물 미결제약정·베이시스 현황', zone: 'primary', accent: '#eda100' },
+  { id: 'corporate', label: '기업 이벤트 · 공시', blurb: '증자·전환사채·자사주·내부자 공시 캘린더', zone: 'secondary', accent: '#e87ba4' },
+  { id: 'etf', label: 'ETF · 지수', blurb: '패시브 자금 흐름과 리밸런싱 일정', zone: 'secondary', accent: '#008300' },
+  { id: 'us', label: '미국 시장', blurb: '간밤 시황과 실적 반응 브리핑', zone: 'tertiary', accent: '#4a3aa7' },
+  { id: 'macro', label: '매크로', blurb: '수출입 등 선행지표', zone: 'tertiary', accent: '#eb6834' },
 ];
 
 const CARDS = [
