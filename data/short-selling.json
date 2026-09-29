@@ -1,328 +1,328 @@
 {
-  "updated_at": "2026-09-29T05:25:45.758Z",
-  "trade_date": "20260928",
+  "updated_at": "2026-09-29T08:57:35.174Z",
+  "trade_date": "20260929",
   "note": "거래대금 상위 60종목(코스피+코스닥) 중 공매도 거래대금 비중 상위. 공매도 비중 = 당일 공매도 거래대금 / 당일 총 거래대금 x 100.",
-  "universe_size": 60,
+  "universe_size": 58,
   "items": [
     {
-      "symbol": "003670",
-      "name": "포스코퓨처엠",
-      "market": "STK",
-      "short_sell_value": 26419712700,
-      "total_trade_value": 65320820050,
-      "short_ratio_pct": 40.45
-    },
-    {
-      "symbol": "005380",
-      "name": "현대차",
-      "market": "STK",
-      "short_sell_value": 50055768000,
-      "total_trade_value": 157648300500,
-      "short_ratio_pct": 31.75
+      "symbol": "028300",
+      "name": "HLB",
+      "market": "KSQ",
+      "short_sell_value": 78071180750,
+      "total_trade_value": 283228831125,
+      "short_ratio_pct": 27.56
     },
     {
       "symbol": "373220",
       "name": "LG에너지솔루션",
       "market": "STK",
-      "short_sell_value": 24273359250,
-      "total_trade_value": 116520691000,
-      "short_ratio_pct": 20.83
-    },
-    {
-      "symbol": "012450",
-      "name": "한화에어로스페이스",
-      "market": "STK",
-      "short_sell_value": 23311445500,
-      "total_trade_value": 119183713000,
-      "short_ratio_pct": 19.56
-    },
-    {
-      "symbol": "222800",
-      "name": "심텍",
-      "market": "KSQ",
-      "short_sell_value": 15762674500,
-      "total_trade_value": 89676181700,
-      "short_ratio_pct": 17.58
-    },
-    {
-      "symbol": "034730",
-      "name": "SK",
-      "market": "STK",
-      "short_sell_value": 15016866000,
-      "total_trade_value": 90490527000,
-      "short_ratio_pct": 16.59
-    },
-    {
-      "symbol": "007660",
-      "name": "이수페타시스",
-      "market": "STK",
-      "short_sell_value": 12181503950,
-      "total_trade_value": 83243786400,
-      "short_ratio_pct": 14.63
-    },
-    {
-      "symbol": "034020",
-      "name": "두산에너빌리티",
-      "market": "STK",
-      "short_sell_value": 16649967550,
-      "total_trade_value": 129469295100,
-      "short_ratio_pct": 12.86
-    },
-    {
-      "symbol": "298040",
-      "name": "효성중공업",
-      "market": "STK",
-      "short_sell_value": 13972740500,
-      "total_trade_value": 111750178500,
-      "short_ratio_pct": 12.5
-    },
-    {
-      "symbol": "042700",
-      "name": "한미반도체",
-      "market": "STK",
-      "short_sell_value": 10142113250,
-      "total_trade_value": 82830287000,
-      "short_ratio_pct": 12.24
-    },
-    {
-      "symbol": "240810",
-      "name": "원익IPS",
-      "market": "KSQ",
-      "short_sell_value": 15902327700,
-      "total_trade_value": 131872130850,
-      "short_ratio_pct": 12.06
-    },
-    {
-      "symbol": "105560",
-      "name": "KB금융",
-      "market": "STK",
-      "short_sell_value": 16641186600,
-      "total_trade_value": 144190936750,
-      "short_ratio_pct": 11.54
-    },
-    {
-      "symbol": "196170",
-      "name": "알테오젠",
-      "market": "KSQ",
-      "short_sell_value": 7888354500,
-      "total_trade_value": 69072324750,
-      "short_ratio_pct": 11.42
-    },
-    {
-      "symbol": "267260",
-      "name": "HD현대일렉트릭",
-      "market": "STK",
-      "short_sell_value": 7977634500,
-      "total_trade_value": 70452959000,
-      "short_ratio_pct": 11.32
-    },
-    {
-      "symbol": "010950",
-      "name": "S-Oil",
-      "market": "STK",
-      "short_sell_value": 6465982050,
-      "total_trade_value": 66214111200,
-      "short_ratio_pct": 9.77
-    },
-    {
-      "symbol": "086790",
-      "name": "하나금융지주",
-      "market": "STK",
-      "short_sell_value": 7947053300,
-      "total_trade_value": 84240872700,
-      "short_ratio_pct": 9.43
-    },
-    {
-      "symbol": "000150",
-      "name": "두산",
-      "market": "STK",
-      "short_sell_value": 11646317500,
-      "total_trade_value": 134422412384,
-      "short_ratio_pct": 8.66
-    },
-    {
-      "symbol": "006400",
-      "name": "삼성SDI",
-      "market": "STK",
-      "short_sell_value": 14078268000,
-      "total_trade_value": 172826730000,
-      "short_ratio_pct": 8.15
-    },
-    {
-      "symbol": "000660",
-      "name": "SK하이닉스",
-      "market": "STK",
-      "short_sell_value": 444936158500,
-      "total_trade_value": 5910290911517,
-      "short_ratio_pct": 7.53
-    },
-    {
-      "symbol": "055550",
-      "name": "신한지주",
-      "market": "STK",
-      "short_sell_value": 7800542600,
-      "total_trade_value": 105184842250,
-      "short_ratio_pct": 7.42
-    },
-    {
-      "symbol": "000720",
-      "name": "현대건설",
-      "market": "STK",
-      "short_sell_value": 6110578500,
-      "total_trade_value": 82544596050,
-      "short_ratio_pct": 7.4
-    },
-    {
-      "symbol": "001440",
-      "name": "대한전선",
-      "market": "STK",
-      "short_sell_value": 4969970950,
-      "total_trade_value": 67874647775,
-      "short_ratio_pct": 7.32
-    },
-    {
-      "symbol": "032830",
-      "name": "삼성생명",
-      "market": "STK",
-      "short_sell_value": 7735659750,
-      "total_trade_value": 106801312920,
-      "short_ratio_pct": 7.24
-    },
-    {
-      "symbol": "066570",
-      "name": "LG전자",
-      "market": "STK",
-      "short_sell_value": 11696640500,
-      "total_trade_value": 169259168750,
-      "short_ratio_pct": 6.91
-    },
-    {
-      "symbol": "207940",
-      "name": "삼성바이오로직스",
-      "market": "STK",
-      "short_sell_value": 4621486000,
-      "total_trade_value": 67989513500,
-      "short_ratio_pct": 6.8
-    },
-    {
-      "symbol": "011070",
-      "name": "LG이노텍",
-      "market": "STK",
-      "short_sell_value": 16466723000,
-      "total_trade_value": 244699936500,
-      "short_ratio_pct": 6.73
-    },
-    {
-      "symbol": "402340",
-      "name": "SK스퀘어",
-      "market": "STK",
-      "short_sell_value": 53642705000,
-      "total_trade_value": 804706917486,
-      "short_ratio_pct": 6.67
-    },
-    {
-      "symbol": "000270",
-      "name": "기아",
-      "market": "STK",
-      "short_sell_value": 7521212800,
-      "total_trade_value": 121936481700,
-      "short_ratio_pct": 6.17
-    },
-    {
-      "symbol": "012330",
-      "name": "현대모비스",
-      "market": "STK",
-      "short_sell_value": 4488877000,
-      "total_trade_value": 77904347500,
-      "short_ratio_pct": 5.76
-    },
-    {
-      "symbol": "036930",
-      "name": "주성엔지니어링",
-      "market": "KSQ",
-      "short_sell_value": 9362571250,
-      "total_trade_value": 167652304250,
-      "short_ratio_pct": 5.58
+      "short_sell_value": 23654656250,
+      "total_trade_value": 89919366750,
+      "short_ratio_pct": 26.31
     },
     {
       "symbol": "035420",
       "name": "NAVER",
       "market": "STK",
-      "short_sell_value": 7170675800,
-      "total_trade_value": 130885265450,
-      "short_ratio_pct": 5.48
+      "short_sell_value": 24362782950,
+      "total_trade_value": 106751204300,
+      "short_ratio_pct": 22.82
     },
     {
-      "symbol": "028260",
-      "name": "삼성물산",
+      "symbol": "042660",
+      "name": "한화오션",
       "market": "STK",
-      "short_sell_value": 9112449250,
-      "total_trade_value": 176507478346,
-      "short_ratio_pct": 5.16
+      "short_sell_value": 14597565750,
+      "total_trade_value": 64814876400,
+      "short_ratio_pct": 22.52
     },
     {
-      "symbol": "096770",
-      "name": "SK이노베이션",
+      "symbol": "047040",
+      "name": "대우건설",
       "market": "STK",
-      "short_sell_value": 9129858950,
-      "total_trade_value": 180539672350,
-      "short_ratio_pct": 5.06
+      "short_sell_value": 31900185175,
+      "total_trade_value": 143582068390,
+      "short_ratio_pct": 22.22
     },
     {
-      "symbol": "028050",
-      "name": "삼성E&A",
-      "market": "STK",
-      "short_sell_value": 3755497200,
-      "total_trade_value": 77146508125,
-      "short_ratio_pct": 4.87
-    },
-    {
-      "symbol": "005930",
-      "name": "삼성전자",
-      "market": "STK",
-      "short_sell_value": 279240491500,
-      "total_trade_value": 5866079995220,
-      "short_ratio_pct": 4.76
-    },
-    {
-      "symbol": "007810",
-      "name": "코리아써키트",
-      "market": "STK",
-      "short_sell_value": 5764844750,
-      "total_trade_value": 122135616900,
-      "short_ratio_pct": 4.72
-    },
-    {
-      "symbol": "440110",
-      "name": "파두",
+      "symbol": "222800",
+      "name": "심텍",
       "market": "KSQ",
-      "short_sell_value": 3232903950,
-      "total_trade_value": 69122469550,
-      "short_ratio_pct": 4.68
+      "short_sell_value": 19129994500,
+      "total_trade_value": 86762863350,
+      "short_ratio_pct": 22.05
+    },
+    {
+      "symbol": "012450",
+      "name": "한화에어로스페이스",
+      "market": "STK",
+      "short_sell_value": 18389497000,
+      "total_trade_value": 100740637000,
+      "short_ratio_pct": 18.25
+    },
+    {
+      "symbol": "005380",
+      "name": "현대차",
+      "market": "STK",
+      "short_sell_value": 33215226250,
+      "total_trade_value": 188423882750,
+      "short_ratio_pct": 17.63
+    },
+    {
+      "symbol": "011070",
+      "name": "LG이노텍",
+      "market": "STK",
+      "short_sell_value": 21198736500,
+      "total_trade_value": 143629017000,
+      "short_ratio_pct": 14.76
+    },
+    {
+      "symbol": "034020",
+      "name": "두산에너빌리티",
+      "market": "STK",
+      "short_sell_value": 24354952650,
+      "total_trade_value": 165148301600,
+      "short_ratio_pct": 14.75
+    },
+    {
+      "symbol": "000720",
+      "name": "현대건설",
+      "market": "STK",
+      "short_sell_value": 10412524050,
+      "total_trade_value": 71017240200,
+      "short_ratio_pct": 14.66
+    },
+    {
+      "symbol": "010140",
+      "name": "삼성중공업",
+      "market": "STK",
+      "short_sell_value": 15573995400,
+      "total_trade_value": 110212377890,
+      "short_ratio_pct": 14.13
     },
     {
       "symbol": "010170",
       "name": "대한광통신",
       "market": "KSQ",
-      "short_sell_value": 7685082965,
-      "total_trade_value": 178187197430,
-      "short_ratio_pct": 4.31
+      "short_sell_value": 12863007690,
+      "total_trade_value": 106418682725,
+      "short_ratio_pct": 12.09
+    },
+    {
+      "symbol": "196170",
+      "name": "알테오젠",
+      "market": "KSQ",
+      "short_sell_value": 8582824500,
+      "total_trade_value": 72939553250,
+      "short_ratio_pct": 11.77
+    },
+    {
+      "symbol": "007660",
+      "name": "이수페타시스",
+      "market": "STK",
+      "short_sell_value": 7558469750,
+      "total_trade_value": 65741200000,
+      "short_ratio_pct": 11.5
+    },
+    {
+      "symbol": "009830",
+      "name": "한화솔루션",
+      "market": "STK",
+      "short_sell_value": 15669305500,
+      "total_trade_value": 163421768475,
+      "short_ratio_pct": 9.59
     },
     {
       "symbol": "010060",
       "name": "OCI홀딩스",
       "market": "STK",
-      "short_sell_value": 5091149750,
-      "total_trade_value": 127568781500,
-      "short_ratio_pct": 3.99
+      "short_sell_value": 6635712750,
+      "total_trade_value": 70054029500,
+      "short_ratio_pct": 9.47
     },
     {
-      "symbol": "043260",
-      "name": "성호전자",
+      "symbol": "000270",
+      "name": "기아",
+      "market": "STK",
+      "short_sell_value": 9399554550,
+      "total_trade_value": 103871561450,
+      "short_ratio_pct": 9.05
+    },
+    {
+      "symbol": "042700",
+      "name": "한미반도체",
+      "market": "STK",
+      "short_sell_value": 16175351750,
+      "total_trade_value": 180083764250,
+      "short_ratio_pct": 8.98
+    },
+    {
+      "symbol": "240810",
+      "name": "원익IPS",
       "market": "KSQ",
-      "short_sell_value": 2307870450,
-      "total_trade_value": 64277973350,
-      "short_ratio_pct": 3.59
+      "short_sell_value": 11154079750,
+      "total_trade_value": 124184611300,
+      "short_ratio_pct": 8.98
+    },
+    {
+      "symbol": "000150",
+      "name": "두산",
+      "market": "STK",
+      "short_sell_value": 7508927000,
+      "total_trade_value": 97004245000,
+      "short_ratio_pct": 7.74
+    },
+    {
+      "symbol": "051910",
+      "name": "LG화학",
+      "market": "STK",
+      "short_sell_value": 4235084250,
+      "total_trade_value": 56862085500,
+      "short_ratio_pct": 7.45
+    },
+    {
+      "symbol": "267260",
+      "name": "HD현대일렉트릭",
+      "market": "STK",
+      "short_sell_value": 5987450000,
+      "total_trade_value": 81225722000,
+      "short_ratio_pct": 7.37
+    },
+    {
+      "symbol": "000990",
+      "name": "DB하이텍",
+      "market": "STK",
+      "short_sell_value": 9895011050,
+      "total_trade_value": 137746814500,
+      "short_ratio_pct": 7.18
+    },
+    {
+      "symbol": "329180",
+      "name": "HD현대중공업",
+      "market": "STK",
+      "short_sell_value": 5846855250,
+      "total_trade_value": 81538419250,
+      "short_ratio_pct": 7.17
+    },
+    {
+      "symbol": "006400",
+      "name": "삼성SDI",
+      "market": "STK",
+      "short_sell_value": 12425815500,
+      "total_trade_value": 182064214000,
+      "short_ratio_pct": 6.82
+    },
+    {
+      "symbol": "005490",
+      "name": "POSCO홀딩스",
+      "market": "STK",
+      "short_sell_value": 4621118750,
+      "total_trade_value": 69659936000,
+      "short_ratio_pct": 6.63
+    },
+    {
+      "symbol": "000660",
+      "name": "SK하이닉스",
+      "market": "STK",
+      "short_sell_value": 331636006000,
+      "total_trade_value": 5087577666500,
+      "short_ratio_pct": 6.52
+    },
+    {
+      "symbol": "066570",
+      "name": "LG전자",
+      "market": "STK",
+      "short_sell_value": 7435984250,
+      "total_trade_value": 115450621000,
+      "short_ratio_pct": 6.44
+    },
+    {
+      "symbol": "034730",
+      "name": "SK",
+      "market": "STK",
+      "short_sell_value": 3860392000,
+      "total_trade_value": 61658710000,
+      "short_ratio_pct": 6.26
+    },
+    {
+      "symbol": "096770",
+      "name": "SK이노베이션",
+      "market": "STK",
+      "short_sell_value": 6423591450,
+      "total_trade_value": 106490917350,
+      "short_ratio_pct": 6.03
+    },
+    {
+      "symbol": "067310",
+      "name": "하나마이크론",
+      "market": "KSQ",
+      "short_sell_value": 3721004100,
+      "total_trade_value": 61858165775,
+      "short_ratio_pct": 6.02
+    },
+    {
+      "symbol": "098460",
+      "name": "고영",
+      "market": "KSQ",
+      "short_sell_value": 3305804825,
+      "total_trade_value": 56562166875,
+      "short_ratio_pct": 5.84
+    },
+    {
+      "symbol": "353200",
+      "name": "대덕전자",
+      "market": "STK",
+      "short_sell_value": 10167413650,
+      "total_trade_value": 188341250150,
+      "short_ratio_pct": 5.4
+    },
+    {
+      "symbol": "012330",
+      "name": "현대모비스",
+      "market": "STK",
+      "short_sell_value": 4224763500,
+      "total_trade_value": 80307831750,
+      "short_ratio_pct": 5.26
+    },
+    {
+      "symbol": "005930",
+      "name": "삼성전자",
+      "market": "STK",
+      "short_sell_value": 206043055750,
+      "total_trade_value": 4178187806000,
+      "short_ratio_pct": 4.93
+    },
+    {
+      "symbol": "402340",
+      "name": "SK스퀘어",
+      "market": "STK",
+      "short_sell_value": 21871844000,
+      "total_trade_value": 471578970000,
+      "short_ratio_pct": 4.64
+    },
+    {
+      "symbol": "036930",
+      "name": "주성엔지니어링",
+      "market": "KSQ",
+      "short_sell_value": 9971924250,
+      "total_trade_value": 222914273250,
+      "short_ratio_pct": 4.47
+    },
+    {
+      "symbol": "298040",
+      "name": "효성중공업",
+      "market": "STK",
+      "short_sell_value": 3448832000,
+      "total_trade_value": 79133263500,
+      "short_ratio_pct": 4.36
+    },
+    {
+      "symbol": "055550",
+      "name": "신한지주",
+      "market": "STK",
+      "short_sell_value": 3208507200,
+      "total_trade_value": 78671414850,
+      "short_ratio_pct": 4.08
     }
   ]
 }

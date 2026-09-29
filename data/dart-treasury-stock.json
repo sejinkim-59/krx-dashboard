@@ -1,10 +1,22 @@
 {
-  "updated_at": "2026-09-29T05:19:31.008Z",
+  "updated_at": "2026-09-29T08:53:30.172Z",
   "range": {
     "from": "20260915",
     "to": "20260929"
   },
   "items": [
+    {
+      "corp_name": "엠브레인",
+      "stock_code": "169330",
+      "rcept_no": "20260929000352",
+      "rcept_dt": "20260929",
+      "type": "취득",
+      "period_start": "2026년 09월 30일",
+      "period_end": "2026년 12월 29일",
+      "purpose": "주주가치 제고",
+      "method": "장내취득",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260929000352"
+    },
     {
       "corp_name": "신일전자",
       "stock_code": "002700",
@@ -40,6 +52,18 @@
       "purpose": "주가 안정 및 주주가치 제고",
       "method": "유가증권시장을 통한 장내 매수",
       "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260929000153"
+    },
+    {
+      "corp_name": "고영",
+      "stock_code": "098460",
+      "rcept_no": "20260929000505",
+      "rcept_dt": "20260929",
+      "type": "처분",
+      "period_start": "2026년 09월 30일",
+      "period_end": "2026년 12월 29일",
+      "purpose": "- 임직원 주식보상 목적 양도제한조건부주식(RSU) 지급 (416,367주)\n- 신사업 확대 및 신기술 도입을 위한 경영상 활용 (450,542주)",
+      "method": null,
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260929000505"
     },
     {
       "corp_name": "한화오션",
