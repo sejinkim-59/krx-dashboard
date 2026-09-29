@@ -32,73 +32,6 @@ function destroyIfExists(canvas) {
 }
 
 /**
- * 값의 부호(+/-)에 따라 빨강/파랑으로 칠하는 가로 막대 (베이시스, 신고가 등락 등 polarity 데이터).
- */
-function makeDivergingHBar(canvas, items, { labelKey, valueKey, unit = '%', maxItems = 15, presorted = false, fmt } = {}) {
-  destroyIfExists(canvas);
-  const sorted = presorted ? items.slice(0, maxItems) : [...items].sort((a, b) => b[valueKey] - a[valueKey]).slice(0, maxItems);
-  const format = fmt || ((v) => `${v > 0 ? '+' : ''}${v}${unit}`);
-  return new Chart(canvas, {
-    type: 'bar',
-    data: {
-      labels: sorted.map((it) => it[labelKey]),
-      datasets: [{
-        data: sorted.map((it) => it[valueKey]),
-        backgroundColor: sorted.map((it) => (it[valueKey] >= 0 ? VIZ.up : VIZ.down)),
-        borderRadius: 4,
-        maxBarThickness: 18,
-      }],
-    },
-    options: {
-      indexAxis: 'y',
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: { display: false },
-        tooltip: { callbacks: { label: (ctx) => format(ctx.parsed.x) } },
-      },
-      scales: {
-        x: { grid: { color: VIZ.gridline }, ticks: { callback: format }, border: { color: VIZ.baseline } },
-        y: { grid: { display: false }, border: { color: VIZ.baseline } },
-      },
-    },
-  });
-}
-
-/**
- * 단일 계열 크기(magnitude) 비교용 가로 막대 — 시퀀셜 블루 한 가지 색.
- */
-function makeMagnitudeHBar(canvas, items, { labelKey, valueKey, maxItems = 15, fmt = (v) => v.toLocaleString() } = {}) {
-  destroyIfExists(canvas);
-  const sorted = [...items].sort((a, b) => b[valueKey] - a[valueKey]).slice(0, maxItems);
-  return new Chart(canvas, {
-    type: 'bar',
-    data: {
-      labels: sorted.map((it) => it[labelKey]),
-      datasets: [{
-        data: sorted.map((it) => it[valueKey]),
-        backgroundColor: VIZ.down,
-        borderRadius: 4,
-        maxBarThickness: 18,
-      }],
-    },
-    options: {
-      indexAxis: 'y',
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: { display: false },
-        tooltip: { callbacks: { label: (ctx) => fmt(ctx.parsed.x) } },
-      },
-      scales: {
-        x: { grid: { color: VIZ.gridline }, ticks: { callback: fmt }, border: { color: VIZ.baseline } },
-        y: { grid: { display: false }, border: { color: VIZ.baseline } },
-      },
-    },
-  });
-}
-
-/**
  * 시간순 정렬된 여러 계열(예: 분기별)을 시퀀셜 블루 램프로 표현하는 라인차트.
  * series: [{ label, points: {x:string, y:number}[] }]  (오래된 것 -> 최신 순)
  */
@@ -162,4 +95,34 @@ function buildSparklineSvg(values, { width = 72, height = 24 } = {}) {
   return `<svg width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" fill="none">
     <polyline points="${pts.join(' ')}" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
   </svg>`;
+}
+
+/**
+ * 레퍼런스 스타일의 커스텀 랭크바 리스트 (Chart.js 없이 순수 HTML/CSS).
+ * colorMode: 'signed'(부호에 따라 빨강/파랑) | 'neutral'(단일 색, magnitude 전용)
+ */
+function renderRankBars(items, { labelKey, valueKey, fmt = (v) => v.toLocaleString(), colorMode = 'signed', maxItems = 15, presorted = false } = {}) {
+  const sorted = presorted ? items.slice(0, maxItems) : [...items].sort((a, b) => Math.abs(b[valueKey]) - Math.abs(a[valueKey])).slice(0, maxItems);
+  if (!sorted.length) return '';
+  const maxAbs = Math.max(...sorted.map((it) => Math.abs(it[valueKey])), 1e-9);
+  const rows = sorted.map((it) => {
+    const v = it[valueKey];
+    const pct = Math.max(2, (Math.abs(v) / maxAbs) * 100);
+    const cls = colorMode === 'signed' ? (v >= 0 ? 'up' : 'down') : 'neutral';
+    return `<div class="rankbar-row">
+      <span class="rankbar-label" title="${it[labelKey]}">${it[labelKey]}</span>
+      <div class="rankbar-track"><div class="rankbar-fill ${cls}" style="width:${pct}%"></div></div>
+      <span class="rankbar-value ${cls}">${fmt(v)}</span>
+    </div>`;
+  }).join('');
+  return `<div class="rankbar-list">${rows}</div>`;
+}
+
+/** hex 색을 factor(0~1)만큼 어둡게 섞은 rgb 문자열 반환 (패널 배너 그라데이션용). */
+function shade(hex, factor) {
+  const h = hex.replace('#', '');
+  const r = Math.round(parseInt(h.slice(0, 2), 16) * (1 - factor));
+  const g = Math.round(parseInt(h.slice(2, 4), 16) * (1 - factor));
+  const b = Math.round(parseInt(h.slice(4, 6), 16) * (1 - factor));
+  return `rgb(${r}, ${g}, ${b})`;
 }

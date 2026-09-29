@@ -196,16 +196,33 @@ function toneMeta(tone) {
   }
 }
 
-function renderInsightBox(items) {
-  if (!items || !items.length) return '';
-  const rows = items.map((it) => {
-    const { icon, cls } = toneMeta(it.tone);
-    return `<div class="insight-row ${cls}"><span class="insight-icon">${icon}</span><span>${it.text}</span></div>`;
-  }).join('');
-  return `<div class="insight-box"><div class="insight-title">🔍 오늘의 시사점 <span class="insight-sub">(실시간 데이터 기반 자동 해석)</span></div>${rows}</div>`;
-}
-
 function usageBox(text) {
   if (!text) return '';
   return `<div class="usage-box"><div class="usage-title">📌 이 지표, 투자에 이렇게 활용하세요</div><p>${text}</p></div>`;
+}
+
+/** 가장 중요한 시사점 1개를 헤드라인 콜아웃으로, 고정 활용법을 그 설명으로 함께 보여준다. */
+function renderHeadlineCallout(card, insightsList) {
+  const list = insightsList || [];
+  const head = list[0];
+  const tone = head ? head.tone : 'info';
+  const { icon } = toneMeta(tone);
+  const title = head ? head.text : `${card.title} 데이터를 불러왔습니다.`;
+  return `<div class="headline-callout tone-${tone}">
+    <span class="hc-icon">${icon}</span>
+    <div class="hc-body">
+      <strong class="hc-title">${title}</strong>
+      ${card.usage ? `<p>${card.usage}</p>` : ''}
+    </div>
+  </div>`;
+}
+
+/** 헤드라인으로 뽑히지 않은 나머지 시사점들을 보조 불릿으로. */
+function renderBulletSection(insightsList, titleText = '📊 함께 보면 좋은 포인트') {
+  if (!insightsList || !insightsList.length) return '';
+  const rows = insightsList.map((it) => {
+    const { cls } = toneMeta(it.tone);
+    return `<li class="bullet-row ${cls}"><span class="bullet-dot"></span><span>${it.text}</span></li>`;
+  }).join('');
+  return `<div class="bullet-section"><div class="bullet-section-title">${titleText}</div><ul class="bullet-list">${rows}</ul></div>`;
 }
