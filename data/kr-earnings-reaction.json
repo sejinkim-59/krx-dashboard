@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T22:35:54.688Z",
+  "updated_at": "2026-09-29T02:20:20.761Z",
   "note": "최근 21일 영업(잠정)실적 공정공시 기준. 반응(%)은 공시일 이후 첫 거래일(D0) 기준 D-1 종가 대비 누적 수익률.",
   "range": {
     "from": "20260908",
@@ -11,7 +11,15 @@
       "corp_name": "지역난방공사",
       "stock_code": "071320",
       "rcept_dt": "20260928",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260928800233",
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.15,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "HD현대중공업",
