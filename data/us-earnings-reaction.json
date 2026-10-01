@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-01T07:02:18.386Z",
+  "updated_at": "2026-10-01T23:48:24.929Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 11,
@@ -8,15 +8,15 @@
       "symbol": "MU",
       "name": "Micron Technology, Inc.",
       "report_date": "2026-09-30",
-      "report_time": "장후",
-      "market_cap": 1202894010000,
-      "eps": "$2.86",
+      "report_time": "미상",
+      "market_cap": 1202927960000,
+      "eps": "$33.19",
       "eps_forecast": "$31.41",
-      "surprise_pct": null,
+      "surprise_pct": 5.67,
       "reaction": {
         "D-1": 0,
         "D0": 0,
-        "D+1": null,
+        "D+1": 3.03,
         "D+2": null,
         "D+3": null
       }
@@ -26,7 +26,7 @@
       "name": "Carnival Corporation Ltd.",
       "report_date": "2026-09-29",
       "report_time": "미상",
-      "market_cap": 34391888000,
+      "market_cap": 32996732900,
       "eps": "$1.43",
       "eps_forecast": "$1.36",
       "surprise_pct": 5.15,
@@ -34,7 +34,7 @@
         "D-1": 0,
         "D0": 13.41,
         "D+1": 10.84,
-        "D+2": null,
+        "D+2": 13.23,
         "D+3": null
       }
     },
@@ -42,15 +42,15 @@
       "symbol": "JBL",
       "name": "Jabil Inc.",
       "report_date": "2026-09-30",
-      "report_time": "장전",
-      "market_cap": 33410316300,
-      "eps": "$3.12",
-      "eps_forecast": "$3.88",
-      "surprise_pct": null,
+      "report_time": "미상",
+      "market_cap": 30059225100,
+      "eps": "$4.17",
+      "eps_forecast": "$3.89",
+      "surprise_pct": 7.2,
       "reaction": {
         "D-1": 0,
         "D0": -10.03,
-        "D+1": null,
+        "D+1": -5.97,
         "D+2": null,
         "D+3": null
       }
@@ -59,15 +59,15 @@
       "symbol": "FDS",
       "name": "FactSet Research Systems Inc.",
       "report_date": "2026-09-30",
-      "report_time": "장전",
-      "market_cap": 9245974500,
-      "eps": "$4.05",
+      "report_time": "미상",
+      "market_cap": 9600918500,
+      "eps": "$4.52",
       "eps_forecast": "$4.32",
-      "surprise_pct": null,
+      "surprise_pct": 4.63,
       "reaction": {
         "D-1": 0,
         "D0": 3.84,
-        "D+1": null,
+        "D+1": 6.79,
         "D+2": null,
         "D+3": null
       }
@@ -77,7 +77,7 @@
       "name": "Jefferies Financial Group Inc.",
       "report_date": "2026-09-28",
       "report_time": "미상",
-      "market_cap": 9012910100,
+      "market_cap": 8859852800,
       "eps": "$1.09",
       "eps_forecast": "$1.04",
       "surprise_pct": 4.81,
@@ -86,7 +86,7 @@
         "D0": -1.15,
         "D+1": -2.43,
         "D+2": -4.09,
-        "D+3": null
+        "D+3": -5.1
       }
     },
     {
@@ -94,7 +94,7 @@
       "name": "CarMax Inc",
       "report_date": "2026-09-29",
       "report_time": "미상",
-      "market_cap": 8405394400,
+      "market_cap": 7820720600,
       "eps": "$1.16",
       "eps_forecast": "$0.68",
       "surprise_pct": 70.59,
@@ -102,7 +102,7 @@
         "D-1": 0,
         "D0": 4.74,
         "D+1": -2.55,
-        "D+2": null,
+        "D+2": -1.17,
         "D+3": null
       }
     },
@@ -110,15 +110,15 @@
       "symbol": "CAG",
       "name": "ConAgra Brands, Inc.",
       "report_date": "2026-09-30",
-      "report_time": "장전",
-      "market_cap": 6783355400,
-      "eps": "$0.39",
+      "report_time": "미상",
+      "market_cap": 6452108800,
+      "eps": "$0.41",
       "eps_forecast": "$0.31",
-      "surprise_pct": null,
+      "surprise_pct": 32.26,
       "reaction": {
         "D-1": 0,
         "D0": -4.88,
-        "D+1": null,
+        "D+1": -6.58,
         "D+2": null,
         "D+3": null
       }
@@ -128,7 +128,7 @@
       "name": "Vail Resorts, Inc.",
       "report_date": "2026-09-28",
       "report_time": "미상",
-      "market_cap": 5034911200,
+      "market_cap": 4888450000,
       "eps": "($5.34)",
       "eps_forecast": "($5.40)",
       "surprise_pct": 1.11,
@@ -137,7 +137,7 @@
         "D0": 1.45,
         "D+1": 3.81,
         "D+2": 0.79,
-        "D+3": null
+        "D+3": 2.12
       }
     },
     {
@@ -145,7 +145,7 @@
       "name": "Uranium Energy Corp.",
       "report_date": "2026-09-29",
       "report_time": "미상",
-      "market_cap": 4597364200,
+      "market_cap": 4683275300,
       "eps": "($0.07)",
       "eps_forecast": "($0.04)",
       "surprise_pct": -75,
@@ -153,7 +153,7 @@
         "D-1": 0,
         "D0": 0.87,
         "D+1": 2.61,
-        "D+2": null,
+        "D+2": 1.63,
         "D+3": null
       }
     },
@@ -162,7 +162,7 @@
       "name": "AAR Corp.",
       "report_date": "2026-09-28",
       "report_time": "미상",
-      "market_cap": 4297631200,
+      "market_cap": 4078506500,
       "eps": "$1.49",
       "eps_forecast": "",
       "surprise_pct": null,
@@ -171,22 +171,22 @@
         "D0": -0.88,
         "D+1": -8.06,
         "D+2": -12.61,
-        "D+3": null
+        "D+3": -13.96
       }
     },
     {
-      "symbol": "SA",
-      "name": "Seabridge Gold, Inc.",
+      "symbol": "CALM",
+      "name": "Cal-Maine Foods, Inc.",
       "report_date": "2026-09-30",
       "report_time": "미상",
-      "market_cap": 3104251140,
-      "eps": "$0.09",
+      "market_cap": 3193095940,
+      "eps": "($1.26)",
       "eps_forecast": "",
       "surprise_pct": null,
       "reaction": {
         "D-1": 0,
-        "D0": -1.36,
-        "D+1": null,
+        "D0": -0.71,
+        "D+1": -3.95,
         "D+2": null,
         "D+3": null
       }

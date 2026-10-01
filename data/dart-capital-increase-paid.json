@@ -1,10 +1,30 @@
 {
-  "updated_at": "2026-10-01T06:55:37.024Z",
+  "updated_at": "2026-10-01T23:44:37.312Z",
   "range": {
-    "from": "20260917",
-    "to": "20261001"
+    "from": "20260918",
+    "to": "20261002"
   },
   "items": [
+    {
+      "corp_name": "핑거",
+      "stock_code": "163730",
+      "rcept_no": "20261001900546",
+      "rcept_dt": "20261001",
+      "method": null,
+      "new_shares": null,
+      "record_date": null,
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261001900546"
+    },
+    {
+      "corp_name": "강남역1307피에프브이",
+      "stock_code": "",
+      "rcept_no": "20261001000507",
+      "rcept_dt": "20261001",
+      "method": null,
+      "new_shares": null,
+      "record_date": null,
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261001000507"
+    },
     {
       "corp_name": "다보링크",
       "stock_code": "340360",
@@ -21,7 +41,7 @@
       "rcept_no": "20260930000823",
       "rcept_dt": "20260930",
       "method": "제3자배정증자",
-      "new_shares": "2,049,180",
+      "new_shares": "1,954,397",
       "record_date": null,
       "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260930000823"
     },
@@ -314,36 +334,6 @@
       "new_shares": null,
       "record_date": null,
       "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260918000002"
-    },
-    {
-      "corp_name": "오아시스",
-      "stock_code": "",
-      "rcept_no": "20260917000101",
-      "rcept_dt": "20260917",
-      "method": "제3자배정증자",
-      "new_shares": "647,752",
-      "record_date": null,
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260917000101"
-    },
-    {
-      "corp_name": "지어소프트",
-      "stock_code": "051160",
-      "rcept_no": "20260917900175",
-      "rcept_dt": "20260917",
-      "method": null,
-      "new_shares": null,
-      "record_date": null,
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260917900175"
-    },
-    {
-      "corp_name": "한중엔시에스",
-      "stock_code": "107640",
-      "rcept_no": "20260917900147",
-      "rcept_dt": "20260917",
-      "method": null,
-      "new_shares": null,
-      "record_date": null,
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260917900147"
     }
   ]
 }

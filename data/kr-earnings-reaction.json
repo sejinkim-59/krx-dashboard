@@ -1,41 +1,74 @@
 {
-  "updated_at": "2026-10-01T07:06:29.099Z",
+  "updated_at": "2026-10-01T23:52:04.093Z",
   "note": "최근 21일 영업(잠정)실적 공정공시 기준. 반응(%)은 공시일 이후 첫 거래일(D0) 기준 D-1 종가 대비 누적 수익률.",
   "range": {
-    "from": "20260910",
-    "to": "20261001"
+    "from": "20260911",
+    "to": "20261002"
   },
-  "count": 10,
+  "count": 8,
   "items": [
     {
       "corp_name": "현대자동차",
       "stock_code": "005380",
       "rcept_dt": "20261001",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261001800412",
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.16,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "샤페론",
       "stock_code": "378800",
       "rcept_dt": "20261001",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261001900342",
       "reaction": null
     },
     {
       "corp_name": "롯데관광개발",
       "stock_code": "032350",
       "rcept_dt": "20261001",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261001800355",
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.73,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "KG모빌리티",
       "stock_code": "003620",
       "rcept_dt": "20261001",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261001800360",
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.2,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "기아",
       "stock_code": "000270",
       "rcept_dt": "20261001",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261001800325",
+      "reaction": {
+        "D-1": 0,
+        "D0": 0.44,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "지역난방공사",
@@ -47,7 +80,7 @@
         "D0": 1.15,
         "D+1": 1.41,
         "D+2": 0.64,
-        "D+3": null,
+        "D+3": 0.13,
         "D+4": null
       }
     },
@@ -77,34 +110,6 @@
         "D+2": -9.03,
         "D+3": -4.65,
         "D+4": -7.66
-      }
-    },
-    {
-      "corp_name": "이마트",
-      "stock_code": "139480",
-      "rcept_dt": "20260910",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260910800150",
-      "reaction": {
-        "D-1": 0,
-        "D0": -1.47,
-        "D+1": -1.73,
-        "D+2": 0,
-        "D+3": -1.07,
-        "D+4": -2.27
-      }
-    },
-    {
-      "corp_name": "오리온",
-      "stock_code": "271560",
-      "rcept_dt": "20260910",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260910800130",
-      "reaction": {
-        "D-1": 0,
-        "D0": 0.08,
-        "D+1": -0.58,
-        "D+2": -3.92,
-        "D+3": -3.33,
-        "D+4": -7.17
       }
     }
   ]
