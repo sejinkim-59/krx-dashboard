@@ -1,39 +1,27 @@
 {
-  "updated_at": "2026-09-30T21:19:52.160Z",
+  "updated_at": "2026-10-01T00:51:31.757Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
-  "count": 5,
+  "count": 3,
   "items": [
     {
-      "symbol": "CRWD",
-      "close": 264.75,
-      "day_change_pct": 0.77,
-      "pct_above_prior_window": 0.77
+      "symbol": "ADI",
+      "close": 398.22,
+      "day_change_pct": 0.71,
+      "pct_above_prior_window": 0.71
     },
     {
       "symbol": "MRVL",
-      "close": 264.21,
-      "day_change_pct": 0.36,
-      "pct_above_prior_window": 0.36
+      "close": 263.27,
+      "day_change_pct": 4.51,
+      "pct_above_prior_window": 0.35
     },
     {
-      "symbol": "PANW",
-      "close": 397.31,
-      "day_change_pct": 2.29,
-      "pct_above_prior_window": 0.33
-    },
-    {
-      "symbol": "WBD",
-      "close": 30.95,
-      "day_change_pct": 0.32,
-      "pct_above_prior_window": 0.16
-    },
-    {
-      "symbol": "FTNT",
-      "close": 178.76,
-      "day_change_pct": 1.59,
-      "pct_above_prior_window": 0.01
+      "symbol": "CRWD",
+      "close": 262.74,
+      "day_change_pct": 1.35,
+      "pct_above_prior_window": 0.1
     }
   ]
 }

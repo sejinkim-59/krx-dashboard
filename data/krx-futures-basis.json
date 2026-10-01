@@ -1,409 +1,409 @@
 {
-  "updated_at": "2026-09-30T21:14:35.015Z",
-  "data_date": "20260929",
+  "updated_at": "2026-10-01T00:42:29.598Z",
+  "data_date": "20260930",
   "note": "베이시스 = 선물종가 - 현물가. 콘탱고(+) 상위 20 / 백워데이션(-) 상위 20.",
   "contango": [
     {
-      "symbol": "ACY73000",
-      "name": "한온시스템 F 202703",
-      "product": "한온시스템 선물",
-      "futures_price": 3500,
-      "spot_price": 3200,
-      "basis": 300,
-      "basis_pct": 9.375,
-      "volume": 1
+      "symbol": "ADT6B000",
+      "name": "CJ ENM     F 202611",
+      "product": "CJ ENM 선물",
+      "futures_price": 38250,
+      "spot_price": 36800,
+      "basis": 1450,
+      "basis_pct": 3.94,
+      "volume": 6
     },
     {
       "symbol": "A566B000",
       "name": "NAVER      F 202611",
       "product": "NAVER 선물",
       "futures_price": 200500,
-      "spot_price": 194800,
-      "basis": 5700,
-      "basis_pct": 2.926,
-      "volume": 265
+      "spot_price": 193700,
+      "basis": 6800,
+      "basis_pct": 3.511,
+      "volume": 44
     },
     {
-      "symbol": "ACM6B000",
-      "name": "원익홀딩스 F 202611",
-      "product": "원익홀딩스 선물",
-      "futures_price": 27350,
-      "spot_price": 26600,
-      "basis": 750,
-      "basis_pct": 2.82,
-      "volume": 2
+      "symbol": "A2T6A000",
+      "name": "네이처셀   F 202610",
+      "product": "네이처셀 선물",
+      "futures_price": 24850,
+      "spot_price": 24150,
+      "basis": 700,
+      "basis_pct": 2.899,
+      "volume": 1922
     },
     {
-      "symbol": "AGF6B000",
-      "name": "피엔티     F 202611",
-      "product": "피엔티 선물",
-      "futures_price": 29300,
-      "spot_price": 28500,
-      "basis": 800,
-      "basis_pct": 2.807,
-      "volume": 1
-    },
-    {
-      "symbol": "A3C6A000",
-      "name": "에이비엘바 F 202610",
-      "product": "에이비엘바이오 선물",
-      "futures_price": 50500,
-      "spot_price": 49300,
-      "basis": 1200,
-      "basis_pct": 2.434,
-      "volume": 2710
-    },
-    {
-      "symbol": "A3H6A000",
-      "name": "펩트론     F 202610",
-      "product": "펩트론 선물",
-      "futures_price": 135000,
-      "spot_price": 131900,
-      "basis": 3100,
-      "basis_pct": 2.35,
-      "volume": 4056
-    },
-    {
-      "symbol": "ABB6B000",
-      "name": "롯데케미칼 F 202611",
-      "product": "롯데케미칼 선물",
-      "futures_price": 61200,
-      "spot_price": 59800,
-      "basis": 1400,
-      "basis_pct": 2.341,
-      "volume": 11
-    },
-    {
-      "symbol": "AGB6A000",
-      "name": "HK이노엔   F 202610",
-      "product": "HK이노엔 선물",
-      "futures_price": 40500,
-      "spot_price": 39650,
-      "basis": 850,
-      "basis_pct": 2.144,
-      "volume": 6631
-    },
-    {
-      "symbol": "A2S6B000",
-      "name": "HLB        F 202611",
-      "product": "HLB 선물",
-      "futures_price": 41000,
-      "spot_price": 40150,
-      "basis": 850,
-      "basis_pct": 2.117,
-      "volume": 1024
-    },
-    {
-      "symbol": "AF96B000",
-      "name": "SK바이오사 F 202611",
-      "product": "SK바이오사이언스 선물",
-      "futures_price": 36550,
-      "spot_price": 35900,
-      "basis": 650,
-      "basis_pct": 1.811,
-      "volume": 1
-    },
-    {
-      "symbol": "AD46A000",
-      "name": "GS리테일   F 202610",
-      "product": "GS리테일 선물",
-      "futures_price": 23250,
-      "spot_price": 22950,
-      "basis": 300,
-      "basis_pct": 1.307,
-      "volume": 429
-    },
-    {
-      "symbol": "A506C000",
-      "name": "SK하이닉스 F 202612",
-      "product": "SK하이닉스 선물",
-      "futures_price": 1787000,
-      "spot_price": 1765000,
-      "basis": 22000,
-      "basis_pct": 1.246,
-      "volume": 5
-    },
-    {
-      "symbol": "AGD6A000",
-      "name": "클래시스   F 202610",
-      "product": "클래시스 선물",
-      "futures_price": 31100,
-      "spot_price": 30750,
-      "basis": 350,
-      "basis_pct": 1.138,
-      "volume": 2144
-    },
-    {
-      "symbol": "AHD6A000",
-      "name": "코오롱인더 F 202610",
-      "product": "코오롱인더스트리 선물",
-      "futures_price": 55300,
-      "spot_price": 54700,
-      "basis": 600,
-      "basis_pct": 1.097,
-      "volume": 2359
-    },
-    {
-      "symbol": "ABF6B000",
-      "name": "삼성중공업 F 202611",
-      "product": "삼성중공업 선물",
-      "futures_price": 19540,
-      "spot_price": 19330,
-      "basis": 210,
-      "basis_pct": 1.086,
-      "volume": 1081
-    },
-    {
-      "symbol": "A3N6A000",
-      "name": "HD건설기계 F 202610",
-      "product": "HD건설기계 선물",
-      "futures_price": 126100,
-      "spot_price": 124800,
-      "basis": 1300,
-      "basis_pct": 1.042,
-      "volume": 986
-    },
-    {
-      "symbol": "ACF6A000",
-      "name": "카카오     F 202610",
-      "product": "카카오 선물",
-      "futures_price": 34050,
-      "spot_price": 33700,
-      "basis": 350,
-      "basis_pct": 1.039,
-      "volume": 32666
-    },
-    {
-      "symbol": "ACF6B000",
-      "name": "카카오     F 202611",
-      "product": "카카오 선물",
-      "futures_price": 34050,
-      "spot_price": 33700,
-      "basis": 350,
-      "basis_pct": 1.039,
-      "volume": 167
-    },
-    {
-      "symbol": "A476B000",
-      "name": "LG화학     F 202611",
-      "product": "LG화학 선물",
-      "futures_price": 252500,
-      "spot_price": 250000,
-      "basis": 2500,
-      "basis_pct": 1,
-      "volume": 20
-    },
-    {
-      "symbol": "A166B000",
-      "name": "현대차     F 202611",
-      "product": "현대차 선물",
-      "futures_price": 353500,
-      "spot_price": 350000,
-      "basis": 3500,
-      "basis_pct": 1,
-      "volume": 336
-    }
-  ],
-  "backwardation": [
-    {
-      "symbol": "A3W6B000",
-      "name": "오름테라퓨 F 202611",
-      "product": "오름테라퓨틱 선물",
-      "futures_price": 21700,
-      "spot_price": 22500,
-      "basis": -800,
-      "basis_pct": -3.556,
-      "volume": 1
-    },
-    {
-      "symbol": "A2M6B000",
-      "name": "삼성에피스 F 202611",
-      "product": "삼성에피스홀딩스 선물",
-      "futures_price": 327500,
-      "spot_price": 339500,
-      "basis": -12000,
-      "basis_pct": -3.535,
-      "volume": 1
-    },
-    {
-      "symbol": "A3F6A000",
-      "name": "케어젠     F 202610",
-      "product": "케어젠 선물",
-      "futures_price": 40300,
-      "spot_price": 41700,
-      "basis": -1400,
-      "basis_pct": -3.357,
-      "volume": 674
-    },
-    {
-      "symbol": "ACE6B000",
-      "name": "현대해상   F 202611",
-      "product": "현대해상 선물",
-      "futures_price": 48500,
-      "spot_price": 50000,
-      "basis": -1500,
-      "basis_pct": -3,
-      "volume": 5
+      "symbol": "AGP6A000",
+      "name": "금호타이어 F 202610",
+      "product": "금호타이어 선물",
+      "futures_price": 6850,
+      "spot_price": 6670,
+      "basis": 180,
+      "basis_pct": 2.699,
+      "volume": 16864
     },
     {
       "symbol": "AC06B000",
       "name": "OCI홀딩스  F 202611",
       "product": "오씨아이홀딩스 선물",
-      "futures_price": 210500,
-      "spot_price": 216500,
-      "basis": -6000,
-      "basis_pct": -2.771,
-      "volume": 26
+      "futures_price": 229500,
+      "spot_price": 223500,
+      "basis": 6000,
+      "basis_pct": 2.685,
+      "volume": 7
     },
     {
-      "symbol": "AHL6B000",
-      "name": "넥스틴     F 202611",
-      "product": "넥스틴 선물",
-      "futures_price": 33450,
-      "spot_price": 34400,
-      "basis": -950,
-      "basis_pct": -2.762,
+      "symbol": "AEH6A000",
+      "name": "팬오션     F 202610",
+      "product": "팬오션 선물",
+      "futures_price": 5910,
+      "spot_price": 5770,
+      "basis": 140,
+      "basis_pct": 2.426,
+      "volume": 46522
+    },
+    {
+      "symbol": "A1V6B000",
+      "name": "HD마린솔루 F 202611",
+      "product": "HD현대마린솔루션 선물",
+      "futures_price": 243000,
+      "spot_price": 238000,
+      "basis": 5000,
+      "basis_pct": 2.101,
       "volume": 2
+    },
+    {
+      "symbol": "AG66A000",
+      "name": "현대로템   F 202610",
+      "product": "현대로템 선물",
+      "futures_price": 113800,
+      "spot_price": 111600,
+      "basis": 2200,
+      "basis_pct": 1.971,
+      "volume": 19738
+    },
+    {
+      "symbol": "A206A000",
+      "name": "현대모비스 F 202610",
+      "product": "현대모비스 선물",
+      "futures_price": 374000,
+      "spot_price": 367000,
+      "basis": 7000,
+      "basis_pct": 1.907,
+      "volume": 9890
+    },
+    {
+      "symbol": "A0X6B000",
+      "name": "풍산       F 202611",
+      "product": "풍산 선물",
+      "futures_price": 79000,
+      "spot_price": 77600,
+      "basis": 1400,
+      "basis_pct": 1.804,
+      "volume": 1
+    },
+    {
+      "symbol": "AFG6A000",
+      "name": "F&F        F 202610",
+      "product": "F&F 선물",
+      "futures_price": 69800,
+      "spot_price": 68600,
+      "basis": 1200,
+      "basis_pct": 1.749,
+      "volume": 1016
+    },
+    {
+      "symbol": "A4B6A000",
+      "name": "PSK홀딩스  F 202610",
+      "product": "PSK홀딩스 선물",
+      "futures_price": 181700,
+      "spot_price": 178600,
+      "basis": 3100,
+      "basis_pct": 1.736,
+      "volume": 363
+    },
+    {
+      "symbol": "AFF6B000",
+      "name": "SK바이오팜 F 202611",
+      "product": "SK바이오팜 선물",
+      "futures_price": 75600,
+      "spot_price": 74400,
+      "basis": 1200,
+      "basis_pct": 1.613,
+      "volume": 18
+    },
+    {
+      "symbol": "AHX6A000",
+      "name": "OCI        F 202610",
+      "product": "OCI 선물",
+      "futures_price": 76800,
+      "spot_price": 75600,
+      "basis": 1200,
+      "basis_pct": 1.587,
+      "volume": 366
+    },
+    {
+      "symbol": "AFK6A000",
+      "name": "메리츠금융 F 202610",
+      "product": "메리츠금융지주 선물",
+      "futures_price": 128300,
+      "spot_price": 126300,
+      "basis": 2000,
+      "basis_pct": 1.584,
+      "volume": 3321
+    },
+    {
+      "symbol": "AD46A000",
+      "name": "GS리테일   F 202610",
+      "product": "GS리테일 선물",
+      "futures_price": 22800,
+      "spot_price": 22450,
+      "basis": 350,
+      "basis_pct": 1.559,
+      "volume": 997
+    },
+    {
+      "symbol": "A3G6A000",
+      "name": "테크윙     F 202610",
+      "product": "테크윙 선물",
+      "futures_price": 52700,
+      "spot_price": 51900,
+      "basis": 800,
+      "basis_pct": 1.541,
+      "volume": 4207
+    },
+    {
+      "symbol": "ACQ6A000",
+      "name": "와이지엔터 F 202610",
+      "product": "와이지엔터 선물",
+      "futures_price": 43550,
+      "spot_price": 42900,
+      "basis": 650,
+      "basis_pct": 1.515,
+      "volume": 2803
+    },
+    {
+      "symbol": "A1Q6B000",
+      "name": "에이피알   F 202611",
+      "product": "에이피알 선물",
+      "futures_price": 371500,
+      "spot_price": 366000,
+      "basis": 5500,
+      "basis_pct": 1.503,
+      "volume": 2
+    },
+    {
+      "symbol": "AHP6B000",
+      "name": "유진테크   F 202611",
+      "product": "유진테크 선물",
+      "futures_price": 170100,
+      "spot_price": 167600,
+      "basis": 2500,
+      "basis_pct": 1.492,
+      "volume": 2
+    }
+  ],
+  "backwardation": [
+    {
+      "symbol": "A0T6B000",
+      "name": "이수스페셜 F 202611",
+      "product": "이수스페셜티케미컬 선물",
+      "futures_price": 73000,
+      "spot_price": 79700,
+      "basis": -6700,
+      "basis_pct": -8.407,
+      "volume": 2
+    },
+    {
+      "symbol": "A3R6B000",
+      "name": "서진시스템 F 202611",
+      "product": "서진시스템 선물",
+      "futures_price": 36850,
+      "spot_price": 38400,
+      "basis": -1550,
+      "basis_pct": -4.036,
+      "volume": 54
     },
     {
       "symbol": "A1M6B000",
       "name": "코미코     F 202611",
       "product": "코미코 선물",
-      "futures_price": 32800,
-      "spot_price": 33600,
-      "basis": -800,
-      "basis_pct": -2.381,
-      "volume": 1
-    },
-    {
-      "symbol": "AGQ6A000",
-      "name": "녹십자     F 202610",
-      "product": "녹십자 선물",
-      "futures_price": 120500,
-      "spot_price": 123200,
-      "basis": -2700,
-      "basis_pct": -2.192,
-      "volume": 1109
-    },
-    {
-      "symbol": "A2K6B000",
-      "name": "LG씨엔에스 F 202611",
-      "product": "LG씨엔에스 선물",
-      "futures_price": 67800,
-      "spot_price": 69300,
-      "basis": -1500,
-      "basis_pct": -2.165,
-      "volume": 1
-    },
-    {
-      "symbol": "AHN6B000",
-      "name": "원익QnC    F 202611",
-      "product": "원익큐엔씨 선물",
-      "futures_price": 29200,
-      "spot_price": 29800,
-      "basis": -600,
-      "basis_pct": -2.013,
-      "volume": 10
-    },
-    {
-      "symbol": "A1G6A000",
-      "name": "솔브레인홀 F 202610",
-      "product": "솔브레인홀딩스 선물",
-      "futures_price": 40750,
-      "spot_price": 41550,
-      "basis": -800,
-      "basis_pct": -1.925,
-      "volume": 1397
-    },
-    {
-      "symbol": "A456B000",
-      "name": "LG디스플레 F 202611",
-      "product": "LG디스플레이 선물",
-      "futures_price": 8180,
-      "spot_price": 8340,
-      "basis": -160,
-      "basis_pct": -1.918,
-      "volume": 232
+      "futures_price": 33100,
+      "spot_price": 34050,
+      "basis": -950,
+      "basis_pct": -2.79,
+      "volume": 30
     },
     {
       "symbol": "A1L6A000",
       "name": "미원상사   F 202610",
       "product": "미원상사 선물",
-      "futures_price": 134400,
-      "spot_price": 137000,
-      "basis": -2600,
-      "basis_pct": -1.898,
-      "volume": 564
+      "futures_price": 134000,
+      "spot_price": 136800,
+      "basis": -2800,
+      "basis_pct": -2.047,
+      "volume": 1395
+    },
+    {
+      "symbol": "A3S6B000",
+      "name": "성호전자   F 202611",
+      "product": "성호전자 선물",
+      "futures_price": 26000,
+      "spot_price": 26450,
+      "basis": -450,
+      "basis_pct": -1.701,
+      "volume": 3
+    },
+    {
+      "symbol": "A3H6A000",
+      "name": "펩트론     F 202610",
+      "product": "펩트론 선물",
+      "futures_price": 129400,
+      "spot_price": 131600,
+      "basis": -2200,
+      "basis_pct": -1.672,
+      "volume": 1445
+    },
+    {
+      "symbol": "AHG6A000",
+      "name": "HS효성첨단 F 202610",
+      "product": "HS효성첨단소재 선물",
+      "futures_price": 159900,
+      "spot_price": 162100,
+      "basis": -2200,
+      "basis_pct": -1.357,
+      "volume": 182
+    },
+    {
+      "symbol": "A3V6A000",
+      "name": "에임드바이 F 202610",
+      "product": "에임드바이오 선물",
+      "futures_price": 22050,
+      "spot_price": 22350,
+      "basis": -300,
+      "basis_pct": -1.342,
+      "volume": 1037
+    },
+    {
+      "symbol": "A146B000",
+      "name": "KT         F 202611",
+      "product": "KT 선물",
+      "futures_price": 51600,
+      "spot_price": 52300,
+      "basis": -700,
+      "basis_pct": -1.338,
+      "volume": 48
+    },
+    {
+      "symbol": "AGA6A000",
+      "name": "에스티팜   F 202610",
+      "product": "에스티팜 선물",
+      "futures_price": 90500,
+      "spot_price": 91700,
+      "basis": -1200,
+      "basis_pct": -1.309,
+      "volume": 741
+    },
+    {
+      "symbol": "ADR6A000",
+      "name": "컴투스     F 202610",
+      "product": "컴투스 선물",
+      "futures_price": 36250,
+      "spot_price": 36700,
+      "basis": -450,
+      "basis_pct": -1.226,
+      "volume": 975
+    },
+    {
+      "symbol": "A2D6A000",
+      "name": "솔브레인   F 202610",
+      "product": "솔브레인 선물",
+      "futures_price": 403000,
+      "spot_price": 408000,
+      "basis": -5000,
+      "basis_pct": -1.225,
+      "volume": 981
+    },
+    {
+      "symbol": "A2B6A000",
+      "name": "ISC        F 202610",
+      "product": "ISC 선물",
+      "futures_price": 211000,
+      "spot_price": 213500,
+      "basis": -2500,
+      "basis_pct": -1.171,
+      "volume": 2898
+    },
+    {
+      "symbol": "A3S6A000",
+      "name": "성호전자   F 202610",
+      "product": "성호전자 선물",
+      "futures_price": 26150,
+      "spot_price": 26450,
+      "basis": -300,
+      "basis_pct": -1.134,
+      "volume": 14347
+    },
+    {
+      "symbol": "A1F6B000",
+      "name": "두산테스나 F 202611",
+      "product": "두산테스나 선물",
+      "futures_price": 96600,
+      "spot_price": 97700,
+      "basis": -1100,
+      "basis_pct": -1.126,
+      "volume": 2
+    },
+    {
+      "symbol": "A1G6A000",
+      "name": "솔브레인홀 F 202610",
+      "product": "솔브레인홀딩스 선물",
+      "futures_price": 41650,
+      "spot_price": 42100,
+      "basis": -450,
+      "basis_pct": -1.069,
+      "volume": 1125
+    },
+    {
+      "symbol": "A2A6B000",
+      "name": "한국카본   F 202611",
+      "product": "한국카본 선물",
+      "futures_price": 19850,
+      "spot_price": 20050,
+      "basis": -200,
+      "basis_pct": -0.998,
+      "volume": 6
+    },
+    {
+      "symbol": "A0C6A000",
+      "name": "대웅       F 202610",
+      "product": "대웅 선물",
+      "futures_price": 14920,
+      "spot_price": 15070,
+      "basis": -150,
+      "basis_pct": -0.995,
+      "volume": 2394
     },
     {
       "symbol": "ACL6A000",
       "name": "씨젠       F 202610",
       "product": "씨젠 선물",
-      "futures_price": 33100,
-      "spot_price": 33700,
-      "basis": -600,
-      "basis_pct": -1.78,
-      "volume": 2874
+      "futures_price": 35100,
+      "spot_price": 35450,
+      "basis": -350,
+      "basis_pct": -0.987,
+      "volume": 8641
     },
     {
-      "symbol": "AEX6A000",
-      "name": "카카오게임 F 202610",
-      "product": "카카오게임즈 선물",
-      "futures_price": 9360,
-      "spot_price": 9520,
-      "basis": -160,
-      "basis_pct": -1.681,
-      "volume": 4627
-    },
-    {
-      "symbol": "A426B000",
-      "name": "CJ         F 202611",
-      "product": "CJ 선물",
-      "futures_price": 134500,
-      "spot_price": 136800,
-      "basis": -2300,
-      "basis_pct": -1.681,
-      "volume": 7
-    },
-    {
-      "symbol": "AHV6B000",
-      "name": "하나머티리 F 202611",
-      "product": "하나머티리얼즈 선물",
-      "futures_price": 58800,
-      "spot_price": 59800,
-      "basis": -1000,
-      "basis_pct": -1.672,
-      "volume": 1
-    },
-    {
-      "symbol": "A326B000",
-      "name": "현대제철   F 202611",
-      "product": "현대제철 선물",
-      "futures_price": 29500,
-      "spot_price": 30000,
-      "basis": -500,
-      "basis_pct": -1.667,
-      "volume": 1
-    },
-    {
-      "symbol": "AB36B000",
-      "name": "고려아연   F 202611",
-      "product": "고려아연 선물",
-      "futures_price": 1047000,
-      "spot_price": 1064000,
-      "basis": -17000,
-      "basis_pct": -1.598,
-      "volume": 5
-    },
-    {
-      "symbol": "A1X6A000",
-      "name": "미원에스씨 F 202610",
-      "product": "미원에스씨 선물",
-      "futures_price": 130500,
-      "spot_price": 132600,
-      "basis": -2100,
-      "basis_pct": -1.584,
-      "volume": 1190
+      "symbol": "AHN6A000",
+      "name": "원익QnC    F 202610",
+      "product": "원익큐엔씨 선물",
+      "futures_price": 30250,
+      "spot_price": 30550,
+      "basis": -300,
+      "basis_pct": -0.982,
+      "volume": 5591
     }
   ]
 }
