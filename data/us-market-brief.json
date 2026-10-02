@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-02T04:27:54.437Z",
+  "updated_at": "2026-10-02T10:45:17.200Z",
   "summary": "전일 미국 증시는 S&P500 0.19% 상승, 나스닥 0.04% 상승, 다우 0.04% 상승으로 마감했습니다.",
   "instruments": [
     {
@@ -23,8 +23,8 @@
     {
       "symbol": "^VIX",
       "label": "VIX(변동성지수)",
-      "last": 16.389999389648438,
-      "change_pct": 0.31
+      "last": 16.010000228881836,
+      "change_pct": -2.32
     },
     {
       "symbol": "^TNX",
@@ -35,20 +35,20 @@
     {
       "symbol": "KRW=X",
       "label": "원/달러 환율",
-      "last": 1357.0799560546875,
-      "change_pct": 0.02
+      "last": 1349.1600341796875,
+      "change_pct": -0.57
     },
     {
       "symbol": "CL=F",
       "label": "WTI 원유",
-      "last": 92.43000030517578,
-      "change_pct": -0.47
+      "last": 89.36000061035156,
+      "change_pct": -3.78
     },
     {
       "symbol": "GC=F",
       "label": "금 선물",
-      "last": 4214.5,
-      "change_pct": 0.29
+      "last": 4208,
+      "change_pct": 0.14
     }
   ]
 }
