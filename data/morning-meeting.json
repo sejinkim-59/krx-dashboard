@@ -1,16 +1,16 @@
 {
   "date": "20261003",
-  "generated_at": "2026-10-02T16:44:54.754Z",
+  "generated_at": "2026-10-02T21:25:09.598Z",
   "engineVersion": "v0.2",
   "objective": "NEW INFORMATION + CHANGE + CATALYST + CONFIRMATION — 오늘 새롭게 연구할 가치가 생긴 종목을 조기 발견",
   "methodologyNote": "시장/섹터 상대강도는 공식 지수가 아니라 가격 데이터 보유 종목의 동일가중 평균(proxy)입니다. Earnings/Revision Factor는 컨센서스 Provider 미연결로 항상 제외(MISSING_DATA)됩니다. 시총 순위는 KIS 시세를 조회한 종목(관심종목 + Discovery 추가조회) 안에서의 순위입니다. 수급 전환의 발생 시점은 \"최근 3거래일 vs 직전 5거래일\" 창 비교라 일 단위 날짜가 아닌 창 단위입니다. 종목 단위로 연결되지 않은 Catalyst: Investor Relations 일정, Large Contract(단일판매·공급계약), Index Rebalancing (정기변경 월 주기만 수집, 종목별 편입·편출 예고 없음), Major Customer Event, Policy Event, Share Cancellation(소각).",
   "marketRegime": {
     "state": "Risk-on",
     "evidence": [
-      "VIX -4.82%",
-      "S&P500 +0.75%",
-      "NASDAQ +1.26%",
-      "USD/KRW -0.79%"
+      "VIX -6.59%",
+      "S&P500 +0.73%",
+      "NASDAQ +1.19%",
+      "USD/KRW -1.33%"
     ],
     "strategyPreference": [
       "DISCOVERY",
@@ -1278,7 +1278,7 @@
       "whatChanged": [
         "MA20이 MA60을 상향돌파 (2026-09-30, 2거래일 전)",
         "종가가 MA20 위로 회복 (2026-09-16, 10거래일 전)",
-        "새 정보: MU(메모리 직접 경쟁사) 2026-09-30 실적 — EPS 서프라이즈 +5.67%, 주가 +1.43% (2거래일 전)"
+        "새 정보: MU(메모리 직접 경쟁사) 2026-09-30 실적 — EPS 서프라이즈 +5.67%, 주가 +0.92% (2거래일 전)"
       ],
       "pricedInVerdict": "unclear",
       "gateFails": [],
@@ -1413,7 +1413,7 @@
       "whatChanged": [
         "MA20이 MA60을 상향돌파 (2026-09-28, 4거래일 전)",
         "종가가 MA20 위로 회복 (2026-09-18, 8거래일 전)",
-        "새 정보: MU(메모리 직접 경쟁사) 2026-09-30 실적 — EPS 서프라이즈 +5.67%, 주가 +1.43% (2거래일 전)"
+        "새 정보: MU(메모리 직접 경쟁사) 2026-09-30 실적 — EPS 서프라이즈 +5.67%, 주가 +0.92% (2거래일 전)"
       ],
       "pricedInVerdict": "unclear",
       "gateFails": [],
