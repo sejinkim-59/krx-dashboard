@@ -1,73 +1,8 @@
 {
-  "updated_at": "2026-10-01T23:52:22.305Z",
+  "updated_at": "2026-10-02T04:31:51.716Z",
   "note": "국내 섹터·테마 ETF 상위 25종목의 전일 스냅샷 대비 구성종목 변화 감지. 신규 편입·편출 종목과 비중 1.5%p 이상 변동 종목을 표시합니다. (첫 실행 시에는 비교 대상이 없어 결과가 비어있습니다)",
   "universe_size": 25,
   "has_baseline": true,
-  "changed_etf_count": 3,
-  "items": [
-    {
-      "code": "494310",
-      "name": "KODEX 반도체레버리지",
-      "trd_dt": "2026-10-01",
-      "prev_trd_dt": "2026-09-30",
-      "added": [],
-      "removed": [],
-      "changed": [
-        {
-          "name": "원화현금",
-          "prev_weight": -32.18,
-          "curr_weight": -35.57,
-          "delta": -3.39
-        },
-        {
-          "name": "SK하이닉스",
-          "prev_weight": 16.35,
-          "curr_weight": 18.45,
-          "delta": 2.1
-        }
-      ]
-    },
-    {
-      "code": "488080",
-      "name": "TIGER 반도체TOP10레버리지",
-      "trd_dt": "2026-10-01",
-      "prev_trd_dt": "2026-09-30",
-      "added": [],
-      "removed": [],
-      "changed": [
-        {
-          "name": "TIGER 반도체TOP10",
-          "prev_weight": 36.97,
-          "curr_weight": 38.59,
-          "delta": 1.62
-        }
-      ]
-    },
-    {
-      "code": "0061Z0",
-      "name": "RISE 단기특수은행채액티브",
-      "trd_dt": "2026-10-01",
-      "prev_trd_dt": "2026-09-30",
-      "added": [],
-      "removed": [
-        {
-          "name": "부국증권 20260901-29-4(단)",
-          "weight": null
-        },
-        {
-          "name": "부국증권 20260929-1-41(단)",
-          "weight": null
-        },
-        {
-          "name": "아이비케이투자증권 20260929-1-35(단)",
-          "weight": null
-        },
-        {
-          "name": "우리카드 20260901-29-1(단)",
-          "weight": null
-        }
-      ],
-      "changed": []
-    }
-  ]
+  "changed_etf_count": 0,
+  "items": []
 }

@@ -1,12 +1,24 @@
 {
-  "updated_at": "2026-10-01T23:52:04.093Z",
+  "updated_at": "2026-10-02T04:31:34.444Z",
   "note": "최근 21일 영업(잠정)실적 공정공시 기준. 반응(%)은 공시일 이후 첫 거래일(D0) 기준 D-1 종가 대비 누적 수익률.",
   "range": {
     "from": "20260911",
     "to": "20261002"
   },
-  "count": 8,
+  "count": 10,
   "items": [
+    {
+      "corp_name": "GKL",
+      "stock_code": "114090",
+      "rcept_dt": "20261002",
+      "reaction": null
+    },
+    {
+      "corp_name": "파라다이스",
+      "stock_code": "034230",
+      "rcept_dt": "20261002",
+      "reaction": null
+    },
     {
       "corp_name": "현대자동차",
       "stock_code": "005380",
