@@ -1,8 +1,116 @@
 {
-  "updated_at": "2026-10-02T21:22:23.103Z",
+  "updated_at": "2026-10-03T00:47:50.042Z",
   "note": "국내 섹터·테마 ETF 상위 25종목의 전일 스냅샷 대비 구성종목 변화 감지. 신규 편입·편출 종목과 비중 1.5%p 이상 변동 종목을 표시합니다. (첫 실행 시에는 비교 대상이 없어 결과가 비어있습니다)",
   "universe_size": 25,
   "has_baseline": true,
-  "changed_etf_count": 0,
-  "items": []
+  "changed_etf_count": 5,
+  "items": [
+    {
+      "code": "494310",
+      "name": "KODEX 반도체레버리지",
+      "trd_dt": "2026-10-02",
+      "prev_trd_dt": "2026-10-01",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "name": "삼성전자",
+          "prev_weight": 20.32,
+          "curr_weight": 17.3,
+          "delta": -3.02
+        },
+        {
+          "name": "원화현금",
+          "prev_weight": -35.57,
+          "curr_weight": -32.81,
+          "delta": 2.76
+        },
+        {
+          "name": "SK하이닉스",
+          "prev_weight": 18.45,
+          "curr_weight": 16.05,
+          "delta": -2.4
+        },
+        {
+          "name": "KODEX 반도체",
+          "prev_weight": 29.63,
+          "curr_weight": 27.95,
+          "delta": -1.68
+        }
+      ]
+    },
+    {
+      "code": "0177R0",
+      "name": "TIGER 반도체TOP10커버드콜액티브",
+      "trd_dt": "2026-10-02",
+      "prev_trd_dt": "2026-10-01",
+      "added": [
+        {
+          "name": "코스피위클리M C 2610W1 1110.0",
+          "weight": null
+        }
+      ],
+      "removed": [
+        {
+          "name": "코스피위클리 C 2610W1 1100.0",
+          "weight": null
+        }
+      ],
+      "changed": []
+    },
+    {
+      "code": "462330",
+      "name": "KODEX 2차전지산업레버리지",
+      "trd_dt": "2026-10-02",
+      "prev_trd_dt": "2026-10-01",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "name": "원화현금",
+          "prev_weight": -26.86,
+          "curr_weight": -29.4,
+          "delta": -2.54
+        }
+      ]
+    },
+    {
+      "code": "488080",
+      "name": "TIGER 반도체TOP10레버리지",
+      "trd_dt": "2026-10-02",
+      "prev_trd_dt": "2026-10-01",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "name": "TIGER 반도체TOP10",
+          "prev_weight": 38.59,
+          "curr_weight": 36.81,
+          "delta": -1.78
+        }
+      ]
+    },
+    {
+      "code": "0061Z0",
+      "name": "RISE 단기특수은행채액티브",
+      "trd_dt": "2026-10-02",
+      "prev_trd_dt": "2026-10-01",
+      "added": [
+        {
+          "name": "부국증권 20261001-29-4(단)",
+          "weight": null
+        },
+        {
+          "name": "아이엠증권 20261001-1-1(단)",
+          "weight": null
+        },
+        {
+          "name": "하나증권 20261001-1-4(단)",
+          "weight": null
+        }
+      ],
+      "removed": [],
+      "changed": []
+    }
+  ]
 }
