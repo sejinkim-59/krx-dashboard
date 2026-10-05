@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-04T21:26:00.738Z",
+  "updated_at": "2026-10-05T00:11:32.389Z",
   "note": "최근 21일 영업(잠정)실적 공정공시 기준. 반응(%)은 공시일 이후 첫 거래일(D0) 기준 D-1 종가 대비 누적 수익률.",
   "range": {
     "from": "20260914",
@@ -11,13 +11,29 @@
       "corp_name": "GKL",
       "stock_code": "114090",
       "rcept_dt": "20261002",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261002800355",
+      "reaction": {
+        "D-1": 0,
+        "D0": -2.41,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "파라다이스",
       "stock_code": "034230",
       "rcept_dt": "20261002",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261002800293",
+      "reaction": {
+        "D-1": 0,
+        "D0": -1.58,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "현대자동차",
@@ -27,7 +43,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 1.16,
-        "D+1": null,
+        "D+1": 0.43,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -48,7 +64,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 1.73,
-        "D+1": null,
+        "D+1": -5.8,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -62,7 +78,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 1.2,
-        "D+1": null,
+        "D+1": 1.81,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -76,7 +92,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 0.44,
-        "D+1": null,
+        "D+1": 0.09,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -93,7 +109,7 @@
         "D+1": 1.41,
         "D+2": 0.64,
         "D+3": 0.13,
-        "D+4": null
+        "D+4": 1.66
       }
     },
     {
