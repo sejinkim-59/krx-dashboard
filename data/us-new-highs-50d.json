@@ -1,63 +1,69 @@
 {
-  "updated_at": "2026-10-05T15:15:03.155Z",
+  "updated_at": "2026-10-05T22:13:19.617Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
-  "count": 9,
+  "count": 10,
   "items": [
     {
-      "symbol": "CDNS",
-      "close": 358.1,
-      "day_change_pct": 1.92,
-      "pct_above_prior_window": 1.92
-    },
-    {
-      "symbol": "MSFT",
-      "close": 525.35,
-      "day_change_pct": 1.51,
-      "pct_above_prior_window": 1.51
-    },
-    {
       "symbol": "NVDA",
-      "close": 237.21,
-      "day_change_pct": 1.39,
-      "pct_above_prior_window": 1.39
+      "close": 238.9,
+      "day_change_pct": 2.12,
+      "pct_above_prior_window": 2.12
     },
     {
       "symbol": "FTNT",
-      "close": 182.27,
-      "day_change_pct": 0.73,
-      "pct_above_prior_window": 0.73
+      "close": 184.13,
+      "day_change_pct": 1.76,
+      "pct_above_prior_window": 1.76
     },
     {
-      "symbol": "SNPS",
-      "close": 494.01,
-      "day_change_pct": 0.84,
-      "pct_above_prior_window": 0.71
+      "symbol": "MSFT",
+      "close": 525.18,
+      "day_change_pct": 1.48,
+      "pct_above_prior_window": 1.48
     },
     {
       "symbol": "CRWD",
-      "close": 271.58,
-      "day_change_pct": 0.57,
-      "pct_above_prior_window": 0.57
+      "close": 272.67,
+      "day_change_pct": 0.97,
+      "pct_above_prior_window": 0.97
     },
     {
       "symbol": "PANW",
-      "close": 404.27,
-      "day_change_pct": 0.26,
-      "pct_above_prior_window": 0.26
+      "close": 406.76,
+      "day_change_pct": 0.87,
+      "pct_above_prior_window": 0.87
     },
     {
-      "symbol": "MRVL",
-      "close": 272.99,
-      "day_change_pct": 0.26,
-      "pct_above_prior_window": 0.26
+      "symbol": "CDNS",
+      "close": 353.48,
+      "day_change_pct": 0.61,
+      "pct_above_prior_window": 0.61
+    },
+    {
+      "symbol": "TEAM",
+      "close": 196.65,
+      "day_change_pct": 4.66,
+      "pct_above_prior_window": 0.5
+    },
+    {
+      "symbol": "ADI",
+      "close": 419.1,
+      "day_change_pct": 0.47,
+      "pct_above_prior_window": 0.47
+    },
+    {
+      "symbol": "TXN",
+      "close": 294.9,
+      "day_change_pct": 0.37,
+      "pct_above_prior_window": 0.37
     },
     {
       "symbol": "WBD",
-      "close": 30.96,
-      "day_change_pct": 0.06,
-      "pct_above_prior_window": 0.03
+      "close": 30.95,
+      "day_change_pct": 0.03,
+      "pct_above_prior_window": 0
     }
   ]
 }
