@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-06T09:15:49.932Z",
+  "updated_at": "2026-10-06T16:09:16.816Z",
   "range": {
-    "from": "20260922",
-    "to": "20261006"
+    "from": "20260923",
+    "to": "20261007"
   },
   "items": [
     {
@@ -10,11 +10,11 @@
       "stock_code": "101360",
       "rcept_no": "20261006000446",
       "rcept_dt": "20261006",
-      "conversion_price": null,
-      "conversion_start": null,
-      "conversion_end": null,
-      "pay_date": null,
-      "maturity_date": null,
+      "conversion_price": "9,700",
+      "conversion_start": "2027년 10월 14일",
+      "conversion_end": "2031년 09월 14일",
+      "pay_date": "2026년 10월 14일",
+      "maturity_date": "2031년 10월 14일",
       "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261006000446"
     },
     {
@@ -112,54 +112,6 @@
       "pay_date": "2026년 10월 01일",
       "maturity_date": "2029년 10월 01일",
       "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260923000640"
-    },
-    {
-      "corp_name": "에이전트AI",
-      "stock_code": "060900",
-      "rcept_no": "20260922000374",
-      "rcept_dt": "20260922",
-      "conversion_price": "3,200",
-      "conversion_start": "2027년 10월 12일",
-      "conversion_end": "2029년 09월 12일",
-      "pay_date": "2026년 10월 12일",
-      "maturity_date": "2029년 10월 12일",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260922000374"
-    },
-    {
-      "corp_name": "엑스플러스",
-      "stock_code": "373200",
-      "rcept_no": "20260922000356",
-      "rcept_dt": "20260922",
-      "conversion_price": "1,855",
-      "conversion_start": "2027년 09월 30일",
-      "conversion_end": "2029년 08월 30일",
-      "pay_date": "2026년 09월 30일",
-      "maturity_date": "2029년 09월 30일",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260922000356"
-    },
-    {
-      "corp_name": "코람코라이프인프라리츠",
-      "stock_code": "357120",
-      "rcept_no": "20260921000428",
-      "rcept_dt": "20260922",
-      "conversion_price": "4,092",
-      "conversion_start": "2027년 09월 30일",
-      "conversion_end": "2029년 08월 29일",
-      "pay_date": "2026년 09월 29일",
-      "maturity_date": "2029년 09월 29일",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260921000428"
-    },
-    {
-      "corp_name": "코람코라이프인프라리츠",
-      "stock_code": "357120",
-      "rcept_no": "20260921000425",
-      "rcept_dt": "20260922",
-      "conversion_price": "4,092",
-      "conversion_start": "2027년 09월 30일",
-      "conversion_end": "2029년 08월 29일",
-      "pay_date": "2026년 09월 29일",
-      "maturity_date": "2029년 09월 29일",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260921000425"
     }
   ]
 }

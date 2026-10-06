@@ -1,63 +1,99 @@
 {
-  "updated_at": "2026-10-06T09:20:24.810Z",
+  "updated_at": "2026-10-06T16:15:32.489Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
-  "count": 10,
+  "count": 16,
   "items": [
     {
-      "symbol": "NVDA",
-      "close": 238.9,
-      "day_change_pct": 2.12,
-      "pct_above_prior_window": 2.12
+      "symbol": "AMD",
+      "close": 655.38,
+      "day_change_pct": 3.74,
+      "pct_above_prior_window": 3.39
     },
     {
-      "symbol": "FTNT",
-      "close": 184.13,
-      "day_change_pct": 1.76,
-      "pct_above_prior_window": 1.76
+      "symbol": "MRVL",
+      "close": 280.484,
+      "day_change_pct": 3.4,
+      "pct_above_prior_window": 3.01
     },
     {
-      "symbol": "MSFT",
-      "close": 525.18,
-      "day_change_pct": 1.48,
-      "pct_above_prior_window": 1.48
-    },
-    {
-      "symbol": "CRWD",
-      "close": 272.67,
-      "day_change_pct": 0.97,
-      "pct_above_prior_window": 0.97
+      "symbol": "SNPS",
+      "close": 504.475,
+      "day_change_pct": 3.28,
+      "pct_above_prior_window": 2.84
     },
     {
       "symbol": "PANW",
-      "close": 406.76,
-      "day_change_pct": 0.87,
-      "pct_above_prior_window": 0.87
+      "close": 418.22,
+      "day_change_pct": 2.82,
+      "pct_above_prior_window": 2.82
+    },
+    {
+      "symbol": "FTNT",
+      "close": 188.99,
+      "day_change_pct": 2.64,
+      "pct_above_prior_window": 2.64
+    },
+    {
+      "symbol": "CEG",
+      "close": 305.21,
+      "day_change_pct": 14.05,
+      "pct_above_prior_window": 2.06
+    },
+    {
+      "symbol": "CRWD",
+      "close": 278.255,
+      "day_change_pct": 2.05,
+      "pct_above_prior_window": 2.05
     },
     {
       "symbol": "CDNS",
-      "close": 353.48,
-      "day_change_pct": 0.61,
-      "pct_above_prior_window": 0.61
+      "close": 360.12,
+      "day_change_pct": 1.88,
+      "pct_above_prior_window": 1.88
     },
     {
-      "symbol": "TEAM",
-      "close": 196.65,
-      "day_change_pct": 4.66,
-      "pct_above_prior_window": 0.5
+      "symbol": "MSFT",
+      "close": 532.3,
+      "day_change_pct": 1.36,
+      "pct_above_prior_window": 1.36
     },
     {
-      "symbol": "ADI",
-      "close": 419.1,
-      "day_change_pct": 0.47,
-      "pct_above_prior_window": 0.47
+      "symbol": "NVDA",
+      "close": 241.275,
+      "day_change_pct": 0.99,
+      "pct_above_prior_window": 0.99
     },
     {
       "symbol": "TXN",
-      "close": 294.9,
-      "day_change_pct": 0.37,
-      "pct_above_prior_window": 0.37
+      "close": 297.364,
+      "day_change_pct": 0.84,
+      "pct_above_prior_window": 0.84
+    },
+    {
+      "symbol": "PG",
+      "close": 149.63,
+      "day_change_pct": 2.53,
+      "pct_above_prior_window": 0.4
+    },
+    {
+      "symbol": "ADI",
+      "close": 420.29,
+      "day_change_pct": 0.28,
+      "pct_above_prior_window": 0.28
+    },
+    {
+      "symbol": "ON",
+      "close": 86.06,
+      "day_change_pct": 0.15,
+      "pct_above_prior_window": 0.15
+    },
+    {
+      "symbol": "TSLA",
+      "close": 380.55,
+      "day_change_pct": 0.48,
+      "pct_above_prior_window": 0.11
     },
     {
       "symbol": "WBD",
