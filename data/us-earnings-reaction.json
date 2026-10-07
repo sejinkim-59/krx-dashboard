@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-07T14:19:30.288Z",
+  "updated_at": "2026-10-07T20:11:57.985Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 11,
@@ -50,7 +50,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 2.08,
-        "D+1": 2.29,
+        "D+1": 4.48,
         "D+2": null,
         "D+3": null
       }
@@ -67,7 +67,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 3.16,
-        "D+1": 2.04,
+        "D+1": 3.15,
         "D+2": null,
         "D+3": null
       }
@@ -129,25 +129,8 @@
       "reaction": {
         "D-1": 0,
         "D0": 7.49,
-        "D+1": 9.87,
+        "D+1": 7.83,
         "D+2": null,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "AEHR",
-      "name": "Aehr Test Systems",
-      "report_date": "2026-10-05",
-      "report_time": "미상",
-      "market_cap": 3409656580,
-      "eps": "($0.05)",
-      "eps_forecast": "$0.05",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": -2.62,
-        "D+1": -14.06,
-        "D+2": -16.31,
         "D+3": null
       }
     },
@@ -163,8 +146,25 @@
       "reaction": {
         "D-1": 0,
         "D0": 5.77,
-        "D+1": 24,
+        "D+1": 19.6,
         "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "AEHR",
+      "name": "Aehr Test Systems",
+      "report_date": "2026-10-05",
+      "report_time": "미상",
+      "market_cap": 3009250560,
+      "eps": "($0.05)",
+      "eps_forecast": "$0.05",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -2.62,
+        "D+1": -14.06,
+        "D+2": -16.64,
         "D+3": null
       }
     },
@@ -180,7 +180,7 @@
       "reaction": {
         "D-1": 0,
         "D0": -8.07,
-        "D+1": -11.11,
+        "D+1": -10.22,
         "D+2": null,
         "D+3": null
       }

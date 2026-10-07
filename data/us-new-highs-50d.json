@@ -1,15 +1,21 @@
 {
-  "updated_at": "2026-10-07T14:19:23.744Z",
+  "updated_at": "2026-10-07T20:11:50.820Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
-  "count": 1,
+  "count": 2,
   "items": [
     {
-      "symbol": "WBD",
-      "close": 30.95,
-      "day_change_pct": 0,
-      "pct_above_prior_window": 0
+      "symbol": "PLTR",
+      "close": 194.12,
+      "day_change_pct": 1.07,
+      "pct_above_prior_window": 0.79
+    },
+    {
+      "symbol": "MSFT",
+      "close": 529.76,
+      "day_change_pct": 0.09,
+      "pct_above_prior_window": 0.09
     }
   ]
 }
