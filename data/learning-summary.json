@@ -1,6 +1,27 @@
 {
-  "updated_at": "2026-10-06T21:16:36.490Z",
+  "updated_at": "2026-10-07T01:13:53.339Z",
   "totalEntries": 45,
-  "resolvedD5": 0,
-  "bySetup": []
+  "resolvedD5": 5,
+  "bySetup": [
+    {
+      "setup": "Market Leader",
+      "count": 1,
+      "avgD5": 7.01
+    },
+    {
+      "setup": "Discovery",
+      "count": 2,
+      "avgD5": 8.85
+    },
+    {
+      "setup": "Event-Driven",
+      "count": 1,
+      "avgD5": 1.3
+    },
+    {
+      "setup": "Inflection",
+      "count": 1,
+      "avgD5": -2.66
+    }
+  ]
 }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-06T21:12:55.025Z",
+  "updated_at": "2026-10-07T01:06:52.062Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
@@ -18,12 +18,6 @@
       "pct_above_prior_window": 3.88
     },
     {
-      "symbol": "PANW",
-      "close": 419.91,
-      "day_change_pct": 3.23,
-      "pct_above_prior_window": 3.23
-    },
-    {
       "symbol": "SNPS",
       "close": 505.17,
       "day_change_pct": 3.42,
@@ -36,16 +30,22 @@
       "pct_above_prior_window": 2.45
     },
     {
-      "symbol": "CRWD",
-      "close": 278.86,
-      "day_change_pct": 2.27,
-      "pct_above_prior_window": 2.27
-    },
-    {
       "symbol": "CDNS",
       "close": 359.55,
       "day_change_pct": 1.72,
       "pct_above_prior_window": 1.72
+    },
+    {
+      "symbol": "CRWD",
+      "close": 272.67,
+      "day_change_pct": 0.97,
+      "pct_above_prior_window": 0.97
+    },
+    {
+      "symbol": "PANW",
+      "close": 406.76,
+      "day_change_pct": 0.87,
+      "pct_above_prior_window": 0.87
     },
     {
       "symbol": "TXN",
@@ -60,10 +60,10 @@
       "pct_above_prior_window": 0.78
     },
     {
-      "symbol": "CEG",
-      "close": 300.4,
-      "day_change_pct": 12.25,
-      "pct_above_prior_window": 0.45
+      "symbol": "TEAM",
+      "close": 196.65,
+      "day_change_pct": 4.66,
+      "pct_above_prior_window": 0.5
     },
     {
       "symbol": "ON",
@@ -92,7 +92,7 @@
     {
       "symbol": "WBD",
       "close": 30.95,
-      "day_change_pct": 0.03,
+      "day_change_pct": 0,
       "pct_above_prior_window": 0
     }
   ]

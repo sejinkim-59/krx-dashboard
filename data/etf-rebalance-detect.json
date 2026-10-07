@@ -1,8 +1,97 @@
 {
-  "updated_at": "2026-10-06T21:14:08.110Z",
+  "updated_at": "2026-10-07T01:10:52.205Z",
   "note": "국내 섹터·테마 ETF 상위 25종목의 전일 스냅샷 대비 구성종목 변화 감지. 신규 편입·편출 종목과 비중 1.5%p 이상 변동 종목을 표시합니다. (첫 실행 시에는 비교 대상이 없어 결과가 비어있습니다)",
   "universe_size": 25,
   "has_baseline": true,
-  "changed_etf_count": 0,
-  "items": []
+  "changed_etf_count": 3,
+  "items": [
+    {
+      "code": "488080",
+      "name": "TIGER 반도체TOP10레버리지",
+      "trd_dt": "2026-10-06",
+      "prev_trd_dt": "2026-10-02",
+      "added": [],
+      "removed": [
+        {
+          "name": "한미반도체",
+          "weight": 4.88
+        },
+        {
+          "name": "주성엔지니어링",
+          "weight": 3.34
+        },
+        {
+          "name": "이수페타시스",
+          "weight": 2.81
+        },
+        {
+          "name": "이오테크닉스",
+          "weight": 1.9
+        },
+        {
+          "name": "원익IPS",
+          "weight": 1.88
+        },
+        {
+          "name": "리노공업",
+          "weight": 1.78
+        }
+      ],
+      "changed": [
+        {
+          "name": "원화현금",
+          "prev_weight": -46.21,
+          "curr_weight": -31.87,
+          "delta": 14.34
+        }
+      ]
+    },
+    {
+      "code": "0061Z0",
+      "name": "RISE 단기특수은행채액티브",
+      "trd_dt": "2026-10-06",
+      "prev_trd_dt": "2026-10-02",
+      "added": [
+        {
+          "name": "롯데카드 20260909-33-9(단)",
+          "weight": null
+        },
+        {
+          "name": "아이엠증권 20261002-4-4(단)",
+          "weight": null
+        },
+        {
+          "name": "우리카드 20261002-13-8(단)",
+          "weight": null
+        }
+      ],
+      "removed": [
+        {
+          "name": "아이엠증권 20261001-1-1(단)",
+          "weight": null
+        },
+        {
+          "name": "하나증권 20261001-1-4(단)",
+          "weight": null
+        }
+      ],
+      "changed": []
+    },
+    {
+      "code": "471990",
+      "name": "KODEX AI반도체핵심장비",
+      "trd_dt": "2026-10-06",
+      "prev_trd_dt": "2026-10-02",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "name": "주성엔지니어링",
+          "prev_weight": 15.74,
+          "curr_weight": 17.32,
+          "delta": 1.58
+        }
+      ]
+    }
+  ]
 }
