@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-07T01:06:58.778Z",
+  "updated_at": "2026-10-07T06:57:51.258Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 11,
@@ -44,6 +44,7 @@
       "report_date": "2026-10-06",
       "report_time": "장후",
       "market_cap": 19350904800,
+      "eps": "$3.63",
       "eps_forecast": "$3.62",
       "surprise_pct": null,
       "reaction": {
@@ -88,6 +89,7 @@
       "report_date": "2026-10-06",
       "report_time": "장전",
       "market_cap": 12173756400,
+      "eps": "$1.88",
       "eps_forecast": "$1.95",
       "surprise_pct": null,
       "reaction": {
@@ -121,11 +123,12 @@
       "report_date": "2026-10-06",
       "report_time": "장전",
       "market_cap": 6127528400,
+      "eps": "$0.74",
       "eps_forecast": "$0.59",
       "surprise_pct": null,
       "reaction": {
         "D-1": 0,
-        "D0": null,
+        "D0": 7.49,
         "D+1": null,
         "D+2": null,
         "D+3": null
@@ -154,11 +157,12 @@
       "report_date": "2026-10-06",
       "report_time": "장후",
       "market_cap": 3110944260,
+      "eps": "$0.30",
       "eps_forecast": "$0.61",
       "surprise_pct": null,
       "reaction": {
         "D-1": 0,
-        "D0": null,
+        "D0": 5.77,
         "D+1": null,
         "D+2": null,
         "D+3": null
@@ -170,6 +174,7 @@
       "report_date": "2026-10-06",
       "report_time": "장후",
       "market_cap": 2837559040,
+      "eps": "$0.02",
       "eps_forecast": "$0.04",
       "surprise_pct": null,
       "reaction": {
