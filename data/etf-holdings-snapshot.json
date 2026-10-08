@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T00:29:39.510Z",
+  "generated_at": "2026-10-08T06:44:05.964Z",
   "etfs": [
     {
       "code": "396500",
@@ -1988,123 +1988,6 @@
       ]
     },
     {
-      "code": "488080",
-      "name": "TIGER 반도체TOP10레버리지",
-      "trd_dt": "2026-10-07",
-      "holdings": [
-        {
-          "name": "삼성전자",
-          "weight": 34.48,
-          "shares": 2643
-        },
-        {
-          "name": "TIGER 반도체TOP10",
-          "weight": 33.1,
-          "shares": 17522
-        },
-        {
-          "name": "SK하이닉스",
-          "weight": 27.04,
-          "shares": 323
-        },
-        {
-          "name": "SK스퀘어",
-          "weight": 23.97,
-          "shares": 432
-        },
-        {
-          "name": "한미반도체",
-          "weight": 4.82,
-          "shares": 375
-        },
-        {
-          "name": "DB하이텍",
-          "weight": 4.77,
-          "shares": 731
-        },
-        {
-          "name": "주성엔지니어링",
-          "weight": 3.55,
-          "shares": 295
-        },
-        {
-          "name": "이수페타시스",
-          "weight": 2.88,
-          "shares": 485
-        },
-        {
-          "name": "이오테크닉스",
-          "weight": 1.89,
-          "shares": 75
-        },
-        {
-          "name": "리노공업",
-          "weight": 1.83,
-          "shares": 443
-        },
-        {
-          "name": "원익IPS",
-          "weight": 1.82,
-          "shares": 285
-        },
-        {
-          "name": "이수페타시스선물2610",
-          "weight": null,
-          "shares": 83.6
-        },
-        {
-          "name": "삼성전자선물2610",
-          "weight": null,
-          "shares": 67.7
-        },
-        {
-          "name": "리노공업선물2610",
-          "weight": null,
-          "shares": 63.3
-        },
-        {
-          "name": "주성엔지니어링선물2610",
-          "weight": null,
-          "shares": 51.6
-        },
-        {
-          "name": "원익IPS선물2610",
-          "weight": null,
-          "shares": 50.7
-        },
-        {
-          "name": "한미반도체선물2610",
-          "weight": null,
-          "shares": 47.6
-        },
-        {
-          "name": "SK스퀘어선물2610",
-          "weight": null,
-          "shares": 16.1
-        },
-        {
-          "name": "이오테크닉스선물2610",
-          "weight": null,
-          "shares": 12.4
-        },
-        {
-          "name": "SK하이닉스선물2610",
-          "weight": null,
-          "shares": 10.2
-        },
-        {
-          "name": "설정현금액",
-          "weight": 100,
-          "shares": 0
-        },
-        {
-          "name": "원화현금",
-          "weight": -44.23,
-          "shares": 0
-        }
-      ]
-    },
-    {
       "code": "0061Z0",
       "name": "RISE 단기특수은행채액티브",
       "trd_dt": "2026-10-07",
@@ -2404,6 +2287,123 @@
         {
           "name": "원화현금",
           "weight": 0.07,
+          "shares": 0
+        }
+      ]
+    },
+    {
+      "code": "488080",
+      "name": "TIGER 반도체TOP10레버리지",
+      "trd_dt": "2026-10-07",
+      "holdings": [
+        {
+          "name": "삼성전자",
+          "weight": 34.48,
+          "shares": 2643
+        },
+        {
+          "name": "TIGER 반도체TOP10",
+          "weight": 33.1,
+          "shares": 17522
+        },
+        {
+          "name": "SK하이닉스",
+          "weight": 27.04,
+          "shares": 323
+        },
+        {
+          "name": "SK스퀘어",
+          "weight": 23.97,
+          "shares": 432
+        },
+        {
+          "name": "한미반도체",
+          "weight": 4.82,
+          "shares": 375
+        },
+        {
+          "name": "DB하이텍",
+          "weight": 4.77,
+          "shares": 731
+        },
+        {
+          "name": "주성엔지니어링",
+          "weight": 3.55,
+          "shares": 295
+        },
+        {
+          "name": "이수페타시스",
+          "weight": 2.88,
+          "shares": 485
+        },
+        {
+          "name": "이오테크닉스",
+          "weight": 1.89,
+          "shares": 75
+        },
+        {
+          "name": "리노공업",
+          "weight": 1.83,
+          "shares": 443
+        },
+        {
+          "name": "원익IPS",
+          "weight": 1.82,
+          "shares": 285
+        },
+        {
+          "name": "이수페타시스선물2610",
+          "weight": null,
+          "shares": 83.6
+        },
+        {
+          "name": "삼성전자선물2610",
+          "weight": null,
+          "shares": 67.7
+        },
+        {
+          "name": "리노공업선물2610",
+          "weight": null,
+          "shares": 63.3
+        },
+        {
+          "name": "주성엔지니어링선물2610",
+          "weight": null,
+          "shares": 51.6
+        },
+        {
+          "name": "원익IPS선물2610",
+          "weight": null,
+          "shares": 50.7
+        },
+        {
+          "name": "한미반도체선물2610",
+          "weight": null,
+          "shares": 47.6
+        },
+        {
+          "name": "SK스퀘어선물2610",
+          "weight": null,
+          "shares": 16.1
+        },
+        {
+          "name": "이오테크닉스선물2610",
+          "weight": null,
+          "shares": 12.4
+        },
+        {
+          "name": "SK하이닉스선물2610",
+          "weight": null,
+          "shares": 10.2
+        },
+        {
+          "name": "설정현금액",
+          "weight": 100,
+          "shares": 0
+        },
+        {
+          "name": "원화현금",
+          "weight": -44.23,
           "shares": 0
         }
       ]
