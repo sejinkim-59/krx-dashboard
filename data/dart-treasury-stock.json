@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-08T06:30:31.030Z",
+  "updated_at": "2026-10-08T13:57:56.635Z",
   "range": {
     "from": "20260924",
     "to": "20261008"
@@ -11,11 +11,23 @@
       "rcept_no": "20261008000416",
       "rcept_dt": "20261008",
       "type": "취득",
-      "period_start": null,
-      "period_end": null,
-      "purpose": null,
-      "method": null,
+      "period_start": "2026년 10월 12일",
+      "period_end": "2027년 01월 07일",
+      "purpose": "주주환원 정책 및 주주가치 제고",
+      "method": "코스닥 시장에서 취득(장내 매수)",
       "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261008000416"
+    },
+    {
+      "corp_name": "와이엔텍",
+      "stock_code": "067900",
+      "rcept_no": "20261008000672",
+      "rcept_dt": "20261008",
+      "type": "처분",
+      "period_start": "2026년 10월 12일",
+      "period_end": "2026년 12월 15일",
+      "purpose": "- 임직원에 대한 보상지급\n- 우리사주조합 출연",
+      "method": null,
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261008000672"
     },
     {
       "corp_name": "BGF",
