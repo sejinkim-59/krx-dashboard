@@ -1,43 +1,9 @@
 {
-  "updated_at": "2026-10-07T20:11:57.985Z",
+  "updated_at": "2026-10-08T00:28:15.932Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
-  "count": 11,
+  "count": 8,
   "items": [
-    {
-      "symbol": "ACN",
-      "name": "Accenture plc",
-      "report_date": "2026-10-01",
-      "report_time": "미상",
-      "market_cap": 129096475000,
-      "eps": "$3.29",
-      "eps_forecast": "$3.19",
-      "surprise_pct": 3.13,
-      "reaction": {
-        "D-1": 0,
-        "D0": 15.78,
-        "D+1": 8.47,
-        "D+2": 6.37,
-        "D+3": 5.47
-      }
-    },
-    {
-      "symbol": "NKE",
-      "name": "Nike, Inc.",
-      "report_date": "2026-10-01",
-      "report_time": "미상",
-      "market_cap": 51406537000,
-      "eps": "$0.48",
-      "eps_forecast": "$0.43",
-      "surprise_pct": 11.63,
-      "reaction": {
-        "D-1": 0,
-        "D0": -0.71,
-        "D+1": -4.32,
-        "D+2": -4.07,
-        "D+3": -2.23
-      }
-    },
     {
       "symbol": "STZ",
       "name": "Constellation Brands Inc",
@@ -50,7 +16,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 2.08,
-        "D+1": 4.48,
+        "D+1": null,
         "D+2": null,
         "D+3": null
       }
@@ -67,54 +33,41 @@
       "reaction": {
         "D-1": 0,
         "D0": 3.16,
-        "D+1": 3.15,
+        "D+1": null,
         "D+2": null,
         "D+3": null
       }
     },
     {
-      "symbol": "MKC",
-      "name": "McCormick & Company, Incorporated",
-      "report_date": "2026-10-01",
-      "report_time": "미상",
-      "market_cap": 12215527400,
-      "eps": "$0.86",
-      "eps_forecast": "$0.75",
-      "surprise_pct": 14.67,
+      "symbol": "LEVI",
+      "name": "Levi Strauss & Co.",
+      "report_date": "2026-10-07",
+      "report_time": "장후",
+      "market_cap": 7900982300,
+      "eps_forecast": "$0.36",
+      "surprise_pct": null,
       "reaction": {
         "D-1": 0,
-        "D0": -4.87,
-        "D+1": -3.73,
-        "D+2": -1.85,
-        "D+3": -2.16
+        "D0": null,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
       }
     },
     {
-      "symbol": "MKC.V",
-      "name": "McCormick & Company, Incorporated",
-      "report_date": "2026-10-01",
-      "report_time": "미상",
-      "market_cap": 12215527400,
-      "eps": "$0.86",
-      "eps_forecast": "",
+      "symbol": "APLD",
+      "name": "Applied Digital Corporation",
+      "report_date": "2026-10-07",
+      "report_time": "장후",
+      "market_cap": 7579051500,
+      "eps_forecast": "($0.25)",
       "surprise_pct": null,
-      "reaction": null
-    },
-    {
-      "symbol": "AYI",
-      "name": "Acuity Inc.",
-      "report_date": "2026-10-01",
-      "report_time": "미상",
-      "market_cap": 9069872100,
-      "eps": "$5.51",
-      "eps_forecast": "$5.19",
-      "surprise_pct": 6.17,
       "reaction": {
         "D-1": 0,
-        "D0": -3.4,
-        "D+1": -0.34,
-        "D+2": -1.6,
-        "D+3": -2.2
+        "D0": null,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
       }
     },
     {
@@ -129,7 +82,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 7.49,
-        "D+1": 7.83,
+        "D+1": null,
         "D+2": null,
         "D+3": null
       }
@@ -146,7 +99,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 5.77,
-        "D+1": 19.6,
+        "D+1": null,
         "D+2": null,
         "D+3": null
       }
@@ -164,7 +117,7 @@
         "D-1": 0,
         "D0": -2.62,
         "D+1": -14.06,
-        "D+2": -16.64,
+        "D+2": null,
         "D+3": null
       }
     },
@@ -180,7 +133,7 @@
       "reaction": {
         "D-1": 0,
         "D0": -8.07,
-        "D+1": -10.22,
+        "D+1": null,
         "D+2": null,
         "D+3": null
       }
