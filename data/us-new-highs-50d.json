@@ -1,45 +1,45 @@
 {
-  "updated_at": "2026-10-08T14:04:05.857Z",
+  "updated_at": "2026-10-08T19:46:56.835Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
   "count": 6,
   "items": [
     {
+      "symbol": "TEAM",
+      "close": 202.72,
+      "day_change_pct": 3.54,
+      "pct_above_prior_window": 3.09
+    },
+    {
       "symbol": "PLTR",
-      "close": 200.92,
-      "day_change_pct": 3.5,
-      "pct_above_prior_window": 3.5
+      "close": 198.08,
+      "day_change_pct": 2.04,
+      "pct_above_prior_window": 2.04
     },
     {
       "symbol": "ZS",
-      "close": 217.68,
-      "day_change_pct": 1.93,
-      "pct_above_prior_window": 1.42
+      "close": 217.37,
+      "day_change_pct": 1.79,
+      "pct_above_prior_window": 1.27
     },
     {
-      "symbol": "CEG",
-      "close": 303.03,
-      "day_change_pct": 1.15,
-      "pct_above_prior_window": 0.88
+      "symbol": "PG",
+      "close": 150.46,
+      "day_change_pct": 1.79,
+      "pct_above_prior_window": 0.96
     },
     {
-      "symbol": "SNPS",
-      "close": 509.49,
-      "day_change_pct": 1.36,
-      "pct_above_prior_window": 0.86
+      "symbol": "ISRG",
+      "close": 415.42,
+      "day_change_pct": 0.22,
+      "pct_above_prior_window": 0.15
     },
     {
-      "symbol": "TEAM",
-      "close": 197.65,
-      "day_change_pct": 0.95,
-      "pct_above_prior_window": 0.51
-    },
-    {
-      "symbol": "MSFT",
-      "close": 530.855,
-      "day_change_pct": 0.21,
-      "pct_above_prior_window": 0.21
+      "symbol": "AAPL",
+      "close": 341.12,
+      "day_change_pct": 1.32,
+      "pct_above_prior_window": 0.01
     }
   ]
 }
