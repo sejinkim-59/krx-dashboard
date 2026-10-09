@@ -1,21 +1,39 @@
 {
-  "updated_at": "2026-10-09T00:16:15.718Z",
+  "updated_at": "2026-10-09T06:37:55.138Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
-  "count": 3,
+  "count": 6,
   "items": [
     {
-      "symbol": "PLTR",
-      "close": 194.12,
-      "day_change_pct": 1.07,
-      "pct_above_prior_window": 0.79
+      "symbol": "TEAM",
+      "close": 203.57,
+      "day_change_pct": 3.97,
+      "pct_above_prior_window": 3.52
     },
     {
-      "symbol": "MSFT",
-      "close": 529.76,
-      "day_change_pct": 0.09,
-      "pct_above_prior_window": 0.09
+      "symbol": "PLTR",
+      "close": 198.78,
+      "day_change_pct": 2.4,
+      "pct_above_prior_window": 2.4
+    },
+    {
+      "symbol": "PG",
+      "close": 150.59,
+      "day_change_pct": 1.87,
+      "pct_above_prior_window": 1.05
+    },
+    {
+      "symbol": "ZS",
+      "close": 216.81,
+      "day_change_pct": 1.53,
+      "pct_above_prior_window": 1.01
+    },
+    {
+      "symbol": "ISRG",
+      "close": 415.41,
+      "day_change_pct": 0.21,
+      "pct_above_prior_window": 0.15
     },
     {
       "symbol": "WBD",
