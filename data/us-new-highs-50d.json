@@ -1,51 +1,75 @@
 {
-  "updated_at": "2026-10-09T13:47:02.748Z",
+  "updated_at": "2026-10-09T19:23:20.073Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
-  "count": 7,
+  "count": 11,
   "items": [
     {
-      "symbol": "ISRG",
-      "close": 424.395,
-      "day_change_pct": 2.16,
-      "pct_above_prior_window": 2.16
-    },
-    {
       "symbol": "ZS",
-      "close": 220.525,
-      "day_change_pct": 1.71,
-      "pct_above_prior_window": 1.71
-    },
-    {
-      "symbol": "TSLA",
-      "close": 386.47,
-      "day_change_pct": 3.06,
-      "pct_above_prior_window": 1.52
-    },
-    {
-      "symbol": "PG",
-      "close": 151.35,
-      "day_change_pct": 0.5,
-      "pct_above_prior_window": 0.5
-    },
-    {
-      "symbol": "TEAM",
-      "close": 204.58,
-      "day_change_pct": 0.5,
-      "pct_above_prior_window": 0.5
+      "close": 231.33,
+      "day_change_pct": 6.7,
+      "pct_above_prior_window": 6.7
     },
     {
       "symbol": "PLTR",
-      "close": 199.66,
-      "day_change_pct": 0.44,
-      "pct_above_prior_window": 0.44
+      "close": 207.57,
+      "day_change_pct": 4.42,
+      "pct_above_prior_window": 4.42
+    },
+    {
+      "symbol": "ISRG",
+      "close": 425.35,
+      "day_change_pct": 2.39,
+      "pct_above_prior_window": 2.39
+    },
+    {
+      "symbol": "FTNT",
+      "close": 194.565,
+      "day_change_pct": 2.89,
+      "pct_above_prior_window": 1.72
+    },
+    {
+      "symbol": "TEAM",
+      "close": 206.33,
+      "day_change_pct": 1.36,
+      "pct_above_prior_window": 1.36
+    },
+    {
+      "symbol": "MSFT",
+      "close": 536.05,
+      "day_change_pct": 2.57,
+      "pct_above_prior_window": 1.19
+    },
+    {
+      "symbol": "DDOG",
+      "close": 291.355,
+      "day_change_pct": 6.41,
+      "pct_above_prior_window": 1.11
+    },
+    {
+      "symbol": "TSLA",
+      "close": 383.97,
+      "day_change_pct": 2.39,
+      "pct_above_prior_window": 0.86
+    },
+    {
+      "symbol": "PG",
+      "close": 151.245,
+      "day_change_pct": 0.43,
+      "pct_above_prior_window": 0.43
     },
     {
       "symbol": "SNPS",
-      "close": 506.95,
-      "day_change_pct": 1.85,
-      "pct_above_prior_window": 0.35
+      "close": 507.26,
+      "day_change_pct": 1.91,
+      "pct_above_prior_window": 0.41
+    },
+    {
+      "symbol": "V",
+      "close": 385.25,
+      "day_change_pct": 2.71,
+      "pct_above_prior_window": 0.29
     }
   ]
 }
