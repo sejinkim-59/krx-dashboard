@@ -1,45 +1,51 @@
 {
-  "updated_at": "2026-10-09T06:37:55.138Z",
+  "updated_at": "2026-10-09T13:47:02.748Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
-  "count": 6,
+  "count": 7,
   "items": [
     {
-      "symbol": "TEAM",
-      "close": 203.57,
-      "day_change_pct": 3.97,
-      "pct_above_prior_window": 3.52
-    },
-    {
-      "symbol": "PLTR",
-      "close": 198.78,
-      "day_change_pct": 2.4,
-      "pct_above_prior_window": 2.4
-    },
-    {
-      "symbol": "PG",
-      "close": 150.59,
-      "day_change_pct": 1.87,
-      "pct_above_prior_window": 1.05
+      "symbol": "ISRG",
+      "close": 424.395,
+      "day_change_pct": 2.16,
+      "pct_above_prior_window": 2.16
     },
     {
       "symbol": "ZS",
-      "close": 216.81,
-      "day_change_pct": 1.53,
-      "pct_above_prior_window": 1.01
+      "close": 220.525,
+      "day_change_pct": 1.71,
+      "pct_above_prior_window": 1.71
     },
     {
-      "symbol": "ISRG",
-      "close": 415.41,
-      "day_change_pct": 0.21,
-      "pct_above_prior_window": 0.15
+      "symbol": "TSLA",
+      "close": 386.47,
+      "day_change_pct": 3.06,
+      "pct_above_prior_window": 1.52
     },
     {
-      "symbol": "WBD",
-      "close": 30.95,
-      "day_change_pct": 0,
-      "pct_above_prior_window": 0
+      "symbol": "PG",
+      "close": 151.35,
+      "day_change_pct": 0.5,
+      "pct_above_prior_window": 0.5
+    },
+    {
+      "symbol": "TEAM",
+      "close": 204.58,
+      "day_change_pct": 0.5,
+      "pct_above_prior_window": 0.5
+    },
+    {
+      "symbol": "PLTR",
+      "close": 199.66,
+      "day_change_pct": 0.44,
+      "pct_above_prior_window": 0.44
+    },
+    {
+      "symbol": "SNPS",
+      "close": 506.95,
+      "day_change_pct": 1.85,
+      "pct_above_prior_window": 0.35
     }
   ]
 }
