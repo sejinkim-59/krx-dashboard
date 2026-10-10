@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-09T23:30:40.758Z",
+  "updated_at": "2026-10-10T02:40:40.986Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
-  "count": 10,
+  "count": 11,
   "items": [
     {
       "symbol": "PEP",
@@ -17,6 +17,22 @@
         "D-1": 0,
         "D0": 3.73,
         "D+1": 1.81,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "DAL",
+      "name": "Delta Air Lines, Inc.",
+      "report_date": "2026-10-09",
+      "report_time": "장전",
+      "market_cap": 54017155000,
+      "eps_forecast": "$1.80",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 0.04,
+        "D+1": null,
         "D+2": null,
         "D+3": null
       }
