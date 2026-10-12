@@ -1,10 +1,20 @@
 {
-  "updated_at": "2026-10-12T10:19:00.557Z",
+  "updated_at": "2026-10-12T19:57:28.707Z",
   "range": {
-    "from": "20260928",
-    "to": "20261012"
+    "from": "20260929",
+    "to": "20261013"
   },
   "items": [
+    {
+      "corp_name": "제일엠앤에스",
+      "stock_code": "412540",
+      "rcept_no": "20261012000514",
+      "rcept_dt": "20261013",
+      "method": "제3자배정증자",
+      "new_shares": "145,287,528",
+      "record_date": null,
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261012000514"
+    },
     {
       "corp_name": "목포신항만운영",
       "stock_code": "",
@@ -384,16 +394,6 @@
       "new_shares": "4,000,000",
       "record_date": null,
       "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260928000396"
-    },
-    {
-      "corp_name": "크라우드웍스",
-      "stock_code": "355390",
-      "rcept_no": "20260928000378",
-      "rcept_dt": "20260928",
-      "method": "제3자배정증자",
-      "new_shares": "753,579",
-      "record_date": null,
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260928000378"
     }
   ]
 }
