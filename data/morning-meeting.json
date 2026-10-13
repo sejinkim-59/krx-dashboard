@@ -1,16 +1,16 @@
 {
   "date": "20261014",
-  "generated_at": "2026-10-13T17:18:34.957Z",
+  "generated_at": "2026-10-13T22:09:35.621Z",
   "engineVersion": "v0.2",
   "objective": "NEW INFORMATION + CHANGE + CATALYST + CONFIRMATION — 오늘 새롭게 연구할 가치가 생긴 종목을 조기 발견",
   "methodologyNote": "시장/섹터 상대강도는 공식 지수가 아니라 가격 데이터 보유 종목의 동일가중 평균(proxy)입니다. Earnings/Revision Factor는 컨센서스 Provider 미연결로 항상 제외(MISSING_DATA)됩니다. 시총 순위는 KIS 시세를 조회한 종목(관심종목 + Discovery 추가조회) 안에서의 순위입니다. 수급 전환의 발생 시점은 \"최근 3거래일 vs 직전 5거래일\" 창 비교라 일 단위 날짜가 아닌 창 단위입니다. 종목 단위로 연결되지 않은 Catalyst: Investor Relations 일정, Large Contract(단일판매·공급계약), Index Rebalancing (정기변경 월 주기만 수집, 종목별 편입·편출 예고 없음), Major Customer Event, Policy Event, Share Cancellation(소각).",
   "marketRegime": {
     "state": "Neutral",
     "evidence": [
-      "VIX +1.38%",
-      "S&P500 -0.1%",
-      "NASDAQ -0.19%",
-      "USD/KRW -0.22%"
+      "VIX +0.39%",
+      "S&P500 -0.02%",
+      "NASDAQ -0.15%",
+      "USD/KRW +0.45%"
     ],
     "strategyPreference": [
       "DISCOVERY",
@@ -24,7 +24,7 @@
     "discoveryPreScreenCount": 424,
     "discoveryEnrichedCount": 60,
     "signalCount": 97,
-    "passedRiskCount": 19,
+    "passedRiskCount": 20,
     "rejectedCount": 0
   },
   "dailyOutput": [
@@ -32,7 +32,7 @@
       "bucket": "MARKET_LEADER",
       "label": "Market Leader",
       "requested": 1,
-      "qualifiedCount": 3,
+      "qualifiedCount": 4,
       "picks": [
         {
           "symbol": "011200",
@@ -57,12 +57,12 @@
           "whatChanged": [
             "종가가 MA20 위로 회복 (2026-10-12, 1거래일 전)",
             "거래량 20일 평균 대비 4.2배로 급증 (2026-10-12, 1거래일 전)",
-            "기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +2.1%, 거래량 2.4배가 확인)"
+            "기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +2.6%, 거래량 2.4배가 확인)"
           ],
           "whyNow": "가장 최근 변화가 1거래일 전 발생 (Novelty high)",
-          "whyNotPriced": "변화 발생(2026-10-12) 이후 +5.5%, 20일 +5.3%, 60일 +12.3% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
-          "confirmation": "Novelty[price]: 주가 MA20 회복, 거래량 20일 평균 대비 급증 + Technical[price]: 8/10 + Flow[flow]: 기관합계 매수 전환 + 5일 수익률 +2.1%, 거래량 2.4배 확인 + Relative Strength[price]: 7/7",
-          "invalidation": "종가가 MA20(21,088원) 하회 / 기관합계 순매도 재전환",
+          "whyNotPriced": "변화 발생(2026-10-12) 이후 +6.0%, 20일 +5.8%, 60일 +12.8% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
+          "confirmation": "Novelty[price]: 주가 MA20 회복, 거래량 20일 평균 대비 급증 + Technical[price]: 8/10 + Flow[flow]: 기관합계 매수 전환 + 5일 수익률 +2.6%, 거래량 2.4배 확인 + Relative Strength[price]: 7/7",
+          "invalidation": "종가가 MA20(21,093원) 하회 / 기관합계 순매도 재전환",
           "risks": "특이 리스크 없음",
           "catalysts": [],
           "sources": [
@@ -72,17 +72,17 @@
           "pricedIn": {
             "verdict": "unclear",
             "facts": [
-              "변화 발생(2026-10-12) 이후 +5.5%",
-              "20일 +5.3%",
-              "60일 +12.3%",
-              "52주 고점 대비 -12.0%",
+              "변화 발생(2026-10-12) 이후 +6.0%",
+              "20일 +5.8%",
+              "60일 +12.8%",
+              "52주 고점 대비 -11.6%",
               "거래량 20일 평균 2.4배"
             ]
           },
           "crowdingPenalty": null,
           "marketCapRank": 26,
           "flowEvents": [
-            "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.072%)",
+            "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.071%)",
             "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 0.108%)"
           ],
           "flowInterpretation": "bullish",
@@ -125,13 +125,13 @@
           "reason": "종가가 MA20 위로 회복 (2026-10-12, 1거래일 전)",
           "evidence": [
             "WHY NOW: 가장 최근 변화가 1거래일 전 발생 (Novelty high)",
-            "WHY NOT PRICED: 변화 발생(2026-10-12) 이후 +5.5%, 20일 +5.3%, 60일 +12.3% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
+            "WHY NOT PRICED: 변화 발생(2026-10-12) 이후 +6.0%, 20일 +5.8%, 60일 +12.8% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
             "CHANGED: 거래량 20일 평균 대비 4.2배로 급증 (2026-10-12, 1거래일 전)",
-            "CHANGED: 기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +2.1%, 거래량 2.4배가 확인)",
-            "CONFIRMS: Novelty[price]: 주가 MA20 회복, 거래량 20일 평균 대비 급증 + Technical[price]: 8/10 + Flow[flow]: 기관합계 매수 전환 + 5일 수익률 +2.1%, 거래량 2.4배 확인 + Relative Strength[price]: 7/7",
-            "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.072%)",
+            "CHANGED: 기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +2.6%, 거래량 2.4배가 확인)",
+            "CONFIRMS: Novelty[price]: 주가 MA20 회복, 거래량 20일 평균 대비 급증 + Technical[price]: 8/10 + Flow[flow]: 기관합계 매수 전환 + 5일 수익률 +2.6%, 거래량 2.4배 확인 + Relative Strength[price]: 7/7",
+            "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.071%)",
             "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 0.108%)",
-            "INTERPRETATION: Bullish — 기관합계 매수 전환을 5일 수익률 +2.1%, 거래량 2.4배가 확인"
+            "INTERPRETATION: Bullish — 기관합계 매수 전환을 5일 수익률 +2.6%, 거래량 2.4배가 확인"
           ],
           "counterEvidence": [
             "향후 20거래일 내 점수화 가능한 Catalyst 없음 — 최상위 Priority(Tier 1) 제한"
@@ -157,6 +157,116 @@
       "qualifiedCount": 16,
       "picks": [
         {
+          "symbol": "0220W0",
+          "company": "한화머시너리앤서비스홀딩스",
+          "bucket": "DISCOVERY",
+          "bucketLabel": "Discovery",
+          "strategy": "Confluence · New Change",
+          "score": 53,
+          "noveltyScore": 18.3,
+          "catalystScore": 0,
+          "technicalScore": 7.5,
+          "flowScore": 5,
+          "revisionScore": null,
+          "relativeStrengthScore": 10,
+          "dataCoverage": 77,
+          "confidence": "Normal",
+          "independentConfirmations": 3,
+          "confirmationSources": [
+            "price",
+            "flow"
+          ],
+          "whatChanged": [
+            "종가가 MA20 위로 회복 (2026-10-12, 1거래일 전)",
+            "거래량 20일 평균 대비 4.5배로 급증 (2026-10-12, 1거래일 전)"
+          ],
+          "whyNow": "가장 최근 변화가 1거래일 전 발생 (Novelty high)",
+          "whyNotPriced": "변화 발생(2026-10-12) 이후 +23.8%, 20일 +9.8%, 52주 고점 대비 -42.1% — 이미 일부 반영됐을 가능성 (추격 주의)",
+          "confirmation": "Novelty[price]: 주가 MA20 회복, 거래량 20일 평균 대비 급증 + Flow[flow]: 시총 대비 방향성 순매수 강도 상위 0.0%ile (비교군 99종목) + Relative Strength[price]: 10/10",
+          "invalidation": "종가가 MA20(6,371원) 하회",
+          "risks": "5거래일 +33.0% — 단기 과열/과매도",
+          "catalysts": [],
+          "sources": [
+            "KIS OHLCV",
+            "KRX 투자자별 매매동향"
+          ],
+          "pricedIn": {
+            "verdict": "partially_priced_in",
+            "facts": [
+              "변화 발생(2026-10-12) 이후 +23.8%",
+              "20일 +9.8%",
+              "52주 고점 대비 -42.1%",
+              "거래량 20일 평균 1.4배"
+            ]
+          },
+          "crowdingPenalty": {
+            "total": 6,
+            "items": [
+              {
+                "reason": "변화 발생 후 이미 +23.8%",
+                "points": 6
+              }
+            ]
+          },
+          "marketCapRank": 92,
+          "flowEvents": [
+            "EVENT: 연기금 등 매수→매도 전환 (변화폭 시총 대비 -0.142%)",
+            "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 2.381%)",
+            "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -3.087%)",
+            "EVENT: 외국인 매도→매수 전환 (변화폭 시총 대비 0.779%)"
+          ],
+          "flowInterpretation": "conflicting",
+          "noveltyEvents": [
+            {
+              "id": "priceCrossAboveMa20",
+              "label": "주가 MA20 회복",
+              "previousState": "below",
+              "currentState": "above",
+              "changeDate": "2026-10-12",
+              "daysSinceChange": 1,
+              "band": "high",
+              "points": 6
+            },
+            {
+              "id": "volumeSpike",
+              "label": "거래량 20일 평균 대비 급증",
+              "previousState": "normal",
+              "currentState": "4.5x",
+              "changeDate": "2026-10-12",
+              "daysSinceChange": 1,
+              "ratio": 4.5007181544053205,
+              "band": "high",
+              "points": 5
+            }
+          ],
+          "setup": "Discovery · Confluence · New Change",
+          "reason": "종가가 MA20 위로 회복 (2026-10-12, 1거래일 전)",
+          "evidence": [
+            "WHY NOW: 가장 최근 변화가 1거래일 전 발생 (Novelty high)",
+            "WHY NOT PRICED: 변화 발생(2026-10-12) 이후 +23.8%, 20일 +9.8%, 52주 고점 대비 -42.1% — 이미 일부 반영됐을 가능성 (추격 주의)",
+            "CHANGED: 거래량 20일 평균 대비 4.5배로 급증 (2026-10-12, 1거래일 전)",
+            "CONFIRMS: Novelty[price]: 주가 MA20 회복, 거래량 20일 평균 대비 급증 + Flow[flow]: 시총 대비 방향성 순매수 강도 상위 0.0%ile (비교군 99종목) + Relative Strength[price]: 10/10",
+            "EVENT: 연기금 등 매수→매도 전환 (변화폭 시총 대비 -0.142%)",
+            "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 2.381%)",
+            "INTERPRETATION: 모순 — 외국인/기관 방향이 서로 반대, 점수 미반영"
+          ],
+          "counterEvidence": [
+            "외국인/기관 수급 방향이 서로 반대 — Flow 점수 미반영",
+            "Priced-in: 변화 발생(2026-10-12) 이후 +23.8%, 20일 +9.8%, 52주 고점 대비 -42.1% — 이미 일부 반영됐을 가능성 (추격 주의)",
+            "향후 20거래일 내 점수화 가능한 Catalyst 없음 — 최상위 Priority(Tier 1) 제한"
+          ],
+          "watch": "급증한 거래량이 20일 평균 이상으로 유지되는지",
+          "riskDecision": "WATCH",
+          "scoreBreakdown": [
+            "Novelty 18.3/25",
+            "Catalyst 0/12",
+            "Technical 7.5/15",
+            "Flow 5/15",
+            "Relative Strength 10/10"
+          ],
+          "priority": 53
+        },
+        {
           "symbol": "328130",
           "company": "루닛",
           "bucket": "DISCOVERY",
@@ -179,12 +289,12 @@
           "whatChanged": [
             "MA20이 MA60을 상향돌파 (2026-10-08, 2거래일 전)",
             "거래량 20일 평균 대비 8.5배로 급증 (2026-09-28, 9거래일 전)",
-            "기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +8.6%가 확인)"
+            "기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +7.4%가 확인)"
           ],
           "whyNow": "가장 최근 변화가 최근 3거래일 안 발생 (Novelty high)",
-          "whyNotPriced": "변화 발생(2026-09-28) 이후 +17.0%, 20일 +33.0%, 60일 +15.8% — 이미 일부 반영됐을 가능성 (추격 주의)",
-          "confirmation": "Novelty[price]: MA20이 MA60 상향돌파 + Technical[price]: 6/10 + Flow[flow]: 기관합계 매수 전환 + 5일 수익률 +8.6% 확인 + Relative Strength[price]: 10/10",
-          "invalidation": "MA20(10,067원)이 MA60(9,765원) 아래로 재이탈 / 기관합계 순매도 재전환",
+          "whyNotPriced": "변화 발생(2026-09-28) 이후 +15.7%, 20일 +31.5%, 60일 +14.5% — 이미 일부 반영됐을 가능성 (추격 주의)",
+          "confirmation": "Novelty[price]: MA20이 MA60 상향돌파 + Technical[price]: 6/10 + Flow[flow]: 기관합계 매수 전환 + 5일 수익률 +7.4% 확인 + Relative Strength[price]: 10/10",
+          "invalidation": "MA20(10,060원)이 MA60(9,763원) 아래로 재이탈 / 기관합계 순매도 재전환",
           "risks": "ATR14/종가 8.9% — 변동성 과다",
           "catalysts": [],
           "sources": [
@@ -194,10 +304,10 @@
           "pricedIn": {
             "verdict": "partially_priced_in",
             "facts": [
-              "변화 발생(2026-09-28) 이후 +17.0%",
-              "20일 +33.0%",
-              "60일 +15.8%",
-              "52주 고점 대비 -76.9%",
+              "변화 발생(2026-09-28) 이후 +15.7%",
+              "20일 +31.5%",
+              "60일 +14.5%",
+              "52주 고점 대비 -77.2%",
               "거래량 20일 평균 0.9배"
             ]
           },
@@ -205,7 +315,7 @@
             "total": 14,
             "items": [
               {
-                "reason": "변화 발생 후 이미 +17.0%",
+                "reason": "변화 발생 후 이미 +15.7%",
                 "points": 6
               },
               {
@@ -216,9 +326,9 @@
           },
           "marketCapRank": 90,
           "flowEvents": [
-            "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.604%)",
-            "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 1.134%)",
-            "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -0.780%)"
+            "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.611%)",
+            "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 1.147%)",
+            "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -0.789%)"
           ],
           "flowInterpretation": "bullish",
           "noveltyEvents": [
@@ -260,16 +370,16 @@
           "reason": "MA20이 MA60을 상향돌파 (2026-10-08, 2거래일 전)",
           "evidence": [
             "WHY NOW: 가장 최근 변화가 최근 3거래일 안 발생 (Novelty high)",
-            "WHY NOT PRICED: 변화 발생(2026-09-28) 이후 +17.0%, 20일 +33.0%, 60일 +15.8% — 이미 일부 반영됐을 가능성 (추격 주의)",
+            "WHY NOT PRICED: 변화 발생(2026-09-28) 이후 +15.7%, 20일 +31.5%, 60일 +14.5% — 이미 일부 반영됐을 가능성 (추격 주의)",
             "CHANGED: 거래량 20일 평균 대비 8.5배로 급증 (2026-09-28, 9거래일 전)",
-            "CHANGED: 기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +8.6%가 확인)",
-            "CONFIRMS: Novelty[price]: MA20이 MA60 상향돌파 + Technical[price]: 6/10 + Flow[flow]: 기관합계 매수 전환 + 5일 수익률 +8.6% 확인 + Relative Strength[price]: 10/10",
-            "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.604%)",
-            "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 1.134%)",
-            "INTERPRETATION: Bullish — 기관합계 매수 전환을 5일 수익률 +8.6%가 확인"
+            "CHANGED: 기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +7.4%가 확인)",
+            "CONFIRMS: Novelty[price]: MA20이 MA60 상향돌파 + Technical[price]: 6/10 + Flow[flow]: 기관합계 매수 전환 + 5일 수익률 +7.4% 확인 + Relative Strength[price]: 10/10",
+            "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.611%)",
+            "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 1.147%)",
+            "INTERPRETATION: Bullish — 기관합계 매수 전환을 5일 수익률 +7.4%가 확인"
           ],
           "counterEvidence": [
-            "Priced-in: 변화 발생(2026-09-28) 이후 +17.0%, 20일 +33.0%, 60일 +15.8% — 이미 일부 반영됐을 가능성 (추격 주의)",
+            "Priced-in: 변화 발생(2026-09-28) 이후 +15.7%, 20일 +31.5%, 60일 +14.5% — 이미 일부 반영됐을 가능성 (추격 주의)",
             "향후 20거래일 내 점수화 가능한 Catalyst 없음 — 최상위 Priority(Tier 1) 제한"
           ],
           "watch": "기관합계 순매수가 다음 3거래일 지속되는지",
@@ -282,110 +392,6 @@
             "Relative Strength 10/10"
           ],
           "priority": 60.4
-        },
-        {
-          "symbol": "319660",
-          "company": "피에스케이",
-          "bucket": "DISCOVERY",
-          "bucketLabel": "Discovery",
-          "strategy": "Confluence · Trend Confirmation",
-          "score": 42.9,
-          "noveltyScore": 14,
-          "catalystScore": 0,
-          "technicalScore": 9,
-          "flowScore": 7,
-          "revisionScore": null,
-          "relativeStrengthScore": 3,
-          "dataCoverage": 77,
-          "confidence": "Normal",
-          "independentConfirmations": 3,
-          "confirmationSources": [
-            "price",
-            "flow"
-          ],
-          "whatChanged": [
-            "MA20이 MA60을 상향돌파 (2026-10-13, 0거래일 전)",
-            "외국인 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 외국인 매수 전환을 거래량 1.3배가 확인)"
-          ],
-          "whyNow": "가장 최근 변화가 0거래일 전 발생 (Novelty high)",
-          "whyNotPriced": "변화 발생(2026-10-13) 이후 +6.5%, 20일 +13.1%, 60일 -19.2% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
-          "confirmation": "Novelty[price]: MA20이 MA60 상향돌파 + Technical[price]: 6/10 + Flow[flow]: 외국인 매수 전환 + 거래량 1.3배 확인",
-          "invalidation": "MA20(138,025원)이 MA60(137,228원) 아래로 재이탈 / 외국인 순매도 재전환",
-          "risks": "투자주의 지정 (2026-10-14) · ATR14/종가 8.0% — 변동성 과다",
-          "catalysts": [],
-          "sources": [
-            "KIS OHLCV",
-            "KRX 투자자별 매매동향"
-          ],
-          "pricedIn": {
-            "verdict": "unclear",
-            "facts": [
-              "변화 발생(2026-10-13) 이후 +6.5%",
-              "20일 +13.1%",
-              "60일 -19.2%",
-              "52주 고점 대비 -32.1%",
-              "거래량 20일 평균 1.3배"
-            ]
-          },
-          "crowdingPenalty": {
-            "total": 0,
-            "items": []
-          },
-          "marketCapRank": 63,
-          "flowEvents": [
-            "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 1.208%)",
-            "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -2.100%)",
-            "EVENT: 외국인 매도→매수 전환 (변화폭 시총 대비 1.029%)"
-          ],
-          "flowInterpretation": "bullish",
-          "noveltyEvents": [
-            {
-              "id": "ma20CrossAboveMa60",
-              "label": "MA20이 MA60 상향돌파",
-              "previousState": "below",
-              "currentState": "above",
-              "changeDate": "2026-10-13",
-              "daysSinceChange": 0,
-              "band": "high",
-              "points": 10
-            },
-            {
-              "id": "flowReversal",
-              "label": "외국인/기관 수급 매수 전환 (가격·거래량 확인)",
-              "previousState": "순매도",
-              "currentState": "순매수",
-              "changeDate": null,
-              "daysSinceChange": 1,
-              "approx": true,
-              "detail": "외국인",
-              "band": "high",
-              "points": 4
-            }
-          ],
-          "setup": "Discovery · Confluence · Trend Confirmation",
-          "reason": "MA20이 MA60을 상향돌파 (2026-10-13, 0거래일 전)",
-          "evidence": [
-            "WHY NOW: 가장 최근 변화가 0거래일 전 발생 (Novelty high)",
-            "WHY NOT PRICED: 변화 발생(2026-10-13) 이후 +6.5%, 20일 +13.1%, 60일 -19.2% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
-            "CHANGED: 외국인 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 외국인 매수 전환을 거래량 1.3배가 확인)",
-            "CONFIRMS: Novelty[price]: MA20이 MA60 상향돌파 + Technical[price]: 6/10 + Flow[flow]: 외국인 매수 전환 + 거래량 1.3배 확인",
-            "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 1.208%)",
-            "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -2.100%)",
-            "INTERPRETATION: Bullish — 외국인 매수 전환을 거래량 1.3배가 확인"
-          ],
-          "counterEvidence": [
-            "향후 20거래일 내 점수화 가능한 Catalyst 없음 — 최상위 Priority(Tier 1) 제한"
-          ],
-          "watch": "외국인 순매수가 다음 3거래일 지속되는지",
-          "riskDecision": "WATCH",
-          "scoreBreakdown": [
-            "Novelty 14/25",
-            "Catalyst 0/12",
-            "Technical 9/15",
-            "Flow 7/15",
-            "Relative Strength 3/10"
-          ],
-          "priority": 42.9
         }
       ],
       "emptyReason": null
@@ -394,7 +400,7 @@
       "bucket": "EVENT_DRIVEN",
       "label": "Event-Driven",
       "requested": 1,
-      "qualifiedCount": 1,
+      "qualifiedCount": 2,
       "picks": [
         {
           "symbol": "030000",
@@ -420,12 +426,12 @@
           "whatChanged": [
             "종가가 MA20 위로 회복 (2026-09-30, 7거래일 전)",
             "거래량 20일 평균 대비 3.0배로 급증 (2026-09-30, 7거래일 전)",
-            "연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 5일 수익률 +3.2%가 확인)"
+            "연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 5일 수익률 +4.0%가 확인)"
           ],
           "whyNow": "가장 최근 변화가 최근 3거래일 안 발생 (Novelty high)",
-          "whyNotPriced": "변화 발생(2026-09-30) 이후 +7.9%, 20일 +2.2%, 60일 +2.9% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
-          "confirmation": "Technical[price]: 6/10 + Flow[flow]: 연기금 등 매수 전환 + 5일 수익률 +3.2% 확인 + Relative Strength[price]: 10/10 + Catalyst[event]: 자사주 취득 기간 진행 중",
-          "invalidation": "종가가 MA20(18,370원) 하회 / 연기금 등 순매도 재전환",
+          "whyNotPriced": "변화 발생(2026-09-30) 이후 +8.7%, 20일 +2.9%, 60일 +3.6% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
+          "confirmation": "Technical[price]: 6/10 + Flow[flow]: 연기금 등 매수 전환 + 5일 수익률 +4.0% 확인 + Relative Strength[price]: 10/10 + Catalyst[event]: 자사주 취득 기간 진행 중",
+          "invalidation": "종가가 MA20(18,377원) 하회 / 연기금 등 순매도 재전환",
           "risks": "특이 리스크 없음",
           "catalysts": [
             "자사주 취득 2026년 10월 01일 ~ 2026년 12월 30일 (유가증권시장을 통한 장내 매수)"
@@ -438,10 +444,10 @@
           "pricedIn": {
             "verdict": "unclear",
             "facts": [
-              "변화 발생(2026-09-30) 이후 +7.9%",
-              "20일 +2.2%",
-              "60일 +2.9%",
-              "52주 고점 대비 -17.2%",
+              "변화 발생(2026-09-30) 이후 +8.7%",
+              "20일 +2.9%",
+              "60일 +3.6%",
+              "52주 고점 대비 -16.6%",
               "거래량 20일 평균 1.1배"
             ]
           },
@@ -451,7 +457,7 @@
           },
           "marketCapRank": 76,
           "flowEvents": [
-            "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.193%)"
+            "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.192%)"
           ],
           "flowInterpretation": "bullish",
           "noveltyEvents": [
@@ -493,12 +499,12 @@
           "reason": "종가가 MA20 위로 회복 (2026-09-30, 7거래일 전)",
           "evidence": [
             "WHY NOW: 가장 최근 변화가 최근 3거래일 안 발생 (Novelty high)",
-            "WHY NOT PRICED: 변화 발생(2026-09-30) 이후 +7.9%, 20일 +2.2%, 60일 +2.9% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
+            "WHY NOT PRICED: 변화 발생(2026-09-30) 이후 +8.7%, 20일 +2.9%, 60일 +3.6% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
             "CHANGED: 거래량 20일 평균 대비 3.0배로 급증 (2026-09-30, 7거래일 전)",
-            "CHANGED: 연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 5일 수익률 +3.2%가 확인)",
-            "CONFIRMS: Technical[price]: 6/10 + Flow[flow]: 연기금 등 매수 전환 + 5일 수익률 +3.2% 확인 + Relative Strength[price]: 10/10 + Catalyst[event]: 자사주 취득 기간 진행 중",
-            "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.193%)",
-            "INTERPRETATION: Bullish — 연기금 등 매수 전환을 5일 수익률 +3.2%가 확인",
+            "CHANGED: 연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 5일 수익률 +4.0%가 확인)",
+            "CONFIRMS: Technical[price]: 6/10 + Flow[flow]: 연기금 등 매수 전환 + 5일 수익률 +4.0% 확인 + Relative Strength[price]: 10/10 + Catalyst[event]: 자사주 취득 기간 진행 중",
+            "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.192%)",
+            "INTERPRETATION: Bullish — 연기금 등 매수 전환을 5일 수익률 +4.0%가 확인",
             "CATALYST: 자사주 취득 2026년 10월 01일 ~ 2026년 12월 30일 (유가증권시장을 통한 장내 매수)"
           ],
           "counterEvidence": [
@@ -546,12 +552,12 @@
           ],
           "whatChanged": [
             "종가가 MA20 위로 회복 (2026-10-13, 0거래일 전)",
-            "연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 5일 수익률 +0.8%가 확인)"
+            "연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 5일 수익률 +1.6%가 확인)"
           ],
           "whyNow": "가장 최근 변화가 0거래일 전 발생 (Novelty high)",
-          "whyNotPriced": "변화 발생(2026-10-13) 이후 +0.8%, 20일 -1.7%, 60일 +0.9% — 변화 대비 가격 반응이 아직 제한적",
-          "confirmation": "Novelty[price]: 주가 MA20 회복 + Flow[flow]: 연기금 등 매수 전환 + 5일 수익률 +0.8% 확인 + Relative Strength[price]: 10/10",
-          "invalidation": "종가가 MA20(14,624원) 하회 / 연기금 등 순매도 재전환",
+          "whyNotPriced": "변화 발생(2026-10-13) 이후 +1.6%, 20일 -0.9%, 60일 +1.7% — 변화 대비 가격 반응이 아직 제한적",
+          "confirmation": "Novelty[price]: 주가 MA20 회복 + Flow[flow]: 연기금 등 매수 전환 + 5일 수익률 +1.6% 확인 + Relative Strength[price]: 10/10",
+          "invalidation": "종가가 MA20(14,630원) 하회 / 연기금 등 순매도 재전환",
           "risks": "특이 리스크 없음",
           "catalysts": [],
           "sources": [
@@ -561,10 +567,10 @@
           "pricedIn": {
             "verdict": "not_yet_priced",
             "facts": [
-              "변화 발생(2026-10-13) 이후 +0.8%",
-              "20일 -1.7%",
-              "60일 +0.9%",
-              "52주 고점 대비 -22.0%",
+              "변화 발생(2026-10-13) 이후 +1.6%",
+              "20일 -0.9%",
+              "60일 +1.7%",
+              "52주 고점 대비 -21.4%",
               "거래량 20일 평균 0.9배"
             ]
           },
@@ -574,8 +580,8 @@
           },
           "marketCapRank": 54,
           "flowEvents": [
-            "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.064%)",
-            "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -0.144%)"
+            "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.063%)",
+            "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -0.143%)"
           ],
           "flowInterpretation": "bullish",
           "noveltyEvents": [
@@ -606,12 +612,12 @@
           "reason": "종가가 MA20 위로 회복 (2026-10-13, 0거래일 전)",
           "evidence": [
             "WHY NOW: 가장 최근 변화가 0거래일 전 발생 (Novelty high)",
-            "WHY NOT PRICED: 변화 발생(2026-10-13) 이후 +0.8%, 20일 -1.7%, 60일 +0.9% — 변화 대비 가격 반응이 아직 제한적",
-            "CHANGED: 연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 5일 수익률 +0.8%가 확인)",
-            "CONFIRMS: Novelty[price]: 주가 MA20 회복 + Flow[flow]: 연기금 등 매수 전환 + 5일 수익률 +0.8% 확인 + Relative Strength[price]: 10/10",
-            "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.064%)",
-            "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -0.144%)",
-            "INTERPRETATION: Bullish — 연기금 등 매수 전환을 5일 수익률 +0.8%가 확인"
+            "WHY NOT PRICED: 변화 발생(2026-10-13) 이후 +1.6%, 20일 -0.9%, 60일 +1.7% — 변화 대비 가격 반응이 아직 제한적",
+            "CHANGED: 연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 5일 수익률 +1.6%가 확인)",
+            "CONFIRMS: Novelty[price]: 주가 MA20 회복 + Flow[flow]: 연기금 등 매수 전환 + 5일 수익률 +1.6% 확인 + Relative Strength[price]: 10/10",
+            "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.063%)",
+            "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -0.143%)",
+            "INTERPRETATION: Bullish — 연기금 등 매수 전환을 5일 수익률 +1.6%가 확인"
           ],
           "counterEvidence": [
             "향후 20거래일 내 점수화 가능한 Catalyst 없음 — 최상위 Priority(Tier 1) 제한"
@@ -655,12 +661,12 @@
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-10-12, 1거래일 전)",
         "거래량 20일 평균 대비 4.2배로 급증 (2026-10-12, 1거래일 전)",
-        "기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +2.1%, 거래량 2.4배가 확인)"
+        "기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +2.6%, 거래량 2.4배가 확인)"
       ],
       "whyNow": "가장 최근 변화가 1거래일 전 발생 (Novelty high)",
-      "whyNotPriced": "변화 발생(2026-10-12) 이후 +5.5%, 20일 +5.3%, 60일 +12.3% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
-      "confirmation": "Novelty[price]: 주가 MA20 회복, 거래량 20일 평균 대비 급증 + Technical[price]: 8/10 + Flow[flow]: 기관합계 매수 전환 + 5일 수익률 +2.1%, 거래량 2.4배 확인 + Relative Strength[price]: 7/7",
-      "invalidation": "종가가 MA20(21,088원) 하회 / 기관합계 순매도 재전환",
+      "whyNotPriced": "변화 발생(2026-10-12) 이후 +6.0%, 20일 +5.8%, 60일 +12.8% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
+      "confirmation": "Novelty[price]: 주가 MA20 회복, 거래량 20일 평균 대비 급증 + Technical[price]: 8/10 + Flow[flow]: 기관합계 매수 전환 + 5일 수익률 +2.6%, 거래량 2.4배 확인 + Relative Strength[price]: 7/7",
+      "invalidation": "종가가 MA20(21,093원) 하회 / 기관합계 순매도 재전환",
       "risks": "특이 리스크 없음",
       "catalysts": [],
       "sources": [
@@ -670,17 +676,17 @@
       "pricedIn": {
         "verdict": "unclear",
         "facts": [
-          "변화 발생(2026-10-12) 이후 +5.5%",
-          "20일 +5.3%",
-          "60일 +12.3%",
-          "52주 고점 대비 -12.0%",
+          "변화 발생(2026-10-12) 이후 +6.0%",
+          "20일 +5.8%",
+          "60일 +12.8%",
+          "52주 고점 대비 -11.6%",
           "거래량 20일 평균 2.4배"
         ]
       },
       "crowdingPenalty": null,
       "marketCapRank": 26,
       "flowEvents": [
-        "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.072%)",
+        "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.071%)",
         "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 0.108%)"
       ],
       "flowInterpretation": "bullish",
@@ -723,13 +729,13 @@
       "reason": "종가가 MA20 위로 회복 (2026-10-12, 1거래일 전)",
       "evidence": [
         "WHY NOW: 가장 최근 변화가 1거래일 전 발생 (Novelty high)",
-        "WHY NOT PRICED: 변화 발생(2026-10-12) 이후 +5.5%, 20일 +5.3%, 60일 +12.3% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
+        "WHY NOT PRICED: 변화 발생(2026-10-12) 이후 +6.0%, 20일 +5.8%, 60일 +12.8% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
         "CHANGED: 거래량 20일 평균 대비 4.2배로 급증 (2026-10-12, 1거래일 전)",
-        "CHANGED: 기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +2.1%, 거래량 2.4배가 확인)",
-        "CONFIRMS: Novelty[price]: 주가 MA20 회복, 거래량 20일 평균 대비 급증 + Technical[price]: 8/10 + Flow[flow]: 기관합계 매수 전환 + 5일 수익률 +2.1%, 거래량 2.4배 확인 + Relative Strength[price]: 7/7",
-        "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.072%)",
+        "CHANGED: 기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +2.6%, 거래량 2.4배가 확인)",
+        "CONFIRMS: Novelty[price]: 주가 MA20 회복, 거래량 20일 평균 대비 급증 + Technical[price]: 8/10 + Flow[flow]: 기관합계 매수 전환 + 5일 수익률 +2.6%, 거래량 2.4배 확인 + Relative Strength[price]: 7/7",
+        "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.071%)",
         "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 0.108%)",
-        "INTERPRETATION: Bullish — 기관합계 매수 전환을 5일 수익률 +2.1%, 거래량 2.4배가 확인"
+        "INTERPRETATION: Bullish — 기관합계 매수 전환을 5일 수익률 +2.6%, 거래량 2.4배가 확인"
       ],
       "counterEvidence": [
         "향후 20거래일 내 점수화 가능한 Catalyst 없음 — 최상위 Priority(Tier 1) 제한"
@@ -744,6 +750,116 @@
         "Relative Strength 10/10"
       ],
       "priority": 61
+    },
+    {
+      "symbol": "0220W0",
+      "company": "한화머시너리앤서비스홀딩스",
+      "bucket": "DISCOVERY",
+      "bucketLabel": "Discovery",
+      "strategy": "Confluence · New Change",
+      "score": 53,
+      "noveltyScore": 18.3,
+      "catalystScore": 0,
+      "technicalScore": 7.5,
+      "flowScore": 5,
+      "revisionScore": null,
+      "relativeStrengthScore": 10,
+      "dataCoverage": 77,
+      "confidence": "Normal",
+      "independentConfirmations": 3,
+      "confirmationSources": [
+        "price",
+        "flow"
+      ],
+      "whatChanged": [
+        "종가가 MA20 위로 회복 (2026-10-12, 1거래일 전)",
+        "거래량 20일 평균 대비 4.5배로 급증 (2026-10-12, 1거래일 전)"
+      ],
+      "whyNow": "가장 최근 변화가 1거래일 전 발생 (Novelty high)",
+      "whyNotPriced": "변화 발생(2026-10-12) 이후 +23.8%, 20일 +9.8%, 52주 고점 대비 -42.1% — 이미 일부 반영됐을 가능성 (추격 주의)",
+      "confirmation": "Novelty[price]: 주가 MA20 회복, 거래량 20일 평균 대비 급증 + Flow[flow]: 시총 대비 방향성 순매수 강도 상위 0.0%ile (비교군 99종목) + Relative Strength[price]: 10/10",
+      "invalidation": "종가가 MA20(6,371원) 하회",
+      "risks": "5거래일 +33.0% — 단기 과열/과매도",
+      "catalysts": [],
+      "sources": [
+        "KIS OHLCV",
+        "KRX 투자자별 매매동향"
+      ],
+      "pricedIn": {
+        "verdict": "partially_priced_in",
+        "facts": [
+          "변화 발생(2026-10-12) 이후 +23.8%",
+          "20일 +9.8%",
+          "52주 고점 대비 -42.1%",
+          "거래량 20일 평균 1.4배"
+        ]
+      },
+      "crowdingPenalty": {
+        "total": 6,
+        "items": [
+          {
+            "reason": "변화 발생 후 이미 +23.8%",
+            "points": 6
+          }
+        ]
+      },
+      "marketCapRank": 92,
+      "flowEvents": [
+        "EVENT: 연기금 등 매수→매도 전환 (변화폭 시총 대비 -0.142%)",
+        "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 2.381%)",
+        "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -3.087%)",
+        "EVENT: 외국인 매도→매수 전환 (변화폭 시총 대비 0.779%)"
+      ],
+      "flowInterpretation": "conflicting",
+      "noveltyEvents": [
+        {
+          "id": "priceCrossAboveMa20",
+          "label": "주가 MA20 회복",
+          "previousState": "below",
+          "currentState": "above",
+          "changeDate": "2026-10-12",
+          "daysSinceChange": 1,
+          "band": "high",
+          "points": 6
+        },
+        {
+          "id": "volumeSpike",
+          "label": "거래량 20일 평균 대비 급증",
+          "previousState": "normal",
+          "currentState": "4.5x",
+          "changeDate": "2026-10-12",
+          "daysSinceChange": 1,
+          "ratio": 4.5007181544053205,
+          "band": "high",
+          "points": 5
+        }
+      ],
+      "setup": "Discovery · Confluence · New Change",
+      "reason": "종가가 MA20 위로 회복 (2026-10-12, 1거래일 전)",
+      "evidence": [
+        "WHY NOW: 가장 최근 변화가 1거래일 전 발생 (Novelty high)",
+        "WHY NOT PRICED: 변화 발생(2026-10-12) 이후 +23.8%, 20일 +9.8%, 52주 고점 대비 -42.1% — 이미 일부 반영됐을 가능성 (추격 주의)",
+        "CHANGED: 거래량 20일 평균 대비 4.5배로 급증 (2026-10-12, 1거래일 전)",
+        "CONFIRMS: Novelty[price]: 주가 MA20 회복, 거래량 20일 평균 대비 급증 + Flow[flow]: 시총 대비 방향성 순매수 강도 상위 0.0%ile (비교군 99종목) + Relative Strength[price]: 10/10",
+        "EVENT: 연기금 등 매수→매도 전환 (변화폭 시총 대비 -0.142%)",
+        "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 2.381%)",
+        "INTERPRETATION: 모순 — 외국인/기관 방향이 서로 반대, 점수 미반영"
+      ],
+      "counterEvidence": [
+        "외국인/기관 수급 방향이 서로 반대 — Flow 점수 미반영",
+        "Priced-in: 변화 발생(2026-10-12) 이후 +23.8%, 20일 +9.8%, 52주 고점 대비 -42.1% — 이미 일부 반영됐을 가능성 (추격 주의)",
+        "향후 20거래일 내 점수화 가능한 Catalyst 없음 — 최상위 Priority(Tier 1) 제한"
+      ],
+      "watch": "급증한 거래량이 20일 평균 이상으로 유지되는지",
+      "riskDecision": "WATCH",
+      "scoreBreakdown": [
+        "Novelty 18.3/25",
+        "Catalyst 0/12",
+        "Technical 7.5/15",
+        "Flow 5/15",
+        "Relative Strength 10/10"
+      ],
+      "priority": 53
     },
     {
       "symbol": "328130",
@@ -768,12 +884,12 @@
       "whatChanged": [
         "MA20이 MA60을 상향돌파 (2026-10-08, 2거래일 전)",
         "거래량 20일 평균 대비 8.5배로 급증 (2026-09-28, 9거래일 전)",
-        "기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +8.6%가 확인)"
+        "기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +7.4%가 확인)"
       ],
       "whyNow": "가장 최근 변화가 최근 3거래일 안 발생 (Novelty high)",
-      "whyNotPriced": "변화 발생(2026-09-28) 이후 +17.0%, 20일 +33.0%, 60일 +15.8% — 이미 일부 반영됐을 가능성 (추격 주의)",
-      "confirmation": "Novelty[price]: MA20이 MA60 상향돌파 + Technical[price]: 6/10 + Flow[flow]: 기관합계 매수 전환 + 5일 수익률 +8.6% 확인 + Relative Strength[price]: 10/10",
-      "invalidation": "MA20(10,067원)이 MA60(9,765원) 아래로 재이탈 / 기관합계 순매도 재전환",
+      "whyNotPriced": "변화 발생(2026-09-28) 이후 +15.7%, 20일 +31.5%, 60일 +14.5% — 이미 일부 반영됐을 가능성 (추격 주의)",
+      "confirmation": "Novelty[price]: MA20이 MA60 상향돌파 + Technical[price]: 6/10 + Flow[flow]: 기관합계 매수 전환 + 5일 수익률 +7.4% 확인 + Relative Strength[price]: 10/10",
+      "invalidation": "MA20(10,060원)이 MA60(9,763원) 아래로 재이탈 / 기관합계 순매도 재전환",
       "risks": "ATR14/종가 8.9% — 변동성 과다",
       "catalysts": [],
       "sources": [
@@ -783,10 +899,10 @@
       "pricedIn": {
         "verdict": "partially_priced_in",
         "facts": [
-          "변화 발생(2026-09-28) 이후 +17.0%",
-          "20일 +33.0%",
-          "60일 +15.8%",
-          "52주 고점 대비 -76.9%",
+          "변화 발생(2026-09-28) 이후 +15.7%",
+          "20일 +31.5%",
+          "60일 +14.5%",
+          "52주 고점 대비 -77.2%",
           "거래량 20일 평균 0.9배"
         ]
       },
@@ -794,7 +910,7 @@
         "total": 14,
         "items": [
           {
-            "reason": "변화 발생 후 이미 +17.0%",
+            "reason": "변화 발생 후 이미 +15.7%",
             "points": 6
           },
           {
@@ -805,9 +921,9 @@
       },
       "marketCapRank": 90,
       "flowEvents": [
-        "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.604%)",
-        "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 1.134%)",
-        "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -0.780%)"
+        "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.611%)",
+        "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 1.147%)",
+        "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -0.789%)"
       ],
       "flowInterpretation": "bullish",
       "noveltyEvents": [
@@ -849,16 +965,16 @@
       "reason": "MA20이 MA60을 상향돌파 (2026-10-08, 2거래일 전)",
       "evidence": [
         "WHY NOW: 가장 최근 변화가 최근 3거래일 안 발생 (Novelty high)",
-        "WHY NOT PRICED: 변화 발생(2026-09-28) 이후 +17.0%, 20일 +33.0%, 60일 +15.8% — 이미 일부 반영됐을 가능성 (추격 주의)",
+        "WHY NOT PRICED: 변화 발생(2026-09-28) 이후 +15.7%, 20일 +31.5%, 60일 +14.5% — 이미 일부 반영됐을 가능성 (추격 주의)",
         "CHANGED: 거래량 20일 평균 대비 8.5배로 급증 (2026-09-28, 9거래일 전)",
-        "CHANGED: 기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +8.6%가 확인)",
-        "CONFIRMS: Novelty[price]: MA20이 MA60 상향돌파 + Technical[price]: 6/10 + Flow[flow]: 기관합계 매수 전환 + 5일 수익률 +8.6% 확인 + Relative Strength[price]: 10/10",
-        "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.604%)",
-        "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 1.134%)",
-        "INTERPRETATION: Bullish — 기관합계 매수 전환을 5일 수익률 +8.6%가 확인"
+        "CHANGED: 기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +7.4%가 확인)",
+        "CONFIRMS: Novelty[price]: MA20이 MA60 상향돌파 + Technical[price]: 6/10 + Flow[flow]: 기관합계 매수 전환 + 5일 수익률 +7.4% 확인 + Relative Strength[price]: 10/10",
+        "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.611%)",
+        "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 1.147%)",
+        "INTERPRETATION: Bullish — 기관합계 매수 전환을 5일 수익률 +7.4%가 확인"
       ],
       "counterEvidence": [
-        "Priced-in: 변화 발생(2026-09-28) 이후 +17.0%, 20일 +33.0%, 60일 +15.8% — 이미 일부 반영됐을 가능성 (추격 주의)",
+        "Priced-in: 변화 발생(2026-09-28) 이후 +15.7%, 20일 +31.5%, 60일 +14.5% — 이미 일부 반영됐을 가능성 (추격 주의)",
         "향후 20거래일 내 점수화 가능한 Catalyst 없음 — 최상위 Priority(Tier 1) 제한"
       ],
       "watch": "기관합계 순매수가 다음 3거래일 지속되는지",
@@ -871,110 +987,6 @@
         "Relative Strength 10/10"
       ],
       "priority": 60.4
-    },
-    {
-      "symbol": "319660",
-      "company": "피에스케이",
-      "bucket": "DISCOVERY",
-      "bucketLabel": "Discovery",
-      "strategy": "Confluence · Trend Confirmation",
-      "score": 42.9,
-      "noveltyScore": 14,
-      "catalystScore": 0,
-      "technicalScore": 9,
-      "flowScore": 7,
-      "revisionScore": null,
-      "relativeStrengthScore": 3,
-      "dataCoverage": 77,
-      "confidence": "Normal",
-      "independentConfirmations": 3,
-      "confirmationSources": [
-        "price",
-        "flow"
-      ],
-      "whatChanged": [
-        "MA20이 MA60을 상향돌파 (2026-10-13, 0거래일 전)",
-        "외국인 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 외국인 매수 전환을 거래량 1.3배가 확인)"
-      ],
-      "whyNow": "가장 최근 변화가 0거래일 전 발생 (Novelty high)",
-      "whyNotPriced": "변화 발생(2026-10-13) 이후 +6.5%, 20일 +13.1%, 60일 -19.2% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
-      "confirmation": "Novelty[price]: MA20이 MA60 상향돌파 + Technical[price]: 6/10 + Flow[flow]: 외국인 매수 전환 + 거래량 1.3배 확인",
-      "invalidation": "MA20(138,025원)이 MA60(137,228원) 아래로 재이탈 / 외국인 순매도 재전환",
-      "risks": "투자주의 지정 (2026-10-14) · ATR14/종가 8.0% — 변동성 과다",
-      "catalysts": [],
-      "sources": [
-        "KIS OHLCV",
-        "KRX 투자자별 매매동향"
-      ],
-      "pricedIn": {
-        "verdict": "unclear",
-        "facts": [
-          "변화 발생(2026-10-13) 이후 +6.5%",
-          "20일 +13.1%",
-          "60일 -19.2%",
-          "52주 고점 대비 -32.1%",
-          "거래량 20일 평균 1.3배"
-        ]
-      },
-      "crowdingPenalty": {
-        "total": 0,
-        "items": []
-      },
-      "marketCapRank": 63,
-      "flowEvents": [
-        "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 1.208%)",
-        "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -2.100%)",
-        "EVENT: 외국인 매도→매수 전환 (변화폭 시총 대비 1.029%)"
-      ],
-      "flowInterpretation": "bullish",
-      "noveltyEvents": [
-        {
-          "id": "ma20CrossAboveMa60",
-          "label": "MA20이 MA60 상향돌파",
-          "previousState": "below",
-          "currentState": "above",
-          "changeDate": "2026-10-13",
-          "daysSinceChange": 0,
-          "band": "high",
-          "points": 10
-        },
-        {
-          "id": "flowReversal",
-          "label": "외국인/기관 수급 매수 전환 (가격·거래량 확인)",
-          "previousState": "순매도",
-          "currentState": "순매수",
-          "changeDate": null,
-          "daysSinceChange": 1,
-          "approx": true,
-          "detail": "외국인",
-          "band": "high",
-          "points": 4
-        }
-      ],
-      "setup": "Discovery · Confluence · Trend Confirmation",
-      "reason": "MA20이 MA60을 상향돌파 (2026-10-13, 0거래일 전)",
-      "evidence": [
-        "WHY NOW: 가장 최근 변화가 0거래일 전 발생 (Novelty high)",
-        "WHY NOT PRICED: 변화 발생(2026-10-13) 이후 +6.5%, 20일 +13.1%, 60일 -19.2% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
-        "CHANGED: 외국인 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 외국인 매수 전환을 거래량 1.3배가 확인)",
-        "CONFIRMS: Novelty[price]: MA20이 MA60 상향돌파 + Technical[price]: 6/10 + Flow[flow]: 외국인 매수 전환 + 거래량 1.3배 확인",
-        "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 1.208%)",
-        "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -2.100%)",
-        "INTERPRETATION: Bullish — 외국인 매수 전환을 거래량 1.3배가 확인"
-      ],
-      "counterEvidence": [
-        "향후 20거래일 내 점수화 가능한 Catalyst 없음 — 최상위 Priority(Tier 1) 제한"
-      ],
-      "watch": "외국인 순매수가 다음 3거래일 지속되는지",
-      "riskDecision": "WATCH",
-      "scoreBreakdown": [
-        "Novelty 14/25",
-        "Catalyst 0/12",
-        "Technical 9/15",
-        "Flow 7/15",
-        "Relative Strength 3/10"
-      ],
-      "priority": 42.9
     },
     {
       "symbol": "030000",
@@ -1000,12 +1012,12 @@
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-09-30, 7거래일 전)",
         "거래량 20일 평균 대비 3.0배로 급증 (2026-09-30, 7거래일 전)",
-        "연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 5일 수익률 +3.2%가 확인)"
+        "연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 5일 수익률 +4.0%가 확인)"
       ],
       "whyNow": "가장 최근 변화가 최근 3거래일 안 발생 (Novelty high)",
-      "whyNotPriced": "변화 발생(2026-09-30) 이후 +7.9%, 20일 +2.2%, 60일 +2.9% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
-      "confirmation": "Technical[price]: 6/10 + Flow[flow]: 연기금 등 매수 전환 + 5일 수익률 +3.2% 확인 + Relative Strength[price]: 10/10 + Catalyst[event]: 자사주 취득 기간 진행 중",
-      "invalidation": "종가가 MA20(18,370원) 하회 / 연기금 등 순매도 재전환",
+      "whyNotPriced": "변화 발생(2026-09-30) 이후 +8.7%, 20일 +2.9%, 60일 +3.6% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
+      "confirmation": "Technical[price]: 6/10 + Flow[flow]: 연기금 등 매수 전환 + 5일 수익률 +4.0% 확인 + Relative Strength[price]: 10/10 + Catalyst[event]: 자사주 취득 기간 진행 중",
+      "invalidation": "종가가 MA20(18,377원) 하회 / 연기금 등 순매도 재전환",
       "risks": "특이 리스크 없음",
       "catalysts": [
         "자사주 취득 2026년 10월 01일 ~ 2026년 12월 30일 (유가증권시장을 통한 장내 매수)"
@@ -1018,10 +1030,10 @@
       "pricedIn": {
         "verdict": "unclear",
         "facts": [
-          "변화 발생(2026-09-30) 이후 +7.9%",
-          "20일 +2.2%",
-          "60일 +2.9%",
-          "52주 고점 대비 -17.2%",
+          "변화 발생(2026-09-30) 이후 +8.7%",
+          "20일 +2.9%",
+          "60일 +3.6%",
+          "52주 고점 대비 -16.6%",
           "거래량 20일 평균 1.1배"
         ]
       },
@@ -1031,7 +1043,7 @@
       },
       "marketCapRank": 76,
       "flowEvents": [
-        "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.193%)"
+        "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.192%)"
       ],
       "flowInterpretation": "bullish",
       "noveltyEvents": [
@@ -1073,12 +1085,12 @@
       "reason": "종가가 MA20 위로 회복 (2026-09-30, 7거래일 전)",
       "evidence": [
         "WHY NOW: 가장 최근 변화가 최근 3거래일 안 발생 (Novelty high)",
-        "WHY NOT PRICED: 변화 발생(2026-09-30) 이후 +7.9%, 20일 +2.2%, 60일 +2.9% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
+        "WHY NOT PRICED: 변화 발생(2026-09-30) 이후 +8.7%, 20일 +2.9%, 60일 +3.6% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
         "CHANGED: 거래량 20일 평균 대비 3.0배로 급증 (2026-09-30, 7거래일 전)",
-        "CHANGED: 연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 5일 수익률 +3.2%가 확인)",
-        "CONFIRMS: Technical[price]: 6/10 + Flow[flow]: 연기금 등 매수 전환 + 5일 수익률 +3.2% 확인 + Relative Strength[price]: 10/10 + Catalyst[event]: 자사주 취득 기간 진행 중",
-        "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.193%)",
-        "INTERPRETATION: Bullish — 연기금 등 매수 전환을 5일 수익률 +3.2%가 확인",
+        "CHANGED: 연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 5일 수익률 +4.0%가 확인)",
+        "CONFIRMS: Technical[price]: 6/10 + Flow[flow]: 연기금 등 매수 전환 + 5일 수익률 +4.0% 확인 + Relative Strength[price]: 10/10 + Catalyst[event]: 자사주 취득 기간 진행 중",
+        "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.192%)",
+        "INTERPRETATION: Bullish — 연기금 등 매수 전환을 5일 수익률 +4.0%가 확인",
         "CATALYST: 자사주 취득 2026년 10월 01일 ~ 2026년 12월 30일 (유가증권시장을 통한 장내 매수)"
       ],
       "counterEvidence": [
@@ -1117,12 +1129,12 @@
       ],
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-10-13, 0거래일 전)",
-        "연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 5일 수익률 +0.8%가 확인)"
+        "연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 5일 수익률 +1.6%가 확인)"
       ],
       "whyNow": "가장 최근 변화가 0거래일 전 발생 (Novelty high)",
-      "whyNotPriced": "변화 발생(2026-10-13) 이후 +0.8%, 20일 -1.7%, 60일 +0.9% — 변화 대비 가격 반응이 아직 제한적",
-      "confirmation": "Novelty[price]: 주가 MA20 회복 + Flow[flow]: 연기금 등 매수 전환 + 5일 수익률 +0.8% 확인 + Relative Strength[price]: 10/10",
-      "invalidation": "종가가 MA20(14,624원) 하회 / 연기금 등 순매도 재전환",
+      "whyNotPriced": "변화 발생(2026-10-13) 이후 +1.6%, 20일 -0.9%, 60일 +1.7% — 변화 대비 가격 반응이 아직 제한적",
+      "confirmation": "Novelty[price]: 주가 MA20 회복 + Flow[flow]: 연기금 등 매수 전환 + 5일 수익률 +1.6% 확인 + Relative Strength[price]: 10/10",
+      "invalidation": "종가가 MA20(14,630원) 하회 / 연기금 등 순매도 재전환",
       "risks": "특이 리스크 없음",
       "catalysts": [],
       "sources": [
@@ -1132,10 +1144,10 @@
       "pricedIn": {
         "verdict": "not_yet_priced",
         "facts": [
-          "변화 발생(2026-10-13) 이후 +0.8%",
-          "20일 -1.7%",
-          "60일 +0.9%",
-          "52주 고점 대비 -22.0%",
+          "변화 발생(2026-10-13) 이후 +1.6%",
+          "20일 -0.9%",
+          "60일 +1.7%",
+          "52주 고점 대비 -21.4%",
           "거래량 20일 평균 0.9배"
         ]
       },
@@ -1145,8 +1157,8 @@
       },
       "marketCapRank": 54,
       "flowEvents": [
-        "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.064%)",
-        "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -0.144%)"
+        "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.063%)",
+        "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -0.143%)"
       ],
       "flowInterpretation": "bullish",
       "noveltyEvents": [
@@ -1177,12 +1189,12 @@
       "reason": "종가가 MA20 위로 회복 (2026-10-13, 0거래일 전)",
       "evidence": [
         "WHY NOW: 가장 최근 변화가 0거래일 전 발생 (Novelty high)",
-        "WHY NOT PRICED: 변화 발생(2026-10-13) 이후 +0.8%, 20일 -1.7%, 60일 +0.9% — 변화 대비 가격 반응이 아직 제한적",
-        "CHANGED: 연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 5일 수익률 +0.8%가 확인)",
-        "CONFIRMS: Novelty[price]: 주가 MA20 회복 + Flow[flow]: 연기금 등 매수 전환 + 5일 수익률 +0.8% 확인 + Relative Strength[price]: 10/10",
-        "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.064%)",
-        "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -0.144%)",
-        "INTERPRETATION: Bullish — 연기금 등 매수 전환을 5일 수익률 +0.8%가 확인"
+        "WHY NOT PRICED: 변화 발생(2026-10-13) 이후 +1.6%, 20일 -0.9%, 60일 +1.7% — 변화 대비 가격 반응이 아직 제한적",
+        "CHANGED: 연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 5일 수익률 +1.6%가 확인)",
+        "CONFIRMS: Novelty[price]: 주가 MA20 회복 + Flow[flow]: 연기금 등 매수 전환 + 5일 수익률 +1.6% 확인 + Relative Strength[price]: 10/10",
+        "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.063%)",
+        "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -0.143%)",
+        "INTERPRETATION: Bullish — 연기금 등 매수 전환을 5일 수익률 +1.6%가 확인"
       ],
       "counterEvidence": [
         "향후 20거래일 내 점수화 가능한 Catalyst 없음 — 최상위 Priority(Tier 1) 제한"
@@ -1224,7 +1236,7 @@
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-09-30, 7거래일 전)",
         "거래량 20일 평균 대비 3.0배로 급증 (2026-09-30, 7거래일 전)",
-        "연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 5일 수익률 +3.2%가 확인)"
+        "연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 5일 수익률 +4.0%가 확인)"
       ],
       "pricedInVerdict": "unclear",
       "gateFails": [],
@@ -1245,6 +1257,50 @@
         "Technical",
         "Flow",
         "Relative Strength",
+        "Catalyst"
+      ]
+    },
+    {
+      "symbol": "000660",
+      "name": "SK하이닉스",
+      "sector": "반도체",
+      "bucket": null,
+      "strategy": "Flow Confirmed",
+      "score": 29.1,
+      "discoveryScore": 29.1,
+      "dataCoverage": 77,
+      "confidence": "Normal",
+      "independentConfirmations": 2,
+      "confirmationSources": [
+        "flow",
+        "event"
+      ],
+      "newSignalCount": 3,
+      "tier": 1,
+      "marketCapRank": 2,
+      "isLargeCap": true,
+      "whatChanged": [
+        "MA20이 MA60을 상향돌파 (2026-09-30, 7거래일 전)",
+        "기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 거래량 1.8배가 확인)",
+        "새 정보: SOL AI반도체TOP2플러스 비중 +3.26%p (2026-10-13) (0거래일 전)"
+      ],
+      "pricedInVerdict": "unclear",
+      "gateFails": [],
+      "risk": {
+        "decision": "WATCH",
+        "reason": "5거래일 -21.6% — 단기 과열/과매도"
+      },
+      "topEvidence": "MA20이 MA60을 상향돌파 (2026-09-30, 7거래일 전)",
+      "scoreBreakdown": [
+        "Novelty 7/25",
+        "Catalyst 2.4/12",
+        "Technical 6/15",
+        "Flow 7/15",
+        "Relative Strength 0/10"
+      ],
+      "signalTypes": [
+        "Leader 후보",
+        "Flow",
         "Catalyst"
       ]
     },
@@ -1270,7 +1326,7 @@
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-10-12, 1거래일 전)",
         "거래량 20일 평균 대비 4.2배로 급증 (2026-10-12, 1거래일 전)",
-        "기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +2.1%, 거래량 2.4배가 확인)"
+        "기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +2.6%, 거래량 2.4배가 확인)"
       ],
       "pricedInVerdict": "unclear",
       "gateFails": [],
@@ -1290,6 +1346,50 @@
         "Market Leader",
         "Novelty",
         "Technical",
+        "Flow",
+        "Relative Strength"
+      ]
+    },
+    {
+      "symbol": "0220W0",
+      "name": "한화머시너리앤서비스홀딩스",
+      "sector": "금융",
+      "bucket": "DISCOVERY",
+      "strategy": "Confluence · New Change",
+      "score": 53,
+      "discoveryScore": 47,
+      "dataCoverage": 77,
+      "confidence": "Normal",
+      "independentConfirmations": 3,
+      "confirmationSources": [
+        "price",
+        "flow"
+      ],
+      "newSignalCount": 2,
+      "tier": 2,
+      "marketCapRank": 92,
+      "isLargeCap": false,
+      "whatChanged": [
+        "종가가 MA20 위로 회복 (2026-10-12, 1거래일 전)",
+        "거래량 20일 평균 대비 4.5배로 급증 (2026-10-12, 1거래일 전)"
+      ],
+      "pricedInVerdict": "partially_priced_in",
+      "gateFails": [],
+      "risk": {
+        "decision": "WATCH",
+        "reason": "5거래일 +33.0% — 단기 과열/과매도"
+      },
+      "topEvidence": "종가가 MA20 위로 회복 (2026-10-12, 1거래일 전)",
+      "scoreBreakdown": [
+        "Novelty 18.3/25",
+        "Catalyst 0/12",
+        "Technical 7.5/15",
+        "Flow 5/15",
+        "Relative Strength 10/10"
+      ],
+      "signalTypes": [
+        "Discovery",
+        "Novelty",
         "Flow",
         "Relative Strength"
       ]
@@ -1316,7 +1416,7 @@
       "whatChanged": [
         "MA20이 MA60을 상향돌파 (2026-10-08, 2거래일 전)",
         "거래량 20일 평균 대비 8.5배로 급증 (2026-09-28, 9거래일 전)",
-        "기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +8.6%가 확인)"
+        "기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +7.4%가 확인)"
       ],
       "pricedInVerdict": "partially_priced_in",
       "gateFails": [],
@@ -1336,6 +1436,51 @@
         "Discovery",
         "Novelty",
         "Technical",
+        "Flow",
+        "Relative Strength"
+      ]
+    },
+    {
+      "symbol": "139480",
+      "name": "이마트",
+      "sector": "유통",
+      "bucket": null,
+      "strategy": "Confluence · Flow Confirmed",
+      "score": 44.2,
+      "discoveryScore": 44.2,
+      "dataCoverage": 77,
+      "confidence": "Normal",
+      "independentConfirmations": 3,
+      "confirmationSources": [
+        "price",
+        "flow"
+      ],
+      "newSignalCount": 3,
+      "tier": 2,
+      "marketCapRank": 80,
+      "isLargeCap": false,
+      "whatChanged": [
+        "거래량 20일 평균 대비 2.0배로 급증 (2026-10-13, 0거래일 전)",
+        "외국인 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 외국인 매수 전환을 5일 수익률 +0.8%, 거래량 2.0배가 확인)",
+        "새 정보: 실적 공시(20261013) 후 누적 반응 미집계 (0거래일 전)"
+      ],
+      "pricedInVerdict": "not_yet_priced",
+      "gateFails": [],
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      },
+      "topEvidence": "거래량 20일 평균 대비 2.0배로 급증 (2026-10-13, 0거래일 전)",
+      "scoreBreakdown": [
+        "Novelty 9/25",
+        "Catalyst 0/12",
+        "Technical 3/15",
+        "Flow 12/15",
+        "Relative Strength 10/10"
+      ],
+      "signalTypes": [
+        "Discovery 후보",
+        "Novelty",
         "Flow",
         "Relative Strength"
       ]
@@ -1361,7 +1506,7 @@
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-10-13, 0거래일 전)",
-        "연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 5일 수익률 +0.8%가 확인)"
+        "연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 5일 수익률 +1.6%가 확인)"
       ],
       "pricedInVerdict": "not_yet_priced",
       "gateFails": [],
@@ -1388,7 +1533,7 @@
       "symbol": "319660",
       "name": "피에스케이",
       "sector": "기계·장비",
-      "bucket": "DISCOVERY",
+      "bucket": null,
       "strategy": "Confluence · Trend Confirmation",
       "score": 42.9,
       "discoveryScore": 42.9,
@@ -1401,7 +1546,7 @@
       ],
       "newSignalCount": 2,
       "tier": 2,
-      "marketCapRank": 63,
+      "marketCapRank": 64,
       "isLargeCap": false,
       "whatChanged": [
         "MA20이 MA60을 상향돌파 (2026-10-13, 0거래일 전)",
@@ -1422,54 +1567,10 @@
         "Relative Strength 3/10"
       ],
       "signalTypes": [
-        "Discovery",
+        "Discovery 후보",
         "Novelty",
         "Technical",
         "Flow"
-      ]
-    },
-    {
-      "symbol": "0220W0",
-      "name": "한화머시너리앤서비스홀딩스",
-      "sector": "금융",
-      "bucket": null,
-      "strategy": "Confluence · New Change",
-      "score": 48.2,
-      "discoveryScore": 42.2,
-      "dataCoverage": 77,
-      "confidence": "Normal",
-      "independentConfirmations": 3,
-      "confirmationSources": [
-        "price",
-        "flow"
-      ],
-      "newSignalCount": 2,
-      "tier": 2,
-      "marketCapRank": 92,
-      "isLargeCap": false,
-      "whatChanged": [
-        "종가가 MA20 위로 회복 (2026-10-12, 1거래일 전)",
-        "거래량 20일 평균 대비 4.5배로 급증 (2026-10-12, 1거래일 전)"
-      ],
-      "pricedInVerdict": "partially_priced_in",
-      "gateFails": [],
-      "risk": {
-        "decision": "WATCH",
-        "reason": "5거래일 +32.0% — 단기 과열/과매도"
-      },
-      "topEvidence": "종가가 MA20 위로 회복 (2026-10-12, 1거래일 전)",
-      "scoreBreakdown": [
-        "Novelty 18.3/25",
-        "Catalyst 0/12",
-        "Technical 3.8/15",
-        "Flow 5/15",
-        "Relative Strength 10/10"
-      ],
-      "signalTypes": [
-        "Discovery 후보",
-        "Novelty",
-        "Flow",
-        "Relative Strength"
       ]
     },
     {
@@ -1493,7 +1594,7 @@
       "isLargeCap": false,
       "whatChanged": [
         "거래량 20일 평균 대비 3.5배로 급증 (2026-10-13, 0거래일 전)",
-        "외국인 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 외국인 매수 전환을 5일 수익률 +13.8%, 거래량 3.5배가 확인)"
+        "외국인 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 외국인 매수 전환을 5일 수익률 +11.9%, 거래량 3.5배가 확인)"
       ],
       "pricedInVerdict": "partially_priced_in",
       "gateFails": [],
@@ -1513,51 +1614,6 @@
         "Discovery 후보",
         "Novelty",
         "Technical",
-        "Flow",
-        "Relative Strength"
-      ]
-    },
-    {
-      "symbol": "139480",
-      "name": "이마트",
-      "sector": "유통",
-      "bucket": null,
-      "strategy": "Confluence · Flow Confirmed",
-      "score": 40.3,
-      "discoveryScore": 40.3,
-      "dataCoverage": 77,
-      "confidence": "Normal",
-      "independentConfirmations": 3,
-      "confirmationSources": [
-        "price",
-        "flow"
-      ],
-      "newSignalCount": 3,
-      "tier": 2,
-      "marketCapRank": 80,
-      "isLargeCap": false,
-      "whatChanged": [
-        "거래량 20일 평균 대비 2.0배로 급증 (2026-10-13, 0거래일 전)",
-        "외국인 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 외국인 매수 전환을 거래량 2.0배가 확인)",
-        "새 정보: 실적 공시(20261013) 후 누적 반응 미집계 (0거래일 전)"
-      ],
-      "pricedInVerdict": "not_yet_priced",
-      "gateFails": [],
-      "risk": {
-        "decision": "PASS",
-        "reason": "특이 리스크 없음"
-      },
-      "topEvidence": "거래량 20일 평균 대비 2.0배로 급증 (2026-10-13, 0거래일 전)",
-      "scoreBreakdown": [
-        "Novelty 9/25",
-        "Catalyst 0/12",
-        "Technical 3/15",
-        "Flow 12/15",
-        "Relative Strength 7/10"
-      ],
-      "signalTypes": [
-        "Discovery 후보",
-        "Novelty",
         "Flow",
         "Relative Strength"
       ]
@@ -1676,7 +1732,7 @@
       "gateFails": [],
       "risk": {
         "decision": "WATCH",
-        "reason": "5거래일 -16.8% — 단기 과열/과매도"
+        "reason": "5거래일 -17.3% — 단기 과열/과매도"
       },
       "topEvidence": "MA20이 MA60을 상향돌파 (2026-09-23, 10거래일 전)",
       "scoreBreakdown": [
@@ -1715,7 +1771,7 @@
         "MA20이 MA60을 상향돌파 (2026-10-02, 5거래일 전)",
         "종가가 MA20 위로 회복 (2026-09-23, 10거래일 전)",
         "거래량 20일 평균 대비 2.3배로 급증 (2026-10-01, 6거래일 전)",
-        "외국인 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 외국인 매수 전환을 5일 수익률 +1.2%가 확인)"
+        "외국인 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 외국인 매수 전환을 5일 수익률 +0.7%가 확인)"
       ],
       "pricedInVerdict": "partially_priced_in",
       "gateFails": [],
@@ -1933,7 +1989,7 @@
       "whatChanged": [
         "연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 거래량 1.7배가 확인)"
       ],
-      "pricedInVerdict": "unclear",
+      "pricedInVerdict": "not_yet_priced",
       "gateFails": [],
       "risk": {
         "decision": "PASS",
@@ -1973,7 +2029,7 @@
       "marketCapRank": 46,
       "isLargeCap": false,
       "whatChanged": [
-        "외국인 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 외국인 매수 전환을 5일 수익률 +1.5%가 확인)"
+        "외국인 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 외국인 매수 전환을 5일 수익률 +2.3%가 확인)"
       ],
       "pricedInVerdict": "unclear",
       "gateFails": [],
@@ -1981,7 +2037,7 @@
         "decision": "PASS",
         "reason": "특이 리스크 없음"
       },
-      "topEvidence": "외국인 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 외국인 매수 전환을 5일 수익률 +1.5%가 확인)",
+      "topEvidence": "외국인 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 외국인 매수 전환을 5일 수익률 +2.3%가 확인)",
       "scoreBreakdown": [
         "Novelty 4/25",
         "Catalyst 0/12",
@@ -2036,57 +2092,6 @@
         "Technical",
         "Flow",
         "Relative Strength"
-      ]
-    },
-    {
-      "symbol": "009140",
-      "name": "케이아이이",
-      "sector": "전기·전자",
-      "bucket": null,
-      "strategy": "Confluence · New Change",
-      "score": 51.5,
-      "discoveryScore": 45.5,
-      "dataCoverage": 85,
-      "confidence": "Normal",
-      "independentConfirmations": 5,
-      "confirmationSources": [
-        "price",
-        "event"
-      ],
-      "newSignalCount": 4,
-      "tier": 1,
-      "marketCapRank": 107,
-      "isLargeCap": false,
-      "whatChanged": [
-        "MA20이 MA60을 상향돌파 (2026-10-12, 1거래일 전)",
-        "종가가 MA20 위로 회복 (2026-10-06, 4거래일 전)",
-        "거래량 20일 평균 대비 17.1배로 급증 (2026-10-06, 4거래일 전)",
-        "새 정보: 무상증자 1주당 1주 — 배정기준일 2026년 10월 21일, 신주상장 2026년 11월 12일 (5거래일 전)"
-      ],
-      "pricedInVerdict": "partially_priced_in",
-      "gateFails": [
-        "20일 평균 거래대금 50억 미만"
-      ],
-      "risk": {
-        "decision": "WATCH",
-        "reason": "5거래일 +18.8% — 단기 과열/과매도"
-      },
-      "topEvidence": "MA20이 MA60을 상향돌파 (2026-10-12, 1거래일 전)",
-      "scoreBreakdown": [
-        "Novelty 16.6/25",
-        "Catalyst 3.2/12",
-        "Corporate 8/8",
-        "Technical 9/15",
-        "Flow 0/15",
-        "Relative Strength 7/10"
-      ],
-      "signalTypes": [
-        "Discovery 후보",
-        "Novelty",
-        "Technical",
-        "Relative Strength",
-        "Corporate",
-        "Catalyst"
       ]
     }
   ]

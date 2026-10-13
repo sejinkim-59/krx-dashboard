@@ -1,33 +1,39 @@
 {
-  "updated_at": "2026-10-13T17:12:23.929Z",
+  "updated_at": "2026-10-13T22:03:33.251Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
-  "count": 4,
+  "count": 5,
   "items": [
     {
-      "symbol": "TEAM",
-      "close": 210.715,
-      "day_change_pct": 1.43,
-      "pct_above_prior_window": 1.43
+      "symbol": "V",
+      "close": 396.06,
+      "day_change_pct": 1.74,
+      "pct_above_prior_window": 1.74
     },
     {
-      "symbol": "V",
-      "close": 392.75,
-      "day_change_pct": 0.89,
-      "pct_above_prior_window": 0.89
+      "symbol": "MAR",
+      "close": 371.5,
+      "day_change_pct": 0.6,
+      "pct_above_prior_window": 0.6
     },
     {
       "symbol": "MSFT",
-      "close": 545.5,
-      "day_change_pct": 0.8,
-      "pct_above_prior_window": 0.8
+      "close": 543.45,
+      "day_change_pct": 0.43,
+      "pct_above_prior_window": 0.43
+    },
+    {
+      "symbol": "TEAM",
+      "close": 208.04,
+      "day_change_pct": 0.14,
+      "pct_above_prior_window": 0.14
     },
     {
       "symbol": "AAPL",
-      "close": 343.69,
-      "day_change_pct": 0.8,
-      "pct_above_prior_window": 0.77
+      "close": 341.27,
+      "day_change_pct": 0.09,
+      "pct_above_prior_window": 0.06
     }
   ]
 }
