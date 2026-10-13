@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-12T20:03:34.743Z",
+  "updated_at": "2026-10-13T02:04:37.413Z",
   "summary": "전일 미국 증시는 S&P500 -0.06% 하락, 나스닥 -0.44% 하락, 다우 0.38% 상승으로 마감했습니다.",
   "instruments": [
     {
       "symbol": "^GSPC",
       "label": "S&P 500",
-      "last": 7807.2099609375,
+      "last": 7807.240234375,
       "change_pct": -0.06
     },
     {
@@ -23,8 +23,8 @@
     {
       "symbol": "^VIX",
       "label": "VIX(변동성지수)",
-      "last": 15.239999771118164,
-      "change_pct": 2.7
+      "last": 15.210000038146973,
+      "change_pct": 2.49
     },
     {
       "symbol": "^TNX",
@@ -35,20 +35,20 @@
     {
       "symbol": "KRW=X",
       "label": "원/달러 환율",
-      "last": 1334.3199462890625,
-      "change_pct": -0.65
+      "last": 1337.8800048828125,
+      "change_pct": -0.38
     },
     {
       "symbol": "CL=F",
       "label": "WTI 원유",
-      "last": 93.33000183105469,
-      "change_pct": 1.61
+      "last": 92.63999938964844,
+      "change_pct": -1.17
     },
     {
       "symbol": "GC=F",
       "label": "금 선물",
-      "last": 4192.60009765625,
-      "change_pct": -0.56
+      "last": 4180.5,
+      "change_pct": -0.24
     }
   ]
 }
