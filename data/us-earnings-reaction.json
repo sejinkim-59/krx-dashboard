@@ -1,9 +1,105 @@
 {
-  "updated_at": "2026-10-13T22:03:39.016Z",
+  "updated_at": "2026-10-14T01:08:00.569Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
-  "count": 6,
+  "count": 14,
   "items": [
+    {
+      "symbol": "JPM",
+      "name": "J P Morgan Chase & Co",
+      "report_date": "2026-10-13",
+      "report_time": "장전",
+      "market_cap": 888631660000,
+      "eps_forecast": "$5.94",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": null,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "JNJ",
+      "name": "Johnson & Johnson",
+      "report_date": "2026-10-13",
+      "report_time": "장전",
+      "market_cap": 635562560000,
+      "eps_forecast": "$2.53",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": null,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "UNH",
+      "name": "UnitedHealth Group Incorporated",
+      "report_date": "2026-10-13",
+      "report_time": "장전",
+      "market_cap": 339757597000,
+      "eps_forecast": "$4.12",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": null,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "GS",
+      "name": "The Goldman Sachs Group, Inc.",
+      "report_date": "2026-10-13",
+      "report_time": "장전",
+      "market_cap": 260292674000,
+      "eps_forecast": "$12.90",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": null,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "WFC",
+      "name": "Wells Fargo & Company",
+      "report_date": "2026-10-13",
+      "report_time": "장전",
+      "market_cap": 251959624000,
+      "eps_forecast": "$1.85",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": null,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "C",
+      "name": "Citigroup Inc.",
+      "report_date": "2026-10-13",
+      "report_time": "장전",
+      "market_cap": 221287465000,
+      "eps_forecast": "$2.66",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": null,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
     {
       "symbol": "PEP",
       "name": "Pepsico, Inc.",
@@ -18,7 +114,7 @@
         "D0": 3.73,
         "D+1": 1.81,
         "D+2": 2.38,
-        "D+3": 2.89
+        "D+3": null
       }
     },
     {
@@ -34,42 +130,56 @@
         "D-1": 0,
         "D0": 0.04,
         "D+1": -2.47,
-        "D+2": -3.13,
+        "D+2": null,
         "D+3": null
       }
     },
     {
-      "symbol": "LEVI",
-      "name": "Levi Strauss & Co.",
-      "report_date": "2026-10-07",
-      "report_time": "미상",
-      "market_cap": 7377957900,
-      "eps": "$0.48",
-      "eps_forecast": "$0.36",
-      "surprise_pct": 33.33,
+      "symbol": "DPZ",
+      "name": "Domino's Pizza Inc",
+      "report_date": "2026-10-13",
+      "report_time": "장전",
+      "market_cap": 10285111300,
+      "eps_forecast": "$4.33",
+      "surprise_pct": null,
       "reaction": {
         "D-1": 0,
-        "D0": -4.97,
-        "D+1": -7.21,
-        "D+2": -8.91,
-        "D+3": -6.28
+        "D0": null,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
       }
     },
     {
-      "symbol": "APLD",
-      "name": "Applied Digital Corporation",
-      "report_date": "2026-10-07",
-      "report_time": "미상",
-      "market_cap": 7030500900,
-      "eps": "($0.76)",
-      "eps_forecast": "($0.26)",
-      "surprise_pct": -192.31,
+      "symbol": "ACI",
+      "name": "Albertsons Companies, Inc.",
+      "report_date": "2026-10-13",
+      "report_time": "장전",
+      "market_cap": 6085984300,
+      "eps_forecast": "$0.31",
+      "surprise_pct": null,
       "reaction": {
         "D-1": 0,
-        "D0": -6.04,
-        "D+1": -5.88,
-        "D+2": -6.55,
-        "D+3": -8.25
+        "D0": null,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "AZZ",
+      "name": "AZZ Inc.",
+      "report_date": "2026-10-13",
+      "report_time": "장후",
+      "market_cap": 4139894780,
+      "eps_forecast": "$1.82",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": null,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
       }
     },
     {
@@ -86,7 +196,23 @@
         "D0": -1.26,
         "D+1": 5.5,
         "D+2": 5.82,
-        "D+3": 4.25
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "FBK",
+      "name": "FB Financial Corporation",
+      "report_date": "2026-10-13",
+      "report_time": "장전",
+      "market_cap": 2646342400,
+      "eps_forecast": "$1.21",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": null,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
       }
     },
     {
@@ -101,7 +227,7 @@
       "reaction": {
         "D-1": 0,
         "D0": -0.85,
-        "D+1": -0.98,
+        "D+1": null,
         "D+2": null,
         "D+3": null
       }

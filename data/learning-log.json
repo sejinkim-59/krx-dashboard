@@ -681,7 +681,7 @@
       "priceAtSelection": 1680000,
       "hasPriceData": true,
       "d1": -1.55,
-      "d5": null,
+      "d5": -17.92,
       "d20": null
     },
     {
@@ -700,7 +700,7 @@
       "priceAtSelection": 175900,
       "hasPriceData": true,
       "d1": 1.59,
-      "d5": null,
+      "d5": 3.01,
       "d20": null
     },
     {
@@ -719,7 +719,7 @@
       "priceAtSelection": 18620,
       "hasPriceData": true,
       "d1": 1.29,
-      "d5": null,
+      "d5": 4.56,
       "d20": null
     },
     {
@@ -738,7 +738,7 @@
       "priceAtSelection": 6620,
       "hasPriceData": true,
       "d1": -3.02,
-      "d5": null,
+      "d5": -17.52,
       "d20": null
     },
     {
@@ -757,7 +757,7 @@
       "priceAtSelection": 129800,
       "hasPriceData": true,
       "d1": -3.54,
-      "d5": null,
+      "d5": -13.48,
       "d20": null
     },
     {
@@ -1345,7 +1345,7 @@
       "marketRegime": "Neutral",
       "priceAtSelection": 21900,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 6.39,
       "d5": null,
       "d20": null
     },
@@ -1364,7 +1364,7 @@
       "marketRegime": "Neutral",
       "priceAtSelection": 7480,
       "hasPriceData": true,
-      "d1": null,
+      "d1": -0.27,
       "d5": null,
       "d20": null
     },
@@ -1383,7 +1383,7 @@
       "marketRegime": "Neutral",
       "priceAtSelection": 11370,
       "hasPriceData": true,
-      "d1": null,
+      "d1": -4.31,
       "d5": null,
       "d20": null
     },
@@ -1402,7 +1402,7 @@
       "marketRegime": "Neutral",
       "priceAtSelection": 19230,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 1.25,
       "d5": null,
       "d20": null
     },
@@ -1421,7 +1421,7 @@
       "marketRegime": "Neutral",
       "priceAtSelection": 14680,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 0.68,
       "d5": null,
       "d20": null
     },
@@ -1432,13 +1432,13 @@
       "name": "HMM",
       "setup": "Market Leader",
       "bucket": "MARKET_LEADER",
-      "strategy": "Confluence · Trend Confirmation",
-      "score": 61,
-      "noveltyScore": 15,
-      "pricedInVerdict": "unclear",
+      "strategy": "Confluence · New Change",
+      "score": 77.9,
+      "noveltyScore": 25,
+      "pricedInVerdict": "partially_priced_in",
       "dataCoverage": 77,
       "marketRegime": "Neutral",
-      "priceAtSelection": 22050,
+      "priceAtSelection": 23300,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -1457,7 +1457,7 @@
       "pricedInVerdict": "partially_priced_in",
       "dataCoverage": 77,
       "marketRegime": "Neutral",
-      "priceAtSelection": 7530,
+      "priceAtSelection": 7460,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -1466,17 +1466,17 @@
     {
       "engineVersion": "v0.2",
       "date": "20261014",
-      "symbol": "328130",
-      "name": "루닛",
+      "symbol": "417200",
+      "name": "LS머트리얼즈",
       "setup": "Discovery",
       "bucket": "DISCOVERY",
       "strategy": "Confluence · Flow Confirmed",
-      "score": 60.4,
-      "noveltyScore": 15.5,
+      "score": 54.5,
+      "noveltyScore": 12,
       "pricedInVerdict": "partially_priced_in",
       "dataCoverage": 77,
       "marketRegime": "Neutral",
-      "priceAtSelection": 11350,
+      "priceAtSelection": 16660,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -1495,7 +1495,7 @@
       "pricedInVerdict": "unclear",
       "dataCoverage": 77,
       "marketRegime": "Neutral",
-      "priceAtSelection": 19440,
+      "priceAtSelection": 19470,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
