@@ -1,39 +1,45 @@
 {
-  "updated_at": "2026-10-14T11:25:11.605Z",
+  "updated_at": "2026-10-14T16:01:38.069Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
-  "count": 5,
+  "count": 6,
   "items": [
     {
-      "symbol": "V",
-      "close": 396.06,
-      "day_change_pct": 1.74,
-      "pct_above_prior_window": 1.74
+      "symbol": "PG",
+      "close": 155.3,
+      "day_change_pct": 1.48,
+      "pct_above_prior_window": 1.37
     },
     {
-      "symbol": "MAR",
-      "close": 371.5,
-      "day_change_pct": 0.6,
-      "pct_above_prior_window": 0.6
-    },
-    {
-      "symbol": "MSFT",
-      "close": 543.45,
-      "day_change_pct": 0.43,
-      "pct_above_prior_window": 0.43
-    },
-    {
-      "symbol": "TEAM",
-      "close": 208.04,
-      "day_change_pct": 0.14,
-      "pct_above_prior_window": 0.14
+      "symbol": "CVX",
+      "close": 220.72,
+      "day_change_pct": 1.37,
+      "pct_above_prior_window": 1.35
     },
     {
       "symbol": "AAPL",
-      "close": 341.27,
-      "day_change_pct": 0.09,
-      "pct_above_prior_window": 0.06
+      "close": 344.86,
+      "day_change_pct": 1.05,
+      "pct_above_prior_window": 1.05
+    },
+    {
+      "symbol": "KDP",
+      "close": 33.135,
+      "day_change_pct": 1.45,
+      "pct_above_prior_window": 0.78
+    },
+    {
+      "symbol": "COST",
+      "close": 975.42,
+      "day_change_pct": 2.18,
+      "pct_above_prior_window": 0.41
+    },
+    {
+      "symbol": "CTAS",
+      "close": 207.575,
+      "day_change_pct": 0.58,
+      "pct_above_prior_window": 0.08
     }
   ]
 }
