@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-14T01:07:25.758Z",
+  "updated_at": "2026-10-14T06:01:57.606Z",
   "trade_date": "20261013",
   "note": "거래대금 상위 60종목(코스피+코스닥) 중 공매도 거래대금 비중 상위. 공매도 비중 = 당일 공매도 거래대금 / 당일 총 거래대금 x 100.",
   "universe_size": 60,
@@ -35,6 +35,14 @@
       "short_sell_value": 31926729700,
       "total_trade_value": 126174695100,
       "short_ratio_pct": 25.3
+    },
+    {
+      "symbol": "042700",
+      "name": "한미반도체",
+      "market": "STK",
+      "short_sell_value": 52789029500,
+      "total_trade_value": 214334217250,
+      "short_ratio_pct": 24.63
     },
     {
       "symbol": "003670",
@@ -315,14 +323,6 @@
       "short_sell_value": 4129992360,
       "total_trade_value": 102729214040,
       "short_ratio_pct": 4.02
-    },
-    {
-      "symbol": "000150",
-      "name": "두산",
-      "market": "STK",
-      "short_sell_value": 4322295000,
-      "total_trade_value": 113327610000,
-      "short_ratio_pct": 3.81
     }
   ]
 }
