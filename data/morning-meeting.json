@@ -1,31 +1,29 @@
 {
-  "date": "20261015",
-  "generated_at": "2026-10-15T12:58:55.700Z",
+  "date": "20261016",
+  "generated_at": "2026-10-15T17:52:11.029Z",
   "engineVersion": "v0.2",
   "objective": "NEW INFORMATION + CHANGE + CATALYST + CONFIRMATION — 오늘 새롭게 연구할 가치가 생긴 종목을 조기 발견",
   "methodologyNote": "시장/섹터 상대강도는 공식 지수가 아니라 가격 데이터 보유 종목의 동일가중 평균(proxy)입니다. Earnings/Revision Factor는 컨센서스 Provider 미연결로 항상 제외(MISSING_DATA)됩니다. 시총 순위는 KIS 시세를 조회한 종목(관심종목 + Discovery 추가조회) 안에서의 순위입니다. 수급 전환의 발생 시점은 \"최근 3거래일 vs 직전 5거래일\" 창 비교라 일 단위 날짜가 아닌 창 단위입니다. 종목 단위로 연결되지 않은 Catalyst: Investor Relations 일정, Large Contract(단일판매·공급계약), Index Rebalancing (정기변경 월 주기만 수집, 종목별 편입·편출 예고 없음), Major Customer Event, Policy Event, Share Cancellation(소각).",
   "marketRegime": {
-    "state": "Risk-off",
+    "state": "Neutral",
     "evidence": [
-      "VIX +4.15%",
-      "S&P500 -1.11%",
-      "NASDAQ -1.88%",
-      "USD/KRW +0.4%"
+      "VIX -0.59%",
+      "S&P500 +0.29%",
+      "NASDAQ -0.05%",
+      "USD/KRW +0.12%"
     ],
     "strategyPreference": [
-      "EVENT_DRIVEN",
-      "INFLECTION"
+      "DISCOVERY",
+      "EVENT_DRIVEN"
     ],
-    "avoid": [
-      "MOMENTUM"
-    ]
+    "avoid": []
   },
   "screening": {
-    "universeCount": 1064,
+    "universeCount": 1057,
     "technicalCoverageCount": 110,
-    "discoveryPreScreenCount": 472,
+    "discoveryPreScreenCount": 471,
     "discoveryEnrichedCount": 60,
-    "signalCount": 107,
+    "signalCount": 106,
     "passedRiskCount": 19,
     "rejectedCount": 0
   },
@@ -37,33 +35,32 @@
       "qualifiedCount": 4,
       "picks": [
         {
-          "symbol": "207940",
-          "company": "삼성바이오로직스",
+          "symbol": "105560",
+          "company": "KB금융",
           "bucket": "MARKET_LEADER",
           "bucketLabel": "Market Leader",
           "strategy": "Flow Confirmed",
-          "score": 29.9,
-          "noveltyScore": 9,
+          "score": 31.2,
+          "noveltyScore": 4,
           "catalystScore": 0,
           "technicalScore": 3,
           "flowScore": 7,
           "revisionScore": null,
-          "relativeStrengthScore": 4,
+          "relativeStrengthScore": 10,
           "dataCoverage": 77,
           "confidence": "Normal",
           "independentConfirmations": 2,
           "confirmationSources": [
-            "price",
-            "flow"
+            "flow",
+            "price"
           ],
           "whatChanged": [
-            "거래량 20일 평균 대비 3.0배로 급증 (2026-10-15, 0거래일 전)",
-            "기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 거래량 3.0배가 확인)"
+            "연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 거래량 1.4배가 확인)"
           ],
-          "whyNow": "가장 최근 변화가 0거래일 전 발생 (Novelty high)",
-          "whyNotPriced": "변화 발생(2026-10-15) 이후 +5.0%, 20일 -11.6%, 60일 -9.6% — 변화 대비 가격 반응이 아직 제한적",
-          "confirmation": "Novelty[price]: 거래량 20일 평균 대비 급증 + Flow[flow]: 기관합계 매수 전환 + 거래량 3.0배 확인",
-          "invalidation": "기관합계 순매도 재전환",
+          "whyNow": "가장 최근 변화가 최근 3거래일 안 발생 (Novelty high)",
+          "whyNotPriced": "20일 -10.1%, 60일 -11.9%, 52주 고점 대비 -17.8% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
+          "confirmation": "Flow[flow]: 연기금 등 매수 전환 + 거래량 1.4배 확인 + Relative Strength[price]: 10/10",
+          "invalidation": "연기금 등 순매도 재전환",
           "risks": "특이 리스크 없음",
           "catalysts": [],
           "sources": [
@@ -71,35 +68,22 @@
             "KRX 투자자별 매매동향"
           ],
           "pricedIn": {
-            "verdict": "not_yet_priced",
+            "verdict": "unclear",
             "facts": [
-              "변화 발생(2026-10-15) 이후 +5.0%",
-              "20일 -11.6%",
-              "60일 -9.6%",
-              "52주 고점 대비 -37.5%",
-              "거래량 20일 평균 3.0배"
+              "20일 -10.1%",
+              "60일 -11.9%",
+              "52주 고점 대비 -17.8%",
+              "거래량 20일 평균 1.4배"
             ]
           },
           "crowdingPenalty": null,
-          "marketCapRank": 6,
+          "marketCapRank": 7,
           "flowEvents": [
-            "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.059%)",
-            "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 0.166%)",
-            "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -0.330%)"
+            "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.033%)",
+            "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -0.016%)"
           ],
           "flowInterpretation": "bullish",
           "noveltyEvents": [
-            {
-              "id": "volumeSpike",
-              "label": "거래량 20일 평균 대비 급증",
-              "previousState": "normal",
-              "currentState": "3.0x",
-              "changeDate": "2026-10-15",
-              "daysSinceChange": 0,
-              "ratio": 3.0008694304799945,
-              "band": "high",
-              "points": 5
-            },
             {
               "id": "flowReversal",
               "label": "외국인/기관 수급 매수 전환 (가격·거래량 확인)",
@@ -108,35 +92,34 @@
               "changeDate": null,
               "daysSinceChange": 1,
               "approx": true,
-              "detail": "기관합계",
+              "detail": "연기금 등",
               "band": "high",
               "points": 4
             }
           ],
           "setup": "Market Leader · Flow Confirmed",
-          "reason": "거래량 20일 평균 대비 3.0배로 급증 (2026-10-15, 0거래일 전)",
+          "reason": "연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 거래량 1.4배가 확인)",
           "evidence": [
-            "WHY NOW: 가장 최근 변화가 0거래일 전 발생 (Novelty high)",
-            "WHY NOT PRICED: 변화 발생(2026-10-15) 이후 +5.0%, 20일 -11.6%, 60일 -9.6% — 변화 대비 가격 반응이 아직 제한적",
-            "CHANGED: 기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 거래량 3.0배가 확인)",
-            "CONFIRMS: Novelty[price]: 거래량 20일 평균 대비 급증 + Flow[flow]: 기관합계 매수 전환 + 거래량 3.0배 확인",
-            "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.059%)",
-            "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 0.166%)",
-            "INTERPRETATION: Bullish — 기관합계 매수 전환을 거래량 3.0배가 확인"
+            "WHY NOW: 가장 최근 변화가 최근 3거래일 안 발생 (Novelty high)",
+            "WHY NOT PRICED: 20일 -10.1%, 60일 -11.9%, 52주 고점 대비 -17.8% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
+            "CONFIRMS: Flow[flow]: 연기금 등 매수 전환 + 거래량 1.4배 확인 + Relative Strength[price]: 10/10",
+            "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.033%)",
+            "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -0.016%)",
+            "INTERPRETATION: Bullish — 연기금 등 매수 전환을 거래량 1.4배가 확인"
           ],
           "counterEvidence": [
             "향후 20거래일 내 점수화 가능한 Catalyst 없음 — 최상위 Priority(Tier 1) 제한"
           ],
-          "watch": "기관합계 순매수가 다음 3거래일 지속되는지",
+          "watch": "연기금 등 순매수가 다음 3거래일 지속되는지",
           "riskDecision": "PASS",
           "scoreBreakdown": [
-            "Novelty 9/25",
+            "Novelty 4/25",
             "Catalyst 0/12",
             "Technical 3/15",
             "Flow 7/15",
-            "Relative Strength 4/10"
+            "Relative Strength 10/10"
           ],
-          "priority": 29.9
+          "priority": 31.2
         }
       ],
       "emptyReason": null
@@ -518,33 +501,32 @@
   ],
   "selections": [
     {
-      "symbol": "207940",
-      "company": "삼성바이오로직스",
+      "symbol": "105560",
+      "company": "KB금융",
       "bucket": "MARKET_LEADER",
       "bucketLabel": "Market Leader",
       "strategy": "Flow Confirmed",
-      "score": 29.9,
-      "noveltyScore": 9,
+      "score": 31.2,
+      "noveltyScore": 4,
       "catalystScore": 0,
       "technicalScore": 3,
       "flowScore": 7,
       "revisionScore": null,
-      "relativeStrengthScore": 4,
+      "relativeStrengthScore": 10,
       "dataCoverage": 77,
       "confidence": "Normal",
       "independentConfirmations": 2,
       "confirmationSources": [
-        "price",
-        "flow"
+        "flow",
+        "price"
       ],
       "whatChanged": [
-        "거래량 20일 평균 대비 3.0배로 급증 (2026-10-15, 0거래일 전)",
-        "기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 거래량 3.0배가 확인)"
+        "연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 거래량 1.4배가 확인)"
       ],
-      "whyNow": "가장 최근 변화가 0거래일 전 발생 (Novelty high)",
-      "whyNotPriced": "변화 발생(2026-10-15) 이후 +5.0%, 20일 -11.6%, 60일 -9.6% — 변화 대비 가격 반응이 아직 제한적",
-      "confirmation": "Novelty[price]: 거래량 20일 평균 대비 급증 + Flow[flow]: 기관합계 매수 전환 + 거래량 3.0배 확인",
-      "invalidation": "기관합계 순매도 재전환",
+      "whyNow": "가장 최근 변화가 최근 3거래일 안 발생 (Novelty high)",
+      "whyNotPriced": "20일 -10.1%, 60일 -11.9%, 52주 고점 대비 -17.8% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
+      "confirmation": "Flow[flow]: 연기금 등 매수 전환 + 거래량 1.4배 확인 + Relative Strength[price]: 10/10",
+      "invalidation": "연기금 등 순매도 재전환",
       "risks": "특이 리스크 없음",
       "catalysts": [],
       "sources": [
@@ -552,35 +534,22 @@
         "KRX 투자자별 매매동향"
       ],
       "pricedIn": {
-        "verdict": "not_yet_priced",
+        "verdict": "unclear",
         "facts": [
-          "변화 발생(2026-10-15) 이후 +5.0%",
-          "20일 -11.6%",
-          "60일 -9.6%",
-          "52주 고점 대비 -37.5%",
-          "거래량 20일 평균 3.0배"
+          "20일 -10.1%",
+          "60일 -11.9%",
+          "52주 고점 대비 -17.8%",
+          "거래량 20일 평균 1.4배"
         ]
       },
       "crowdingPenalty": null,
-      "marketCapRank": 6,
+      "marketCapRank": 7,
       "flowEvents": [
-        "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.059%)",
-        "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 0.166%)",
-        "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -0.330%)"
+        "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.033%)",
+        "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -0.016%)"
       ],
       "flowInterpretation": "bullish",
       "noveltyEvents": [
-        {
-          "id": "volumeSpike",
-          "label": "거래량 20일 평균 대비 급증",
-          "previousState": "normal",
-          "currentState": "3.0x",
-          "changeDate": "2026-10-15",
-          "daysSinceChange": 0,
-          "ratio": 3.0008694304799945,
-          "band": "high",
-          "points": 5
-        },
         {
           "id": "flowReversal",
           "label": "외국인/기관 수급 매수 전환 (가격·거래량 확인)",
@@ -589,35 +558,34 @@
           "changeDate": null,
           "daysSinceChange": 1,
           "approx": true,
-          "detail": "기관합계",
+          "detail": "연기금 등",
           "band": "high",
           "points": 4
         }
       ],
       "setup": "Market Leader · Flow Confirmed",
-      "reason": "거래량 20일 평균 대비 3.0배로 급증 (2026-10-15, 0거래일 전)",
+      "reason": "연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 거래량 1.4배가 확인)",
       "evidence": [
-        "WHY NOW: 가장 최근 변화가 0거래일 전 발생 (Novelty high)",
-        "WHY NOT PRICED: 변화 발생(2026-10-15) 이후 +5.0%, 20일 -11.6%, 60일 -9.6% — 변화 대비 가격 반응이 아직 제한적",
-        "CHANGED: 기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 거래량 3.0배가 확인)",
-        "CONFIRMS: Novelty[price]: 거래량 20일 평균 대비 급증 + Flow[flow]: 기관합계 매수 전환 + 거래량 3.0배 확인",
-        "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.059%)",
-        "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 0.166%)",
-        "INTERPRETATION: Bullish — 기관합계 매수 전환을 거래량 3.0배가 확인"
+        "WHY NOW: 가장 최근 변화가 최근 3거래일 안 발생 (Novelty high)",
+        "WHY NOT PRICED: 20일 -10.1%, 60일 -11.9%, 52주 고점 대비 -17.8% — 반영 정도 판단 보류 (과열·저평가 신호 모두 약함)",
+        "CONFIRMS: Flow[flow]: 연기금 등 매수 전환 + 거래량 1.4배 확인 + Relative Strength[price]: 10/10",
+        "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.033%)",
+        "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -0.016%)",
+        "INTERPRETATION: Bullish — 연기금 등 매수 전환을 거래량 1.4배가 확인"
       ],
       "counterEvidence": [
         "향후 20거래일 내 점수화 가능한 Catalyst 없음 — 최상위 Priority(Tier 1) 제한"
       ],
-      "watch": "기관합계 순매수가 다음 3거래일 지속되는지",
+      "watch": "연기금 등 순매수가 다음 3거래일 지속되는지",
       "riskDecision": "PASS",
       "scoreBreakdown": [
-        "Novelty 9/25",
+        "Novelty 4/25",
         "Catalyst 0/12",
         "Technical 3/15",
         "Flow 7/15",
-        "Relative Strength 4/10"
+        "Relative Strength 10/10"
       ],
-      "priority": 29.9
+      "priority": 31.2
     },
     {
       "symbol": "352820",
@@ -1421,7 +1389,7 @@
       "symbol": "207940",
       "name": "삼성바이오로직스",
       "sector": "바이오",
-      "bucket": "MARKET_LEADER",
+      "bucket": null,
       "strategy": "Flow Confirmed",
       "score": 29.9,
       "discoveryScore": 29.9,
@@ -1455,7 +1423,7 @@
         "Relative Strength 4/10"
       ],
       "signalTypes": [
-        "Market Leader",
+        "Leader 후보",
         "Novelty",
         "Flow"
       ]
@@ -1592,6 +1560,48 @@
       ]
     },
     {
+      "symbol": "105560",
+      "name": "KB금융",
+      "sector": "금융",
+      "bucket": "MARKET_LEADER",
+      "strategy": "Flow Confirmed",
+      "score": 31.2,
+      "discoveryScore": 31.2,
+      "dataCoverage": 77,
+      "confidence": "Normal",
+      "independentConfirmations": 2,
+      "confirmationSources": [
+        "flow",
+        "price"
+      ],
+      "newSignalCount": 1,
+      "tier": 4,
+      "marketCapRank": 7,
+      "isLargeCap": true,
+      "whatChanged": [
+        "연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 거래량 1.4배가 확인)"
+      ],
+      "pricedInVerdict": "unclear",
+      "gateFails": [],
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      },
+      "topEvidence": "연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 거래량 1.4배가 확인)",
+      "scoreBreakdown": [
+        "Novelty 4/25",
+        "Catalyst 0/12",
+        "Technical 3/15",
+        "Flow 7/15",
+        "Relative Strength 10/10"
+      ],
+      "signalTypes": [
+        "Market Leader",
+        "Flow",
+        "Relative Strength"
+      ]
+    },
+    {
       "symbol": "024110",
       "name": "기업은행",
       "sector": "금융",
@@ -1718,48 +1728,6 @@
       ]
     },
     {
-      "symbol": "105560",
-      "name": "KB금융",
-      "sector": "금융",
-      "bucket": null,
-      "strategy": "Flow Confirmed",
-      "score": 27.3,
-      "discoveryScore": 27.3,
-      "dataCoverage": 77,
-      "confidence": "Normal",
-      "independentConfirmations": 2,
-      "confirmationSources": [
-        "flow",
-        "price"
-      ],
-      "newSignalCount": 1,
-      "tier": 4,
-      "marketCapRank": 7,
-      "isLargeCap": true,
-      "whatChanged": [
-        "연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 거래량 1.4배가 확인)"
-      ],
-      "pricedInVerdict": "unclear",
-      "gateFails": [],
-      "risk": {
-        "decision": "PASS",
-        "reason": "특이 리스크 없음"
-      },
-      "topEvidence": "연기금 등 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 연기금 등 매수 전환을 거래량 1.4배가 확인)",
-      "scoreBreakdown": [
-        "Novelty 4/25",
-        "Catalyst 0/12",
-        "Technical 3/15",
-        "Flow 7/15",
-        "Relative Strength 7/10"
-      ],
-      "signalTypes": [
-        "Leader 후보",
-        "Flow",
-        "Relative Strength"
-      ]
-    },
-    {
       "symbol": "192650",
       "name": "드림텍",
       "sector": "전기·전자",
@@ -1802,30 +1770,29 @@
       ]
     },
     {
-      "symbol": "023150",
-      "name": "MH에탄올",
-      "sector": "음식료·담배",
+      "symbol": "017650",
+      "name": "대림제지",
+      "sector": "종이·목재",
       "bucket": null,
       "strategy": "Confluence · Trend Confirmation",
-      "score": 57.6,
-      "discoveryScore": 51.6,
-      "dataCoverage": 85,
+      "score": 42.1,
+      "discoveryScore": 42.1,
+      "dataCoverage": 77,
       "confidence": "Normal",
-      "independentConfirmations": 5,
+      "independentConfirmations": 4,
       "confirmationSources": [
         "price",
         "event"
       ],
-      "newSignalCount": 3,
+      "newSignalCount": 2,
       "tier": 1,
-      "marketCapRank": 109,
+      "marketCapRank": 103,
       "isLargeCap": false,
       "whatChanged": [
-        "MA20이 MA60을 상향돌파 (2026-10-07, 5거래일 전)",
-        "종가가 MA20 위로 회복 (2026-10-01, 8거래일 전)",
-        "거래량 20일 평균 대비 3.2배로 급증 (2026-10-15, 0거래일 전)"
+        "거래량 20일 평균 대비 4.7배로 급증 (2026-10-13, 2거래일 전)",
+        "새 정보: 자사주 취득 2026년 10월 16일 ~ 2027년 01월 15일 (코스닥시장 내에서 직접 취득) (0거래일 전)"
       ],
-      "pricedInVerdict": "partially_priced_in",
+      "pricedInVerdict": "not_yet_priced",
       "gateFails": [
         "20일 평균 거래대금 50억 미만"
       ],
@@ -1833,11 +1800,10 @@
         "decision": "PASS",
         "reason": "특이 리스크 없음"
       },
-      "topEvidence": "MA20이 MA60을 상향돌파 (2026-10-07, 5거래일 전)",
+      "topEvidence": "거래량 20일 평균 대비 4.7배로 급증 (2026-10-13, 2거래일 전)",
       "scoreBreakdown": [
-        "Novelty 12.8/25",
-        "Catalyst 3.2/12",
-        "Corporate 8/8",
+        "Novelty 5/25",
+        "Catalyst 2.4/12",
         "Technical 15/15",
         "Flow 0/15",
         "Relative Strength 10/10"
@@ -1847,7 +1813,6 @@
         "Novelty",
         "Technical",
         "Relative Strength",
-        "Corporate",
         "Catalyst"
       ]
     }
