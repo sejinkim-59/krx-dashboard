@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-14T23:15:14.413Z",
+  "updated_at": "2026-10-15T01:49:43.856Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
-  "count": 14,
+  "count": 20,
   "items": [
     {
       "symbol": "JPM",
@@ -17,6 +17,22 @@
         "D-1": 0,
         "D0": -0.86,
         "D+1": 0.29,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "ASML",
+      "name": "ASML Holding N.V.",
+      "report_date": "2026-10-14",
+      "report_time": "장전",
+      "market_cap": 662055030000,
+      "eps_forecast": "$12.47",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -3.94,
+        "D+1": null,
         "D+2": null,
         "D+3": null
       }
@@ -39,6 +55,22 @@
       }
     },
     {
+      "symbol": "BAC",
+      "name": "Bank of America Corporation",
+      "report_date": "2026-10-14",
+      "report_time": "장전",
+      "market_cap": 377328697000,
+      "eps_forecast": "$1.11",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -4.76,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
       "symbol": "UNH",
       "name": "UnitedHealth Group Incorporated",
       "report_date": "2026-10-13",
@@ -51,6 +83,22 @@
         "D-1": 0,
         "D0": -0.2,
         "D+1": 4.52,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "MS",
+      "name": "Morgan Stanley",
+      "report_date": "2026-10-14",
+      "report_time": "장전",
+      "market_cap": 293130502000,
+      "eps_forecast": "$2.83",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -2.75,
+        "D+1": null,
         "D+2": null,
         "D+3": null
       }
@@ -107,20 +155,51 @@
       }
     },
     {
-      "symbol": "PEP",
-      "name": "Pepsico, Inc.",
-      "report_date": "2026-10-08",
-      "report_time": "미상",
-      "market_cap": 173476938000,
-      "eps": "$2.34",
-      "eps_forecast": "$2.29",
-      "surprise_pct": 2.18,
+      "symbol": "BLK",
+      "name": "BlackRock, Inc.",
+      "report_date": "2026-10-14",
+      "report_time": "장전",
+      "market_cap": 165109219000,
+      "eps_forecast": "$14.01",
+      "surprise_pct": null,
       "reaction": {
         "D-1": 0,
-        "D0": 3.73,
-        "D+1": 1.81,
-        "D+2": 2.38,
-        "D+3": 2.89
+        "D0": 0.72,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "PGR",
+      "name": "Progressive Corporation (The)",
+      "report_date": "2026-10-14",
+      "report_time": "장전",
+      "market_cap": 129576141000,
+      "eps_forecast": "$4.46",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -4.23,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "FAST",
+      "name": "Fastenal Company",
+      "report_date": "2026-10-14",
+      "report_time": "장전",
+      "market_cap": 59015799000,
+      "eps_forecast": "$0.34",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.11,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
       }
     },
     {
@@ -128,7 +207,7 @@
       "name": "Delta Air Lines, Inc.",
       "report_date": "2026-10-09",
       "report_time": "미상",
-      "market_cap": 52705362000,
+      "market_cap": 52350087000,
       "eps": "$1.72",
       "eps_forecast": "$1.80",
       "surprise_pct": -4.44,
@@ -138,6 +217,22 @@
         "D+1": -2.47,
         "D+2": -3.13,
         "D+3": -6.68
+      }
+    },
+    {
+      "symbol": "STT",
+      "name": "State Street Corporation",
+      "report_date": "2026-10-14",
+      "report_time": "장전",
+      "market_cap": 47825576000,
+      "eps_forecast": "$3.65",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -4.14,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
       }
     },
     {
@@ -175,6 +270,22 @@
       }
     },
     {
+      "symbol": "HOMB",
+      "name": "Home BancShares, Inc.",
+      "report_date": "2026-10-14",
+      "report_time": "장후",
+      "market_cap": 5673407500,
+      "eps_forecast": "$0.63",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -0.25,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
       "symbol": "AZZ",
       "name": "AZZ Inc.",
       "report_date": "2026-10-13",
@@ -189,23 +300,6 @@
         "D+1": -0.07,
         "D+2": null,
         "D+3": null
-      }
-    },
-    {
-      "symbol": "NG",
-      "name": "Novagold Resources Inc.",
-      "report_date": "2026-10-08",
-      "report_time": "미상",
-      "market_cap": 2900775170,
-      "eps": "($0.08)",
-      "eps_forecast": "($0.08)",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": -1.26,
-        "D+1": 5.5,
-        "D+2": 5.82,
-        "D+3": 4.25
       }
     },
     {
