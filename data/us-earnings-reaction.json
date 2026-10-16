@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16T03:32:27.777Z",
+  "updated_at": "2026-10-16T08:30:19.256Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
@@ -9,7 +9,8 @@
       "name": "Taiwan Semiconductor Manufacturing Company Ltd.",
       "report_date": "2026-10-15",
       "report_time": "장전",
-      "market_cap": 2308617010000,
+      "market_cap": 2230197160000,
+      "eps": "$2.92",
       "eps_forecast": "$4.45",
       "surprise_pct": null,
       "reaction": {
@@ -174,6 +175,23 @@
       }
     },
     {
+      "symbol": "SCHW",
+      "name": "The Charles Schwab Corporation",
+      "report_date": "2026-10-15",
+      "report_time": "장전",
+      "market_cap": 167399703000,
+      "eps": "$1.31",
+      "eps_forecast": "$1.66",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -2.73,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
       "symbol": "BLK",
       "name": "BlackRock, Inc.",
       "report_date": "2026-10-14",
@@ -186,38 +204,6 @@
         "D-1": 0,
         "D0": 0.72,
         "D+1": 5.13,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "SCHW",
-      "name": "The Charles Schwab Corporation",
-      "report_date": "2026-10-15",
-      "report_time": "장전",
-      "market_cap": 165912461000,
-      "eps_forecast": "$1.66",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": -2.73,
-        "D+1": null,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "PLD",
-      "name": "Prologis, Inc.",
-      "report_date": "2026-10-15",
-      "report_time": "장전",
-      "market_cap": 126615552000,
-      "eps_forecast": "$1.58",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": -2.7,
-        "D+1": null,
         "D+2": null,
         "D+3": null
       }
@@ -240,11 +226,29 @@
       }
     },
     {
+      "symbol": "PLD",
+      "name": "Prologis, Inc.",
+      "report_date": "2026-10-15",
+      "report_time": "장전",
+      "market_cap": 123685994000,
+      "eps": "$1.49",
+      "eps_forecast": "$1.58",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -2.7,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
       "symbol": "BNY",
       "name": "The Bank Of New York Mellon Corporation ",
       "report_date": "2026-10-15",
       "report_time": "장전",
-      "market_cap": 95689441000,
+      "market_cap": 93389308000,
+      "eps": "$1.91",
       "eps_forecast": "$2.26",
       "surprise_pct": null,
       "reaction": {
@@ -260,7 +264,8 @@
       "name": "U.S. Bancorp",
       "report_date": "2026-10-15",
       "report_time": "장전",
-      "market_cap": 88637546000,
+      "market_cap": 87655973000,
+      "eps": "$1.22",
       "eps_forecast": "$1.32",
       "surprise_pct": null,
       "reaction": {
@@ -276,7 +281,8 @@
       "name": "PNC Financial Services Group, Inc. (The)",
       "report_date": "2026-10-15",
       "report_time": "장전",
-      "market_cap": 87560159000,
+      "market_cap": 86092046000,
+      "eps": "$4.35",
       "eps_forecast": "$4.97",
       "surprise_pct": null,
       "reaction": {
@@ -292,7 +298,8 @@
       "name": "Marsh",
       "report_date": "2026-10-15",
       "report_time": "장전",
-      "market_cap": 84471169000,
+      "market_cap": 85134492000,
+      "eps": "$1.85",
       "eps_forecast": "$1.96",
       "surprise_pct": null,
       "reaction": {
@@ -342,8 +349,9 @@
       "name": "Interactive Brokers Group, Inc.",
       "report_date": "2026-10-15",
       "report_time": "장후",
-      "market_cap": 39639810000,
-      "eps_forecast": "$0.66",
+      "market_cap": 38121996000,
+      "eps": "$0.57",
+      "eps_forecast": "$0.67",
       "surprise_pct": null,
       "reaction": {
         "D-1": 0,
@@ -358,7 +366,8 @@
       "name": "Ericsson",
       "report_date": "2026-10-15",
       "report_time": "장전",
-      "market_cap": 32735825900,
+      "market_cap": 32297549800,
+      "eps": "$0.16",
       "eps_forecast": "$0.14",
       "surprise_pct": null,
       "reaction": {
@@ -374,7 +383,8 @@
       "name": "J.B. Hunt Transport Services, Inc.",
       "report_date": "2026-10-15",
       "report_time": "장후",
-      "market_cap": 21510277100,
+      "market_cap": 21803292700,
+      "eps": "$1.76",
       "eps_forecast": "$1.81",
       "surprise_pct": null,
       "reaction": {
@@ -391,6 +401,7 @@
       "report_date": "2026-10-15",
       "report_time": "장전",
       "market_cap": 17826390000,
+      "eps": "$0.03",
       "eps_forecast": "$0.04",
       "surprise_pct": null,
       "reaction": {
@@ -402,32 +413,34 @@
       }
     },
     {
-      "symbol": "AA",
-      "name": "Alcoa Corporation",
+      "symbol": "FHN",
+      "name": "First Horizon Corporation",
       "report_date": "2026-10-15",
-      "report_time": "장후",
-      "market_cap": 10949603300,
-      "eps_forecast": "$1.65",
+      "report_time": "장전",
+      "market_cap": 10740528100,
+      "eps": "$0.51",
+      "eps_forecast": "$0.53",
       "surprise_pct": null,
       "reaction": {
         "D-1": 0,
-        "D0": 0.85,
+        "D0": 0.84,
         "D+1": null,
         "D+2": null,
         "D+3": null
       }
     },
     {
-      "symbol": "FHN",
-      "name": "First Horizon Corporation",
+      "symbol": "AA",
+      "name": "Alcoa Corporation",
       "report_date": "2026-10-15",
-      "report_time": "장전",
-      "market_cap": 10787905500,
-      "eps_forecast": "$0.53",
+      "report_time": "장후",
+      "market_cap": 10577490900,
+      "eps": "($0.02)",
+      "eps_forecast": "$1.65",
       "surprise_pct": null,
       "reaction": {
         "D-1": 0,
-        "D0": 0.84,
+        "D0": 0.85,
         "D+1": null,
         "D+2": null,
         "D+3": null
@@ -455,8 +468,9 @@
       "name": "Commercial Metals Company",
       "report_date": "2026-10-15",
       "report_time": "장전",
-      "market_cap": 7165138400,
-      "eps_forecast": "$1.98",
+      "market_cap": 7222662700,
+      "eps": "$1.37",
+      "eps_forecast": "$1.97",
       "surprise_pct": null,
       "reaction": {
         "D-1": 0,
