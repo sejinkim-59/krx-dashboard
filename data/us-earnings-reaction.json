@@ -1,9 +1,25 @@
 {
-  "updated_at": "2026-10-15T23:47:07.013Z",
+  "updated_at": "2026-10-16T03:32:27.777Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
-  "count": 21,
+  "count": 30,
   "items": [
+    {
+      "symbol": "TSM",
+      "name": "Taiwan Semiconductor Manufacturing Company Ltd.",
+      "report_date": "2026-10-15",
+      "report_time": "장전",
+      "market_cap": 2308617010000,
+      "eps_forecast": "$4.45",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -1.8,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
     {
       "symbol": "JPM",
       "name": "J P Morgan Chase & Co",
@@ -175,6 +191,38 @@
       }
     },
     {
+      "symbol": "SCHW",
+      "name": "The Charles Schwab Corporation",
+      "report_date": "2026-10-15",
+      "report_time": "장전",
+      "market_cap": 165912461000,
+      "eps_forecast": "$1.66",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -2.73,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "PLD",
+      "name": "Prologis, Inc.",
+      "report_date": "2026-10-15",
+      "report_time": "장전",
+      "market_cap": 126615552000,
+      "eps_forecast": "$1.58",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -2.7,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
       "symbol": "PGR",
       "name": "Progressive Corporation (The)",
       "report_date": "2026-10-14",
@@ -187,6 +235,70 @@
         "D-1": 0,
         "D0": -4.23,
         "D+1": -4.1,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "BNY",
+      "name": "The Bank Of New York Mellon Corporation ",
+      "report_date": "2026-10-15",
+      "report_time": "장전",
+      "market_cap": 95689441000,
+      "eps_forecast": "$2.26",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 3.23,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "USB",
+      "name": "U.S. Bancorp",
+      "report_date": "2026-10-15",
+      "report_time": "장전",
+      "market_cap": 88637546000,
+      "eps_forecast": "$1.32",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 2.01,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "PNC",
+      "name": "PNC Financial Services Group, Inc. (The)",
+      "report_date": "2026-10-15",
+      "report_time": "장전",
+      "market_cap": 87560159000,
+      "eps_forecast": "$4.97",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -0.4,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "MRSH",
+      "name": "Marsh",
+      "report_date": "2026-10-15",
+      "report_time": "장전",
+      "market_cap": 84471169000,
+      "eps_forecast": "$1.96",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 4.56,
+        "D+1": null,
         "D+2": null,
         "D+3": null
       }
@@ -209,23 +321,6 @@
       }
     },
     {
-      "symbol": "DAL",
-      "name": "Delta Air Lines, Inc.",
-      "report_date": "2026-10-09",
-      "report_time": "미상",
-      "market_cap": 50428985000,
-      "eps": "$1.72",
-      "eps_forecast": "$1.80",
-      "surprise_pct": -4.44,
-      "reaction": {
-        "D-1": 0,
-        "D0": 0.04,
-        "D+1": -2.47,
-        "D+2": -3.13,
-        "D+3": -6.68
-      }
-    },
-    {
       "symbol": "STT",
       "name": "State Street Corporation",
       "report_date": "2026-10-14",
@@ -238,6 +333,102 @@
         "D-1": 0,
         "D0": -4.14,
         "D+1": -3.73,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "IBKR",
+      "name": "Interactive Brokers Group, Inc.",
+      "report_date": "2026-10-15",
+      "report_time": "장후",
+      "market_cap": 39639810000,
+      "eps_forecast": "$0.66",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 2.25,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "ERIC",
+      "name": "Ericsson",
+      "report_date": "2026-10-15",
+      "report_time": "장전",
+      "market_cap": 32735825900,
+      "eps_forecast": "$0.14",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 11.8,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "JBHT",
+      "name": "J.B. Hunt Transport Services, Inc.",
+      "report_date": "2026-10-15",
+      "report_time": "장후",
+      "market_cap": 21510277100,
+      "eps_forecast": "$1.81",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.36,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "WIT",
+      "name": "Wipro Limited",
+      "report_date": "2026-10-15",
+      "report_time": "장전",
+      "market_cap": 17826390000,
+      "eps_forecast": "$0.04",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 3.89,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "AA",
+      "name": "Alcoa Corporation",
+      "report_date": "2026-10-15",
+      "report_time": "장후",
+      "market_cap": 10949603300,
+      "eps_forecast": "$1.65",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 0.85,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "FHN",
+      "name": "First Horizon Corporation",
+      "report_date": "2026-10-15",
+      "report_time": "장전",
+      "market_cap": 10787905500,
+      "eps_forecast": "$0.53",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 0.84,
+        "D+1": null,
         "D+2": null,
         "D+3": null
       }
@@ -256,6 +447,22 @@
         "D0": -4.76,
         "D+1": -4.83,
         "D+2": -2.51,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "CMC",
+      "name": "Commercial Metals Company",
+      "report_date": "2026-10-15",
+      "report_time": "장전",
+      "market_cap": 7165138400,
+      "eps_forecast": "$1.98",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 0.12,
+        "D+1": null,
+        "D+2": null,
         "D+3": null
       }
     },
@@ -289,74 +496,6 @@
         "D-1": 0,
         "D0": -0.25,
         "D+1": 1.8,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "AZZ",
-      "name": "AZZ Inc.",
-      "report_date": "2026-10-13",
-      "report_time": "미상",
-      "market_cap": 4119169790,
-      "eps": "$2",
-      "eps_forecast": "$1.82",
-      "surprise_pct": 9.89,
-      "reaction": {
-        "D-1": 0,
-        "D0": -0.76,
-        "D+1": -0.07,
-        "D+2": -5.2,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "NRIX",
-      "name": "Nurix Therapeutics, Inc.",
-      "report_date": "2026-10-12",
-      "report_time": "미상",
-      "market_cap": 2585943040,
-      "eps": "$4.73",
-      "eps_forecast": "($0.56)",
-      "surprise_pct": 944.64,
-      "reaction": {
-        "D-1": 0,
-        "D0": -0.85,
-        "D+1": -0.98,
-        "D+2": 5.91,
-        "D+3": 11.63
-      }
-    },
-    {
-      "symbol": "FBK",
-      "name": "FB Financial Corporation",
-      "report_date": "2026-10-13",
-      "report_time": "미상",
-      "market_cap": 2517898500,
-      "eps": "$1.21",
-      "eps_forecast": "$1.21",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": -4.21,
-        "D+1": -4.85,
-        "D+2": -2.78,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "CHRN",
-      "name": "ChronoScale Holdings Corporation",
-      "report_date": "2026-10-14",
-      "report_time": "미상",
-      "market_cap": 2167085310,
-      "eps": "($0.18)",
-      "eps_forecast": "",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": -8.77,
-        "D+1": -1.59,
         "D+2": null,
         "D+3": null
       }
