@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T06:02:07.392Z",
+  "updated_at": "2026-10-17T10:23:00.456Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
@@ -26,7 +26,7 @@
       "name": "J P Morgan Chase & Co",
       "report_date": "2026-10-13",
       "report_time": "미상",
-      "market_cap": 891236650000,
+      "market_cap": 891901180000,
       "eps": "$5.75",
       "eps_forecast": "$5.94",
       "surprise_pct": -3.2,
@@ -60,7 +60,7 @@
       "name": "Johnson & Johnson",
       "report_date": "2026-10-13",
       "report_time": "미상",
-      "market_cap": 611897380000,
+      "market_cap": 610379100000,
       "eps": "$2.59",
       "eps_forecast": "$2.53",
       "surprise_pct": 2.37,
@@ -70,6 +70,23 @@
         "D+1": -3.72,
         "D+2": -3.96,
         "D+3": -3.1
+      }
+    },
+    {
+      "symbol": "UNH",
+      "name": "UnitedHealth Group Incorporated",
+      "report_date": "2026-10-13",
+      "report_time": "미상",
+      "market_cap": 365024903000,
+      "eps": "$4.69",
+      "eps_forecast": "$4.12",
+      "surprise_pct": 13.83,
+      "reaction": {
+        "D-1": 0,
+        "D0": -0.2,
+        "D+1": 4.52,
+        "D+2": 7.44,
+        "D+3": 6.05
       }
     },
     {
@@ -87,23 +104,6 @@
         "D+1": -4.19,
         "D+2": -5.06,
         "D+3": null
-      }
-    },
-    {
-      "symbol": "UNH",
-      "name": "UnitedHealth Group Incorporated",
-      "report_date": "2026-10-13",
-      "report_time": "미상",
-      "market_cap": 355106488000,
-      "eps": "$4.69",
-      "eps_forecast": "$4.12",
-      "surprise_pct": 13.83,
-      "reaction": {
-        "D-1": 0,
-        "D0": -0.2,
-        "D+1": 4.52,
-        "D+2": 7.44,
-        "D+3": 6.05
       }
     },
     {
@@ -128,7 +128,7 @@
       "name": "The Goldman Sachs Group, Inc.",
       "report_date": "2026-10-13",
       "report_time": "미상",
-      "market_cap": 255858147000,
+      "market_cap": 259515253000,
       "eps": "$17.01",
       "eps_forecast": "$12.90",
       "surprise_pct": 31.86,
@@ -145,7 +145,7 @@
       "name": "Wells Fargo & Company",
       "report_date": "2026-10-13",
       "report_time": "미상",
-      "market_cap": 244641546000,
+      "market_cap": 250235945000,
       "eps": "$1.87",
       "eps_forecast": "$1.85",
       "surprise_pct": 1.08,
@@ -162,7 +162,7 @@
       "name": "Citigroup Inc.",
       "report_date": "2026-10-13",
       "report_time": "미상",
-      "market_cap": 205100188000,
+      "market_cap": 206676984000,
       "eps": "$2.85",
       "eps_forecast": "$2.66",
       "surprise_pct": 7.14,
