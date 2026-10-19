@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19T09:22:21.890Z",
+  "updated_at": "2026-10-19T16:43:53.084Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
@@ -9,7 +9,7 @@
       "name": "Taiwan Semiconductor Manufacturing Company Ltd.",
       "report_date": "2026-10-15",
       "report_time": "미상",
-      "market_cap": 2190001700000,
+      "market_cap": 2140003760000,
       "eps": "$4.60",
       "eps_forecast": "$4.45",
       "surprise_pct": 3.37,
@@ -17,7 +17,7 @@
         "D-1": 0,
         "D0": -1.8,
         "D+1": -4.04,
-        "D+2": null,
+        "D+2": -1.41,
         "D+3": null
       }
     },
@@ -26,7 +26,7 @@
       "name": "J P Morgan Chase & Co",
       "report_date": "2026-10-13",
       "report_time": "미상",
-      "market_cap": 891901180000,
+      "market_cap": 903039030000,
       "eps": "$5.75",
       "eps_forecast": "$5.94",
       "surprise_pct": -3.2,
@@ -43,7 +43,7 @@
       "name": "ASML Holding N.V.",
       "report_date": "2026-10-14",
       "report_time": "미상",
-      "market_cap": 638806650000,
+      "market_cap": 632670780000,
       "eps": "$14.89",
       "eps_forecast": "$12.47",
       "surprise_pct": 19.41,
@@ -52,7 +52,7 @@
         "D0": -3.94,
         "D+1": -3.51,
         "D+2": -4.44,
-        "D+3": null
+        "D+3": -2.48
       }
     },
     {
@@ -60,7 +60,7 @@
       "name": "Johnson & Johnson",
       "report_date": "2026-10-13",
       "report_time": "미상",
-      "market_cap": 610379100000,
+      "market_cap": 615873710000,
       "eps": "$2.59",
       "eps_forecast": "$2.53",
       "surprise_pct": 2.37,
@@ -77,7 +77,7 @@
       "name": "UnitedHealth Group Incorporated",
       "report_date": "2026-10-13",
       "report_time": "미상",
-      "market_cap": 365024903000,
+      "market_cap": 360321516000,
       "eps": "$4.69",
       "eps_forecast": "$4.12",
       "surprise_pct": 13.83,
@@ -94,7 +94,7 @@
       "name": "Bank of America Corporation",
       "report_date": "2026-10-14",
       "report_time": "미상",
-      "market_cap": 361525084000,
+      "market_cap": 358238487000,
       "eps": "$1.08",
       "eps_forecast": "$1.11",
       "surprise_pct": -2.7,
@@ -103,7 +103,7 @@
         "D0": -4.76,
         "D+1": -4.19,
         "D+2": -5.06,
-        "D+3": null
+        "D+3": -6.33
       }
     },
     {
@@ -111,7 +111,7 @@
       "name": "Morgan Stanley",
       "report_date": "2026-10-14",
       "report_time": "미상",
-      "market_cap": 286000120000,
+      "market_cap": 283597144000,
       "eps": "$3.03",
       "eps_forecast": "$2.83",
       "surprise_pct": 7.07,
@@ -120,7 +120,7 @@
         "D0": -2.75,
         "D+1": -2.43,
         "D+2": -3.25,
-        "D+3": null
+        "D+3": -3.61
       }
     },
     {
@@ -128,7 +128,7 @@
       "name": "The Goldman Sachs Group, Inc.",
       "report_date": "2026-10-13",
       "report_time": "미상",
-      "market_cap": 259515253000,
+      "market_cap": 256597721000,
       "eps": "$17.01",
       "eps_forecast": "$12.90",
       "surprise_pct": 31.86,
@@ -145,7 +145,7 @@
       "name": "Wells Fargo & Company",
       "report_date": "2026-10-13",
       "report_time": "미상",
-      "market_cap": 250235945000,
+      "market_cap": 253622829000,
       "eps": "$1.87",
       "eps_forecast": "$1.85",
       "surprise_pct": 1.08,
@@ -162,7 +162,7 @@
       "name": "Citigroup Inc.",
       "report_date": "2026-10-13",
       "report_time": "미상",
-      "market_cap": 206676984000,
+      "market_cap": 208438297000,
       "eps": "$2.85",
       "eps_forecast": "$2.66",
       "surprise_pct": 7.14,
@@ -179,7 +179,7 @@
       "name": "BlackRock, Inc.",
       "report_date": "2026-10-14",
       "report_time": "미상",
-      "market_cap": 173574373000,
+      "market_cap": 175680586000,
       "eps": "$15.93",
       "eps_forecast": "$14.01",
       "surprise_pct": 13.7,
@@ -188,7 +188,7 @@
         "D0": 0.72,
         "D+1": 5.13,
         "D+2": 6.4,
-        "D+3": null
+        "D+3": 6.13
       }
     },
     {
@@ -196,7 +196,7 @@
       "name": "The Charles Schwab Corporation",
       "report_date": "2026-10-15",
       "report_time": "미상",
-      "market_cap": 162834252000,
+      "market_cap": 159029707000,
       "eps": "$1.69",
       "eps_forecast": "$1.66",
       "surprise_pct": 1.81,
@@ -204,7 +204,7 @@
         "D-1": 0,
         "D0": -2.73,
         "D+1": -5,
-        "D+2": null,
+        "D+2": -6.76,
         "D+3": null
       }
     },
@@ -213,7 +213,7 @@
       "name": "Progressive Corporation (The)",
       "report_date": "2026-10-14",
       "report_time": "미상",
-      "market_cap": 124268216000,
+      "market_cap": 127023915000,
       "eps": "$4.60",
       "eps_forecast": "$4.46",
       "surprise_pct": 3.14,
@@ -222,21 +222,21 @@
         "D0": -4.23,
         "D+1": -4.1,
         "D+2": -1.97,
-        "D+3": null
+        "D+3": -2.57
       }
     },
     {
       "symbol": "HDB",
       "name": "HDFC Bank Limited",
-      "report_date": "2026-10-16",
+      "report_date": "2026-10-17",
       "report_time": "미상",
-      "market_cap": 120735318000,
-      "eps": "$0.44",
+      "market_cap": 122325967000,
+      "eps": "$0.49",
       "eps_forecast": "$0.40",
-      "surprise_pct": null,
+      "surprise_pct": 22.5,
       "reaction": {
         "D-1": 0,
-        "D0": 1.32,
+        "D0": -3.42,
         "D+1": null,
         "D+2": null,
         "D+3": null
@@ -247,7 +247,7 @@
       "name": "Prologis, Inc.",
       "report_date": "2026-10-15",
       "report_time": "미상",
-      "market_cap": 120348770000,
+      "market_cap": 119220560000,
       "eps": "$1.60",
       "eps_forecast": "$1.58",
       "surprise_pct": 1.27,
@@ -255,22 +255,22 @@
         "D-1": 0,
         "D0": -2.7,
         "D+1": -3.61,
-        "D+2": null,
+        "D+2": -5.15,
         "D+3": null
       }
     },
     {
       "symbol": "IBN",
       "name": "ICICI Bank Limited",
-      "report_date": "2026-10-16",
+      "report_date": "2026-10-17",
       "report_time": "미상",
-      "market_cap": 105396855000,
-      "eps": "$0.39",
+      "market_cap": 107365884000,
+      "eps": "$0.49",
       "eps_forecast": "$0.40",
-      "surprise_pct": null,
+      "surprise_pct": 22.5,
       "reaction": {
         "D-1": 0,
-        "D0": 1.87,
+        "D0": -1.75,
         "D+1": null,
         "D+2": null,
         "D+3": null
@@ -281,7 +281,7 @@
       "name": "The Bank Of New York Mellon Corporation ",
       "report_date": "2026-10-15",
       "report_time": "미상",
-      "market_cap": 96408650000,
+      "market_cap": 97229644000,
       "eps": "$2.37",
       "eps_forecast": "$2.26",
       "surprise_pct": 4.87,
@@ -289,7 +289,7 @@
         "D-1": 0,
         "D0": 3.23,
         "D+1": 4.11,
-        "D+2": null,
+        "D+2": 4.08,
         "D+3": null
       }
     },
@@ -298,7 +298,7 @@
       "name": "U.S. Bancorp",
       "report_date": "2026-10-15",
       "report_time": "미상",
-      "market_cap": 89416573000,
+      "market_cap": 91504361000,
       "eps": "$1.34",
       "eps_forecast": "$1.32",
       "surprise_pct": 1.52,
@@ -306,7 +306,7 @@
         "D-1": 0,
         "D0": 2.01,
         "D+1": 4.39,
-        "D+2": null,
+        "D+2": 3.27,
         "D+3": null
       }
     },
@@ -315,7 +315,7 @@
       "name": "Marsh",
       "report_date": "2026-10-15",
       "report_time": "미상",
-      "market_cap": 89018991000,
+      "market_cap": 89563120000,
       "eps": "$2.03",
       "eps_forecast": "$1.96",
       "surprise_pct": 3.57,
@@ -323,7 +323,7 @@
         "D-1": 0,
         "D0": 4.56,
         "D+1": 5.58,
-        "D+2": null,
+        "D+2": 4.93,
         "D+3": null
       }
     },
@@ -332,7 +332,7 @@
       "name": "PNC Financial Services Group, Inc. (The)",
       "report_date": "2026-10-15",
       "report_time": "미상",
-      "market_cap": 85748949000,
+      "market_cap": 86726361000,
       "eps": "$5.09",
       "eps_forecast": "$4.97",
       "surprise_pct": 2.41,
@@ -340,7 +340,7 @@
         "D-1": 0,
         "D0": -0.4,
         "D+1": 0.74,
-        "D+2": null,
+        "D+2": 0.38,
         "D+3": null
       }
     },
@@ -349,14 +349,14 @@
       "name": "The Travelers Companies, Inc.",
       "report_date": "2026-10-16",
       "report_time": "미상",
-      "market_cap": 80069861000,
+      "market_cap": 81248313000,
       "eps": "$9.18",
       "eps_forecast": "$7.07",
       "surprise_pct": 29.84,
       "reaction": {
         "D-1": 0,
         "D0": 1.47,
-        "D+1": null,
+        "D+1": 0.46,
         "D+2": null,
         "D+3": null
       }
@@ -366,7 +366,7 @@
       "name": "Fastenal Company",
       "report_date": "2026-10-14",
       "report_time": "미상",
-      "market_cap": 57810928000,
+      "market_cap": 58545328000,
       "eps": "$0.35",
       "eps_forecast": "$0.34",
       "surprise_pct": 2.94,
@@ -375,7 +375,7 @@
         "D0": 1.11,
         "D+1": -2.04,
         "D+2": -0.8,
-        "D+3": null
+        "D+3": -0.36
       }
     },
     {
@@ -383,14 +383,14 @@
       "name": "Truist Financial Corporation",
       "report_date": "2026-10-16",
       "report_time": "미상",
-      "market_cap": 56891130000,
+      "market_cap": 57501946000,
       "eps": "$1.16",
       "eps_forecast": "$1.17",
       "surprise_pct": -0.85,
       "reaction": {
         "D-1": 0,
         "D0": 1.07,
-        "D+1": null,
+        "D+1": -0.04,
         "D+2": null,
         "D+3": null
       }
@@ -400,7 +400,7 @@
       "name": "State Street Corporation",
       "report_date": "2026-10-14",
       "report_time": "미상",
-      "market_cap": 46040015000,
+      "market_cap": 45523575000,
       "eps": "$3.69",
       "eps_forecast": "$3.65",
       "surprise_pct": 1.1,
@@ -409,7 +409,7 @@
         "D0": -4.14,
         "D+1": -3.73,
         "D+2": -4.81,
-        "D+3": null
+        "D+3": -4.74
       }
     },
     {
@@ -417,7 +417,7 @@
       "name": "Interactive Brokers Group, Inc.",
       "report_date": "2026-10-15",
       "report_time": "미상",
-      "market_cap": 38978314000,
+      "market_cap": 37465035000,
       "eps": "$0.67",
       "eps_forecast": "$0.67",
       "surprise_pct": null,
@@ -425,7 +425,7 @@
         "D-1": 0,
         "D0": 2.25,
         "D+1": -1.72,
-        "D+2": null,
+        "D+2": -2.13,
         "D+3": null
       }
     },
@@ -434,7 +434,7 @@
       "name": "Ericsson",
       "report_date": "2026-10-15",
       "report_time": "미상",
-      "market_cap": 36107178000,
+      "market_cap": 35567759000,
       "eps": "$0.18",
       "eps_forecast": "$0.14",
       "surprise_pct": 28.57,
@@ -442,7 +442,7 @@
         "D-1": 0,
         "D0": 11.8,
         "D+1": 10.13,
-        "D+2": null,
+        "D+2": 8.3,
         "D+3": null
       }
     },
@@ -451,14 +451,14 @@
       "name": "M&T Bank Corporation",
       "report_date": "2026-10-16",
       "report_time": "미상",
-      "market_cap": 31576614900,
+      "market_cap": 31089932300,
       "eps": "$5.08",
       "eps_forecast": "$4.98",
       "surprise_pct": 2.01,
       "reaction": {
         "D-1": 0,
         "D0": -1.54,
-        "D+1": null,
+        "D+1": -2.67,
         "D+2": null,
         "D+3": null
       }
@@ -468,14 +468,14 @@
       "name": "Citizens Financial Group, Inc.",
       "report_date": "2026-10-16",
       "report_time": "미상",
-      "market_cap": 26715244500,
+      "market_cap": 26685761500,
       "eps": "$1.41",
       "eps_forecast": "$1.38",
       "surprise_pct": 2.17,
       "reaction": {
         "D-1": 0,
         "D0": -0.11,
-        "D+1": null,
+        "D+1": -1.25,
         "D+2": null,
         "D+3": null
       }
@@ -485,14 +485,14 @@
       "name": "Regions Financial Corporation",
       "report_date": "2026-10-16",
       "report_time": "미상",
-      "market_cap": 23266195500,
+      "market_cap": 23385464800,
       "eps": "$0.73",
       "eps_forecast": "$0.67",
       "surprise_pct": 8.96,
       "reaction": {
         "D-1": 0,
         "D0": 0.51,
-        "D+1": null,
+        "D+1": -0.46,
         "D+2": null,
         "D+3": null
       }
@@ -502,7 +502,7 @@
       "name": "J.B. Hunt Transport Services, Inc.",
       "report_date": "2026-10-15",
       "report_time": "미상",
-      "market_cap": 22099124200,
+      "market_cap": 21485858800,
       "eps": "$1.82",
       "eps_forecast": "$1.81",
       "surprise_pct": 0.55,
@@ -510,7 +510,7 @@
         "D-1": 0,
         "D0": 1.36,
         "D+1": -1.46,
-        "D+2": null,
+        "D+2": -2.52,
         "D+3": null
       }
     }
