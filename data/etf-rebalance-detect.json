@@ -1,8 +1,142 @@
 {
-  "updated_at": "2026-10-19T21:32:28.790Z",
+  "updated_at": "2026-10-20T00:46:18.615Z",
   "note": "국내 섹터·테마 ETF 상위 25종목의 전일 스냅샷 대비 구성종목 변화 감지. 신규 편입·편출 종목과 비중 1.5%p 이상 변동 종목을 표시합니다. (첫 실행 시에는 비교 대상이 없어 결과가 비어있습니다)",
   "universe_size": 25,
   "has_baseline": true,
-  "changed_etf_count": 0,
-  "items": []
+  "changed_etf_count": 4,
+  "items": [
+    {
+      "code": "494310",
+      "name": "KODEX 반도체레버리지",
+      "trd_dt": "2026-10-19",
+      "prev_trd_dt": "2026-10-16",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "name": "KODEX 반도체",
+          "prev_weight": 28.42,
+          "curr_weight": 25.06,
+          "delta": -3.36
+        },
+        {
+          "name": "원화현금",
+          "prev_weight": -32.58,
+          "curr_weight": -35.37,
+          "delta": -2.79
+        }
+      ]
+    },
+    {
+      "code": "462330",
+      "name": "KODEX 2차전지산업레버리지",
+      "trd_dt": "2026-10-19",
+      "prev_trd_dt": "2026-10-16",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "name": "원화현금",
+          "prev_weight": -25.32,
+          "curr_weight": -28.9,
+          "delta": -3.58
+        },
+        {
+          "name": "LG에너지솔루션",
+          "prev_weight": 29.54,
+          "curr_weight": 32.87,
+          "delta": 3.33
+        },
+        {
+          "name": "KODEX 2차전지산업",
+          "prev_weight": 28.25,
+          "curr_weight": 31.49,
+          "delta": 3.24
+        },
+        {
+          "name": "삼성SDI",
+          "prev_weight": 16.06,
+          "curr_weight": 18.14,
+          "delta": 2.08
+        }
+      ]
+    },
+    {
+      "code": "0061Z0",
+      "name": "RISE 단기특수은행채액티브",
+      "trd_dt": "2026-10-19",
+      "prev_trd_dt": "2026-10-16",
+      "added": [
+        {
+          "name": "대신증권 20251124-333-112",
+          "weight": null
+        },
+        {
+          "name": "대신증권 20251124-333-113",
+          "weight": null
+        },
+        {
+          "name": "신영증권 20261016-3-29(단)",
+          "weight": null
+        },
+        {
+          "name": "아이엠증권 20261016-3-23(단)",
+          "weight": null
+        },
+        {
+          "name": "우리투자증권 20260907-46-6(단)",
+          "weight": null
+        },
+        {
+          "name": "한국투자금융지주 20251030-364-173",
+          "weight": null
+        },
+        {
+          "name": "한국투자금융지주 20251030-364-174",
+          "weight": null
+        },
+        {
+          "name": "LG이노텍 20260831-58-3(단)",
+          "weight": null
+        }
+      ],
+      "removed": [
+        {
+          "name": "기업 자금부 20260417-182-1",
+          "weight": null
+        },
+        {
+          "name": "미래에셋증권 20261015-1-26(단)",
+          "weight": null
+        },
+        {
+          "name": "아이엠증권 20261015-1-20(단)",
+          "weight": null
+        },
+        {
+          "name": "현대차증권 20260318-212-7",
+          "weight": null
+        },
+        {
+          "name": "현대차증권 20260318-212-8",
+          "weight": null
+        }
+      ],
+      "changed": []
+    },
+    {
+      "code": "0091P0",
+      "name": "TIGER 코리아원자력",
+      "trd_dt": "2026-10-19",
+      "prev_trd_dt": "2026-10-16",
+      "added": [
+        {
+          "name": "우진엔텍",
+          "weight": 0.27
+        }
+      ],
+      "removed": [],
+      "changed": []
+    }
+  ]
 }
