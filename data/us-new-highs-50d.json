@@ -1,45 +1,99 @@
 {
-  "updated_at": "2026-10-20T11:05:52.343Z",
+  "updated_at": "2026-10-20T15:45:13.448Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
-  "count": 6,
+  "count": 15,
   "items": [
     {
-      "symbol": "ISRG",
-      "close": 433.18,
-      "day_change_pct": 1.52,
-      "pct_above_prior_window": 1.24
+      "symbol": "BIIB",
+      "close": 243.79,
+      "day_change_pct": 4.42,
+      "pct_above_prior_window": 3.59
+    },
+    {
+      "symbol": "UNH",
+      "close": 420.26,
+      "day_change_pct": 3.29,
+      "pct_above_prior_window": 3.29
     },
     {
       "symbol": "CTSH",
-      "close": 66.79,
-      "day_change_pct": 1.15,
-      "pct_above_prior_window": 1.15
-    },
-    {
-      "symbol": "LIN",
-      "close": 503.44,
-      "day_change_pct": 1.01,
-      "pct_above_prior_window": 1.01
+      "close": 67.93,
+      "day_change_pct": 1.71,
+      "pct_above_prior_window": 1.71
     },
     {
       "symbol": "MAR",
-      "close": 390.7,
-      "day_change_pct": 0.68,
-      "pct_above_prior_window": 0.68
-    },
-    {
-      "symbol": "COST",
-      "close": 995.53,
-      "day_change_pct": 0.65,
-      "pct_above_prior_window": 0.65
+      "close": 396.18,
+      "day_change_pct": 1.4,
+      "pct_above_prior_window": 1.4
     },
     {
       "symbol": "V",
-      "close": 402.92,
-      "day_change_pct": 0.08,
-      "pct_above_prior_window": 0.08
+      "close": 408.105,
+      "day_change_pct": 1.29,
+      "pct_above_prior_window": 1.29
+    },
+    {
+      "symbol": "ADP",
+      "close": 292.17,
+      "day_change_pct": 1.79,
+      "pct_above_prior_window": 1.13
+    },
+    {
+      "symbol": "TEAM",
+      "close": 219.54,
+      "day_change_pct": 2.23,
+      "pct_above_prior_window": 1.11
+    },
+    {
+      "symbol": "CTAS",
+      "close": 215.95,
+      "day_change_pct": 1.72,
+      "pct_above_prior_window": 1.06
+    },
+    {
+      "symbol": "TRV",
+      "close": 393.11,
+      "day_change_pct": 1.99,
+      "pct_above_prior_window": 0.92
+    },
+    {
+      "symbol": "ISRG",
+      "close": 435.295,
+      "day_change_pct": 0.49,
+      "pct_above_prior_window": 0.49
+    },
+    {
+      "symbol": "CCEP",
+      "close": 112.87,
+      "day_change_pct": 0.89,
+      "pct_above_prior_window": 0.42
+    },
+    {
+      "symbol": "AEP",
+      "close": 127.56,
+      "day_change_pct": 2.28,
+      "pct_above_prior_window": 0.33
+    },
+    {
+      "symbol": "KDP",
+      "close": 34.735,
+      "day_change_pct": 0.8,
+      "pct_above_prior_window": 0.33
+    },
+    {
+      "symbol": "COST",
+      "close": 998.135,
+      "day_change_pct": 0.26,
+      "pct_above_prior_window": 0.26
+    },
+    {
+      "symbol": "DIS",
+      "close": 111.365,
+      "day_change_pct": 1.62,
+      "pct_above_prior_window": 0.1
     }
   ]
 }
