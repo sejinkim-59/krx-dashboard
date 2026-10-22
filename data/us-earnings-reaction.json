@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-22T05:18:59.809Z",
+  "updated_at": "2026-10-22T10:31:21.698Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
@@ -27,6 +27,7 @@
       "report_date": "2026-10-21",
       "report_time": "장후",
       "market_cap": 1768606140000,
+      "eps": "$7.25",
       "eps_forecast": "$4.98",
       "surprise_pct": null,
       "reaction": {
@@ -43,6 +44,7 @@
       "report_date": "2026-10-21",
       "report_time": "장후",
       "market_cap": 1477144350000,
+      "eps": "$0.37",
       "eps_forecast": "$0.22",
       "surprise_pct": null,
       "reaction": {
@@ -59,6 +61,7 @@
       "report_date": "2026-10-21",
       "report_time": "장후",
       "market_cap": 329687761000,
+      "eps": "$1.26",
       "eps_forecast": "$2.17",
       "surprise_pct": null,
       "reaction": {
@@ -73,10 +76,11 @@
       "symbol": "PM",
       "name": "Philip Morris International Inc",
       "report_date": "2026-10-21",
-      "report_time": "장전",
+      "report_time": "미상",
       "market_cap": 311566828000,
+      "eps": "$2.36",
       "eps_forecast": "$2.30",
-      "surprise_pct": null,
+      "surprise_pct": 2.61,
       "reaction": {
         "D-1": 0,
         "D0": -1.22,
@@ -125,6 +129,7 @@
       "report_date": "2026-10-21",
       "report_time": "장후",
       "market_cap": 281302893000,
+      "eps": "$1.86",
       "eps_forecast": "$2.03",
       "surprise_pct": null,
       "reaction": {
@@ -156,10 +161,11 @@
       "symbol": "TMO",
       "name": "Thermo Fisher Scientific Inc",
       "report_date": "2026-10-21",
-      "report_time": "장전",
+      "report_time": "미상",
       "market_cap": 254153196000,
+      "eps": "$6.68",
       "eps_forecast": "$6.40",
-      "surprise_pct": null,
+      "surprise_pct": 4.37,
       "reaction": {
         "D-1": 0,
         "D0": 0.97,
@@ -174,6 +180,7 @@
       "report_date": "2026-10-21",
       "report_time": "장후",
       "market_cap": 253681943000,
+      "eps": "$1.48",
       "eps_forecast": "$2.40",
       "surprise_pct": null,
       "reaction": {
@@ -190,6 +197,7 @@
       "report_date": "2026-10-21",
       "report_time": "장후",
       "market_cap": 227921150000,
+      "eps": "$2.65",
       "eps_forecast": "$2.88",
       "surprise_pct": null,
       "reaction": {
@@ -204,10 +212,11 @@
       "symbol": "ABT",
       "name": "Abbott Laboratories",
       "report_date": "2026-10-21",
-      "report_time": "장전",
+      "report_time": "미상",
       "market_cap": 177277764000,
+      "eps": "$1.42",
       "eps_forecast": "$1.43",
-      "surprise_pct": null,
+      "surprise_pct": -0.7,
       "reaction": {
         "D-1": 0,
         "D0": -1.89,
@@ -217,13 +226,31 @@
       }
     },
     {
+      "symbol": "SCCO",
+      "name": "Southern Copper Corporation",
+      "report_date": "2026-10-21",
+      "report_time": "미상",
+      "market_cap": 168818672000,
+      "eps": "$2.15",
+      "eps_forecast": "$2.04",
+      "surprise_pct": 5.39,
+      "reaction": {
+        "D-1": 0,
+        "D0": -2.11,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
       "symbol": "NEE",
       "name": "NextEra Energy, Inc.",
       "report_date": "2026-10-21",
-      "report_time": "장전",
+      "report_time": "미상",
       "market_cap": 164500242000,
+      "eps": "$1.24",
       "eps_forecast": "$1.20",
-      "surprise_pct": null,
+      "surprise_pct": 3.33,
       "reaction": {
         "D-1": 0,
         "D0": -0.74,
@@ -236,10 +263,11 @@
       "symbol": "T",
       "name": "AT&T Inc.",
       "report_date": "2026-10-21",
-      "report_time": "장전",
+      "report_time": "미상",
       "market_cap": 160482869000,
+      "eps": "$0.65",
       "eps_forecast": "$0.61",
-      "surprise_pct": null,
+      "surprise_pct": 6.56,
       "reaction": {
         "D-1": 0,
         "D0": -6.45,
@@ -252,10 +280,11 @@
       "symbol": "DHR",
       "name": "Danaher Corporation",
       "report_date": "2026-10-21",
-      "report_time": "장전",
+      "report_time": "미상",
       "market_cap": 157637591000,
+      "eps": "$2.11",
       "eps_forecast": "$1.92",
-      "surprise_pct": null,
+      "surprise_pct": 9.9,
       "reaction": {
         "D-1": 0,
         "D0": 4.29,
@@ -353,10 +382,11 @@
       "symbol": "CME",
       "name": "CME Group Inc.",
       "report_date": "2026-10-21",
-      "report_time": "장전",
+      "report_time": "미상",
       "market_cap": 106187350000,
+      "eps": "$3.02",
       "eps_forecast": "$2.98",
-      "surprise_pct": null,
+      "surprise_pct": 1.34,
       "reaction": {
         "D-1": 0,
         "D0": 0.16,
@@ -369,10 +399,11 @@
       "symbol": "ELV",
       "name": "Elevance Health, Inc.",
       "report_date": "2026-10-21",
-      "report_time": "장전",
+      "report_time": "미상",
       "market_cap": 95461523000,
+      "eps": "$6.99",
       "eps_forecast": "$4.66",
-      "surprise_pct": null,
+      "surprise_pct": 50,
       "reaction": {
         "D-1": 0,
         "D0": -1.37,
@@ -387,6 +418,7 @@
       "report_date": "2026-10-21",
       "report_time": "장후",
       "market_cap": 89066996000,
+      "eps": "$0.44",
       "eps_forecast": "$0.52",
       "surprise_pct": null,
       "reaction": {
@@ -418,10 +450,11 @@
       "symbol": "MCO",
       "name": "Moody's Corporation",
       "report_date": "2026-10-21",
-      "report_time": "장전",
+      "report_time": "미상",
       "market_cap": 82330624000,
+      "eps": "$4.14",
       "eps_forecast": "$4.25",
-      "surprise_pct": null,
+      "surprise_pct": -2.59,
       "reaction": {
         "D-1": 0,
         "D0": 1.2,
@@ -470,29 +503,13 @@
       "report_date": "2026-10-21",
       "report_time": "장후",
       "market_cap": 74753745000,
+      "eps": "$0.29",
       "eps_forecast": "$0.33",
       "surprise_pct": null,
       "reaction": {
         "D-1": 0,
         "D0": 1.19,
         "D+1": null,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "AMX",
-      "name": "America Movil, S.A.B. de C.V.",
-      "report_date": "2026-10-20",
-      "report_time": "미상",
-      "market_cap": 68923277000,
-      "eps": "$0.47",
-      "eps_forecast": "$0.46",
-      "surprise_pct": 2.17,
-      "reaction": {
-        "D-1": 0,
-        "D0": 0.31,
-        "D+1": 6.4,
         "D+2": null,
         "D+3": null
       }
