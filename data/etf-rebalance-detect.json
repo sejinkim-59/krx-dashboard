@@ -1,8 +1,120 @@
 {
-  "updated_at": "2026-10-21T21:29:44.360Z",
+  "updated_at": "2026-10-22T00:16:49.599Z",
   "note": "국내 섹터·테마 ETF 상위 25종목의 전일 스냅샷 대비 구성종목 변화 감지. 신규 편입·편출 종목과 비중 1.5%p 이상 변동 종목을 표시합니다. (첫 실행 시에는 비교 대상이 없어 결과가 비어있습니다)",
   "universe_size": 25,
   "has_baseline": true,
-  "changed_etf_count": 0,
-  "items": []
+  "changed_etf_count": 4,
+  "items": [
+    {
+      "code": "494310",
+      "name": "KODEX 반도체레버리지",
+      "trd_dt": "2026-10-21",
+      "prev_trd_dt": "2026-10-20",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "name": "원화현금",
+          "prev_weight": -40.93,
+          "curr_weight": -34.81,
+          "delta": 6.12
+        },
+        {
+          "name": "KODEX 반도체",
+          "prev_weight": 25.22,
+          "curr_weight": 27.77,
+          "delta": 2.55
+        }
+      ]
+    },
+    {
+      "code": "462330",
+      "name": "KODEX 2차전지산업레버리지",
+      "trd_dt": "2026-10-21",
+      "prev_trd_dt": "2026-10-20",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "name": "KODEX 2차전지산업",
+          "prev_weight": 26.42,
+          "curr_weight": 28.92,
+          "delta": 2.5
+        }
+      ]
+    },
+    {
+      "code": "0061Z0",
+      "name": "RISE 단기특수은행채액티브",
+      "trd_dt": "2026-10-21",
+      "prev_trd_dt": "2026-10-20",
+      "added": [
+        {
+          "name": "신한카드 20260923-30-50(단)",
+          "weight": null
+        },
+        {
+          "name": "아이엠증권 20261020-1-27(단)",
+          "weight": null
+        },
+        {
+          "name": "제이비우리캐피탈 20211028-1826-26",
+          "weight": null
+        }
+      ],
+      "removed": [
+        {
+          "name": "아이엠증권 20261019-1-25(단)",
+          "weight": null
+        }
+      ],
+      "changed": []
+    },
+    {
+      "code": "488080",
+      "name": "TIGER 반도체TOP10레버리지",
+      "trd_dt": "2026-10-21",
+      "prev_trd_dt": "2026-10-20",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "name": "SK스퀘어",
+          "prev_weight": 25.18,
+          "curr_weight": 28.7,
+          "delta": 3.52
+        },
+        {
+          "name": "TIGER 반도체TOP10",
+          "prev_weight": 36.07,
+          "curr_weight": 39.39,
+          "delta": 3.32
+        },
+        {
+          "name": "삼성전자",
+          "prev_weight": 36.15,
+          "curr_weight": 39.03,
+          "delta": 2.88
+        },
+        {
+          "name": "SK하이닉스",
+          "prev_weight": 30.83,
+          "curr_weight": 33.18,
+          "delta": 2.35
+        },
+        {
+          "name": "원화현금",
+          "prev_weight": -50.39,
+          "curr_weight": -52.49,
+          "delta": -2.1
+        },
+        {
+          "name": "한미반도체",
+          "prev_weight": 2.58,
+          "curr_weight": 4.3,
+          "delta": 1.72
+        }
+      ]
+    }
+  ]
 }
