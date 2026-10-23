@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-22T22:44:55.785Z",
+  "updated_at": "2026-10-23T01:24:47.165Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
@@ -51,6 +51,22 @@
         "D-1": 0,
         "D0": 3.41,
         "D+1": 0.23,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "PG",
+      "name": "Procter & Gamble Company (The)",
+      "report_date": "2026-10-22",
+      "report_time": "장전",
+      "market_cap": 364564087000,
+      "eps_forecast": "$1.89",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 5.58,
+        "D+1": null,
         "D+2": null,
         "D+3": null
       }
@@ -226,6 +242,22 @@
       }
     },
     {
+      "symbol": "UNP",
+      "name": "Union Pacific Corporation",
+      "report_date": "2026-10-22",
+      "report_time": "장전",
+      "market_cap": 171016520000,
+      "eps_forecast": "$3.47",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 3.55,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
       "symbol": "SCCO",
       "name": "Southern Copper Corporation",
       "report_date": "2026-10-21",
@@ -311,6 +343,22 @@
       }
     },
     {
+      "symbol": "WDC",
+      "name": "Western Digital Corporation",
+      "report_date": "2026-10-22",
+      "report_time": "장후",
+      "market_cap": 141399212000,
+      "eps_forecast": "$3.99",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -6.43,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
       "symbol": "CB",
       "name": "Chubb Limited",
       "report_date": "2026-10-20",
@@ -324,6 +372,22 @@
         "D0": 0.42,
         "D+1": -0.37,
         "D+2": 2.16,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "LMT",
+      "name": "Lockheed Martin Corporation",
+      "report_date": "2026-10-22",
+      "report_time": "장전",
+      "market_cap": 127283405000,
+      "eps_forecast": "$7.49",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 6.96,
+        "D+1": null,
+        "D+2": null,
         "D+3": null
       }
     },
@@ -345,6 +409,38 @@
       }
     },
     {
+      "symbol": "VLO",
+      "name": "Valero Energy Corporation",
+      "report_date": "2026-10-22",
+      "report_time": "장전",
+      "market_cap": 125752320000,
+      "eps_forecast": "$21.28",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -2.4,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "NEM",
+      "name": "Newmont Corporation",
+      "report_date": "2026-10-22",
+      "report_time": "장후",
+      "market_cap": 123471659000,
+      "eps_forecast": "$1.94",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -2.62,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
       "symbol": "HDB",
       "name": "HDFC Bank Limited",
       "report_date": "2026-10-17",
@@ -359,6 +455,22 @@
         "D+1": -3.27,
         "D+2": -4.91,
         "D+3": -5.87
+      }
+    },
+    {
+      "symbol": "SPOT",
+      "name": "Spotify Technology S.A.",
+      "report_date": "2026-10-22",
+      "report_time": "장전",
+      "market_cap": 108132057000,
+      "eps_forecast": "$3.10",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 11.1,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
       }
     },
     {
@@ -393,125 +505,6 @@
         "D+1": -0.37,
         "D+2": -1.5,
         "D+3": -0.17
-      }
-    },
-    {
-      "symbol": "ELV",
-      "name": "Elevance Health, Inc.",
-      "report_date": "2026-10-21",
-      "report_time": "미상",
-      "market_cap": 94149468000,
-      "eps": "$6.99",
-      "eps_forecast": "$4.66",
-      "surprise_pct": 50,
-      "reaction": {
-        "D-1": 0,
-        "D0": -1.37,
-        "D+1": 1.16,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "MMM",
-      "name": "3M Company",
-      "report_date": "2026-10-20",
-      "report_time": "미상",
-      "market_cap": 90293322000,
-      "eps": "$2.50",
-      "eps_forecast": "$2.40",
-      "surprise_pct": 4.17,
-      "reaction": {
-        "D-1": 0,
-        "D0": 5.78,
-        "D+1": 7.86,
-        "D+2": 8.36,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "CSX",
-      "name": "CSX Corporation",
-      "report_date": "2026-10-21",
-      "report_time": "미상",
-      "market_cap": 89659785000,
-      "eps": "$0.57",
-      "eps_forecast": "$0.52",
-      "surprise_pct": 9.62,
-      "reaction": {
-        "D-1": 0,
-        "D0": 0.67,
-        "D+1": 7.47,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "MCO",
-      "name": "Moody's Corporation",
-      "report_date": "2026-10-21",
-      "report_time": "미상",
-      "market_cap": 83317858000,
-      "eps": "$4.14",
-      "eps_forecast": "$4.25",
-      "surprise_pct": -2.59,
-      "reaction": {
-        "D-1": 0,
-        "D0": 1.2,
-        "D+1": 3.3,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "TRV",
-      "name": "The Travelers Companies, Inc.",
-      "report_date": "2026-10-16",
-      "report_time": "미상",
-      "market_cap": 81763344000,
-      "eps": "$9.18",
-      "eps_forecast": "$7.07",
-      "surprise_pct": 29.84,
-      "reaction": {
-        "D-1": 0,
-        "D0": 1.47,
-        "D+1": 0.41,
-        "D+2": 3.08,
-        "D+3": 3.92
-      }
-    },
-    {
-      "symbol": "NOC",
-      "name": "Northrop Grumman Corporation",
-      "report_date": "2026-10-20",
-      "report_time": "미상",
-      "market_cap": 76616802000,
-      "eps": "$7.89",
-      "eps_forecast": "$7.22",
-      "surprise_pct": 9.28,
-      "reaction": {
-        "D-1": 0,
-        "D0": 4.57,
-        "D+1": 5.61,
-        "D+2": 8.17,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "KMI",
-      "name": "Kinder Morgan, Inc.",
-      "report_date": "2026-10-21",
-      "report_time": "미상",
-      "market_cap": 75644469000,
-      "eps": "$0.35",
-      "eps_forecast": "$0.33",
-      "surprise_pct": 6.06,
-      "reaction": {
-        "D-1": 0,
-        "D0": 1.19,
-        "D+1": 0.45,
-        "D+2": null,
-        "D+3": null
       }
     }
   ]
