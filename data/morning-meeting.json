@@ -1,24 +1,22 @@
 {
-  "date": "20261023",
-  "generated_at": "2026-10-23T12:04:47.627Z",
+  "date": "20261024",
+  "generated_at": "2026-10-23T16:50:09.388Z",
   "engineVersion": "v0.2",
   "objective": "NEW INFORMATION + CHANGE + CATALYST + CONFIRMATION — 오늘 새롭게 연구할 가치가 생긴 종목을 조기 발견",
   "methodologyNote": "시장/섹터 상대강도는 공식 지수가 아니라 가격 데이터 보유 종목의 동일가중 평균(proxy)입니다. Earnings/Revision Factor는 컨센서스 Provider 미연결로 항상 제외(MISSING_DATA)됩니다. 시총 순위는 KIS 시세를 조회한 종목(관심종목 + Discovery 추가조회) 안에서의 순위입니다. 수급 전환의 발생 시점은 \"최근 3거래일 vs 직전 5거래일\" 창 비교라 일 단위 날짜가 아닌 창 단위입니다. 종목 단위로 연결되지 않은 Catalyst: Investor Relations 일정, Large Contract(단일판매·공급계약), Index Rebalancing (정기변경 월 주기만 수집, 종목별 편입·편출 예고 없음), Major Customer Event, Policy Event, Share Cancellation(소각).",
   "marketRegime": {
-    "state": "Risk-off",
+    "state": "Neutral",
     "evidence": [
-      "VIX +2.84%",
-      "S&P500 -1.21%",
-      "NASDAQ -2.6%",
-      "USD/KRW -0.08%"
+      "VIX +3.84%",
+      "S&P500 -0.16%",
+      "NASDAQ +0.2%",
+      "USD/KRW -0.05%"
     ],
     "strategyPreference": [
-      "EVENT_DRIVEN",
-      "INFLECTION"
+      "DISCOVERY",
+      "EVENT_DRIVEN"
     ],
-    "avoid": [
-      "MOMENTUM"
-    ]
+    "avoid": []
   },
   "screening": {
     "universeCount": 1021,
@@ -1435,7 +1433,7 @@
       ],
       "newSignalCount": 4,
       "tier": 2,
-      "marketCapRank": 88,
+      "marketCapRank": 87,
       "isLargeCap": false,
       "whatChanged": [
         "MA20이 MA60을 상향돌파 (2026-10-21, 2거래일 전)",
@@ -1482,7 +1480,7 @@
       ],
       "newSignalCount": 3,
       "tier": 2,
-      "marketCapRank": 87,
+      "marketCapRank": 86,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-10-20, 3거래일 전)",
@@ -1657,7 +1655,7 @@
       ],
       "newSignalCount": 1,
       "tier": 4,
-      "marketCapRank": 96,
+      "marketCapRank": 95,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-10-23, 0거래일 전)"
@@ -1701,7 +1699,7 @@
       ],
       "newSignalCount": 0,
       "tier": 4,
-      "marketCapRank": 89,
+      "marketCapRank": 88,
       "isLargeCap": false,
       "whatChanged": [],
       "pricedInVerdict": "partially_priced_in",
@@ -1782,7 +1780,7 @@
       ],
       "newSignalCount": 4,
       "tier": 1,
-      "marketCapRank": 97,
+      "marketCapRank": 96,
       "isLargeCap": false,
       "whatChanged": [
         "거래량 20일 평균 대비 2.4배로 급증 (2026-10-15, 6거래일 전)",
@@ -1830,7 +1828,7 @@
       ],
       "newSignalCount": 3,
       "tier": 1,
-      "marketCapRank": 104,
+      "marketCapRank": 103,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-10-19, 4거래일 전)",
@@ -2059,7 +2057,7 @@
       ],
       "newSignalCount": 3,
       "tier": 2,
-      "marketCapRank": 103,
+      "marketCapRank": 102,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-10-19, 4거래일 전)",
