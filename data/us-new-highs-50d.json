@@ -1,39 +1,63 @@
 {
-  "updated_at": "2026-10-23T16:46:01.741Z",
+  "updated_at": "2026-10-23T20:20:32.563Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
-  "count": 5,
+  "count": 9,
   "items": [
     {
       "symbol": "ZS",
-      "close": 250.805,
-      "day_change_pct": 5.49,
-      "pct_above_prior_window": 5.49
-    },
-    {
-      "symbol": "ISRG",
-      "close": 458,
-      "day_change_pct": 3.19,
-      "pct_above_prior_window": 3.19
+      "close": 255.15,
+      "day_change_pct": 7.31,
+      "pct_above_prior_window": 7.31
     },
     {
       "symbol": "CVX",
-      "close": 232.975,
-      "day_change_pct": 2.78,
-      "pct_above_prior_window": 2.73
+      "close": 233.21,
+      "day_change_pct": 2.88,
+      "pct_above_prior_window": 2.84
+    },
+    {
+      "symbol": "ISRG",
+      "close": 452.29,
+      "day_change_pct": 1.9,
+      "pct_above_prior_window": 1.9
+    },
+    {
+      "symbol": "TEAM",
+      "close": 227.61,
+      "day_change_pct": 1.99,
+      "pct_above_prior_window": 0.93
     },
     {
       "symbol": "IBM",
-      "close": 254.09,
-      "day_change_pct": 0.79,
-      "pct_above_prior_window": 0.79
+      "close": 253.56,
+      "day_change_pct": 0.58,
+      "pct_above_prior_window": 0.58
+    },
+    {
+      "symbol": "ROP",
+      "close": 438.14,
+      "day_change_pct": 0.44,
+      "pct_above_prior_window": 0.44
+    },
+    {
+      "symbol": "CDW",
+      "close": 165.11,
+      "day_change_pct": 0.3,
+      "pct_above_prior_window": 0.3
     },
     {
       "symbol": "CTAS",
-      "close": 224.58,
-      "day_change_pct": 0.24,
-      "pct_above_prior_window": 0.24
+      "close": 224.1,
+      "day_change_pct": 0.03,
+      "pct_above_prior_window": 0.03
+    },
+    {
+      "symbol": "WDAY",
+      "close": 209.99,
+      "day_change_pct": 0,
+      "pct_above_prior_window": 0
     }
   ]
 }
