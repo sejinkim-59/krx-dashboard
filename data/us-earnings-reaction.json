@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T06:28:03.634Z",
+  "updated_at": "2026-10-23T12:00:28.691Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
@@ -26,7 +26,7 @@
       "name": "Meta Platforms, Inc.",
       "report_date": "2026-10-21",
       "report_time": "미상",
-      "market_cap": 1776936550000,
+      "market_cap": 1658617200000,
       "eps": "$7.40",
       "eps_forecast": "$6.52",
       "surprise_pct": 13.5,
@@ -43,7 +43,7 @@
       "name": "Tesla, Inc. ",
       "report_date": "2026-10-21",
       "report_time": "미상",
-      "market_cap": 1527580070000,
+      "market_cap": 1480583150000,
       "eps": "$0.20",
       "eps_forecast": "$0.22",
       "surprise_pct": -9.09,
@@ -59,11 +59,11 @@
       "symbol": "PG",
       "name": "Procter & Gamble Company (The)",
       "report_date": "2026-10-22",
-      "report_time": "장전",
+      "report_time": "미상",
       "market_cap": 364564087000,
-      "eps": "$1.99",
+      "eps": "$2",
       "eps_forecast": "$1.89",
-      "surprise_pct": null,
+      "surprise_pct": 5.82,
       "reaction": {
         "D-1": 0,
         "D0": 5.58,
@@ -73,28 +73,11 @@
       }
     },
     {
-      "symbol": "LRCX",
-      "name": "Lam Research Corporation",
-      "report_date": "2026-10-21",
-      "report_time": "미상",
-      "market_cap": 326383993000,
-      "eps": "$2.20",
-      "eps_forecast": "$2.17",
-      "surprise_pct": 1.38,
-      "reaction": {
-        "D-1": 0,
-        "D0": -1,
-        "D+1": -12.64,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
       "symbol": "PM",
       "name": "Philip Morris International Inc",
       "report_date": "2026-10-21",
       "report_time": "미상",
-      "market_cap": 307763806000,
+      "market_cap": 314434683000,
       "eps": "$2.36",
       "eps_forecast": "$2.30",
       "surprise_pct": 2.61,
@@ -128,7 +111,7 @@
       "name": "SAP SE",
       "report_date": "2026-10-21",
       "report_time": "미상",
-      "market_cap": 285909778000,
+      "market_cap": 295565820000,
       "eps": "$2.18",
       "eps_forecast": "$2.03",
       "surprise_pct": 7.39,
@@ -136,6 +119,23 @@
         "D-1": 0,
         "D0": 1.64,
         "D+1": 5.07,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "LRCX",
+      "name": "Lam Research Corporation",
+      "report_date": "2026-10-21",
+      "report_time": "미상",
+      "market_cap": 288015319000,
+      "eps": "$2.20",
+      "eps_forecast": "$2.17",
+      "surprise_pct": 1.38,
+      "reaction": {
+        "D-1": 0,
+        "D0": -1,
+        "D+1": -12.64,
         "D+2": null,
         "D+3": null
       }
@@ -158,23 +158,6 @@
       }
     },
     {
-      "symbol": "TXN",
-      "name": "Texas Instruments Incorporated",
-      "report_date": "2026-10-21",
-      "report_time": "미상",
-      "market_cap": 259955950000,
-      "eps": "$2.62",
-      "eps_forecast": "$2.40",
-      "surprise_pct": 9.17,
-      "reaction": {
-        "D-1": 0,
-        "D0": 2.47,
-        "D+1": 0.62,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
       "symbol": "RTX",
       "name": "RTX Corporation",
       "report_date": "2026-10-20",
@@ -192,11 +175,28 @@
       }
     },
     {
+      "symbol": "TXN",
+      "name": "Texas Instruments Incorporated",
+      "report_date": "2026-10-21",
+      "report_time": "미상",
+      "market_cap": 255252726000,
+      "eps": "$2.62",
+      "eps_forecast": "$2.40",
+      "surprise_pct": 9.17,
+      "reaction": {
+        "D-1": 0,
+        "D0": 2.47,
+        "D+1": 0.62,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
       "symbol": "TMO",
       "name": "Thermo Fisher Scientific Inc",
       "report_date": "2026-10-21",
       "report_time": "미상",
-      "market_cap": 256612008000,
+      "market_cap": 250148831000,
       "eps": "$6.68",
       "eps_forecast": "$6.40",
       "surprise_pct": 4.37,
@@ -213,7 +213,7 @@
       "name": "International Business Machines Corporation",
       "report_date": "2026-10-21",
       "report_time": "미상",
-      "market_cap": 236909117000,
+      "market_cap": 237521502000,
       "eps": "$2.95",
       "eps_forecast": "$2.88",
       "surprise_pct": 2.43,
@@ -230,7 +230,7 @@
       "name": "Abbott Laboratories",
       "report_date": "2026-10-21",
       "report_time": "미상",
-      "market_cap": 173920829000,
+      "market_cap": 177381589000,
       "eps": "$1.42",
       "eps_forecast": "$1.43",
       "surprise_pct": -0.7,
@@ -243,14 +243,31 @@
       }
     },
     {
+      "symbol": "NEE",
+      "name": "NextEra Energy, Inc.",
+      "report_date": "2026-10-21",
+      "report_time": "미상",
+      "market_cap": 171769364000,
+      "eps": "$1.24",
+      "eps_forecast": "$1.20",
+      "surprise_pct": 3.33,
+      "reaction": {
+        "D-1": 0,
+        "D0": -0.74,
+        "D+1": 3.85,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
       "symbol": "UNP",
       "name": "Union Pacific Corporation",
       "report_date": "2026-10-22",
-      "report_time": "장전",
+      "report_time": "미상",
       "market_cap": 171016520000,
-      "eps": "$3.08",
+      "eps": "$3.53",
       "eps_forecast": "$3.47",
-      "surprise_pct": null,
+      "surprise_pct": 1.73,
       "reaction": {
         "D-1": 0,
         "D0": 3.55,
@@ -260,28 +277,11 @@
       }
     },
     {
-      "symbol": "SCCO",
-      "name": "Southern Copper Corporation",
-      "report_date": "2026-10-21",
-      "report_time": "미상",
-      "market_cap": 165256086000,
-      "eps": "$2.15",
-      "eps_forecast": "$2.04",
-      "surprise_pct": 5.39,
-      "reaction": {
-        "D-1": 0,
-        "D0": -2.11,
-        "D+1": -9.27,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
       "symbol": "DHR",
       "name": "Danaher Corporation",
       "report_date": "2026-10-21",
       "report_time": "미상",
-      "market_cap": 164400316000,
+      "market_cap": 161636205000,
       "eps": "$2.11",
       "eps_forecast": "$1.92",
       "surprise_pct": 9.9,
@@ -294,18 +294,35 @@
       }
     },
     {
-      "symbol": "NEE",
-      "name": "NextEra Energy, Inc.",
+      "symbol": "SCCO",
+      "name": "Southern Copper Corporation",
       "report_date": "2026-10-21",
       "report_time": "미상",
-      "market_cap": 163290382000,
-      "eps": "$1.24",
-      "eps_forecast": "$1.20",
-      "surprise_pct": 3.33,
+      "market_cap": 155005043000,
+      "eps": "$2.15",
+      "eps_forecast": "$2.04",
+      "surprise_pct": 5.39,
       "reaction": {
         "D-1": 0,
-        "D0": -0.74,
-        "D+1": 3.85,
+        "D0": -2.11,
+        "D+1": -9.27,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "T",
+      "name": "AT&T Inc.",
+      "report_date": "2026-10-21",
+      "report_time": "미상",
+      "market_cap": 153187402000,
+      "eps": "$0.65",
+      "eps_forecast": "$0.61",
+      "surprise_pct": 6.56,
+      "reaction": {
+        "D-1": 0,
+        "D0": -6.45,
+        "D+1": -2.9,
         "D+2": null,
         "D+3": null
       }
@@ -328,31 +345,14 @@
       }
     },
     {
-      "symbol": "T",
-      "name": "AT&T Inc.",
-      "report_date": "2026-10-21",
-      "report_time": "미상",
-      "market_cap": 150135767000,
-      "eps": "$0.65",
-      "eps_forecast": "$0.61",
-      "surprise_pct": 6.56,
-      "reaction": {
-        "D-1": 0,
-        "D0": -6.45,
-        "D+1": -2.9,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
       "symbol": "WDC",
       "name": "Western Digital Corporation",
       "report_date": "2026-10-22",
-      "report_time": "장후",
+      "report_time": "미상",
       "market_cap": 141399212000,
-      "eps": "$1.64",
+      "eps": "$4.43",
       "eps_forecast": "$3.99",
-      "surprise_pct": null,
+      "surprise_pct": 11.03,
       "reaction": {
         "D-1": 0,
         "D0": -6.43,
@@ -382,11 +382,11 @@
       "symbol": "LMT",
       "name": "Lockheed Martin Corporation",
       "report_date": "2026-10-22",
-      "report_time": "장전",
+      "report_time": "미상",
       "market_cap": 127283405000,
-      "eps": "$6.95",
+      "eps": "$7.97",
       "eps_forecast": "$7.49",
-      "surprise_pct": null,
+      "surprise_pct": 6.41,
       "reaction": {
         "D-1": 0,
         "D0": 6.96,
@@ -416,11 +416,11 @@
       "symbol": "VLO",
       "name": "Valero Energy Corporation",
       "report_date": "2026-10-22",
-      "report_time": "장전",
+      "report_time": "미상",
       "market_cap": 125752320000,
-      "eps": "$3.66",
+      "eps": "$23.90",
       "eps_forecast": "$21.28",
-      "surprise_pct": null,
+      "surprise_pct": 12.31,
       "reaction": {
         "D-1": 0,
         "D0": -2.4,
@@ -433,11 +433,11 @@
       "symbol": "NEM",
       "name": "Newmont Corporation",
       "report_date": "2026-10-22",
-      "report_time": "장후",
+      "report_time": "미상",
       "market_cap": 123471659000,
-      "eps": "$1.71",
+      "eps": "$2.20",
       "eps_forecast": "$1.94",
-      "surprise_pct": null,
+      "surprise_pct": 13.4,
       "reaction": {
         "D-1": 0,
         "D0": -2.62,
@@ -451,7 +451,7 @@
       "name": "HDFC Bank Limited",
       "report_date": "2026-10-17",
       "report_time": "미상",
-      "market_cap": 116322550000,
+      "market_cap": 115142394000,
       "eps": "$0.49",
       "eps_forecast": "$0.40",
       "surprise_pct": 22.5,
@@ -464,28 +464,11 @@
       }
     },
     {
-      "symbol": "SPOT",
-      "name": "Spotify Technology S.A.",
-      "report_date": "2026-10-22",
-      "report_time": "장전",
-      "market_cap": 108132057000,
-      "eps": "$3.83",
-      "eps_forecast": "$3.10",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": 11.1,
-        "D+1": null,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
       "symbol": "CME",
       "name": "CME Group Inc.",
       "report_date": "2026-10-21",
       "report_time": "미상",
-      "market_cap": 106359947000,
+      "market_cap": 110024065000,
       "eps": "$3.02",
       "eps_forecast": "$2.98",
       "surprise_pct": 1.34,
@@ -498,11 +481,28 @@
       }
     },
     {
+      "symbol": "SPOT",
+      "name": "Spotify Technology S.A.",
+      "report_date": "2026-10-22",
+      "report_time": "미상",
+      "market_cap": 108132057000,
+      "eps": "$2.85",
+      "eps_forecast": "$3.10",
+      "surprise_pct": -8.06,
+      "reaction": {
+        "D-1": 0,
+        "D0": 11.1,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
       "symbol": "IBN",
       "name": "ICICI Bank Limited",
       "report_date": "2026-10-17",
       "report_time": "미상",
-      "market_cap": 105754862000,
+      "market_cap": 107186889000,
       "eps": "$0.49",
       "eps_forecast": "$0.40",
       "surprise_pct": 22.5,
