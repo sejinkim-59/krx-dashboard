@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T23:26:03.388Z",
+  "updated_at": "2026-10-24T01:55:25.336Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
@@ -222,6 +222,22 @@
         "D0": 3.94,
         "D+1": 4.21,
         "D+2": 4.81,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "AXP",
+      "name": "American Express Company",
+      "report_date": "2026-10-23",
+      "report_time": "장전",
+      "market_cap": 219590492000,
+      "eps_forecast": "$4.47",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -3.68,
+        "D+1": null,
+        "D+2": null,
         "D+3": null
       }
     },
@@ -464,23 +480,6 @@
       }
     },
     {
-      "symbol": "HDB",
-      "name": "HDFC Bank Limited",
-      "report_date": "2026-10-17",
-      "report_time": "미상",
-      "market_cap": 115142394000,
-      "eps": "$0.49",
-      "eps_forecast": "$0.40",
-      "surprise_pct": 22.5,
-      "reaction": {
-        "D-1": 0,
-        "D0": -3.19,
-        "D+1": -3.27,
-        "D+2": -4.91,
-        "D+3": -5.87
-      }
-    },
-    {
       "symbol": "CME",
       "name": "CME Group Inc.",
       "report_date": "2026-10-21",
@@ -498,20 +497,20 @@
       }
     },
     {
-      "symbol": "IBN",
-      "name": "ICICI Bank Limited",
-      "report_date": "2026-10-17",
+      "symbol": "ELV",
+      "name": "Elevance Health, Inc.",
+      "report_date": "2026-10-21",
       "report_time": "미상",
-      "market_cap": 107186889000,
-      "eps": "$0.49",
-      "eps_forecast": "$0.40",
-      "surprise_pct": 22.5,
+      "market_cap": 96205365000,
+      "eps": "$6.99",
+      "eps_forecast": "$4.66",
+      "surprise_pct": 50,
       "reaction": {
         "D-1": 0,
-        "D0": -1.7,
-        "D+1": -0.37,
-        "D+2": -1.5,
-        "D+3": -0.17
+        "D0": -1.37,
+        "D+1": 1.16,
+        "D+2": -0.05,
+        "D+3": null
       }
     }
   ]
