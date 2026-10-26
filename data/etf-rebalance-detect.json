@@ -1,8 +1,112 @@
 {
-  "updated_at": "2026-10-26T18:58:31.966Z",
+  "updated_at": "2026-10-26T23:14:15.697Z",
   "note": "국내 섹터·테마 ETF 상위 25종목의 전일 스냅샷 대비 구성종목 변화 감지. 신규 편입·편출 종목과 비중 1.5%p 이상 변동 종목을 표시합니다. (첫 실행 시에는 비교 대상이 없어 결과가 비어있습니다)",
   "universe_size": 25,
   "has_baseline": true,
-  "changed_etf_count": 0,
-  "items": []
+  "changed_etf_count": 2,
+  "items": [
+    {
+      "code": "494310",
+      "name": "KODEX 반도체레버리지",
+      "trd_dt": "2026-10-26",
+      "prev_trd_dt": "2026-10-23",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "name": "KODEX 반도체",
+          "prev_weight": 27.96,
+          "curr_weight": 25.97,
+          "delta": -1.99
+        }
+      ]
+    },
+    {
+      "code": "0061Z0",
+      "name": "RISE 단기특수은행채액티브",
+      "trd_dt": "2026-10-26",
+      "prev_trd_dt": "2026-10-23",
+      "added": [
+        {
+          "name": "기업은행(변)2605이184A-22",
+          "weight": null
+        },
+        {
+          "name": "기업은행(신)2602할1A-05",
+          "weight": null
+        },
+        {
+          "name": "산금23신이0400-0119-2",
+          "weight": null
+        },
+        {
+          "name": "산금26신할0003-0901-1",
+          "weight": null
+        },
+        {
+          "name": "삼성증권 20251030-364-39",
+          "weight": null
+        },
+        {
+          "name": "아이엠증권 20261023-3-34(단)",
+          "weight": null
+        },
+        {
+          "name": "우리투자증권 20260728-90-4(단)",
+          "weight": null
+        }
+      ],
+      "removed": [
+        {
+          "name": "대신증권 20251124-333-112",
+          "weight": null
+        },
+        {
+          "name": "대신증권 20251124-333-113",
+          "weight": null
+        },
+        {
+          "name": "신한카드 20260923-30-50(단)",
+          "weight": null
+        },
+        {
+          "name": "아이엠증권 20261022-1-33(단)",
+          "weight": null
+        },
+        {
+          "name": "우리카드 20260922-31-106",
+          "weight": null
+        },
+        {
+          "name": "우리카드 20260922-31-107",
+          "weight": null
+        },
+        {
+          "name": "우리투자증권 20260907-46-6(단)",
+          "weight": null
+        },
+        {
+          "name": "한국도로공사 20261013-93-16",
+          "weight": null
+        },
+        {
+          "name": "한국도로공사 20261013-93-17",
+          "weight": null
+        },
+        {
+          "name": "한국도로공사 20261013-93-18",
+          "weight": null
+        },
+        {
+          "name": "한국도로공사 20261013-93-19",
+          "weight": null
+        },
+        {
+          "name": "한국도로공사 20261013-93-20",
+          "weight": null
+        }
+      ],
+      "changed": []
+    }
+  ]
 }
