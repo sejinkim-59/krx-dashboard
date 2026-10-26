@@ -1,29 +1,29 @@
 {
-  "date": "20261026",
-  "generated_at": "2026-10-26T12:33:11.260Z",
+  "date": "20261027",
+  "generated_at": "2026-10-26T19:01:25.897Z",
   "engineVersion": "v0.2",
   "objective": "NEW INFORMATION + CHANGE + CATALYST + CONFIRMATION — 오늘 새롭게 연구할 가치가 생긴 종목을 조기 발견",
   "methodologyNote": "시장/섹터 상대강도는 공식 지수가 아니라 가격 데이터 보유 종목의 동일가중 평균(proxy)입니다. Earnings/Revision Factor는 컨센서스 Provider 미연결로 항상 제외(MISSING_DATA)됩니다. 시총 순위는 KIS 시세를 조회한 종목(관심종목 + Discovery 추가조회) 안에서의 순위입니다. 수급 전환의 발생 시점은 \"최근 3거래일 vs 직전 5거래일\" 창 비교라 일 단위 날짜가 아닌 창 단위입니다. 종목 단위로 연결되지 않은 Catalyst: Investor Relations 일정, Large Contract(단일판매·공급계약), Index Rebalancing (정기변경 월 주기만 수집, 종목별 편입·편출 예고 없음), Major Customer Event, Policy Event, Share Cancellation(소각).",
   "marketRegime": {
-    "state": "Neutral",
+    "state": "Risk-on",
     "evidence": [
-      "VIX -1.9%",
-      "S&P500 -0.52%",
-      "NASDAQ -0.21%",
-      "USD/KRW -0.14%"
+      "VIX -5.45%",
+      "S&P500 +0.69%",
+      "NASDAQ +0.89%",
+      "USD/KRW -0.01%"
     ],
     "strategyPreference": [
       "DISCOVERY",
-      "EVENT_DRIVEN"
+      "MARKET_LEADER"
     ],
     "avoid": []
   },
   "screening": {
-    "universeCount": 1071,
+    "universeCount": 1065,
     "technicalCoverageCount": 110,
-    "discoveryPreScreenCount": 393,
+    "discoveryPreScreenCount": 392,
     "discoveryEnrichedCount": 60,
-    "signalCount": 110,
+    "signalCount": 109,
     "passedRiskCount": 14,
     "rejectedCount": 0
   },
@@ -311,7 +311,7 @@
             "total": 0,
             "items": []
           },
-          "marketCapRank": 90,
+          "marketCapRank": 91,
           "flowEvents": [
             "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -3.811%)",
             "EVENT: 외국인 매도→매수 전환 (변화폭 시총 대비 1.818%)"
@@ -902,7 +902,7 @@
         "total": 0,
         "items": []
       },
-      "marketCapRank": 90,
+      "marketCapRank": 91,
       "flowEvents": [
         "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -3.811%)",
         "EVENT: 외국인 매도→매수 전환 (변화폭 시총 대비 1.818%)"
@@ -1366,7 +1366,7 @@
       ],
       "newSignalCount": 3,
       "tier": 2,
-      "marketCapRank": 90,
+      "marketCapRank": 91,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-10-16, 6거래일 전)",
@@ -1412,7 +1412,7 @@
       ],
       "newSignalCount": 2,
       "tier": 2,
-      "marketCapRank": 77,
+      "marketCapRank": 78,
       "isLargeCap": false,
       "whatChanged": [
         "거래량 20일 평균 대비 3.7배로 급증 (2026-10-26, 0거래일 전)",
@@ -1457,7 +1457,7 @@
       ],
       "newSignalCount": 2,
       "tier": 2,
-      "marketCapRank": 87,
+      "marketCapRank": 88,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-10-26, 0거래일 전)",
@@ -1502,7 +1502,7 @@
       ],
       "newSignalCount": 3,
       "tier": 2,
-      "marketCapRank": 104,
+      "marketCapRank": 105,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-10-26, 0거래일 전)",
@@ -1547,7 +1547,7 @@
       ],
       "newSignalCount": 3,
       "tier": 2,
-      "marketCapRank": 100,
+      "marketCapRank": 101,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-10-16, 6거래일 전)",
@@ -1593,7 +1593,7 @@
       ],
       "newSignalCount": 2,
       "tier": 2,
-      "marketCapRank": 73,
+      "marketCapRank": 74,
       "isLargeCap": false,
       "whatChanged": [
         "거래량 20일 평균 대비 2.5배로 급증 (2026-10-20, 4거래일 전)",
@@ -1725,7 +1725,7 @@
       ],
       "newSignalCount": 0,
       "tier": 4,
-      "marketCapRank": 84,
+      "marketCapRank": 85,
       "isLargeCap": false,
       "whatChanged": [],
       "pricedInVerdict": "partially_priced_in",
@@ -1765,7 +1765,7 @@
       ],
       "newSignalCount": 0,
       "tier": 4,
-      "marketCapRank": 103,
+      "marketCapRank": 104,
       "isLargeCap": false,
       "whatChanged": [],
       "pricedInVerdict": "partially_priced_in",
@@ -1805,7 +1805,7 @@
       ],
       "newSignalCount": 0,
       "tier": 4,
-      "marketCapRank": 94,
+      "marketCapRank": 95,
       "isLargeCap": false,
       "whatChanged": [],
       "pricedInVerdict": "partially_priced_in",
@@ -1846,7 +1846,7 @@
       ],
       "newSignalCount": 3,
       "tier": 1,
-      "marketCapRank": 74,
+      "marketCapRank": 75,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-10-26, 0거래일 전)",
@@ -1894,7 +1894,7 @@
       ],
       "newSignalCount": 3,
       "tier": 1,
-      "marketCapRank": 86,
+      "marketCapRank": 87,
       "isLargeCap": false,
       "whatChanged": [
         "MA20이 MA60을 상향돌파 (2026-10-16, 6거래일 전)",
@@ -1941,7 +1941,7 @@
       ],
       "newSignalCount": 3,
       "tier": 1,
-      "marketCapRank": 102,
+      "marketCapRank": 103,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-10-19, 5거래일 전)",
@@ -1972,51 +1972,6 @@
       ]
     },
     {
-      "symbol": "014100",
-      "name": "메디앙스",
-      "sector": "유통",
-      "bucket": null,
-      "strategy": "Trend Confirmation",
-      "score": 28.2,
-      "discoveryScore": 24.2,
-      "dataCoverage": 77,
-      "confidence": "Normal",
-      "independentConfirmations": 2,
-      "confirmationSources": [
-        "price",
-        "event"
-      ],
-      "newSignalCount": 2,
-      "tier": 1,
-      "marketCapRank": 109,
-      "isLargeCap": false,
-      "whatChanged": [
-        "종가가 MA20 위로 회복 (2026-10-12, 10거래일 전)",
-        "거래량 20일 평균 대비 2.8배로 급증 (2026-10-12, 10거래일 전)"
-      ],
-      "pricedInVerdict": "not_yet_priced",
-      "gateFails": [
-        "20일 평균 거래대금 50억 미만"
-      ],
-      "risk": {
-        "decision": "PASS",
-        "reason": "특이 리스크 없음"
-      },
-      "topEvidence": "종가가 MA20 위로 회복 (2026-10-12, 10거래일 전)",
-      "scoreBreakdown": [
-        "Novelty 3.3/25",
-        "Catalyst 2.4/12",
-        "Technical 6/15",
-        "Flow 0/15",
-        "Relative Strength 10/10"
-      ],
-      "signalTypes": [
-        "Discovery 후보",
-        "Relative Strength",
-        "Catalyst"
-      ]
-    },
-    {
       "symbol": "051380",
       "name": "피씨디렉트",
       "sector": "유통",
@@ -2033,7 +1988,7 @@
       ],
       "newSignalCount": 2,
       "tier": 1,
-      "marketCapRank": 108,
+      "marketCapRank": 109,
       "isLargeCap": false,
       "whatChanged": [
         "거래량 20일 평균 대비 8.5배로 급증 (2026-10-26, 0거래일 전)",
@@ -2105,6 +2060,52 @@
         "Discovery 후보",
         "Novelty",
         "Technical",
+        "Relative Strength",
+        "Catalyst"
+      ]
+    },
+    {
+      "symbol": "037950",
+      "name": "엘컴텍",
+      "sector": "전기·전자",
+      "bucket": null,
+      "strategy": "Confluence · Trend Confirmation",
+      "score": 30.1,
+      "discoveryScore": 16.1,
+      "dataCoverage": 77,
+      "confidence": "Normal",
+      "independentConfirmations": 3,
+      "confirmationSources": [
+        "price",
+        "event"
+      ],
+      "newSignalCount": 2,
+      "tier": 1,
+      "marketCapRank": 107,
+      "isLargeCap": false,
+      "whatChanged": [
+        "종가가 MA20 위로 회복 (2026-10-14, 8거래일 전)",
+        "거래량 20일 평균 대비 2.2배로 급증 (2026-10-21, 3거래일 전)"
+      ],
+      "pricedInVerdict": "likely_priced_in",
+      "gateFails": [
+        "20일 평균 거래대금 50억 미만"
+      ],
+      "risk": {
+        "decision": "WATCH",
+        "reason": "투자주의 지정 (2026-10-19)"
+      },
+      "topEvidence": "종가가 MA20 위로 회복 (2026-10-14, 8거래일 전)",
+      "scoreBreakdown": [
+        "Novelty 4.8/25",
+        "Catalyst 2.4/12",
+        "Technical 6/15",
+        "Flow 0/15",
+        "Relative Strength 10/10"
+      ],
+      "signalTypes": [
+        "Discovery 후보",
+        "Novelty",
         "Relative Strength",
         "Catalyst"
       ]

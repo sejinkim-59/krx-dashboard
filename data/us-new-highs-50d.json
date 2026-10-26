@@ -1,63 +1,63 @@
 {
-  "updated_at": "2026-10-26T12:26:45.665Z",
+  "updated_at": "2026-10-26T18:55:20.938Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
   "count": 9,
   "items": [
     {
+      "symbol": "TSLA",
+      "close": 394.05,
+      "day_change_pct": 5.86,
+      "pct_above_prior_window": 1.96
+    },
+    {
       "symbol": "ZS",
-      "close": 255.15,
-      "day_change_pct": 7.31,
-      "pct_above_prior_window": 7.31
+      "close": 260.04,
+      "day_change_pct": 1.92,
+      "pct_above_prior_window": 1.92
     },
     {
-      "symbol": "CVX",
-      "close": 233.21,
-      "day_change_pct": 2.88,
-      "pct_above_prior_window": 2.84
-    },
-    {
-      "symbol": "ISRG",
-      "close": 452.29,
-      "day_change_pct": 1.9,
-      "pct_above_prior_window": 1.9
-    },
-    {
-      "symbol": "TEAM",
-      "close": 227.61,
-      "day_change_pct": 1.99,
-      "pct_above_prior_window": 0.93
-    },
-    {
-      "symbol": "IBM",
-      "close": 253.56,
-      "day_change_pct": 0.58,
-      "pct_above_prior_window": 0.58
-    },
-    {
-      "symbol": "ROP",
-      "close": 438.14,
-      "day_change_pct": 0.44,
-      "pct_above_prior_window": 0.44
-    },
-    {
-      "symbol": "CDW",
-      "close": 165.11,
-      "day_change_pct": 0.3,
-      "pct_above_prior_window": 0.3
+      "symbol": "NXPI",
+      "close": 248.2,
+      "day_change_pct": 5.65,
+      "pct_above_prior_window": 1.56
     },
     {
       "symbol": "CTAS",
-      "close": 224.1,
-      "day_change_pct": 0.03,
-      "pct_above_prior_window": 0.03
+      "close": 225.76,
+      "day_change_pct": 0.74,
+      "pct_above_prior_window": 0.74
     },
     {
-      "symbol": "WDAY",
-      "close": 209.99,
-      "day_change_pct": 0,
-      "pct_above_prior_window": 0
+      "symbol": "IDXX",
+      "close": 569.29,
+      "day_change_pct": 1.59,
+      "pct_above_prior_window": 0.45
+    },
+    {
+      "symbol": "GILD",
+      "close": 157.67,
+      "day_change_pct": 1.04,
+      "pct_above_prior_window": 0.19
+    },
+    {
+      "symbol": "TXN",
+      "close": 297.73,
+      "day_change_pct": 4.58,
+      "pct_above_prior_window": 0.17
+    },
+    {
+      "symbol": "IBM",
+      "close": 253.65,
+      "day_change_pct": 0.04,
+      "pct_above_prior_window": 0.04
+    },
+    {
+      "symbol": "ROP",
+      "close": 438.3,
+      "day_change_pct": 0.04,
+      "pct_above_prior_window": 0.04
     }
   ]
 }

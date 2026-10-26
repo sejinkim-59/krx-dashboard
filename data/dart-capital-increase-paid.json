@@ -1,10 +1,30 @@
 {
-  "updated_at": "2026-10-26T12:22:43.739Z",
+  "updated_at": "2026-10-26T18:49:38.467Z",
   "range": {
-    "from": "20261012",
-    "to": "20261026"
+    "from": "20261013",
+    "to": "20261027"
   },
   "items": [
+    {
+      "corp_name": "그린플러스",
+      "stock_code": "186230",
+      "rcept_no": "20261026000393",
+      "rcept_dt": "20261027",
+      "method": "제3자배정증자",
+      "new_shares": "3,034,900",
+      "record_date": null,
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261026000393"
+    },
+    {
+      "corp_name": "썬테크",
+      "stock_code": "217320",
+      "rcept_no": "20261026000385",
+      "rcept_dt": "20261027",
+      "method": "제3자배정증자",
+      "new_shares": "113,074",
+      "record_date": null,
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261026000385"
+    },
     {
       "corp_name": "에이전트AI",
       "stock_code": "060900",
@@ -454,26 +474,6 @@
       "new_shares": "145,287,528",
       "record_date": null,
       "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261012000514"
-    },
-    {
-      "corp_name": "목포신항만운영",
-      "stock_code": "",
-      "rcept_no": "20261012000278",
-      "rcept_dt": "20261012",
-      "method": null,
-      "new_shares": null,
-      "record_date": null,
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261012000278"
-    },
-    {
-      "corp_name": "경남제약",
-      "stock_code": "053950",
-      "rcept_no": "20261012900169",
-      "rcept_dt": "20261012",
-      "method": null,
-      "new_shares": null,
-      "record_date": null,
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261012900169"
     }
   ]
 }
