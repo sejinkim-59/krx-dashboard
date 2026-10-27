@@ -1,26 +1,9 @@
 {
-  "updated_at": "2026-10-26T23:10:58.144Z",
+  "updated_at": "2026-10-27T02:27:22.394Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
   "items": [
-    {
-      "symbol": "SPCX",
-      "name": "Space Exploration Technologies Corp.",
-      "report_date": "2026-10-20",
-      "report_time": "미상",
-      "market_cap": 2003071140000,
-      "eps": "$0.35",
-      "eps_forecast": "$0.10",
-      "surprise_pct": 250,
-      "reaction": {
-        "D-1": 0,
-        "D0": -0.11,
-        "D+1": 7.67,
-        "D+2": -2.17,
-        "D+3": -0.32
-      }
-    },
     {
       "symbol": "META",
       "name": "Meta Platforms, Inc.",
@@ -90,23 +73,6 @@
       }
     },
     {
-      "symbol": "GE",
-      "name": "GE Aerospace",
-      "report_date": "2026-10-20",
-      "report_time": "미상",
-      "market_cap": 295166640000,
-      "eps": "$2.25",
-      "eps_forecast": "$2.02",
-      "surprise_pct": 11.39,
-      "reaction": {
-        "D-1": 0,
-        "D0": -3.67,
-        "D+1": -4.95,
-        "D+2": -5.7,
-        "D+3": -8.24
-      }
-    },
-    {
       "symbol": "SAP",
       "name": "SAP SE",
       "report_date": "2026-10-21",
@@ -141,23 +107,6 @@
       }
     },
     {
-      "symbol": "NFLX",
-      "name": "Netflix, Inc.",
-      "report_date": "2026-10-20",
-      "report_time": "미상",
-      "market_cap": 270401569000,
-      "eps": "$0.87",
-      "eps_forecast": "$0.82",
-      "surprise_pct": 6.1,
-      "reaction": {
-        "D-1": 0,
-        "D0": -1.66,
-        "D+1": -6.89,
-        "D+2": -4.01,
-        "D+3": -5.73
-      }
-    },
-    {
       "symbol": "TXN",
       "name": "Texas Instruments Incorporated",
       "report_date": "2026-10-21",
@@ -172,23 +121,6 @@
         "D+1": 0.62,
         "D+2": 2.49,
         "D+3": 7.32
-      }
-    },
-    {
-      "symbol": "RTX",
-      "name": "RTX Corporation",
-      "report_date": "2026-10-20",
-      "report_time": "미상",
-      "market_cap": 257756643000,
-      "eps": "$2.26",
-      "eps_forecast": "$1.78",
-      "surprise_pct": 26.97,
-      "reaction": {
-        "D-1": 0,
-        "D0": 0.64,
-        "D+1": -0.27,
-        "D+2": 1.35,
-        "D+3": -0.57
       }
     },
     {
@@ -238,6 +170,22 @@
         "D-1": 0,
         "D0": -3.68,
         "D+1": -3.11,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "VZ",
+      "name": "Verizon Communications Inc.",
+      "report_date": "2026-10-26",
+      "report_time": "장전",
+      "market_cap": 185552257000,
+      "eps_forecast": "$1.27",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -3.49,
+        "D+1": null,
         "D+2": null,
         "D+3": null
       }
@@ -294,6 +242,22 @@
       }
     },
     {
+      "symbol": "WELL",
+      "name": "Welltower Inc.",
+      "report_date": "2026-10-26",
+      "report_time": "장후",
+      "market_cap": 171047191000,
+      "eps_forecast": "$1.64",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.39,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
       "symbol": "DHR",
       "name": "Danaher Corporation",
       "report_date": "2026-10-21",
@@ -308,23 +272,6 @@
         "D+1": 2.46,
         "D+2": 2.79,
         "D+3": 3.89
-      }
-    },
-    {
-      "symbol": "ISRG",
-      "name": "Intuitive Surgical, Inc.",
-      "report_date": "2026-10-20",
-      "report_time": "미상",
-      "market_cap": 156783493000,
-      "eps": "$2.53",
-      "eps_forecast": "$2.13",
-      "surprise_pct": 18.78,
-      "reaction": {
-        "D-1": 0,
-        "D0": 1.11,
-        "D+1": -1.17,
-        "D+2": 2.46,
-        "D+3": 4.41
       }
     },
     {
@@ -379,23 +326,6 @@
       }
     },
     {
-      "symbol": "CB",
-      "name": "Chubb Limited",
-      "report_date": "2026-10-20",
-      "report_time": "미상",
-      "market_cap": 137001386000,
-      "eps": "$7.66",
-      "eps_forecast": "$6.53",
-      "surprise_pct": 17.3,
-      "reaction": {
-        "D-1": 0,
-        "D0": 0.42,
-        "D+1": -0.37,
-        "D+2": 2.16,
-        "D+3": -0.33
-      }
-    },
-    {
       "symbol": "WDC",
       "name": "Western Digital Corporation",
       "report_date": "2026-10-22",
@@ -410,23 +340,6 @@
         "D+1": -9.2,
         "D+2": -5.91,
         "D+3": null
-      }
-    },
-    {
-      "symbol": "COF",
-      "name": "Capital One Financial Corporation",
-      "report_date": "2026-10-20",
-      "report_time": "미상",
-      "market_cap": 123519033000,
-      "eps": "$6.69",
-      "eps_forecast": "$5.45",
-      "surprise_pct": 22.75,
-      "reaction": {
-        "D-1": 0,
-        "D0": 0.87,
-        "D+1": 3.42,
-        "D+2": 1.8,
-        "D+3": 0.76
       }
     },
     {
@@ -512,6 +425,90 @@
         "D+1": 1.71,
         "D+2": null,
         "D+3": null
+      }
+    },
+    {
+      "symbol": "ELV",
+      "name": "Elevance Health, Inc.",
+      "report_date": "2026-10-21",
+      "report_time": "미상",
+      "market_cap": 95053791000,
+      "eps": "$6.99",
+      "eps_forecast": "$4.66",
+      "surprise_pct": 50,
+      "reaction": {
+        "D-1": 0,
+        "D0": -1.37,
+        "D+1": 1.16,
+        "D+2": -0.05,
+        "D+3": -2.01
+      }
+    },
+    {
+      "symbol": "CSX",
+      "name": "CSX Corporation",
+      "report_date": "2026-10-21",
+      "report_time": "미상",
+      "market_cap": 93626196000,
+      "eps": "$0.57",
+      "eps_forecast": "$0.52",
+      "surprise_pct": 9.62,
+      "reaction": {
+        "D-1": 0,
+        "D0": 0.67,
+        "D+1": 7.47,
+        "D+2": 5.64,
+        "D+3": 6.72
+      }
+    },
+    {
+      "symbol": "BX",
+      "name": "Blackstone Inc.",
+      "report_date": "2026-10-22",
+      "report_time": "미상",
+      "market_cap": 88551244000,
+      "eps": "$1.32",
+      "eps_forecast": "$1.26",
+      "surprise_pct": 4.76,
+      "reaction": {
+        "D-1": 0,
+        "D0": 8.38,
+        "D+1": 7.67,
+        "D+2": 8.66,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "CDNS",
+      "name": "Cadence Design Systems, Inc.",
+      "report_date": "2026-10-26",
+      "report_time": "장후",
+      "market_cap": 87159128000,
+      "eps_forecast": "$1.61",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.79,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "MCO",
+      "name": "Moody's Corporation",
+      "report_date": "2026-10-21",
+      "report_time": "미상",
+      "market_cap": 83346776000,
+      "eps": "$4.14",
+      "eps_forecast": "$4.25",
+      "surprise_pct": -2.59,
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.2,
+        "D+1": 3.3,
+        "D+2": 1.7,
+        "D+3": 1.91
       }
     }
   ]
