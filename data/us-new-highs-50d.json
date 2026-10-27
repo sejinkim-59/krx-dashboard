@@ -1,57 +1,27 @@
 {
-  "updated_at": "2026-10-27T08:20:40.562Z",
+  "updated_at": "2026-10-27T14:54:16.391Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
-  "count": 8,
+  "count": 3,
   "items": [
     {
-      "symbol": "ZS",
-      "close": 260.45,
-      "day_change_pct": 2.08,
-      "pct_above_prior_window": 2.08
-    },
-    {
       "symbol": "TSLA",
-      "close": 391.62,
-      "day_change_pct": 5.21,
-      "pct_above_prior_window": 1.33
-    },
-    {
-      "symbol": "GILD",
-      "close": 158.69,
-      "day_change_pct": 1.7,
-      "pct_above_prior_window": 0.84
-    },
-    {
-      "symbol": "CTAS",
-      "close": 225.93,
-      "day_change_pct": 0.82,
-      "pct_above_prior_window": 0.82
-    },
-    {
-      "symbol": "ROP",
-      "close": 441.65,
-      "day_change_pct": 0.8,
-      "pct_above_prior_window": 0.8
-    },
-    {
-      "symbol": "IDXX",
-      "close": 570.21,
-      "day_change_pct": 1.75,
-      "pct_above_prior_window": 0.61
-    },
-    {
-      "symbol": "NXPI",
-      "close": 245.83,
-      "day_change_pct": 4.64,
-      "pct_above_prior_window": 0.59
+      "close": 402.09,
+      "day_change_pct": 2.67,
+      "pct_above_prior_window": 2.67
     },
     {
       "symbol": "TXN",
-      "close": 298.12,
-      "day_change_pct": 4.72,
-      "pct_above_prior_window": 0.3
+      "close": 302.91,
+      "day_change_pct": 1.61,
+      "pct_above_prior_window": 1.61
+    },
+    {
+      "symbol": "NXPI",
+      "close": 248.1,
+      "day_change_pct": 0.92,
+      "pct_above_prior_window": 0.92
     }
   ]
 }
