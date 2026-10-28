@@ -1,33 +1,39 @@
 {
-  "updated_at": "2026-10-28T17:08:20.356Z",
+  "updated_at": "2026-10-28T21:44:47.742Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
-  "count": 4,
+  "count": 5,
   "items": [
     {
       "symbol": "GEHC",
-      "close": 76.095,
-      "day_change_pct": 7.01,
-      "pct_above_prior_window": 1.7
+      "close": 75.82,
+      "day_change_pct": 6.62,
+      "pct_above_prior_window": 1.34
     },
     {
       "symbol": "AMGN",
-      "close": 449.905,
-      "day_change_pct": 0.44,
-      "pct_above_prior_window": 0.44
+      "close": 451.83,
+      "day_change_pct": 0.87,
+      "pct_above_prior_window": 0.87
     },
     {
       "symbol": "ADI",
-      "close": 427.03,
-      "day_change_pct": 0.39,
-      "pct_above_prior_window": 0.39
+      "close": 428.27,
+      "day_change_pct": 0.69,
+      "pct_above_prior_window": 0.69
+    },
+    {
+      "symbol": "TXN",
+      "close": 309.83,
+      "day_change_pct": 0.3,
+      "pct_above_prior_window": 0.3
     },
     {
       "symbol": "GILD",
-      "close": 159.42,
-      "day_change_pct": 0.21,
-      "pct_above_prior_window": 0.21
+      "close": 159.2,
+      "day_change_pct": 0.08,
+      "pct_above_prior_window": 0.08
     }
   ]
 }
