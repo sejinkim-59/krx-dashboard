@@ -1,12 +1,54 @@
 {
-  "updated_at": "2026-10-27T23:41:55.573Z",
+  "updated_at": "2026-10-28T04:26:55.020Z",
   "note": "최근 21일 영업(잠정)실적 공정공시 기준. 반응(%)은 공시일 이후 첫 거래일(D0) 기준 D-1 종가 대비 누적 수익률.",
   "range": {
     "from": "20261007",
     "to": "20261028"
   },
-  "count": 80,
+  "count": 86,
   "items": [
+    {
+      "corp_name": "HD현대중공업",
+      "stock_code": "329180",
+      "rcept_dt": "20261028",
+      "reaction": null
+    },
+    {
+      "corp_name": "HD현대마린엔진",
+      "stock_code": "071970",
+      "rcept_dt": "20261028",
+      "reaction": null
+    },
+    {
+      "corp_name": "삼성전기",
+      "stock_code": "009150",
+      "rcept_dt": "20261028",
+      "reaction": null
+    },
+    {
+      "corp_name": "제이씨케미칼",
+      "stock_code": "137950",
+      "rcept_dt": "20261028",
+      "reaction": null
+    },
+    {
+      "corp_name": "HK이노엔",
+      "stock_code": "195940",
+      "rcept_dt": "20261028",
+      "reaction": null
+    },
+    {
+      "corp_name": "NI스틸",
+      "stock_code": "008260",
+      "rcept_dt": "20261028",
+      "reaction": null
+    },
+    {
+      "corp_name": "안랩",
+      "stock_code": "053800",
+      "rcept_dt": "20261028",
+      "reaction": null
+    },
     {
       "corp_name": "SK하이닉스",
       "stock_code": "000660",
@@ -668,20 +710,6 @@
         "D+2": -1.89,
         "D+3": -4.91,
         "D+4": -6.42
-      }
-    },
-    {
-      "corp_name": "HD현대중공업",
-      "stock_code": "329180",
-      "rcept_dt": "20261019",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261019800435",
-      "reaction": {
-        "D-1": 0,
-        "D0": -1.71,
-        "D+1": -9.53,
-        "D+2": -8.96,
-        "D+3": -12.09,
-        "D+4": -13.23
       }
     },
     {
