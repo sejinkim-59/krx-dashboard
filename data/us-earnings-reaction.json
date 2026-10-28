@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28T10:49:24.384Z",
+  "updated_at": "2026-10-28T17:08:32.914Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
@@ -8,15 +8,15 @@
       "symbol": "V",
       "name": "Visa Inc.",
       "report_date": "2026-10-27",
-      "report_time": "장후",
-      "market_cap": 722135020000,
-      "eps": "$2.98",
+      "report_time": "미상",
+      "market_cap": 718025460000,
+      "eps": "$3.48",
       "eps_forecast": "$3.43",
-      "surprise_pct": null,
+      "surprise_pct": 1.46,
       "reaction": {
         "D-1": 0,
         "D0": -0.57,
-        "D+1": null,
+        "D+1": -0.58,
         "D+2": null,
         "D+3": null
       }
@@ -26,14 +26,14 @@
       "name": "Coca-Cola Company (The)",
       "report_date": "2026-10-27",
       "report_time": "미상",
-      "market_cap": 398846329000,
+      "market_cap": 392306426000,
       "eps": "$0.91",
       "eps_forecast": "$0.87",
       "surprise_pct": 4.6,
       "reaction": {
         "D-1": 0,
         "D0": -1.64,
-        "D+1": null,
+        "D+1": -1.05,
         "D+2": null,
         "D+3": null
       }
@@ -43,7 +43,7 @@
       "name": "Procter & Gamble Company (The)",
       "report_date": "2026-10-22",
       "report_time": "미상",
-      "market_cap": 370659885000,
+      "market_cap": 369060610000,
       "eps": "$2",
       "eps_forecast": "$1.89",
       "surprise_pct": 5.82,
@@ -60,14 +60,14 @@
       "name": "HSBC Holdings plc",
       "report_date": "2026-10-27",
       "report_time": "미상",
-      "market_cap": 310460088000,
+      "market_cap": 312784749000,
       "eps": "$2.10",
       "eps_forecast": "$2.13",
       "surprise_pct": -1.41,
       "reaction": {
         "D-1": 0,
         "D0": -5.7,
-        "D+1": null,
+        "D+1": -5.2,
         "D+2": null,
         "D+3": null
       }
@@ -77,14 +77,14 @@
       "name": "Novartis AG",
       "report_date": "2026-10-27",
       "report_time": "미상",
-      "market_cap": 293492818000,
+      "market_cap": 299312677000,
       "eps": "$2.46",
       "eps_forecast": "$2.25",
       "surprise_pct": 9.33,
       "reaction": {
         "D-1": 0,
         "D0": 1.98,
-        "D+1": null,
+        "D+1": 1.57,
         "D+2": null,
         "D+3": null
       }
@@ -94,7 +94,7 @@
       "name": "American Express Company",
       "report_date": "2026-10-23",
       "report_time": "미상",
-      "market_cap": 211257410000,
+      "market_cap": 209822433000,
       "eps": "$4.68",
       "eps_forecast": "$4.47",
       "surprise_pct": 4.7,
@@ -103,6 +103,23 @@
         "D0": -3.68,
         "D+1": -3.11,
         "D+2": -3.77,
+        "D+3": -2.62
+      }
+    },
+    {
+      "symbol": "KOF",
+      "name": "Coca Cola Femsa S.A.B. de C.V.",
+      "report_date": "2026-10-26",
+      "report_time": "미상",
+      "market_cap": 190974050000,
+      "eps": "$1.72",
+      "eps_forecast": "$1.89",
+      "surprise_pct": -8.99,
+      "reaction": {
+        "D-1": 0,
+        "D0": -1.87,
+        "D+1": -3.79,
+        "D+2": -2.76,
         "D+3": null
       }
     },
@@ -111,7 +128,7 @@
       "name": "Verizon Communications Inc.",
       "report_date": "2026-10-26",
       "report_time": "미상",
-      "market_cap": 179070812000,
+      "market_cap": 182519267000,
       "eps": "$1.31",
       "eps_forecast": "$1.27",
       "surprise_pct": 3.15,
@@ -119,7 +136,7 @@
         "D-1": 0,
         "D0": -3.49,
         "D+1": -1.63,
-        "D+2": null,
+        "D+2": -2.27,
         "D+3": null
       }
     },
@@ -128,7 +145,7 @@
       "name": "Union Pacific Corporation",
       "report_date": "2026-10-22",
       "report_time": "미상",
-      "market_cap": 176474538000,
+      "market_cap": 178203820000,
       "eps": "$3.53",
       "eps_forecast": "$3.47",
       "surprise_pct": 1.73,
@@ -145,7 +162,7 @@
       "name": "Welltower Inc.",
       "report_date": "2026-10-26",
       "report_time": "미상",
-      "market_cap": 173418447000,
+      "market_cap": 163407299000,
       "eps": "$1.67",
       "eps_forecast": "$1.64",
       "surprise_pct": 1.83,
@@ -153,24 +170,7 @@
         "D-1": 0,
         "D0": 1.39,
         "D+1": -4.47,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "BA",
-      "name": "Boeing Company (The)",
-      "report_date": "2026-10-27",
-      "report_time": "미상",
-      "market_cap": 148834583000,
-      "eps": "($0.34)",
-      "eps_forecast": "($0.21)",
-      "surprise_pct": -61.9,
-      "reaction": {
-        "D-1": 0,
-        "D0": -10.69,
-        "D+1": null,
-        "D+2": null,
+        "D+2": -5,
         "D+3": null
       }
     },
@@ -178,15 +178,15 @@
       "symbol": "STX",
       "name": "Seagate Technology Holdings PLC",
       "report_date": "2026-10-27",
-      "report_time": "장후",
-      "market_cap": 147342770000,
-      "eps": "$2.51",
+      "report_time": "미상",
+      "market_cap": 152749687000,
+      "eps": "$7.34",
       "eps_forecast": "$7.17",
-      "surprise_pct": null,
+      "surprise_pct": 2.37,
       "reaction": {
         "D-1": 0,
         "D0": 3.67,
-        "D+1": null,
+        "D+1": 6.15,
         "D+2": null,
         "D+3": null
       }
@@ -196,7 +196,7 @@
       "name": "Lockheed Martin Corporation",
       "report_date": "2026-10-22",
       "report_time": "미상",
-      "market_cap": 146734154000,
+      "market_cap": 143913583000,
       "eps": "$7.97",
       "eps_forecast": "$7.49",
       "surprise_pct": 6.41,
@@ -213,7 +213,7 @@
       "name": "Western Digital Corporation",
       "report_date": "2026-10-22",
       "report_time": "미상",
-      "market_cap": 133307744000,
+      "market_cap": 142572241000,
       "eps": "$4.43",
       "eps_forecast": "$3.99",
       "surprise_pct": 11.03,
@@ -226,37 +226,37 @@
       }
     },
     {
+      "symbol": "BA",
+      "name": "Boeing Company (The)",
+      "report_date": "2026-10-27",
+      "report_time": "미상",
+      "market_cap": 132924432000,
+      "eps": "($0.34)",
+      "eps_forecast": "($0.21)",
+      "surprise_pct": -61.9,
+      "reaction": {
+        "D-1": 0,
+        "D0": -10.69,
+        "D+1": -11.36,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
       "symbol": "SPGI",
       "name": "S&P Global Inc.",
       "report_date": "2026-10-27",
       "report_time": "미상",
-      "market_cap": 130643436000,
+      "market_cap": 130144805000,
       "eps": "$4.58",
       "eps_forecast": "$4.43",
       "surprise_pct": 3.39,
       "reaction": {
         "D-1": 0,
         "D0": -0.38,
-        "D+1": null,
+        "D+1": -0.96,
         "D+2": null,
         "D+3": null
-      }
-    },
-    {
-      "symbol": "VLO",
-      "name": "Valero Energy Corporation",
-      "report_date": "2026-10-22",
-      "report_time": "미상",
-      "market_cap": 122875920000,
-      "eps": "$23.90",
-      "eps_forecast": "$21.28",
-      "surprise_pct": 12.31,
-      "reaction": {
-        "D-1": 0,
-        "D0": -2.4,
-        "D+1": -4,
-        "D+2": -2.29,
-        "D+3": -11.31
       }
     },
     {
@@ -264,7 +264,7 @@
       "name": "Spotify Technology S.A.",
       "report_date": "2026-10-22",
       "report_time": "미상",
-      "market_cap": 120619868000,
+      "market_cap": 117056233000,
       "eps": "$2.85",
       "eps_forecast": "$3.10",
       "surprise_pct": -8.06,
@@ -281,7 +281,7 @@
       "name": "Newmont Corporation",
       "report_date": "2026-10-22",
       "report_time": "미상",
-      "market_cap": 114716533000,
+      "market_cap": 117054718000,
       "eps": "$2.20",
       "eps_forecast": "$1.94",
       "surprise_pct": 13.4,
@@ -294,18 +294,35 @@
       }
     },
     {
+      "symbol": "VLO",
+      "name": "Valero Energy Corporation",
+      "report_date": "2026-10-22",
+      "report_time": "미상",
+      "market_cap": 111525822000,
+      "eps": "$23.90",
+      "eps_forecast": "$21.28",
+      "surprise_pct": 12.31,
+      "reaction": {
+        "D-1": 0,
+        "D0": -2.4,
+        "D+1": -4,
+        "D+2": -2.29,
+        "D+3": -11.31
+      }
+    },
+    {
       "symbol": "GLW",
       "name": "Corning Incorporated",
       "report_date": "2026-10-27",
       "report_time": "미상",
-      "market_cap": 110033748000,
+      "market_cap": 108793348000,
       "eps": "$0.91",
       "eps_forecast": "$0.89",
       "surprise_pct": 2.25,
       "reaction": {
         "D-1": 0,
         "D0": -1.13,
-        "D+1": null,
+        "D+1": 2.82,
         "D+2": null,
         "D+3": null
       }
@@ -315,14 +332,65 @@
       "name": "HCA Healthcare, Inc.",
       "report_date": "2026-10-27",
       "report_time": "미상",
-      "market_cap": 100729487000,
+      "market_cap": 97417011000,
       "eps": "$7.22",
       "eps_forecast": "$6.74",
       "surprise_pct": 7.12,
       "reaction": {
         "D-1": 0,
         "D0": -3.29,
-        "D+1": null,
+        "D+1": -0.99,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "FCX",
+      "name": "Freeport-McMoran, Inc.",
+      "report_date": "2026-10-27",
+      "report_time": "미상",
+      "market_cap": 94705353000,
+      "eps": "$0.88",
+      "eps_forecast": "$0.80",
+      "surprise_pct": 10,
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.21,
+        "D+1": 0.94,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "CDNS",
+      "name": "Cadence Design Systems, Inc.",
+      "report_date": "2026-10-26",
+      "report_time": "미상",
+      "market_cap": 94481834000,
+      "eps": "$1.59",
+      "eps_forecast": "$1.61",
+      "surprise_pct": -1.24,
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.79,
+        "D+1": 8.4,
+        "D+2": 8.14,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "JCI",
+      "name": "Johnson Controls International plc",
+      "report_date": "2026-10-27",
+      "report_time": "미상",
+      "market_cap": 94422983000,
+      "eps": "$1.66",
+      "eps_forecast": "$1.58",
+      "surprise_pct": 5.06,
+      "reaction": {
+        "D-1": 0,
+        "D0": 5.68,
+        "D+1": 7.03,
         "D+2": null,
         "D+3": null
       }
@@ -331,15 +399,15 @@
       "symbol": "WM",
       "name": "Waste Management, Inc.",
       "report_date": "2026-10-27",
-      "report_time": "장후",
-      "market_cap": 96339354000,
-      "eps": "$1.98",
+      "report_time": "미상",
+      "market_cap": 94256841000,
+      "eps": "$2.15",
       "eps_forecast": "$2.18",
-      "surprise_pct": null,
+      "surprise_pct": -1.38,
       "reaction": {
         "D-1": 0,
         "D0": -2.16,
-        "D+1": null,
+        "D+1": -5.48,
         "D+2": null,
         "D+3": null
       }
@@ -349,7 +417,7 @@
       "name": "ENI S.p.A.",
       "report_date": "2026-10-23",
       "report_time": "미상",
-      "market_cap": 95268315000,
+      "market_cap": 92750905000,
       "eps": "$2.13",
       "eps_forecast": "$1.92",
       "surprise_pct": 10.94,
@@ -358,22 +426,22 @@
         "D0": 4.28,
         "D+1": 1.71,
         "D+2": -0.97,
-        "D+3": null
+        "D+3": 0.61
       }
     },
     {
-      "symbol": "FCX",
-      "name": "Freeport-McMoran, Inc.",
+      "symbol": "UPS",
+      "name": "United Parcel Service, Inc.",
       "report_date": "2026-10-27",
       "report_time": "미상",
-      "market_cap": 93570900000,
-      "eps": "$0.88",
-      "eps_forecast": "$0.80",
-      "surprise_pct": 10,
+      "market_cap": 90259415000,
+      "eps": "$1.69",
+      "eps_forecast": "$1.63",
+      "surprise_pct": 3.68,
       "reaction": {
         "D-1": 0,
-        "D0": 1.21,
-        "D+1": null,
+        "D0": 5.75,
+        "D+1": 4.69,
         "D+2": null,
         "D+3": null
       }
@@ -383,7 +451,7 @@
       "name": "Blackstone Inc.",
       "report_date": "2026-10-22",
       "report_time": "미상",
-      "market_cap": 89369428000,
+      "market_cap": 87597949000,
       "eps": "$1.32",
       "eps_forecast": "$1.26",
       "surprise_pct": 4.76,
@@ -396,69 +464,18 @@
       }
     },
     {
-      "symbol": "JCI",
-      "name": "Johnson Controls International plc",
-      "report_date": "2026-10-27",
-      "report_time": "미상",
-      "market_cap": 89346867000,
-      "eps": "$1.66",
-      "eps_forecast": "$1.58",
-      "surprise_pct": 5.06,
-      "reaction": {
-        "D-1": 0,
-        "D0": 5.68,
-        "D+1": null,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "CDNS",
-      "name": "Cadence Design Systems, Inc.",
-      "report_date": "2026-10-26",
-      "report_time": "미상",
-      "market_cap": 88723366000,
-      "eps": "$1.59",
-      "eps_forecast": "$1.61",
-      "surprise_pct": -1.24,
-      "reaction": {
-        "D-1": 0,
-        "D0": 1.79,
-        "D+1": 8.4,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
       "symbol": "AMT",
       "name": "American Tower Corporation (REIT)",
       "report_date": "2026-10-27",
       "report_time": "미상",
-      "market_cap": 87730954000,
+      "market_cap": 85657436000,
       "eps": "$2.87",
       "eps_forecast": "$2.78",
       "surprise_pct": 3.24,
       "reaction": {
         "D-1": 0,
         "D0": -2.36,
-        "D+1": null,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "UPS",
-      "name": "United Parcel Service, Inc.",
-      "report_date": "2026-10-27",
-      "report_time": "미상",
-      "market_cap": 85350408000,
-      "eps": "$1.69",
-      "eps_forecast": "$1.63",
-      "surprise_pct": 3.68,
-      "reaction": {
-        "D-1": 0,
-        "D0": 5.75,
-        "D+1": null,
+        "D+1": -5.68,
         "D+2": null,
         "D+3": null
       }
@@ -467,32 +484,15 @@
       "symbol": "HOOD",
       "name": "Robinhood Markets, Inc.",
       "report_date": "2026-10-27",
-      "report_time": "장후",
-      "market_cap": 83470795000,
-      "eps": "$0.61",
+      "report_time": "미상",
+      "market_cap": 85017223000,
+      "eps": "$0.60",
       "eps_forecast": "$0.56",
-      "surprise_pct": null,
+      "surprise_pct": 7.14,
       "reaction": {
         "D-1": 0,
         "D0": 1.85,
-        "D+1": null,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "SHW",
-      "name": "Sherwin-Williams Company (The)",
-      "report_date": "2026-10-27",
-      "report_time": "미상",
-      "market_cap": 81362821000,
-      "eps": "$3.63",
-      "eps_forecast": "$3.65",
-      "surprise_pct": -0.55,
-      "reaction": {
-        "D-1": 0,
-        "D0": -2.73,
-        "D+1": null,
+        "D+1": -2.36,
         "D+2": null,
         "D+3": null
       }
@@ -502,14 +502,14 @@
       "name": "Ecolab Inc.",
       "report_date": "2026-10-27",
       "report_time": "미상",
-      "market_cap": 80984130000,
+      "market_cap": 81651311000,
       "eps": "$2.18",
       "eps_forecast": "$2.18",
       "surprise_pct": null,
       "reaction": {
         "D-1": 0,
         "D0": 0.82,
-        "D+1": null,
+        "D+1": 1.13,
         "D+2": null,
         "D+3": null
       }
