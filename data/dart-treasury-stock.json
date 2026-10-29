@@ -1,19 +1,43 @@
 {
-  "updated_at": "2026-10-29T08:06:20.288Z",
+  "updated_at": "2026-10-29T15:27:23.467Z",
   "range": {
-    "from": "20261015",
-    "to": "20261029"
+    "from": "20261016",
+    "to": "20261030"
   },
   "items": [
+    {
+      "corp_name": "아모레퍼시픽홀딩스",
+      "stock_code": "002790",
+      "rcept_no": "20261029000621",
+      "rcept_dt": "20261029",
+      "type": "처분",
+      "period_start": "2026년 11월 02일",
+      "period_end": "2026년 11월 02일",
+      "purpose": "직원에 대한 상여금으로 자기주식을 지급",
+      "method": null,
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029000621"
+    },
+    {
+      "corp_name": "아모레퍼시픽홀딩스",
+      "stock_code": "002790",
+      "rcept_no": "20261029800768",
+      "rcept_dt": "20261029",
+      "type": "처분",
+      "period_start": "2026년 11월 02일",
+      "period_end": "2026년 11월 02일",
+      "purpose": "직원에 대한 상여금으로 자기주식을 지급",
+      "method": null,
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800768"
+    },
     {
       "corp_name": "아모레퍼시픽",
       "stock_code": "090430",
       "rcept_no": "20261029000577",
       "rcept_dt": "20261029",
       "type": "처분",
-      "period_start": null,
-      "period_end": null,
-      "purpose": null,
+      "period_start": "2026년 11월 02일",
+      "period_end": "2026년 11월 02일",
+      "purpose": "직원에 대한 상여금으로 자기주식을 지급",
       "method": null,
       "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029000577"
     },
@@ -412,66 +436,6 @@
       "purpose": "주식매수선택권 행사에 따른 자기주식 교부",
       "method": null,
       "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261016000151"
-    },
-    {
-      "corp_name": "미원홀딩스",
-      "stock_code": "107590",
-      "rcept_no": "20261015800471",
-      "rcept_dt": "20261015",
-      "type": "취득",
-      "period_start": null,
-      "period_end": null,
-      "purpose": null,
-      "method": null,
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261015800471"
-    },
-    {
-      "corp_name": "미원에스씨",
-      "stock_code": "268280",
-      "rcept_no": "20261015000250",
-      "rcept_dt": "20261015",
-      "type": "취득",
-      "period_start": "2026년 10월 15일",
-      "period_end": "2027년 01월 15일",
-      "purpose": "주식가격의 안정 및 주주가치 제고",
-      "method": "유가증권시장을 통한 장내매수",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261015000250"
-    },
-    {
-      "corp_name": "대림제지",
-      "stock_code": "017650",
-      "rcept_no": "20261015000207",
-      "rcept_dt": "20261015",
-      "type": "취득",
-      "period_start": "2026년 10월 16일",
-      "period_end": "2027년 01월 15일",
-      "purpose": "기업가치 제고를 위한 주주환원 정책에 따라 자기주식 취득 후 소각",
-      "method": "코스닥시장 내에서 직접 취득",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261015000207"
-    },
-    {
-      "corp_name": "KG에코솔루션",
-      "stock_code": "151860",
-      "rcept_no": "20261015900770",
-      "rcept_dt": "20261015",
-      "type": "처분",
-      "period_start": null,
-      "period_end": null,
-      "purpose": null,
-      "method": null,
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261015900770"
-    },
-    {
-      "corp_name": "KG스틸",
-      "stock_code": "016380",
-      "rcept_no": "20261015000414",
-      "rcept_dt": "20261015",
-      "type": "처분",
-      "period_start": "2026년 10월 16일",
-      "period_end": "2027년 01월 15일",
-      "purpose": "임직원 지급을 위한\n자기주식 처분",
-      "method": null,
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261015000414"
     }
   ]
 }

@@ -1,10 +1,20 @@
 {
-  "updated_at": "2026-10-29T08:06:20.285Z",
+  "updated_at": "2026-10-29T15:27:23.464Z",
   "range": {
-    "from": "20261015",
-    "to": "20261029"
+    "from": "20261016",
+    "to": "20261030"
   },
   "items": [
+    {
+      "corp_name": "시지트로닉스",
+      "stock_code": "429270",
+      "rcept_no": "20261029000669",
+      "rcept_dt": "20261030",
+      "method": "제3자배정증자",
+      "new_shares": "762,195",
+      "record_date": null,
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029000669"
+    },
     {
       "corp_name": "유티아이",
       "stock_code": "179900",
@@ -434,56 +444,6 @@
       "new_shares": null,
       "record_date": null,
       "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261016000292"
-    },
-    {
-      "corp_name": "시지트로닉스",
-      "stock_code": "429270",
-      "rcept_no": "20261015000313",
-      "rcept_dt": "20261015",
-      "method": "일반공모증자",
-      "new_shares": "-",
-      "record_date": null,
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261015000313"
-    },
-    {
-      "corp_name": "KS인더스트리",
-      "stock_code": "101000",
-      "rcept_no": "20261015000184",
-      "rcept_dt": "20261015",
-      "method": "제3자배정증자",
-      "new_shares": "4,170,141",
-      "record_date": null,
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261015000184"
-    },
-    {
-      "corp_name": "큐로홀딩스",
-      "stock_code": "051780",
-      "rcept_no": "20261015000163",
-      "rcept_dt": "20261015",
-      "method": "제3자배정증자",
-      "new_shares": "3,236,765",
-      "record_date": null,
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261015000163"
-    },
-    {
-      "corp_name": "레드엔비아",
-      "stock_code": "",
-      "rcept_no": "20261015000043",
-      "rcept_dt": "20261015",
-      "method": "제3자배정증자",
-      "new_shares": "160,000",
-      "record_date": null,
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261015000043"
-    },
-    {
-      "corp_name": "테크트랜스",
-      "stock_code": "258050",
-      "rcept_no": "20261014000461",
-      "rcept_dt": "20261015",
-      "method": "제3자배정증자",
-      "new_shares": "2,035,279",
-      "record_date": null,
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261014000461"
     }
   ]
 }
