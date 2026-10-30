@@ -1,16 +1,16 @@
 {
   "date": "20261031",
-  "generated_at": "2026-10-30T18:58:41.494Z",
+  "generated_at": "2026-10-30T22:58:44.767Z",
   "engineVersion": "v0.2",
   "objective": "NEW INFORMATION + CHANGE + CATALYST + CONFIRMATION — 오늘 새롭게 연구할 가치가 생긴 종목을 조기 발견",
   "methodologyNote": "시장/섹터 상대강도는 공식 지수가 아니라 가격 데이터 보유 종목의 동일가중 평균(proxy)입니다. Earnings/Revision Factor는 컨센서스 Provider 미연결로 항상 제외(MISSING_DATA)됩니다. 시총 순위는 KIS 시세를 조회한 종목(관심종목 + Discovery 추가조회) 안에서의 순위입니다. 수급 전환의 발생 시점은 \"최근 3거래일 vs 직전 5거래일\" 창 비교라 일 단위 날짜가 아닌 창 단위입니다. 종목 단위로 연결되지 않은 Catalyst: Investor Relations 일정, Large Contract(단일판매·공급계약), Index Rebalancing (정기변경 월 주기만 수집, 종목별 편입·편출 예고 없음), Major Customer Event, Policy Event, Share Cancellation(소각).",
   "marketRegime": {
     "state": "Risk-off",
     "evidence": [
-      "VIX +36.74%",
-      "S&P500 -2.43%",
-      "NASDAQ -3.75%",
-      "USD/KRW -0.47%"
+      "VIX +12.91%",
+      "S&P500 -1.82%",
+      "NASDAQ -2.86%",
+      "USD/KRW -0.51%"
     ],
     "strategyPreference": [
       "EVENT_DRIVEN",
@@ -360,7 +360,7 @@
       "bucket": "EVENT_DRIVEN",
       "label": "Event-Driven",
       "requested": 1,
-      "qualifiedCount": 11,
+      "qualifiedCount": 12,
       "picks": [
         {
           "symbol": "028050",
@@ -1120,6 +1120,54 @@
   "rejectedCandidates": [],
   "candidateQueue": [
     {
+      "symbol": "006400",
+      "name": "삼성SDI",
+      "sector": "2차전지",
+      "bucket": null,
+      "strategy": "Confluence · Flow Confirmed",
+      "score": 44.7,
+      "discoveryScore": 44.7,
+      "dataCoverage": 77,
+      "confidence": "Normal",
+      "independentConfirmations": 4,
+      "confirmationSources": [
+        "price",
+        "flow",
+        "event"
+      ],
+      "newSignalCount": 4,
+      "tier": 1,
+      "marketCapRank": 12,
+      "isLargeCap": true,
+      "whatChanged": [
+        "거래량 20일 평균 대비 2.0배로 급증 (2026-10-29, 1거래일 전)",
+        "기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +9.1%가 확인)",
+        "새 정보: 실적 공시(20261029) 후 누적 +0.8% (1거래일 전)",
+        "새 정보: KODEX 2차전지산업레버리지 비중 +1.85%p (2026-10-30) (0거래일 전)"
+      ],
+      "pricedInVerdict": "partially_priced_in",
+      "gateFails": [],
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      },
+      "topEvidence": "거래량 20일 평균 대비 2.0배로 급증 (2026-10-29, 1거래일 전)",
+      "scoreBreakdown": [
+        "Novelty 9/25",
+        "Catalyst 2.4/12",
+        "Technical 3/15",
+        "Flow 10/15",
+        "Relative Strength 10/10"
+      ],
+      "signalTypes": [
+        "Leader 후보",
+        "Novelty",
+        "Flow",
+        "Relative Strength",
+        "Catalyst"
+      ]
+    },
+    {
       "symbol": "489790",
       "name": "한화비전",
       "sector": "전기·전자",
@@ -1564,51 +1612,6 @@
         "Novelty",
         "Technical",
         "Flow"
-      ]
-    },
-    {
-      "symbol": "006400",
-      "name": "삼성SDI",
-      "sector": "2차전지",
-      "bucket": null,
-      "strategy": "Confluence · Flow Confirmed",
-      "score": 41.6,
-      "discoveryScore": 41.6,
-      "dataCoverage": 77,
-      "confidence": "Normal",
-      "independentConfirmations": 3,
-      "confirmationSources": [
-        "price",
-        "flow"
-      ],
-      "newSignalCount": 3,
-      "tier": 2,
-      "marketCapRank": 12,
-      "isLargeCap": true,
-      "whatChanged": [
-        "거래량 20일 평균 대비 2.0배로 급증 (2026-10-29, 1거래일 전)",
-        "기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +9.1%가 확인)",
-        "새 정보: 실적 공시(20261029) 후 누적 +0.8% (1거래일 전)"
-      ],
-      "pricedInVerdict": "partially_priced_in",
-      "gateFails": [],
-      "risk": {
-        "decision": "PASS",
-        "reason": "특이 리스크 없음"
-      },
-      "topEvidence": "거래량 20일 평균 대비 2.0배로 급증 (2026-10-29, 1거래일 전)",
-      "scoreBreakdown": [
-        "Novelty 9/25",
-        "Catalyst 0/12",
-        "Technical 3/15",
-        "Flow 10/15",
-        "Relative Strength 10/10"
-      ],
-      "signalTypes": [
-        "Leader 후보",
-        "Novelty",
-        "Flow",
-        "Relative Strength"
       ]
     },
     {
