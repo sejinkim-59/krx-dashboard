@@ -112,7 +112,7 @@
       "hasPriceData": true,
       "d1": -2.08,
       "d5": 7.26,
-      "d20": null
+      "d20": -12.23
     },
     {
       "engineVersion": "v0.2",
@@ -131,7 +131,7 @@
       "hasPriceData": true,
       "d1": -1.92,
       "d5": 11.03,
-      "d20": null
+      "d20": -26.11
     },
     {
       "engineVersion": "v0.2",
@@ -150,7 +150,7 @@
       "hasPriceData": true,
       "d1": 1.67,
       "d5": 0.91,
-      "d20": null
+      "d20": -15.82
     },
     {
       "engineVersion": "v0.2",
@@ -169,7 +169,7 @@
       "hasPriceData": true,
       "d1": 0.85,
       "d5": 1.33,
-      "d20": null
+      "d20": 0.48
     },
     {
       "engineVersion": "v0.2",
@@ -188,7 +188,7 @@
       "hasPriceData": true,
       "d1": 4.31,
       "d5": 0.57,
-      "d20": null
+      "d20": -11.06
     },
     {
       "engineVersion": "v0.2",
@@ -2258,7 +2258,7 @@
       "priceAtSelection": 154600,
       "hasPriceData": true,
       "d1": -0.19,
-      "d5": null,
+      "d5": -2.01,
       "d20": null
     },
     {
@@ -2277,7 +2277,7 @@
       "priceAtSelection": 96000,
       "hasPriceData": true,
       "d1": -1.15,
-      "d5": null,
+      "d5": 1.15,
       "d20": null
     },
     {
@@ -2296,7 +2296,7 @@
       "priceAtSelection": 81600,
       "hasPriceData": true,
       "d1": -1.96,
-      "d5": null,
+      "d5": -4.53,
       "d20": null
     },
     {
@@ -2315,7 +2315,7 @@
       "priceAtSelection": 59100,
       "hasPriceData": true,
       "d1": -1.35,
-      "d5": null,
+      "d5": 4.57,
       "d20": null
     },
     {
@@ -2334,7 +2334,7 @@
       "priceAtSelection": 110900,
       "hasPriceData": true,
       "d1": 1.89,
-      "d5": null,
+      "d5": 2.16,
       "d20": null
     },
     {
@@ -2827,7 +2827,7 @@
       "marketRegime": "Neutral",
       "priceAtSelection": 535000,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 1.31,
       "d5": null,
       "d20": null
     },
@@ -2846,7 +2846,7 @@
       "marketRegime": "Neutral",
       "priceAtSelection": 36200,
       "hasPriceData": true,
-      "d1": null,
+      "d1": -2.07,
       "d5": null,
       "d20": null
     },
@@ -2865,7 +2865,7 @@
       "marketRegime": "Neutral",
       "priceAtSelection": 263500,
       "hasPriceData": true,
-      "d1": null,
+      "d1": -2.47,
       "d5": null,
       "d20": null
     },
@@ -2884,7 +2884,7 @@
       "marketRegime": "Neutral",
       "priceAtSelection": 62200,
       "hasPriceData": true,
-      "d1": null,
+      "d1": -0.64,
       "d5": null,
       "d20": null
     },
@@ -2903,43 +2903,24 @@
       "marketRegime": "Neutral",
       "priceAtSelection": 1512000,
       "hasPriceData": true,
-      "d1": null,
+      "d1": -5.82,
       "d5": null,
       "d20": null
     },
     {
       "engineVersion": "v0.2",
       "date": "20261030",
-      "symbol": "034730",
-      "name": "SK",
+      "symbol": "006400",
+      "name": "삼성SDI",
       "setup": "Market Leader",
       "bucket": "MARKET_LEADER",
       "strategy": "Confluence · Flow Confirmed",
-      "score": 59.7,
-      "noveltyScore": 15,
-      "pricedInVerdict": "unclear",
+      "score": 41.6,
+      "noveltyScore": 9,
+      "pricedInVerdict": "partially_priced_in",
       "dataCoverage": 77,
-      "marketRegime": "Risk-off",
-      "priceAtSelection": 535000,
-      "hasPriceData": true,
-      "d1": null,
-      "d5": null,
-      "d20": null
-    },
-    {
-      "engineVersion": "v0.2",
-      "date": "20261030",
-      "symbol": "071970",
-      "name": "HD현대마린엔진",
-      "setup": "Discovery",
-      "bucket": "DISCOVERY",
-      "strategy": "Event Driven",
-      "score": 13.5,
-      "noveltyScore": 5,
-      "pricedInVerdict": "not_yet_priced",
-      "dataCoverage": 77,
-      "marketRegime": "Risk-off",
-      "priceAtSelection": 36500,
+      "marketRegime": "Neutral",
+      "priceAtSelection": 542000,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -2953,12 +2934,31 @@
       "setup": "Discovery",
       "bucket": "DISCOVERY",
       "strategy": "Confluence · Flow Confirmed",
-      "score": 55.8,
-      "noveltyScore": 15,
+      "score": 44.2,
+      "noveltyScore": 9,
       "pricedInVerdict": "partially_priced_in",
       "dataCoverage": 77,
-      "marketRegime": "Risk-off",
-      "priceAtSelection": 265500,
+      "marketRegime": "Neutral",
+      "priceAtSelection": 257000,
+      "hasPriceData": true,
+      "d1": null,
+      "d5": null,
+      "d20": null
+    },
+    {
+      "engineVersion": "v0.2",
+      "date": "20261030",
+      "symbol": "277810",
+      "name": "레인보우로보틱스",
+      "setup": "Discovery",
+      "bucket": "DISCOVERY",
+      "strategy": "Confluence · Flow Confirmed",
+      "score": 29.9,
+      "noveltyScore": 9,
+      "pricedInVerdict": "not_yet_priced",
+      "dataCoverage": 77,
+      "marketRegime": "Neutral",
+      "priceAtSelection": 363000,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -2972,12 +2972,12 @@
       "setup": "Event-Driven",
       "bucket": "EVENT_DRIVEN",
       "strategy": "Confluence · Trend Confirmation",
-      "score": 55.3,
-      "noveltyScore": 10.8,
+      "score": 48.2,
+      "noveltyScore": 9.3,
       "pricedInVerdict": "likely_priced_in",
       "dataCoverage": 77,
-      "marketRegime": "Risk-off",
-      "priceAtSelection": 62800,
+      "marketRegime": "Neutral",
+      "priceAtSelection": 61800,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -2986,17 +2986,17 @@
     {
       "engineVersion": "v0.2",
       "date": "20261030",
-      "symbol": "000660",
-      "name": "SK하이닉스",
+      "symbol": "028260",
+      "name": "삼성물산",
       "setup": "Inflection",
       "bucket": "INFLECTION",
-      "strategy": "Confluence · Flow Confirmed",
-      "score": 45.2,
-      "noveltyScore": 10,
+      "strategy": "Confluence · New Change",
+      "score": 31.7,
+      "noveltyScore": 6,
       "pricedInVerdict": "not_yet_priced",
       "dataCoverage": 77,
-      "marketRegime": "Risk-off",
-      "priceAtSelection": 1526000,
+      "marketRegime": "Neutral",
+      "priceAtSelection": 311000,
       "hasPriceData": true,
       "d1": null,
       "d5": null,

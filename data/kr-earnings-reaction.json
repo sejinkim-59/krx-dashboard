@@ -1,245 +1,500 @@
 {
-  "updated_at": "2026-10-29T20:35:05.243Z",
+  "updated_at": "2026-10-30T00:18:38.285Z",
   "note": "최근 21일 영업(잠정)실적 공정공시 기준. 반응(%)은 공시일 이후 첫 거래일(D0) 기준 D-1 종가 대비 누적 수익률.",
   "range": {
     "from": "20261009",
     "to": "20261030"
   },
-  "count": 131,
+  "count": 132,
   "items": [
+    {
+      "corp_name": "키움증권",
+      "stock_code": "039490",
+      "rcept_dt": "20261030",
+      "reaction": null
+    },
     {
       "corp_name": "아모레퍼시픽홀딩스",
       "stock_code": "002790",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800770",
+      "reaction": {
+        "D-1": 0,
+        "D0": 0,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "현대코퍼레이션",
       "stock_code": "011760",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800735",
+      "reaction": {
+        "D-1": 0,
+        "D0": -2.52,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "아모레퍼시픽",
       "stock_code": "090430",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800690",
+      "reaction": {
+        "D-1": 0,
+        "D0": -0.08,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "대한유화",
       "stock_code": "006650",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800641",
+      "reaction": {
+        "D-1": 0,
+        "D0": -1.49,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "금호타이어",
       "stock_code": "073240",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800635",
+      "reaction": {
+        "D-1": 0,
+        "D0": -0.39,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "하츠",
       "stock_code": "066130",
       "rcept_dt": "20261029",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029900595",
       "reaction": null
     },
     {
       "corp_name": "한독",
       "stock_code": "002390",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800549",
+      "reaction": {
+        "D-1": 0,
+        "D0": -3.12,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "해성디에스",
       "stock_code": "195870",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800632",
+      "reaction": {
+        "D-1": 0,
+        "D0": -4.11,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "두산밥캣",
       "stock_code": "241560",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800568",
+      "reaction": {
+        "D-1": 0,
+        "D0": -0.61,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "엘컴텍",
       "stock_code": "037950",
       "rcept_dt": "20261029",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029900488",
       "reaction": null
     },
     {
       "corp_name": "슈프리마",
       "stock_code": "236200",
       "rcept_dt": "20261029",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029900465",
       "reaction": null
     },
     {
       "corp_name": "두산로보틱스",
       "stock_code": "454910",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800388",
+      "reaction": {
+        "D-1": 0,
+        "D0": -4.96,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "두산에너빌리티",
       "stock_code": "034020",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800381",
+      "reaction": {
+        "D-1": 0,
+        "D0": -7.65,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "KB금융",
       "stock_code": "105560",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800350",
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.82,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "한화에어로스페이스",
       "stock_code": "012450",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800352",
+      "reaction": {
+        "D-1": 0,
+        "D0": -3.43,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "OCI홀딩스",
       "stock_code": "010060",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800325",
+      "reaction": {
+        "D-1": 0,
+        "D0": 0.11,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "대한전선",
       "stock_code": "001440",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800321",
+      "reaction": {
+        "D-1": 0,
+        "D0": -7.24,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "벽산",
       "stock_code": "007210",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800286",
+      "reaction": {
+        "D-1": 0,
+        "D0": -1.45,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "롯데정밀화학",
       "stock_code": "004000",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800283",
+      "reaction": {
+        "D-1": 0,
+        "D0": -2.65,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "메쥬",
       "stock_code": "0088M0",
       "rcept_dt": "20261029",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029900274",
       "reaction": null
     },
     {
       "corp_name": "한화솔루션",
       "stock_code": "009830",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800252",
+      "reaction": {
+        "D-1": 0,
+        "D0": -11.61,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "삼성중공업",
       "stock_code": "010140",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800230",
+      "reaction": {
+        "D-1": 0,
+        "D0": -4.78,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "현대자동차",
       "stock_code": "005380",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800228",
+      "reaction": {
+        "D-1": 0,
+        "D0": -1.18,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "티씨케이",
       "stock_code": "064760",
       "rcept_dt": "20261029",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029900211",
       "reaction": null
     },
     {
       "corp_name": "송원산업",
       "stock_code": "004430",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800203",
+      "reaction": {
+        "D-1": 0,
+        "D0": 2.32,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "세아베스틸지주",
       "stock_code": "001430",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800191",
+      "reaction": {
+        "D-1": 0,
+        "D0": -3.04,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "아가방컴퍼니",
       "stock_code": "013990",
       "rcept_dt": "20261029",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029900142",
       "reaction": null
     },
     {
       "corp_name": "SK이노베이션",
       "stock_code": "096770",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800138",
+      "reaction": {
+        "D-1": 0,
+        "D0": -7.09,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "한화비전",
       "stock_code": "489790",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800140",
+      "reaction": {
+        "D-1": 0,
+        "D0": 22.14,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "유진테크놀로지",
       "stock_code": "240600",
       "rcept_dt": "20261029",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029900125",
       "reaction": null
     },
     {
       "corp_name": "SK아이이테크놀로지",
       "stock_code": "361610",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800128",
+      "reaction": {
+        "D-1": 0,
+        "D0": -6.47,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "환인제약",
       "stock_code": "016580",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800106",
+      "reaction": {
+        "D-1": 0,
+        "D0": 3.35,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "쎄트렉아이",
       "stock_code": "099320",
       "rcept_dt": "20261029",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029900104",
       "reaction": null
     },
     {
       "corp_name": "제이에스코퍼레이션",
       "stock_code": "194370",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800093",
+      "reaction": {
+        "D-1": 0,
+        "D0": 4.53,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "삼성에스디에스",
       "stock_code": "018260",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800090",
+      "reaction": {
+        "D-1": 0,
+        "D0": -7.19,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "삼성전자",
       "stock_code": "005930",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800087",
+      "reaction": {
+        "D-1": 0,
+        "D0": -4.13,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "콜마비앤에이치",
       "stock_code": "200130",
       "rcept_dt": "20261029",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029900076",
       "reaction": null
     },
     {
       "corp_name": "HDC랩스",
       "stock_code": "039570",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800059",
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.82,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "삼성SDI",
       "stock_code": "006400",
       "rcept_dt": "20261029",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029800053",
+      "reaction": {
+        "D-1": 0,
+        "D0": 0.75,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "한올바이오파마",
@@ -249,7 +504,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 0.65,
-        "D+1": null,
+        "D+1": -1.18,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -263,7 +518,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 0.93,
-        "D+1": null,
+        "D+1": 1.49,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -277,7 +532,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 1.8,
-        "D+1": null,
+        "D+1": -1.64,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -291,7 +546,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 1.44,
-        "D+1": null,
+        "D+1": -1.6,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -305,7 +560,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 7.81,
-        "D+1": null,
+        "D+1": 7.48,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -319,7 +574,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 6.53,
-        "D+1": null,
+        "D+1": 3.08,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -340,7 +595,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 0.69,
-        "D+1": null,
+        "D+1": -0.17,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -354,7 +609,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 2.82,
-        "D+1": null,
+        "D+1": -1.83,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -368,7 +623,7 @@
       "reaction": {
         "D-1": 0,
         "D0": -3.38,
-        "D+1": null,
+        "D+1": -6.63,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -382,7 +637,7 @@
       "reaction": {
         "D-1": 0,
         "D0": -0.36,
-        "D+1": null,
+        "D+1": -12.38,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -396,7 +651,7 @@
       "reaction": {
         "D-1": 0,
         "D0": -2.06,
-        "D+1": null,
+        "D+1": -6.69,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -410,7 +665,7 @@
       "reaction": {
         "D-1": 0,
         "D0": -2.03,
-        "D+1": null,
+        "D+1": -5.48,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -424,7 +679,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 14.49,
-        "D+1": null,
+        "D+1": 2.67,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -438,7 +693,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 8.74,
-        "D+1": null,
+        "D+1": 7.66,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -466,7 +721,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 9.29,
-        "D+1": null,
+        "D+1": 4.48,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -487,7 +742,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 10.89,
-        "D+1": null,
+        "D+1": 13.8,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -501,7 +756,7 @@
       "reaction": {
         "D-1": 0,
         "D0": -5.56,
-        "D+1": null,
+        "D+1": -8.43,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -516,7 +771,7 @@
         "D-1": 0,
         "D0": -2.01,
         "D+1": -1.89,
-        "D+2": null,
+        "D+2": -0.12,
         "D+3": null,
         "D+4": null
       }
@@ -537,7 +792,7 @@
         "D-1": 0,
         "D0": -0.84,
         "D+1": 0,
-        "D+2": null,
+        "D+2": -4.55,
         "D+3": null,
         "D+4": null
       }
@@ -551,7 +806,7 @@
         "D-1": 0,
         "D0": -0.57,
         "D+1": 4.82,
-        "D+2": null,
+        "D+2": 10.21,
         "D+3": null,
         "D+4": null
       }
@@ -565,7 +820,7 @@
         "D-1": 0,
         "D0": 0.62,
         "D+1": 1.24,
-        "D+2": null,
+        "D+2": 5.8,
         "D+3": null,
         "D+4": null
       }
@@ -579,7 +834,7 @@
         "D-1": 0,
         "D0": -1.39,
         "D+1": 0.4,
-        "D+2": null,
+        "D+2": 3.45,
         "D+3": null,
         "D+4": null
       }
@@ -593,7 +848,7 @@
         "D-1": 0,
         "D0": 2.04,
         "D+1": 0.27,
-        "D+2": null,
+        "D+2": -5.31,
         "D+3": null,
         "D+4": null
       }
@@ -607,7 +862,7 @@
         "D-1": 0,
         "D0": -0.94,
         "D+1": 3.92,
-        "D+2": null,
+        "D+2": 1.41,
         "D+3": null,
         "D+4": null
       }
@@ -621,7 +876,7 @@
         "D-1": 0,
         "D0": 0,
         "D+1": -0.94,
-        "D+2": null,
+        "D+2": -4.72,
         "D+3": null,
         "D+4": null
       }
@@ -635,7 +890,7 @@
         "D-1": 0,
         "D0": 0.35,
         "D+1": 2.69,
-        "D+2": null,
+        "D+2": 3.51,
         "D+3": null,
         "D+4": null
       }
@@ -649,7 +904,7 @@
         "D-1": 0,
         "D0": 0.67,
         "D+1": 3.47,
-        "D+2": null,
+        "D+2": -1.45,
         "D+3": null,
         "D+4": null
       }
@@ -663,7 +918,7 @@
         "D-1": 0,
         "D0": 0.68,
         "D+1": -0.34,
-        "D+2": null,
+        "D+2": -1.82,
         "D+3": null,
         "D+4": null
       }
@@ -684,7 +939,7 @@
         "D-1": 0,
         "D0": 2.95,
         "D+1": 2.95,
-        "D+2": null,
+        "D+2": 0.29,
         "D+3": null,
         "D+4": null
       }
@@ -740,7 +995,7 @@
         "D-1": 0,
         "D0": 1.62,
         "D+1": 0.35,
-        "D+2": null,
+        "D+2": -18.28,
         "D+3": null,
         "D+4": null
       }
@@ -754,7 +1009,7 @@
         "D-1": 0,
         "D0": -1.93,
         "D+1": -1.68,
-        "D+2": null,
+        "D+2": -1.32,
         "D+3": null,
         "D+4": null
       }
@@ -769,7 +1024,7 @@
         "D0": -1.64,
         "D+1": -3.75,
         "D+2": -3.19,
-        "D+3": null,
+        "D+3": -1.44,
         "D+4": null
       }
     },
@@ -783,7 +1038,7 @@
         "D0": -10.34,
         "D+1": -21.51,
         "D+2": -21.51,
-        "D+3": null,
+        "D+3": -26.72,
         "D+4": null
       }
     },
@@ -797,7 +1052,7 @@
         "D0": -3.22,
         "D+1": -1.93,
         "D+2": 2.36,
-        "D+3": null,
+        "D+3": 4.94,
         "D+4": null
       }
     },
@@ -811,7 +1066,7 @@
         "D0": -9.29,
         "D+1": -9.52,
         "D+2": -9.41,
-        "D+3": null,
+        "D+3": -12.43,
         "D+4": null
       }
     },
@@ -825,7 +1080,7 @@
         "D0": -13.69,
         "D+1": -10.08,
         "D+2": -11.04,
-        "D+3": null,
+        "D+3": -16.23,
         "D+4": null
       }
     },
@@ -839,7 +1094,7 @@
         "D0": -13.83,
         "D+1": -7.68,
         "D+2": -3.29,
-        "D+3": null,
+        "D+3": -1.24,
         "D+4": null
       }
     },
@@ -853,7 +1108,7 @@
         "D0": -2.52,
         "D+1": -2.15,
         "D+2": -3.78,
-        "D+3": null,
+        "D+3": -3.78,
         "D+4": null
       }
     },
@@ -874,7 +1129,7 @@
         "D0": -1.69,
         "D+1": -0.96,
         "D+2": 0.6,
-        "D+3": null,
+        "D+3": -1.33,
         "D+4": null
       }
     },
@@ -889,7 +1144,7 @@
         "D+1": -6.4,
         "D+2": -7.68,
         "D+3": -4.32,
-        "D+4": null
+        "D+4": -1.44
       }
     },
     {
@@ -903,7 +1158,7 @@
         "D+1": -11.03,
         "D+2": 0.61,
         "D+3": 11.76,
-        "D+4": null
+        "D+4": 8.36
       }
     },
     {
@@ -917,7 +1172,7 @@
         "D+1": -6.26,
         "D+2": -5.5,
         "D+3": -3.84,
-        "D+4": null
+        "D+4": -0.17
       }
     },
     {
@@ -945,7 +1200,7 @@
         "D+1": -5.3,
         "D+2": -2.85,
         "D+3": -2.98,
-        "D+4": null
+        "D+4": -4.27
       }
     },
     {
