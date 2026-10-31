@@ -1,8 +1,40 @@
 {
-  "updated_at": "2026-10-31T02:17:00.667Z",
+  "updated_at": "2026-10-31T08:55:58.908Z",
   "note": "Discovery 후보 추가 조회 (관심종목 외). 30분 배치 — 실시간 아님.",
   "preScreenCount": 444,
   "quotes": [
+    {
+      "symbol": "011200",
+      "name": "HMM",
+      "market": "KOSPI200",
+      "sector": "운송·창고",
+      "currency": "KRW",
+      "price": 23250,
+      "change": 950,
+      "changePercent": 4.26,
+      "open": 22550,
+      "high": 23450,
+      "low": 22300,
+      "previousClose": 22300,
+      "volume": 1887193,
+      "tradingValue": 43654109475,
+      "marketCap": 219303,
+      "week52High": 24950,
+      "week52Low": 17910,
+      "per": 11.89,
+      "pbr": 0.83,
+      "sharesOutstanding": 943237970,
+      "isRealtime": false,
+      "source": "KIS REST",
+      "discovery": true,
+      "preScreen": {
+        "points": 9,
+        "tags": [
+          "flow_reversal_buy",
+          "flow_top_buy"
+        ]
+      }
+    },
     {
       "symbol": "086280",
       "name": "현대글로비스",
@@ -49570,7 +49602,5 @@
       }
     ]
   },
-  "errors": [
-    "quote:011200: KIS 현재가 조회 오류 9: SESSION FULL (011200)"
-  ]
+  "errors": []
 }
