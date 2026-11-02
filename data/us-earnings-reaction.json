@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-02T04:49:35.224Z",
+  "updated_at": "2026-11-02T13:13:38.644Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
@@ -128,7 +128,7 @@
       "name": "Visa Inc.",
       "report_date": "2026-10-27",
       "report_time": "미상",
-      "market_cap": 733534490000,
+      "market_cap": 738984070000,
       "eps": "$3.48",
       "eps_forecast": "$3.43",
       "surprise_pct": 1.46,
@@ -213,7 +213,7 @@
       "name": "Coca-Cola Company (The)",
       "report_date": "2026-10-27",
       "report_time": "미상",
-      "market_cap": 399302590000,
+      "market_cap": 404722975000,
       "eps": "$0.91",
       "eps_forecast": "$0.87",
       "surprise_pct": 4.6,
@@ -247,7 +247,7 @@
       "name": "Novartis AG",
       "report_date": "2026-10-27",
       "report_time": "미상",
-      "market_cap": 307403227000,
+      "market_cap": 306811699000,
       "eps": "$2.46",
       "eps_forecast": "$2.25",
       "surprise_pct": 9.33,
@@ -281,7 +281,7 @@
       "name": "HSBC Holdings plc",
       "report_date": "2026-10-27",
       "report_time": "미상",
-      "market_cap": 296637923000,
+      "market_cap": 293665309000,
       "eps": "$2.10",
       "eps_forecast": "$2.13",
       "surprise_pct": -1.41,
@@ -464,23 +464,6 @@
       }
     },
     {
-      "symbol": "STX",
-      "name": "Seagate Technology Holdings PLC",
-      "report_date": "2026-10-27",
-      "report_time": "미상",
-      "market_cap": 160210485000,
-      "eps": "$7.34",
-      "eps_forecast": "$7.17",
-      "surprise_pct": 2.37,
-      "reaction": {
-        "D-1": 0,
-        "D0": 3.67,
-        "D+1": 8.35,
-        "D+2": 8.73,
-        "D+3": 0.06
-      }
-    },
-    {
       "symbol": "BUD",
       "name": "Anheuser-Busch Inbev SA",
       "report_date": "2026-10-29",
@@ -511,6 +494,23 @@
         "D0": 0.85,
         "D+1": 0.31,
         "D+2": 6.54,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "UBS",
+      "name": "UBS AG",
+      "report_date": "2026-10-28",
+      "report_time": "미상",
+      "market_cap": 149368340000,
+      "eps": "$0.85",
+      "eps_forecast": "$0.91",
+      "surprise_pct": -6.59,
+      "reaction": {
+        "D-1": 0,
+        "D0": -0.21,
+        "D+1": 2.86,
+        "D+2": 1.92,
         "D+3": null
       }
     }
