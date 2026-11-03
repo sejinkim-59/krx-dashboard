@@ -1,9 +1,25 @@
 {
-  "updated_at": "2026-11-02T22:33:31.190Z",
+  "updated_at": "2026-11-03T03:45:22.170Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
   "items": [
+    {
+      "symbol": "AAPL",
+      "name": "Apple Inc.",
+      "report_date": "2026-11-02",
+      "report_time": "장후",
+      "market_cap": 5029592300000,
+      "eps_forecast": "$1.98",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -1.83,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
     {
       "symbol": "MSFT",
       "name": "Microsoft Corporation",
@@ -124,23 +140,6 @@
       }
     },
     {
-      "symbol": "V",
-      "name": "Visa Inc.",
-      "report_date": "2026-10-27",
-      "report_time": "미상",
-      "market_cap": 738984070000,
-      "eps": "$3.48",
-      "eps_forecast": "$3.43",
-      "surprise_pct": 1.46,
-      "reaction": {
-        "D-1": 0,
-        "D0": -0.57,
-        "D+1": -0.88,
-        "D+2": 1.58,
-        "D+3": 2.33
-      }
-    },
-    {
       "symbol": "MA",
       "name": "Mastercard Incorporated",
       "report_date": "2026-10-29",
@@ -192,20 +191,19 @@
       }
     },
     {
-      "symbol": "KO",
-      "name": "Coca-Cola Company (The)",
-      "report_date": "2026-10-27",
-      "report_time": "미상",
-      "market_cap": 404722975000,
-      "eps": "$0.91",
-      "eps_forecast": "$0.87",
-      "surprise_pct": 4.6,
+      "symbol": "PLTR",
+      "name": "Palantir Technologies Inc.",
+      "report_date": "2026-11-02",
+      "report_time": "장후",
+      "market_cap": 442242073000,
+      "eps_forecast": "$0.32",
+      "surprise_pct": null,
       "reaction": {
         "D-1": 0,
-        "D0": -1.64,
-        "D+1": -1.05,
-        "D+2": 0.13,
-        "D+3": 1.49
+        "D0": -3.13,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
       }
     },
     {
@@ -243,23 +241,6 @@
       }
     },
     {
-      "symbol": "NVS",
-      "name": "Novartis AG",
-      "report_date": "2026-10-27",
-      "report_time": "미상",
-      "market_cap": 306811699000,
-      "eps": "$2.46",
-      "eps_forecast": "$2.25",
-      "surprise_pct": 9.33,
-      "reaction": {
-        "D-1": 0,
-        "D0": 1.98,
-        "D+1": 1.48,
-        "D+2": 4.74,
-        "D+3": 4.54
-      }
-    },
-    {
       "symbol": "SHEL",
       "name": "Shell PLC",
       "report_date": "2026-10-29",
@@ -274,23 +255,6 @@
         "D+1": 3.33,
         "D+2": -0.24,
         "D+3": null
-      }
-    },
-    {
-      "symbol": "HSBC",
-      "name": "HSBC Holdings plc",
-      "report_date": "2026-10-27",
-      "report_time": "미상",
-      "market_cap": 293665309000,
-      "eps": "$2.10",
-      "eps_forecast": "$2.13",
-      "surprise_pct": -1.41,
-      "reaction": {
-        "D-1": 0,
-        "D0": -5.7,
-        "D+1": -5.31,
-        "D+2": -5.05,
-        "D+3": -6.35
       }
     },
     {
@@ -512,6 +476,39 @@
         "D+1": 2.86,
         "D+2": 1.92,
         "D+3": 3.61
+      }
+    },
+    {
+      "symbol": "VRTX",
+      "name": "Vertex Pharmaceuticals Incorporated",
+      "report_date": "2026-11-02",
+      "report_time": "장후",
+      "market_cap": 141654245000,
+      "eps_forecast": "$4.36",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -1.03,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "BBVA",
+      "name": "Banco Bilbao Vizcaya Argentaria S.A.",
+      "report_date": "2026-10-29",
+      "report_time": "미상",
+      "market_cap": 132875821000,
+      "eps": "$0.61",
+      "eps_forecast": "$0.62",
+      "surprise_pct": -1.61,
+      "reaction": {
+        "D-1": 0,
+        "D0": -2.24,
+        "D+1": -6.28,
+        "D+2": -4.28,
+        "D+3": null
       }
     }
   ]
