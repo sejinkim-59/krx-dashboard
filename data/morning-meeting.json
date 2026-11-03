@@ -1,32 +1,30 @@
 {
-  "date": "20261103",
-  "generated_at": "2026-11-03T11:53:58.217Z",
+  "date": "20261104",
+  "generated_at": "2026-11-03T19:22:34.238Z",
   "engineVersion": "v0.2",
   "objective": "NEW INFORMATION + CHANGE + CATALYST + CONFIRMATION — 오늘 새롭게 연구할 가치가 생긴 종목을 조기 발견",
   "methodologyNote": "시장/섹터 상대강도는 공식 지수가 아니라 가격 데이터 보유 종목의 동일가중 평균(proxy)입니다. Earnings/Revision Factor는 컨센서스 Provider 미연결로 항상 제외(MISSING_DATA)됩니다. 시총 순위는 KIS 시세를 조회한 종목(관심종목 + Discovery 추가조회) 안에서의 순위입니다. 수급 전환의 발생 시점은 \"최근 3거래일 vs 직전 5거래일\" 창 비교라 일 단위 날짜가 아닌 창 단위입니다. 종목 단위로 연결되지 않은 Catalyst: Investor Relations 일정, Large Contract(단일판매·공급계약), Index Rebalancing (정기변경 월 주기만 수집, 종목별 편입·편출 예고 없음), Major Customer Event, Policy Event, Share Cancellation(소각).",
   "marketRegime": {
-    "state": "Risk-off",
+    "state": "Neutral",
     "evidence": [
-      "VIX +1.28%",
-      "S&P500 -0.51%",
-      "NASDAQ -1.07%",
-      "USD/KRW +1.47%"
+      "VIX -3.4%",
+      "S&P500 +0.49%",
+      "NASDAQ +0.97%",
+      "USD/KRW +1.41%"
     ],
     "strategyPreference": [
-      "EVENT_DRIVEN",
-      "INFLECTION"
+      "DISCOVERY",
+      "EVENT_DRIVEN"
     ],
-    "avoid": [
-      "MOMENTUM"
-    ]
+    "avoid": []
   },
   "screening": {
-    "universeCount": 1118,
+    "universeCount": 1115,
     "technicalCoverageCount": 109,
     "discoveryPreScreenCount": 446,
     "discoveryEnrichedCount": 60,
-    "signalCount": 262,
-    "passedRiskCount": 27,
+    "signalCount": 261,
+    "passedRiskCount": 26,
     "rejectedCount": 0
   },
   "dailyOutput": [
@@ -143,7 +141,7 @@
       "bucket": "DISCOVERY",
       "label": "Discovery",
       "requested": 2,
-      "qualifiedCount": 16,
+      "qualifiedCount": 15,
       "picks": [
         {
           "symbol": "128940",
@@ -326,7 +324,7 @@
               }
             ]
           },
-          "marketCapRank": 71,
+          "marketCapRank": 70,
           "flowEvents": [
             "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.211%)",
             "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 0.406%)",
@@ -929,7 +927,7 @@
           }
         ]
       },
-      "marketCapRank": 71,
+      "marketCapRank": 70,
       "flowEvents": [
         "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.211%)",
         "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 0.406%)",
@@ -1296,7 +1294,7 @@
       ],
       "newSignalCount": 4,
       "tier": 1,
-      "marketCapRank": 71,
+      "marketCapRank": 70,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-02, 1거래일 전)",
@@ -1344,7 +1342,7 @@
       ],
       "newSignalCount": 4,
       "tier": 1,
-      "marketCapRank": 98,
+      "marketCapRank": 97,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-02, 1거래일 전)",
@@ -1839,7 +1837,7 @@
       ],
       "newSignalCount": 3,
       "tier": 2,
-      "marketCapRank": 83,
+      "marketCapRank": 82,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-10-28, 4거래일 전)",
@@ -1885,7 +1883,7 @@
       ],
       "newSignalCount": 2,
       "tier": 2,
-      "marketCapRank": 89,
+      "marketCapRank": 88,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-02, 1거래일 전)",
@@ -1974,7 +1972,7 @@
       ],
       "newSignalCount": 2,
       "tier": 2,
-      "marketCapRank": 102,
+      "marketCapRank": 101,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-10-27, 5거래일 전)",
@@ -2019,7 +2017,7 @@
       ],
       "newSignalCount": 2,
       "tier": 2,
-      "marketCapRank": 66,
+      "marketCapRank": 65,
       "isLargeCap": false,
       "whatChanged": [
         "거래량 20일 평균 대비 2.4배로 급증 (2026-10-29, 3거래일 전)",
@@ -2106,7 +2104,7 @@
       ],
       "newSignalCount": 3,
       "tier": 2,
-      "marketCapRank": 97,
+      "marketCapRank": 96,
       "isLargeCap": false,
       "whatChanged": [
         "거래량 20일 평균 대비 2.7배로 급증 (2026-10-29, 3거래일 전)",

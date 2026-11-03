@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-03T11:46:19.862Z",
+  "updated_at": "2026-11-03T19:15:58.179Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
@@ -9,14 +9,14 @@
       "name": "Apple Inc.",
       "report_date": "2026-11-02",
       "report_time": "미상",
-      "market_cap": 5029592300000,
+      "market_cap": 4937503200000,
       "eps": "$2.05",
       "eps_forecast": "$1.98",
       "surprise_pct": 3.54,
       "reaction": {
         "D-1": 0,
         "D0": -1.83,
-        "D+1": null,
+        "D+1": -3.54,
         "D+2": null,
         "D+3": null
       }
@@ -26,7 +26,7 @@
       "name": "Microsoft Corporation",
       "report_date": "2026-10-28",
       "report_time": "미상",
-      "market_cap": 3875805070000,
+      "market_cap": 3765971710000,
       "eps": "$4.89",
       "eps_forecast": "$4.71",
       "surprise_pct": 3.82,
@@ -43,7 +43,7 @@
       "name": "Alphabet Inc.",
       "report_date": "2026-10-28",
       "report_time": "미상",
-      "market_cap": 3440352950000,
+      "market_cap": 3429903110000,
       "eps": "$2.12",
       "eps_forecast": "$2.94",
       "surprise_pct": -27.89,
@@ -60,7 +60,7 @@
       "name": "Alphabet Inc.",
       "report_date": "2026-10-28",
       "report_time": "미상",
-      "market_cap": 3440352950000,
+      "market_cap": 3429903110000,
       "eps": "$2.12",
       "eps_forecast": "$2.94",
       "surprise_pct": -27.89,
@@ -77,7 +77,7 @@
       "name": "Amazon.com, Inc.",
       "report_date": "2026-10-29",
       "report_time": "미상",
-      "market_cap": 2592490390000,
+      "market_cap": 2656031210000,
       "eps": "$1.89",
       "eps_forecast": "$2.01",
       "surprise_pct": -5.97,
@@ -86,7 +86,7 @@
         "D0": -4.25,
         "D+1": -5.6,
         "D+2": -3.52,
-        "D+3": null
+        "D+3": -1.49
       }
     },
     {
@@ -94,7 +94,7 @@
       "name": "Eli Lilly and Company",
       "report_date": "2026-10-29",
       "report_time": "미상",
-      "market_cap": 1333543700000,
+      "market_cap": 1327381870000,
       "eps": "$7.48",
       "eps_forecast": "$5.38",
       "surprise_pct": 39.03,
@@ -103,7 +103,7 @@
         "D0": 6.63,
         "D+1": 10.03,
         "D+2": 9.52,
-        "D+3": null
+        "D+3": 10.07
       }
     },
     {
@@ -111,7 +111,7 @@
       "name": "SK hynix Inc.",
       "report_date": "2026-10-28",
       "report_time": "미상",
-      "market_cap": 1087540230000,
+      "market_cap": 1076607250000,
       "eps": "$3.84",
       "eps_forecast": "$5.96",
       "surprise_pct": -35.57,
@@ -128,7 +128,7 @@
       "name": "ExxonMobil Holdings Corporation",
       "report_date": "2026-10-30",
       "report_time": "미상",
-      "market_cap": 769955530000,
+      "market_cap": 738787200000,
       "eps": "$4.23",
       "eps_forecast": "$3.90",
       "surprise_pct": 8.46,
@@ -136,7 +136,7 @@
         "D-1": 0,
         "D0": 2.16,
         "D+1": -1.98,
-        "D+2": null,
+        "D+2": -3.28,
         "D+3": null
       }
     },
@@ -145,7 +145,7 @@
       "name": "Mastercard Incorporated",
       "report_date": "2026-10-29",
       "report_time": "미상",
-      "market_cap": 555819070000,
+      "market_cap": 573320990000,
       "eps": "$5.31",
       "eps_forecast": "$5.14",
       "surprise_pct": 3.31,
@@ -154,7 +154,7 @@
         "D0": 4.16,
         "D+1": 4.54,
         "D+2": 7.83,
-        "D+3": null
+        "D+3": 6.46
       }
     },
     {
@@ -162,7 +162,7 @@
       "name": "AbbVie Inc.",
       "report_date": "2026-10-30",
       "report_time": "미상",
-      "market_cap": 521105211000,
+      "market_cap": 510414160000,
       "eps": "$3.82",
       "eps_forecast": "$3.74",
       "surprise_pct": 2.14,
@@ -170,7 +170,7 @@
         "D-1": 0,
         "D0": 1.41,
         "D+1": -0.67,
-        "D+2": null,
+        "D+2": -1.31,
         "D+3": null
       }
     },
@@ -179,7 +179,7 @@
       "name": "Chevron Corporation",
       "report_date": "2026-10-30",
       "report_time": "미상",
-      "market_cap": 465333649000,
+      "market_cap": 450021425000,
       "eps": "$5.28",
       "eps_forecast": "$4.78",
       "surprise_pct": 10.46,
@@ -187,7 +187,7 @@
         "D-1": 0,
         "D0": 1.75,
         "D+1": -1.59,
-        "D+2": null,
+        "D+2": -2.63,
         "D+3": null
       }
     },
@@ -196,14 +196,14 @@
       "name": "Palantir Technologies Inc.",
       "report_date": "2026-11-02",
       "report_time": "미상",
-      "market_cap": 442242073000,
+      "market_cap": 428382224000,
       "eps": "$0.32",
       "eps_forecast": "$0.32",
       "surprise_pct": null,
       "reaction": {
         "D-1": 0,
         "D0": -3.13,
-        "D+1": null,
+        "D+1": -4.98,
         "D+2": null,
         "D+3": null
       }
@@ -213,7 +213,7 @@
       "name": "Merck & Company, Inc.",
       "report_date": "2026-10-29",
       "report_time": "미상",
-      "market_cap": 368891494000,
+      "market_cap": 366029570000,
       "eps": "$2.49",
       "eps_forecast": "$2.12",
       "surprise_pct": 17.45,
@@ -222,7 +222,7 @@
         "D0": 3.83,
         "D+1": 6.1,
         "D+2": 5.27,
-        "D+3": null
+        "D+3": 2.6
       }
     },
     {
@@ -230,7 +230,7 @@
       "name": "Intel Corporation",
       "report_date": "2026-10-29",
       "report_time": "미상",
-      "market_cap": 347546157000,
+      "market_cap": 318740562000,
       "eps": "$0.41",
       "eps_forecast": "$0.28",
       "surprise_pct": 46.43,
@@ -239,7 +239,7 @@
         "D0": -3.62,
         "D+1": -31.16,
         "D+2": -37.22,
-        "D+3": null
+        "D+3": -37.12
       }
     },
     {
@@ -247,7 +247,7 @@
       "name": "Shell PLC",
       "report_date": "2026-10-29",
       "report_time": "미상",
-      "market_cap": 299139465000,
+      "market_cap": 290883600000,
       "eps": "$3.86",
       "eps_forecast": "$3.54",
       "surprise_pct": 9.04,
@@ -256,7 +256,7 @@
         "D0": 2.36,
         "D+1": 3.33,
         "D+2": -0.24,
-        "D+3": null
+        "D+3": -1.25
       }
     },
     {
@@ -264,7 +264,7 @@
       "name": "AstraZeneca PLC",
       "report_date": "2026-10-30",
       "report_time": "미상",
-      "market_cap": 289998406000,
+      "market_cap": 288221954000,
       "eps": "$2.79",
       "eps_forecast": "$2.60",
       "surprise_pct": 7.31,
@@ -272,7 +272,7 @@
         "D-1": 0,
         "D0": 7.02,
         "D+1": 6.98,
-        "D+2": null,
+        "D+2": 5.68,
         "D+3": null
       }
     },
@@ -281,7 +281,7 @@
       "name": "Caterpillar, Inc.",
       "report_date": "2026-10-29",
       "report_time": "미상",
-      "market_cap": 286262526000,
+      "market_cap": 282065699000,
       "eps": "$7.20",
       "eps_forecast": "$7.12",
       "surprise_pct": 1.12,
@@ -290,7 +290,7 @@
         "D0": -9.25,
         "D+1": -12.7,
         "D+2": -13.98,
-        "D+3": null
+        "D+3": -12.69
       }
     },
     {
@@ -298,7 +298,7 @@
       "name": "Linde plc",
       "report_date": "2026-10-29",
       "report_time": "미상",
-      "market_cap": 236079235000,
+      "market_cap": 238595015000,
       "eps": "$4.59",
       "eps_forecast": "$4.52",
       "surprise_pct": 1.55,
@@ -307,7 +307,7 @@
         "D0": -0.99,
         "D+1": 1.2,
         "D+2": 2.27,
-        "D+3": null
+        "D+3": 1.37
       }
     },
     {
@@ -315,7 +315,7 @@
       "name": "GE Vernova Inc.",
       "report_date": "2026-10-28",
       "report_time": "미상",
-      "market_cap": 227058516000,
+      "market_cap": 228217799000,
       "eps": "$4.81",
       "eps_forecast": "$4.03",
       "surprise_pct": 19.35,
@@ -328,28 +328,11 @@
       }
     },
     {
-      "symbol": "TTE",
-      "name": "TotalEnergies SE",
-      "report_date": "2026-10-29",
-      "report_time": "미상",
-      "market_cap": 218768409000,
-      "eps": "$4.03",
-      "eps_forecast": "$4.11",
-      "surprise_pct": -1.95,
-      "reaction": {
-        "D-1": 0,
-        "D0": 1.24,
-        "D+1": 2.64,
-        "D+2": -0.11,
-        "D+3": null
-      }
-    },
-    {
       "symbol": "GILD",
       "name": "Gilead Sciences, Inc.",
       "report_date": "2026-10-29",
       "report_time": "미상",
-      "market_cap": 211635552000,
+      "market_cap": 211266879000,
       "eps": "$2.55",
       "eps_forecast": "$2.17",
       "surprise_pct": 17.51,
@@ -358,7 +341,24 @@
         "D0": 4.03,
         "D+1": 7.21,
         "D+2": 6.99,
-        "D+3": null
+        "D+3": 6.5
+      }
+    },
+    {
+      "symbol": "TTE",
+      "name": "TotalEnergies SE",
+      "report_date": "2026-10-29",
+      "report_time": "미상",
+      "market_cap": 204174230000,
+      "eps": "$4.03",
+      "eps_forecast": "$4.11",
+      "surprise_pct": -1.95,
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.24,
+        "D+1": 2.64,
+        "D+2": -0.11,
+        "D+3": -0.27
       }
     },
     {
@@ -366,7 +366,7 @@
       "name": "KLA Corporation ",
       "report_date": "2026-10-28",
       "report_time": "미상",
-      "market_cap": 205750796000,
+      "market_cap": 199496581000,
       "eps": "$1.22",
       "eps_forecast": "$1.18",
       "surprise_pct": 3.39,
@@ -383,7 +383,7 @@
       "name": "Amphenol Corporation",
       "report_date": "2026-10-28",
       "report_time": "미상",
-      "market_cap": 195551183000,
+      "market_cap": 197145821000,
       "eps": "$0.80",
       "eps_forecast": "$0.73",
       "surprise_pct": 9.59,
@@ -396,28 +396,11 @@
       }
     },
     {
-      "symbol": "SNDK",
-      "name": "Sandisk Corporation",
-      "report_date": "2026-10-29",
-      "report_time": "미상",
-      "market_cap": 167256179000,
-      "eps": "$48.92",
-      "eps_forecast": "$46.19",
-      "surprise_pct": 5.91,
-      "reaction": {
-        "D-1": 0,
-        "D0": -5.32,
-        "D+1": -18.07,
-        "D+2": -23.47,
-        "D+3": null
-      }
-    },
-    {
       "symbol": "TMUS",
       "name": "T-Mobile US, Inc.",
       "report_date": "2026-10-28",
       "report_time": "미상",
-      "market_cap": 165712593000,
+      "market_cap": 169642508000,
       "eps": "$3.22",
       "eps_forecast": "$2.86",
       "surprise_pct": 12.59,
@@ -434,7 +417,7 @@
       "name": "Banco Santander, S.A.",
       "report_date": "2026-10-28",
       "report_time": "미상",
-      "market_cap": 163654304000,
+      "market_cap": 167513342000,
       "eps": "$0.26",
       "eps_forecast": "$0.26",
       "surprise_pct": null,
@@ -451,7 +434,7 @@
       "name": "Anheuser-Busch Inbev SA",
       "report_date": "2026-10-29",
       "report_time": "미상",
-      "market_cap": 158520050000,
+      "market_cap": 165600018000,
       "eps": "$1.21",
       "eps_forecast": "$1.14",
       "surprise_pct": 6.14,
@@ -460,7 +443,24 @@
         "D0": -1.8,
         "D+1": -0.74,
         "D+2": 3.69,
-        "D+3": null
+        "D+3": 0.62
+      }
+    },
+    {
+      "symbol": "SNDK",
+      "name": "Sandisk Corporation",
+      "report_date": "2026-10-29",
+      "report_time": "미상",
+      "market_cap": 152972444000,
+      "eps": "$48.92",
+      "eps_forecast": "$46.19",
+      "surprise_pct": 5.91,
+      "reaction": {
+        "D-1": 0,
+        "D0": -5.32,
+        "D+1": -18.07,
+        "D+2": -23.47,
+        "D+3": -20.92
       }
     },
     {
@@ -468,7 +468,7 @@
       "name": "UBS AG",
       "report_date": "2026-10-28",
       "report_time": "미상",
-      "market_cap": 148002832000,
+      "market_cap": 150454534000,
       "eps": "$0.85",
       "eps_forecast": "$0.91",
       "surprise_pct": -6.59,
@@ -485,14 +485,14 @@
       "name": "Vertex Pharmaceuticals Incorporated",
       "report_date": "2026-11-02",
       "report_time": "미상",
-      "market_cap": 141654245000,
+      "market_cap": 140201902000,
       "eps": "$4.21",
       "eps_forecast": "$4.36",
       "surprise_pct": -3.44,
       "reaction": {
         "D-1": 0,
         "D0": -1.03,
-        "D+1": null,
+        "D+1": -4.58,
         "D+2": null,
         "D+3": null
       }
@@ -502,7 +502,7 @@
       "name": "Banco Bilbao Vizcaya Argentaria S.A.",
       "report_date": "2026-10-29",
       "report_time": "미상",
-      "market_cap": 132875821000,
+      "market_cap": 135710204000,
       "eps": "$0.61",
       "eps_forecast": "$0.62",
       "surprise_pct": -1.61,
@@ -511,7 +511,7 @@
         "D0": -2.24,
         "D+1": -6.28,
         "D+2": -4.28,
-        "D+3": null
+        "D+3": -3.88
       }
     }
   ]
