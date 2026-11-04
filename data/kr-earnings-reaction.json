@@ -1,12 +1,90 @@
 {
-  "updated_at": "2026-11-04T07:04:13.468Z",
+  "updated_at": "2026-11-04T15:21:54.785Z",
   "note": "최근 21일 영업(잠정)실적 공정공시 기준. 반응(%)은 공시일 이후 첫 거래일(D0) 기준 D-1 종가 대비 누적 수익률.",
   "range": {
-    "from": "20261014",
-    "to": "20261104"
+    "from": "20261015",
+    "to": "20261105"
   },
-  "count": 261,
+  "count": 269,
   "items": [
+    {
+      "corp_name": "SK가스",
+      "stock_code": "018670",
+      "rcept_dt": "20261104",
+      "reaction": null
+    },
+    {
+      "corp_name": "블루엠텍",
+      "stock_code": "439580",
+      "rcept_dt": "20261104",
+      "reaction": null
+    },
+    {
+      "corp_name": "에어부산",
+      "stock_code": "298690",
+      "rcept_dt": "20261104",
+      "reaction": null
+    },
+    {
+      "corp_name": "LX홀딩스",
+      "stock_code": "383800",
+      "rcept_dt": "20261104",
+      "reaction": null
+    },
+    {
+      "corp_name": "LX하우시스",
+      "stock_code": "108670",
+      "rcept_dt": "20261104",
+      "reaction": null
+    },
+    {
+      "corp_name": "SK리츠",
+      "stock_code": "395400",
+      "rcept_dt": "20261104",
+      "reaction": null
+    },
+    {
+      "corp_name": "JW중외제약",
+      "stock_code": "001060",
+      "rcept_dt": "20261104",
+      "reaction": null
+    },
+    {
+      "corp_name": "JW홀딩스",
+      "stock_code": "096760",
+      "rcept_dt": "20261104",
+      "reaction": null
+    },
+    {
+      "corp_name": "이녹스첨단소재",
+      "stock_code": "272290",
+      "rcept_dt": "20261104",
+      "reaction": null
+    },
+    {
+      "corp_name": "고려아연",
+      "stock_code": "010130",
+      "rcept_dt": "20261104",
+      "reaction": null
+    },
+    {
+      "corp_name": "영진약품",
+      "stock_code": "003520",
+      "rcept_dt": "20261104",
+      "reaction": null
+    },
+    {
+      "corp_name": "HL D&I",
+      "stock_code": "014790",
+      "rcept_dt": "20261104",
+      "reaction": null
+    },
+    {
+      "corp_name": "비씨엔씨",
+      "stock_code": "146320",
+      "rcept_dt": "20261104",
+      "reaction": null
+    },
     {
       "corp_name": "GS피앤엘",
       "stock_code": "499790",
@@ -2930,48 +3008,6 @@
         "D+3": -12.94,
         "D+4": -9.62
       }
-    },
-    {
-      "corp_name": "에스원",
-      "stock_code": "012750",
-      "rcept_dt": "20261014",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261014800566",
-      "reaction": {
-        "D-1": 0,
-        "D0": -1.49,
-        "D+1": 12.18,
-        "D+2": 12.07,
-        "D+3": 12.18,
-        "D+4": 11.84
-      }
-    },
-    {
-      "corp_name": "서울바이오시스",
-      "stock_code": "092190",
-      "rcept_dt": "20261014",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261014900328",
-      "reaction": null
-    },
-    {
-      "corp_name": "서울반도체",
-      "stock_code": "046890",
-      "rcept_dt": "20261014",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261014900322",
-      "reaction": null
-    },
-    {
-      "corp_name": "세나테크놀로지",
-      "stock_code": "061090",
-      "rcept_dt": "20261014",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261014900180",
-      "reaction": null
-    },
-    {
-      "corp_name": "테크윙",
-      "stock_code": "089030",
-      "rcept_dt": "20261014",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261014900085",
-      "reaction": null
     }
   ]
 }
