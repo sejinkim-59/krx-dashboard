@@ -1,269 +1,451 @@
 {
-  "updated_at": "2026-11-05T17:44:30.991Z",
+  "updated_at": "2026-11-05T23:27:30.844Z",
   "note": "최근 21일 영업(잠정)실적 공정공시 기준. 반응(%)은 공시일 이후 첫 거래일(D0) 기준 D-1 종가 대비 누적 수익률.",
   "range": {
     "from": "20261016",
     "to": "20261106"
   },
-  "count": 311,
+  "count": 312,
   "items": [
+    {
+      "corp_name": "씨어스",
+      "stock_code": "458870",
+      "rcept_dt": "20261106",
+      "reaction": null
+    },
     {
       "corp_name": "KG이니시스",
       "stock_code": "035600",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900954",
       "reaction": null
     },
     {
       "corp_name": "JW신약",
       "stock_code": "067290",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900858",
       "reaction": null
     },
     {
       "corp_name": "현대에버다임",
       "stock_code": "041440",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900829",
       "reaction": null
     },
     {
       "corp_name": "중앙백신",
       "stock_code": "072020",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900802",
       "reaction": null
     },
     {
       "corp_name": "케이씨씨글라스",
       "stock_code": "344820",
       "rcept_dt": "20261105",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105800848",
+      "reaction": {
+        "D-1": 0,
+        "D0": -0.22,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "JW생명과학",
       "stock_code": "234080",
       "rcept_dt": "20261105",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105800786",
+      "reaction": {
+        "D-1": 0,
+        "D0": 0.48,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "이수앱지스",
       "stock_code": "086890",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900637",
       "reaction": null
     },
     {
       "corp_name": "티엘비",
       "stock_code": "356860",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900643",
       "reaction": null
     },
     {
       "corp_name": "카페24",
       "stock_code": "042000",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900546",
       "reaction": null
     },
     {
       "corp_name": "HDC",
       "stock_code": "012630",
       "rcept_dt": "20261105",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105800611",
+      "reaction": {
+        "D-1": 0,
+        "D0": -0.46,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "케이피에프",
       "stock_code": "024880",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900572",
       "reaction": null
     },
     {
       "corp_name": "한국금융지주",
       "stock_code": "071050",
       "rcept_dt": "20261105",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105800548",
+      "reaction": {
+        "D-1": 0,
+        "D0": -0.27,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "SK바이오사이언스",
       "stock_code": "302440",
       "rcept_dt": "20261105",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105800512",
+      "reaction": {
+        "D-1": 0,
+        "D0": 7.1,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "롯데렌탈",
       "stock_code": "089860",
       "rcept_dt": "20261105",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105800495",
+      "reaction": {
+        "D-1": 0,
+        "D0": -0.38,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "엘앤에프",
       "stock_code": "066970",
       "rcept_dt": "20261105",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105800489",
+      "reaction": {
+        "D-1": 0,
+        "D0": -6.24,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "KZ정밀",
       "stock_code": "036560",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900514",
       "reaction": null
     },
     {
       "corp_name": "넷마블",
       "stock_code": "251270",
       "rcept_dt": "20261105",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105800523",
+      "reaction": {
+        "D-1": 0,
+        "D0": 7.31,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "케이티앤지",
       "stock_code": "033780",
       "rcept_dt": "20261105",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105800482",
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.15,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "인바디",
       "stock_code": "041830",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900410",
       "reaction": null
     },
     {
       "corp_name": "BGF리테일",
       "stock_code": "282330",
       "rcept_dt": "20261105",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105800405",
+      "reaction": {
+        "D-1": 0,
+        "D0": 2.11,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "BGF",
       "stock_code": "027410",
       "rcept_dt": "20261105",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105800404",
+      "reaction": {
+        "D-1": 0,
+        "D0": -1.4,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "GS",
       "stock_code": "078930",
       "rcept_dt": "20261105",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105800350",
+      "reaction": {
+        "D-1": 0,
+        "D0": -2.66,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "빅텍",
       "stock_code": "065450",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900330",
       "reaction": null
     },
     {
       "corp_name": "CJ프레시웨이",
       "stock_code": "051500",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900319",
       "reaction": null
     },
     {
       "corp_name": "에코프로머티",
       "stock_code": "450080",
       "rcept_dt": "20261105",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105800323",
+      "reaction": {
+        "D-1": 0,
+        "D0": -5.52,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "BGF에코머티리얼즈",
       "stock_code": "126600",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900304",
       "reaction": null
     },
     {
       "corp_name": "에코프로",
       "stock_code": "086520",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900298",
       "reaction": null
     },
     {
       "corp_name": "에코프로에이치엔",
       "stock_code": "383310",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900294",
       "reaction": null
     },
     {
       "corp_name": "CJ ENM",
       "stock_code": "035760",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900301",
       "reaction": null
     },
     {
       "corp_name": "LG화학",
       "stock_code": "051910",
       "rcept_dt": "20261105",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105800303",
+      "reaction": {
+        "D-1": 0,
+        "D0": -0.4,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "케이엔더블유",
       "stock_code": "105330",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900295",
       "reaction": null
     },
     {
       "corp_name": "한온시스템",
       "stock_code": "018880",
       "rcept_dt": "20261105",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105800291",
+      "reaction": {
+        "D-1": 0,
+        "D0": -3.58,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "스튜디오드래곤",
       "stock_code": "253450",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900281",
       "reaction": null
     },
     {
       "corp_name": "모델솔루션",
       "stock_code": "417970",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900273",
       "reaction": null
     },
     {
       "corp_name": "케이씨씨",
       "stock_code": "002380",
       "rcept_dt": "20261105",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105800261",
+      "reaction": {
+        "D-1": 0,
+        "D0": -5.24,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "덕산네오룩스",
       "stock_code": "213420",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900210",
       "reaction": null
     },
     {
       "corp_name": "아이쓰리시스템",
       "stock_code": "214430",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900183",
       "reaction": null
     },
     {
       "corp_name": "덕산하이메탈",
       "stock_code": "077360",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900184",
       "reaction": null
     },
     {
       "corp_name": "에스케이바이오팜",
       "stock_code": "326030",
       "rcept_dt": "20261105",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105800127",
+      "reaction": {
+        "D-1": 0,
+        "D0": 12.27,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "에코프로비엠",
       "stock_code": "247540",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900114",
       "reaction": null
     },
     {
       "corp_name": "KG파이낸셜",
       "stock_code": "046440",
       "rcept_dt": "20261105",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105900118",
       "reaction": null
     },
     {
       "corp_name": "롯데에너지머티리얼즈",
       "stock_code": "020150",
       "rcept_dt": "20261105",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105800089",
+      "reaction": {
+        "D-1": 0,
+        "D0": -18.37,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "카카오",
       "stock_code": "035720",
       "rcept_dt": "20261105",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105800007",
+      "reaction": {
+        "D-1": 0,
+        "D0": 10.65,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "SK가스",
@@ -273,7 +455,7 @@
       "reaction": {
         "D-1": 0,
         "D0": -1.25,
-        "D+1": null,
+        "D+1": -6.05,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -294,7 +476,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 0.27,
-        "D+1": null,
+        "D+1": 6.38,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -308,7 +490,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 0.64,
-        "D+1": null,
+        "D+1": -5.78,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -322,7 +504,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 1.6,
-        "D+1": null,
+        "D+1": -3.9,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -336,7 +518,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 2.48,
-        "D+1": null,
+        "D+1": -0.1,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -350,7 +532,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 0.87,
-        "D+1": null,
+        "D+1": 1.97,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -364,7 +546,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 1.57,
-        "D+1": null,
+        "D+1": -5.1,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -385,7 +567,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 2.53,
-        "D+1": null,
+        "D+1": 13.81,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -399,7 +581,7 @@
       "reaction": {
         "D-1": 0,
         "D0": -5.88,
-        "D+1": null,
+        "D+1": -8.98,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -413,7 +595,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 0.64,
-        "D+1": null,
+        "D+1": 7.43,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -434,7 +616,7 @@
       "reaction": {
         "D-1": 0,
         "D0": -1.18,
-        "D+1": null,
+        "D+1": -17.11,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -455,7 +637,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 6.75,
-        "D+1": null,
+        "D+1": -11.64,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -469,7 +651,7 @@
       "reaction": {
         "D-1": 0,
         "D0": -4.32,
-        "D+1": null,
+        "D+1": -0.83,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -483,7 +665,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 0.98,
-        "D+1": null,
+        "D+1": 1.38,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -504,7 +686,7 @@
       "reaction": {
         "D-1": 0,
         "D0": -9.04,
-        "D+1": null,
+        "D+1": -26.88,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -532,7 +714,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 2.93,
-        "D+1": null,
+        "D+1": 9.55,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -546,7 +728,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 1.98,
-        "D+1": null,
+        "D+1": -3.62,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -560,7 +742,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 13.32,
-        "D+1": null,
+        "D+1": 5.55,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -581,7 +763,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 4.18,
-        "D+1": null,
+        "D+1": -7.86,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -602,7 +784,7 @@
       "reaction": {
         "D-1": 0,
         "D0": -0.67,
-        "D+1": null,
+        "D+1": -2.67,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -616,7 +798,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 1.82,
-        "D+1": null,
+        "D+1": -9.09,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -651,7 +833,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 0.81,
-        "D+1": null,
+        "D+1": -0.15,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -665,7 +847,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 7.11,
-        "D+1": null,
+        "D+1": 10.01,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -679,7 +861,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 4.17,
-        "D+1": null,
+        "D+1": 4.31,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -693,7 +875,7 @@
       "reaction": {
         "D-1": 0,
         "D0": -0.36,
-        "D+1": null,
+        "D+1": -0.36,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -707,7 +889,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 12.36,
-        "D+1": null,
+        "D+1": 12.18,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -721,7 +903,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 3.96,
-        "D+1": null,
+        "D+1": 3.08,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -735,7 +917,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 0.68,
-        "D+1": null,
+        "D+1": 4.4,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -763,7 +945,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 4.73,
-        "D+1": null,
+        "D+1": 8.11,
         "D+2": null,
         "D+3": null,
         "D+4": null
@@ -792,7 +974,7 @@
         "D-1": 0,
         "D0": 2.88,
         "D+1": 1.08,
-        "D+2": null,
+        "D+2": 2.88,
         "D+3": null,
         "D+4": null
       }
@@ -813,7 +995,7 @@
         "D-1": 0,
         "D0": 0.51,
         "D+1": -2.02,
-        "D+2": null,
+        "D+2": 0.3,
         "D+3": null,
         "D+4": null
       }
@@ -827,7 +1009,7 @@
         "D-1": 0,
         "D0": -1.04,
         "D+1": 1.9,
-        "D+2": null,
+        "D+2": 15.92,
         "D+3": null,
         "D+4": null
       }
@@ -855,7 +1037,7 @@
         "D-1": 0,
         "D0": -3.24,
         "D+1": -16.53,
-        "D+2": null,
+        "D+2": -22.2,
         "D+3": null,
         "D+4": null
       }
@@ -869,7 +1051,7 @@
         "D-1": 0,
         "D0": -0.38,
         "D+1": -12.17,
-        "D+2": null,
+        "D+2": -9.13,
         "D+3": null,
         "D+4": null
       }
@@ -890,7 +1072,7 @@
         "D-1": 0,
         "D0": 0.58,
         "D+1": -10.97,
-        "D+2": null,
+        "D+2": -3.68,
         "D+3": null,
         "D+4": null
       }
@@ -904,7 +1086,7 @@
         "D-1": 0,
         "D0": -1.82,
         "D+1": 9.79,
-        "D+2": null,
+        "D+2": 6.16,
         "D+3": null,
         "D+4": null
       }
@@ -918,7 +1100,7 @@
         "D-1": 0,
         "D0": -3.63,
         "D+1": 6.89,
-        "D+2": null,
+        "D+2": 13.06,
         "D+3": null,
         "D+4": null
       }
@@ -932,7 +1114,7 @@
         "D-1": 0,
         "D0": 0.99,
         "D+1": 0.99,
-        "D+2": null,
+        "D+2": 6.73,
         "D+3": null,
         "D+4": null
       }
@@ -953,7 +1135,7 @@
         "D-1": 0,
         "D0": 8.52,
         "D+1": 2.54,
-        "D+2": null,
+        "D+2": 4.62,
         "D+3": null,
         "D+4": null
       }
@@ -974,7 +1156,7 @@
         "D-1": 0,
         "D0": -5.78,
         "D+1": -6.37,
-        "D+2": null,
+        "D+2": -1.63,
         "D+3": null,
         "D+4": null
       }
@@ -988,7 +1170,7 @@
         "D-1": 0,
         "D0": -1.33,
         "D+1": -1.33,
-        "D+2": null,
+        "D+2": -0.24,
         "D+3": null,
         "D+4": null
       }
@@ -1009,7 +1191,7 @@
         "D-1": 0,
         "D0": -0.2,
         "D+1": -0.2,
-        "D+2": null,
+        "D+2": -2.38,
         "D+3": null,
         "D+4": null
       }
@@ -1030,7 +1212,7 @@
         "D-1": 0,
         "D0": -2.74,
         "D+1": 0.73,
-        "D+2": null,
+        "D+2": -0.73,
         "D+3": null,
         "D+4": null
       }
@@ -1051,7 +1233,7 @@
         "D-1": 0,
         "D0": -6.98,
         "D+1": -5.26,
-        "D+2": null,
+        "D+2": -14.08,
         "D+3": null,
         "D+4": null
       }
@@ -1065,7 +1247,7 @@
         "D-1": 0,
         "D0": 2.35,
         "D+1": -0.29,
-        "D+2": null,
+        "D+2": -0.74,
         "D+3": null,
         "D+4": null
       }
@@ -1079,7 +1261,7 @@
         "D-1": 0,
         "D0": 2.2,
         "D+1": -3.73,
-        "D+2": null,
+        "D+2": -6.61,
         "D+3": null,
         "D+4": null
       }
@@ -1101,7 +1283,7 @@
         "D0": 0.53,
         "D+1": -2.47,
         "D+2": -1.06,
-        "D+3": null,
+        "D+3": -0.18,
         "D+4": null
       }
     },
@@ -1115,7 +1297,7 @@
         "D0": 0,
         "D+1": -3.1,
         "D+2": -1.83,
-        "D+3": null,
+        "D+3": 1.03,
         "D+4": null
       }
     },
@@ -1136,7 +1318,7 @@
         "D0": 2.51,
         "D+1": 0.19,
         "D+2": 0.58,
-        "D+3": null,
+        "D+3": 1.16,
         "D+4": null
       }
     },
@@ -1164,7 +1346,7 @@
         "D0": 0.76,
         "D+1": -1.15,
         "D+2": -0.76,
-        "D+3": null,
+        "D+3": -2.48,
         "D+4": null
       }
     },
@@ -1186,7 +1368,7 @@
         "D+1": -11.63,
         "D+2": -10.8,
         "D+3": -11.54,
-        "D+4": null
+        "D+4": -6.93
       }
     },
     {
@@ -1199,7 +1381,7 @@
         "D0": -0.12,
         "D+1": -0.25,
         "D+2": 1,
-        "D+3": null,
+        "D+3": 4.36,
         "D+4": null
       }
     },
@@ -1220,7 +1402,7 @@
         "D0": 2.19,
         "D+1": 2.5,
         "D+2": -0.31,
-        "D+3": null,
+        "D+3": 3.44,
         "D+4": null
       }
     },
@@ -1234,7 +1416,7 @@
         "D0": 4.03,
         "D+1": -2.58,
         "D+2": -2.2,
-        "D+3": null,
+        "D+3": -1.88,
         "D+4": null
       }
     },
@@ -1262,7 +1444,7 @@
         "D0": 3.47,
         "D+1": -2.56,
         "D+2": 0.91,
-        "D+3": null,
+        "D+3": 0,
         "D+4": null
       }
     },
@@ -1276,7 +1458,7 @@
         "D0": 5.69,
         "D+1": -6.75,
         "D+2": -6.18,
-        "D+3": null,
+        "D+3": -11.95,
         "D+4": null
       }
     },
@@ -1297,7 +1479,7 @@
         "D0": 1.45,
         "D+1": 1.45,
         "D+2": 3.23,
-        "D+3": null,
+        "D+3": 2.74,
         "D+4": null
       }
     },
@@ -1311,7 +1493,7 @@
         "D0": -3.78,
         "D+1": -1.89,
         "D+2": 1.18,
-        "D+3": null,
+        "D+3": 1.89,
         "D+4": null
       }
     },
@@ -1325,7 +1507,7 @@
         "D0": 2.94,
         "D+1": -6.68,
         "D+2": 0.8,
-        "D+3": null,
+        "D+3": -4.81,
         "D+4": null
       }
     },
@@ -1339,7 +1521,7 @@
         "D0": 4.18,
         "D+1": 2.46,
         "D+2": 11.88,
-        "D+3": null,
+        "D+3": 8.94,
         "D+4": null
       }
     },
@@ -1353,7 +1535,7 @@
         "D0": 1.82,
         "D+1": -0.29,
         "D+2": -0.59,
-        "D+3": null,
+        "D+3": -4.22,
         "D+4": null
       }
     },
@@ -1367,7 +1549,7 @@
         "D0": 4.19,
         "D+1": 0.99,
         "D+2": 11.91,
-        "D+3": null,
+        "D+3": 7.77,
         "D+4": null
       }
     },
@@ -1388,7 +1570,7 @@
         "D0": 0.69,
         "D+1": -3.77,
         "D+2": -3.43,
-        "D+3": null,
+        "D+3": -7.55,
         "D+4": null
       }
     },
@@ -1402,7 +1584,7 @@
         "D0": 5.13,
         "D+1": -8.21,
         "D+2": -10.64,
-        "D+3": null,
+        "D+3": -26.41,
         "D+4": null
       }
     },
@@ -1416,7 +1598,7 @@
         "D0": 1.8,
         "D+1": -0.39,
         "D+2": 0.77,
-        "D+3": null,
+        "D+3": 0.52,
         "D+4": null
       }
     },
@@ -1430,7 +1612,7 @@
         "D0": 5.32,
         "D+1": 0.44,
         "D+2": 3.1,
-        "D+3": null,
+        "D+3": 6.21,
         "D+4": null
       }
     },
@@ -1444,7 +1626,7 @@
         "D0": 5.65,
         "D+1": 2.77,
         "D+2": 7.3,
-        "D+3": null,
+        "D+3": 3.39,
         "D+4": null
       }
     },
@@ -1458,7 +1640,7 @@
         "D0": -2.72,
         "D+1": -5,
         "D+2": -3.59,
-        "D+3": null,
+        "D+3": -7.5,
         "D+4": null
       }
     },
@@ -1472,7 +1654,7 @@
         "D0": -2.11,
         "D+1": -2.11,
         "D+2": 0.42,
-        "D+3": null,
+        "D+3": 2.53,
         "D+4": null
       }
     },
@@ -1486,7 +1668,7 @@
         "D0": 0.61,
         "D+1": 2.83,
         "D+2": 5.26,
-        "D+3": null,
+        "D+3": 0.81,
         "D+4": null
       }
     },
@@ -1500,7 +1682,7 @@
         "D0": 2.84,
         "D+1": 4.69,
         "D+2": 6.45,
-        "D+3": null,
+        "D+3": 9.29,
         "D+4": null
       }
     },
@@ -1514,7 +1696,7 @@
         "D0": 7.57,
         "D+1": 6.37,
         "D+2": 2.09,
-        "D+3": null,
+        "D+3": 5.28,
         "D+4": null
       }
     },
@@ -1536,7 +1718,7 @@
         "D+1": -1.91,
         "D+2": -3.08,
         "D+3": -2.93,
-        "D+4": null
+        "D+4": -3.23
       }
     },
     {
@@ -1550,7 +1732,7 @@
         "D+1": -4.33,
         "D+2": -5.52,
         "D+3": -5.88,
-        "D+4": null
+        "D+4": -4.75
       }
     },
     {
@@ -1564,7 +1746,7 @@
         "D+1": 2.86,
         "D+2": 5.07,
         "D+3": 7.12,
-        "D+4": null
+        "D+4": 1.06
       }
     },
     {
@@ -1578,7 +1760,7 @@
         "D+1": 5.88,
         "D+2": 8.73,
         "D+3": 8.73,
-        "D+4": null
+        "D+4": 9.68
       }
     },
     {
@@ -1592,7 +1774,7 @@
         "D+1": 1.31,
         "D+2": -3.66,
         "D+3": 0.39,
-        "D+4": null
+        "D+4": -9.14
       }
     },
     {
@@ -1606,7 +1788,7 @@
         "D+1": -19.46,
         "D+2": -21.3,
         "D+3": -18.48,
-        "D+4": null
+        "D+4": -24.35
       }
     },
     {
@@ -1620,7 +1802,7 @@
         "D+1": 2.35,
         "D+2": 4.56,
         "D+3": 8.06,
-        "D+4": null
+        "D+4": 7.35
       }
     },
     {
@@ -1641,7 +1823,7 @@
         "D+1": 0.78,
         "D+2": -0.09,
         "D+3": -0.09,
-        "D+4": null
+        "D+4": -0.52
       }
     },
     {
@@ -1655,7 +1837,7 @@
         "D+1": 2.35,
         "D+2": 0.14,
         "D+3": 1.38,
-        "D+4": null
+        "D+4": -0.14
       }
     },
     {
@@ -1669,7 +1851,7 @@
         "D+1": 7.27,
         "D+2": 3.14,
         "D+3": 7.22,
-        "D+4": null
+        "D+4": -6.28
       }
     },
     {
@@ -1683,7 +1865,7 @@
         "D+1": 5.76,
         "D+2": 3.26,
         "D+3": 3.59,
-        "D+4": null
+        "D+4": 0.87
       }
     },
     {
@@ -1697,7 +1879,7 @@
         "D+1": 7.92,
         "D+2": 5.12,
         "D+3": 2.68,
-        "D+4": null
+        "D+4": -3.05
       }
     },
     {
@@ -1711,7 +1893,7 @@
         "D+1": -9.09,
         "D+2": -11.69,
         "D+3": -11.04,
-        "D+4": null
+        "D+4": -12.08
       }
     },
     {
@@ -1746,7 +1928,7 @@
         "D+1": -15.7,
         "D+2": -26.92,
         "D+3": -28,
-        "D+4": null
+        "D+4": -42.26
       }
     },
     {
@@ -1760,7 +1942,7 @@
         "D+1": -4.32,
         "D+2": -3.04,
         "D+3": -2.24,
-        "D+4": null
+        "D+4": 2.72
       }
     },
     {
@@ -1774,7 +1956,7 @@
         "D+1": -4.15,
         "D+2": -8.13,
         "D+3": -8.13,
-        "D+4": null
+        "D+4": -8.48
       }
     },
     {
@@ -1788,7 +1970,7 @@
         "D+1": -0.59,
         "D+2": -2.18,
         "D+3": -1.39,
-        "D+4": null
+        "D+4": -0.4
       }
     },
     {
@@ -1802,7 +1984,7 @@
         "D+1": -6.62,
         "D+2": -11.43,
         "D+3": -10.83,
-        "D+4": null
+        "D+4": -13.83
       }
     },
     {
@@ -1816,7 +1998,7 @@
         "D+1": -2.91,
         "D+2": -7.37,
         "D+3": -8.5,
-        "D+4": null
+        "D+4": -5.34
       }
     },
     {
@@ -1830,7 +2012,7 @@
         "D+1": 9.7,
         "D+2": 8.37,
         "D+3": 10.27,
-        "D+4": null
+        "D+4": 9.89
       }
     },
     {
@@ -1844,7 +2026,7 @@
         "D+1": -0.39,
         "D+2": -1.55,
         "D+3": -0.39,
-        "D+4": null
+        "D+4": -2.52
       }
     },
     {
@@ -1858,7 +2040,7 @@
         "D+1": 2.55,
         "D+2": 1.38,
         "D+3": 0.59,
-        "D+4": null
+        "D+4": 1.96
       }
     },
     {
@@ -1872,7 +2054,7 @@
         "D+1": -3.6,
         "D+2": -4.22,
         "D+3": -4.12,
-        "D+4": null
+        "D+4": -6.07
       }
     },
     {
@@ -1893,7 +2075,7 @@
         "D+1": -0.11,
         "D+2": -1.32,
         "D+3": -0.11,
-        "D+4": null
+        "D+4": -4.07
       }
     },
     {
@@ -1907,7 +2089,7 @@
         "D+1": 0,
         "D+2": 2.02,
         "D+3": 2.5,
-        "D+4": null
+        "D+4": 4.05
       }
     },
     {
@@ -1921,7 +2103,7 @@
         "D+1": -1.86,
         "D+2": -3.72,
         "D+3": -4.05,
-        "D+4": null
+        "D+4": -8.86
       }
     },
     {
@@ -1942,7 +2124,7 @@
         "D+1": 0.56,
         "D+2": -2.44,
         "D+3": -1.88,
-        "D+4": null
+        "D+4": -4.7
       }
     },
     {
@@ -1956,7 +2138,7 @@
         "D+1": 8.32,
         "D+2": 6.46,
         "D+3": 6.99,
-        "D+4": null
+        "D+4": 6.73
       }
     },
     {
@@ -1977,7 +2159,7 @@
         "D+1": -6.95,
         "D+2": -10.7,
         "D+3": -9.76,
-        "D+4": null
+        "D+4": -13.64
       }
     },
     {
@@ -1991,7 +2173,7 @@
         "D+1": -0.85,
         "D+2": -0.71,
         "D+3": 0.57,
-        "D+4": null
+        "D+4": 3.12
       }
     },
     {
@@ -2005,7 +2187,7 @@
         "D+1": -6.73,
         "D+2": -12.92,
         "D+3": -10.09,
-        "D+4": null
+        "D+4": -4.78
       }
     },
     {
@@ -2019,7 +2201,7 @@
         "D+1": 1.04,
         "D+2": -4.02,
         "D+3": -5.05,
-        "D+4": null
+        "D+4": -5.96
       }
     },
     {
@@ -2033,7 +2215,7 @@
         "D+1": -2.72,
         "D+2": -5.78,
         "D+3": -2.38,
-        "D+4": null
+        "D+4": -4.93
       }
     },
     {
@@ -2047,7 +2229,7 @@
         "D+1": -2.64,
         "D+2": -8.58,
         "D+3": -5.49,
-        "D+4": null
+        "D+4": -14.12
       }
     },
     {
@@ -2061,7 +2243,7 @@
         "D+1": -13.11,
         "D+2": -15.73,
         "D+3": -15.56,
-        "D+4": null
+        "D+4": -15.56
       }
     },
     {

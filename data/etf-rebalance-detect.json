@@ -1,8 +1,164 @@
 {
-  "updated_at": "2026-11-05T17:44:48.550Z",
+  "updated_at": "2026-11-05T23:27:45.002Z",
   "note": "국내 섹터·테마 ETF 상위 25종목의 전일 스냅샷 대비 구성종목 변화 감지. 신규 편입·편출 종목과 비중 1.5%p 이상 변동 종목을 표시합니다. (첫 실행 시에는 비교 대상이 없어 결과가 비어있습니다)",
   "universe_size": 25,
   "has_baseline": true,
-  "changed_etf_count": 0,
-  "items": []
+  "changed_etf_count": 4,
+  "items": [
+    {
+      "code": "462330",
+      "name": "KODEX 2차전지산업레버리지",
+      "trd_dt": "2026-11-05",
+      "prev_trd_dt": "2026-11-04",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "name": "KODEX 2차전지산업",
+          "prev_weight": 30.9,
+          "curr_weight": 27.04,
+          "delta": -3.86
+        },
+        {
+          "name": "LG에너지솔루션",
+          "prev_weight": 30.42,
+          "curr_weight": 27.58,
+          "delta": -2.84
+        },
+        {
+          "name": "삼성SDI",
+          "prev_weight": 19.7,
+          "curr_weight": 17.3,
+          "delta": -2.4
+        }
+      ]
+    },
+    {
+      "code": "0061Z0",
+      "name": "RISE 단기특수은행채액티브",
+      "trd_dt": "2026-11-05",
+      "prev_trd_dt": "2026-11-04",
+      "added": [
+        {
+          "name": "미래에셋증권 20251219-335-48",
+          "weight": null
+        },
+        {
+          "name": "아이엠증권 20261104-1-5(단)",
+          "weight": null
+        },
+        {
+          "name": "키움증권 20261104-14-1(단)",
+          "weight": null
+        },
+        {
+          "name": "한국투자금융지주 20260430-196-139",
+          "weight": null
+        },
+        {
+          "name": "한국투자금융지주 20260430-196-140",
+          "weight": null
+        },
+        {
+          "name": "한국투자금융지주 20260430-196-142",
+          "weight": null
+        },
+        {
+          "name": "한국투자금융지주 20260430-196-143",
+          "weight": null
+        },
+        {
+          "name": "한국투자금융지주 20260430-196-144",
+          "weight": null
+        },
+        {
+          "name": "한국투자금융지주 20260430-196-145",
+          "weight": null
+        },
+        {
+          "name": "현대카드 20260430-190-26",
+          "weight": null
+        },
+        {
+          "name": "현대카드 20261104-2-7(단)",
+          "weight": null
+        }
+      ],
+      "removed": [
+        {
+          "name": "아이엠증권 20261103-1-3(단)",
+          "weight": null
+        }
+      ],
+      "changed": []
+    },
+    {
+      "code": "494310",
+      "name": "KODEX 반도체레버리지",
+      "trd_dt": "2026-11-05",
+      "prev_trd_dt": "2026-11-04",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "name": "KODEX 반도체",
+          "prev_weight": 28.48,
+          "curr_weight": 23.6,
+          "delta": -4.88
+        },
+        {
+          "name": "SK하이닉스",
+          "prev_weight": 17.52,
+          "curr_weight": 15.61,
+          "delta": -1.91
+        },
+        {
+          "name": "삼성전자",
+          "prev_weight": 19.74,
+          "curr_weight": 17.95,
+          "delta": -1.79
+        }
+      ]
+    },
+    {
+      "code": "488080",
+      "name": "TIGER 반도체TOP10레버리지",
+      "trd_dt": "2026-11-05",
+      "prev_trd_dt": "2026-11-04",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "name": "SK하이닉스",
+          "prev_weight": 34.77,
+          "curr_weight": 30.67,
+          "delta": -4.1
+        },
+        {
+          "name": "SK스퀘어",
+          "prev_weight": 32.55,
+          "curr_weight": 28.63,
+          "delta": -3.92
+        },
+        {
+          "name": "TIGER 반도체TOP10",
+          "prev_weight": 36.65,
+          "curr_weight": 32.93,
+          "delta": -3.72
+        },
+        {
+          "name": "삼성전자",
+          "prev_weight": 34.82,
+          "curr_weight": 31.47,
+          "delta": -3.35
+        },
+        {
+          "name": "원화현금",
+          "prev_weight": -54.84,
+          "curr_weight": -52.49,
+          "delta": 2.35
+        }
+      ]
+    }
+  ]
 }
