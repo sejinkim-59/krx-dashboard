@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05T23:26:11.225Z",
+  "updated_at": "2026-11-06T03:43:43.195Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
@@ -39,57 +39,6 @@
       }
     },
     {
-      "symbol": "XOM",
-      "name": "ExxonMobil Holdings Corporation",
-      "report_date": "2026-10-30",
-      "report_time": "미상",
-      "market_cap": 690489980000,
-      "eps": "$4.23",
-      "eps_forecast": "$3.90",
-      "surprise_pct": 8.46,
-      "reaction": {
-        "D-1": 0,
-        "D0": 2.16,
-        "D+1": -1.98,
-        "D+2": -3.18,
-        "D+3": -7.65
-      }
-    },
-    {
-      "symbol": "ABBV",
-      "name": "AbbVie Inc.",
-      "report_date": "2026-10-30",
-      "report_time": "미상",
-      "market_cap": 521146302000,
-      "eps": "$3.82",
-      "eps_forecast": "$3.74",
-      "surprise_pct": 2.14,
-      "reaction": {
-        "D-1": 0,
-        "D0": 1.41,
-        "D+1": -0.67,
-        "D+2": -1.65,
-        "D+3": 1.39
-      }
-    },
-    {
-      "symbol": "CVX",
-      "name": "Chevron Corporation",
-      "report_date": "2026-10-30",
-      "report_time": "미상",
-      "market_cap": 428663341000,
-      "eps": "$5.28",
-      "eps_forecast": "$4.78",
-      "surprise_pct": 10.46,
-      "reaction": {
-        "D-1": 0,
-        "D0": 1.75,
-        "D+1": -1.59,
-        "D+2": -2.67,
-        "D+3": -6.26
-      }
-    },
-    {
       "symbol": "PLTR",
       "name": "Palantir Technologies Inc.",
       "report_date": "2026-11-02",
@@ -104,23 +53,6 @@
         "D+1": -4.73,
         "D+2": -6.74,
         "D+3": -15.82
-      }
-    },
-    {
-      "symbol": "AZN",
-      "name": "AstraZeneca PLC",
-      "report_date": "2026-10-30",
-      "report_time": "미상",
-      "market_cap": 293090525000,
-      "eps": "$2.79",
-      "eps_forecast": "$2.60",
-      "surprise_pct": 7.31,
-      "reaction": {
-        "D-1": 0,
-        "D0": 7.02,
-        "D+1": 6.98,
-        "D+2": 5.44,
-        "D+3": 8.38
       }
     },
     {
@@ -294,6 +226,54 @@
       }
     },
     {
+      "symbol": "COP",
+      "name": "ConocoPhillips",
+      "report_date": "2026-11-05",
+      "report_time": "장전",
+      "market_cap": 164511154000,
+      "eps_forecast": "$3.06",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -1.08,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "SONY",
+      "name": "Sony Group Corporation",
+      "report_date": "2026-11-05",
+      "report_time": "장전",
+      "market_cap": 153002557000,
+      "eps_forecast": "$0.38",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 6.13,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "MNST",
+      "name": "Monster Beverage Corporation",
+      "report_date": "2026-11-05",
+      "report_time": "장후",
+      "market_cap": 143255798000,
+      "eps_forecast": "$0.30",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -1.89,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
       "symbol": "UBER",
       "name": "Uber Technologies, Inc.",
       "report_date": "2026-11-04",
@@ -379,37 +359,19 @@
       }
     },
     {
-      "symbol": "BP",
-      "name": "BP p.l.c.",
-      "report_date": "2026-10-30",
-      "report_time": "미상",
-      "market_cap": 121003074000,
-      "eps": "$3.26",
-      "eps_forecast": "$2.66",
-      "surprise_pct": 22.56,
+      "symbol": "PH",
+      "name": "Parker-Hannifin Corporation",
+      "report_date": "2026-11-05",
+      "report_time": "장전",
+      "market_cap": 114786263000,
+      "eps_forecast": "$8.23",
+      "surprise_pct": null,
       "reaction": {
         "D-1": 0,
-        "D0": 0.08,
-        "D+1": -4.91,
-        "D+2": -5.48,
-        "D+3": -9.41
-      }
-    },
-    {
-      "symbol": "SNY",
-      "name": "Sanofi",
-      "report_date": "2026-10-30",
-      "report_time": "미상",
-      "market_cap": 115772408000,
-      "eps": "$2.04",
-      "eps_forecast": "$1.63",
-      "surprise_pct": 25.15,
-      "reaction": {
-        "D-1": 0,
-        "D0": 2.81,
-        "D+1": 5.61,
-        "D+2": 5.1,
-        "D+3": 10.06
+        "D0": -1.97,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
       }
     },
     {
@@ -430,6 +392,22 @@
       }
     },
     {
+      "symbol": "SO",
+      "name": "Southern Company (The)",
+      "report_date": "2026-11-05",
+      "report_time": "장전",
+      "market_cap": 107121803000,
+      "eps_forecast": "$1.71",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 0.24,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
       "symbol": "MPC",
       "name": "Marathon Petroleum Corporation",
       "report_date": "2026-11-03",
@@ -443,6 +421,38 @@
         "D0": -0.71,
         "D+1": -8.76,
         "D+2": -12.33,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "ABNB",
+      "name": "Airbnb, Inc.",
+      "report_date": "2026-11-05",
+      "report_time": "장후",
+      "market_cap": 105607832000,
+      "eps_forecast": "$2.86",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -3.54,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "CNQ",
+      "name": "Canadian Natural Resources Limited",
+      "report_date": "2026-11-05",
+      "report_time": "장전",
+      "market_cap": 102455566000,
+      "eps_forecast": "$1.05",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -1.45,
+        "D+1": null,
+        "D+2": null,
         "D+3": null
       }
     },
@@ -481,37 +491,19 @@
       }
     },
     {
-      "symbol": "GD",
-      "name": "General Dynamics Corporation",
-      "report_date": "2026-10-30",
-      "report_time": "미상",
-      "market_cap": 98596528000,
-      "eps": "$4.49",
-      "eps_forecast": "$4.14",
-      "surprise_pct": 8.45,
+      "symbol": "DUK",
+      "name": "Duke Energy Corporation",
+      "report_date": "2026-11-05",
+      "report_time": "장전",
+      "market_cap": 101041611000,
+      "eps_forecast": "$1.87",
+      "surprise_pct": null,
       "reaction": {
         "D-1": 0,
-        "D0": 0.48,
-        "D+1": 0.71,
-        "D+2": 0.99,
-        "D+3": -1.6
-      }
-    },
-    {
-      "symbol": "REGN",
-      "name": "Regeneron Pharmaceuticals, Inc.",
-      "report_date": "2026-10-30",
-      "report_time": "미상",
-      "market_cap": 96275816000,
-      "eps": "$18.43",
-      "eps_forecast": "$13.76",
-      "surprise_pct": 33.94,
-      "reaction": {
-        "D-1": 0,
-        "D0": 13.33,
-        "D+1": 17.4,
-        "D+2": 18.88,
-        "D+3": 13.67
+        "D0": 0.38,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
       }
     }
   ]
