@@ -1,27 +1,21 @@
 {
-  "updated_at": "2026-11-06T19:02:58.520Z",
+  "updated_at": "2026-11-06T23:47:06.987Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
-  "count": 3,
+  "count": 2,
   "items": [
     {
       "symbol": "APP",
-      "close": 392.292,
-      "day_change_pct": 10.16,
-      "pct_above_prior_window": 10.16
+      "close": 391.22,
+      "day_change_pct": 9.86,
+      "pct_above_prior_window": 9.86
     },
     {
       "symbol": "ABNB",
-      "close": 190.77,
-      "day_change_pct": 12.13,
-      "pct_above_prior_window": 0.71
-    },
-    {
-      "symbol": "KO",
-      "close": 96.09,
-      "day_change_pct": 0.38,
-      "pct_above_prior_window": 0.27
+      "close": 189.99,
+      "day_change_pct": 11.67,
+      "pct_above_prior_window": 0.3
     }
   ]
 }
