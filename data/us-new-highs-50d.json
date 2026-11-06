@@ -1,51 +1,27 @@
 {
-  "updated_at": "2026-11-06T11:57:41.298Z",
+  "updated_at": "2026-11-06T19:02:58.520Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
-  "count": 7,
+  "count": 3,
   "items": [
     {
       "symbol": "APP",
-      "close": 356.1,
-      "day_change_pct": 31.04,
-      "pct_above_prior_window": 6.54
+      "close": 392.292,
+      "day_change_pct": 10.16,
+      "pct_above_prior_window": 10.16
     },
     {
-      "symbol": "VRSK",
-      "close": 211.47,
-      "day_change_pct": 6.88,
-      "pct_above_prior_window": 4
+      "symbol": "ABNB",
+      "close": 190.77,
+      "day_change_pct": 12.13,
+      "pct_above_prior_window": 0.71
     },
     {
-      "symbol": "COST",
-      "close": 1065.59,
-      "day_change_pct": 1.83,
-      "pct_above_prior_window": 1.83
-    },
-    {
-      "symbol": "CCEP",
-      "close": 117.29,
-      "day_change_pct": 1.25,
-      "pct_above_prior_window": 1.25
-    },
-    {
-      "symbol": "PEP",
-      "close": 142.71,
-      "day_change_pct": 0.2,
-      "pct_above_prior_window": 0.2
-    },
-    {
-      "symbol": "KDP",
-      "close": 36.89,
-      "day_change_pct": 0.27,
-      "pct_above_prior_window": 0.19
-    },
-    {
-      "symbol": "EXC",
-      "close": 46.53,
-      "day_change_pct": 0.63,
-      "pct_above_prior_window": 0.17
+      "symbol": "KO",
+      "close": 96.09,
+      "day_change_pct": 0.38,
+      "pct_above_prior_window": 0.27
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T11:57:53.142Z",
+  "updated_at": "2026-11-06T19:03:10.023Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
@@ -9,7 +9,7 @@
       "name": "Apple Inc.",
       "report_date": "2026-11-02",
       "report_time": "미상",
-      "market_cap": 5079142800000,
+      "market_cap": 5001541300000,
       "eps": "$2.05",
       "eps_forecast": "$1.98",
       "surprise_pct": 3.54,
@@ -26,7 +26,7 @@
       "name": "Advanced Micro Devices, Inc.",
       "report_date": "2026-11-03",
       "report_time": "미상",
-      "market_cap": 797921180000,
+      "market_cap": 663251260000,
       "eps": "$1.84",
       "eps_forecast": "$1.68",
       "surprise_pct": 9.52,
@@ -35,7 +35,7 @@
         "D0": 3.65,
         "D+1": 4.7,
         "D+2": -13.38,
-        "D+3": null
+        "D+3": -4.83
       }
     },
     {
@@ -43,7 +43,7 @@
       "name": "Palantir Technologies Inc.",
       "report_date": "2026-11-02",
       "report_time": "미상",
-      "market_cap": 413710713000,
+      "market_cap": 373448016000,
       "eps": "$0.32",
       "eps_forecast": "$0.32",
       "surprise_pct": null,
@@ -60,14 +60,14 @@
       "name": "Toyota Motor Corp Ltd Ord",
       "report_date": "2026-11-05",
       "report_time": "미상",
-      "market_cap": 259974808000,
+      "market_cap": 284283077000,
       "eps": "$4.10",
       "eps_forecast": "",
       "surprise_pct": null,
       "reaction": {
         "D-1": 0,
         "D0": 9.35,
-        "D+1": null,
+        "D+1": 8,
         "D+2": null,
         "D+3": null
       }
@@ -77,7 +77,7 @@
       "name": "Amgen Inc.",
       "report_date": "2026-11-03",
       "report_time": "미상",
-      "market_cap": 258681602000,
+      "market_cap": 248970740000,
       "eps": "$6.45",
       "eps_forecast": "$5.74",
       "surprise_pct": 12.37,
@@ -86,7 +86,7 @@
         "D0": -0.9,
         "D+1": 2.8,
         "D+2": -1.11,
-        "D+3": null
+        "D+3": -1.15
       }
     },
     {
@@ -94,7 +94,7 @@
       "name": "Arista Networks, Inc.",
       "report_date": "2026-11-03",
       "report_time": "미상",
-      "market_cap": 225103380000,
+      "market_cap": 201083109000,
       "eps": "$1.11",
       "eps_forecast": "$0.99",
       "surprise_pct": 12.12,
@@ -103,24 +103,7 @@
         "D0": 3.52,
         "D+1": 8.74,
         "D+2": -3.03,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "ARM",
-      "name": "Arm Holdings plc",
-      "report_date": "2026-11-04",
-      "report_time": "미상",
-      "market_cap": 204085805000,
-      "eps": "$0.15",
-      "eps_forecast": "$0.22",
-      "surprise_pct": -31.82,
-      "reaction": {
-        "D-1": 0,
-        "D0": -5.28,
-        "D+1": -17.67,
-        "D+2": null,
-        "D+3": null
+        "D+3": 3.86
       }
     },
     {
@@ -128,7 +111,7 @@
       "name": "McDonald's Corporation",
       "report_date": "2026-11-04",
       "report_time": "미상",
-      "market_cap": 198295306000,
+      "market_cap": 196752654000,
       "eps": "$3.57",
       "eps_forecast": "$3.36",
       "surprise_pct": 6.25,
@@ -136,7 +119,7 @@
         "D-1": 0,
         "D0": 6.53,
         "D+1": 5.7,
-        "D+2": null,
+        "D+2": 5.71,
         "D+3": null
       }
     },
@@ -145,7 +128,7 @@
       "name": "Shopify Inc.",
       "report_date": "2026-11-03",
       "report_time": "미상",
-      "market_cap": 195842834000,
+      "market_cap": 184682381000,
       "eps": "$0.42",
       "eps_forecast": "$0.33",
       "surprise_pct": 27.27,
@@ -154,7 +137,7 @@
         "D0": -8.74,
         "D+1": -2.04,
         "D+2": -7.98,
-        "D+3": null
+        "D+3": -4.47
       }
     },
     {
@@ -162,7 +145,7 @@
       "name": "Novo Nordisk A/S",
       "report_date": "2026-11-04",
       "report_time": "미상",
-      "market_cap": 186770113000,
+      "market_cap": 178445599000,
       "eps": "$0.89",
       "eps_forecast": "$0.81",
       "surprise_pct": 9.88,
@@ -170,24 +153,24 @@
         "D-1": 0,
         "D0": 4.95,
         "D+1": 0.27,
-        "D+2": null,
+        "D+2": 0.55,
         "D+3": null
       }
     },
     {
-      "symbol": "QCOM",
-      "name": "QUALCOMM Incorporated",
+      "symbol": "ARM",
+      "name": "Arm Holdings plc",
       "report_date": "2026-11-04",
       "report_time": "미상",
-      "market_cap": 181890007000,
-      "eps": "$1.45",
-      "eps_forecast": "$1.46",
-      "surprise_pct": -0.68,
+      "market_cap": 177399284000,
+      "eps": "$0.15",
+      "eps_forecast": "$0.22",
+      "surprise_pct": -31.82,
       "reaction": {
         "D-1": 0,
-        "D0": 5.33,
-        "D+1": -4.67,
-        "D+2": null,
+        "D0": -5.28,
+        "D+1": -17.67,
+        "D+2": -14.42,
         "D+3": null
       }
     },
@@ -196,7 +179,7 @@
       "name": "Pfizer, Inc.",
       "report_date": "2026-11-03",
       "report_time": "미상",
-      "market_cap": 175498494000,
+      "market_cap": 170311631000,
       "eps": "$0.87",
       "eps_forecast": "$0.72",
       "surprise_pct": 20.83,
@@ -205,6 +188,23 @@
         "D0": -2.18,
         "D+1": 0.39,
         "D+2": -2.58,
+        "D+3": -4.45
+      }
+    },
+    {
+      "symbol": "QCOM",
+      "name": "QUALCOMM Incorporated",
+      "report_date": "2026-11-04",
+      "report_time": "미상",
+      "market_cap": 167722500000,
+      "eps": "$1.45",
+      "eps_forecast": "$1.46",
+      "surprise_pct": -0.68,
+      "reaction": {
+        "D-1": 0,
+        "D0": 5.33,
+        "D+1": -4.67,
+        "D+2": 0.88,
         "D+3": null
       }
     },
@@ -213,7 +213,7 @@
       "name": "Williams Companies, Inc. (The)",
       "report_date": "2026-11-02",
       "report_time": "미상",
-      "market_cap": 172347638000,
+      "market_cap": 163179135000,
       "eps": "$0.54",
       "eps_forecast": "$0.55",
       "surprise_pct": -1.82,
@@ -230,14 +230,14 @@
       "name": "ConocoPhillips",
       "report_date": "2026-11-05",
       "report_time": "미상",
-      "market_cap": 164511154000,
+      "market_cap": 162733179000,
       "eps": "$3.27",
       "eps_forecast": "$3.06",
       "surprise_pct": 6.86,
       "reaction": {
         "D-1": 0,
         "D0": -1.08,
-        "D+1": null,
+        "D+1": -0.49,
         "D+2": null,
         "D+3": null
       }
@@ -247,14 +247,14 @@
       "name": "Sony Group Corporation",
       "report_date": "2026-11-05",
       "report_time": "미상",
-      "market_cap": 153002557000,
+      "market_cap": 162377286000,
       "eps": "$0.48",
       "eps_forecast": "$0.38",
       "surprise_pct": 26.32,
       "reaction": {
         "D-1": 0,
         "D0": 6.13,
-        "D+1": null,
+        "D+1": 4.08,
         "D+2": null,
         "D+3": null
       }
@@ -263,15 +263,15 @@
       "symbol": "MNST",
       "name": "Monster Beverage Corporation",
       "report_date": "2026-11-05",
-      "report_time": "장후",
-      "market_cap": 143255798000,
-      "eps": "$0.28",
+      "report_time": "미상",
+      "market_cap": 140552307000,
+      "eps": "$0.30",
       "eps_forecast": "$0.30",
       "surprise_pct": null,
       "reaction": {
         "D-1": 0,
         "D0": -1.89,
-        "D+1": null,
+        "D+1": -5.21,
         "D+2": null,
         "D+3": null
       }
@@ -281,7 +281,7 @@
       "name": "Uber Technologies, Inc.",
       "report_date": "2026-11-04",
       "report_time": "미상",
-      "market_cap": 142713668000,
+      "market_cap": 140441747000,
       "eps": "$0.25",
       "eps_forecast": "$0.94",
       "surprise_pct": -73.4,
@@ -289,7 +289,7 @@
         "D-1": 0,
         "D0": 4.91,
         "D+1": 3.27,
-        "D+2": null,
+        "D+2": 3.62,
         "D+3": null
       }
     },
@@ -298,7 +298,7 @@
       "name": "Vertex Pharmaceuticals Incorporated",
       "report_date": "2026-11-02",
       "report_time": "미상",
-      "market_cap": 139202331000,
+      "market_cap": 137544188000,
       "eps": "$4.21",
       "eps_forecast": "$4.36",
       "surprise_pct": -3.44,
@@ -315,7 +315,7 @@
       "name": "Eaton Corporation, PLC",
       "report_date": "2026-11-03",
       "report_time": "미상",
-      "market_cap": 137171583000,
+      "market_cap": 127047270000,
       "eps": "$3.68",
       "eps_forecast": "$3.54",
       "surprise_pct": 3.95,
@@ -324,7 +324,7 @@
         "D0": 7,
         "D+1": -3.55,
         "D+2": -10.67,
-        "D+3": null
+        "D+3": -7
       }
     },
     {
@@ -332,7 +332,7 @@
       "name": "Booking Holdings Inc.",
       "report_date": "2026-11-03",
       "report_time": "미상",
-      "market_cap": 127150604000,
+      "market_cap": 125477274000,
       "eps": "$4.66",
       "eps_forecast": "$4.48",
       "surprise_pct": 4.02,
@@ -341,7 +341,7 @@
         "D0": 1.25,
         "D+1": 11.2,
         "D+2": 9.74,
-        "D+3": null
+        "D+3": 6.35
       }
     },
     {
@@ -349,7 +349,7 @@
       "name": "McKesson Corporation",
       "report_date": "2026-11-04",
       "report_time": "미상",
-      "market_cap": 124686402000,
+      "market_cap": 123769545000,
       "eps": "$11.68",
       "eps_forecast": "$10.69",
       "surprise_pct": 9.26,
@@ -357,7 +357,24 @@
         "D-1": 0,
         "D0": 6.98,
         "D+1": 7.24,
-        "D+2": null,
+        "D+2": 6.57,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "APP",
+      "name": "Applovin Corporation",
+      "report_date": "2026-11-04",
+      "report_time": "미상",
+      "market_cap": 117983764000,
+      "eps": "$4.30",
+      "eps_forecast": "$3.94",
+      "surprise_pct": 9.14,
+      "reaction": {
+        "D-1": 0,
+        "D0": 10.69,
+        "D+1": 45.05,
+        "D+2": 59.82,
         "D+3": null
       }
     },
@@ -366,14 +383,14 @@
       "name": "Parker-Hannifin Corporation",
       "report_date": "2026-11-05",
       "report_time": "미상",
-      "market_cap": 114786263000,
+      "market_cap": 112528843000,
       "eps": "$8.90",
       "eps_forecast": "$8.23",
       "surprise_pct": 8.14,
       "reaction": {
         "D-1": 0,
         "D0": -1.97,
-        "D+1": null,
+        "D+1": 1.04,
         "D+2": null,
         "D+3": null
       }
@@ -383,7 +400,7 @@
       "name": "Marriott International",
       "report_date": "2026-11-02",
       "report_time": "미상",
-      "market_cap": 109405897000,
+      "market_cap": 107451433000,
       "eps": "$3.02",
       "eps_forecast": "$2.86",
       "surprise_pct": 5.59,
@@ -400,65 +417,14 @@
       "name": "Southern Company (The)",
       "report_date": "2026-11-05",
       "report_time": "미상",
-      "market_cap": 107121803000,
+      "market_cap": 107374879000,
       "eps": "$1.94",
       "eps_forecast": "$1.71",
       "surprise_pct": 13.45,
       "reaction": {
         "D-1": 0,
         "D0": 0.24,
-        "D+1": null,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "MPC",
-      "name": "Marathon Petroleum Corporation",
-      "report_date": "2026-11-03",
-      "report_time": "미상",
-      "market_cap": 106919805000,
-      "eps": "$26.93",
-      "eps_forecast": "$25.74",
-      "surprise_pct": 4.62,
-      "reaction": {
-        "D-1": 0,
-        "D0": -0.71,
-        "D+1": -8.76,
-        "D+2": -12.33,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "ABNB",
-      "name": "Airbnb, Inc.",
-      "report_date": "2026-11-05",
-      "report_time": "장후",
-      "market_cap": 105607832000,
-      "eps": "$2.21",
-      "eps_forecast": "$2.86",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": -3.54,
-        "D+1": null,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "CNQ",
-      "name": "Canadian Natural Resources Limited",
-      "report_date": "2026-11-05",
-      "report_time": "미상",
-      "market_cap": 102455566000,
-      "eps": "$1.18",
-      "eps_forecast": "$1.05",
-      "surprise_pct": 12.38,
-      "reaction": {
-        "D-1": 0,
-        "D0": -1.45,
-        "D+1": null,
+        "D+1": -0.79,
         "D+2": null,
         "D+3": null
       }
@@ -468,7 +434,7 @@
       "name": "CVS Health Corporation",
       "report_date": "2026-11-04",
       "report_time": "미상",
-      "market_cap": 102266470000,
+      "market_cap": 104059634000,
       "eps": "$2.09",
       "eps_forecast": "$1.62",
       "surprise_pct": 29.01,
@@ -476,24 +442,41 @@
         "D-1": 0,
         "D0": -12.53,
         "D+1": -11.03,
-        "D+2": null,
+        "D+2": -8.43,
         "D+3": null
       }
     },
     {
-      "symbol": "RACE",
-      "name": "Ferrari N.V.",
+      "symbol": "MPC",
+      "name": "Marathon Petroleum Corporation",
       "report_date": "2026-11-03",
       "report_time": "미상",
-      "market_cap": 101169316000,
-      "eps": "$2.81",
-      "eps_forecast": "$2.66",
-      "surprise_pct": 5.64,
+      "market_cap": 102737551000,
+      "eps": "$26.93",
+      "eps_forecast": "$25.74",
+      "surprise_pct": 4.62,
       "reaction": {
         "D-1": 0,
-        "D0": 2.9,
-        "D+1": 7.28,
-        "D+2": 4.79,
+        "D0": -0.71,
+        "D+1": -8.76,
+        "D+2": -12.33,
+        "D+3": -13.46
+      }
+    },
+    {
+      "symbol": "ABNB",
+      "name": "Airbnb, Inc.",
+      "report_date": "2026-11-05",
+      "report_time": "미상",
+      "market_cap": 101871411000,
+      "eps": "$3.16",
+      "eps_forecast": "$2.86",
+      "surprise_pct": 10.49,
+      "reaction": {
+        "D-1": 0,
+        "D0": -3.54,
+        "D+1": 8.16,
+        "D+2": null,
         "D+3": null
       }
     },
@@ -502,14 +485,31 @@
       "name": "Duke Energy Corporation",
       "report_date": "2026-11-05",
       "report_time": "미상",
-      "market_cap": 101041611000,
+      "market_cap": 101423661000,
       "eps": "$1.99",
       "eps_forecast": "$1.87",
       "surprise_pct": 6.42,
       "reaction": {
         "D-1": 0,
         "D0": 0.38,
-        "D+1": null,
+        "D+1": -0.86,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "CNQ",
+      "name": "Canadian Natural Resources Limited",
+      "report_date": "2026-11-05",
+      "report_time": "미상",
+      "market_cap": 101066252000,
+      "eps": "$1.18",
+      "eps_forecast": "$1.05",
+      "surprise_pct": 12.38,
+      "reaction": {
+        "D-1": 0,
+        "D0": -1.45,
+        "D+1": -1.82,
         "D+2": null,
         "D+3": null
       }
