@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-11-09T10:18:33.874Z",
+  "updated_at": "2026-11-09T21:09:52.563Z",
   "note": "최근 21일 영업(잠정)실적 공정공시 기준. 반응(%)은 공시일 이후 첫 거래일(D0) 기준 D-1 종가 대비 누적 수익률.",
   "range": {
-    "from": "20261019",
-    "to": "20261109"
+    "from": "20261020",
+    "to": "20261110"
   },
-  "count": 383,
+  "count": 378,
   "items": [
     {
       "corp_name": "화천기계",
@@ -4233,55 +4233,6 @@
         "D+3": -1.21,
         "D+4": -6.39
       }
-    },
-    {
-      "corp_name": "현대로템",
-      "stock_code": "064350",
-      "rcept_dt": "20261019",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261019800217",
-      "reaction": {
-        "D-1": 0,
-        "D0": 3.92,
-        "D+1": -10.32,
-        "D+2": -8.57,
-        "D+3": -11.76,
-        "D+4": -14.65
-      }
-    },
-    {
-      "corp_name": "파두",
-      "stock_code": "440110",
-      "rcept_dt": "20261019",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261019900192",
-      "reaction": null
-    },
-    {
-      "corp_name": "가온전선",
-      "stock_code": "000500",
-      "rcept_dt": "20261019",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261019800156",
-      "reaction": {
-        "D-1": 0,
-        "D0": 1.39,
-        "D+1": -7.57,
-        "D+2": -2.99,
-        "D+3": -4.38,
-        "D+4": -8.96
-      }
-    },
-    {
-      "corp_name": "캠시스",
-      "stock_code": "050110",
-      "rcept_dt": "20261019",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261019900129",
-      "reaction": null
-    },
-    {
-      "corp_name": "티앤알바이오팹",
-      "stock_code": "246710",
-      "rcept_dt": "20261019",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261019900118",
-      "reaction": null
     }
   ]
 }
