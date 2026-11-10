@@ -1347,7 +1347,7 @@
       "hasPriceData": true,
       "d1": 6.39,
       "d5": 6.62,
-      "d20": null
+      "d20": -6.16
     },
     {
       "engineVersion": "v0.2",
@@ -1366,7 +1366,7 @@
       "hasPriceData": true,
       "d1": -0.27,
       "d5": -0.4,
-      "d20": null
+      "d20": 2.81
     },
     {
       "engineVersion": "v0.2",
@@ -1385,7 +1385,7 @@
       "hasPriceData": true,
       "d1": -4.31,
       "d5": 11.26,
-      "d20": null
+      "d20": 46.7
     },
     {
       "engineVersion": "v0.2",
@@ -1404,7 +1404,7 @@
       "hasPriceData": true,
       "d1": 1.25,
       "d5": 3.22,
-      "d20": null
+      "d20": 1.56
     },
     {
       "engineVersion": "v0.2",
@@ -1423,7 +1423,7 @@
       "hasPriceData": true,
       "d1": 0.68,
       "d5": 6.81,
-      "d20": null
+      "d20": 8.31
     },
     {
       "engineVersion": "v0.2",
@@ -3303,7 +3303,7 @@
       "priceAtSelection": 23250,
       "hasPriceData": true,
       "d1": 1.29,
-      "d5": null,
+      "d5": -11.61,
       "d20": null
     },
     {
@@ -3322,7 +3322,7 @@
       "priceAtSelection": 412500,
       "hasPriceData": true,
       "d1": 0.73,
-      "d5": null,
+      "d5": 18.79,
       "d20": null
     },
     {
@@ -3341,7 +3341,7 @@
       "priceAtSelection": 28700,
       "hasPriceData": true,
       "d1": 0.35,
-      "d5": null,
+      "d5": -0.7,
       "d20": null
     },
     {
@@ -3360,7 +3360,7 @@
       "priceAtSelection": 62500,
       "hasPriceData": true,
       "d1": 4.32,
-      "d5": null,
+      "d5": 2.24,
       "d20": null
     },
     {
@@ -3379,7 +3379,7 @@
       "priceAtSelection": 190500,
       "hasPriceData": true,
       "d1": 1.05,
-      "d5": null,
+      "d5": 7.87,
       "d20": null
     },
     {
@@ -3872,7 +3872,7 @@
       "marketRegime": "Risk-on",
       "priceAtSelection": 185400,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 3.51,
       "d5": null,
       "d20": null
     },
@@ -3891,7 +3891,7 @@
       "marketRegime": "Risk-on",
       "priceAtSelection": 16390,
       "hasPriceData": true,
-      "d1": null,
+      "d1": -2.99,
       "d5": null,
       "d20": null
     },
@@ -3910,7 +3910,7 @@
       "marketRegime": "Risk-on",
       "priceAtSelection": 48100,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 1.66,
       "d5": null,
       "d20": null
     },
@@ -3929,7 +3929,7 @@
       "marketRegime": "Risk-on",
       "priceAtSelection": 32050,
       "hasPriceData": true,
-      "d1": null,
+      "d1": -0.47,
       "d5": null,
       "d20": null
     },
@@ -3948,7 +3948,7 @@
       "marketRegime": "Risk-on",
       "priceAtSelection": 77900,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 0.26,
       "d5": null,
       "d20": null
     },
@@ -3960,12 +3960,12 @@
       "setup": "Market Leader",
       "bucket": "MARKET_LEADER",
       "strategy": "Confluence · Flow Confirmed",
-      "score": 55.8,
-      "noveltyScore": 15,
-      "pricedInVerdict": "unclear",
+      "score": 57.9,
+      "noveltyScore": 10.6,
+      "pricedInVerdict": "partially_priced_in",
       "dataCoverage": 77,
       "marketRegime": "Risk-on",
-      "priceAtSelection": 187100,
+      "priceAtSelection": 191900,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -3981,10 +3981,10 @@
       "strategy": "Confluence · New Change",
       "score": 55.8,
       "noveltyScore": 18.6,
-      "pricedInVerdict": "partially_priced_in",
+      "pricedInVerdict": "unclear",
       "dataCoverage": 77,
       "marketRegime": "Risk-on",
-      "priceAtSelection": 15980,
+      "priceAtSelection": 15900,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -3993,17 +3993,17 @@
     {
       "engineVersion": "v0.2",
       "date": "20261110",
-      "symbol": "112610",
-      "name": "씨에스윈드",
+      "symbol": "128940",
+      "name": "한미약품",
       "setup": "Discovery",
       "bucket": "DISCOVERY",
       "strategy": "Confluence · Flow Confirmed",
-      "score": 46.9,
-      "noveltyScore": 13,
+      "score": 40.5,
+      "noveltyScore": 4.8,
       "pricedInVerdict": "partially_priced_in",
       "dataCoverage": 77,
       "marketRegime": "Risk-on",
-      "priceAtSelection": 48650,
+      "priceAtSelection": 490000,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -4012,17 +4012,17 @@
     {
       "engineVersion": "v0.2",
       "date": "20261110",
-      "symbol": "035720",
-      "name": "카카오",
+      "symbol": "000660",
+      "name": "SK하이닉스",
       "setup": "Event-Driven",
       "bucket": "EVENT_DRIVEN",
-      "strategy": "Confluence · New Change",
-      "score": 41.3,
-      "noveltyScore": 11,
-      "pricedInVerdict": "partially_priced_in",
+      "strategy": "Event Driven",
+      "score": 19.7,
+      "noveltyScore": 5,
+      "pricedInVerdict": "not_yet_priced",
       "dataCoverage": 77,
       "marketRegime": "Risk-on",
-      "priceAtSelection": 32100,
+      "priceAtSelection": 1209000,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -4036,12 +4036,12 @@
       "setup": "Inflection",
       "bucket": "INFLECTION",
       "strategy": "Confluence · New Change",
-      "score": 48.1,
+      "score": 42.9,
       "noveltyScore": 14,
       "pricedInVerdict": "not_yet_priced",
       "dataCoverage": 77,
       "marketRegime": "Risk-on",
-      "priceAtSelection": 77800,
+      "priceAtSelection": 78100,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
