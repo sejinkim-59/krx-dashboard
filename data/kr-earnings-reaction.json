@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-11-10T11:43:24.272Z",
+  "updated_at": "2026-11-10T19:34:58.916Z",
   "note": "최근 21일 영업(잠정)실적 공정공시 기준. 반응(%)은 공시일 이후 첫 거래일(D0) 기준 D-1 종가 대비 누적 수익률.",
   "range": {
-    "from": "20261020",
-    "to": "20261110"
+    "from": "20261021",
+    "to": "20261111"
   },
-  "count": 406,
+  "count": 404,
   "items": [
     {
       "corp_name": "세이브존I&C",
@@ -4476,27 +4476,6 @@
       "rcept_dt": "20261021",
       "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261021900086",
       "reaction": null
-    },
-    {
-      "corp_name": "플리토",
-      "stock_code": "300080",
-      "rcept_dt": "20261020",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261020900285",
-      "reaction": null
-    },
-    {
-      "corp_name": "LS에코에너지",
-      "stock_code": "229640",
-      "rcept_dt": "20261020",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261020800175",
-      "reaction": {
-        "D-1": 0,
-        "D0": -14.59,
-        "D+1": -8.12,
-        "D+2": 1.04,
-        "D+3": -1.21,
-        "D+4": -6.39
-      }
     }
   ]
 }
