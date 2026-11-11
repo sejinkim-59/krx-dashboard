@@ -1,12 +1,60 @@
 {
-  "updated_at": "2026-11-11T07:10:32.215Z",
+  "updated_at": "2026-11-11T15:05:08.764Z",
   "note": "최근 21일 영업(잠정)실적 공정공시 기준. 반응(%)은 공시일 이후 첫 거래일(D0) 기준 D-1 종가 대비 누적 수익률.",
   "range": {
-    "from": "20261021",
-    "to": "20261111"
+    "from": "20261022",
+    "to": "20261112"
   },
-  "count": 423,
+  "count": 425,
   "items": [
+    {
+      "corp_name": "광동제약",
+      "stock_code": "009290",
+      "rcept_dt": "20261111",
+      "reaction": null
+    },
+    {
+      "corp_name": "위메이드맥스",
+      "stock_code": "101730",
+      "rcept_dt": "20261111",
+      "reaction": null
+    },
+    {
+      "corp_name": "실리콘투",
+      "stock_code": "257720",
+      "rcept_dt": "20261111",
+      "reaction": null
+    },
+    {
+      "corp_name": "가비아",
+      "stock_code": "079940",
+      "rcept_dt": "20261111",
+      "reaction": null
+    },
+    {
+      "corp_name": "오리온",
+      "stock_code": "271560",
+      "rcept_dt": "20261111",
+      "reaction": null
+    },
+    {
+      "corp_name": "KTis",
+      "stock_code": "058860",
+      "rcept_dt": "20261111",
+      "reaction": null
+    },
+    {
+      "corp_name": "한화손해보험",
+      "stock_code": "000370",
+      "rcept_dt": "20261111",
+      "reaction": null
+    },
+    {
+      "corp_name": "위메이드",
+      "stock_code": "112040",
+      "rcept_dt": "20261111",
+      "reaction": null
+    },
     {
       "corp_name": "JYP Ent.",
       "stock_code": "035900",
@@ -4712,69 +4760,6 @@
         "D+3": 30.4,
         "D+4": 34.59
       }
-    },
-    {
-      "corp_name": "삼성바이오로직스",
-      "stock_code": "207940",
-      "rcept_dt": "20261021",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261021800344",
-      "reaction": {
-        "D-1": 0,
-        "D0": 1.87,
-        "D+1": -2.16,
-        "D+2": 5.39,
-        "D+3": 4.39,
-        "D+4": -1.22
-      }
-    },
-    {
-      "corp_name": "유니드",
-      "stock_code": "014830",
-      "rcept_dt": "20261021",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261021800230",
-      "reaction": {
-        "D-1": 0,
-        "D0": -6.43,
-        "D+1": -8.29,
-        "D+2": -11,
-        "D+3": -13.2,
-        "D+4": -10.66
-      }
-    },
-    {
-      "corp_name": "라온피플",
-      "stock_code": "300120",
-      "rcept_dt": "20261021",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261021900206",
-      "reaction": null
-    },
-    {
-      "corp_name": "에프앤가이드",
-      "stock_code": "064850",
-      "rcept_dt": "20261021",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261021900161",
-      "reaction": null
-    },
-    {
-      "corp_name": "엘에스일렉트릭",
-      "stock_code": "010120",
-      "rcept_dt": "20261021",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261021800151",
-      "reaction": {
-        "D-1": 0,
-        "D0": 7.02,
-        "D+1": 3.99,
-        "D+2": 1.1,
-        "D+3": -1.48,
-        "D+4": 1.87
-      }
-    },
-    {
-      "corp_name": "LS마린솔루션",
-      "stock_code": "060370",
-      "rcept_dt": "20261021",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261021900086",
-      "reaction": null
     }
   ]
 }
