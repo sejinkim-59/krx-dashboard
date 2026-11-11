@@ -1442,7 +1442,7 @@
       "hasPriceData": true,
       "d1": 0.21,
       "d5": -0.64,
-      "d20": null
+      "d20": -11.59
     },
     {
       "engineVersion": "v0.2",
@@ -1461,7 +1461,7 @@
       "hasPriceData": true,
       "d1": -0.52,
       "d5": 0.83,
-      "d20": null
+      "d20": 3.22
     },
     {
       "engineVersion": "v0.2",
@@ -1480,7 +1480,7 @@
       "hasPriceData": true,
       "d1": -4.32,
       "d5": -5.87,
-      "d20": null
+      "d20": -13.13
     },
     {
       "engineVersion": "v0.2",
@@ -1499,7 +1499,7 @@
       "hasPriceData": true,
       "d1": 0.31,
       "d5": 1.14,
-      "d20": null
+      "d20": 1.29
     },
     {
       "engineVersion": "v0.2",
@@ -1518,7 +1518,7 @@
       "hasPriceData": true,
       "d1": 1.5,
       "d5": 0.88,
-      "d20": null
+      "d20": 8.37
     },
     {
       "engineVersion": "v0.2",
@@ -3398,7 +3398,7 @@
       "priceAtSelection": 30400,
       "hasPriceData": true,
       "d1": 3.95,
-      "d5": null,
+      "d5": 3.29,
       "d20": null
     },
     {
@@ -3417,7 +3417,7 @@
       "priceAtSelection": 210000,
       "hasPriceData": true,
       "d1": 4.29,
-      "d5": null,
+      "d5": -0.24,
       "d20": null
     },
     {
@@ -3436,7 +3436,7 @@
       "priceAtSelection": 28900,
       "hasPriceData": true,
       "d1": 0.52,
-      "d5": null,
+      "d5": 0.35,
       "d20": null
     },
     {
@@ -3455,7 +3455,7 @@
       "priceAtSelection": 65400,
       "hasPriceData": true,
       "d1": 0.31,
-      "d5": null,
+      "d5": 1.15,
       "d20": null
     },
     {
@@ -3474,7 +3474,7 @@
       "priceAtSelection": 200000,
       "hasPriceData": true,
       "d1": 7.5,
-      "d5": null,
+      "d5": 5.25,
       "d20": null
     },
     {
@@ -3967,7 +3967,7 @@
       "marketRegime": "Risk-on",
       "priceAtSelection": 192300,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 2.7,
       "d5": null,
       "d20": null
     },
@@ -3986,7 +3986,7 @@
       "marketRegime": "Risk-on",
       "priceAtSelection": 15860,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 0.38,
       "d5": null,
       "d20": null
     },
@@ -4005,7 +4005,7 @@
       "marketRegime": "Risk-on",
       "priceAtSelection": 489000,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 3.89,
       "d5": null,
       "d20": null
     },
@@ -4024,7 +4024,7 @@
       "marketRegime": "Risk-on",
       "priceAtSelection": 31800,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 2.67,
       "d5": null,
       "d20": null
     },
@@ -4043,7 +4043,7 @@
       "marketRegime": "Risk-on",
       "priceAtSelection": 348000,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 1.87,
       "d5": null,
       "d20": null
     },
@@ -4054,13 +4054,32 @@
       "name": "NAVER",
       "setup": "Market Leader",
       "bucket": "MARKET_LEADER",
-      "strategy": "Confluence · Trend Confirmation",
-      "score": 55.3,
+      "strategy": "Confluence · Flow Confirmed",
+      "score": 51.4,
       "noveltyScore": 10.6,
       "pricedInVerdict": "partially_priced_in",
       "dataCoverage": 77,
-      "marketRegime": "Risk-off",
-      "priceAtSelection": 192300,
+      "marketRegime": "Neutral",
+      "priceAtSelection": 197500,
+      "hasPriceData": true,
+      "d1": null,
+      "d5": null,
+      "d20": null
+    },
+    {
+      "engineVersion": "v0.2",
+      "date": "20261111",
+      "symbol": "112610",
+      "name": "씨에스윈드",
+      "setup": "Discovery",
+      "bucket": "DISCOVERY",
+      "strategy": "Confluence · Flow Confirmed",
+      "score": 53.2,
+      "noveltyScore": 10.6,
+      "pricedInVerdict": "partially_priced_in",
+      "dataCoverage": 77,
+      "marketRegime": "Neutral",
+      "priceAtSelection": 48750,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -4073,32 +4092,13 @@
       "name": "LG유플러스",
       "setup": "Discovery",
       "bucket": "DISCOVERY",
-      "strategy": "Confluence · New Change",
-      "score": 55.8,
-      "noveltyScore": 18.6,
+      "strategy": "Confluence · Trend Confirmation",
+      "score": 42.9,
+      "noveltyScore": 12.6,
       "pricedInVerdict": "unclear",
       "dataCoverage": 77,
-      "marketRegime": "Risk-off",
-      "priceAtSelection": 15860,
-      "hasPriceData": true,
-      "d1": null,
-      "d5": null,
-      "d20": null
-    },
-    {
-      "engineVersion": "v0.2",
-      "date": "20261111",
-      "symbol": "128940",
-      "name": "한미약품",
-      "setup": "Discovery",
-      "bucket": "DISCOVERY",
-      "strategy": "Confluence · Flow Confirmed",
-      "score": 40.5,
-      "noveltyScore": 4.8,
-      "pricedInVerdict": "partially_priced_in",
-      "dataCoverage": 77,
-      "marketRegime": "Risk-off",
-      "priceAtSelection": 489000,
+      "marketRegime": "Neutral",
+      "priceAtSelection": 15920,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -4111,13 +4111,13 @@
       "name": "카카오",
       "setup": "Event-Driven",
       "bucket": "EVENT_DRIVEN",
-      "strategy": "Confluence · Event Driven",
-      "score": 27.8,
+      "strategy": "Confluence · Trend Confirmation",
+      "score": 35.6,
       "noveltyScore": 6.6,
-      "pricedInVerdict": "unclear",
+      "pricedInVerdict": "partially_priced_in",
       "dataCoverage": 77,
-      "marketRegime": "Risk-off",
-      "priceAtSelection": 31800,
+      "marketRegime": "Neutral",
+      "priceAtSelection": 32650,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -4126,17 +4126,17 @@
     {
       "engineVersion": "v0.2",
       "date": "20261111",
-      "symbol": "012330",
-      "name": "현대모비스",
+      "symbol": "078930",
+      "name": "GS",
       "setup": "Inflection",
       "bucket": "INFLECTION",
-      "strategy": "Confluence · New Change",
-      "score": 22.6,
+      "strategy": "New Change",
+      "score": 23.9,
       "noveltyScore": 6,
       "pricedInVerdict": "not_yet_priced",
       "dataCoverage": 77,
-      "marketRegime": "Risk-off",
-      "priceAtSelection": 348000,
+      "marketRegime": "Neutral",
+      "priceAtSelection": 85800,
       "hasPriceData": true,
       "d1": null,
       "d5": null,

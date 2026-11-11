@@ -1,8 +1,130 @@
 {
-  "updated_at": "2026-11-10T19:35:16.408Z",
+  "updated_at": "2026-11-11T00:25:43.103Z",
   "note": "국내 섹터·테마 ETF 상위 25종목의 전일 스냅샷 대비 구성종목 변화 감지. 신규 편입·편출 종목과 비중 1.5%p 이상 변동 종목을 표시합니다. (첫 실행 시에는 비교 대상이 없어 결과가 비어있습니다)",
   "universe_size": 25,
   "has_baseline": true,
-  "changed_etf_count": 0,
-  "items": []
+  "changed_etf_count": 4,
+  "items": [
+    {
+      "code": "494310",
+      "name": "KODEX 반도체레버리지",
+      "trd_dt": "2026-11-10",
+      "prev_trd_dt": "2026-11-09",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "name": "KODEX 반도체",
+          "prev_weight": 26.66,
+          "curr_weight": 29.79,
+          "delta": 3.13
+        }
+      ]
+    },
+    {
+      "code": "0061Z0",
+      "name": "RISE 단기특수은행채액티브",
+      "trd_dt": "2026-11-10",
+      "prev_trd_dt": "2026-11-09",
+      "added": [
+        {
+          "name": "신한 자금부 20251118-365-1",
+          "weight": null
+        },
+        {
+          "name": "신한카드 20261012-29-5(단)",
+          "weight": null
+        },
+        {
+          "name": "아이비케이투자증권 20261109-1-10(단)",
+          "weight": null
+        },
+        {
+          "name": "아이엠증권 20261109-1-23(단)",
+          "weight": null
+        }
+      ],
+      "removed": [
+        {
+          "name": "아이엠증권 20261106-3-20(단)",
+          "weight": null
+        }
+      ],
+      "changed": []
+    },
+    {
+      "code": "462330",
+      "name": "KODEX 2차전지산업레버리지",
+      "trd_dt": "2026-11-10",
+      "prev_trd_dt": "2026-11-09",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "name": "KODEX 2차전지산업",
+          "prev_weight": 27.62,
+          "curr_weight": 30.89,
+          "delta": 3.27
+        },
+        {
+          "name": "LG에너지솔루션",
+          "prev_weight": 28.11,
+          "curr_weight": 31.23,
+          "delta": 3.12
+        },
+        {
+          "name": "삼성SDI",
+          "prev_weight": 15.04,
+          "curr_weight": 17.83,
+          "delta": 2.79
+        },
+        {
+          "name": "POSCO홀딩스",
+          "prev_weight": 15.01,
+          "curr_weight": 17.22,
+          "delta": 2.21
+        },
+        {
+          "name": "LG화학",
+          "prev_weight": 9.56,
+          "curr_weight": 11.24,
+          "delta": 1.68
+        }
+      ]
+    },
+    {
+      "code": "488080",
+      "name": "TIGER 반도체TOP10레버리지",
+      "trd_dt": "2026-11-10",
+      "prev_trd_dt": "2026-11-09",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "name": "TIGER 반도체TOP10",
+          "prev_weight": 41.88,
+          "curr_weight": 45.22,
+          "delta": 3.34
+        },
+        {
+          "name": "SK하이닉스",
+          "prev_weight": 32.65,
+          "curr_weight": 34.66,
+          "delta": 2.01
+        },
+        {
+          "name": "SK스퀘어",
+          "prev_weight": 30.04,
+          "curr_weight": 31.62,
+          "delta": 1.58
+        },
+        {
+          "name": "삼성전자",
+          "prev_weight": 35.55,
+          "curr_weight": 37.09,
+          "delta": 1.54
+        }
+      ]
+    }
+  ]
 }
