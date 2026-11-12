@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-11-12T10:53:38.477Z",
+  "updated_at": "2026-11-12T18:55:10.347Z",
   "note": "최근 21일 영업(잠정)실적 공정공시 기준. 반응(%)은 공시일 이후 첫 거래일(D0) 기준 D-1 종가 대비 누적 수익률.",
   "range": {
-    "from": "20261022",
-    "to": "20261112"
+    "from": "20261023",
+    "to": "20261113"
   },
-  "count": 457,
+  "count": 449,
   "items": [
     {
       "corp_name": "포스뱅크",
@@ -4977,104 +4977,6 @@
         "D+2": -2.85,
         "D+3": -2.98,
         "D+4": -4.27
-      }
-    },
-    {
-      "corp_name": "현대차증권",
-      "stock_code": "001500",
-      "rcept_dt": "20261022",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261022800344",
-      "reaction": {
-        "D-1": 0,
-        "D0": -1.31,
-        "D+1": 0.15,
-        "D+2": -1.6,
-        "D+3": 1.46,
-        "D+4": 4.37
-      }
-    },
-    {
-      "corp_name": "SGC에너지",
-      "stock_code": "005090",
-      "rcept_dt": "20261022",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261022800306",
-      "reaction": {
-        "D-1": 0,
-        "D0": -4.66,
-        "D+1": -13.1,
-        "D+2": -21.91,
-        "D+3": -18.51,
-        "D+4": -16.12
-      }
-    },
-    {
-      "corp_name": "SGC E&C",
-      "stock_code": "016250",
-      "rcept_dt": "20261022",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261022900289",
-      "reaction": null
-    },
-    {
-      "corp_name": "멀티캠퍼스",
-      "stock_code": "067280",
-      "rcept_dt": "20261022",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261022900242",
-      "reaction": null
-    },
-    {
-      "corp_name": "LG디스플레이",
-      "stock_code": "034220",
-      "rcept_dt": "20261022",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261022800200",
-      "reaction": {
-        "D-1": 0,
-        "D0": -1.63,
-        "D+1": -2.72,
-        "D+2": -0.41,
-        "D+3": 0.95,
-        "D+4": 3.67
-      }
-    },
-    {
-      "corp_name": "보령",
-      "stock_code": "003850",
-      "rcept_dt": "20261022",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261022800186",
-      "reaction": {
-        "D-1": 0,
-        "D0": 0.95,
-        "D+1": -0.71,
-        "D+2": -1.66,
-        "D+3": -0.47,
-        "D+4": -1.07
-      }
-    },
-    {
-      "corp_name": "IPARK현대산업개발",
-      "stock_code": "294870",
-      "rcept_dt": "20261022",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261022800161",
-      "reaction": {
-        "D-1": 0,
-        "D0": 0.96,
-        "D+1": 5.53,
-        "D+2": 7.21,
-        "D+3": 15.14,
-        "D+4": 17.79
-      }
-    },
-    {
-      "corp_name": "삼성E&A",
-      "stock_code": "028050",
-      "rcept_dt": "20261022",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261022800044",
-      "reaction": {
-        "D-1": 0,
-        "D0": 16.14,
-        "D+1": 25.37,
-        "D+2": 25.37,
-        "D+3": 30.4,
-        "D+4": 34.59
       }
     }
   ]

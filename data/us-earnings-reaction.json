@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-12T10:49:34.494Z",
+  "updated_at": "2026-11-12T18:51:04.076Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
@@ -9,7 +9,7 @@
       "name": "Berkshire Hathaway Inc.",
       "report_date": "2026-11-07",
       "report_time": "미상",
-      "market_cap": 1249009210000,
+      "market_cap": 1262103820000,
       "eps": "$8,907.22",
       "eps_forecast": "",
       "surprise_pct": null,
@@ -20,7 +20,7 @@
       "name": "Berkshire Hathaway Inc.",
       "report_date": "2026-11-07",
       "report_time": "미상",
-      "market_cap": 1249009210000,
+      "market_cap": 1262103820000,
       "eps": "$5.93",
       "eps_forecast": "$5.91",
       "surprise_pct": 0.34,
@@ -39,7 +39,7 @@
         "D-1": 0,
         "D0": -0.38,
         "D+1": -2.89,
-        "D+2": null,
+        "D+2": -1.47,
         "D+3": null
       }
     },
@@ -59,7 +59,7 @@
       "name": "Enbridge Inc",
       "report_date": "2026-11-06",
       "report_time": "미상",
-      "market_cap": 106397516000,
+      "market_cap": 106759496000,
       "eps": "$0.39",
       "eps_forecast": "$0.36",
       "surprise_pct": 8.33,
@@ -76,7 +76,7 @@
       "name": "Moderna, Inc.",
       "report_date": "2026-11-06",
       "report_time": "미상",
-      "market_cap": 101491081000,
+      "market_cap": 100625187000,
       "eps": "$0.38",
       "eps_forecast": "($1.10)",
       "surprise_pct": 134.55,
@@ -93,7 +93,7 @@
       "name": "Constellation Energy Corporation",
       "report_date": "2026-11-09",
       "report_time": "미상",
-      "market_cap": 94146691000,
+      "market_cap": 96597402000,
       "eps": "$5.06",
       "eps_forecast": "$3.90",
       "surprise_pct": 29.74,
@@ -102,7 +102,7 @@
         "D0": 10.46,
         "D+1": 7.13,
         "D+2": 9.91,
-        "D+3": null
+        "D+3": 11.52
       }
     },
     {
@@ -110,7 +110,7 @@
       "name": "KKR & Co. Inc.",
       "report_date": "2026-11-09",
       "report_time": "미상",
-      "market_cap": 89972269000,
+      "market_cap": 89258557000,
       "eps": "$1.62",
       "eps_forecast": "$1.41",
       "surprise_pct": 14.89,
@@ -119,7 +119,7 @@
         "D0": 1.67,
         "D+1": 4.53,
         "D+2": 3.7,
-        "D+3": null
+        "D+3": 1.41
       }
     },
     {
@@ -127,7 +127,7 @@
       "name": "Brookfield Asset Management",
       "report_date": "2026-11-06",
       "report_time": "미상",
-      "market_cap": 85444239000,
+      "market_cap": 83958972000,
       "eps": "$0.47",
       "eps_forecast": "$0.44",
       "surprise_pct": 6.82,
@@ -152,7 +152,7 @@
         "D-1": 0,
         "D0": 0.55,
         "D+1": 2.15,
-        "D+2": null,
+        "D+2": -0.78,
         "D+3": null
       }
     },
@@ -161,7 +161,7 @@
       "name": "Barrick Mining Corporation",
       "report_date": "2026-11-09",
       "report_time": "미상",
-      "market_cap": 64759804000,
+      "market_cap": 63629713000,
       "eps": "$0.82",
       "eps_forecast": "$0.74",
       "surprise_pct": 10.81,
@@ -170,7 +170,7 @@
         "D0": 4.22,
         "D+1": -2.14,
         "D+2": -3.7,
-        "D+3": null
+        "D+3": -5.31
       }
     },
     {
@@ -178,7 +178,7 @@
       "name": "Occidental Petroleum Corporation",
       "report_date": "2026-11-09",
       "report_time": "미상",
-      "market_cap": 56894009000,
+      "market_cap": 57233973000,
       "eps": "$1.91",
       "eps_forecast": "$1.43",
       "surprise_pct": 33.57,
@@ -187,7 +187,7 @@
         "D0": -1.1,
         "D+1": 0.92,
         "D+2": 1.53,
-        "D+3": null
+        "D+3": 4.06
       }
     },
     {
@@ -195,7 +195,7 @@
       "name": "Humana Inc.",
       "report_date": "2026-11-06",
       "report_time": "미상",
-      "market_cap": 52612428000,
+      "market_cap": 53603283000,
       "eps": "($0.70)",
       "eps_forecast": "($1.03)",
       "surprise_pct": 32.04,
@@ -212,7 +212,7 @@
       "name": "Ferguson Enterprises Inc.",
       "report_date": "2026-11-09",
       "report_time": "미상",
-      "market_cap": 50240193000,
+      "market_cap": 51220054000,
       "eps": "$3.43",
       "eps_forecast": "$3.28",
       "surprise_pct": 4.57,
@@ -221,39 +221,22 @@
         "D0": 11.22,
         "D+1": 11.01,
         "D+2": 13.18,
-        "D+3": null
+        "D+3": 10.77
       }
     },
     {
       "symbol": "FNV",
       "name": "Franco-Nevada Corporation",
       "report_date": "2026-11-11",
-      "report_time": "장후",
-      "market_cap": 49364394000,
-      "eps": "$1.43",
+      "report_time": "미상",
+      "market_cap": 47952470000,
+      "eps": "$1.89",
       "eps_forecast": "$1.77",
-      "surprise_pct": null,
+      "surprise_pct": 6.78,
       "reaction": {
         "D-1": 0,
         "D0": -2.75,
-        "D+1": null,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "VYLR",
-      "name": "Vylor Inc.",
-      "report_date": "2026-11-11",
-      "report_time": "장후",
-      "market_cap": 48399483000,
-      "eps": "N/A",
-      "eps_forecast": "($0.44)",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": -0.59,
-        "D+1": null,
+        "D+1": -3.26,
         "D+2": null,
         "D+3": null
       }
@@ -271,8 +254,25 @@
         "D-1": 0,
         "D0": -1.49,
         "D+1": -5.09,
-        "D+2": null,
+        "D+2": -3.89,
         "D+3": null
+      }
+    },
+    {
+      "symbol": "VST",
+      "name": "Vistra Corp.",
+      "report_date": "2026-11-06",
+      "report_time": "미상",
+      "market_cap": 45292220000,
+      "eps": "$3.23",
+      "eps_forecast": "$2.94",
+      "surprise_pct": 9.86,
+      "reaction": {
+        "D-1": 0,
+        "D0": 10.55,
+        "D+1": 18.63,
+        "D+2": 16.2,
+        "D+3": 18.21
       }
     },
     {
@@ -288,25 +288,8 @@
         "D-1": 0,
         "D0": -2.68,
         "D+1": -6.95,
-        "D+2": null,
+        "D+2": -6.1,
         "D+3": null
-      }
-    },
-    {
-      "symbol": "VST",
-      "name": "Vistra Corp.",
-      "report_date": "2026-11-06",
-      "report_time": "미상",
-      "market_cap": 44521796000,
-      "eps": "$3.23",
-      "eps_forecast": "$2.94",
-      "surprise_pct": 9.86,
-      "reaction": {
-        "D-1": 0,
-        "D0": 10.55,
-        "D+1": 18.63,
-        "D+2": 16.2,
-        "D+3": 18.21
       }
     },
     {
@@ -314,7 +297,7 @@
       "name": "Take-Two Interactive Software, Inc.",
       "report_date": "2026-11-09",
       "report_time": "미상",
-      "market_cap": 42055639000,
+      "market_cap": 43304354000,
       "eps": "$0.61",
       "eps_forecast": "$0.49",
       "surprise_pct": 24.49,
@@ -323,7 +306,24 @@
         "D0": -3.48,
         "D+1": 4.55,
         "D+2": 7.65,
-        "D+3": null
+        "D+3": 6.36
+      }
+    },
+    {
+      "symbol": "RKLB",
+      "name": "Rocket Lab Corporation",
+      "report_date": "2026-11-09",
+      "report_time": "미상",
+      "market_cap": 41808183000,
+      "eps": "($0.09)",
+      "eps_forecast": "($0.06)",
+      "surprise_pct": -50,
+      "reaction": {
+        "D-1": 0,
+        "D0": 10.91,
+        "D+1": 18.16,
+        "D+2": 24.65,
+        "D+3": 22.33
       }
     },
     {
@@ -331,7 +331,7 @@
       "name": "Ubiquiti Inc.",
       "report_date": "2026-11-06",
       "report_time": "미상",
-      "market_cap": 41485300000,
+      "market_cap": 41090974000,
       "eps": "$5.29",
       "eps_forecast": "$3.82",
       "surprise_pct": 38.48,
@@ -348,7 +348,7 @@
       "name": "Skydance Corporation",
       "report_date": "2026-11-09",
       "report_time": "미상",
-      "market_cap": 40555549000,
+      "market_cap": 39849357000,
       "eps": "$0.45",
       "eps_forecast": "$0.23",
       "surprise_pct": 95.65,
@@ -357,24 +357,7 @@
         "D0": 8.61,
         "D+1": 0.37,
         "D+2": -1.37,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "RKLB",
-      "name": "Rocket Lab Corporation",
-      "report_date": "2026-11-09",
-      "report_time": "미상",
-      "market_cap": 39634031000,
-      "eps": "($0.09)",
-      "eps_forecast": "($0.06)",
-      "surprise_pct": -50,
-      "reaction": {
-        "D-1": 0,
-        "D0": 10.91,
-        "D+1": 18.16,
-        "D+2": 24.65,
-        "D+3": null
+        "D+3": -4.18
       }
     },
     {
@@ -390,8 +373,25 @@
         "D-1": 0,
         "D0": -1.44,
         "D+1": -3.57,
-        "D+2": null,
+        "D+2": -4.37,
         "D+3": null
+      }
+    },
+    {
+      "symbol": "IX",
+      "name": "ORIX Corporation",
+      "report_date": "2026-11-09",
+      "report_time": "장전",
+      "market_cap": 36545208000,
+      "eps": "$0.99",
+      "eps_forecast": "",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -2.07,
+        "D+1": -6.17,
+        "D+2": -3.76,
+        "D+3": -2.04
       }
     },
     {
@@ -407,24 +407,7 @@
         "D-1": 0,
         "D0": -1.21,
         "D+1": -0.32,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "IX",
-      "name": "ORIX Corporation",
-      "report_date": "2026-11-09",
-      "report_time": "장전",
-      "market_cap": 35629945000,
-      "eps": "$0.99",
-      "eps_forecast": "",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": -2.07,
-        "D+1": -6.17,
-        "D+2": -3.76,
+        "D+2": -0.64,
         "D+3": null
       }
     },
@@ -441,8 +424,25 @@
         "D-1": 0,
         "D0": -2.24,
         "D+1": -1.99,
-        "D+2": null,
+        "D+2": -0.83,
         "D+3": null
+      }
+    },
+    {
+      "symbol": "ROIV",
+      "name": "Roivant Sciences Ltd.",
+      "report_date": "2026-11-09",
+      "report_time": "미상",
+      "market_cap": 30322896900,
+      "eps": "($0.30)",
+      "eps_forecast": "($0.52)",
+      "surprise_pct": 42.31,
+      "reaction": {
+        "D-1": 0,
+        "D0": 4.6,
+        "D+1": 5.94,
+        "D+2": 7.64,
+        "D+3": 4.27
       }
     },
     {
@@ -458,24 +458,7 @@
         "D-1": 0,
         "D0": 1.69,
         "D+1": 7.29,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "ROIV",
-      "name": "Roivant Sciences Ltd.",
-      "report_date": "2026-11-09",
-      "report_time": "미상",
-      "market_cap": 29844686800,
-      "eps": "($0.30)",
-      "eps_forecast": "($0.52)",
-      "surprise_pct": 42.31,
-      "reaction": {
-        "D-1": 0,
-        "D0": 4.6,
-        "D+1": 5.94,
-        "D+2": 7.64,
+        "D+2": 12.92,
         "D+3": null
       }
     },
@@ -484,7 +467,7 @@
       "name": "Credicorp Ltd.",
       "report_date": "2026-11-09",
       "report_time": "미상",
-      "market_cap": 29210425300,
+      "market_cap": 29285079000,
       "eps": "$7.19",
       "eps_forecast": "$7.51",
       "surprise_pct": -4.26,
@@ -493,6 +476,23 @@
         "D0": 2.29,
         "D+1": 5.71,
         "D+2": 5.98,
+        "D+3": 5.46
+      }
+    },
+    {
+      "symbol": "CRWV",
+      "name": "CoreWeave, Inc.",
+      "report_date": "2026-11-10",
+      "report_time": "미상",
+      "market_cap": 26876379100,
+      "eps": "($1.28)",
+      "eps_forecast": "($1.45)",
+      "surprise_pct": 11.72,
+      "reaction": {
+        "D-1": 0,
+        "D0": -0.51,
+        "D+1": 24.07,
+        "D+2": 14.72,
         "D+3": null
       }
     }
