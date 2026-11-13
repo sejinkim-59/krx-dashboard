@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T00:09:33.909Z",
+  "updated_at": "2026-11-13T06:30:48.574Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
@@ -63,7 +63,7 @@
       "name": "Petroleo Brasileiro S.A.- Petrobras",
       "report_date": "2026-11-10",
       "report_time": "미상",
-      "market_cap": 114838610000,
+      "market_cap": 117803016000,
       "eps": "$1.44",
       "eps_forecast": "$1.38",
       "surprise_pct": 4.35,
@@ -80,7 +80,7 @@
       "name": "Petroleo Brasileiro S.A.- Petrobras",
       "report_date": "2026-11-10",
       "report_time": "미상",
-      "market_cap": 114838610000,
+      "market_cap": 117803016000,
       "eps": "$1.44",
       "eps_forecast": "",
       "surprise_pct": null,
@@ -141,7 +141,7 @@
       "name": "Transdigm Group Incorporated",
       "report_date": "2026-11-10",
       "report_time": "미상",
-      "market_cap": 67964346000,
+      "market_cap": 67743592000,
       "eps": "$11.88",
       "eps_forecast": "$11.43",
       "surprise_pct": 3.94,
@@ -221,6 +221,23 @@
       }
     },
     {
+      "symbol": "VYLR",
+      "name": "Vylor Inc.",
+      "report_date": "2026-11-11",
+      "report_time": "장후",
+      "market_cap": 48112542000,
+      "eps": "N/A",
+      "eps_forecast": "($0.44)",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -0.59,
+        "D+1": -0.65,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
       "symbol": "FNV",
       "name": "Franco-Nevada Corporation",
       "report_date": "2026-11-11",
@@ -242,7 +259,7 @@
       "name": "Sea Limited",
       "report_date": "2026-11-10",
       "report_time": "미상",
-      "market_cap": 45317730000,
+      "market_cap": 47038812000,
       "eps": "$0.78",
       "eps_forecast": "$0.79",
       "surprise_pct": -1.27,
@@ -251,6 +268,23 @@
         "D0": -1.49,
         "D+1": -5.09,
         "D+2": -4.41,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "HMC",
+      "name": "Honda Motor Company, Ltd.",
+      "report_date": "2026-11-10",
+      "report_time": "미상",
+      "market_cap": 45257736000,
+      "eps": "$0.32",
+      "eps_forecast": "",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -2.68,
+        "D+1": -6.95,
+        "D+2": -6.45,
         "D+3": null
       }
     },
@@ -269,23 +303,6 @@
         "D+1": 4.55,
         "D+2": 7.65,
         "D+3": 5.62
-      }
-    },
-    {
-      "symbol": "HMC",
-      "name": "Honda Motor Company, Ltd.",
-      "report_date": "2026-11-10",
-      "report_time": "미상",
-      "market_cap": 43272520000,
-      "eps": "$0.32",
-      "eps_forecast": "",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": -2.68,
-        "D+1": -6.95,
-        "D+2": -6.45,
-        "D+3": null
       }
     },
     {
@@ -339,6 +356,23 @@
       }
     },
     {
+      "symbol": "ALC",
+      "name": "Alcon Inc.",
+      "report_date": "2026-11-10",
+      "report_time": "미상",
+      "market_cap": 37007782000,
+      "eps": "$0.91",
+      "eps_forecast": "$0.89",
+      "surprise_pct": 2.25,
+      "reaction": {
+        "D-1": 0,
+        "D0": -1.44,
+        "D+1": -3.57,
+        "D+2": -4.41,
+        "D+3": null
+      }
+    },
+    {
       "symbol": "IX",
       "name": "ORIX Corporation",
       "report_date": "2026-11-09",
@@ -356,28 +390,11 @@
       }
     },
     {
-      "symbol": "ALC",
-      "name": "Alcon Inc.",
-      "report_date": "2026-11-10",
-      "report_time": "미상",
-      "market_cap": 36208263000,
-      "eps": "$0.91",
-      "eps_forecast": "$0.89",
-      "surprise_pct": 2.25,
-      "reaction": {
-        "D-1": 0,
-        "D0": -1.44,
-        "D+1": -3.57,
-        "D+2": -4.41,
-        "D+3": null
-      }
-    },
-    {
       "symbol": "VOD",
       "name": "Vodafone Group Plc",
       "report_date": "2026-11-10",
       "report_time": "장전",
-      "market_cap": 36055855000,
+      "market_cap": 35756995000,
       "eps": "N/A",
       "eps_forecast": "",
       "surprise_pct": null,
@@ -390,45 +407,11 @@
       }
     },
     {
-      "symbol": "CRWV",
-      "name": "CoreWeave, Inc.",
-      "report_date": "2026-11-10",
-      "report_time": "미상",
-      "market_cap": 33516879900,
-      "eps": "($1.28)",
-      "eps_forecast": "($1.45)",
-      "surprise_pct": 11.72,
-      "reaction": {
-        "D-1": 0,
-        "D0": -0.51,
-        "D+1": 24.07,
-        "D+2": 15.56,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "VG",
-      "name": "Venture Global, Inc.",
-      "report_date": "2026-11-10",
-      "report_time": "미상",
-      "market_cap": 31873437700,
-      "eps": "$0.56",
-      "eps_forecast": "$0.50",
-      "surprise_pct": 12,
-      "reaction": {
-        "D-1": 0,
-        "D0": 1.69,
-        "D+1": 7.29,
-        "D+2": 12.37,
-        "D+3": null
-      }
-    },
-    {
       "symbol": "EC",
       "name": "Ecopetrol S.A.",
       "report_date": "2026-11-10",
       "report_time": "장후",
-      "market_cap": 31454271500,
+      "market_cap": 31372038100,
       "eps": "$0.31",
       "eps_forecast": "$0.63",
       "surprise_pct": null,
@@ -458,6 +441,23 @@
       }
     },
     {
+      "symbol": "VG",
+      "name": "Venture Global, Inc.",
+      "report_date": "2026-11-10",
+      "report_time": "미상",
+      "market_cap": 30001115100,
+      "eps": "$0.56",
+      "eps_forecast": "$0.50",
+      "surprise_pct": 12,
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.69,
+        "D+1": 7.29,
+        "D+2": 12.37,
+        "D+3": null
+      }
+    },
+    {
       "symbol": "BAP",
       "name": "Credicorp Ltd.",
       "report_date": "2026-11-09",
@@ -475,18 +475,19 @@
       }
     },
     {
-      "symbol": "CBRS",
-      "name": "Cerebras Systems Inc.",
-      "report_date": "2026-11-12",
-      "report_time": "장후",
-      "market_cap": 24012974100,
-      "eps_forecast": "($0.13)",
-      "surprise_pct": null,
+      "symbol": "CRWV",
+      "name": "CoreWeave, Inc.",
+      "report_date": "2026-11-10",
+      "report_time": "미상",
+      "market_cap": 26876379100,
+      "eps": "($1.28)",
+      "eps_forecast": "($1.45)",
+      "surprise_pct": 11.72,
       "reaction": {
         "D-1": 0,
-        "D0": -3.29,
-        "D+1": null,
-        "D+2": null,
+        "D0": -0.51,
+        "D+1": 24.07,
+        "D+2": 15.56,
         "D+3": null
       }
     }
