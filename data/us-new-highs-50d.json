@@ -1,81 +1,69 @@
 {
-  "updated_at": "2026-11-13T14:54:33.062Z",
+  "updated_at": "2026-11-13T21:19:20.031Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
-  "count": 12,
+  "count": 10,
   "items": [
     {
-      "symbol": "AAPL",
-      "close": 359.745,
-      "day_change_pct": 1.37,
-      "pct_above_prior_window": 1.16
-    },
-    {
       "symbol": "KO",
-      "close": 98.61,
-      "day_change_pct": 1.2,
-      "pct_above_prior_window": 1.07
+      "close": 99.25,
+      "day_change_pct": 1.86,
+      "pct_above_prior_window": 1.72
     },
     {
       "symbol": "COST",
-      "close": 1103.51,
-      "day_change_pct": 1.03,
-      "pct_above_prior_window": 1.03
+      "close": 1106.21,
+      "day_change_pct": 1.28,
+      "pct_above_prior_window": 1.28
+    },
+    {
+      "symbol": "PEP",
+      "close": 145.44,
+      "day_change_pct": 2.24,
+      "pct_above_prior_window": 1.04
     },
     {
       "symbol": "JNJ",
-      "close": 285.575,
-      "day_change_pct": 0.72,
-      "pct_above_prior_window": 0.72
-    },
-    {
-      "symbol": "ADP",
-      "close": 309.805,
-      "day_change_pct": 0.61,
-      "pct_above_prior_window": 0.61
-    },
-    {
-      "symbol": "CCEP",
-      "close": 118.485,
-      "day_change_pct": 1.33,
-      "pct_above_prior_window": 0.52
+      "close": 285.75,
+      "day_change_pct": 0.79,
+      "pct_above_prior_window": 0.79
     },
     {
       "symbol": "PG",
-      "close": 169.38,
-      "day_change_pct": 0.8,
-      "pct_above_prior_window": 0.43
+      "close": 169.8,
+      "day_change_pct": 1.05,
+      "pct_above_prior_window": 0.68
     },
     {
-      "symbol": "TTWO",
-      "close": 232.31,
-      "day_change_pct": 2.36,
-      "pct_above_prior_window": 0.43
+      "symbol": "ADP",
+      "close": 309.93,
+      "day_change_pct": 0.65,
+      "pct_above_prior_window": 0.65
     },
     {
-      "symbol": "APP",
-      "close": 411.427,
-      "day_change_pct": 4.51,
-      "pct_above_prior_window": 0.35
+      "symbol": "CCEP",
+      "close": 118.57,
+      "day_change_pct": 1.4,
+      "pct_above_prior_window": 0.59
+    },
+    {
+      "symbol": "MDLZ",
+      "close": 67.54,
+      "day_change_pct": 1.47,
+      "pct_above_prior_window": 0.24
+    },
+    {
+      "symbol": "AAPL",
+      "close": 356.27,
+      "day_change_pct": 0.39,
+      "pct_above_prior_window": 0.18
     },
     {
       "symbol": "XEL",
-      "close": 81.7,
-      "day_change_pct": 0.25,
-      "pct_above_prior_window": 0.25
-    },
-    {
-      "symbol": "CDW",
-      "close": 173.3,
-      "day_change_pct": 0.3,
+      "close": 81.61,
+      "day_change_pct": 0.13,
       "pct_above_prior_window": 0.13
-    },
-    {
-      "symbol": "IDXX",
-      "close": 706.84,
-      "day_change_pct": 1.26,
-      "pct_above_prior_window": 0.03
     }
   ]
 }

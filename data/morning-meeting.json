@@ -1,16 +1,16 @@
 {
   "date": "20261114",
-  "generated_at": "2026-11-13T15:02:04.461Z",
+  "generated_at": "2026-11-13T21:26:43.806Z",
   "engineVersion": "v0.2",
   "objective": "NEW INFORMATION + CHANGE + CATALYST + CONFIRMATION — 오늘 새롭게 연구할 가치가 생긴 종목을 조기 발견",
   "methodologyNote": "시장/섹터 상대강도는 공식 지수가 아니라 가격 데이터 보유 종목의 동일가중 평균(proxy)입니다. Earnings/Revision Factor는 컨센서스 Provider 미연결로 항상 제외(MISSING_DATA)됩니다. 시총 순위는 KIS 시세를 조회한 종목(관심종목 + Discovery 추가조회) 안에서의 순위입니다. 수급 전환의 발생 시점은 \"최근 3거래일 vs 직전 5거래일\" 창 비교라 일 단위 날짜가 아닌 창 단위입니다. 종목 단위로 연결되지 않은 Catalyst: Investor Relations 일정, Large Contract(단일판매·공급계약), Index Rebalancing (정기변경 월 주기만 수집, 종목별 편입·편출 예고 없음), Major Customer Event, Policy Event, Share Cancellation(소각).",
   "marketRegime": {
     "state": "Neutral",
     "evidence": [
-      "VIX +0.37%",
-      "S&P500 -0.23%",
-      "NASDAQ -0.48%",
-      "USD/KRW 0%"
+      "VIX +4.71%",
+      "S&P500 -0.4%",
+      "NASDAQ -0.91%",
+      "USD/KRW -0.02%"
     ],
     "strategyPreference": [
       "DISCOVERY",
@@ -19,11 +19,11 @@
     "avoid": []
   },
   "screening": {
-    "universeCount": 1090,
+    "universeCount": 1082,
     "technicalCoverageCount": 109,
-    "discoveryPreScreenCount": 395,
+    "discoveryPreScreenCount": 391,
     "discoveryEnrichedCount": 60,
-    "signalCount": 291,
+    "signalCount": 288,
     "passedRiskCount": 36,
     "rejectedCount": 0
   },
@@ -1924,7 +1924,7 @@
       "gateFails": [],
       "risk": {
         "decision": "WATCH",
-        "reason": "투자주의 지정 (2026-10-30) · 5거래일 +65.5% — 단기 과열/과매도 · ATR14/종가 10.3% — 변동성 과다"
+        "reason": "5거래일 +65.5% — 단기 과열/과매도 · ATR14/종가 10.3% — 변동성 과다"
       },
       "topEvidence": "종가가 MA20 위로 회복 (2026-11-11, 2거래일 전)",
       "scoreBreakdown": [
@@ -2057,8 +2057,8 @@
       "pricedInVerdict": "unclear",
       "gateFails": [],
       "risk": {
-        "decision": "WATCH",
-        "reason": "자사주 처분 (잠재 매도물량)"
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
       },
       "topEvidence": "종가가 MA20 위로 회복 (2026-11-11, 2거래일 전)",
       "scoreBreakdown": [

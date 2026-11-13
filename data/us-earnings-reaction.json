@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T14:54:46.382Z",
+  "updated_at": "2026-11-13T21:19:31.139Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
@@ -9,7 +9,7 @@
       "name": "Berkshire Hathaway Inc.",
       "report_date": "2026-11-07",
       "report_time": "미상",
-      "market_cap": 1262103820000,
+      "market_cap": 1263280590000,
       "eps": "$8,907.22",
       "eps_forecast": "",
       "surprise_pct": null,
@@ -20,7 +20,7 @@
       "name": "Berkshire Hathaway Inc.",
       "report_date": "2026-11-07",
       "report_time": "미상",
-      "market_cap": 1262103820000,
+      "market_cap": 1263280590000,
       "eps": "$5.93",
       "eps_forecast": "$5.91",
       "surprise_pct": 0.34,
@@ -31,14 +31,14 @@
       "name": "Cisco Systems, Inc.",
       "report_date": "2026-11-12",
       "report_time": "미상",
-      "market_cap": 397255049000,
+      "market_cap": 402183291000,
       "eps": "$1.21",
       "eps_forecast": "$1.15",
       "surprise_pct": 5.22,
       "reaction": {
         "D-1": 0,
         "D0": 1.24,
-        "D+1": -3.77,
+        "D+1": -5.08,
         "D+2": null,
         "D+3": null
       }
@@ -48,14 +48,14 @@
       "name": "Applied Materials, Inc.",
       "report_date": "2026-11-12",
       "report_time": "미상",
-      "market_cap": 313534480000,
+      "market_cap": 302320943000,
       "eps": "$4.16",
       "eps_forecast": "$4.06",
       "surprise_pct": 2.46,
       "reaction": {
         "D-1": 0,
         "D0": -3.58,
-        "D+1": -5.86,
+        "D+1": -6.22,
         "D+2": null,
         "D+3": null
       }
@@ -74,7 +74,7 @@
         "D0": -0.38,
         "D+1": -2.89,
         "D+2": -1.36,
-        "D+3": -0.37
+        "D+3": -0.05
       }
     },
     {
@@ -93,14 +93,14 @@
       "name": "Brookfield Corporation",
       "report_date": "2026-11-12",
       "report_time": "미상",
-      "market_cap": 103007502000,
+      "market_cap": 101906604000,
       "eps": "$0.73",
       "eps_forecast": "$0.72",
       "surprise_pct": 1.39,
       "reaction": {
         "D-1": 0,
         "D0": -1,
-        "D+1": -1.97,
+        "D+1": -2.59,
         "D+2": null,
         "D+3": null
       }
@@ -153,7 +153,7 @@
         "D0": 0.55,
         "D+1": 2.15,
         "D+2": -1.3,
-        "D+3": -0.3
+        "D+3": -0.13
       }
     },
     {
@@ -174,23 +174,6 @@
       }
     },
     {
-      "symbol": "NU",
-      "name": "Nu Holdings Ltd.",
-      "report_date": "2026-11-12",
-      "report_time": "미상",
-      "market_cap": 59821900000,
-      "eps": "$0.22",
-      "eps_forecast": "$0.22",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": -3.98,
-        "D+1": 3.13,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
       "symbol": "OXY",
       "name": "Occidental Petroleum Corporation",
       "report_date": "2026-11-09",
@@ -205,6 +188,23 @@
         "D+1": 0.92,
         "D+2": 1.53,
         "D+3": 3.58
+      }
+    },
+    {
+      "symbol": "NU",
+      "name": "Nu Holdings Ltd.",
+      "report_date": "2026-11-12",
+      "report_time": "미상",
+      "market_cap": 57442619000,
+      "eps": "$0.22",
+      "eps_forecast": "$0.22",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -3.98,
+        "D+1": 7.31,
+        "D+2": null,
+        "D+3": null
       }
     },
     {
@@ -229,14 +229,14 @@
       "name": "Vylor Inc.",
       "report_date": "2026-11-12",
       "report_time": "미상",
-      "market_cap": 48112542000,
+      "market_cap": 48085848000,
       "eps": "($0.42)",
       "eps_forecast": "($0.44)",
       "surprise_pct": 4.55,
       "reaction": {
         "D-1": 0,
         "D0": -0.06,
-        "D+1": -0.78,
+        "D+1": 0.61,
         "D+2": null,
         "D+3": null
       }
@@ -254,7 +254,7 @@
         "D-1": 0,
         "D0": -2.75,
         "D+1": -3.15,
-        "D+2": -1.59,
+        "D+2": -3.43,
         "D+3": null
       }
     },
@@ -272,7 +272,7 @@
         "D0": -1.49,
         "D+1": -5.09,
         "D+2": -4.41,
-        "D+3": -2.78
+        "D+3": -3.34
       }
     },
     {
@@ -289,7 +289,7 @@
         "D0": -2.68,
         "D+1": -6.95,
         "D+2": -6.45,
-        "D+3": -3.89
+        "D+3": -4.3
       }
     },
     {
@@ -307,23 +307,6 @@
         "D+1": 4.55,
         "D+2": 7.65,
         "D+3": 5.62
-      }
-    },
-    {
-      "symbol": "NBIS",
-      "name": "Nebius Group N.V.",
-      "report_date": "2026-11-12",
-      "report_time": "미상",
-      "market_cap": 42053284000,
-      "eps": "$0.30",
-      "eps_forecast": "($0.61)",
-      "surprise_pct": 149.18,
-      "reaction": {
-        "D-1": 0,
-        "D0": -16.84,
-        "D+1": -25.21,
-        "D+2": null,
-        "D+3": null
       }
     },
     {
@@ -391,7 +374,7 @@
         "D0": -1.21,
         "D+1": -0.32,
         "D+2": -1.27,
-        "D+3": -2.42
+        "D+3": -2.04
       }
     },
     {
@@ -408,7 +391,24 @@
         "D0": -1.44,
         "D+1": -3.57,
         "D+2": -4.41,
-        "D+3": -3.02
+        "D+3": -1.36
+      }
+    },
+    {
+      "symbol": "NBIS",
+      "name": "Nebius Group N.V.",
+      "report_date": "2026-11-12",
+      "report_time": "미상",
+      "market_cap": 34971455000,
+      "eps": "$0.30",
+      "eps_forecast": "($0.61)",
+      "surprise_pct": 149.18,
+      "reaction": {
+        "D-1": 0,
+        "D0": -16.84,
+        "D+1": -25.09,
+        "D+2": null,
+        "D+3": null
       }
     },
     {
@@ -425,7 +425,7 @@
         "D0": 1.69,
         "D+1": 7.29,
         "D+2": 12.37,
-        "D+3": 12.16
+        "D+3": 11.36
       }
     },
     {
@@ -442,7 +442,7 @@
         "D0": -2.24,
         "D+1": -1.99,
         "D+2": -1.86,
-        "D+3": -1.28
+        "D+3": -1.15
       }
     },
     {
@@ -459,7 +459,7 @@
         "D0": -0.51,
         "D+1": 24.07,
         "D+2": 15.56,
-        "D+3": 6.16
+        "D+3": 8.47
       }
     },
     {
