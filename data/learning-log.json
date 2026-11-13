@@ -1613,7 +1613,7 @@
       "hasPriceData": true,
       "d1": -0.1,
       "d5": -0.67,
-      "d20": null
+      "d20": 9.08
     },
     {
       "engineVersion": "v0.2",
@@ -1632,7 +1632,7 @@
       "hasPriceData": true,
       "d1": -0.4,
       "d5": 1.34,
-      "d20": null
+      "d20": 5.74
     },
     {
       "engineVersion": "v0.2",
@@ -1651,7 +1651,7 @@
       "hasPriceData": true,
       "d1": 7.57,
       "d5": 5.46,
-      "d20": null
+      "d20": -0.12
     },
     {
       "engineVersion": "v0.2",
@@ -1670,7 +1670,7 @@
       "hasPriceData": true,
       "d1": 0.25,
       "d5": -2.31,
-      "d20": null
+      "d20": 0.74
     },
     {
       "engineVersion": "v0.2",
@@ -3588,7 +3588,7 @@
       "priceAtSelection": 188600,
       "hasPriceData": true,
       "d1": 0.95,
-      "d5": null,
+      "d5": -5.78,
       "d20": null
     },
     {
@@ -3607,7 +3607,7 @@
       "priceAtSelection": 16520,
       "hasPriceData": true,
       "d1": 0.54,
-      "d5": null,
+      "d5": -6.96,
       "d20": null
     },
     {
@@ -3626,7 +3626,7 @@
       "priceAtSelection": 20550,
       "hasPriceData": true,
       "d1": 0.24,
-      "d5": null,
+      "d5": -0.24,
       "d20": null
     },
     {
@@ -3645,7 +3645,7 @@
       "priceAtSelection": 32000,
       "hasPriceData": true,
       "d1": 1.56,
-      "d5": null,
+      "d5": -0.31,
       "d20": null
     },
     {
@@ -3664,7 +3664,7 @@
       "priceAtSelection": 34700,
       "hasPriceData": true,
       "d1": -0.14,
-      "d5": null,
+      "d5": -3.75,
       "d20": null
     },
     {
@@ -4157,7 +4157,7 @@
       "marketRegime": "Risk-on",
       "priceAtSelection": 81100,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 3.33,
       "d5": null,
       "d20": null
     },
@@ -4176,7 +4176,7 @@
       "marketRegime": "Risk-on",
       "priceAtSelection": 15230,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 0.92,
       "d5": null,
       "d20": null
     },
@@ -4195,7 +4195,7 @@
       "marketRegime": "Risk-on",
       "priceAtSelection": 204000,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 0.49,
       "d5": null,
       "d20": null
     },
@@ -4214,7 +4214,7 @@
       "marketRegime": "Risk-on",
       "priceAtSelection": 8120,
       "hasPriceData": true,
-      "d1": null,
+      "d1": -1.6,
       "d5": null,
       "d20": null
     },
@@ -4233,7 +4233,7 @@
       "marketRegime": "Risk-on",
       "priceAtSelection": 38700,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 3.88,
       "d5": null,
       "d20": null
     },
@@ -4245,50 +4245,12 @@
       "setup": "Market Leader",
       "bucket": "MARKET_LEADER",
       "strategy": "Confluence · Flow Confirmed",
-      "score": 41.6,
-      "noveltyScore": 10.6,
-      "pricedInVerdict": "not_yet_priced",
-      "dataCoverage": 77,
-      "marketRegime": "Neutral",
-      "priceAtSelection": 80800,
-      "hasPriceData": true,
-      "d1": null,
-      "d5": null,
-      "d20": null
-    },
-    {
-      "engineVersion": "v0.2",
-      "date": "20261113",
-      "symbol": "086280",
-      "name": "현대글로비스",
-      "setup": "Discovery",
-      "bucket": "DISCOVERY",
-      "strategy": "Flow Confirmed",
-      "score": 38.9,
-      "noveltyScore": 7.3,
-      "pricedInVerdict": "partially_priced_in",
-      "dataCoverage": 77,
-      "marketRegime": "Neutral",
-      "priceAtSelection": 203000,
-      "hasPriceData": true,
-      "d1": null,
-      "d5": null,
-      "d20": null
-    },
-    {
-      "engineVersion": "v0.2",
-      "date": "20261113",
-      "symbol": "032640",
-      "name": "LG유플러스",
-      "setup": "Discovery",
-      "bucket": "DISCOVERY",
-      "strategy": "Confluence · Trend Confirmation",
-      "score": 32.7,
-      "noveltyScore": 10.8,
+      "score": 47,
+      "noveltyScore": 8.8,
       "pricedInVerdict": "unclear",
       "dataCoverage": 77,
       "marketRegime": "Neutral",
-      "priceAtSelection": 15230,
+      "priceAtSelection": 83800,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -4297,17 +4259,17 @@
     {
       "engineVersion": "v0.2",
       "date": "20261113",
-      "symbol": "272450",
-      "name": "진에어",
-      "setup": "Event-Driven",
-      "bucket": "EVENT_DRIVEN",
-      "strategy": "Confluence · Trend Confirmation",
-      "score": 57.4,
-      "noveltyScore": 14.8,
-      "pricedInVerdict": "likely_priced_in",
+      "symbol": "277810",
+      "name": "레인보우로보틱스",
+      "setup": "Discovery",
+      "bucket": "DISCOVERY",
+      "strategy": "Confluence · Flow Confirmed",
+      "score": 42.1,
+      "noveltyScore": 10,
+      "pricedInVerdict": "unclear",
       "dataCoverage": 77,
       "marketRegime": "Neutral",
-      "priceAtSelection": 8120,
+      "priceAtSelection": 379000,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -4316,17 +4278,55 @@
     {
       "engineVersion": "v0.2",
       "date": "20261113",
-      "symbol": "195870",
-      "name": "해성디에스",
-      "setup": "Inflection",
-      "bucket": "INFLECTION",
-      "strategy": "Flow Confirmed",
-      "score": 48.1,
-      "noveltyScore": 15,
+      "symbol": "036460",
+      "name": "한국가스공사",
+      "setup": "Discovery",
+      "bucket": "DISCOVERY",
+      "strategy": "Confluence · Trend Confirmation",
+      "score": 38.6,
+      "noveltyScore": 11,
       "pricedInVerdict": "not_yet_priced",
       "dataCoverage": 77,
       "marketRegime": "Neutral",
-      "priceAtSelection": 44750,
+      "priceAtSelection": 38400,
+      "hasPriceData": true,
+      "d1": null,
+      "d5": null,
+      "d20": null
+    },
+    {
+      "engineVersion": "v0.2",
+      "date": "20261113",
+      "symbol": "069960",
+      "name": "현대백화점",
+      "setup": "Event-Driven",
+      "bucket": "EVENT_DRIVEN",
+      "strategy": "Confluence · Flow Confirmed",
+      "score": 35.3,
+      "noveltyScore": 5.8,
+      "pricedInVerdict": "unclear",
+      "dataCoverage": 77,
+      "marketRegime": "Neutral",
+      "priceAtSelection": 85500,
+      "hasPriceData": true,
+      "d1": null,
+      "d5": null,
+      "d20": null
+    },
+    {
+      "engineVersion": "v0.2",
+      "date": "20261113",
+      "symbol": "032830",
+      "name": "삼성생명",
+      "setup": "Inflection",
+      "bucket": "INFLECTION",
+      "strategy": "Confluence · Flow Confirmed",
+      "score": 41.6,
+      "noveltyScore": 10,
+      "pricedInVerdict": "not_yet_priced",
+      "dataCoverage": 77,
+      "marketRegime": "Neutral",
+      "priceAtSelection": 259000,
       "hasPriceData": true,
       "d1": null,
       "d5": null,

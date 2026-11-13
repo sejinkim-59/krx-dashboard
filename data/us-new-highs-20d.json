@@ -1,279 +1,165 @@
 {
-  "updated_at": "2026-11-12T18:50:51.810Z",
+  "updated_at": "2026-11-13T00:09:22.056Z",
   "universe": "S&P 500",
   "universe_size": 503,
   "window_days": 20,
-  "count": 45,
+  "count": 26,
   "items": [
     {
       "symbol": "ANET",
-      "close": 205.3,
-      "day_change_pct": 4.38,
-      "pct_above_prior_window": 4.38
+      "close": 206.63,
+      "day_change_pct": 5.06,
+      "pct_above_prior_window": 5.06
     },
     {
       "symbol": "AVGO",
-      "close": 363.72,
-      "day_change_pct": 5.36,
-      "pct_above_prior_window": 3.39
-    },
-    {
-      "symbol": "CF",
-      "close": 126.04,
-      "day_change_pct": 2.27,
-      "pct_above_prior_window": 2.22
-    },
-    {
-      "symbol": "SWKS",
-      "close": 91.29,
-      "day_change_pct": 4.16,
-      "pct_above_prior_window": 2.08
-    },
-    {
-      "symbol": "CBOE",
-      "close": 376.11,
-      "day_change_pct": 1.87,
-      "pct_above_prior_window": 1.87
-    },
-    {
-      "symbol": "CLX",
-      "close": 108.34,
-      "day_change_pct": 1.38,
-      "pct_above_prior_window": 1.38
-    },
-    {
-      "symbol": "GWW",
-      "close": 1509.78,
-      "day_change_pct": 1.56,
-      "pct_above_prior_window": 1.37
-    },
-    {
-      "symbol": "RSG",
-      "close": 252.375,
-      "day_change_pct": 1.22,
-      "pct_above_prior_window": 1.18
-    },
-    {
-      "symbol": "NI",
-      "close": 46.06,
-      "day_change_pct": 1.12,
-      "pct_above_prior_window": 1.12
+      "close": 364.36,
+      "day_change_pct": 5.54,
+      "pct_above_prior_window": 3.57
     },
     {
       "symbol": "CEG",
-      "close": 278.715,
-      "day_change_pct": 1.45,
-      "pct_above_prior_window": 0.95
+      "close": 282.4,
+      "day_change_pct": 2.79,
+      "pct_above_prior_window": 2.29
     },
     {
-      "symbol": "PGR",
-      "close": 236.72,
-      "day_change_pct": 1.37,
-      "pct_above_prior_window": 0.81
+      "symbol": "RSG",
+      "close": 253,
+      "day_change_pct": 1.47,
+      "pct_above_prior_window": 1.44
+    },
+    {
+      "symbol": "CF",
+      "close": 124.92,
+      "day_change_pct": 1.36,
+      "pct_above_prior_window": 1.31
+    },
+    {
+      "symbol": "CLX",
+      "close": 108.2,
+      "day_change_pct": 1.25,
+      "pct_above_prior_window": 1.25
+    },
+    {
+      "symbol": "AMD",
+      "close": 585.3,
+      "day_change_pct": 5.86,
+      "pct_above_prior_window": 1.19
     },
     {
       "symbol": "WM",
-      "close": 243.05,
-      "day_change_pct": 1.15,
-      "pct_above_prior_window": 0.74
+      "close": 244.11,
+      "day_change_pct": 1.59,
+      "pct_above_prior_window": 1.18
     },
     {
-      "symbol": "EQIX",
-      "close": 1075.81,
-      "day_change_pct": 0.73,
-      "pct_above_prior_window": 0.73
+      "symbol": "GWW",
+      "close": 1502.61,
+      "day_change_pct": 1.08,
+      "pct_above_prior_window": 0.89
     },
     {
-      "symbol": "XEL",
-      "close": 81.69,
-      "day_change_pct": 0.73,
-      "pct_above_prior_window": 0.73
+      "symbol": "SWKS",
+      "close": 90.03,
+      "day_change_pct": 2.73,
+      "pct_above_prior_window": 0.67
     },
     {
-      "symbol": "JNJ",
-      "close": 283.885,
-      "day_change_pct": 1.24,
-      "pct_above_prior_window": 0.63
-    },
-    {
-      "symbol": "CAH",
-      "close": 279.17,
-      "day_change_pct": 0.62,
-      "pct_above_prior_window": 0.62
-    },
-    {
-      "symbol": "DTE",
-      "close": 140.55,
-      "day_change_pct": 0.62,
-      "pct_above_prior_window": 0.62
-    },
-    {
-      "symbol": "WRB",
-      "close": 77.43,
-      "day_change_pct": 0.99,
-      "pct_above_prior_window": 0.58
-    },
-    {
-      "symbol": "EG",
-      "close": 426.145,
+      "symbol": "NI",
+      "close": 45.81,
       "day_change_pct": 0.57,
       "pct_above_prior_window": 0.57
     },
     {
-      "symbol": "BRK-B",
-      "close": 591.544,
-      "day_change_pct": 0.56,
-      "pct_above_prior_window": 0.56
-    },
-    {
-      "symbol": "BNY",
-      "close": 153.48,
-      "day_change_pct": 0.52,
+      "symbol": "JNJ",
+      "close": 283.52,
+      "day_change_pct": 1.11,
       "pct_above_prior_window": 0.5
     },
     {
-      "symbol": "KO",
-      "close": 98.06,
-      "day_change_pct": 0.5,
-      "pct_above_prior_window": 0.5
-    },
-    {
-      "symbol": "VZ",
-      "close": 46.83,
+      "symbol": "XEL",
+      "close": 81.5,
       "day_change_pct": 0.49,
       "pct_above_prior_window": 0.49
     },
     {
-      "symbol": "COST",
-      "close": 1092.534,
-      "day_change_pct": 0.45,
-      "pct_above_prior_window": 0.45
+      "symbol": "KR",
+      "close": 69.81,
+      "day_change_pct": 0.46,
+      "pct_above_prior_window": 0.46
     },
     {
-      "symbol": "CME",
-      "close": 317.27,
+      "symbol": "EQIX",
+      "close": 1072.77,
       "day_change_pct": 0.44,
       "pct_above_prior_window": 0.44
     },
     {
+      "symbol": "COST",
+      "close": 1092.21,
+      "day_change_pct": 0.42,
+      "pct_above_prior_window": 0.42
+    },
+    {
+      "symbol": "PGR",
+      "close": 235.49,
+      "day_change_pct": 0.84,
+      "pct_above_prior_window": 0.29
+    },
+    {
+      "symbol": "BRK-B",
+      "close": 589.83,
+      "day_change_pct": 0.27,
+      "pct_above_prior_window": 0.27
+    },
+    {
+      "symbol": "CAH",
+      "close": 278.14,
+      "day_change_pct": 0.25,
+      "pct_above_prior_window": 0.25
+    },
+    {
       "symbol": "CSX",
-      "close": 52.475,
-      "day_change_pct": 1.11,
-      "pct_above_prior_window": 0.39
+      "close": 52.4,
+      "day_change_pct": 0.96,
+      "pct_above_prior_window": 0.25
     },
     {
-      "symbol": "MO",
-      "close": 78.295,
-      "day_change_pct": 1.17,
-      "pct_above_prior_window": 0.34
+      "symbol": "WRB",
+      "close": 77.15,
+      "day_change_pct": 0.63,
+      "pct_above_prior_window": 0.22
     },
     {
-      "symbol": "CINF",
-      "close": 191.09,
-      "day_change_pct": 0.69,
-      "pct_above_prior_window": 0.32
+      "symbol": "BDX",
+      "close": 215.71,
+      "day_change_pct": 0.55,
+      "pct_above_prior_window": 0.21
     },
     {
       "symbol": "FAST",
-      "close": 55.665,
-      "day_change_pct": 0.32,
-      "pct_above_prior_window": 0.32
+      "close": 55.55,
+      "day_change_pct": 0.11,
+      "pct_above_prior_window": 0.11
     },
     {
-      "symbol": "PNW",
-      "close": 108.26,
-      "day_change_pct": 0.32,
-      "pct_above_prior_window": 0.32
-    },
-    {
-      "symbol": "ETR",
-      "close": 112.28,
-      "day_change_pct": 0.26,
-      "pct_above_prior_window": 0.26
-    },
-    {
-      "symbol": "AFL",
-      "close": 127.375,
-      "day_change_pct": 0.21,
-      "pct_above_prior_window": 0.21
-    },
-    {
-      "symbol": "EW",
-      "close": 106.036,
-      "day_change_pct": 0.21,
-      "pct_above_prior_window": 0.21
-    },
-    {
-      "symbol": "BLK",
-      "close": 1228.75,
-      "day_change_pct": 0.2,
-      "pct_above_prior_window": 0.2
-    },
-    {
-      "symbol": "EVRG",
-      "close": 88.62,
-      "day_change_pct": 0.32,
-      "pct_above_prior_window": 0.2
-    },
-    {
-      "symbol": "DGX",
-      "close": 260.2,
-      "day_change_pct": 0.58,
-      "pct_above_prior_window": 0.2
-    },
-    {
-      "symbol": "AIZ",
-      "close": 323.995,
-      "day_change_pct": 0.19,
-      "pct_above_prior_window": 0.19
-    },
-    {
-      "symbol": "LH",
-      "close": 372.868,
-      "day_change_pct": 0.17,
-      "pct_above_prior_window": 0.17
-    },
-    {
-      "symbol": "ABBV",
-      "close": 295.385,
-      "day_change_pct": 0.14,
-      "pct_above_prior_window": 0.14
-    },
-    {
-      "symbol": "AEE",
-      "close": 114.165,
-      "day_change_pct": 0.78,
-      "pct_above_prior_window": 0.13
-    },
-    {
-      "symbol": "STT",
-      "close": 174.4,
-      "day_change_pct": 0.13,
-      "pct_above_prior_window": 0.13
-    },
-    {
-      "symbol": "LLY",
-      "close": 1438.3,
+      "symbol": "BNY",
+      "close": 152.79,
       "day_change_pct": 0.07,
-      "pct_above_prior_window": 0.07
-    },
-    {
-      "symbol": "AAPL",
-      "close": 355.795,
-      "day_change_pct": 0.05,
       "pct_above_prior_window": 0.05
     },
     {
-      "symbol": "TECH",
-      "close": 72.835,
-      "day_change_pct": 0.05,
-      "pct_above_prior_window": 0.01
+      "symbol": "LH",
+      "close": 372.32,
+      "day_change_pct": 0.02,
+      "pct_above_prior_window": 0.02
     },
     {
-      "symbol": "KR",
-      "close": 69.49,
-      "day_change_pct": 0,
-      "pct_above_prior_window": 0
+      "symbol": "TECH",
+      "close": 72.84,
+      "day_change_pct": 0.05,
+      "pct_above_prior_window": 0.01
     }
   ]
 }
