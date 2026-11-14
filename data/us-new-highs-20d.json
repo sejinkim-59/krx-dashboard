@@ -1,15 +1,27 @@
 {
-  "updated_at": "2026-11-13T21:19:20.030Z",
+  "updated_at": "2026-11-14T01:43:59.507Z",
   "universe": "S&P 500",
   "universe_size": 503,
   "window_days": 20,
   "count": 48,
   "items": [
     {
+      "symbol": "ANET",
+      "close": 206.63,
+      "day_change_pct": 5.06,
+      "pct_above_prior_window": 5.06
+    },
+    {
       "symbol": "STE",
       "close": 264.32,
       "day_change_pct": 4.29,
       "pct_above_prior_window": 2.8
+    },
+    {
+      "symbol": "CEG",
+      "close": 282.4,
+      "day_change_pct": 2.79,
+      "pct_above_prior_window": 2.29
     },
     {
       "symbol": "MCK",
@@ -88,12 +100,6 @@
       "close": 145.44,
       "day_change_pct": 2.24,
       "pct_above_prior_window": 1.04
-    },
-    {
-      "symbol": "FDXF",
-      "close": 133.93,
-      "day_change_pct": 2.24,
-      "pct_above_prior_window": 0.97
     },
     {
       "symbol": "CL",
@@ -211,8 +217,8 @@
     },
     {
       "symbol": "EVRG",
-      "close": 88.775,
-      "day_change_pct": 0.57,
+      "close": 88.78,
+      "day_change_pct": 0.58,
       "pct_above_prior_window": 0.38
     },
     {
@@ -280,12 +286,6 @@
       "close": 341.72,
       "day_change_pct": 2.55,
       "pct_above_prior_window": 0.03
-    },
-    {
-      "symbol": "ABBV",
-      "close": 295.03,
-      "day_change_pct": 0.2,
-      "pct_above_prior_window": 0.02
     },
     {
       "symbol": "DTE",
