@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-15T20:18:43.607Z",
+  "updated_at": "2026-11-16T00:18:49.118Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
@@ -135,40 +135,6 @@
       }
     },
     {
-      "symbol": "CEG",
-      "name": "Constellation Energy Corporation",
-      "report_date": "2026-11-09",
-      "report_time": "미상",
-      "market_cap": 99294241000,
-      "eps": "$5.06",
-      "eps_forecast": "$3.90",
-      "surprise_pct": 29.74,
-      "reaction": {
-        "D-1": 0,
-        "D0": 10.46,
-        "D+1": 7.13,
-        "D+2": 9.91,
-        "D+3": 12.98
-      }
-    },
-    {
-      "symbol": "KKR",
-      "name": "KKR & Co. Inc.",
-      "report_date": "2026-11-09",
-      "report_time": "미상",
-      "market_cap": 86715965000,
-      "eps": "$1.62",
-      "eps_forecast": "$1.41",
-      "surprise_pct": 14.89,
-      "reaction": {
-        "D-1": 0,
-        "D0": 1.67,
-        "D+1": 4.53,
-        "D+2": 3.7,
-        "D+3": 0.75
-      }
-    },
-    {
       "symbol": "TDG",
       "name": "Transdigm Group Incorporated",
       "report_date": "2026-11-10",
@@ -186,40 +152,6 @@
       }
     },
     {
-      "symbol": "B",
-      "name": "Barrick Mining Corporation",
-      "report_date": "2026-11-09",
-      "report_time": "미상",
-      "market_cap": 61612741000,
-      "eps": "$0.82",
-      "eps_forecast": "$0.74",
-      "surprise_pct": 10.81,
-      "reaction": {
-        "D-1": 0,
-        "D0": 4.22,
-        "D+1": -2.14,
-        "D+2": -3.7,
-        "D+3": -6.71
-      }
-    },
-    {
-      "symbol": "OXY",
-      "name": "Occidental Petroleum Corporation",
-      "report_date": "2026-11-09",
-      "report_time": "미상",
-      "market_cap": 58393854000,
-      "eps": "$1.91",
-      "eps_forecast": "$1.43",
-      "surprise_pct": 33.57,
-      "reaction": {
-        "D-1": 0,
-        "D0": -1.1,
-        "D+1": 0.92,
-        "D+2": 1.53,
-        "D+3": 3.58
-      }
-    },
-    {
       "symbol": "NU",
       "name": "Nu Holdings Ltd.",
       "report_date": "2026-11-12",
@@ -234,23 +166,6 @@
         "D+1": 7.31,
         "D+2": null,
         "D+3": null
-      }
-    },
-    {
-      "symbol": "FERG",
-      "name": "Ferguson Enterprises Inc.",
-      "report_date": "2026-11-09",
-      "report_time": "미상",
-      "market_cap": 49359094000,
-      "eps": "$3.43",
-      "eps_forecast": "$3.28",
-      "surprise_pct": 4.57,
-      "reaction": {
-        "D-1": 0,
-        "D0": 11.22,
-        "D+1": 11.01,
-        "D+2": 13.18,
-        "D+3": 9.07
       }
     },
     {
@@ -322,40 +237,6 @@
       }
     },
     {
-      "symbol": "TTWO",
-      "name": "Take-Two Interactive Software, Inc.",
-      "report_date": "2026-11-09",
-      "report_time": "미상",
-      "market_cap": 42488103000,
-      "eps": "$0.61",
-      "eps_forecast": "$0.49",
-      "surprise_pct": 24.49,
-      "reaction": {
-        "D-1": 0,
-        "D0": -3.48,
-        "D+1": 4.55,
-        "D+2": 7.65,
-        "D+3": 5.62
-      }
-    },
-    {
-      "symbol": "RKLB",
-      "name": "Rocket Lab Corporation",
-      "report_date": "2026-11-09",
-      "report_time": "미상",
-      "market_cap": 40493580000,
-      "eps": "($0.09)",
-      "eps_forecast": "($0.06)",
-      "surprise_pct": -50,
-      "reaction": {
-        "D-1": 0,
-        "D0": 10.91,
-        "D+1": 18.16,
-        "D+2": 24.65,
-        "D+3": 20.73
-      }
-    },
-    {
       "symbol": "KB",
       "name": "KB Financial Group Inc",
       "report_date": "2026-11-13",
@@ -370,40 +251,6 @@
         "D+1": null,
         "D+2": null,
         "D+3": null
-      }
-    },
-    {
-      "symbol": "SKYD",
-      "name": "Skydance Corporation",
-      "report_date": "2026-11-09",
-      "report_time": "미상",
-      "market_cap": 38285648000,
-      "eps": "$0.45",
-      "eps_forecast": "$0.23",
-      "surprise_pct": 95.65,
-      "reaction": {
-        "D-1": 0,
-        "D0": 8.61,
-        "D+1": 0.37,
-        "D+2": -1.37,
-        "D+3": -5.24
-      }
-    },
-    {
-      "symbol": "IX",
-      "name": "ORIX Corporation",
-      "report_date": "2026-11-09",
-      "report_time": "장전",
-      "market_cap": 37133595000,
-      "eps": "$0.99",
-      "eps_forecast": "",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": -2.07,
-        "D+1": -6.17,
-        "D+2": -3.76,
-        "D+3": -2.21
       }
     },
     {
@@ -506,6 +353,153 @@
         "D+1": 24.07,
         "D+2": 15.56,
         "D+3": 8.47
+      }
+    },
+    {
+      "symbol": "CBRS",
+      "name": "Cerebras Systems Inc.",
+      "report_date": "2026-11-12",
+      "report_time": "미상",
+      "market_cap": 23221884900,
+      "eps": "$0.13",
+      "eps_forecast": "($0.13)",
+      "surprise_pct": 200,
+      "reaction": {
+        "D-1": 0,
+        "D0": -3.29,
+        "D+1": 7.56,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "ONON",
+      "name": "On Holding AG",
+      "report_date": "2026-11-10",
+      "report_time": "미상",
+      "market_cap": 19955466200,
+      "eps": "$0.59",
+      "eps_forecast": "$0.42",
+      "surprise_pct": 40.48,
+      "reaction": {
+        "D-1": 0,
+        "D0": -7.54,
+        "D+1": -7.51,
+        "D+2": -11.88,
+        "D+3": -10.39
+      }
+    },
+    {
+      "symbol": "VIV",
+      "name": "Telefonica Brasil S.A.",
+      "report_date": "2026-11-10",
+      "report_time": "미상",
+      "market_cap": 19013857300,
+      "eps": "$0.30",
+      "eps_forecast": "$0.24",
+      "surprise_pct": 25,
+      "reaction": {
+        "D-1": 0,
+        "D0": 0.43,
+        "D+1": 5.77,
+        "D+2": 2.5,
+        "D+3": 3.53
+      }
+    },
+    {
+      "symbol": "ASND",
+      "name": "Ascendis Pharma A/S",
+      "report_date": "2026-11-12",
+      "report_time": "미상",
+      "market_cap": 17595666400,
+      "eps": "$1.24",
+      "eps_forecast": "$1.13",
+      "surprise_pct": 9.73,
+      "reaction": {
+        "D-1": 0,
+        "D0": 3,
+        "D+1": 6.21,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "WF",
+      "name": "Woori Bank",
+      "report_date": "2026-11-13",
+      "report_time": "미상",
+      "market_cap": 17152391200,
+      "eps": "$3.57",
+      "eps_forecast": "",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 3.28,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "GIB",
+      "name": "CGI Inc.",
+      "report_date": "2026-11-11",
+      "report_time": "미상",
+      "market_cap": 16958365700,
+      "eps": "$1.65",
+      "eps_forecast": "$1.64",
+      "surprise_pct": 0.61,
+      "reaction": {
+        "D-1": 0,
+        "D0": -1.67,
+        "D+1": -0.85,
+        "D+2": -0.87,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "KSPI",
+      "name": "Joint Stock Company Kaspi.kz",
+      "report_date": "2026-11-11",
+      "report_time": "미상",
+      "market_cap": 16782518300,
+      "eps": "$3.11",
+      "eps_forecast": "$3.12",
+      "surprise_pct": -0.32,
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.75,
+        "D+1": 0.84,
+        "D+2": 2.29,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "EMBJ",
+      "name": "Embraer S.A.",
+      "report_date": "2026-11-10",
+      "report_time": "미상",
+      "market_cap": 14361363500,
+      "eps": "$0.41",
+      "eps_forecast": "$0.87",
+      "surprise_pct": -52.87,
+      "reaction": null
+    },
+    {
+      "symbol": "BNT",
+      "name": "Brookfield Wealth Solutions Ltd.",
+      "report_date": "2026-11-12",
+      "report_time": "미상",
+      "market_cap": 14017328100,
+      "eps": "$0.07",
+      "eps_forecast": "",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -2.04,
+        "D+1": -2.76,
+        "D+2": null,
+        "D+3": null
       }
     }
   ]
