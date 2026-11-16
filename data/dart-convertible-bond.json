@@ -1,10 +1,22 @@
 {
-  "updated_at": "2026-11-16T07:07:35.675Z",
+  "updated_at": "2026-11-16T17:20:42.253Z",
   "range": {
-    "from": "20261102",
-    "to": "20261116"
+    "from": "20261103",
+    "to": "20261117"
   },
   "items": [
+    {
+      "corp_name": "진시스템",
+      "stock_code": "363250",
+      "rcept_no": "20261116002211",
+      "rcept_dt": "20261116",
+      "conversion_price": null,
+      "conversion_start": null,
+      "conversion_end": null,
+      "pay_date": null,
+      "maturity_date": null,
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116002211"
+    },
     {
       "corp_name": "보로노이",
       "stock_code": "310210",
@@ -124,18 +136,6 @@
       "pay_date": "2026년 11월 12일",
       "maturity_date": "2031년 11월 12일",
       "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261104000318"
-    },
-    {
-      "corp_name": "광진실업",
-      "stock_code": "026910",
-      "rcept_no": "20261102000267",
-      "rcept_dt": "20261102",
-      "conversion_price": "3,580",
-      "conversion_start": "2027년 11월 26일",
-      "conversion_end": "2029년 10월 25일",
-      "pay_date": "2026년 11월 26일",
-      "maturity_date": "2029년 11월 26일",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261102000267"
     }
   ]
 }

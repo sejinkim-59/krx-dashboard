@@ -1,10 +1,40 @@
 {
-  "updated_at": "2026-11-16T07:07:35.673Z",
+  "updated_at": "2026-11-16T17:20:42.251Z",
   "range": {
-    "from": "20261102",
-    "to": "20261116"
+    "from": "20261103",
+    "to": "20261117"
   },
   "items": [
+    {
+      "corp_name": "한세예스24홀딩스",
+      "stock_code": "016450",
+      "rcept_no": "20261116802329",
+      "rcept_dt": "20261116",
+      "method": null,
+      "new_shares": null,
+      "record_date": null,
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116802329"
+    },
+    {
+      "corp_name": "한세엠케이",
+      "stock_code": "069640",
+      "rcept_no": "20261116002004",
+      "rcept_dt": "20261116",
+      "method": null,
+      "new_shares": null,
+      "record_date": null,
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116002004"
+    },
+    {
+      "corp_name": "럭스로보",
+      "stock_code": "",
+      "rcept_no": "20261116001647",
+      "rcept_dt": "20261116",
+      "method": "제3자배정증자",
+      "new_shares": "-",
+      "record_date": null,
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116001647"
+    },
     {
       "corp_name": "트윔",
       "stock_code": "290090",
@@ -324,16 +354,6 @@
       "new_shares": "-",
       "record_date": null,
       "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103000280"
-    },
-    {
-      "corp_name": "에이치티알헤시라스",
-      "stock_code": "",
-      "rcept_no": "20261102000115",
-      "rcept_dt": "20261102",
-      "method": null,
-      "new_shares": null,
-      "record_date": null,
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261102000115"
     }
   ]
 }

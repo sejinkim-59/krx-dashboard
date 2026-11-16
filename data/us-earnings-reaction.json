@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16T07:13:15.925Z",
+  "updated_at": "2026-11-16T17:26:58.086Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
@@ -9,7 +9,7 @@
       "name": "Cisco Systems, Inc.",
       "report_date": "2026-11-12",
       "report_time": "미상",
-      "market_cap": 402183291000,
+      "market_cap": 377069011000,
       "eps": "$1.21",
       "eps_forecast": "$1.15",
       "surprise_pct": 5.22,
@@ -17,7 +17,7 @@
         "D-1": 0,
         "D0": 1.24,
         "D+1": -5.08,
-        "D+2": null,
+        "D+2": -6.52,
         "D+3": null
       }
     },
@@ -26,7 +26,7 @@
       "name": "Applied Materials, Inc.",
       "report_date": "2026-11-12",
       "report_time": "미상",
-      "market_cap": 302320943000,
+      "market_cap": 294027854000,
       "eps": "$4.16",
       "eps_forecast": "$4.06",
       "surprise_pct": 2.46,
@@ -34,7 +34,7 @@
         "D-1": 0,
         "D0": -3.58,
         "D+1": -6.22,
-        "D+2": null,
+        "D+2": -10.2,
         "D+3": null
       }
     },
@@ -43,14 +43,14 @@
       "name": "Mitsubishi UFJ Financial Group Inc",
       "report_date": "2026-11-13",
       "report_time": "미상",
-      "market_cap": 258122711000,
+      "market_cap": 259072131000,
       "eps": "$0.46",
       "eps_forecast": "$0.45",
       "surprise_pct": 2.22,
       "reaction": {
         "D-1": 0,
         "D0": 0.37,
-        "D+1": null,
+        "D+1": -2,
         "D+2": null,
         "D+3": null
       }
@@ -60,14 +60,14 @@
       "name": "Sumitomo Mitsui Financial Group Inc",
       "report_date": "2026-11-13",
       "report_time": "미상",
-      "market_cap": 155527037000,
+      "market_cap": 157888348000,
       "eps": "$0.50",
       "eps_forecast": "$0.24",
       "surprise_pct": 108.33,
       "reaction": {
         "D-1": 0,
         "D0": 1.52,
-        "D+1": null,
+        "D+1": 0,
         "D+2": null,
         "D+3": null
       }
@@ -77,14 +77,14 @@
       "name": "Mizuho Financial Group, Inc.",
       "report_date": "2026-11-13",
       "report_time": "미상",
-      "market_cap": 125986341000,
+      "market_cap": 128725172000,
       "eps": "$0.24",
       "eps_forecast": "$0.21",
       "surprise_pct": 14.29,
       "reaction": {
         "D-1": 0,
         "D0": 2.17,
-        "D+1": null,
+        "D+1": 2.03,
         "D+2": null,
         "D+3": null
       }
@@ -94,7 +94,7 @@
       "name": "Petroleo Brasileiro S.A.- Petrobras",
       "report_date": "2026-11-10",
       "report_time": "미상",
-      "market_cap": 116643029000,
+      "market_cap": 118189679000,
       "eps": "$1.44",
       "eps_forecast": "$1.38",
       "surprise_pct": 4.35,
@@ -111,7 +111,7 @@
       "name": "Petroleo Brasileiro S.A.- Petrobras",
       "report_date": "2026-11-10",
       "report_time": "미상",
-      "market_cap": 116643029000,
+      "market_cap": 118189679000,
       "eps": "$1.44",
       "eps_forecast": "",
       "surprise_pct": null,
@@ -122,7 +122,7 @@
       "name": "Brookfield Corporation",
       "report_date": "2026-11-12",
       "report_time": "미상",
-      "market_cap": 101906604000,
+      "market_cap": 100338360000,
       "eps": "$0.73",
       "eps_forecast": "$0.72",
       "surprise_pct": 1.39,
@@ -130,7 +130,7 @@
         "D-1": 0,
         "D0": -1,
         "D+1": -2.59,
-        "D+2": null,
+        "D+2": -4.11,
         "D+3": null
       }
     },
@@ -139,7 +139,7 @@
       "name": "Transdigm Group Incorporated",
       "report_date": "2026-11-10",
       "report_time": "미상",
-      "market_cap": 65671574000,
+      "market_cap": 66451116000,
       "eps": "$11.88",
       "eps_forecast": "$11.43",
       "surprise_pct": 3.94,
@@ -156,7 +156,7 @@
       "name": "Nu Holdings Ltd.",
       "report_date": "2026-11-12",
       "report_time": "미상",
-      "market_cap": 57442619000,
+      "market_cap": 64192004000,
       "eps": "$0.22",
       "eps_forecast": "$0.22",
       "surprise_pct": null,
@@ -164,7 +164,7 @@
         "D-1": 0,
         "D0": -3.98,
         "D+1": 7.31,
-        "D+2": null,
+        "D+2": 3.69,
         "D+3": null
       }
     },
@@ -173,7 +173,7 @@
       "name": "Vylor Inc.",
       "report_date": "2026-11-12",
       "report_time": "미상",
-      "market_cap": 48085848000,
+      "market_cap": 48406163000,
       "eps": "($0.42)",
       "eps_forecast": "($0.44)",
       "surprise_pct": 4.55,
@@ -181,7 +181,7 @@
         "D-1": 0,
         "D0": -0.06,
         "D+1": 0.61,
-        "D+2": null,
+        "D+2": -1.66,
         "D+3": null
       }
     },
@@ -190,7 +190,7 @@
       "name": "Franco-Nevada Corporation",
       "report_date": "2026-11-11",
       "report_time": "미상",
-      "market_cap": 47718642000,
+      "market_cap": 47570317000,
       "eps": "$1.89",
       "eps_forecast": "$1.77",
       "surprise_pct": 6.78,
@@ -199,7 +199,7 @@
         "D0": -2.75,
         "D+1": -3.15,
         "D+2": -3.43,
-        "D+3": null
+        "D+3": -4.36
       }
     },
     {
@@ -207,7 +207,7 @@
       "name": "Sea Limited",
       "report_date": "2026-11-10",
       "report_time": "미상",
-      "market_cap": 45642346000,
+      "market_cap": 46156833000,
       "eps": "$0.78",
       "eps_forecast": "$0.79",
       "surprise_pct": -1.27,
@@ -224,7 +224,7 @@
       "name": "Honda Motor Company, Ltd.",
       "report_date": "2026-11-10",
       "report_time": "미상",
-      "market_cap": 43506074000,
+      "market_cap": 44505170000,
       "eps": "$0.32",
       "eps_forecast": "",
       "surprise_pct": null,
@@ -241,33 +241,16 @@
       "name": "KB Financial Group Inc",
       "report_date": "2026-11-13",
       "report_time": "미상",
-      "market_cap": 40218042000,
+      "market_cap": 41647432000,
       "eps": "$3.21",
       "eps_forecast": "$3.94",
       "surprise_pct": null,
       "reaction": {
         "D-1": 0,
         "D0": 3.55,
-        "D+1": null,
+        "D+1": 4.63,
         "D+2": null,
         "D+3": null
-      }
-    },
-    {
-      "symbol": "VOD",
-      "name": "Vodafone Group Plc",
-      "report_date": "2026-11-10",
-      "report_time": "장전",
-      "market_cap": 36147442000,
-      "eps": "N/A",
-      "eps_forecast": "",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": -1.21,
-        "D+1": -0.32,
-        "D+2": -1.27,
-        "D+3": -2.04
       }
     },
     {
@@ -275,7 +258,7 @@
       "name": "Alcon Inc.",
       "report_date": "2026-11-10",
       "report_time": "미상",
-      "market_cap": 35893453000,
+      "market_cap": 37037765000,
       "eps": "$0.91",
       "eps_forecast": "$0.89",
       "surprise_pct": 2.25,
@@ -288,11 +271,28 @@
       }
     },
     {
+      "symbol": "VOD",
+      "name": "Vodafone Group Plc",
+      "report_date": "2026-11-10",
+      "report_time": "장전",
+      "market_cap": 35759194000,
+      "eps": "N/A",
+      "eps_forecast": "",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -1.21,
+        "D+1": -0.32,
+        "D+2": -1.27,
+        "D+3": -2.04
+      }
+    },
+    {
       "symbol": "NBIS",
       "name": "Nebius Group N.V.",
       "report_date": "2026-11-12",
       "report_time": "미상",
-      "market_cap": 34971455000,
+      "market_cap": 33941530600,
       "eps": "$0.30",
       "eps_forecast": "($0.61)",
       "surprise_pct": 149.18,
@@ -300,7 +300,7 @@
         "D-1": 0,
         "D0": -16.84,
         "D+1": -25.09,
-        "D+2": null,
+        "D+2": -29.77,
         "D+3": null
       }
     },
@@ -309,7 +309,7 @@
       "name": "Venture Global, Inc.",
       "report_date": "2026-11-10",
       "report_time": "미상",
-      "market_cap": 33384026100,
+      "market_cap": 33081909200,
       "eps": "$0.56",
       "eps_forecast": "$0.50",
       "surprise_pct": 12,
@@ -326,9 +326,9 @@
       "name": "Ecopetrol S.A.",
       "report_date": "2026-11-10",
       "report_time": "장후",
-      "market_cap": 31495387100,
+      "market_cap": 31721529300,
       "eps": "$0.31",
-      "eps_forecast": "$0.63",
+      "eps_forecast": "$0.69",
       "surprise_pct": null,
       "reaction": {
         "D-1": 0,
@@ -343,7 +343,7 @@
       "name": "CoreWeave, Inc.",
       "report_date": "2026-11-10",
       "report_time": "미상",
-      "market_cap": 31216971800,
+      "market_cap": 29546958800,
       "eps": "($1.28)",
       "eps_forecast": "($1.45)",
       "surprise_pct": 11.72,
@@ -360,7 +360,7 @@
       "name": "Cerebras Systems Inc.",
       "report_date": "2026-11-12",
       "report_time": "미상",
-      "market_cap": 23221884900,
+      "market_cap": 26419324900,
       "eps": "$0.13",
       "eps_forecast": "($0.13)",
       "surprise_pct": 200,
@@ -368,7 +368,7 @@
         "D-1": 0,
         "D0": -3.29,
         "D+1": 7.56,
-        "D+2": null,
+        "D+2": -0.32,
         "D+3": null
       }
     },
@@ -377,7 +377,7 @@
       "name": "On Holding AG",
       "report_date": "2026-11-10",
       "report_time": "미상",
-      "market_cap": 19955466200,
+      "market_cap": 20293386200,
       "eps": "$0.59",
       "eps_forecast": "$0.42",
       "surprise_pct": 40.48,
@@ -394,7 +394,7 @@
       "name": "Telefonica Brasil S.A.",
       "report_date": "2026-11-10",
       "report_time": "미상",
-      "market_cap": 19013857300,
+      "market_cap": 19205595100,
       "eps": "$0.30",
       "eps_forecast": "$0.24",
       "surprise_pct": 25,
@@ -411,7 +411,7 @@
       "name": "Ascendis Pharma A/S",
       "report_date": "2026-11-12",
       "report_time": "미상",
-      "market_cap": 17595666400,
+      "market_cap": 18143821800,
       "eps": "$1.24",
       "eps_forecast": "$1.13",
       "surprise_pct": 9.73,
@@ -419,7 +419,7 @@
         "D-1": 0,
         "D0": 3,
         "D+1": 6.21,
-        "D+2": null,
+        "D+2": 5.47,
         "D+3": null
       }
     },
@@ -428,32 +428,15 @@
       "name": "Woori Bank",
       "report_date": "2026-11-13",
       "report_time": "미상",
-      "market_cap": 17152391200,
+      "market_cap": 17714804700,
       "eps": "$3.57",
       "eps_forecast": "",
       "surprise_pct": null,
       "reaction": {
         "D-1": 0,
         "D0": 3.28,
-        "D+1": null,
+        "D+1": 3.83,
         "D+2": null,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "GIB",
-      "name": "CGI Inc.",
-      "report_date": "2026-11-11",
-      "report_time": "미상",
-      "market_cap": 16958365700,
-      "eps": "$1.65",
-      "eps_forecast": "$1.64",
-      "surprise_pct": 0.61,
-      "reaction": {
-        "D-1": 0,
-        "D0": -1.67,
-        "D+1": -0.85,
-        "D+2": -0.87,
         "D+3": null
       }
     },
@@ -462,7 +445,7 @@
       "name": "Joint Stock Company Kaspi.kz",
       "report_date": "2026-11-11",
       "report_time": "미상",
-      "market_cap": 16782518300,
+      "market_cap": 17022971900,
       "eps": "$3.11",
       "eps_forecast": "$3.12",
       "surprise_pct": -0.32,
@@ -471,7 +454,24 @@
         "D0": 1.75,
         "D+1": 0.84,
         "D+2": 2.29,
-        "D+3": null
+        "D+3": 4.23
+      }
+    },
+    {
+      "symbol": "GIB",
+      "name": "CGI Inc.",
+      "report_date": "2026-11-11",
+      "report_time": "미상",
+      "market_cap": 16954672100,
+      "eps": "$1.65",
+      "eps_forecast": "$1.64",
+      "surprise_pct": 0.61,
+      "reaction": {
+        "D-1": 0,
+        "D0": -1.67,
+        "D+1": -0.85,
+        "D+2": -0.87,
+        "D+3": -0.5
       }
     },
     {
@@ -479,7 +479,7 @@
       "name": "Embraer S.A.",
       "report_date": "2026-11-10",
       "report_time": "미상",
-      "market_cap": 14361363500,
+      "market_cap": 14225844200,
       "eps": "$0.41",
       "eps_forecast": "$0.87",
       "surprise_pct": -52.87,
@@ -490,7 +490,7 @@
       "name": "Brookfield Wealth Solutions Ltd.",
       "report_date": "2026-11-12",
       "report_time": "미상",
-      "market_cap": 14017328100,
+      "market_cap": 13824735200,
       "eps": "$0.07",
       "eps_forecast": "",
       "surprise_pct": null,
@@ -498,7 +498,7 @@
         "D-1": 0,
         "D0": -2.04,
         "D+1": -2.76,
-        "D+2": null,
+        "D+2": -3.68,
         "D+3": null
       }
     }
