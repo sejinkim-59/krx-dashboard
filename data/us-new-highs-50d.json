@@ -1,81 +1,69 @@
 {
-  "updated_at": "2026-11-16T17:26:44.378Z",
+  "updated_at": "2026-11-17T01:07:20.352Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
-  "count": 12,
+  "count": 10,
   "items": [
     {
-      "symbol": "PG",
-      "close": 173.04,
-      "day_change_pct": 1.91,
-      "pct_above_prior_window": 1.91
-    },
-    {
-      "symbol": "ADP",
-      "close": 315.26,
-      "day_change_pct": 1.72,
+      "symbol": "KO",
+      "close": 99.25,
+      "day_change_pct": 1.86,
       "pct_above_prior_window": 1.72
     },
     {
-      "symbol": "APP",
-      "close": 416.8,
-      "day_change_pct": 1.88,
-      "pct_above_prior_window": 1.66
+      "symbol": "COST",
+      "close": 1106.21,
+      "day_change_pct": 1.28,
+      "pct_above_prior_window": 1.28
     },
     {
       "symbol": "PEP",
-      "close": 147.45,
-      "day_change_pct": 1.38,
-      "pct_above_prior_window": 1.38
+      "close": 145.44,
+      "day_change_pct": 2.24,
+      "pct_above_prior_window": 1.04
     },
     {
-      "symbol": "ORLY",
-      "close": 93.27,
-      "day_change_pct": 1.17,
-      "pct_above_prior_window": 1.01
+      "symbol": "JNJ",
+      "close": 285.75,
+      "day_change_pct": 0.79,
+      "pct_above_prior_window": 0.79
+    },
+    {
+      "symbol": "PG",
+      "close": 169.8,
+      "day_change_pct": 1.05,
+      "pct_above_prior_window": 0.68
+    },
+    {
+      "symbol": "ADP",
+      "close": 309.93,
+      "day_change_pct": 0.65,
+      "pct_above_prior_window": 0.65
     },
     {
       "symbol": "CCEP",
-      "close": 119.685,
-      "day_change_pct": 0.94,
-      "pct_above_prior_window": 0.94
-    },
-    {
-      "symbol": "COST",
-      "close": 1112.92,
-      "day_change_pct": 0.61,
-      "pct_above_prior_window": 0.61
+      "close": 118.57,
+      "day_change_pct": 1.4,
+      "pct_above_prior_window": 0.59
     },
     {
       "symbol": "MDLZ",
-      "close": 67.925,
-      "day_change_pct": 0.57,
-      "pct_above_prior_window": 0.57
+      "close": 67.54,
+      "day_change_pct": 1.47,
+      "pct_above_prior_window": 0.24
     },
     {
-      "symbol": "VRSK",
-      "close": 212.64,
-      "day_change_pct": 2.32,
-      "pct_above_prior_window": 0.55
+      "symbol": "AAPL",
+      "close": 356.27,
+      "day_change_pct": 0.39,
+      "pct_above_prior_window": 0.18
     },
     {
-      "symbol": "LIN",
-      "close": 528.58,
-      "day_change_pct": 0.48,
-      "pct_above_prior_window": 0.39
-    },
-    {
-      "symbol": "IDXX",
-      "close": 709.105,
-      "day_change_pct": 0.69,
-      "pct_above_prior_window": 0.35
-    },
-    {
-      "symbol": "KO",
-      "close": 99.345,
-      "day_change_pct": 0.1,
-      "pct_above_prior_window": 0.1
+      "symbol": "XEL",
+      "close": 81.61,
+      "day_change_pct": 0.13,
+      "pct_above_prior_window": 0.13
     }
   ]
 }
