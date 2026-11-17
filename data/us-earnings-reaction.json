@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17T01:07:34.268Z",
+  "updated_at": "2026-11-17T09:02:48.421Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
@@ -17,7 +17,7 @@
         "D-1": 0,
         "D0": 1.24,
         "D+1": -5.08,
-        "D+2": null,
+        "D+2": -6.19,
         "D+3": null
       }
     },
@@ -34,7 +34,7 @@
         "D-1": 0,
         "D0": -3.58,
         "D+1": -6.22,
-        "D+2": null,
+        "D+2": -11.35,
         "D+3": null
       }
     },
@@ -50,7 +50,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 0.37,
-        "D+1": null,
+        "D+1": -2.53,
         "D+2": null,
         "D+3": null
       }
@@ -67,7 +67,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 1.52,
-        "D+1": null,
+        "D+1": -0.78,
         "D+2": null,
         "D+3": null
       }
@@ -84,7 +84,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 2.17,
-        "D+1": null,
+        "D+1": 1.28,
         "D+2": null,
         "D+3": null
       }
@@ -102,7 +102,7 @@
         "D-1": 0,
         "D0": -1,
         "D+1": -2.59,
-        "D+2": null,
+        "D+2": -3.97,
         "D+3": null
       }
     },
@@ -119,7 +119,7 @@
         "D-1": 0,
         "D0": -3.98,
         "D+1": 7.31,
-        "D+2": null,
+        "D+2": 2.92,
         "D+3": null
       }
     },
@@ -136,7 +136,7 @@
         "D-1": 0,
         "D0": -0.06,
         "D+1": 0.61,
-        "D+2": null,
+        "D+2": -0.42,
         "D+3": null
       }
     },
@@ -154,21 +154,21 @@
         "D0": -2.75,
         "D+1": -3.15,
         "D+2": -3.43,
-        "D+3": null
+        "D+3": -6.1
       }
     },
     {
       "symbol": "KB",
       "name": "KB Financial Group Inc",
-      "report_date": "2026-11-13",
+      "report_date": "2026-11-16",
       "report_time": "미상",
       "market_cap": 41647432000,
-      "eps": "$3.21",
+      "eps": "$3.42",
       "eps_forecast": "$3.94",
-      "surprise_pct": null,
+      "surprise_pct": -13.2,
       "reaction": {
         "D-1": 0,
-        "D0": 3.55,
+        "D0": 0.25,
         "D+1": null,
         "D+2": null,
         "D+3": null
@@ -187,7 +187,7 @@
         "D-1": 0,
         "D0": -16.84,
         "D+1": -25.09,
-        "D+2": null,
+        "D+2": -30.75,
         "D+3": null
       }
     },
@@ -196,12 +196,30 @@
       "name": "Trip.com Group Limited",
       "report_date": "2026-11-16",
       "report_time": "미상",
-      "market_cap": 27209562100,
+      "market_cap": 27442552800,
+      "eps": "$3.76",
       "eps_forecast": "$1.07",
       "surprise_pct": null,
       "reaction": {
         "D-1": 0,
-        "D0": null,
+        "D0": 1.58,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "BIDU",
+      "name": "Baidu, Inc.",
+      "report_date": "2026-11-16",
+      "report_time": "미상",
+      "market_cap": 26587342800,
+      "eps": "$0.58",
+      "eps_forecast": "$0.57",
+      "surprise_pct": 1.75,
+      "reaction": {
+        "D-1": 0,
+        "D0": -5.37,
         "D+1": null,
         "D+2": null,
         "D+3": null
@@ -220,23 +238,7 @@
         "D-1": 0,
         "D0": -3.29,
         "D+1": 7.56,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "BIDU",
-      "name": "Baidu, Inc.",
-      "report_date": "2026-11-16",
-      "report_time": "장전",
-      "market_cap": 26413813800,
-      "eps_forecast": "$0.57",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": null,
-        "D+1": null,
-        "D+2": null,
+        "D+2": -0.09,
         "D+3": null
       }
     },
@@ -244,13 +246,14 @@
       "symbol": "TSN",
       "name": "Tyson Foods, Inc.",
       "report_date": "2026-11-16",
-      "report_time": "장전",
-      "market_cap": 20847757300,
+      "report_time": "미상",
+      "market_cap": 20692965400,
+      "eps": "$0.61",
       "eps_forecast": "$0.65",
-      "surprise_pct": null,
+      "surprise_pct": -6.15,
       "reaction": {
         "D-1": 0,
-        "D0": null,
+        "D0": 8.72,
         "D+1": null,
         "D+2": null,
         "D+3": null
@@ -260,13 +263,14 @@
       "symbol": "BEKE",
       "name": "KE Holdings Inc",
       "report_date": "2026-11-16",
-      "report_time": "장전",
-      "market_cap": 19941675000,
-      "eps_forecast": "$0.20",
-      "surprise_pct": null,
+      "report_time": "미상",
+      "market_cap": 20178939900,
+      "eps": "$0.30",
+      "eps_forecast": "$0.21",
+      "surprise_pct": 42.86,
       "reaction": {
         "D-1": 0,
-        "D0": null,
+        "D0": 4.37,
         "D+1": null,
         "D+2": null,
         "D+3": null
@@ -285,22 +289,22 @@
         "D-1": 0,
         "D0": 3,
         "D+1": 6.21,
-        "D+2": null,
+        "D+2": 4.8,
         "D+3": null
       }
     },
     {
       "symbol": "WF",
       "name": "Woori Bank",
-      "report_date": "2026-11-13",
+      "report_date": "2026-11-16",
       "report_time": "미상",
       "market_cap": 17714804700,
-      "eps": "$3.57",
+      "eps": "$2.94",
       "eps_forecast": "",
       "surprise_pct": null,
       "reaction": {
         "D-1": 0,
-        "D0": 3.28,
+        "D0": -0.04,
         "D+1": null,
         "D+2": null,
         "D+3": null
@@ -320,7 +324,7 @@
         "D0": 1.75,
         "D+1": 0.84,
         "D+2": 2.29,
-        "D+3": null
+        "D+3": 4.07
       }
     },
     {
@@ -337,20 +341,21 @@
         "D0": -1.67,
         "D+1": -0.85,
         "D+2": -0.87,
-        "D+3": null
+        "D+3": -1.36
       }
     },
     {
       "symbol": "HTHT",
       "name": "H World Group Limited",
       "report_date": "2026-11-16",
-      "report_time": "장전",
-      "market_cap": 15360815100,
+      "report_time": "미상",
+      "market_cap": 15496125400,
+      "eps": "$0.89",
       "eps_forecast": "$0.75",
-      "surprise_pct": null,
+      "surprise_pct": 18.67,
       "reaction": {
         "D-1": 0,
-        "D0": null,
+        "D0": 8.91,
         "D+1": null,
         "D+2": null,
         "D+3": null
@@ -360,13 +365,14 @@
       "symbol": "ARMK",
       "name": "Aramark",
       "report_date": "2026-11-16",
-      "report_time": "장전",
-      "market_cap": 14204117000,
+      "report_time": "미상",
+      "market_cap": 14219934700,
+      "eps": "$0.78",
       "eps_forecast": "$0.75",
-      "surprise_pct": null,
+      "surprise_pct": 4,
       "reaction": {
         "D-1": 0,
-        "D0": null,
+        "D0": 2.65,
         "D+1": null,
         "D+2": null,
         "D+3": null
@@ -385,7 +391,7 @@
         "D-1": 0,
         "D0": -2.04,
         "D+1": -2.76,
-        "D+2": null,
+        "D+2": -4.28,
         "D+3": null
       }
     },
@@ -402,7 +408,7 @@
         "D-1": 0,
         "D0": -7.24,
         "D+1": -8.76,
-        "D+2": null,
+        "D+2": -13.03,
         "D+3": null
       }
     },
@@ -420,7 +426,7 @@
         "D0": -7.48,
         "D+1": -3,
         "D+2": -4.48,
-        "D+3": null
+        "D+3": -3.89
       }
     },
     {
@@ -436,7 +442,7 @@
         "D-1": 0,
         "D0": -0.49,
         "D+1": 13.5,
-        "D+2": null,
+        "D+2": 11.36,
         "D+3": null
       }
     },
@@ -453,23 +459,7 @@
         "D-1": 0,
         "D0": -1.46,
         "D+1": -2.55,
-        "D+2": null,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "XPEV",
-      "name": "XPeng Inc.",
-      "report_date": "2026-11-16",
-      "report_time": "장전",
-      "market_cap": 9063344100,
-      "eps_forecast": "",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": null,
-        "D+1": null,
-        "D+2": null,
+        "D+2": -10.89,
         "D+3": null
       }
     },
@@ -478,12 +468,30 @@
       "name": "AECOM",
       "report_date": "2026-11-16",
       "report_time": "장후",
-      "market_cap": 9022906400,
+      "market_cap": 9073097700,
+      "eps": "$1.36",
       "eps_forecast": "$1.59",
       "surprise_pct": null,
       "reaction": {
         "D-1": 0,
-        "D0": null,
+        "D0": 2.84,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "XPEV",
+      "name": "XPeng Inc.",
+      "report_date": "2026-11-16",
+      "report_time": "미상",
+      "market_cap": 8977117200,
+      "eps": "($0.14)",
+      "eps_forecast": "",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 3.2,
         "D+1": null,
         "D+2": null,
         "D+3": null
@@ -503,7 +511,7 @@
         "D0": -1.23,
         "D+1": 1.51,
         "D+2": 0.72,
-        "D+3": null
+        "D+3": 1.77
       }
     }
   ]
