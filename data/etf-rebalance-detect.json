@@ -1,8 +1,141 @@
 {
-  "updated_at": "2026-11-17T18:25:37.341Z",
+  "updated_at": "2026-11-18T01:25:50.687Z",
   "note": "국내 섹터·테마 ETF 상위 25종목의 전일 스냅샷 대비 구성종목 변화 감지. 신규 편입·편출 종목과 비중 1.5%p 이상 변동 종목을 표시합니다. (첫 실행 시에는 비교 대상이 없어 결과가 비어있습니다)",
   "universe_size": 25,
   "has_baseline": true,
-  "changed_etf_count": 0,
-  "items": []
+  "changed_etf_count": 4,
+  "items": [
+    {
+      "code": "0061Z0",
+      "name": "RISE 단기특수은행채액티브",
+      "trd_dt": "2026-11-17",
+      "prev_trd_dt": "2026-11-16",
+      "added": [
+        {
+          "name": "아이비케이투자증권 20261116-1-27(단)",
+          "weight": null
+        },
+        {
+          "name": "아이엠증권 20261116-1-45(단)",
+          "weight": null
+        },
+        {
+          "name": "연합자산관리 20251121-363-52",
+          "weight": null
+        },
+        {
+          "name": "연합자산관리 20251121-363-53",
+          "weight": null
+        }
+      ],
+      "removed": [
+        {
+          "name": "고려아연 20260915-62-2(단)",
+          "weight": null
+        },
+        {
+          "name": "기업은행(변)2605이184A-22",
+          "weight": null
+        },
+        {
+          "name": "아이비케이투자증권 20261113-3-18(단)",
+          "weight": null
+        },
+        {
+          "name": "아이엠증권 20261113-3-38(단)",
+          "weight": null
+        },
+        {
+          "name": "케이씨씨 20260519-181-4",
+          "weight": null
+        }
+      ],
+      "changed": []
+    },
+    {
+      "code": "0177R0",
+      "name": "TIGER 반도체TOP10커버드콜액티브",
+      "trd_dt": "2026-11-17",
+      "prev_trd_dt": "2026-11-16",
+      "added": [
+        {
+          "name": "코스피위클리 C 2611W3   800.0",
+          "weight": null
+        },
+        {
+          "name": "코스피위클리 C 2611W3   810.0",
+          "weight": null
+        },
+        {
+          "name": "코스피위클리 C 2611W3   820.0",
+          "weight": null
+        }
+      ],
+      "removed": [
+        {
+          "name": "코스피위클리M C 2611W3   840.0",
+          "weight": null
+        },
+        {
+          "name": "코스피위클리M C 2611W3   850.0",
+          "weight": null
+        },
+        {
+          "name": "코스피위클리M C 2611W3   860.0",
+          "weight": null
+        }
+      ],
+      "changed": []
+    },
+    {
+      "code": "494310",
+      "name": "KODEX 반도체레버리지",
+      "trd_dt": "2026-11-17",
+      "prev_trd_dt": "2026-11-16",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "name": "KODEX 반도체",
+          "prev_weight": 22.4,
+          "curr_weight": 26.71,
+          "delta": 4.31
+        },
+        {
+          "name": "원화현금",
+          "prev_weight": -26.7,
+          "curr_weight": -24.93,
+          "delta": 1.77
+        }
+      ]
+    },
+    {
+      "code": "488080",
+      "name": "TIGER 반도체TOP10레버리지",
+      "trd_dt": "2026-11-17",
+      "prev_trd_dt": "2026-11-16",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "name": "삼성전자",
+          "prev_weight": 33.54,
+          "curr_weight": 36.54,
+          "delta": 3
+        },
+        {
+          "name": "SK하이닉스",
+          "prev_weight": 29.27,
+          "curr_weight": 31.97,
+          "delta": 2.7
+        },
+        {
+          "name": "SK스퀘어",
+          "prev_weight": 25.79,
+          "curr_weight": 28.32,
+          "delta": 2.53
+        }
+      ]
+    }
+  ]
 }

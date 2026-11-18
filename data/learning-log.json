@@ -2069,7 +2069,7 @@
       "hasPriceData": true,
       "d1": -1.52,
       "d5": -3.2,
-      "d20": null
+      "d20": 6.35
     },
     {
       "engineVersion": "v0.2",
@@ -2088,7 +2088,7 @@
       "hasPriceData": true,
       "d1": -0.43,
       "d5": 10.44,
-      "d20": null
+      "d20": -19.15
     },
     {
       "engineVersion": "v0.2",
@@ -2107,7 +2107,7 @@
       "hasPriceData": true,
       "d1": 0.22,
       "d5": -2.64,
-      "d20": null
+      "d20": -8.93
     },
     {
       "engineVersion": "v0.2",
@@ -2126,7 +2126,7 @@
       "hasPriceData": true,
       "d1": 0,
       "d5": -2.36,
-      "d20": null
+      "d20": 4.73
     },
     {
       "engineVersion": "v0.2",
@@ -2145,7 +2145,7 @@
       "hasPriceData": true,
       "d1": -0.62,
       "d5": -0.09,
-      "d20": null
+      "d20": 1.51
     },
     {
       "engineVersion": "v0.2",
@@ -4063,7 +4063,7 @@
       "priceAtSelection": 82600,
       "hasPriceData": true,
       "d1": -1.69,
-      "d5": null,
+      "d5": -2.3,
       "d20": null
     },
     {
@@ -4082,7 +4082,7 @@
       "priceAtSelection": 15480,
       "hasPriceData": true,
       "d1": -3.17,
-      "d5": null,
+      "d5": 0.84,
       "d20": null
     },
     {
@@ -4101,7 +4101,7 @@
       "priceAtSelection": 49000,
       "hasPriceData": true,
       "d1": -6.22,
-      "d5": null,
+      "d5": -14.49,
       "d20": null
     },
     {
@@ -4120,7 +4120,7 @@
       "priceAtSelection": 31900,
       "hasPriceData": true,
       "d1": -0.16,
-      "d5": null,
+      "d5": -0.94,
       "d20": null
     },
     {
@@ -4139,7 +4139,7 @@
       "priceAtSelection": 240000,
       "hasPriceData": true,
       "d1": 2.5,
-      "d5": null,
+      "d5": -0.83,
       "d20": null
     },
     {
@@ -4632,7 +4632,7 @@
       "marketRegime": "Risk-off",
       "priceAtSelection": 82600,
       "hasPriceData": true,
-      "d1": null,
+      "d1": -2.3,
       "d5": null,
       "d20": null
     },
@@ -4651,7 +4651,7 @@
       "marketRegime": "Risk-off",
       "priceAtSelection": 1262000,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 2.22,
       "d5": null,
       "d20": null
     },
@@ -4670,7 +4670,7 @@
       "marketRegime": "Risk-off",
       "priceAtSelection": 10350,
       "hasPriceData": true,
-      "d1": null,
+      "d1": -1.06,
       "d5": null,
       "d20": null
     },
@@ -4689,7 +4689,7 @@
       "marketRegime": "Risk-off",
       "priceAtSelection": 31550,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 0.16,
       "d5": null,
       "d20": null
     },
@@ -4708,24 +4708,24 @@
       "marketRegime": "Risk-off",
       "priceAtSelection": 82600,
       "hasPriceData": true,
-      "d1": null,
+      "d1": -2.18,
       "d5": null,
       "d20": null
     },
     {
       "engineVersion": "v0.2",
       "date": "20261118",
-      "symbol": "017670",
-      "name": "SK텔레콤",
+      "symbol": "011200",
+      "name": "HMM",
       "setup": "Market Leader",
       "bucket": "MARKET_LEADER",
-      "strategy": "Trend Confirmation",
-      "score": 32.1,
-      "noveltyScore": 3.3,
+      "strategy": "Flow Confirmed",
+      "score": 35.1,
+      "noveltyScore": 4,
       "pricedInVerdict": "unclear",
       "dataCoverage": 77,
       "marketRegime": "Risk-off",
-      "priceAtSelection": 82900,
+      "priceAtSelection": 21850,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -4744,7 +4744,7 @@
       "pricedInVerdict": "unclear",
       "dataCoverage": 77,
       "marketRegime": "Risk-off",
-      "priceAtSelection": 1269000,
+      "priceAtSelection": 1290000,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -4758,12 +4758,12 @@
       "setup": "Discovery",
       "bucket": "DISCOVERY",
       "strategy": "Confluence · Trend Confirmation",
-      "score": 50.6,
-      "noveltyScore": 12.6,
+      "score": 40.9,
+      "noveltyScore": 10.8,
       "pricedInVerdict": "unclear",
       "dataCoverage": 77,
       "marketRegime": "Risk-off",
-      "priceAtSelection": 10400,
+      "priceAtSelection": 10240,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -4782,7 +4782,7 @@
       "pricedInVerdict": "unclear",
       "dataCoverage": 77,
       "marketRegime": "Risk-off",
-      "priceAtSelection": 31550,
+      "priceAtSelection": 31600,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -4801,7 +4801,7 @@
       "pricedInVerdict": "not_yet_priced",
       "dataCoverage": 77,
       "marketRegime": "Risk-off",
-      "priceAtSelection": 83100,
+      "priceAtSelection": 80800,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
