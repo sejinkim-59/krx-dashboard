@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-18T08:58:22.985Z",
+  "updated_at": "2026-11-18T17:52:01.178Z",
   "range": {
-    "from": "20261104",
-    "to": "20261118"
+    "from": "20261105",
+    "to": "20261119"
   },
   "items": [
     {
@@ -10,11 +10,11 @@
       "stock_code": "258790",
       "rcept_no": "20261118000336",
       "rcept_dt": "20261118",
-      "conversion_price": null,
-      "conversion_start": null,
-      "conversion_end": null,
-      "pay_date": null,
-      "maturity_date": null,
+      "conversion_price": "6,437",
+      "conversion_start": "2027년 11월 30일",
+      "conversion_end": "2029년 10월 30일",
+      "pay_date": "2026년 11월 30일",
+      "maturity_date": "2029년 11월 30일",
       "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261118000336"
     },
     {
@@ -136,42 +136,6 @@
       "pay_date": "2026년 11월 19일",
       "maturity_date": "2031년 11월 19일",
       "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105000553"
-    },
-    {
-      "corp_name": "FSN",
-      "stock_code": "214270",
-      "rcept_no": "20261104000344",
-      "rcept_dt": "20261104",
-      "conversion_price": "1,201",
-      "conversion_start": "2027년 11월 12일",
-      "conversion_end": "2029년 10월 12일",
-      "pay_date": "2026년 11월 12일",
-      "maturity_date": "2029년 11월 12일",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261104000344"
-    },
-    {
-      "corp_name": "프로티나",
-      "stock_code": "468530",
-      "rcept_no": "20261104000317",
-      "rcept_dt": "20261104",
-      "conversion_price": "48,061",
-      "conversion_start": "2027년 11월 12일",
-      "conversion_end": "2031년 10월 12일",
-      "pay_date": "2026년 11월 12일",
-      "maturity_date": "2031년 11월 12일",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261104000317"
-    },
-    {
-      "corp_name": "루닛",
-      "stock_code": "328130",
-      "rcept_no": "20261104000318",
-      "rcept_dt": "20261104",
-      "conversion_price": "15,303",
-      "conversion_start": "2027년 11월 12일",
-      "conversion_end": "2031년 10월 12일",
-      "pay_date": "2026년 11월 12일",
-      "maturity_date": "2031년 11월 12일",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261104000318"
     }
   ]
 }

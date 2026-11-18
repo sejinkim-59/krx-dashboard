@@ -1,8 +1,21 @@
 {
-  "updated_at": "2026-11-18T09:03:03.224Z",
+  "updated_at": "2026-11-18T17:57:58.606Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
-  "count": 0,
-  "items": []
+  "count": 2,
+  "items": [
+    {
+      "symbol": "DIS",
+      "close": 122.705,
+      "day_change_pct": 4.93,
+      "pct_above_prior_window": 2.55
+    },
+    {
+      "symbol": "ORLY",
+      "close": 93.08,
+      "day_change_pct": 0.42,
+      "pct_above_prior_window": 0.41
+    }
+  ]
 }
