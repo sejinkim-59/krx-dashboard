@@ -2164,7 +2164,7 @@
       "hasPriceData": true,
       "d1": -0.16,
       "d5": -1.5,
-      "d20": null
+      "d20": 7.57
     },
     {
       "engineVersion": "v0.2",
@@ -2183,7 +2183,7 @@
       "hasPriceData": true,
       "d1": -0.74,
       "d5": -4.1,
-      "d20": null
+      "d20": 4.1
     },
     {
       "engineVersion": "v0.2",
@@ -2202,7 +2202,7 @@
       "hasPriceData": true,
       "d1": 0.09,
       "d5": 0.36,
-      "d20": null
+      "d20": 2.06
     },
     {
       "engineVersion": "v0.2",
@@ -2221,7 +2221,7 @@
       "hasPriceData": true,
       "d1": -0.52,
       "d5": -1.24,
-      "d20": null
+      "d20": 6.4
     },
     {
       "engineVersion": "v0.2",
@@ -2240,7 +2240,7 @@
       "hasPriceData": true,
       "d1": -5.25,
       "d5": -14.49,
-      "d20": null
+      "d20": 30.62
     },
     {
       "engineVersion": "v0.2",
@@ -4158,7 +4158,7 @@
       "priceAtSelection": 81100,
       "hasPriceData": true,
       "d1": 3.33,
-      "d5": null,
+      "d5": 1.85,
       "d20": null
     },
     {
@@ -4177,7 +4177,7 @@
       "priceAtSelection": 15230,
       "hasPriceData": true,
       "d1": 0.92,
-      "d5": null,
+      "d5": 1.31,
       "d20": null
     },
     {
@@ -4196,7 +4196,7 @@
       "priceAtSelection": 204000,
       "hasPriceData": true,
       "d1": 0.49,
-      "d5": null,
+      "d5": 0,
       "d20": null
     },
     {
@@ -4215,7 +4215,7 @@
       "priceAtSelection": 8120,
       "hasPriceData": true,
       "d1": -1.6,
-      "d5": null,
+      "d5": -3.94,
       "d20": null
     },
     {
@@ -4234,7 +4234,7 @@
       "priceAtSelection": 38700,
       "hasPriceData": true,
       "d1": 3.88,
-      "d5": null,
+      "d5": -10.85,
       "d20": null
     },
     {
@@ -4727,7 +4727,7 @@
       "marketRegime": "Risk-off",
       "priceAtSelection": 22150,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 0.68,
       "d5": null,
       "d20": null
     },
@@ -4746,7 +4746,7 @@
       "marketRegime": "Risk-off",
       "priceAtSelection": 38250,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 0.39,
       "d5": null,
       "d20": null
     },
@@ -4765,7 +4765,7 @@
       "marketRegime": "Risk-off",
       "priceAtSelection": 1239000,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 2.74,
       "d5": null,
       "d20": null
     },
@@ -4784,7 +4784,7 @@
       "marketRegime": "Risk-off",
       "priceAtSelection": 32000,
       "hasPriceData": true,
-      "d1": null,
+      "d1": -0.63,
       "d5": null,
       "d20": null
     },
@@ -4803,7 +4803,7 @@
       "marketRegime": "Risk-off",
       "priceAtSelection": 249000,
       "hasPriceData": true,
-      "d1": null,
+      "d1": -2.01,
       "d5": null,
       "d20": null
     },
@@ -4829,17 +4829,17 @@
     {
       "engineVersion": "v0.2",
       "date": "20261119",
-      "symbol": "003230",
-      "name": "삼양식품",
+      "symbol": "036460",
+      "name": "한국가스공사",
       "setup": "Discovery",
       "bucket": "DISCOVERY",
-      "strategy": "Confluence · Flow Confirmed",
-      "score": 50.6,
+      "strategy": "Confluence · Trend Confirmation",
+      "score": 47.1,
       "noveltyScore": 10.6,
       "pricedInVerdict": "not_yet_priced",
       "dataCoverage": 77,
       "marketRegime": "Neutral",
-      "priceAtSelection": 1245000,
+      "priceAtSelection": 38400,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -4848,17 +4848,17 @@
     {
       "engineVersion": "v0.2",
       "date": "20261119",
-      "symbol": "323410",
-      "name": "카카오뱅크",
+      "symbol": "003230",
+      "name": "삼양식품",
       "setup": "Discovery",
       "bucket": "DISCOVERY",
-      "strategy": "Confluence · Trend Confirmation",
-      "score": 44.4,
-      "noveltyScore": 5.8,
+      "strategy": "Confluence · Flow Confirmed",
+      "score": 47,
+      "noveltyScore": 8.8,
       "pricedInVerdict": "unclear",
       "dataCoverage": 77,
       "marketRegime": "Neutral",
-      "priceAtSelection": 21050,
+      "priceAtSelection": 1273000,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -4871,13 +4871,13 @@
       "name": "카카오",
       "setup": "Event-Driven",
       "bucket": "EVENT_DRIVEN",
-      "strategy": "Event Driven",
-      "score": 26.1,
-      "noveltyScore": 3.3,
+      "strategy": "Confluence · Flow Confirmed",
+      "score": 40.4,
+      "noveltyScore": 7.3,
       "pricedInVerdict": "unclear",
       "dataCoverage": 77,
       "marketRegime": "Neutral",
-      "priceAtSelection": 32000,
+      "priceAtSelection": 31800,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -4886,17 +4886,17 @@
     {
       "engineVersion": "v0.2",
       "date": "20261119",
-      "symbol": "051900",
-      "name": "LG생활건강",
+      "symbol": "005940",
+      "name": "NH투자증권",
       "setup": "Inflection",
       "bucket": "INFLECTION",
-      "strategy": "Flow Confirmed",
-      "score": 35.3,
-      "noveltyScore": 11.5,
+      "strategy": "Confluence · Flow Confirmed",
+      "score": 39,
+      "noveltyScore": 10,
       "pricedInVerdict": "not_yet_priced",
       "dataCoverage": 77,
       "marketRegime": "Neutral",
-      "priceAtSelection": 252500,
+      "priceAtSelection": 23300,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
