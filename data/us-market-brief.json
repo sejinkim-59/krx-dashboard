@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20T04:04:12.148Z",
+  "updated_at": "2026-11-20T12:42:06.838Z",
   "summary": "전일 미국 증시는 S&P500 -2.02% 하락, 나스닥 -2.25% 하락, 다우 -2.19% 하락으로 마감했습니다. VIX가 큰 폭으로 올라 시장 변동성이 확대됐습니다.",
   "instruments": [
     {
@@ -23,8 +23,8 @@
     {
       "symbol": "^VIX",
       "label": "VIX(변동성지수)",
-      "last": 28.440000534057617,
-      "change_pct": 15.8
+      "last": 30.489999771118164,
+      "change_pct": 7.21
     },
     {
       "symbol": "^TNX",
@@ -35,20 +35,20 @@
     {
       "symbol": "KRW=X",
       "label": "원/달러 환율",
-      "last": 1337.5799560546875,
-      "change_pct": 0.54
+      "last": 1341.5400390625,
+      "change_pct": 0.84
     },
     {
       "symbol": "CL=F",
       "label": "WTI 원유",
-      "last": 83.08000183105469,
-      "change_pct": -0.16
+      "last": 82.19999694824219,
+      "change_pct": -1.21
     },
     {
       "symbol": "GC=F",
       "label": "금 선물",
-      "last": 3551,
-      "change_pct": -3.65
+      "last": 3575,
+      "change_pct": -3
     }
   ]
 }
