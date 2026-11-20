@@ -2259,7 +2259,7 @@
       "hasPriceData": true,
       "d1": -0.19,
       "d5": -2.01,
-      "d20": null
+      "d20": -28.33
     },
     {
       "engineVersion": "v0.2",
@@ -2278,7 +2278,7 @@
       "hasPriceData": true,
       "d1": -1.15,
       "d5": 1.15,
-      "d20": null
+      "d20": 10.31
     },
     {
       "engineVersion": "v0.2",
@@ -2297,7 +2297,7 @@
       "hasPriceData": true,
       "d1": -1.96,
       "d5": -4.53,
-      "d20": null
+      "d20": -23.28
     },
     {
       "engineVersion": "v0.2",
@@ -2316,7 +2316,7 @@
       "hasPriceData": true,
       "d1": -1.35,
       "d5": 4.57,
-      "d20": null
+      "d20": 3.05
     },
     {
       "engineVersion": "v0.2",
@@ -2335,7 +2335,7 @@
       "hasPriceData": true,
       "d1": 1.89,
       "d5": 2.16,
-      "d20": null
+      "d20": 6.58
     },
     {
       "engineVersion": "v0.2",
@@ -4253,7 +4253,7 @@
       "priceAtSelection": 83900,
       "hasPriceData": true,
       "d1": 2.03,
-      "d5": null,
+      "d5": -15.26,
       "d20": null
     },
     {
@@ -4272,7 +4272,7 @@
       "priceAtSelection": 37500,
       "hasPriceData": true,
       "d1": 2.93,
-      "d5": null,
+      "d5": 0.27,
       "d20": null
     },
     {
@@ -4291,7 +4291,7 @@
       "priceAtSelection": 15550,
       "hasPriceData": true,
       "d1": 1.03,
-      "d5": null,
+      "d5": -3.22,
       "d20": null
     },
     {
@@ -4310,7 +4310,7 @@
       "priceAtSelection": 7780,
       "hasPriceData": true,
       "d1": -0.51,
-      "d5": null,
+      "d5": 5.27,
       "d20": null
     },
     {
@@ -4329,7 +4329,7 @@
       "priceAtSelection": 38200,
       "hasPriceData": true,
       "d1": 1.57,
-      "d5": null,
+      "d5": -15.97,
       "d20": null
     },
     {
@@ -4822,7 +4822,7 @@
       "marketRegime": "Neutral",
       "priceAtSelection": 22550,
       "hasPriceData": true,
-      "d1": null,
+      "d1": -2.11,
       "d5": null,
       "d20": null
     },
@@ -4841,7 +4841,7 @@
       "marketRegime": "Neutral",
       "priceAtSelection": 294000,
       "hasPriceData": true,
-      "d1": null,
+      "d1": -1.36,
       "d5": null,
       "d20": null
     },
@@ -4860,7 +4860,7 @@
       "marketRegime": "Neutral",
       "priceAtSelection": 38250,
       "hasPriceData": true,
-      "d1": null,
+      "d1": -1.7,
       "d5": null,
       "d20": null
     },
@@ -4879,7 +4879,7 @@
       "marketRegime": "Neutral",
       "priceAtSelection": 32100,
       "hasPriceData": true,
-      "d1": null,
+      "d1": -2.96,
       "d5": null,
       "d20": null
     },
@@ -4898,26 +4898,7 @@
       "marketRegime": "Neutral",
       "priceAtSelection": 23300,
       "hasPriceData": true,
-      "d1": null,
-      "d5": null,
-      "d20": null
-    },
-    {
-      "engineVersion": "v0.2",
-      "date": "20261120",
-      "symbol": "032830",
-      "name": "삼성생명",
-      "setup": "Market Leader",
-      "bucket": "MARKET_LEADER",
-      "strategy": "Confluence · Trend Confirmation",
-      "score": 30.4,
-      "noveltyScore": 6,
-      "pricedInVerdict": "unclear",
-      "dataCoverage": 77,
-      "marketRegime": "Neutral",
-      "priceAtSelection": 256500,
-      "hasPriceData": true,
-      "d1": null,
+      "d1": -2.79,
       "d5": null,
       "d20": null
     },
@@ -4933,8 +4914,8 @@
       "noveltyScore": 9.8,
       "pricedInVerdict": "partially_priced_in",
       "dataCoverage": 77,
-      "marketRegime": "Neutral",
-      "priceAtSelection": 11640,
+      "marketRegime": "Risk-off",
+      "priceAtSelection": 11660,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -4948,12 +4929,12 @@
       "setup": "Discovery",
       "bucket": "DISCOVERY",
       "strategy": "Confluence · Flow Confirmed",
-      "score": 38.6,
+      "score": 42.5,
       "noveltyScore": 7.3,
       "pricedInVerdict": "partially_priced_in",
       "dataCoverage": 77,
-      "marketRegime": "Neutral",
-      "priceAtSelection": 289000,
+      "marketRegime": "Risk-off",
+      "priceAtSelection": 290000,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -4967,12 +4948,12 @@
       "setup": "Event-Driven",
       "bucket": "EVENT_DRIVEN",
       "strategy": "Confluence · New Change",
-      "score": 52.5,
+      "score": 48.6,
       "noveltyScore": 15,
       "pricedInVerdict": "not_yet_priced",
       "dataCoverage": 77,
-      "marketRegime": "Neutral",
-      "priceAtSelection": 14310,
+      "marketRegime": "Risk-off",
+      "priceAtSelection": 14340,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -4981,17 +4962,17 @@
     {
       "engineVersion": "v0.2",
       "date": "20261120",
-      "symbol": "051900",
-      "name": "LG생활건강",
+      "symbol": "347700",
+      "name": "스피어",
       "setup": "Inflection",
       "bucket": "INFLECTION",
       "strategy": "Flow Confirmed",
-      "score": 37.3,
+      "score": 37.7,
       "noveltyScore": 10,
       "pricedInVerdict": "not_yet_priced",
       "dataCoverage": 77,
-      "marketRegime": "Neutral",
-      "priceAtSelection": 253500,
+      "marketRegime": "Risk-off",
+      "priceAtSelection": 17090,
       "hasPriceData": true,
       "d1": null,
       "d5": null,

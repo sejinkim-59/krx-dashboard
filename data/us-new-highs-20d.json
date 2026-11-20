@@ -1,27 +1,33 @@
 {
-  "updated_at": "2026-11-19T16:06:33.526Z",
+  "updated_at": "2026-11-20T04:04:10.146Z",
   "universe": "S&P 500",
   "universe_size": 503,
   "window_days": 20,
-  "count": 3,
+  "count": 4,
   "items": [
     {
-      "symbol": "GNRC",
-      "close": 211.91,
-      "day_change_pct": 3.14,
-      "pct_above_prior_window": 1.26
-    },
-    {
       "symbol": "PCG",
-      "close": 13.825,
-      "day_change_pct": 0.84,
-      "pct_above_prior_window": 0.84
+      "close": 13.94,
+      "day_change_pct": 1.68,
+      "pct_above_prior_window": 1.68
     },
     {
       "symbol": "TGT",
-      "close": 167.18,
-      "day_change_pct": 0.75,
-      "pct_above_prior_window": 0.75
+      "close": 167.46,
+      "day_change_pct": 0.92,
+      "pct_above_prior_window": 0.92
+    },
+    {
+      "symbol": "EIX",
+      "close": 63.02,
+      "day_change_pct": 0.02,
+      "pct_above_prior_window": 0.02
+    },
+    {
+      "symbol": "KHC",
+      "close": 25.44,
+      "day_change_pct": 1.31,
+      "pct_above_prior_window": 0
     }
   ]
 }

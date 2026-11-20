@@ -1,8 +1,98 @@
 {
-  "updated_at": "2026-11-19T16:09:04.636Z",
+  "updated_at": "2026-11-20T04:06:30.447Z",
   "note": "국내 섹터·테마 ETF 상위 25종목의 전일 스냅샷 대비 구성종목 변화 감지. 신규 편입·편출 종목과 비중 1.5%p 이상 변동 종목을 표시합니다. (첫 실행 시에는 비교 대상이 없어 결과가 비어있습니다)",
   "universe_size": 25,
   "has_baseline": true,
-  "changed_etf_count": 0,
-  "items": []
+  "changed_etf_count": 3,
+  "items": [
+    {
+      "code": "445290",
+      "name": "KODEX 로봇액티브",
+      "trd_dt": "2026-11-19",
+      "prev_trd_dt": "2026-11-18",
+      "added": [
+        {
+          "name": "디케이티",
+          "weight": 0.1
+        }
+      ],
+      "removed": [],
+      "changed": []
+    },
+    {
+      "code": "0061Z0",
+      "name": "RISE 단기특수은행채액티브",
+      "trd_dt": "2026-11-19",
+      "prev_trd_dt": "2026-11-18",
+      "added": [
+        {
+          "name": "롯데카드 20251226-335-83",
+          "weight": null
+        },
+        {
+          "name": "삼성증권 20251127-364-200",
+          "weight": null
+        },
+        {
+          "name": "아이엠증권 20261118-1-53(단)",
+          "weight": null
+        },
+        {
+          "name": "한국투자증권 20251125-364-163",
+          "weight": null
+        },
+        {
+          "name": "한국투자증권 20251125-364-164",
+          "weight": null
+        }
+      ],
+      "removed": [
+        {
+          "name": "신한 자금부 20251118-365-1",
+          "weight": null
+        },
+        {
+          "name": "아이엠증권 20261117-1-48(단)",
+          "weight": null
+        },
+        {
+          "name": "키움증권 20261104-14-1(단)",
+          "weight": null
+        },
+        {
+          "name": "한국투자증권 20251119-364-15",
+          "weight": null
+        },
+        {
+          "name": "한국투자증권 20251119-364-16",
+          "weight": null
+        },
+        {
+          "name": "한국투자증권 20251119-364-17",
+          "weight": null
+        },
+        {
+          "name": "한국투자증권 20251119-364-19",
+          "weight": null
+        }
+      ],
+      "changed": []
+    },
+    {
+      "code": "494310",
+      "name": "KODEX 반도체레버리지",
+      "trd_dt": "2026-11-19",
+      "prev_trd_dt": "2026-11-18",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "name": "원화현금",
+          "prev_weight": -24.85,
+          "curr_weight": -26.6,
+          "delta": -1.75
+        }
+      ]
+    }
+  ]
 }

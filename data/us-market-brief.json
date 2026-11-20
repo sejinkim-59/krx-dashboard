@@ -1,54 +1,54 @@
 {
-  "updated_at": "2026-11-19T16:06:35.544Z",
-  "summary": "전일 미국 증시는 S&P500 -0.18% 하락, 나스닥 0.4% 상승, 다우 -0.98% 하락으로 마감했습니다.",
+  "updated_at": "2026-11-20T04:04:12.148Z",
+  "summary": "전일 미국 증시는 S&P500 -2.02% 하락, 나스닥 -2.25% 하락, 다우 -2.19% 하락으로 마감했습니다. VIX가 큰 폭으로 올라 시장 변동성이 확대됐습니다.",
   "instruments": [
     {
       "symbol": "^GSPC",
       "label": "S&P 500",
-      "last": 7310.72021484375,
-      "change_pct": -0.18
+      "last": 7175.830078125,
+      "change_pct": -2.02
     },
     {
       "symbol": "^IXIC",
       "label": "나스닥종합",
-      "last": 24528.154296875,
-      "change_pct": 0.4
+      "last": 23879.19921875,
+      "change_pct": -2.25
     },
     {
       "symbol": "^DJI",
       "label": "다우존스",
-      "last": 49707.23046875,
-      "change_pct": -0.98
+      "last": 49097.05859375,
+      "change_pct": -2.19
     },
     {
       "symbol": "^VIX",
       "label": "VIX(변동성지수)",
-      "last": 25.530000686645508,
-      "change_pct": 3.95
+      "last": 28.440000534057617,
+      "change_pct": 15.8
     },
     {
       "symbol": "^TNX",
       "label": "美 10년물 국채금리",
-      "last": 5.065999984741211,
-      "change_pct": 0
+      "last": 5.052000045776367,
+      "change_pct": -0.28
     },
     {
       "symbol": "KRW=X",
       "label": "원/달러 환율",
-      "last": 1333.5799560546875,
-      "change_pct": 0.04
+      "last": 1337.5799560546875,
+      "change_pct": 0.54
     },
     {
       "symbol": "CL=F",
       "label": "WTI 원유",
-      "last": 82.79000091552734,
-      "change_pct": -0.56
+      "last": 83.08000183105469,
+      "change_pct": -0.16
     },
     {
       "symbol": "GC=F",
       "label": "금 선물",
-      "last": 3678.699951171875,
-      "change_pct": -1.69
+      "last": 3551,
+      "change_pct": -3.65
     }
   ]
 }
