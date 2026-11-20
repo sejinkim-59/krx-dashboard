@@ -1,16 +1,16 @@
 {
-  "date": "20261120",
-  "generated_at": "2026-11-20T12:47:12.500Z",
+  "date": "20261121",
+  "generated_at": "2026-11-20T21:08:11.457Z",
   "engineVersion": "v0.2",
   "objective": "NEW INFORMATION + CHANGE + CATALYST + CONFIRMATION — 오늘 새롭게 연구할 가치가 생긴 종목을 조기 발견",
   "methodologyNote": "시장/섹터 상대강도는 공식 지수가 아니라 가격 데이터 보유 종목의 동일가중 평균(proxy)입니다. Earnings/Revision Factor는 컨센서스 Provider 미연결로 항상 제외(MISSING_DATA)됩니다. 시총 순위는 KIS 시세를 조회한 종목(관심종목 + Discovery 추가조회) 안에서의 순위입니다. 수급 전환의 발생 시점은 \"최근 3거래일 vs 직전 5거래일\" 창 비교라 일 단위 날짜가 아닌 창 단위입니다. 종목 단위로 연결되지 않은 Catalyst: Investor Relations 일정, Large Contract(단일판매·공급계약), Index Rebalancing (정기변경 월 주기만 수집, 종목별 편입·편출 예고 없음), Major Customer Event, Policy Event, Share Cancellation(소각).",
   "marketRegime": {
     "state": "Risk-off",
     "evidence": [
-      "VIX +7.21%",
-      "S&P500 -2.02%",
-      "NASDAQ -2.25%",
-      "USD/KRW +0.84%"
+      "VIX +32.52%",
+      "S&P500 -3.7%",
+      "NASDAQ -5.28%",
+      "USD/KRW +1.15%"
     ],
     "strategyPreference": [
       "EVENT_DRIVEN",
@@ -21,11 +21,11 @@
     ]
   },
   "screening": {
-    "universeCount": 1142,
+    "universeCount": 1127,
     "technicalCoverageCount": 110,
-    "discoveryPreScreenCount": 492,
+    "discoveryPreScreenCount": 486,
     "discoveryEnrichedCount": 60,
-    "signalCount": 127,
+    "signalCount": 124,
     "passedRiskCount": 16,
     "rejectedCount": 0
   },
@@ -365,7 +365,7 @@
               }
             ]
           },
-          "marketCapRank": 92,
+          "marketCapRank": 91,
           "flowEvents": [],
           "flowInterpretation": "neutral",
           "noveltyEvents": [
@@ -854,7 +854,7 @@
           }
         ]
       },
-      "marketCapRank": 92,
+      "marketCapRank": 91,
       "flowEvents": [],
       "flowInterpretation": "neutral",
       "noveltyEvents": [
@@ -1038,7 +1038,7 @@
       ],
       "newSignalCount": 3,
       "tier": 1,
-      "marketCapRank": 92,
+      "marketCapRank": 91,
       "isLargeCap": false,
       "whatChanged": [
         "MA20이 MA60을 상향돌파 (2026-11-11, 7거래일 전)",
@@ -1131,7 +1131,7 @@
       ],
       "newSignalCount": 3,
       "tier": 2,
-      "marketCapRank": 91,
+      "marketCapRank": 90,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-18, 2거래일 전)",
@@ -1313,7 +1313,7 @@
       ],
       "newSignalCount": 2,
       "tier": 2,
-      "marketCapRank": 103,
+      "marketCapRank": 100,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-18, 2거래일 전)",
@@ -1403,7 +1403,7 @@
       ],
       "newSignalCount": 2,
       "tier": 2,
-      "marketCapRank": 98,
+      "marketCapRank": 95,
       "isLargeCap": false,
       "whatChanged": [
         "거래량 20일 평균 대비 8.1배로 급증 (2026-11-19, 1거래일 전)",
@@ -1448,7 +1448,7 @@
       ],
       "newSignalCount": 2,
       "tier": 2,
-      "marketCapRank": 87,
+      "marketCapRank": 86,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-19, 1거래일 전)",
@@ -1580,7 +1580,7 @@
       ],
       "newSignalCount": 2,
       "tier": 2,
-      "marketCapRank": 81,
+      "marketCapRank": 80,
       "isLargeCap": false,
       "whatChanged": [
         "거래량 20일 평균 대비 2.0배로 급증 (2026-11-18, 2거래일 전)",
@@ -1624,7 +1624,7 @@
       ],
       "newSignalCount": 2,
       "tier": 2,
-      "marketCapRank": 78,
+      "marketCapRank": 77,
       "isLargeCap": false,
       "whatChanged": [
         "거래량 20일 평균 대비 2.9배로 급증 (2026-11-13, 5거래일 전)",
@@ -1710,7 +1710,7 @@
       ],
       "newSignalCount": 1,
       "tier": 4,
-      "marketCapRank": 100,
+      "marketCapRank": 97,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-18, 2거래일 전)"
@@ -1738,6 +1738,105 @@
       ]
     },
     {
+      "symbol": "005610",
+      "name": "삼립",
+      "sector": "음식료·담배",
+      "bucket": null,
+      "strategy": "Confluence · New Change",
+      "score": 48.6,
+      "discoveryScore": 48.6,
+      "dataCoverage": 77,
+      "confidence": "Normal",
+      "independentConfirmations": 4,
+      "confirmationSources": [
+        "price",
+        "flow",
+        "event"
+      ],
+      "newSignalCount": 4,
+      "tier": 1,
+      "marketCapRank": 105,
+      "isLargeCap": false,
+      "whatChanged": [
+        "종가가 MA20 위로 회복 (2026-11-18, 2거래일 전)",
+        "거래량 20일 평균 대비 4.7배로 급증 (2026-11-18, 2거래일 전)",
+        "기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +5.6%, 거래량 5.0배가 확인)",
+        "새 정보: 실적 공시(20261116) 후 누적 +9.2% (4거래일 전)"
+      ],
+      "pricedInVerdict": "not_yet_priced",
+      "gateFails": [
+        "20일 평균 거래대금 50억 미만"
+      ],
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      },
+      "topEvidence": "종가가 MA20 위로 회복 (2026-11-18, 2거래일 전)",
+      "scoreBreakdown": [
+        "Novelty 15/25",
+        "Catalyst 2.4/12",
+        "Technical 6/15",
+        "Flow 7/15",
+        "Relative Strength 7/10"
+      ],
+      "signalTypes": [
+        "Discovery 후보",
+        "Novelty",
+        "Flow",
+        "Relative Strength",
+        "Catalyst"
+      ]
+    },
+    {
+      "symbol": "005430",
+      "name": "한국공항",
+      "sector": "운송·창고",
+      "bucket": null,
+      "strategy": "Confluence · Trend Confirmation",
+      "score": 47.4,
+      "discoveryScore": 33.4,
+      "dataCoverage": 77,
+      "confidence": "Normal",
+      "independentConfirmations": 4,
+      "confirmationSources": [
+        "price",
+        "flow",
+        "event"
+      ],
+      "newSignalCount": 3,
+      "tier": 1,
+      "marketCapRank": 106,
+      "isLargeCap": false,
+      "whatChanged": [
+        "종가가 MA20 위로 회복 (2026-11-09, 9거래일 전)",
+        "거래량 20일 평균 대비 2.5배로 급증 (2026-11-20, 0거래일 전)",
+        "기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 거래량 2.5배가 확인)"
+      ],
+      "pricedInVerdict": "partially_priced_in",
+      "gateFails": [
+        "20일 평균 거래대금 50억 미만"
+      ],
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      },
+      "topEvidence": "종가가 MA20 위로 회복 (2026-11-09, 9거래일 전)",
+      "scoreBreakdown": [
+        "Novelty 10.8/25",
+        "Catalyst 2.4/12",
+        "Technical 12/15",
+        "Flow 7/15",
+        "Relative Strength 4.3/10"
+      ],
+      "signalTypes": [
+        "Discovery 후보",
+        "Novelty",
+        "Technical",
+        "Flow",
+        "Catalyst"
+      ]
+    },
+    {
       "symbol": "280360",
       "name": "롯데웰푸드",
       "sector": "음식료·담배",
@@ -1754,7 +1853,7 @@
       ],
       "newSignalCount": 2,
       "tier": 1,
-      "marketCapRank": 88,
+      "marketCapRank": 87,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-12, 6거래일 전)",
@@ -1800,7 +1899,7 @@
       ],
       "newSignalCount": 3,
       "tier": 2,
-      "marketCapRank": 94,
+      "marketCapRank": 92,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-19, 1거래일 전)",
@@ -1826,100 +1925,6 @@
       "signalTypes": [
         "Discovery 후보",
         "Novelty",
-        "Technical",
-        "Flow",
-        "Relative Strength"
-      ]
-    },
-    {
-      "symbol": "033270",
-      "name": "유나이티드제약",
-      "sector": "제약",
-      "bucket": null,
-      "strategy": "Confluence · New Change",
-      "score": 45.5,
-      "discoveryScore": 45.5,
-      "dataCoverage": 77,
-      "confidence": "Normal",
-      "independentConfirmations": 3,
-      "confirmationSources": [
-        "price",
-        "flow"
-      ],
-      "newSignalCount": 3,
-      "tier": 2,
-      "marketCapRank": 109,
-      "isLargeCap": false,
-      "whatChanged": [
-        "종가가 MA20 위로 회복 (2026-11-20, 0거래일 전)",
-        "거래량 20일 평균 대비 2.3배로 급증 (2026-11-20, 0거래일 전)",
-        "외국인 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 외국인 매수 전환을 5일 수익률 +4.1%, 거래량 2.3배가 확인)"
-      ],
-      "pricedInVerdict": "not_yet_priced",
-      "gateFails": [
-        "20일 평균 거래대금 50억 미만"
-      ],
-      "risk": {
-        "decision": "PASS",
-        "reason": "특이 리스크 없음"
-      },
-      "topEvidence": "종가가 MA20 위로 회복 (2026-11-20, 0거래일 전)",
-      "scoreBreakdown": [
-        "Novelty 15/25",
-        "Catalyst 0/12",
-        "Technical 6/15",
-        "Flow 7/15",
-        "Relative Strength 7/10"
-      ],
-      "signalTypes": [
-        "Discovery 후보",
-        "Novelty",
-        "Flow",
-        "Relative Strength"
-      ]
-    },
-    {
-      "symbol": "005300",
-      "name": "롯데칠성",
-      "sector": "음식료·담배",
-      "bucket": null,
-      "strategy": "Confluence · Trend Confirmation",
-      "score": 43.2,
-      "discoveryScore": 43.2,
-      "dataCoverage": 77,
-      "confidence": "Normal",
-      "independentConfirmations": 3,
-      "confirmationSources": [
-        "price",
-        "flow"
-      ],
-      "newSignalCount": 3,
-      "tier": 2,
-      "marketCapRank": 93,
-      "isLargeCap": false,
-      "whatChanged": [
-        "종가가 MA20 위로 회복 (2026-11-12, 6거래일 전)",
-        "거래량 20일 평균 대비 2.3배로 급증 (2026-11-09, 9거래일 전)",
-        "기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +3.4%가 확인)"
-      ],
-      "pricedInVerdict": "unclear",
-      "gateFails": [
-        "20일 평균 거래대금 50억 미만"
-      ],
-      "risk": {
-        "decision": "PASS",
-        "reason": "특이 리스크 없음"
-      },
-      "topEvidence": "종가가 MA20 위로 회복 (2026-11-12, 6거래일 전)",
-      "scoreBreakdown": [
-        "Novelty 7.3/25",
-        "Catalyst 0/12",
-        "Technical 9/15",
-        "Flow 7/15",
-        "Relative Strength 10/10"
-      ],
-      "signalTypes": [
-        "Discovery 후보",
         "Technical",
         "Flow",
         "Relative Strength"
