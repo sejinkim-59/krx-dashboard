@@ -1,8 +1,15 @@
 {
-  "updated_at": "2026-11-20T21:03:07.720Z",
+  "updated_at": "2026-11-21T02:07:40.774Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
-  "count": 0,
-  "items": []
+  "count": 1,
+  "items": [
+    {
+      "symbol": "PDD",
+      "close": 86,
+      "day_change_pct": 11.04,
+      "pct_above_prior_window": 2.44
+    }
+  ]
 }
