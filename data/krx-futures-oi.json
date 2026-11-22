@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-11-22T10:49:52.099Z",
-  "data_date": "20261120",
-  "prev_data_date": "20261119",
+  "updated_at": "2026-11-22T18:18:40.788Z",
+  "data_date": "20261119",
+  "prev_data_date": "20261118",
   "note": "KRX Open API 데이터 반영 지연으로 최근 영업일 기준이 아닌, 실제 데이터가 존재하는 가장 최근 반영일 기준입니다.",
   "count": 50,
   "items": [
@@ -9,280 +9,271 @@
       "symbol": "A116C000",
       "name": "삼성전자   F 202612",
       "product": "삼성전자 선물",
-      "oi": 4041824,
-      "oi_change": -49010,
-      "close": 183600,
-      "volume": 1880653
+      "oi": 4090834,
+      "oi_change": -2415,
+      "close": 197100,
+      "volume": 1366619
     },
     {
       "symbol": "A506C000",
       "name": "SK하이닉스 F 202612",
       "product": "SK하이닉스 선물",
-      "oi": 871901,
-      "oi_change": -18705,
-      "close": 1096000,
-      "volume": 566872
-    },
-    {
-      "symbol": "A146C000",
-      "name": "KT         F 202612",
-      "product": "KT 선물",
-      "oi": 363725,
-      "oi_change": 3096,
-      "close": 44750,
-      "volume": 56262
+      "oi": 890606,
+      "oi_change": 718,
+      "close": 1170000,
+      "volume": 423105
     },
     {
       "symbol": "A156C000",
       "name": "한국전력   F 202612",
       "product": "한국전력 선물",
-      "oi": 360185,
-      "oi_change": -2140,
-      "close": 25600,
-      "volume": 160735
+      "oi": 362325,
+      "oi_change": -3464,
+      "close": 25350,
+      "volume": 108326
+    },
+    {
+      "symbol": "A146C000",
+      "name": "KT         F 202612",
+      "product": "KT 선물",
+      "oi": 360629,
+      "oi_change": 10958,
+      "close": 46950,
+      "volume": 88731
     },
     {
       "symbol": "A486C000",
       "name": "미래에셋증 F 202612",
       "product": "미래에셋증권 선물",
-      "oi": 343851,
-      "oi_change": 480,
-      "close": 18850,
-      "volume": 106462
+      "oi": 343371,
+      "oi_change": -3739,
+      "close": 20200,
+      "volume": 91012
     },
     {
       "symbol": "ABF6C000",
       "name": "삼성중공업 F 202612",
       "product": "삼성중공업 선물",
-      "oi": 328415,
-      "oi_change": 8459,
-      "close": 15000,
-      "volume": 131026
+      "oi": 319956,
+      "oi_change": 2107,
+      "close": 16140,
+      "volume": 141749
     },
     {
       "symbol": "AB96C000",
       "name": "두산에너빌 F 202612",
       "product": "두산에너빌리티 선물",
-      "oi": 291238,
-      "oi_change": -9048,
-      "close": 40750,
-      "volume": 169722
+      "oi": 300286,
+      "oi_change": 6300,
+      "close": 43750,
+      "volume": 173185
     },
     {
       "symbol": "AFT6C000",
       "name": "대우건설   F 202612",
       "product": "대우건설 선물",
-      "oi": 234085,
-      "oi_change": -5969,
-      "close": 10530,
-      "volume": 92563
+      "oi": 240054,
+      "oi_change": -1260,
+      "close": 11350,
+      "volume": 151686
     },
     {
       "symbol": "A456C000",
       "name": "LG디스플레 F 202612",
       "product": "LG디스플레이 선물",
-      "oi": 208586,
-      "oi_change": 2679,
-      "close": 6820,
-      "volume": 31585
+      "oi": 205907,
+      "oi_change": 2099,
+      "close": 7070,
+      "volume": 27187
     },
     {
       "symbol": "A126C000",
       "name": "SK텔레콤   F 202612",
       "product": "SK텔레콤 선물",
-      "oi": 193120,
-      "oi_change": 2943,
-      "close": 68300,
-      "volume": 79519
+      "oi": 190177,
+      "oi_change": 700,
+      "close": 79000,
+      "volume": 60598
     },
     {
       "symbol": "ACA6C000",
       "name": "한화생명   F 202612",
       "product": "한화생명 선물",
-      "oi": 147584,
-      "oi_change": 9296,
-      "close": 3475,
-      "volume": 49669
+      "oi": 138288,
+      "oi_change": 4002,
+      "close": 3670,
+      "volume": 42886
     },
     {
       "symbol": "AEB6C000",
       "name": "우리금융지 F 202612",
       "product": "우리금융지주 선물",
-      "oi": 126797,
-      "oi_change": -2151,
+      "oi": 128948,
+      "oi_change": 7973,
       "close": 31650,
-      "volume": 68402
-    },
-    {
-      "symbol": "A196C000",
-      "name": "기아       F 202612",
-      "product": "기아 선물",
-      "oi": 121899,
-      "oi_change": 4362,
-      "close": 87800,
-      "volume": 38521
+      "volume": 51069
     },
     {
       "symbol": "A466C000",
       "name": "KB금융     F 202612",
       "product": "KB금융 선물",
-      "oi": 119516,
-      "oi_change": -2959,
-      "close": 152700,
-      "volume": 56540
+      "oi": 122475,
+      "oi_change": -540,
+      "close": 153500,
+      "volume": 32601
     },
     {
-      "symbol": "AF66C000",
-      "name": "카카오뱅크 F 202612",
-      "product": "카카오뱅크 선물",
-      "oi": 113493,
-      "oi_change": -744,
-      "close": 21550,
-      "volume": 28146
+      "symbol": "A196C000",
+      "name": "기아       F 202612",
+      "product": "기아 선물",
+      "oi": 117537,
+      "oi_change": 7641,
+      "close": 91300,
+      "volume": 34793
     },
     {
       "symbol": "ACY6C000",
       "name": "한온시스템 F 202612",
       "product": "한온시스템 선물",
-      "oi": 109157,
-      "oi_change": -7606,
-      "close": 2945,
-      "volume": 40547
+      "oi": 116763,
+      "oi_change": 4048,
+      "close": 2990,
+      "volume": 30511
     },
     {
-      "symbol": "AF56C000",
-      "name": "LG에너지솔 F 202612",
-      "product": "LG에너지솔루션 선물",
-      "oi": 104395,
-      "oi_change": 508,
-      "close": 299000,
-      "volume": 19883
+      "symbol": "AF66C000",
+      "name": "카카오뱅크 F 202612",
+      "product": "카카오뱅크 선물",
+      "oi": 114237,
+      "oi_change": 1057,
+      "close": 21300,
+      "volume": 21798
     },
     {
       "symbol": "A0Z6C000",
       "name": "한미반도체 F 202612",
       "product": "한미반도체 선물",
-      "oi": 103426,
-      "oi_change": -581,
-      "close": 154400,
-      "volume": 55943
+      "oi": 104007,
+      "oi_change": 3221,
+      "close": 170800,
+      "volume": 51991
     },
     {
-      "symbol": "A576C000",
-      "name": "대한항공   F 202612",
-      "product": "대한항공 선물",
-      "oi": 100474,
-      "oi_change": 3154,
-      "close": 31400,
-      "volume": 94920
-    },
-    {
-      "symbol": "A2F6C000",
-      "name": "에코프로   F 202612",
-      "product": "에코프로 선물",
-      "oi": 99319,
-      "oi_change": 990,
-      "close": 65700,
-      "volume": 23074
+      "symbol": "AF56C000",
+      "name": "LG에너지솔 F 202612",
+      "product": "LG에너지솔루션 선물",
+      "oi": 103887,
+      "oi_change": 483,
+      "close": 302000,
+      "volume": 15951
     },
     {
       "symbol": "ACF6C000",
       "name": "카카오     F 202612",
       "product": "카카오 선물",
-      "oi": 97737,
-      "oi_change": -2450,
-      "close": 30500,
-      "volume": 55105
+      "oi": 100187,
+      "oi_change": 4815,
+      "close": 32000,
+      "volume": 41412
     },
     {
       "symbol": "A186C000",
       "name": "신한지주   F 202612",
       "product": "신한지주 선물",
-      "oi": 95835,
-      "oi_change": -3037,
-      "close": 85900,
-      "volume": 50289
+      "oi": 98872,
+      "oi_change": 2411,
+      "close": 85700,
+      "volume": 33974
+    },
+    {
+      "symbol": "A2F6C000",
+      "name": "에코프로   F 202612",
+      "product": "에코프로 선물",
+      "oi": 98329,
+      "oi_change": -1467,
+      "close": 68700,
+      "volume": 25902
+    },
+    {
+      "symbol": "A576C000",
+      "name": "대한항공   F 202612",
+      "product": "대한항공 선물",
+      "oi": 97320,
+      "oi_change": -2571,
+      "close": 32500,
+      "volume": 110482
     },
     {
       "symbol": "AEY6C000",
       "name": "에코프로비 F 202612",
       "product": "에코프로비엠 선물",
-      "oi": 95814,
-      "oi_change": 133,
-      "close": 83200,
-      "volume": 9382
+      "oi": 95681,
+      "oi_change": 209,
+      "close": 86500,
+      "volume": 9233
     },
     {
       "symbol": "AFM6C000",
       "name": "엘앤에프   F 202612",
       "product": "엘앤에프 선물",
-      "oi": 95518,
-      "oi_change": -82,
-      "close": 68000,
-      "volume": 24657
+      "oi": 95600,
+      "oi_change": 284,
+      "close": 71800,
+      "volume": 18799
     },
     {
       "symbol": "ACB6C000",
       "name": "한화솔루션 F 202612",
       "product": "한화솔루션 선물",
-      "oi": 92328,
-      "oi_change": 1267,
-      "close": 19300,
-      "volume": 62006
+      "oi": 91061,
+      "oi_change": 3314,
+      "close": 20700,
+      "volume": 45953
     },
     {
       "symbol": "ABT6C000",
       "name": "BNK금융지  F 202612",
       "product": "BNK금융지주 선물",
-      "oi": 89751,
-      "oi_change": 516,
-      "close": 12690,
-      "volume": 22708
-    },
-    {
-      "symbol": "AET6C000",
-      "name": "삼성E&A    F 202612",
-      "product": "삼성E&A 선물",
-      "oi": 88752,
-      "oi_change": 4506,
-      "close": 60200,
-      "volume": 63389
+      "oi": 89235,
+      "oi_change": 2656,
+      "close": 13340,
+      "volume": 21555
     },
     {
       "symbol": "AB06C000",
       "name": "LG유플러스 F 202612",
       "product": "LG유플러스 선물",
-      "oi": 87695,
-      "oi_change": 217,
-      "close": 14850,
-      "volume": 12667
-    },
-    {
-      "symbol": "AGJ6C000",
-      "name": "JB금융지주 F 202612",
-      "product": "JB금융지주 선물",
-      "oi": 87313,
-      "oi_change": 13834,
-      "close": 25300,
-      "volume": 57338
-    },
-    {
-      "symbol": "AFA6C000",
-      "name": "HMM        F 202612",
-      "product": "HMM 선물",
-      "oi": 82321,
-      "oi_change": -1478,
-      "close": 22100,
-      "volume": 21067
+      "oi": 87478,
+      "oi_change": 1498,
+      "close": 15050,
+      "volume": 14663
     },
     {
       "symbol": "A1B6C000",
       "name": "HPSP       F 202612",
       "product": "HPSP 선물",
-      "oi": 81574,
-      "oi_change": -2709,
-      "close": 37950,
-      "volume": 47136
+      "oi": 84283,
+      "oi_change": 2061,
+      "close": 42400,
+      "volume": 45566
+    },
+    {
+      "symbol": "AET6C000",
+      "name": "삼성E&A    F 202612",
+      "product": "삼성E&A 선물",
+      "oi": 84246,
+      "oi_change": 5076,
+      "close": 63300,
+      "volume": 71159
+    },
+    {
+      "symbol": "AFA6C000",
+      "name": "HMM        F 202612",
+      "product": "HMM 선물",
+      "oi": 83799,
+      "oi_change": 1572,
+      "close": 22450,
+      "volume": 23111
     },
     {
       "symbol": "1GNW4000",
@@ -294,166 +285,175 @@
       "volume": 0
     },
     {
-      "symbol": "A416C000",
-      "name": "SK이노베이 F 202612",
-      "product": "SK이노베이션 선물",
-      "oi": 79459,
-      "oi_change": 758,
-      "close": 93800,
-      "volume": 23978
+      "symbol": "AFP6C000",
+      "name": "알테오젠   F 202612",
+      "product": "알테오젠 선물",
+      "oi": 79251,
+      "oi_change": 402,
+      "close": 172500,
+      "volume": 16314
     },
     {
       "symbol": "AFV6C000",
       "name": "한화오션   F 202612",
       "product": "한화오션 선물",
-      "oi": 78718,
-      "oi_change": -108,
-      "close": 41450,
-      "volume": 41327
+      "oi": 78826,
+      "oi_change": 1480,
+      "close": 44900,
+      "volume": 47585
     },
     {
       "symbol": "AE86C000",
       "name": "포스코퓨처 F 202612",
       "product": "포스코퓨처엠 선물",
-      "oi": 78029,
-      "oi_change": -768,
-      "close": 158900,
-      "volume": 18193
+      "oi": 78797,
+      "oi_change": -488,
+      "close": 166000,
+      "volume": 17470
     },
     {
-      "symbol": "AFP6C000",
-      "name": "알테오젠   F 202612",
-      "product": "알테오젠 선물",
-      "oi": 77144,
-      "oi_change": -2107,
-      "close": 175300,
-      "volume": 34591
-    },
-    {
-      "symbol": "AE06C000",
-      "name": "원익IPS    F 202612",
-      "product": "원익IPS 선물",
-      "oi": 73147,
-      "oi_change": -424,
-      "close": 66100,
-      "volume": 22741
-    },
-    {
-      "symbol": "AGP6C000",
-      "name": "금호타이어 F 202612",
-      "product": "금호타이어 선물",
-      "oi": 71456,
-      "oi_change": -803,
-      "close": 5000,
-      "volume": 16903
+      "symbol": "A416C000",
+      "name": "SK이노베이 F 202612",
+      "product": "SK이노베이션 선물",
+      "oi": 78701,
+      "oi_change": 3707,
+      "close": 98800,
+      "volume": 29581
     },
     {
       "symbol": "AD66C000",
       "name": "유한양행   F 202612",
       "product": "유한양행 선물",
-      "oi": 70387,
-      "oi_change": -3658,
-      "close": 80800,
-      "volume": 8336
+      "oi": 74045,
+      "oi_change": 57,
+      "close": 81400,
+      "volume": 7273
     },
     {
-      "symbol": "A2P6C000",
-      "name": "이수페타시 F 202612",
-      "product": "이수페타시스 선물",
-      "oi": 70081,
-      "oi_change": 10050,
-      "close": 69000,
-      "volume": 40384
+      "symbol": "AE06C000",
+      "name": "원익IPS    F 202612",
+      "product": "원익IPS 선물",
+      "oi": 73571,
+      "oi_change": 5343,
+      "close": 76300,
+      "volume": 32086
     },
     {
-      "symbol": "AFB6C000",
-      "name": "SK아이이테 F 202612",
-      "product": "SK아이이테크놀로지 선물",
-      "oi": 68427,
-      "oi_change": 1777,
-      "close": 10860,
-      "volume": 6469
+      "symbol": "AGJ6C000",
+      "name": "JB금융지주 F 202612",
+      "product": "JB금융지주 선물",
+      "oi": 73479,
+      "oi_change": 1453,
+      "close": 25550,
+      "volume": 18722
+    },
+    {
+      "symbol": "AGP6C000",
+      "name": "금호타이어 F 202612",
+      "product": "금호타이어 선물",
+      "oi": 72259,
+      "oi_change": 545,
+      "close": 5200,
+      "volume": 8923
     },
     {
       "symbol": "AFE6C000",
       "name": "SK스퀘어   F 202612",
       "product": "SK스퀘어 선물",
-      "oi": 66786,
-      "oi_change": -4637,
-      "close": 676000,
-      "volume": 50381
-    },
-    {
-      "symbol": "AB46C000",
-      "name": "기업은행   F 202612",
-      "product": "기업은행 선물",
-      "oi": 66267,
-      "oi_change": -1446,
-      "close": 19000,
-      "volume": 15651
+      "oi": 71423,
+      "oi_change": -754,
+      "close": 741000,
+      "volume": 37444
     },
     {
       "symbol": "A166C000",
       "name": "현대차     F 202612",
       "product": "현대차 선물",
-      "oi": 65694,
-      "oi_change": -2306,
-      "close": 252000,
-      "volume": 31932
+      "oi": 68000,
+      "oi_change": 1352,
+      "close": 263500,
+      "volume": 32027
+    },
+    {
+      "symbol": "AB46C000",
+      "name": "기업은행   F 202612",
+      "product": "기업은행 선물",
+      "oi": 67713,
+      "oi_change": 1767,
+      "close": 19210,
+      "volume": 12965
+    },
+    {
+      "symbol": "AFB6C000",
+      "name": "SK아이이테 F 202612",
+      "product": "SK아이이테크놀로지 선물",
+      "oi": 66650,
+      "oi_change": -2999,
+      "close": 11410,
+      "volume": 9804
     },
     {
       "symbol": "AFQ6C000",
       "name": "리노공업   F 202612",
       "product": "리노공업 선물",
-      "oi": 64104,
-      "oi_change": -1730,
-      "close": 45100,
-      "volume": 27305
+      "oi": 65834,
+      "oi_change": 1705,
+      "close": 52800,
+      "volume": 24198
     },
     {
       "symbol": "ACN6C000",
       "name": "포스코DX   F 202612",
       "product": "포스코DX 선물",
-      "oi": 63965,
-      "oi_change": 72,
-      "close": 20900,
-      "volume": 8777
-    },
-    {
-      "symbol": "AD671000",
-      "name": "유한양행   F 202701",
-      "product": "유한양행 선물",
-      "oi": 62648,
-      "oi_change": 10131,
-      "close": 81800,
-      "volume": 169
+      "oi": 63893,
+      "oi_change": -146,
+      "close": 21800,
+      "volume": 12787
     },
     {
       "symbol": "AHR6C000",
       "name": "주성엔지니 F 202612",
       "product": "주성엔지니어링 선물",
-      "oi": 62359,
-      "oi_change": 320,
-      "close": 145600,
-      "volume": 43277
+      "oi": 62039,
+      "oi_change": 2655,
+      "close": 160700,
+      "volume": 44938
     },
     {
-      "symbol": "ADB6C000",
-      "name": "LIG디펜스  F 202612",
-      "product": "LIG디펜스 선물",
-      "oi": 58540,
-      "oi_change": 330,
-      "close": 350500,
-      "volume": 5356
+      "symbol": "A2P6C000",
+      "name": "이수페타시 F 202612",
+      "product": "이수페타시스 선물",
+      "oi": 60031,
+      "oi_change": 870,
+      "close": 83200,
+      "volume": 18207
     },
     {
       "symbol": "AEV6C000",
       "name": "한화시스템 F 202612",
       "product": "한화시스템 선물",
-      "oi": 58432,
-      "oi_change": -311,
-      "close": 46200,
-      "volume": 22491
+      "oi": 58743,
+      "oi_change": 180,
+      "close": 48700,
+      "volume": 29198
+    },
+    {
+      "symbol": "ADB6C000",
+      "name": "LIG디펜스  F 202612",
+      "product": "LIG디펜스 선물",
+      "oi": 58210,
+      "oi_change": 288,
+      "close": 368500,
+      "volume": 7731
+    },
+    {
+      "symbol": "A406C000",
+      "name": "하나금융지 F 202612",
+      "product": "하나금융지주 선물",
+      "oi": 57628,
+      "oi_change": 1839,
+      "close": 123900,
+      "volume": 26484
     }
   ]
 }
