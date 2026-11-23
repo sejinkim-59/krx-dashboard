@@ -1,10 +1,70 @@
 {
-  "updated_at": "2026-11-23T05:59:57.753Z",
+  "updated_at": "2026-11-23T17:58:44.396Z",
   "range": {
-    "from": "20261109",
-    "to": "20261123"
+    "from": "20261110",
+    "to": "20261124"
   },
   "items": [
+    {
+      "corp_name": "헥토파이낸셜",
+      "stock_code": "234340",
+      "rcept_no": "20261123000385",
+      "rcept_dt": "20261123",
+      "type": "취득",
+      "period_start": "2026년 11월 24일",
+      "period_end": "2027년 02월 23일",
+      "purpose": "자기주식 취득을 통한 주주가치 제고 및\n임직원 보상",
+      "method": "코스닥시장내 직접 매수 (직접 취득)",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261123000385"
+    },
+    {
+      "corp_name": "헥토이노베이션",
+      "stock_code": "214180",
+      "rcept_no": "20261123000313",
+      "rcept_dt": "20261123",
+      "type": "취득",
+      "period_start": "2026년 11월 24일",
+      "period_end": "2027년 02월 23일",
+      "purpose": "주주가치 제고 및 임직원 보상",
+      "method": "장내 직접취득",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261123000313"
+    },
+    {
+      "corp_name": "한화오션",
+      "stock_code": "042660",
+      "rcept_no": "20261123000302",
+      "rcept_dt": "20261123",
+      "type": "취득",
+      "period_start": "2026년 11월 24일",
+      "period_end": "2027년 02월 23일",
+      "purpose": "임직원 주식보상",
+      "method": "유가증권시장을 통한 장내 매수",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261123000302"
+    },
+    {
+      "corp_name": "엑셈",
+      "stock_code": "205100",
+      "rcept_no": "20261123000200",
+      "rcept_dt": "20261123",
+      "type": "취득",
+      "period_start": "2026년 11월 24일",
+      "period_end": "2026년 12월 23일",
+      "purpose": "주가 안정 및 주주가치 제고",
+      "method": "장내 직접취득",
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261123000200"
+    },
+    {
+      "corp_name": "티엘비",
+      "stock_code": "356860",
+      "rcept_no": "20261123000379",
+      "rcept_dt": "20261123",
+      "type": "처분",
+      "period_start": "2026년 11월 24일",
+      "period_end": "2026년 11월 25일",
+      "purpose": "우리사주조합에 대한 무상출연",
+      "method": null,
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261123000379"
+    },
     {
       "corp_name": "DSC인베스트먼트",
       "stock_code": "241520",
@@ -340,18 +400,6 @@
       "purpose": "양도제한조건부주식(RSU) 부여에따른 자기주식의 교부",
       "method": null,
       "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261110000293"
-    },
-    {
-      "corp_name": "아이센스",
-      "stock_code": "099190",
-      "rcept_no": "20261109000309",
-      "rcept_dt": "20261109",
-      "type": "취득",
-      "period_start": "2026년 11월 10일",
-      "period_end": "2027년 02월 09일",
-      "purpose": "주가 안정을 통한 주주가치 제고",
-      "method": "코스닥시장을 통한 장내 직접취득",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261109000309"
     }
   ]
 }

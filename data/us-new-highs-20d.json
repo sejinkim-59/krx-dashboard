@@ -1,21 +1,39 @@
 {
-  "updated_at": "2026-11-23T06:07:07.142Z",
+  "updated_at": "2026-11-23T18:04:53.717Z",
   "universe": "S&P 500",
   "universe_size": 503,
   "window_days": 20,
-  "count": 2,
+  "count": 5,
   "items": [
     {
-      "symbol": "HRL",
-      "close": 23.54,
-      "day_change_pct": 2.08,
-      "pct_above_prior_window": 1.68
+      "symbol": "TGT",
+      "close": 169.09,
+      "day_change_pct": 1.97,
+      "pct_above_prior_window": 0.97
     },
     {
-      "symbol": "TSN",
-      "close": 65.12,
-      "day_change_pct": 1.97,
-      "pct_above_prior_window": 1.35
+      "symbol": "BIIB",
+      "close": 256.25,
+      "day_change_pct": 2.67,
+      "pct_above_prior_window": 0.54
+    },
+    {
+      "symbol": "DGX",
+      "close": 263.5,
+      "day_change_pct": 2.02,
+      "pct_above_prior_window": 0.49
+    },
+    {
+      "symbol": "LH",
+      "close": 372.985,
+      "day_change_pct": 1.59,
+      "pct_above_prior_window": 0.14
+    },
+    {
+      "symbol": "ORLY",
+      "close": 93.395,
+      "day_change_pct": 0.8,
+      "pct_above_prior_window": 0.03
     }
   ]
 }
