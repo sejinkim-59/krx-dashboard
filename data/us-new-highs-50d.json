@@ -1,27 +1,33 @@
 {
-  "updated_at": "2026-11-23T18:04:53.718Z",
+  "updated_at": "2026-11-24T03:59:55.903Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
-  "count": 3,
+  "count": 4,
   "items": [
     {
       "symbol": "PDD",
-      "close": 87.18,
-      "day_change_pct": 4.18,
-      "pct_above_prior_window": 1.37
+      "close": 87.14,
+      "day_change_pct": 4.13,
+      "pct_above_prior_window": 1.33
     },
     {
       "symbol": "BIIB",
-      "close": 256.25,
-      "day_change_pct": 2.67,
-      "pct_above_prior_window": 0.54
+      "close": 256.71,
+      "day_change_pct": 2.85,
+      "pct_above_prior_window": 0.72
+    },
+    {
+      "symbol": "WMT",
+      "close": 129.58,
+      "day_change_pct": 1.27,
+      "pct_above_prior_window": 0.32
     },
     {
       "symbol": "ORLY",
-      "close": 93.38,
-      "day_change_pct": 0.79,
-      "pct_above_prior_window": 0.01
+      "close": 93.62,
+      "day_change_pct": 1.05,
+      "pct_above_prior_window": 0.27
     }
   ]
 }

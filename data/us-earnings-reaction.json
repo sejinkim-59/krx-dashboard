@@ -1,26 +1,9 @@
 {
-  "updated_at": "2026-11-23T18:05:05.356Z",
+  "updated_at": "2026-11-24T04:00:07.245Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
   "items": [
-    {
-      "symbol": "NVDA",
-      "name": "NVIDIA Corporation",
-      "report_date": "2026-11-17",
-      "report_time": "미상",
-      "market_cap": 3025273090000,
-      "eps": "$2.68",
-      "eps_forecast": "$2.47",
-      "surprise_pct": 8.5,
-      "reaction": {
-        "D-1": 0,
-        "D0": -0.44,
-        "D+1": -3.32,
-        "D+2": -6.51,
-        "D+3": -19.6
-      }
-    },
     {
       "symbol": "WMT",
       "name": "Walmart Inc.",
@@ -34,25 +17,8 @@
         "D-1": 0,
         "D0": -1.04,
         "D+1": 0.46,
-        "D+2": 1.15,
+        "D+2": 1.74,
         "D+3": null
-      }
-    },
-    {
-      "symbol": "HD",
-      "name": "Home Depot, Inc. (The)",
-      "report_date": "2026-11-17",
-      "report_time": "미상",
-      "market_cap": 338256691000,
-      "eps": "$3.86",
-      "eps_forecast": "$3.86",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": -2.45,
-        "D+1": -2.84,
-        "D+2": -3.12,
-        "D+3": -2.44
       }
     },
     {
@@ -69,24 +35,7 @@
         "D0": 9.9,
         "D+1": 16.95,
         "D+2": 11,
-        "D+3": 14.54
-      }
-    },
-    {
-      "symbol": "DIS",
-      "name": "Walt Disney Company (The)",
-      "report_date": "2026-11-17",
-      "report_time": "미상",
-      "market_cap": 201513337000,
-      "eps": "$1.77",
-      "eps_forecast": "$1.67",
-      "surprise_pct": 5.99,
-      "reaction": {
-        "D-1": 0,
-        "D0": -1.48,
-        "D+1": 3.08,
-        "D+2": 1.31,
-        "D+3": -0.61
+        "D+3": 14.27
       }
     },
     {
@@ -102,7 +51,7 @@
         "D-1": 0,
         "D0": -1.26,
         "D+1": -3.9,
-        "D+2": 2.62,
+        "D+2": 1.98,
         "D+3": null
       }
     },
@@ -120,7 +69,7 @@
         "D0": 8.05,
         "D+1": 7.36,
         "D+2": 7.52,
-        "D+3": 7.6
+        "D+3": 7.24
       }
     },
     {
@@ -137,7 +86,7 @@
         "D0": 1.05,
         "D+1": -0.6,
         "D+2": 0.17,
-        "D+3": 3.09
+        "D+3": 2.58
       }
     },
     {
@@ -153,7 +102,7 @@
         "D-1": 0,
         "D0": 11.04,
         "D+1": 8.04,
-        "D+2": 12.55,
+        "D+2": 12.51,
         "D+3": null
       }
     },
@@ -171,7 +120,7 @@
         "D0": 4.01,
         "D+1": 4.97,
         "D+2": 3.95,
-        "D+3": 5.94
+        "D+3": 5.43
       }
     },
     {
@@ -187,7 +136,7 @@
         "D-1": 0,
         "D0": -1.03,
         "D+1": -13.66,
-        "D+2": -10.79,
+        "D+2": -12.06,
         "D+3": null
       }
     },
@@ -221,7 +170,39 @@
         "D-1": 0,
         "D0": -11.39,
         "D+1": -15.69,
-        "D+2": -13.31,
+        "D+2": -12.86,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "HPE",
+      "name": "Hewlett Packard Enterprise Company",
+      "report_date": "2026-11-23",
+      "report_time": "장후",
+      "market_cap": 54306583000,
+      "eps_forecast": "$1.18",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 17.38,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "A",
+      "name": "Agilent Technologies, Inc.",
+      "report_date": "2026-11-23",
+      "report_time": "장후",
+      "market_cap": 48035037000,
+      "eps_forecast": "$1.72",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 3.32,
+        "D+1": null,
+        "D+2": null,
         "D+3": null
       }
     },
@@ -238,42 +219,8 @@
         "D-1": 0,
         "D0": -1.7,
         "D+1": -8.66,
-        "D+2": 0.73,
+        "D+2": 1.16,
         "D+3": null
-      }
-    },
-    {
-      "symbol": "VIK",
-      "name": "Viking Holdings Ltd",
-      "report_date": "2026-11-17",
-      "report_time": "미상",
-      "market_cap": 41912803000,
-      "eps": "$1.11",
-      "eps_forecast": "$1.23",
-      "surprise_pct": -9.76,
-      "reaction": {
-        "D-1": 0,
-        "D0": 4.43,
-        "D+1": 11.18,
-        "D+2": 5.23,
-        "D+3": 4.14
-      }
-    },
-    {
-      "symbol": "JD",
-      "name": "JD.com, Inc.",
-      "report_date": "2026-11-17",
-      "report_time": "미상",
-      "market_cap": 33465600000,
-      "eps": "$0.77",
-      "eps_forecast": "$0.89",
-      "surprise_pct": -13.48,
-      "reaction": {
-        "D-1": 0,
-        "D0": -7.66,
-        "D+1": -9.51,
-        "D+2": -6.9,
-        "D+3": -9.59
       }
     },
     {
@@ -290,24 +237,7 @@
         "D0": -1.03,
         "D+1": 3.64,
         "D+2": -9.57,
-        "D+3": -0.07
-      }
-    },
-    {
-      "symbol": "ESLT",
-      "name": "Elbit Systems Ltd.",
-      "report_date": "2026-11-17",
-      "report_time": "미상",
-      "market_cap": 30504745000,
-      "eps": "$4.20",
-      "eps_forecast": "$3.85",
-      "surprise_pct": 9.09,
-      "reaction": {
-        "D-1": 0,
-        "D0": 5.85,
-        "D+1": 2.59,
-        "D+2": 0.18,
-        "D+3": -3.65
+        "D+3": -0.77
       }
     },
     {
@@ -323,7 +253,23 @@
         "D-1": 0,
         "D0": -2.55,
         "D+1": -4.07,
-        "D+2": 6.22,
+        "D+2": 10.47,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "TCOM",
+      "name": "Trip.com Group Limited",
+      "report_date": "2026-11-23",
+      "report_time": "미상",
+      "market_cap": 25515655200,
+      "eps_forecast": "$1.07",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.43,
+        "D+1": null,
+        "D+2": null,
         "D+3": null
       }
     },
@@ -340,7 +286,23 @@
         "D-1": 0,
         "D0": -15.16,
         "D+1": -18.99,
-        "D+2": -17.2,
+        "D+2": -18.44,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "ZM",
+      "name": "Zoom Communications, Inc.",
+      "report_date": "2026-11-23",
+      "report_time": "장후",
+      "market_cap": 23710345200,
+      "eps_forecast": "$1",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 5.87,
+        "D+1": null,
+        "D+2": null,
         "D+3": null
       }
     },
@@ -358,7 +320,39 @@
         "D0": 3.01,
         "D+1": 8.39,
         "D+2": 5.43,
-        "D+3": 12.65
+        "D+3": 12.71
+      }
+    },
+    {
+      "symbol": "SYM",
+      "name": "Symbotic Inc.",
+      "report_date": "2026-11-23",
+      "report_time": "장후",
+      "market_cap": 18809333800,
+      "eps_forecast": "$0.08",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 12.44,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "J",
+      "name": "Jacobs Solutions Inc.",
+      "report_date": "2026-11-23",
+      "report_time": "장후",
+      "market_cap": 17628356600,
+      "eps_forecast": "$2.11",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 4.59,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
       }
     },
     {
@@ -374,76 +368,8 @@
         "D-1": 0,
         "D0": -0.61,
         "D+1": -0.73,
-        "D+2": 0.3,
+        "D+2": -0.61,
         "D+3": null
-      }
-    },
-    {
-      "symbol": "AS",
-      "name": "Amer Sports, Inc.",
-      "report_date": "2026-11-17",
-      "report_time": "미상",
-      "market_cap": 15765257200,
-      "eps": "$0.42",
-      "eps_forecast": "$0.34",
-      "surprise_pct": 23.53,
-      "reaction": {
-        "D-1": 0,
-        "D0": 3.92,
-        "D+1": 6.36,
-        "D+2": 1.41,
-        "D+3": -2.85
-      }
-    },
-    {
-      "symbol": "ZTO",
-      "name": "ZTO Express (Cayman) Inc.",
-      "report_date": "2026-11-17",
-      "report_time": "미상",
-      "market_cap": 15613586400,
-      "eps": "$0.48",
-      "eps_forecast": "",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": 0.24,
-        "D+1": -0.15,
-        "D+2": -0.24,
-        "D+3": -0.98
-      }
-    },
-    {
-      "symbol": "TME",
-      "name": "Tencent Music Entertainment Group",
-      "report_date": "2026-11-17",
-      "report_time": "미상",
-      "market_cap": 14023489500,
-      "eps": "$0.21",
-      "eps_forecast": "$0.21",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": 6.64,
-        "D+1": 5.29,
-        "D+2": 2.82,
-        "D+3": 0.34
-      }
-    },
-    {
-      "symbol": "SQM",
-      "name": "Sociedad Quimica y Minera S.A.",
-      "report_date": "2026-11-17",
-      "report_time": "미상",
-      "market_cap": 13416408100,
-      "eps": "$1.91",
-      "eps_forecast": "$1.97",
-      "surprise_pct": -3.05,
-      "reaction": {
-        "D-1": 0,
-        "D0": 0.9,
-        "D+1": -4.67,
-        "D+2": -6.42,
-        "D+3": -8.14
       }
     },
     {
@@ -458,7 +384,7 @@
       "reaction": {
         "D-1": 0,
         "D0": -5.35,
-        "D+1": -8.54,
+        "D+1": -8.43,
         "D+2": null,
         "D+3": null
       }
@@ -476,7 +402,7 @@
         "D-1": 0,
         "D0": 4.84,
         "D+1": -0.19,
-        "D+2": 6.61,
+        "D+2": 6.4,
         "D+3": null
       }
     },
@@ -501,6 +427,73 @@
       "eps_forecast": "",
       "surprise_pct": null,
       "reaction": null
+    },
+    {
+      "symbol": "FRO",
+      "name": "Frontline Plc",
+      "report_date": "2026-11-20",
+      "report_time": "미상",
+      "market_cap": 10064781300,
+      "eps": "$2.38",
+      "eps_forecast": "",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.03,
+        "D+1": 3.8,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "YMM",
+      "name": "Full Truck Alliance Co. Ltd.",
+      "report_date": "2026-11-19",
+      "report_time": "미상",
+      "market_cap": 9151140900,
+      "eps": "$0.19",
+      "eps_forecast": "$0.19",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 8.11,
+        "D+1": 5.25,
+        "D+2": 6.09,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "SMTC",
+      "name": "Semtech Corporation",
+      "report_date": "2026-11-23",
+      "report_time": "장후",
+      "market_cap": 8178124800,
+      "eps_forecast": "$0.92",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 18.83,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "ESTC",
+      "name": "Elastic N.V.",
+      "report_date": "2026-11-19",
+      "report_time": "미상",
+      "market_cap": 7926257200,
+      "eps": "$0.19",
+      "eps_forecast": "$0.14",
+      "surprise_pct": 35.71,
+      "reaction": {
+        "D-1": 0,
+        "D0": -8.05,
+        "D+1": -9.9,
+        "D+2": -1.88,
+        "D+3": null
+      }
     }
   ]
 }

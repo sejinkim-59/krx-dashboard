@@ -1,38 +1,62 @@
 {
-  "updated_at": "2026-11-23T18:04:53.717Z",
+  "updated_at": "2026-11-24T03:59:55.902Z",
   "universe": "S&P 500",
   "universe_size": 503,
   "window_days": 20,
-  "count": 5,
+  "count": 9,
   "items": [
     {
-      "symbol": "TGT",
-      "close": 169.09,
-      "day_change_pct": 1.97,
-      "pct_above_prior_window": 0.97
+      "symbol": "PCG",
+      "close": 14.08,
+      "day_change_pct": 2.18,
+      "pct_above_prior_window": 1
     },
     {
       "symbol": "BIIB",
-      "close": 256.25,
-      "day_change_pct": 2.67,
-      "pct_above_prior_window": 0.54
+      "close": 256.71,
+      "day_change_pct": 2.85,
+      "pct_above_prior_window": 0.72
+    },
+    {
+      "symbol": "DPZ",
+      "close": 355.25,
+      "day_change_pct": 1.9,
+      "pct_above_prior_window": 0.48
+    },
+    {
+      "symbol": "TGT",
+      "close": 168.19,
+      "day_change_pct": 1.42,
+      "pct_above_prior_window": 0.44
     },
     {
       "symbol": "DGX",
-      "close": 263.5,
-      "day_change_pct": 2.02,
-      "pct_above_prior_window": 0.49
+      "close": 263.12,
+      "day_change_pct": 1.87,
+      "pct_above_prior_window": 0.35
     },
     {
-      "symbol": "LH",
-      "close": 372.985,
-      "day_change_pct": 1.59,
-      "pct_above_prior_window": 0.14
+      "symbol": "BAX",
+      "close": 26.59,
+      "day_change_pct": 4.73,
+      "pct_above_prior_window": 0.34
+    },
+    {
+      "symbol": "WMT",
+      "close": 129.58,
+      "day_change_pct": 1.27,
+      "pct_above_prior_window": 0.32
     },
     {
       "symbol": "ORLY",
-      "close": 93.395,
-      "day_change_pct": 0.8,
+      "close": 93.62,
+      "day_change_pct": 1.05,
+      "pct_above_prior_window": 0.27
+    },
+    {
+      "symbol": "LH",
+      "close": 372.56,
+      "day_change_pct": 1.48,
       "pct_above_prior_window": 0.03
     }
   ]
