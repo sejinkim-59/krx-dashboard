@@ -1,45 +1,69 @@
 {
-  "updated_at": "2026-11-24T14:42:37.262Z",
+  "updated_at": "2026-11-24T23:53:57.184Z",
   "universe": "Dow 30 + Nasdaq 100 (대형주)",
   "universe_size": 122,
   "window_days": 50,
-  "count": 6,
+  "count": 10,
   "items": [
     {
       "symbol": "BIIB",
-      "close": 266.18,
-      "day_change_pct": 3.69,
-      "pct_above_prior_window": 3.69
-    },
-    {
-      "symbol": "WMT",
-      "close": 130.885,
-      "day_change_pct": 1.01,
-      "pct_above_prior_window": 1.01
+      "close": 269.11,
+      "day_change_pct": 4.83,
+      "pct_above_prior_window": 4.83
     },
     {
       "symbol": "GILD",
-      "close": 175.239,
-      "day_change_pct": 2.73,
-      "pct_above_prior_window": 0.44
+      "close": 178.29,
+      "day_change_pct": 4.51,
+      "pct_above_prior_window": 2.18
+    },
+    {
+      "symbol": "WMT",
+      "close": 132.31,
+      "day_change_pct": 2.11,
+      "pct_above_prior_window": 2.11
     },
     {
       "symbol": "ORLY",
-      "close": 94.02,
-      "day_change_pct": 0.43,
-      "pct_above_prior_window": 0.43
+      "close": 95.43,
+      "day_change_pct": 1.93,
+      "pct_above_prior_window": 1.93
     },
     {
       "symbol": "REGN",
-      "close": 973.88,
-      "day_change_pct": 3.36,
-      "pct_above_prior_window": 0.05
+      "close": 987.09,
+      "day_change_pct": 4.76,
+      "pct_above_prior_window": 1.41
     },
     {
       "symbol": "VRTX",
-      "close": 559.14,
-      "day_change_pct": 3.83,
-      "pct_above_prior_window": 0.05
+      "close": 563.92,
+      "day_change_pct": 4.71,
+      "pct_above_prior_window": 0.9
+    },
+    {
+      "symbol": "IDXX",
+      "close": 712.08,
+      "day_change_pct": 3.65,
+      "pct_above_prior_window": 0.77
+    },
+    {
+      "symbol": "KHC",
+      "close": 25.57,
+      "day_change_pct": 1.87,
+      "pct_above_prior_window": 0.51
+    },
+    {
+      "symbol": "DIS",
+      "close": 122.51,
+      "day_change_pct": 1.86,
+      "pct_above_prior_window": 0.12
+    },
+    {
+      "symbol": "PDD",
+      "close": 87.22,
+      "day_change_pct": 0.09,
+      "pct_above_prior_window": 0.09
     }
   ]
 }

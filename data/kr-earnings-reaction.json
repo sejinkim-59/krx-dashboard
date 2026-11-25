@@ -1,23 +1,39 @@
 {
-  "updated_at": "2026-11-24T14:47:40.517Z",
+  "updated_at": "2026-11-24T23:56:56.821Z",
   "note": "최근 21일 영업(잠정)실적 공정공시 기준. 반응(%)은 공시일 이후 첫 거래일(D0) 기준 D-1 종가 대비 누적 수익률.",
   "range": {
-    "from": "20261103",
-    "to": "20261124"
+    "from": "20261104",
+    "to": "20261125"
   },
-  "count": 291,
+  "count": 265,
   "items": [
     {
       "corp_name": "HD한국조선해양",
       "stock_code": "009540",
       "rcept_dt": "20261124",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124800670",
+      "reaction": {
+        "D-1": 0,
+        "D0": 5.39,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "HD현대중공업",
       "stock_code": "329180",
       "rcept_dt": "20261124",
-      "reaction": null
+      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124800659",
+      "reaction": {
+        "D-1": 0,
+        "D0": 5.03,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null,
+        "D+4": null
+      }
     },
     {
       "corp_name": "삼립",
@@ -2873,293 +2889,6 @@
         "D+2": 7.85,
         "D+3": 5.25,
         "D+4": 6.81
-      }
-    },
-    {
-      "corp_name": "현대이지웰",
-      "stock_code": "090850",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103900581",
-      "reaction": null
-    },
-    {
-      "corp_name": "넥써쓰",
-      "stock_code": "205500",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103900556",
-      "reaction": null
-    },
-    {
-      "corp_name": "하나투어",
-      "stock_code": "039130",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103800500",
-      "reaction": {
-        "D-1": 0,
-        "D0": 2.88,
-        "D+1": 1.08,
-        "D+2": 2.88,
-        "D+3": 2.88,
-        "D+4": 2.52
-      }
-    },
-    {
-      "corp_name": "SM C&C",
-      "stock_code": "048550",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103900475",
-      "reaction": null
-    },
-    {
-      "corp_name": "제주항공",
-      "stock_code": "089590",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103800430",
-      "reaction": {
-        "D-1": 0,
-        "D0": -1.04,
-        "D+1": 1.9,
-        "D+2": 15.92,
-        "D+3": 10.38,
-        "D+4": 18.17
-      }
-    },
-    {
-      "corp_name": "심텍",
-      "stock_code": "222800",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103900445",
-      "reaction": null
-    },
-    {
-      "corp_name": "고영",
-      "stock_code": "098460",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103900416",
-      "reaction": null
-    },
-    {
-      "corp_name": "LX세미콘",
-      "stock_code": "108320",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103800419",
-      "reaction": {
-        "D-1": 0,
-        "D0": -3.24,
-        "D+1": -16.53,
-        "D+2": -22.2,
-        "D+3": -25.77,
-        "D+4": -25.93
-      }
-    },
-    {
-      "corp_name": "LG생활건강",
-      "stock_code": "051900",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103800407",
-      "reaction": {
-        "D-1": 0,
-        "D0": -0.38,
-        "D+1": -12.17,
-        "D+2": -9.13,
-        "D+3": -11.03,
-        "D+4": -11.03
-      }
-    },
-    {
-      "corp_name": "디어유",
-      "stock_code": "376300",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103900398",
-      "reaction": null
-    },
-    {
-      "corp_name": "하이브",
-      "stock_code": "352820",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103800396",
-      "reaction": {
-        "D-1": 0,
-        "D0": 0.58,
-        "D+1": -10.97,
-        "D+2": -3.68,
-        "D+3": -5.29,
-        "D+4": -7.61
-      }
-    },
-    {
-      "corp_name": "한국항공우주",
-      "stock_code": "047810",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103800386",
-      "reaction": {
-        "D-1": 0,
-        "D0": -1.82,
-        "D+1": 9.79,
-        "D+2": 6.16,
-        "D+3": 3.53,
-        "D+4": -0.1
-      }
-    },
-    {
-      "corp_name": "DL",
-      "stock_code": "000210",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103800376",
-      "reaction": {
-        "D-1": 0,
-        "D0": -3.63,
-        "D+1": 6.89,
-        "D+2": 13.06,
-        "D+3": 8.46,
-        "D+4": 7.38
-      }
-    },
-    {
-      "corp_name": "지누스",
-      "stock_code": "013890",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103800355",
-      "reaction": {
-        "D-1": 0,
-        "D0": 0.99,
-        "D+1": 0.99,
-        "D+2": 6.73,
-        "D+3": 7.55,
-        "D+4": 7.39
-      }
-    },
-    {
-      "corp_name": "나노신소재",
-      "stock_code": "121600",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103900287",
-      "reaction": null
-    },
-    {
-      "corp_name": "현대그린푸드",
-      "stock_code": "453340",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103800286",
-      "reaction": {
-        "D-1": 0,
-        "D0": 8.52,
-        "D+1": 2.54,
-        "D+2": 4.62,
-        "D+3": 5.14,
-        "D+4": 4.36
-      }
-    },
-    {
-      "corp_name": "동진쎄미켐",
-      "stock_code": "005290",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103900296",
-      "reaction": null
-    },
-    {
-      "corp_name": "카카오페이",
-      "stock_code": "377300",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103800279",
-      "reaction": {
-        "D-1": 0,
-        "D0": -5.78,
-        "D+1": -6.37,
-        "D+2": -1.63,
-        "D+3": -4.15,
-        "D+4": -6.37
-      }
-    },
-    {
-      "corp_name": "에스폴리텍",
-      "stock_code": "050760",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103900248",
-      "reaction": null
-    },
-    {
-      "corp_name": "KG스틸",
-      "stock_code": "016380",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103800261",
-      "reaction": {
-        "D-1": 0,
-        "D0": -0.2,
-        "D+1": -0.2,
-        "D+2": -2.38,
-        "D+3": -4.95,
-        "D+4": -4.06
-      }
-    },
-    {
-      "corp_name": "HT로보틱스",
-      "stock_code": "396300",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103900219",
-      "reaction": null
-    },
-    {
-      "corp_name": "KG모빌리티플랫폼",
-      "stock_code": "381970",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103800218",
-      "reaction": {
-        "D-1": 0,
-        "D0": -2.74,
-        "D+1": 0.73,
-        "D+2": -0.73,
-        "D+3": 0.18,
-        "D+4": -0.55
-      }
-    },
-    {
-      "corp_name": "알테오젠",
-      "stock_code": "196170",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103900196",
-      "reaction": null
-    },
-    {
-      "corp_name": "비에이치",
-      "stock_code": "090460",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103800120",
-      "reaction": {
-        "D-1": 0,
-        "D0": -6.98,
-        "D+1": -5.26,
-        "D+2": -14.08,
-        "D+3": -14.87,
-        "D+4": -11.75
-      }
-    },
-    {
-      "corp_name": "풍산홀딩스",
-      "stock_code": "005810",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103800126",
-      "reaction": {
-        "D-1": 0,
-        "D0": 2.35,
-        "D+1": -0.29,
-        "D+2": -0.74,
-        "D+3": -3.68,
-        "D+4": -3.82
-      }
-    },
-    {
-      "corp_name": "풍산",
-      "stock_code": "103140",
-      "rcept_dt": "20261103",
-      "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103800115",
-      "reaction": {
-        "D-1": 0,
-        "D0": 2.2,
-        "D+1": -3.73,
-        "D+2": -6.61,
-        "D+3": -11.19,
-        "D+4": -13.73
       }
     }
   ]
