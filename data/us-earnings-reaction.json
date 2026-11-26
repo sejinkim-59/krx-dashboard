@@ -1,26 +1,9 @@
 {
-  "updated_at": "2026-11-25T18:13:35.675Z",
+  "updated_at": "2026-11-26T10:39:19.355Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
   "items": [
-    {
-      "symbol": "WMT",
-      "name": "Walmart Inc.",
-      "report_date": "2026-11-19",
-      "report_time": "미상",
-      "market_cap": 1049713970000,
-      "eps": "$0.65",
-      "eps_forecast": "$0.64",
-      "surprise_pct": 1.56,
-      "reaction": {
-        "D-1": 0,
-        "D0": -1.04,
-        "D+1": 0.46,
-        "D+2": 1.74,
-        "D+3": 3.89
-      }
-    },
     {
       "symbol": "CRWD",
       "name": "CrowdStrike Holdings, Inc.",
@@ -34,25 +17,8 @@
         "D-1": 0,
         "D0": -8.92,
         "D+1": -8.1,
-        "D+2": -12.33,
+        "D+2": -8.78,
         "D+3": null
-      }
-    },
-    {
-      "symbol": "BABA",
-      "name": "Alibaba Group Holding Limited",
-      "report_date": "2026-11-19",
-      "report_time": "미상",
-      "market_cap": 205572162000,
-      "eps": "$1.04",
-      "eps_forecast": "$1.56",
-      "surprise_pct": -33.33,
-      "reaction": {
-        "D-1": 0,
-        "D0": -1.26,
-        "D+1": -3.9,
-        "D+2": 1.98,
-        "D+3": 0.58
       }
     },
     {
@@ -67,7 +33,7 @@
       "reaction": {
         "D-1": 0,
         "D0": -11.83,
-        "D+1": -14.63,
+        "D+1": -11.3,
         "D+2": null,
         "D+3": null
       }
@@ -84,26 +50,9 @@
       "reaction": {
         "D-1": 0,
         "D0": -17.37,
-        "D+1": -14.98,
+        "D+1": -12.05,
         "D+2": null,
         "D+3": null
-      }
-    },
-    {
-      "symbol": "PDD",
-      "name": "PDD Holdings Inc.",
-      "report_date": "2026-11-19",
-      "report_time": "미상",
-      "market_cap": 124148638000,
-      "eps": "$2.99",
-      "eps_forecast": "$2.61",
-      "surprise_pct": 14.56,
-      "reaction": {
-        "D-1": 0,
-        "D0": 11.04,
-        "D+1": 8.04,
-        "D+2": 12.51,
-        "D+3": 12.61
       }
     },
     {
@@ -118,60 +67,9 @@
       "reaction": {
         "D-1": 0,
         "D0": -4.56,
-        "D+1": -4.37,
+        "D+1": -4.63,
         "D+2": null,
         "D+3": null
-      }
-    },
-    {
-      "symbol": "INTU",
-      "name": "Intuit Inc.",
-      "report_date": "2026-11-19",
-      "report_time": "미상",
-      "market_cap": 73771074000,
-      "eps": "$2.91",
-      "eps_forecast": "$2.47",
-      "surprise_pct": 17.81,
-      "reaction": {
-        "D-1": 0,
-        "D0": -1.03,
-        "D+1": -13.66,
-        "D+2": -12.06,
-        "D+3": -10.8
-      }
-    },
-    {
-      "symbol": "ROST",
-      "name": "Ross Stores, Inc.",
-      "report_date": "2026-11-19",
-      "report_time": "미상",
-      "market_cap": 72253907000,
-      "eps": "$1.91",
-      "eps_forecast": "$1.85",
-      "surprise_pct": 3.24,
-      "reaction": {
-        "D-1": 0,
-        "D0": -3.41,
-        "D+1": -6.23,
-        "D+2": -4.66,
-        "D+3": -0.64
-      }
-    },
-    {
-      "symbol": "NTES",
-      "name": "NetEase, Inc.",
-      "report_date": "2026-11-19",
-      "report_time": "미상",
-      "market_cap": 64087204000,
-      "eps": "$1.94",
-      "eps_forecast": "$2.37",
-      "surprise_pct": -18.14,
-      "reaction": {
-        "D-1": 0,
-        "D0": -11.39,
-        "D+1": -15.69,
-        "D+2": -12.86,
-        "D+3": -15.2
       }
     },
     {
@@ -186,7 +84,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 0.14,
-        "D+1": -1.58,
+        "D+1": -3.34,
         "D+2": null,
         "D+3": null
       }
@@ -204,7 +102,7 @@
         "D-1": 0,
         "D0": 17.38,
         "D+1": -1.76,
-        "D+2": -2.91,
+        "D+2": -0.22,
         "D+3": null
       }
     },
@@ -221,25 +119,8 @@
         "D-1": 0,
         "D0": 3.32,
         "D+1": 7.71,
-        "D+2": 5.62,
+        "D+2": 4.73,
         "D+3": null
-      }
-    },
-    {
-      "symbol": "KEYS",
-      "name": "Keysight Technologies Inc.",
-      "report_date": "2026-11-19",
-      "report_time": "미상",
-      "market_cap": 46344024000,
-      "eps": "$3.36",
-      "eps_forecast": "$3.09",
-      "surprise_pct": 8.74,
-      "reaction": {
-        "D-1": 0,
-        "D0": -1.7,
-        "D+1": -8.66,
-        "D+2": 1.16,
-        "D+3": -4.92
       }
     },
     {
@@ -254,7 +135,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 1.79,
-        "D+1": 3.05,
+        "D+1": 2.48,
         "D+2": null,
         "D+3": null
       }
@@ -272,25 +153,8 @@
         "D-1": 0,
         "D0": 17.67,
         "D+1": 18.89,
-        "D+2": 13.74,
+        "D+2": 18.5,
         "D+3": null
-      }
-    },
-    {
-      "symbol": "BSP",
-      "name": "Bending Spoons S.p.A.",
-      "report_date": "2026-11-19",
-      "report_time": "미상",
-      "market_cap": 29765382100,
-      "eps": "$0.42",
-      "eps_forecast": "$0.26",
-      "surprise_pct": 61.54,
-      "reaction": {
-        "D-1": 0,
-        "D0": -2.55,
-        "D+1": -4.07,
-        "D+2": 10.47,
-        "D+3": 0.16
       }
     },
     {
@@ -305,7 +169,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 11.18,
-        "D+1": 9.68,
+        "D+1": 9.42,
         "D+2": null,
         "D+3": null
       }
@@ -323,7 +187,7 @@
         "D-1": 0,
         "D0": 5.87,
         "D+1": 8.79,
-        "D+2": 8.93,
+        "D+2": 8.98,
         "D+3": null
       }
     },
@@ -339,26 +203,9 @@
       "reaction": {
         "D-1": 0,
         "D0": -3.32,
-        "D+1": 4.95,
+        "D+1": 7.79,
         "D+2": null,
         "D+3": null
-      }
-    },
-    {
-      "symbol": "WSM",
-      "name": "Williams-Sonoma, Inc.",
-      "report_date": "2026-11-19",
-      "report_time": "미상",
-      "market_cap": 25189431300,
-      "eps": "$2.19",
-      "eps_forecast": "$2.18",
-      "surprise_pct": 0.46,
-      "reaction": {
-        "D-1": 0,
-        "D0": -15.16,
-        "D+1": -18.99,
-        "D+2": -18.44,
-        "D+3": -17.77
       }
     },
     {
@@ -374,7 +221,7 @@
         "D-1": 0,
         "D0": 12.44,
         "D+1": 20.23,
-        "D+2": 20.26,
+        "D+2": 22.25,
         "D+3": null
       }
     },
@@ -390,7 +237,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 2.7,
-        "D+1": 4.24,
+        "D+1": 5.75,
         "D+2": null,
         "D+3": null
       }
@@ -408,25 +255,8 @@
         "D-1": 0,
         "D0": 4.59,
         "D+1": 0.9,
-        "D+2": -4.57,
+        "D+2": -3.41,
         "D+3": null
-      }
-    },
-    {
-      "symbol": "WMG",
-      "name": "Warner Music Group Corp.",
-      "report_date": "2026-11-19",
-      "report_time": "미상",
-      "market_cap": 17042934800,
-      "eps": "$0.34",
-      "eps_forecast": "$0.39",
-      "surprise_pct": -12.82,
-      "reaction": {
-        "D-1": 0,
-        "D0": -0.61,
-        "D+1": -0.73,
-        "D+2": -0.61,
-        "D+3": -1.7
       }
     },
     {
@@ -441,7 +271,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 3.9,
-        "D+1": 6.64,
+        "D+1": 6.34,
         "D+2": null,
         "D+3": null
       }
@@ -458,7 +288,7 @@
       "reaction": {
         "D-1": 0,
         "D0": -5.16,
-        "D+1": -22.48,
+        "D+1": -19.56,
         "D+2": null,
         "D+3": null
       }
@@ -475,7 +305,7 @@
       "reaction": {
         "D-1": 0,
         "D0": -1.45,
-        "D+1": -1.04,
+        "D+1": -2.05,
         "D+2": null,
         "D+3": null
       }
@@ -492,7 +322,7 @@
       "reaction": {
         "D-1": 0,
         "D0": 14.59,
-        "D+1": 19.69,
+        "D+1": 18.64,
         "D+2": null,
         "D+3": null
       }
@@ -511,7 +341,165 @@
         "D0": -5.35,
         "D+1": -8.43,
         "D+2": -6.02,
-        "D+3": -6.66
+        "D+3": -8.17
+      }
+    },
+    {
+      "symbol": "FRO",
+      "name": "Frontline Plc",
+      "report_date": "2026-11-20",
+      "report_time": "미상",
+      "market_cap": 10581265400,
+      "eps": "$2.38",
+      "eps_forecast": "",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.03,
+        "D+1": 3.8,
+        "D+2": 6.21,
+        "D+3": 6.48
+      }
+    },
+    {
+      "symbol": "LI",
+      "name": "Li Auto Inc.",
+      "report_date": "2026-11-25",
+      "report_time": "장전",
+      "market_cap": 10456837100,
+      "eps": "($0.09)",
+      "eps_forecast": "($0.08)",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 11.03,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "MOG.A",
+      "name": "Moog Inc.",
+      "report_date": "2026-11-20",
+      "report_time": "미상",
+      "market_cap": 10338516000,
+      "eps": "$3.37",
+      "eps_forecast": "$2.70",
+      "surprise_pct": 24.81,
+      "reaction": null
+    },
+    {
+      "symbol": "MOG.B",
+      "name": "Moog Inc.",
+      "report_date": "2026-11-20",
+      "report_time": "미상",
+      "market_cap": 10338516000,
+      "eps": "$3.37",
+      "eps_forecast": "",
+      "surprise_pct": null,
+      "reaction": null
+    },
+    {
+      "symbol": "SMTC",
+      "name": "Semtech Corporation",
+      "report_date": "2026-11-23",
+      "report_time": "미상",
+      "market_cap": 8068933600,
+      "eps": "$0.90",
+      "eps_forecast": "$0.92",
+      "surprise_pct": -2.17,
+      "reaction": {
+        "D-1": 0,
+        "D0": 18.83,
+        "D+1": -1.34,
+        "D+2": 6.05,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "URBN",
+      "name": "Urban Outfitters, Inc.",
+      "report_date": "2026-11-24",
+      "report_time": "미상",
+      "market_cap": 7330798100,
+      "eps": "$1.54",
+      "eps_forecast": "$1.53",
+      "surprise_pct": 0.65,
+      "reaction": {
+        "D-1": 0,
+        "D0": 0.34,
+        "D+1": -10.02,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "ANF",
+      "name": "Abercrombie & Fitch Company",
+      "report_date": "2026-11-24",
+      "report_time": "미상",
+      "market_cap": 7133218800,
+      "eps": "$3.82",
+      "eps_forecast": "$3.15",
+      "surprise_pct": 21.27,
+      "reaction": {
+        "D-1": 0,
+        "D0": 19.69,
+        "D+1": 26,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "IESC",
+      "name": "IES Holdings, Inc.",
+      "report_date": "2026-11-20",
+      "report_time": "미상",
+      "market_cap": 6626976800,
+      "eps": "$4.07",
+      "eps_forecast": "",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -6.49,
+        "D+1": 2.41,
+        "D+2": -0.52,
+        "D+3": 3.04
+      }
+    },
+    {
+      "symbol": "VIPS",
+      "name": "Vipshop Holdings Limited",
+      "report_date": "2026-11-24",
+      "report_time": "미상",
+      "market_cap": 6257925100,
+      "eps": "$0.33",
+      "eps_forecast": "$0.31",
+      "surprise_pct": 6.45,
+      "reaction": {
+        "D-1": 0,
+        "D0": 3.33,
+        "D+1": 3.17,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "AMTM",
+      "name": "Amentum Holdings, Inc.",
+      "report_date": "2026-11-23",
+      "report_time": "미상",
+      "market_cap": 6063758800,
+      "eps": "$0.67",
+      "eps_forecast": "$0.63",
+      "surprise_pct": 6.35,
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.52,
+        "D+1": 21.93,
+        "D+2": 22.22,
+        "D+3": null
       }
     }
   ]

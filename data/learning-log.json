@@ -2829,7 +2829,7 @@
       "hasPriceData": true,
       "d1": 1.31,
       "d5": -3.18,
-      "d20": null
+      "d20": -21.21
     },
     {
       "engineVersion": "v0.2",
@@ -2848,7 +2848,7 @@
       "hasPriceData": true,
       "d1": -2.07,
       "d5": 6.08,
-      "d20": null
+      "d20": -14.92
     },
     {
       "engineVersion": "v0.2",
@@ -2867,7 +2867,7 @@
       "hasPriceData": true,
       "d1": -2.47,
       "d5": -16.89,
-      "d20": null
+      "d20": 7.97
     },
     {
       "engineVersion": "v0.2",
@@ -2886,7 +2886,7 @@
       "hasPriceData": true,
       "d1": -0.64,
       "d5": 5.47,
-      "d20": null
+      "d20": -8.68
     },
     {
       "engineVersion": "v0.2",
@@ -2905,7 +2905,7 @@
       "hasPriceData": true,
       "d1": -5.82,
       "d5": -14.05,
-      "d20": null
+      "d20": -30.36
     },
     {
       "engineVersion": "v0.2",
@@ -4823,7 +4823,7 @@
       "priceAtSelection": 22550,
       "hasPriceData": true,
       "d1": -2.11,
-      "d5": null,
+      "d5": -2,
       "d20": null
     },
     {
@@ -4842,7 +4842,7 @@
       "priceAtSelection": 294000,
       "hasPriceData": true,
       "d1": -1.36,
-      "d5": null,
+      "d5": 15.99,
       "d20": null
     },
     {
@@ -4861,7 +4861,7 @@
       "priceAtSelection": 38250,
       "hasPriceData": true,
       "d1": -1.7,
-      "d5": null,
+      "d5": -6.8,
       "d20": null
     },
     {
@@ -4880,7 +4880,7 @@
       "priceAtSelection": 32100,
       "hasPriceData": true,
       "d1": -2.96,
-      "d5": null,
+      "d5": -6.07,
       "d20": null
     },
     {
@@ -4899,7 +4899,7 @@
       "priceAtSelection": 23300,
       "hasPriceData": true,
       "d1": -2.79,
-      "d5": null,
+      "d5": -4.94,
       "d20": null
     },
     {
@@ -5316,7 +5316,7 @@
       "marketRegime": "Risk-off",
       "priceAtSelection": 14030,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 0.14,
       "d5": null,
       "d20": null
     },
@@ -5335,7 +5335,7 @@
       "marketRegime": "Risk-off",
       "priceAtSelection": 284500,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 0,
       "d5": null,
       "d20": null
     },
@@ -5354,7 +5354,7 @@
       "marketRegime": "Risk-off",
       "priceAtSelection": 66700,
       "hasPriceData": true,
-      "d1": null,
+      "d1": -1.35,
       "d5": null,
       "d20": null
     },
@@ -5373,43 +5373,24 @@
       "marketRegime": "Risk-off",
       "priceAtSelection": 357000,
       "hasPriceData": true,
-      "d1": null,
+      "d1": 1.96,
       "d5": null,
       "d20": null
     },
     {
       "engineVersion": "v0.2",
       "date": "20261126",
-      "symbol": "373220",
-      "name": "LG에너지솔루션",
+      "symbol": "033780",
+      "name": "KT&G",
       "setup": "Market Leader",
       "bucket": "MARKET_LEADER",
       "strategy": "Flow Confirmed",
-      "score": 22.1,
-      "noveltyScore": 5,
-      "pricedInVerdict": "not_yet_priced",
-      "dataCoverage": 77,
-      "marketRegime": "Risk-off",
-      "priceAtSelection": 304500,
-      "hasPriceData": true,
-      "d1": null,
-      "d5": null,
-      "d20": null
-    },
-    {
-      "engineVersion": "v0.2",
-      "date": "20261126",
-      "symbol": "000880",
-      "name": "한화",
-      "setup": "Discovery",
-      "bucket": "DISCOVERY",
-      "strategy": "Flow Confirmed",
-      "score": 19.4,
-      "noveltyScore": 5.5,
+      "score": 35.1,
+      "noveltyScore": 4,
       "pricedInVerdict": "unclear",
       "dataCoverage": 77,
-      "marketRegime": "Risk-off",
-      "priceAtSelection": 66400,
+      "marketRegime": "Neutral",
+      "priceAtSelection": 179300,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -5418,17 +5399,36 @@
     {
       "engineVersion": "v0.2",
       "date": "20261126",
-      "symbol": "108490",
-      "name": "로보티즈",
+      "symbol": "097950",
+      "name": "CJ제일제당",
+      "setup": "Discovery",
+      "bucket": "DISCOVERY",
+      "strategy": "Confluence · New Change",
+      "score": 70.1,
+      "noveltyScore": 25,
+      "pricedInVerdict": "unclear",
+      "dataCoverage": 77,
+      "marketRegime": "Neutral",
+      "priceAtSelection": 189500,
+      "hasPriceData": true,
+      "d1": null,
+      "d5": null,
+      "d20": null
+    },
+    {
+      "engineVersion": "v0.2",
+      "date": "20261126",
+      "symbol": "003350",
+      "name": "한국화장품제조",
       "setup": "Discovery",
       "bucket": "DISCOVERY",
       "strategy": "Confluence · Flow Confirmed",
-      "score": 63.6,
+      "score": 55.8,
       "noveltyScore": 15,
       "pricedInVerdict": "partially_priced_in",
       "dataCoverage": 77,
-      "marketRegime": "Risk-off",
-      "priceAtSelection": 283000,
+      "marketRegime": "Neutral",
+      "priceAtSelection": 14650,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -5437,17 +5437,17 @@
     {
       "engineVersion": "v0.2",
       "date": "20261126",
-      "symbol": "035250",
-      "name": "강원랜드",
+      "symbol": "403870",
+      "name": "HPSP",
       "setup": "Event-Driven",
       "bucket": "EVENT_DRIVEN",
-      "strategy": "Confluence · Event Driven",
-      "score": 20,
-      "noveltyScore": 3,
+      "strategy": "Event Driven",
+      "score": 13.5,
+      "noveltyScore": 5,
       "pricedInVerdict": "not_yet_priced",
       "dataCoverage": 77,
-      "marketRegime": "Risk-off",
-      "priceAtSelection": 14060,
+      "marketRegime": "Neutral",
+      "priceAtSelection": 37600,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
@@ -5456,17 +5456,17 @@
     {
       "engineVersion": "v0.2",
       "date": "20261126",
-      "symbol": "281820",
-      "name": "케이씨텍",
+      "symbol": "000100",
+      "name": "유한양행",
       "setup": "Inflection",
       "bucket": "INFLECTION",
-      "strategy": "Flow Confirmed",
-      "score": 36.8,
-      "noveltyScore": 7.6,
-      "pricedInVerdict": "not_yet_priced",
+      "strategy": "Confluence · Trend Confirmation",
+      "score": 45.5,
+      "noveltyScore": 10,
+      "pricedInVerdict": "unclear",
       "dataCoverage": 77,
-      "marketRegime": "Risk-off",
-      "priceAtSelection": 77800,
+      "marketRegime": "Neutral",
+      "priceAtSelection": 81900,
       "hasPriceData": true,
       "d1": null,
       "d5": null,
