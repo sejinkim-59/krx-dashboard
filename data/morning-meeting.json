@@ -1,16 +1,16 @@
 {
-  "date": "20261127",
-  "generated_at": "2026-11-27T12:07:02.592Z",
+  "date": "20261128",
+  "generated_at": "2026-11-27T21:00:33.808Z",
   "engineVersion": "v0.2",
   "objective": "NEW INFORMATION + CHANGE + CATALYST + CONFIRMATION — 오늘 새롭게 연구할 가치가 생긴 종목을 조기 발견",
   "methodologyNote": "시장/섹터 상대강도는 공식 지수가 아니라 가격 데이터 보유 종목의 동일가중 평균(proxy)입니다. Earnings/Revision Factor는 컨센서스 Provider 미연결로 항상 제외(MISSING_DATA)됩니다. 시총 순위는 KIS 시세를 조회한 종목(관심종목 + Discovery 추가조회) 안에서의 순위입니다. 수급 전환의 발생 시점은 \"최근 3거래일 vs 직전 5거래일\" 창 비교라 일 단위 날짜가 아닌 창 단위입니다. 종목 단위로 연결되지 않은 Catalyst: Investor Relations 일정, Large Contract(단일판매·공급계약), Index Rebalancing (정기변경 월 주기만 수집, 종목별 편입·편출 예고 없음), Major Customer Event, Policy Event, Share Cancellation(소각).",
   "marketRegime": {
     "state": "Risk-on",
     "evidence": [
-      "VIX -6.27%",
-      "S&P500 -0.25%",
-      "NASDAQ -0.62%",
-      "USD/KRW -0.63%"
+      "VIX -11.16%",
+      "S&P500 +1.6%",
+      "NASDAQ +2.31%",
+      "USD/KRW -0.75%"
     ],
     "strategyPreference": [
       "DISCOVERY",
@@ -19,12 +19,12 @@
     "avoid": []
   },
   "screening": {
-    "universeCount": 1191,
+    "universeCount": 1181,
     "technicalCoverageCount": 110,
-    "discoveryPreScreenCount": 484,
+    "discoveryPreScreenCount": 479,
     "discoveryEnrichedCount": 60,
-    "signalCount": 130,
-    "passedRiskCount": 35,
+    "signalCount": 126,
+    "passedRiskCount": 36,
     "rejectedCount": 0
   },
   "dailyOutput": [
@@ -139,7 +139,7 @@
       "bucket": "DISCOVERY",
       "label": "Discovery",
       "requested": 2,
-      "qualifiedCount": 25,
+      "qualifiedCount": 26,
       "picks": [
         {
           "symbol": "042660",
@@ -1428,7 +1428,7 @@
       ],
       "newSignalCount": 2,
       "tier": 2,
-      "marketCapRank": 87,
+      "marketCapRank": 86,
       "isLargeCap": false,
       "whatChanged": [
         "거래량 20일 평균 대비 2.5배로 급증 (2026-11-26, 1거래일 전)",
@@ -1517,7 +1517,7 @@
       ],
       "newSignalCount": 3,
       "tier": 2,
-      "marketCapRank": 83,
+      "marketCapRank": 82,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-25, 2거래일 전)",
@@ -1748,7 +1748,7 @@
       "gateFails": [],
       "risk": {
         "decision": "WATCH",
-        "reason": "투자주의 지정 (2026-11-13) · 5거래일 +20.4% — 단기 과열/과매도"
+        "reason": "5거래일 +20.4% — 단기 과열/과매도"
       },
       "topEvidence": "종가가 MA20 위로 회복 (2026-11-25, 2거래일 전)",
       "scoreBreakdown": [
@@ -1782,7 +1782,7 @@
       ],
       "newSignalCount": 2,
       "tier": 2,
-      "marketCapRank": 84,
+      "marketCapRank": 83,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-13, 10거래일 전)",
@@ -1825,7 +1825,7 @@
       ],
       "newSignalCount": 3,
       "tier": 2,
-      "marketCapRank": 88,
+      "marketCapRank": 87,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-24, 3거래일 전)",
@@ -1871,7 +1871,7 @@
       ],
       "newSignalCount": 2,
       "tier": 2,
-      "marketCapRank": 93,
+      "marketCapRank": 92,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-27, 0거래일 전)",
@@ -1914,7 +1914,7 @@
       ],
       "newSignalCount": 3,
       "tier": 2,
-      "marketCapRank": 90,
+      "marketCapRank": 89,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-25, 2거래일 전)",
@@ -1934,50 +1934,6 @@
         "Technical 6/15",
         "Flow 7/15",
         "Relative Strength 10/10"
-      ],
-      "signalTypes": [
-        "Discovery 후보",
-        "Novelty",
-        "Flow",
-        "Relative Strength"
-      ]
-    },
-    {
-      "symbol": "267260",
-      "name": "HD현대일렉트릭",
-      "sector": "전기·전자",
-      "bucket": null,
-      "strategy": "Confluence · Flow Confirmed",
-      "score": 35.1,
-      "discoveryScore": 35.1,
-      "dataCoverage": 77,
-      "confidence": "Normal",
-      "independentConfirmations": 3,
-      "confirmationSources": [
-        "price",
-        "flow"
-      ],
-      "newSignalCount": 2,
-      "tier": 2,
-      "marketCapRank": 32,
-      "isLargeCap": false,
-      "whatChanged": [
-        "종가가 MA20 위로 회복 (2026-11-27, 0거래일 전)",
-        "외국인 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 외국인 매수 전환을 5일 수익률 +8.2%가 확인)"
-      ],
-      "pricedInVerdict": "unclear",
-      "gateFails": [],
-      "risk": {
-        "decision": "PASS",
-        "reason": "특이 리스크 없음"
-      },
-      "topEvidence": "종가가 MA20 위로 회복 (2026-11-27, 0거래일 전)",
-      "scoreBreakdown": [
-        "Novelty 10/25",
-        "Catalyst 0/12",
-        "Technical 3/15",
-        "Flow 7/15",
-        "Relative Strength 7/10"
       ],
       "signalTypes": [
         "Discovery 후보",
@@ -2023,6 +1979,51 @@
         "Technical 6/15",
         "Flow 7/15",
         "Relative Strength 7/10"
+      ],
+      "signalTypes": [
+        "Discovery 후보",
+        "Novelty",
+        "Flow",
+        "Relative Strength"
+      ]
+    },
+    {
+      "symbol": "003350",
+      "name": "한국화장품제조",
+      "sector": "화학",
+      "bucket": null,
+      "strategy": "Confluence · Flow Confirmed",
+      "score": 48.8,
+      "discoveryScore": 34.8,
+      "dataCoverage": 77,
+      "confidence": "Normal",
+      "independentConfirmations": 3,
+      "confirmationSources": [
+        "price",
+        "flow"
+      ],
+      "newSignalCount": 3,
+      "tier": 2,
+      "marketCapRank": 99,
+      "isLargeCap": false,
+      "whatChanged": [
+        "종가가 MA20 위로 회복 (2026-11-24, 3거래일 전)",
+        "거래량 20일 평균 대비 4.2배로 급증 (2026-11-25, 2거래일 전)",
+        "외국인 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 외국인 매수 전환을 5일 수익률 +16.9%가 확인)"
+      ],
+      "pricedInVerdict": "partially_priced_in",
+      "gateFails": [],
+      "risk": {
+        "decision": "WATCH",
+        "reason": "5거래일 +16.9% — 단기 과열/과매도 · ATR14/종가 8.8% — 변동성 과다"
+      },
+      "topEvidence": "종가가 MA20 위로 회복 (2026-11-24, 3거래일 전)",
+      "scoreBreakdown": [
+        "Novelty 12.6/25",
+        "Catalyst 0/12",
+        "Technical 3/15",
+        "Flow 12/15",
+        "Relative Strength 10/10"
       ],
       "signalTypes": [
         "Discovery 후보",
