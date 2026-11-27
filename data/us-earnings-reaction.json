@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T19:53:44.722Z",
+  "updated_at": "2026-11-27T02:51:12.863Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
@@ -345,40 +345,6 @@
       }
     },
     {
-      "symbol": "BJ",
-      "name": "BJ's Wholesale Club Holdings, Inc.",
-      "report_date": "2026-11-20",
-      "report_time": "미상",
-      "market_cap": 13146832900,
-      "eps": "$1.73",
-      "eps_forecast": "$1.24",
-      "surprise_pct": 39.52,
-      "reaction": {
-        "D-1": 0,
-        "D0": -5.35,
-        "D+1": -8.43,
-        "D+2": -6.02,
-        "D+3": -8.17
-      }
-    },
-    {
-      "symbol": "FRO",
-      "name": "Frontline Plc",
-      "report_date": "2026-11-20",
-      "report_time": "미상",
-      "market_cap": 10581265400,
-      "eps": "$2.38",
-      "eps_forecast": "",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": 1.03,
-        "D+1": 3.8,
-        "D+2": 6.21,
-        "D+3": 6.48
-      }
-    },
-    {
       "symbol": "LI",
       "name": "Li Auto Inc.",
       "report_date": "2026-11-25",
@@ -394,28 +360,6 @@
         "D+2": null,
         "D+3": null
       }
-    },
-    {
-      "symbol": "MOG.A",
-      "name": "Moog Inc.",
-      "report_date": "2026-11-20",
-      "report_time": "미상",
-      "market_cap": 10338516000,
-      "eps": "$3.37",
-      "eps_forecast": "$2.70",
-      "surprise_pct": 24.81,
-      "reaction": null
-    },
-    {
-      "symbol": "MOG.B",
-      "name": "Moog Inc.",
-      "report_date": "2026-11-20",
-      "report_time": "미상",
-      "market_cap": 10338516000,
-      "eps": "$3.37",
-      "eps_forecast": "",
-      "surprise_pct": null,
-      "reaction": null
     },
     {
       "symbol": "SMTC",
@@ -469,23 +413,6 @@
       }
     },
     {
-      "symbol": "IESC",
-      "name": "IES Holdings, Inc.",
-      "report_date": "2026-11-20",
-      "report_time": "미상",
-      "market_cap": 6626976800,
-      "eps": "$4.07",
-      "eps_forecast": "",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": -6.49,
-        "D+1": 2.41,
-        "D+2": -0.52,
-        "D+3": 3.04
-      }
-    },
-    {
       "symbol": "VIPS",
       "name": "Vipshop Holdings Limited",
       "report_date": "2026-11-24",
@@ -498,6 +425,91 @@
         "D-1": 0,
         "D0": 3.33,
         "D+1": 3.17,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "AMTM",
+      "name": "Amentum Holdings, Inc.",
+      "report_date": "2026-11-23",
+      "report_time": "미상",
+      "market_cap": 6063758800,
+      "eps": "$0.67",
+      "eps_forecast": "$0.63",
+      "surprise_pct": 6.35,
+      "reaction": {
+        "D-1": 0,
+        "D0": 1.52,
+        "D+1": 21.93,
+        "D+2": 22.22,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "BZ",
+      "name": "KANZHUN LIMITED",
+      "report_date": "2026-11-25",
+      "report_time": "미상",
+      "market_cap": 6010986000,
+      "eps": "$0.27",
+      "eps_forecast": "($0.02)",
+      "surprise_pct": 1450,
+      "reaction": {
+        "D-1": 0,
+        "D0": 12.56,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "DY",
+      "name": "Dycom Industries, Inc.",
+      "report_date": "2026-11-24",
+      "report_time": "미상",
+      "market_cap": 5399112700,
+      "eps": "$5.23",
+      "eps_forecast": "$4.33",
+      "surprise_pct": 20.79,
+      "reaction": {
+        "D-1": 0,
+        "D0": -18.02,
+        "D+1": -18.65,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "MMED",
+      "name": "MiniMed Group, Inc.",
+      "report_date": "2026-11-24",
+      "report_time": "미상",
+      "market_cap": 5365343200,
+      "eps": "$0.08",
+      "eps_forecast": "$0.10",
+      "surprise_pct": -20,
+      "reaction": {
+        "D-1": 0,
+        "D0": 14.06,
+        "D+1": 12.68,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
+      "symbol": "CMBT",
+      "name": "CMB.TECH NV",
+      "report_date": "2026-11-24",
+      "report_time": "미상",
+      "market_cap": 5089578000,
+      "eps": "$1.29",
+      "eps_forecast": "",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": 4.22,
+        "D+1": 5.29,
         "D+2": null,
         "D+3": null
       }
