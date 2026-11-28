@@ -1,6 +1,6 @@
 {
   "date": "20261128",
-  "generated_at": "2026-11-28T03:18:27.589Z",
+  "generated_at": "2026-11-28T12:27:43.939Z",
   "engineVersion": "v0.2",
   "objective": "NEW INFORMATION + CHANGE + CATALYST + CONFIRMATION — 오늘 새롭게 연구할 가치가 생긴 종목을 조기 발견",
   "methodologyNote": "시장/섹터 상대강도는 공식 지수가 아니라 가격 데이터 보유 종목의 동일가중 평균(proxy)입니다. Earnings/Revision Factor는 컨센서스 Provider 미연결로 항상 제외(MISSING_DATA)됩니다. 시총 순위는 KIS 시세를 조회한 종목(관심종목 + Discovery 추가조회) 안에서의 순위입니다. 수급 전환의 발생 시점은 \"최근 3거래일 vs 직전 5거래일\" 창 비교라 일 단위 날짜가 아닌 창 단위입니다. 종목 단위로 연결되지 않은 Catalyst: Investor Relations 일정, Large Contract(단일판매·공급계약), Index Rebalancing (정기변경 월 주기만 수집, 종목별 편입·편출 예고 없음), Major Customer Event, Policy Event, Share Cancellation(소각).",
@@ -10,7 +10,7 @@
       "VIX -11.16%",
       "S&P500 +1.6%",
       "NASDAQ +2.31%",
-      "USD/KRW +0.04%"
+      "USD/KRW -0.72%"
     ],
     "strategyPreference": [
       "DISCOVERY",
@@ -23,8 +23,8 @@
     "technicalCoverageCount": 110,
     "discoveryPreScreenCount": 479,
     "discoveryEnrichedCount": 60,
-    "signalCount": 128,
-    "passedRiskCount": 37,
+    "signalCount": 125,
+    "passedRiskCount": 36,
     "rejectedCount": 0
   },
   "dailyOutput": [
@@ -32,7 +32,7 @@
       "bucket": "MARKET_LEADER",
       "label": "Market Leader",
       "requested": 1,
-      "qualifiedCount": 6,
+      "qualifiedCount": 5,
       "picks": [
         {
           "symbol": "003670",
@@ -374,7 +374,7 @@
       "bucket": "EVENT_DRIVEN",
       "label": "Event-Driven",
       "requested": 1,
-      "qualifiedCount": 4,
+      "qualifiedCount": 3,
       "picks": [
         {
           "symbol": "389260",
@@ -1234,49 +1234,6 @@
       ]
     },
     {
-      "symbol": "373220",
-      "name": "LG에너지솔루션",
-      "sector": "2차전지",
-      "bucket": null,
-      "strategy": "Event Driven",
-      "score": 13.5,
-      "discoveryScore": 13.5,
-      "dataCoverage": 77,
-      "confidence": "Normal",
-      "independentConfirmations": 2,
-      "confirmationSources": [
-        "price",
-        "event"
-      ],
-      "newSignalCount": 2,
-      "tier": 1,
-      "marketCapRank": 3,
-      "isLargeCap": true,
-      "whatChanged": [
-        "거래량 20일 평균 대비 20.3배로 급증 (2026-11-25, 2거래일 전)",
-        "새 정보: KODEX 2차전지산업레버리지 비중 +1.51%p (2026-11-27) (0거래일 전)"
-      ],
-      "pricedInVerdict": "not_yet_priced",
-      "gateFails": [],
-      "risk": {
-        "decision": "PASS",
-        "reason": "특이 리스크 없음"
-      },
-      "topEvidence": "거래량 20일 평균 대비 20.3배로 급증 (2026-11-25, 2거래일 전)",
-      "scoreBreakdown": [
-        "Novelty 5/25",
-        "Catalyst 2.4/12",
-        "Technical 0/15",
-        "Flow 3/15",
-        "Relative Strength 0/10"
-      ],
-      "signalTypes": [
-        "Leader 후보",
-        "Novelty",
-        "Catalyst"
-      ]
-    },
-    {
       "symbol": "018260",
       "name": "삼성에스디에스",
       "sector": "IT서비스",
@@ -2022,6 +1979,51 @@
         "Technical 6/15",
         "Flow 7/15",
         "Relative Strength 7/10"
+      ],
+      "signalTypes": [
+        "Discovery 후보",
+        "Novelty",
+        "Flow",
+        "Relative Strength"
+      ]
+    },
+    {
+      "symbol": "003350",
+      "name": "한국화장품제조",
+      "sector": "화학",
+      "bucket": null,
+      "strategy": "Confluence · Flow Confirmed",
+      "score": 48.8,
+      "discoveryScore": 34.8,
+      "dataCoverage": 77,
+      "confidence": "Normal",
+      "independentConfirmations": 3,
+      "confirmationSources": [
+        "price",
+        "flow"
+      ],
+      "newSignalCount": 3,
+      "tier": 2,
+      "marketCapRank": 100,
+      "isLargeCap": false,
+      "whatChanged": [
+        "종가가 MA20 위로 회복 (2026-11-24, 3거래일 전)",
+        "거래량 20일 평균 대비 4.2배로 급증 (2026-11-25, 2거래일 전)",
+        "외국인 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 외국인 매수 전환을 5일 수익률 +16.9%가 확인)"
+      ],
+      "pricedInVerdict": "partially_priced_in",
+      "gateFails": [],
+      "risk": {
+        "decision": "WATCH",
+        "reason": "5거래일 +16.9% — 단기 과열/과매도 · ATR14/종가 8.8% — 변동성 과다"
+      },
+      "topEvidence": "종가가 MA20 위로 회복 (2026-11-24, 3거래일 전)",
+      "scoreBreakdown": [
+        "Novelty 12.6/25",
+        "Catalyst 0/12",
+        "Technical 3/15",
+        "Flow 12/15",
+        "Relative Strength 10/10"
       ],
       "signalTypes": [
         "Discovery 후보",
