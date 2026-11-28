@@ -1,8 +1,193 @@
 {
-  "updated_at": "2026-11-27T20:57:38.211Z",
+  "updated_at": "2026-11-28T03:15:41.430Z",
   "note": "국내 섹터·테마 ETF 상위 25종목의 전일 스냅샷 대비 구성종목 변화 감지. 신규 편입·편출 종목과 비중 1.5%p 이상 변동 종목을 표시합니다. (첫 실행 시에는 비교 대상이 없어 결과가 비어있습니다)",
   "universe_size": 25,
   "has_baseline": true,
-  "changed_etf_count": 0,
-  "items": []
+  "changed_etf_count": 5,
+  "items": [
+    {
+      "code": "0061Z0",
+      "name": "RISE 단기특수은행채액티브",
+      "trd_dt": "2026-11-27",
+      "prev_trd_dt": "2026-11-26",
+      "added": [
+        {
+          "name": "기업 자금부 20261125-181-1",
+          "weight": null
+        },
+        {
+          "name": "아이비케이투자증권 20261126-1-37(단)",
+          "weight": null
+        },
+        {
+          "name": "아이엠증권 20261126-1-70(단)",
+          "weight": null
+        },
+        {
+          "name": "하나카드 20260212-291-78",
+          "weight": null
+        },
+        {
+          "name": "한국투자금융지주 20260226-274-193",
+          "weight": null
+        },
+        {
+          "name": "한국투자금융지주 20260226-274-196",
+          "weight": null
+        },
+        {
+          "name": "한국투자금융지주 20260226-274-197",
+          "weight": null
+        }
+      ],
+      "removed": [
+        {
+          "name": "롯데카드 20251226-335-83",
+          "weight": null
+        },
+        {
+          "name": "삼성증권 20251127-364-200",
+          "weight": null
+        },
+        {
+          "name": "아이비케이투자증권 20261125-1-36(단)",
+          "weight": null
+        },
+        {
+          "name": "아이엠증권 20261125-1-68(단)",
+          "weight": null
+        },
+        {
+          "name": "하나카드 20261123-3-41(단)",
+          "weight": null
+        },
+        {
+          "name": "한화투자증권 20251127-364-37",
+          "weight": null
+        },
+        {
+          "name": "한화투자증권 20251127-364-38",
+          "weight": null
+        },
+        {
+          "name": "한화투자증권 20251127-364-41",
+          "weight": null
+        },
+        {
+          "name": "한화투자증권 20251127-364-42",
+          "weight": null
+        }
+      ],
+      "changed": []
+    },
+    {
+      "code": "462330",
+      "name": "KODEX 2차전지산업레버리지",
+      "trd_dt": "2026-11-27",
+      "prev_trd_dt": "2026-11-26",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "name": "KODEX 2차전지산업",
+          "prev_weight": 28.54,
+          "curr_weight": 30.94,
+          "delta": 2.4
+        },
+        {
+          "name": "삼성SDI",
+          "prev_weight": 16.37,
+          "curr_weight": 18.12,
+          "delta": 1.75
+        },
+        {
+          "name": "LG에너지솔루션",
+          "prev_weight": 28.79,
+          "curr_weight": 30.3,
+          "delta": 1.51
+        }
+      ]
+    },
+    {
+      "code": "494310",
+      "name": "KODEX 반도체레버리지",
+      "trd_dt": "2026-11-27",
+      "prev_trd_dt": "2026-11-26",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "name": "KODEX 반도체",
+          "prev_weight": 27.41,
+          "curr_weight": 30.57,
+          "delta": 3.16
+        }
+      ]
+    },
+    {
+      "code": "0177R0",
+      "name": "TIGER 반도체TOP10커버드콜액티브",
+      "trd_dt": "2026-11-27",
+      "prev_trd_dt": "2026-11-26",
+      "added": [
+        {
+          "name": "코스피위클리M C 2611W5   740.0",
+          "weight": null
+        },
+        {
+          "name": "코스피위클리M C 2611W5   730.0",
+          "weight": null
+        }
+      ],
+      "removed": [
+        {
+          "name": "코스피위클리 C 2611W4   750.0",
+          "weight": null
+        },
+        {
+          "name": "코스피위클리 C 2611W4   760.0",
+          "weight": null
+        },
+        {
+          "name": "코스피위클리 C 2611W4   770.0",
+          "weight": null
+        }
+      ],
+      "changed": []
+    },
+    {
+      "code": "488080",
+      "name": "TIGER 반도체TOP10레버리지",
+      "trd_dt": "2026-11-27",
+      "prev_trd_dt": "2026-11-26",
+      "added": [],
+      "removed": [],
+      "changed": [
+        {
+          "name": "TIGER 반도체TOP10",
+          "prev_weight": 42.96,
+          "curr_weight": 46.41,
+          "delta": 3.45
+        },
+        {
+          "name": "원화현금",
+          "prev_weight": -50.81,
+          "curr_weight": -54.08,
+          "delta": -3.27
+        },
+        {
+          "name": "SK하이닉스",
+          "prev_weight": 31.59,
+          "curr_weight": 34.3,
+          "delta": 2.71
+        },
+        {
+          "name": "SK스퀘어",
+          "prev_weight": 28.04,
+          "curr_weight": 30.39,
+          "delta": 2.35
+        }
+      ]
+    }
+  ]
 }

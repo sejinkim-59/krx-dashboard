@@ -1,6 +1,6 @@
 {
   "date": "20261128",
-  "generated_at": "2026-11-27T21:00:33.808Z",
+  "generated_at": "2026-11-28T03:18:27.589Z",
   "engineVersion": "v0.2",
   "objective": "NEW INFORMATION + CHANGE + CATALYST + CONFIRMATION — 오늘 새롭게 연구할 가치가 생긴 종목을 조기 발견",
   "methodologyNote": "시장/섹터 상대강도는 공식 지수가 아니라 가격 데이터 보유 종목의 동일가중 평균(proxy)입니다. Earnings/Revision Factor는 컨센서스 Provider 미연결로 항상 제외(MISSING_DATA)됩니다. 시총 순위는 KIS 시세를 조회한 종목(관심종목 + Discovery 추가조회) 안에서의 순위입니다. 수급 전환의 발생 시점은 \"최근 3거래일 vs 직전 5거래일\" 창 비교라 일 단위 날짜가 아닌 창 단위입니다. 종목 단위로 연결되지 않은 Catalyst: Investor Relations 일정, Large Contract(단일판매·공급계약), Index Rebalancing (정기변경 월 주기만 수집, 종목별 편입·편출 예고 없음), Major Customer Event, Policy Event, Share Cancellation(소각).",
@@ -10,7 +10,7 @@
       "VIX -11.16%",
       "S&P500 +1.6%",
       "NASDAQ +2.31%",
-      "USD/KRW -0.75%"
+      "USD/KRW +0.04%"
     ],
     "strategyPreference": [
       "DISCOVERY",
@@ -23,8 +23,8 @@
     "technicalCoverageCount": 110,
     "discoveryPreScreenCount": 479,
     "discoveryEnrichedCount": 60,
-    "signalCount": 126,
-    "passedRiskCount": 36,
+    "signalCount": 128,
+    "passedRiskCount": 37,
     "rejectedCount": 0
   },
   "dailyOutput": [
@@ -79,7 +79,7 @@
             ]
           },
           "crowdingPenalty": null,
-          "marketCapRank": 29,
+          "marketCapRank": 30,
           "flowEvents": [
             "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.032%)"
           ],
@@ -139,7 +139,7 @@
       "bucket": "DISCOVERY",
       "label": "Discovery",
       "requested": 2,
-      "qualifiedCount": 26,
+      "qualifiedCount": 27,
       "picks": [
         {
           "symbol": "042660",
@@ -191,7 +191,7 @@
             "total": 0,
             "items": []
           },
-          "marketCapRank": 35,
+          "marketCapRank": 36,
           "flowEvents": [
             "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 0.181%)"
           ],
@@ -288,7 +288,7 @@
             "total": 0,
             "items": []
           },
-          "marketCapRank": 69,
+          "marketCapRank": 70,
           "flowEvents": [
             "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.305%)",
             "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 0.236%)"
@@ -374,7 +374,7 @@
       "bucket": "EVENT_DRIVEN",
       "label": "Event-Driven",
       "requested": 1,
-      "qualifiedCount": 3,
+      "qualifiedCount": 4,
       "picks": [
         {
           "symbol": "389260",
@@ -434,7 +434,7 @@
               }
             ]
           },
-          "marketCapRank": 105,
+          "marketCapRank": 106,
           "flowEvents": [
             "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -0.848%)",
             "EVENT: 외국인 매도→매수 전환 (변화폭 시총 대비 0.783%)"
@@ -648,7 +648,7 @@
         ]
       },
       "crowdingPenalty": null,
-      "marketCapRank": 29,
+      "marketCapRank": 30,
       "flowEvents": [
         "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.032%)"
       ],
@@ -751,7 +751,7 @@
         "total": 0,
         "items": []
       },
-      "marketCapRank": 35,
+      "marketCapRank": 36,
       "flowEvents": [
         "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 0.181%)"
       ],
@@ -848,7 +848,7 @@
         "total": 0,
         "items": []
       },
-      "marketCapRank": 69,
+      "marketCapRank": 70,
       "flowEvents": [
         "EVENT: 연기금 등 매도→매수 전환 (변화폭 시총 대비 0.305%)",
         "EVENT: 기관합계 매도→매수 전환 (변화폭 시총 대비 0.236%)"
@@ -985,7 +985,7 @@
           }
         ]
       },
-      "marketCapRank": 105,
+      "marketCapRank": 106,
       "flowEvents": [
         "EVENT: 개인 매수→매도 전환 (변화폭 시총 대비 -0.848%)",
         "EVENT: 외국인 매도→매수 전환 (변화폭 시총 대비 0.783%)"
@@ -1161,7 +1161,7 @@
       ],
       "newSignalCount": 3,
       "tier": 1,
-      "marketCapRank": 105,
+      "marketCapRank": 106,
       "isLargeCap": false,
       "whatChanged": [
         "MA20이 MA60을 상향돌파 (2026-11-26, 1거래일 전)",
@@ -1207,7 +1207,7 @@
       ],
       "newSignalCount": 2,
       "tier": 1,
-      "marketCapRank": 35,
+      "marketCapRank": 36,
       "isLargeCap": false,
       "whatChanged": [
         "기관합계 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 기관합계 매수 전환을 5일 수익률 +5.3%가 확인)",
@@ -1234,6 +1234,49 @@
       ]
     },
     {
+      "symbol": "373220",
+      "name": "LG에너지솔루션",
+      "sector": "2차전지",
+      "bucket": null,
+      "strategy": "Event Driven",
+      "score": 13.5,
+      "discoveryScore": 13.5,
+      "dataCoverage": 77,
+      "confidence": "Normal",
+      "independentConfirmations": 2,
+      "confirmationSources": [
+        "price",
+        "event"
+      ],
+      "newSignalCount": 2,
+      "tier": 1,
+      "marketCapRank": 3,
+      "isLargeCap": true,
+      "whatChanged": [
+        "거래량 20일 평균 대비 20.3배로 급증 (2026-11-25, 2거래일 전)",
+        "새 정보: KODEX 2차전지산업레버리지 비중 +1.51%p (2026-11-27) (0거래일 전)"
+      ],
+      "pricedInVerdict": "not_yet_priced",
+      "gateFails": [],
+      "risk": {
+        "decision": "PASS",
+        "reason": "특이 리스크 없음"
+      },
+      "topEvidence": "거래량 20일 평균 대비 20.3배로 급증 (2026-11-25, 2거래일 전)",
+      "scoreBreakdown": [
+        "Novelty 5/25",
+        "Catalyst 2.4/12",
+        "Technical 0/15",
+        "Flow 3/15",
+        "Relative Strength 0/10"
+      ],
+      "signalTypes": [
+        "Leader 후보",
+        "Novelty",
+        "Catalyst"
+      ]
+    },
+    {
       "symbol": "018260",
       "name": "삼성에스디에스",
       "sector": "IT서비스",
@@ -1250,7 +1293,7 @@
       ],
       "newSignalCount": 2,
       "tier": 1,
-      "marketCapRank": 28,
+      "marketCapRank": 29,
       "isLargeCap": true,
       "whatChanged": [
         "거래량 20일 평균 대비 3.3배로 급증 (2026-11-23, 4거래일 전)",
@@ -1293,7 +1336,7 @@
       ],
       "newSignalCount": 4,
       "tier": 2,
-      "marketCapRank": 69,
+      "marketCapRank": 70,
       "isLargeCap": false,
       "whatChanged": [
         "MA20이 MA60을 상향돌파 (2026-11-26, 1거래일 전)",
@@ -1339,7 +1382,7 @@
       ],
       "newSignalCount": 2,
       "tier": 2,
-      "marketCapRank": 29,
+      "marketCapRank": 30,
       "isLargeCap": true,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-27, 0거래일 전)",
@@ -1383,7 +1426,7 @@
       ],
       "newSignalCount": 3,
       "tier": 2,
-      "marketCapRank": 77,
+      "marketCapRank": 78,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-27, 0거래일 전)",
@@ -1428,7 +1471,7 @@
       ],
       "newSignalCount": 2,
       "tier": 2,
-      "marketCapRank": 86,
+      "marketCapRank": 87,
       "isLargeCap": false,
       "whatChanged": [
         "거래량 20일 평균 대비 2.5배로 급증 (2026-11-26, 1거래일 전)",
@@ -1473,7 +1516,7 @@
       ],
       "newSignalCount": 2,
       "tier": 2,
-      "marketCapRank": 55,
+      "marketCapRank": 56,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-25, 2거래일 전)",
@@ -1517,7 +1560,7 @@
       ],
       "newSignalCount": 3,
       "tier": 2,
-      "marketCapRank": 82,
+      "marketCapRank": 83,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-25, 2거래일 전)",
@@ -1562,7 +1605,7 @@
       ],
       "newSignalCount": 3,
       "tier": 2,
-      "marketCapRank": 76,
+      "marketCapRank": 77,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-25, 2거래일 전)",
@@ -1651,7 +1694,7 @@
       ],
       "newSignalCount": 2,
       "tier": 2,
-      "marketCapRank": 34,
+      "marketCapRank": 35,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-27, 0거래일 전)",
@@ -1738,7 +1781,7 @@
       ],
       "newSignalCount": 2,
       "tier": 2,
-      "marketCapRank": 47,
+      "marketCapRank": 48,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-25, 2거래일 전)",
@@ -1782,7 +1825,7 @@
       ],
       "newSignalCount": 2,
       "tier": 2,
-      "marketCapRank": 83,
+      "marketCapRank": 84,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-13, 10거래일 전)",
@@ -1825,7 +1868,7 @@
       ],
       "newSignalCount": 3,
       "tier": 2,
-      "marketCapRank": 87,
+      "marketCapRank": 88,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-24, 3거래일 전)",
@@ -1871,7 +1914,7 @@
       ],
       "newSignalCount": 2,
       "tier": 2,
-      "marketCapRank": 92,
+      "marketCapRank": 93,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-27, 0거래일 전)",
@@ -1914,7 +1957,7 @@
       ],
       "newSignalCount": 3,
       "tier": 2,
-      "marketCapRank": 89,
+      "marketCapRank": 90,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-25, 2거래일 전)",
@@ -1959,7 +2002,7 @@
       ],
       "newSignalCount": 3,
       "tier": 2,
-      "marketCapRank": 57,
+      "marketCapRank": 58,
       "isLargeCap": false,
       "whatChanged": [
         "종가가 MA20 위로 회복 (2026-11-26, 1거래일 전)",
@@ -1979,51 +2022,6 @@
         "Technical 6/15",
         "Flow 7/15",
         "Relative Strength 7/10"
-      ],
-      "signalTypes": [
-        "Discovery 후보",
-        "Novelty",
-        "Flow",
-        "Relative Strength"
-      ]
-    },
-    {
-      "symbol": "003350",
-      "name": "한국화장품제조",
-      "sector": "화학",
-      "bucket": null,
-      "strategy": "Confluence · Flow Confirmed",
-      "score": 48.8,
-      "discoveryScore": 34.8,
-      "dataCoverage": 77,
-      "confidence": "Normal",
-      "independentConfirmations": 3,
-      "confirmationSources": [
-        "price",
-        "flow"
-      ],
-      "newSignalCount": 3,
-      "tier": 2,
-      "marketCapRank": 99,
-      "isLargeCap": false,
-      "whatChanged": [
-        "종가가 MA20 위로 회복 (2026-11-24, 3거래일 전)",
-        "거래량 20일 평균 대비 4.2배로 급증 (2026-11-25, 2거래일 전)",
-        "외국인 순매도 → 순매수 전환 (최근 3거래일 vs 직전 5거래일, 외국인 매수 전환을 5일 수익률 +16.9%가 확인)"
-      ],
-      "pricedInVerdict": "partially_priced_in",
-      "gateFails": [],
-      "risk": {
-        "decision": "WATCH",
-        "reason": "5거래일 +16.9% — 단기 과열/과매도 · ATR14/종가 8.8% — 변동성 과다"
-      },
-      "topEvidence": "종가가 MA20 위로 회복 (2026-11-24, 3거래일 전)",
-      "scoreBreakdown": [
-        "Novelty 12.6/25",
-        "Catalyst 0/12",
-        "Technical 3/15",
-        "Flow 12/15",
-        "Relative Strength 10/10"
       ],
       "signalTypes": [
         "Discovery 후보",

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27T20:53:00.994Z",
+  "updated_at": "2026-11-28T03:13:32.778Z",
   "note": "시가총액 20억달러 이상 기업 중 최근 실적 발표 상위 종목. 장전(pre-market) 발표는 D0이, 장후(after-hours) 발표는 D+1이 시장 반응의 핵심 구간입니다. 반응(%)은 D-1 종가 대비 누적 수익률입니다.",
   "min_market_cap": 2000000000,
   "count": 30,
@@ -379,6 +379,22 @@
       }
     },
     {
+      "symbol": "KT",
+      "name": "KT Corporation",
+      "report_date": "2026-11-27",
+      "report_time": "미상",
+      "market_cap": 8293670400,
+      "eps_forecast": "",
+      "surprise_pct": null,
+      "reaction": {
+        "D-1": 0,
+        "D0": -2.44,
+        "D+1": null,
+        "D+2": null,
+        "D+3": null
+      }
+    },
+    {
       "symbol": "ANF",
       "name": "Abercrombie & Fitch Company",
       "report_date": "2026-11-24",
@@ -494,23 +510,6 @@
         "D0": -18.02,
         "D+1": -18.65,
         "D+2": -17.38,
-        "D+3": null
-      }
-    },
-    {
-      "symbol": "CMBT",
-      "name": "CMB.TECH NV",
-      "report_date": "2026-11-24",
-      "report_time": "미상",
-      "market_cap": 5141808100,
-      "eps": "$1.29",
-      "eps_forecast": "",
-      "surprise_pct": null,
-      "reaction": {
-        "D-1": 0,
-        "D0": 4.22,
-        "D+1": 5.29,
-        "D+2": 5.82,
         "D+3": null
       }
     }
